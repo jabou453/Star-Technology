@@ -795,7 +795,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     skystone_alloys('diamond', 0x9BD6D8, 'SHINY');
     skystone_alloys('certus_quartz', 0x67D6DB, 'DULL');
 
-    compIngot('fluix_steel', ['1x fluix', '2x steel'], 0x8F5CCB, METALLIC, [], [no_decomp, plates, rod, frame]);
+    compIngot('fluix_steel', ['1x fluix', '2x steel'], 0x8F5CCB, METALLIC, [], [no_decomp, plates, rod, frame, foil]);
 
     const netherite_skystone_alloys = (material, color, icon) => {
         event.create(`netherite_${material}_skystone_alloy`).dust().components('4x pure_netherite', '2x diamond_skystone_alloy', `${material}_skystone_alloy`)
