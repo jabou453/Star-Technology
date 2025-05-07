@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
                 .inputFluids('gtceu:skystone 144')
                 .itemOutputs(`${tier.n}x ae2:${type}_processor`)
                 .duration(400)
-                .EUt(global.va['mv']);
+                .EUt(global.va[tier.voltage]);
         });
     
     });
@@ -83,7 +83,6 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.forming_press(`printed_${type.circuit}_processor`)
             .itemInputs(`gtceu:${type.material}_skystone_alloy_plate`)
-            .inputFluids('gtceu:skystone 144')
             .notConsumable(`ae2:${type.circuit}_processor_press`)
             .itemOutputs(`ae2:printed_${type.circuit}_processor`)
             .duration(400)
@@ -120,11 +119,16 @@ ServerEvents.recipes(event => {
         .duration(900)
         .EUt(global.va['ev']);
 
-    ['logic', 'engineering', 'calculation'].forEach(type => {
-        event.recipes.gtceu.precise_me_circuit_assembler(`${type}_processor_soc`)
-            .itemInputs('kubejs:ae2_soc', `ae2:printed_${type}_processor`)
-            .inputFluids('gtceu:skystone 144')
-            .itemOutputs(`8x ae2:${type}_processor`)
+    [
+        {circuit: 'logic', material: 'gold'},
+        {circuit: 'engineering', material: 'diamond'},
+        {circuit: 'calculation', material: 'certus_quartz'}
+    ].forEach(type => {
+        event.recipes.gtceu.precise_me_circuit_assembler(`${type.circuit}_processor_soc`)
+            .notConsumable(`ae2:${type.circuit}_processor_press`)
+            .itemInputs('kubejs:ae2_soc', `gtceu:${type.material}_skystone_alloy_plate`)
+            .inputFluids('gtceu:sky_steel 576')
+            .itemOutputs(`8x ae2:${type.circuit}_processor`)
             .duration(400)
             .EUt(global.va['iv']);
     });

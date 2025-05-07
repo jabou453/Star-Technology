@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('me_core_assembler')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
-        .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
+		.appearanceBlock(() => Block.getBlock('kubejs:fluix_steel_casing'))
 		.pattern(definition => FactoryBlockPattern.start()
 			.aisle("AAAAA", "AAAAA", " AAA ") 
 			.aisle("ABABA", "C#D#C", " CCC ") 
@@ -11,7 +11,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 			.aisle("ABABA", "C#D#C", " CCC ") 
 			.aisle("AAAAA", "AA@AA", " AAA ") 
 			.where("@", Predicates.controller(Predicates.blocks(definition.get())))
-			.where("A", Predicates.blocks("gtceu:robust_machine_casing")
+			.where("A", Predicates.blocks("kubejs:fluix_steel_casing")
 				.or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(2))
 				.or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2))
 				.or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2))
@@ -25,6 +25,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 			.where("#", Predicates.blocks("minecraft:air"))
 			.where(" ", Predicates.any())
 			.build())
-		.workableCasingRenderer('gtceu:block/casings/solid/machine_casing_robust_tungstensteel',
+		.workableCasingRenderer('kubejs:block/casings/fluix_casing',
 			'gtceu:block/machines/assembler', false);
 });

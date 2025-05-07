@@ -152,4 +152,35 @@ ServerEvents.recipes(event => {
 
     assembler_rem('mega_crafting_unit', 'megacells:mega_crafting_unit', ['gtceu:netherite_certus_quartz_skystone_alloy_frame', '8x ae2:crafting_unit', '6x gtceu:ruthenium_plate'], 8192);
 
+    event.shaped('2x kubejs:fluix_steel_casing', [
+        'ABA',
+        'ACA',
+        'ADA'],{
+        A: 'gtceu:double_fluix_steel_plate',
+        B: '#forge:tools/hammers',
+        C: 'gtceu:fluix_steel_frame',
+        D: '#forge:tools/wrenches'
+    });
+
+    event.recipes.gtceu.assembler('fluix_steel_casing')
+        .itemInputs('6x gtceu:double_fluix_steel_plate', 'gtceu:fluix_steel_frame')
+        .itemOutputs('2x kubejs:fluix_steel_casing')
+        .duration(50)
+        .EUt(16);
+
+    event.recipes.gtceu.assembler('precise_me_circuit_assembler')
+        .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_robot_arm', 'gtceu:iv_emitter', '2x #gtceu:circuits/iv',
+            '16x gtceu:fine_vanadium_gallium_wire', '8x gtceu:uranium_triplatinum_single_wire')
+        .itemOutputs('gtceu:precise_me_circuit_assembler')
+        .duration(600)
+        .EUt(8192);
+
+
+    event.recipes.gtceu.assembler('precise_me_core_assembler')
+    .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_conveyor_module', 'gtceu:iv_robot_arm', '2x #gtceu:circuits/iv',
+        '16x gtceu:fine_tantalum_wire', '8x gtceu:mercury_barium_calcium_cuprate_single_wire')
+        .itemOutputs('gtceu:precise_me_core_assembler')
+        .duration(600)
+        .EUt(8192);
+
 });
