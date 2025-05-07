@@ -1,13 +1,11 @@
-
-//Premise being you actually need to find the next dimensions
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('dimensional_finder')
         .category('dimensional_finder')
         .setEUIO('in')
         .setMaxIOSize(3, 1, 1, 0)
-        .setSound(GTSoundEntries.ARC);
+        .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR , FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.COMPUTATION);
 
 });
 
@@ -31,10 +29,10 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('VVHVVVVVHVV', 'VVHHHKHHHVV', '           ', '           ', '           ', 'SS       SS', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ', '           ')
             .where('V', Predicates.blocks('gtceu:heat_vent'))
             .where('H', Predicates.blocks('gtceu:high_temperature_smelting_casing')
-                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(3))
-                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(1))
-                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(3))
-                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(3).setPreviewCount(0))
+                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(1).setPreviewCount(0))
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(3).setPreviewCount(0))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(0))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .where('T', Predicates.blocks('gtceu:trinaquadalloy_frame'))
             .where('S', Predicates.blocks('gtceu:sturdy_machine_casing'))

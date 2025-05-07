@@ -1,10 +1,10 @@
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('super_pressure_heat_chamber')
         .category('super_pressure_heat_chamber')
         .setEUIO('in')
         .setMaxIOSize(3, 3, 3, 3)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_CRYSTALLIZATION , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC);
 
 });
@@ -14,7 +14,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('super_pressure_heat_chamber', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('super_pressure_heat_chamber')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(GCYMBlocks.CASING_STRESS_PROOF)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('HHH SSS HHH', '     S     ', '    SSS    ', '    SSS    ', '   S S S   ', ' SS SSS SS ', 'SSSSSSSSSSS', ' SS SSS SS ', '   S S S   ', '    SSS    ', '    SSS    ', '     S     ', 'HHH SSS HHH')

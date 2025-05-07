@@ -1,14 +1,15 @@
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('plant_ore_processing')
         .category('ore_processing')
         .setEUIO('in')
         .setMaxIOSize(1, 6, 1, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.BATH);
 
 });
-
+if (global.packmode !== 'hard'){
+    (() => {
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('ore_processing_plant', 'multiblock')
@@ -23,8 +24,11 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('AFFFA', 'FG GF', 'F   F', ' F F ', ' FFF ', '  F  ', '  B  ')
             .aisle(' AAA ', ' FCF ', ' FFF ', '  F  ', '     ', '     ', '     ')
             .where('C', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('F', Predicates.blocks(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST.get()).setMinGlobalLimited(50)
-                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+            .where('F', Predicates.blocks(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST.get()) //All Hatches have a max
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1)))
             .where('M', Predicates.abilities(PartAbility.MUFFLER))
@@ -36,5 +40,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .build())
         .workableCasingRenderer('gtceu:block/casings/solid/machine_casing_robust_tungstensteel',
         'kubejs:block/multiblock/primitive_blast_furnace', false);
-        
+       
 });
+})()
+} 

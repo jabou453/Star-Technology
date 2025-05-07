@@ -1,10 +1,10 @@
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('essence_enchancing')
         .category('essence_enchancing')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 0, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_MAGNET , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ELECTROLYZER);
 
 });
@@ -24,7 +24,11 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('SBBBBBS', 'SB M BS', 'SBMCMBS', 'SB M BS', 'SBBBBBS')
             .where('C', Predicates.controller(Predicates.blocks(definition.get())))
             .where('S', Predicates.blocks(GTBlocks.CASING_STAINLESS_CLEAN.get()).setMinGlobalLimited(26)
-                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .where('F', Predicates.blocks(GTBlocks.CASING_ALUMINIUM_FROSTPROOF.get()))

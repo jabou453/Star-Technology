@@ -1,20 +1,10 @@
-
-GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-
-    event.create('rock_sifter')
-        .category('rock_sifter')
-        .setMaxIOSize(2, 9, 1, 0)
-        .setSound(GTSoundEntries.MACERATOR);
-
-});
-
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('rock_sifter', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('rock_filtrator')
         .appearanceBlock(GCYMBlocks.CASING_WATERTIGHT)
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()	
             .aisle('  BBB  ', '  CDC  ', '  CDC  ', '  CDC  ', '  CDC  ', '  CDC  ', '  BBB  ') 	
             .aisle(' BDDDB ', ' DEFED ', ' DEFED ', ' DEFED ', ' DEFED ', ' DEFED ', ' BDDDB ') 	
@@ -29,9 +19,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('C', Predicates.blocks('gtceu:laminated_glass'))	
             .where('D', Predicates.blocks('gtceu:watertight_casing')
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
-                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
-                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2)))	
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1)))	
             .where('E', Predicates.blocks('gtceu:rtm_alloy_coil_block'))	
             .where('F', Predicates.blocks('gtceu:extreme_engine_intake_casing'))
             .where('G', Predicates.blocks('gtceu:tungstensteel_pipe_casing'))	

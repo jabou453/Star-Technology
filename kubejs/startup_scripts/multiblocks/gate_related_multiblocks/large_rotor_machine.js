@@ -1,10 +1,10 @@
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('large_rotor_machine')
         .category('large_rotor_machine')
         .setEUIO('in')
         .setMaxIOSize(9, 1, 0, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRUDER , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ASSEMBLER);
 
 });
@@ -14,7 +14,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('large_rotor_machine', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('large_rotor_machine')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('W       W', 'WW WWW WW', 'SS EEE SS', 'SS EEE SS', '   WWW   ', '         ')

@@ -1,4 +1,5 @@
 ServerEvents.recipes(event => {
+    const id = global.id;
     const toRemoveOutput = ['thermal:machine_furnace', 'thermal:machine_sawmill',
         'thermal:machine_pulverizer', 'thermal:machine_insolator', 'thermal:machine_centrifuge', 'thermal:machine_crucible', 'thermal:machine_chiller', 'thermal:machine_refinery',
         'thermal:machine_pyrolyzer', 'thermal:machine_bottler', 'thermal:machine_brewer', 'thermal:machine_crystallizer', 'thermal:machine_crafter', 'thermal:machine_smelter',
@@ -16,7 +17,10 @@ ServerEvents.recipes(event => {
         'createdieselgenerators:lighter', 'createdieselgenerators:chemical_sprayer', 'createdieselgenerators:oil_detector', 'createdieselgenerators:pumpjack_bearing',
         'createdieselgenerators:pumpjack_head', 'createdieselgenerators:pumpjack_crank', 'createdieselgenerators:canister', 'createdieselgenerators:oil_barrel',
         'createdieselgenerators:asphalt', 'createdieselgenerators:asphalt_slab', 'createdieselgenerators:asphalt_stairs', 'createdieselgenerators:diesel',
-        'createdieselgenerators:gasoline', 'createdieselgenerators:pumpjack_hole', 'exmachinis:item_buffer', 'exnihilosequentia:mechanical_sieve', 'exnihilosequentia:mechanical_hammer', 'systeams:frost_boiler', 'exnihilosequentia:golden_mesh', 'minecraft:mycelium', 'thermal:gunpowder_4', 'thermal:dirt_crafting', '#thermal:rockwool'
+        'createdieselgenerators:gasoline', 'createdieselgenerators:pumpjack_hole', 'exmachinis:item_buffer', 'exnihilosequentia:mechanical_sieve', 'exnihilosequentia:mechanical_hammer',
+        'systeams:frost_boiler', 'exnihilosequentia:golden_mesh', 'minecraft:mycelium', 'thermal:gunpowder_4', 'thermal:dirt_crafting', '#thermal:rockwool', 'create:brass_block', 'create:zinc_block', 
+        // Following 2 to be removed for Zeta due to exploits and bugs
+        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer'
     ];
     const toRemoveId = ['thermal:slime_mushroom_spores', 'thermal_extra:sticky_ball_to_paper', 'farmersdelight:paper_from_tree_bark', 'create:pressing/sugar_cane',
         'exnihilo:fluid_item/ens_slime', 'gtceu:shaped/good_circuit_board', 'thermal:rubber_from_vine', 'thermal:rubber_from_dandelion', 'thermal:smelting/cured_rubber_from_smelting',
@@ -27,7 +31,7 @@ ServerEvents.recipes(event => {
         'create_new_age:advanced_motor_extension', 'create_new_age:shaped/redstone_magnet', 
         'createdieselgenerators:basin_fermenting/magma_cream', 'gtceu:research_station/1_x_gtceu_uv_energy_input_hatch', 'gtceu:research_station/1_x_gtceu_uv_energy_output_hatch',
         'toms_storage:adv_wireless_terminal', 'megacells:mega_crafting_unit', 'gtceu:shaped/resistor_wire', 'gtceu:shaped/resistor_wire_fine', 'gtceu:shaped/resistor_wire_fine_carbon',
-        'gtceu:shaped/resistor_wire_carbon', 'gtceu:shaped/resistor_wire_charcoal'
+        'gtceu:shaped/resistor_wire_carbon', 'gtceu:shaped/resistor_wire_charcoal', 'create:crushing/diorite_recycling', 'create:milling/charcoal'
 
     ];
 
@@ -75,4 +79,19 @@ ServerEvents.recipes(event => {
     event.remove({ output: 'minecraft:netherite_scrap'});
     event.remove({ input: 'minecraft:ancient_debris'});
     event.remove({ output: 'minecraft:netherite_ingot'});
+
+    event.remove({ output: /manyideas_core:saw.*/});
+    event.remove({ output: /create:.*_sheet/});
+    event.remove({ output: /create:.*_ingot/});
+    event.remove({ output: /create:.*_plate/});
+    event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
+    event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
+    event.remove({ output: /thermal:.*_ingot/});
+    event.remove({ input: /thermal:.*_ingot/});
+    event.remove({ output: /exnihilosequentia:.*_ingot/});
+    event.remove({ input: /exnihilosequentia:.*_ingot/});
+    event.remove({ output: /thermal:.*_nugget/});
+    event.remove({ input: /thermal:.*_nugget/});
+    event.remove({ output: /exnihilosequentia:.*_nugget/});
+    event.remove({ input: /exnihilosequentia:.*_nugget/});
 });

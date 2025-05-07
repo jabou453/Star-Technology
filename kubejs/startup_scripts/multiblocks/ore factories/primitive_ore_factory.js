@@ -2,11 +2,12 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 	event.create('primitive_ore_processing')
 		.category('ore_processing')
 		.setMaxIOSize(2, 4, 1, 0)
+		.setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
 		.setSound(GTSoundEntries.BATH);
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-	/* was previously kinetic_ore_factory */
+
 	event.create('primitive_ore_factory', 'primitive')
 		.rotationState(RotationState.NON_Y_AXIS)
 		.recipeType('primitive_ore_processing')
@@ -19,8 +20,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 			.aisle(' FFF ', ' FCF ', ' FFF ', '  F  ', '     ', '     ', '     ')
 			.where('C', Predicates.controller(Predicates.blocks(definition.get())))
 			.where('F', Predicates.blocks(GTBlocks.CASING_PRIMITIVE_BRICKS.get())
-				.setMinGlobalLimited(30)
-				.or(Predicates.autoAbilities(definition.getRecipeTypes())))
+				.or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+				.or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+				.or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1)))
 			.where('G', Predicates.blocks(GTBlocks.CASING_BRONZE_PIPE.get()))
 			.where('B', Predicates.blocks('gtceu:bronze_machine_casing'))
 			.where(' ', Predicates.any())

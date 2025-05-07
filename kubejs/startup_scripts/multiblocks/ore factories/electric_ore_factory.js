@@ -1,21 +1,22 @@
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('electric_ore_processing')
         .category('ore_processing')
         .setEUIO('in')
         .setMaxIOSize(1, 5, 1, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.BATH);
 
 });
 
+if (global.packmode !== 'hard'){
+    (() => { 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
-    /* Previous Electrico-Kinetic Ore Factory */
     event.create('electric_ore_factory', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('electric_ore_processing')
-        .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
+        .recipeModifier(GTRecipeModifiers.OC_PERFECT)
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(' AAA ', ' FFF ', ' FFF ', '  F  ', '     ', '     ', '     ')
@@ -24,8 +25,11 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('AFFFA', 'FG GF', 'F   F', ' F F ', ' FFF ', '  F  ', '  B  ')
             .aisle(' AAA ', ' FCF ', ' FFF ', '  F  ', '     ', '     ', '     ')
             .where('C', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('F', Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get()).setMinGlobalLimited(50)
-                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+            .where('F', Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get()) //All Hatches have a max
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .where('M', Predicates.abilities(PartAbility.MUFFLER))
             .where('P', Predicates.blocks(GTBlocks.CASING_STEEL_PIPE.get()))
@@ -38,3 +42,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         'kubejs:block/multiblock/primitive_blast_furnace', false);
 
 });
+})()
+}

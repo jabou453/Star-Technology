@@ -1,10 +1,10 @@
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('essence_replication')
         .category('essence_replication')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 1, 1)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ELECTROLYZER);
 
 });
@@ -24,7 +24,11 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('IICII', '     ', '     ', '     ', 'IIIII')
             .where('C', Predicates.controller(Predicates.blocks(definition.get())))
             .where('I', Predicates.blocks(GTBlocks.CASING_INVAR_HEATPROOF.get()).setMinGlobalLimited(23)
-                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .where('S', Predicates.blocks(GTBlocks.FIREBOX_STEEL.get()))
