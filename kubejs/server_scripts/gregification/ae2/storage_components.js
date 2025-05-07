@@ -1,7 +1,8 @@
 ServerEvents.recipes(event => {
+    const id = global.id;
     
     event.remove({output: 'ae2:cell_component_1k'})
-    event.recipes.gtceu.me_core_assembler('cell_component_1k')
+    event.recipes.gtceu.me_core_assembler(id('cell_component_1k'))
         .itemInputs('3x ae2:logic_processor', '#gtceu:circuits/ulv', '16x gtceu:fine_red_alloy_wire')
         .inputFluids('gtceu:sky_steel 144')
         .itemOutputs('ae2:cell_component_1k')
@@ -30,7 +31,7 @@ ServerEvents.recipes(event => {
 
     const spatial = (tier, storage, voltage) => {
         event.remove({output: `ae2:spatial_cell_component_${tier}`})
-        event.recipes.gtceu.me_core_assembler(`spatial_cell_component_${tier}`)
+        event.recipes.gtceu.me_core_assembler(id(`spatial_cell_component_${tier}`))
             .itemInputs(`ae2:cell_component_${storage}k`, `gtceu:${voltage}_field_generator`, '6x gtceu:fluix_steel_foil', `2x #gtceu:circuits/${voltage}`)
             .inputFluids('gtceu:soldering_alloy 144')
             .itemOutputs(`ae2:spatial_cell_component_${tier}`)

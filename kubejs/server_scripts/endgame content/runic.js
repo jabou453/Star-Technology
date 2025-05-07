@@ -10,7 +10,7 @@ ServerEvents.recipes(event => {
     const singularity_materials = ['aluminium', 'silver', 'tin', 'platinum', 'copper', 'iron', 'lead', 'nickel', 'gold'];
 
     singularity_materials.forEach(element => {
-        event.recipes.gtceu.large_quantum_compressor(`${element}_singularity`)
+        event.recipes.gtceu.large_quantum_compressor(id(`${element}_singularity`))
             .itemInputs(`64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `32x #forge:storage_blocks/${element}`)
             .itemOutputs(Item.of('extendedcrafting:singularity', `{Id:'extendedcrafting:${element}'}`))
             .duration(24000)
@@ -29,35 +29,35 @@ ServerEvents.recipes(event => {
 
     function runicEngraving(material,amount,dur){
 
-    event.recipes.gtceu.runic_circuitry_assembling_station(`${material}_rune_engraved`)
+    event.recipes.gtceu.runic_circuitry_assembling_station(id(`${material}_rune_engraved`))
         .itemInputs('gtceu:dense_enriched_naquadah_plate', Item.of('extendedcrafting:singularity', `{Id:'extendedcrafting:${material}'}`).strongNBT())
         .itemOutputs(`${amount}x kubejs:runic_engraved_plating`)
         .blastFurnaceTemp(10500)
         .duration(4000*`${dur}`)
         .EUt(GTValues.VHA[GTValues.UV]);
 
-    event.recipes.gtceu.runic_circuitry_assembling_station(`${material}_rune_pathway_engraved`)
+    event.recipes.gtceu.runic_circuitry_assembling_station(id(`${material}_rune_pathway_engraved`))
         .itemInputs('gtceu:dense_naquadah_plate', Item.of('extendedcrafting:singularity', `{Id:'extendedcrafting:${material}'}`).strongNBT())
         .itemOutputs(`${amount}x kubejs:runic_pathway_engraved_plating`)
         .blastFurnaceTemp(10500)
         .duration(3000*`${dur}`)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
-    event.recipes.gtceu.runic_circuitry_assembling_station(`${material}_rune_stabilization`)
+    event.recipes.gtceu.runic_circuitry_assembling_station(id(`${material}_rune_stabilization`))
         .itemInputs('gtceu:dense_naquadah_alloy_plate', Item.of('extendedcrafting:singularity', `{Id:'extendedcrafting:${material}'}`).strongNBT())
         .itemOutputs(`${amount}x kubejs:runic_stabilization_plating`)
         .blastFurnaceTemp(11500)
         .duration(4000*`${dur}`)
         .EUt(GTValues.VHA[GTValues.UV]);
 
-    event.recipes.gtceu.runic_circuitry_assembling_station(`${material}_rune_energized`)
+    event.recipes.gtceu.runic_circuitry_assembling_station(id(`${material}_rune_energized`))
         .itemInputs('gtceu:dense_naquadria_plate', Item.of('extendedcrafting:singularity', `{Id:'extendedcrafting:${material}'}`).strongNBT())
         .itemOutputs(`${amount}x kubejs:runic_energized_plating`)
         .blastFurnaceTemp(11500)
         .duration(4000*`${dur}`)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
-    event.recipes.gtceu.runic_circuitry_assembling_station(`${material}_rune_transportation_engraved`)
+    event.recipes.gtceu.runic_circuitry_assembling_station(id(`${material}_rune_transportation_engraved`))
         .itemInputs('gtceu:dense_trinaquadalloy_plate', Item.of('extendedcrafting:singularity', `{Id:'extendedcrafting:${material}'}`).strongNBT())
         .itemOutputs(`${amount}x kubejs:runic_transportation_engraved_plating`)
         .blastFurnaceTemp(11500)
@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
         {current: 6, new: 1},
     ]
     runicChange.forEach(tablet => {
-    event.recipes.gtceu.scanner(`runic_tablet_${tablet.current}_to_${tablet.new}`)
+    event.recipes.gtceu.scanner(id(`runic_tablet_${tablet.current}_to_${tablet.new}`))
         .itemInputs(`gtceu:ancient_runicalium_foil`,`2x kubejs:runic_tablet_${tablet.current}`)
         .itemOutputs(`kubejs:runic_tablet_${tablet.new}`)
         .duration(600)

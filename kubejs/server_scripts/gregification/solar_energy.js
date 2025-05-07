@@ -82,7 +82,7 @@ ServerEvents.recipes(event => {
 
     function solarCreation(type, material, wafer)
         {
-        event.recipes.gtceu.assembler(`solar_generator_${type}`)
+        event.recipes.gtceu.assembler(id(`solar_generator_${type}`))
             .itemInputs(`3x gtceu:double_${material}_plate`, `3x gtceu:${wafer}_wafer`, `solarflux:photovoltaic_cell_${type}`)
             .inputFluids(`gtceu:soldering_alloy ${144*type}`)
             .itemOutputs(`solarflux:sp_${type}`)
@@ -91,7 +91,7 @@ ServerEvents.recipes(event => {
         }
     function solarCreationCompact(type, material, wafer, circuit)
             {
-            event.recipes.gtceu.assembler(`solar_generator_${type}`)
+            event.recipes.gtceu.assembler(id(`solar_generator_${type}`))
                 .itemInputs(`gtceu:dense_${material}_plate`, `gtceu:${wafer}_wafer`, `4x solarflux:sp_${type-1}`, `#gtceu:circuits/${circuit}`)
                 .inputFluids(`gtceu:soldering_alloy ${144*(type)}`)
                 .itemOutputs(`solarflux:sp_${type}`)

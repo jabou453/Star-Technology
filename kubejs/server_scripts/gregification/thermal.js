@@ -165,7 +165,7 @@ ServerEvents.recipes(event => {
         {id: 'twinite', glass: 'thermal_extra:twinite', base: 'gtceu:laminated', fluid: 'gtceu:twinite 144', voltage: 'luv'},
         {id: 'dragonsteel', glass: 'thermal_extra:dragonsteel', base: 'gtceu:fusion', fluid: 'gtceu:dragonsteel 144', voltage: 'zpm'}
     ].forEach(type=> {
-        event.recipes.gtceu.fluid_solidifier(`${type.id}_glass`)
+        event.recipes.gtceu.fluid_solidifier(id(`${type.id}_glass`))
             .itemInputs(`${type.base}_glass`)
             .inputFluids(type.fluid)
             .itemOutputs(`${type.glass}_glass`)

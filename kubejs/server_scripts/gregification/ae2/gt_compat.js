@@ -1,13 +1,14 @@
 ServerEvents.recipes(event => {
+    const id = global.id;
 
     //greg compat
-    event.recipes.gtceu.wiremill('quartz_fiber_cables')
+    event.recipes.gtceu.wiremill(id('quartz_fiber_cables'))
         .itemInputs('minecraft:quartz')
         .itemOutputs('3x ae2:quartz_fiber')
         .duration(80)
         .EUt(16);
 
-    event.recipes.gtceu.macerator('fluix_dust')
+    event.recipes.gtceu.macerator(id('fluix_dust'))
         .itemInputs('ae2:fluix_crystal')
         .itemOutputs('ae2:fluix_dust')
         .duration(88)
@@ -35,13 +36,13 @@ ServerEvents.recipes(event => {
 
     event.replaceOutput({ type: 'gtceu:cutter'}, 'ae2:certus_quartz_crystal', '2x ae2:certus_quartz_crystal');
 
-    event.recipes.gtceu.polarizer('charged_certus')
+    event.recipes.gtceu.polarizer(id('charged_certus'))
         .itemInputs('ae2:certus_quartz_crystal')
         .itemOutputs('ae2:charged_certus_quartz_crystal')
         .duration(200)
         .EUt(10);
 
-    event.recipes.gtceu.mixer('fluix_crystal')
+    event.recipes.gtceu.mixer(id('fluix_crystal'))
         .itemInputs('ae2:charged_certus_quartz_crystal', 'minecraft:redstone', 'minecraft:quartz')
         .inputFluids('minecraft:water 250')
         .itemOutputs('2x ae2:fluix_crystal')

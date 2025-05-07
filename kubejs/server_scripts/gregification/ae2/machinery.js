@@ -1,6 +1,7 @@
 ServerEvents.recipes(event => {
+    const id = global.id;
 
-    event.recipes.gtceu.wiremill('fluix_glass_cables')
+    event.recipes.gtceu.wiremill(id('fluix_glass_cables'))
         .itemInputs('ae2:quartz_fiber', 'gtceu:fluix_steel_foil')
         .itemOutputs('ae2:fluix_glass_cable')
         .duration(40)
@@ -13,10 +14,10 @@ ServerEvents.recipes(event => {
         A: 'gtceu:double_silicon_plate',
         B: 'gtceu:diamond_skystone_alloy_plate',
         C: '#gtceu:batteries/lv'
-    });
+    }).id('start:shaped/energy_cell');
 
-    const assembler = (id, output, input, eu) => {
-        event.recipes.gtceu.assembler(`${id}`)
+    const assembler = (id1, output, input, eu) => {
+        event.recipes.gtceu.assembler(id(`${id1}`))
             .itemInputs(input)
             .inputFluids('gtceu:soldering_alloy 144')
             .itemOutputs(`${output}`)
@@ -24,9 +25,9 @@ ServerEvents.recipes(event => {
             .EUt(eu);
     }
 
-    const assembler_rem = (id, output, input, eu) => {
+    const assembler_rem = (id1, output, input, eu) => {
         event.remove({output: `${output}`})
-        assembler(id, output, input, eu)
+        assembler(id1, output, input, eu)
     }
 
     const machine = (machine, frame, inputs) => {
@@ -108,7 +109,7 @@ ServerEvents.recipes(event => {
         C: 'ae2:io_port',
         D: 'gtceu:sky_steel_plate',
         E: 'ae2:engineering_processor'
-    });
+    }).id('start:shaped/spatial_io_port');
     
     event.shaped('ae2:quantum_link', [
         'ABA',
@@ -117,7 +118,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:double_tungsten_plate',
         B: 'gtceu:tungsten_rod',
         C: 'thermal:enderium_glass'
-    });
+    }).id('start:shaped/qunatum_link');
 
     assembler_rem('quantum_ring', 'ae2:quantum_ring', ['gtceu:tungsten_carbide_frame', 'gtceu:ev_field_generator', 'gtceu:ev_emitter', 'gtceu:quantum_star', '6x gtceu:double_fluix_steel_plate'], 2048);
 
@@ -135,7 +136,7 @@ ServerEvents.recipes(event => {
             D: `gtceu:${voltage}_robot_arm`,
             E: `gtceu:${voltage}_machine_hull`,
             F: `gtceu:${voltage}_electric_motor`
-        });
+        }).id(`start:shaped/${voltage}_me_core_assembler`);
         
         event.shaped(`gtceu:${voltage}_me_circuit_assembler`, [
             'ABC',
@@ -147,7 +148,7 @@ ServerEvents.recipes(event => {
             D: `gtceu:${voltage}_emitter`,
             E: `gtceu:${voltage}_machine_hull`,
             F: `gtceu:${voltage}_conveyor_module`
-        });
+        }).id(`start:shaped/${voltage}_me_circuit_assembler`);
     });
 
     assembler_rem('mega_crafting_unit', 'megacells:mega_crafting_unit', ['gtceu:netherite_certus_quartz_skystone_alloy_frame', '8x ae2:crafting_unit', '6x gtceu:ruthenium_plate'], 8192);
@@ -162,13 +163,13 @@ ServerEvents.recipes(event => {
         D: '#forge:tools/wrenches'
     });
 
-    event.recipes.gtceu.assembler('fluix_steel_casing')
+    event.recipes.gtceu.assembler(id('fluix_steel_casing'))
         .itemInputs('6x gtceu:double_fluix_steel_plate', 'gtceu:fluix_steel_frame')
         .itemOutputs('2x kubejs:fluix_steel_casing')
         .duration(50)
         .EUt(16);
 
-    event.recipes.gtceu.assembler('precise_me_circuit_assembler')
+    event.recipes.gtceu.assembler(id('precise_me_circuit_assembler'))
         .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_robot_arm', 'gtceu:iv_emitter', '2x #gtceu:circuits/iv',
             '16x gtceu:fine_vanadium_gallium_wire', '8x gtceu:uranium_triplatinum_single_wire')
         .itemOutputs('gtceu:precise_me_circuit_assembler')
@@ -176,7 +177,7 @@ ServerEvents.recipes(event => {
         .EUt(8192);
 
 
-    event.recipes.gtceu.assembler('precise_me_core_assembler')
+    event.recipes.gtceu.assembler(id('precise_me_core_assembler'))
     .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_conveyor_module', 'gtceu:iv_robot_arm', '2x #gtceu:circuits/iv',
         '16x gtceu:fine_tantalum_wire', '8x gtceu:mercury_barium_calcium_cuprate_single_wire')
         .itemOutputs('gtceu:precise_me_core_assembler')
