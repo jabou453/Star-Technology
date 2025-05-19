@@ -15,14 +15,14 @@ ServerEvents.recipes(event => {
     //Og Lines
     event.recipes.gtceu.electrolyzer(id('caesium_oganesson_hexanitrate_tetrafluorouranate_decomp'))
         .inputFluids('gtceu:caesium_oganesson_hexanitrate_tetrafluorouranate 1000')
-        .outputFluids('gtceu:uranium_tetrafluoride 1000', 'gtceu:caesium_oganesson_hexanitrate 1000')
+        .outputFluids('gtceu:uranium_tetrafluoride 2000', 'gtceu:caesium_oganesson_hexanitrate 1000')
         .duration(238)
         .EUt(GTValues.VHA[GTValues.UV]);
     
     event.recipes.gtceu.large_chemical_reactor(id('uranium_tetrafluoride_to_uranium_dioxide'))
         .inputFluids('gtceu:uranium_tetrafluoride 1000', 'minecraft:water 2000')
         .outputFluids('gtceu:hydrofluoric_acid 4000')
-        .itemOutputs('1x gtceu:uraninite_dust')
+        .itemOutputs('3x gtceu:uraninite_dust')
         .duration(850)
         .EUt(GTValues.V[GTValues.LuV]);
 

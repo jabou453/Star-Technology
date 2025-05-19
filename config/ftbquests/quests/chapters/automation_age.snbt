@@ -21,6 +21,12 @@
 			x: -1.5d
 			y: -5.0d
 		}
+		{
+			id: "723EBAAA2CB2DA89"
+			linked_quest: "3306CAE5E57839A2"
+			x: -12.5d
+			y: 0.0d
+		}
 	]
 	quests: [
 		{
@@ -953,7 +959,12 @@
 				"1B0A7CF5BE5D71FE"
 			]
 			dependency_requirement: "one_completed"
-			description: ["A very tall multiblock that allows you to distill one fluid into multiple others without having to choose like with the distillery."]
+			description: [
+				"A very tall multiblock that allows you to distill one fluid into multiple others without having to choose like with the distillery."
+				""
+				"Single block Distilleries can still be used but wont give you all products and can't be overclocked."
+			]
+			icon: "gtceu:distillation_tower"
 			id: "170C262792DA7123"
 			rewards: [{
 				id: "45C8F1B5FB0A96CA"
@@ -961,16 +972,29 @@
 				type: "item"
 			}]
 			size: 1.0d
-			tasks: [{
-				id: "00CA3AFAC664FE60"
-				item: "gtceu:distillation_tower"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "00CA3AFAC664FE60"
+					item: "gtceu:distillation_tower"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4EF2A5F41BF53145"
+					title: "Single Distilleries"
+					type: "checkmark"
+				}
+			]
+			title: "Distilling"
 			x: -6.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["22BC7BDE5E132A30"]
+			dependencies: [
+				"22BC7BDE5E132A30"
+				"74186F521D41913D"
+			]
+			dependency_requirement: "one_completed"
 			description: ["More Information in the Resource Production Tab"]
 			icon: "gtceu:oil_bucket"
 			id: "1B0A7CF5BE5D71FE"
@@ -985,8 +1009,8 @@
 				title: "Oil"
 				type: "checkmark"
 			}]
-			x: -8.5d
-			y: 0.0d
+			x: -7.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["4FFD2642BC183495"]
@@ -1033,14 +1057,11 @@
 				}
 				type: "item"
 			}]
-			x: -10.5d
-			y: 0.0d
+			x: -9.5d
+			y: -1.0d
 		}
 		{
-			dependencies: [
-				"7399429099302C6C"
-				"23D3BED4F1968AD6"
-			]
+			dependencies: ["73931EAA3EC5C9A9"]
 			description: [
 				"Allows you to scan your surrounding chunks for fluids. "
 				""
@@ -1059,8 +1080,8 @@
 				item: "gtceu:prospector.hv"
 				type: "item"
 			}]
-			x: -12.5d
-			y: 0.0d
+			x: -11.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["170C262792DA7123"]
@@ -1087,7 +1108,10 @@
 				"Choose an oil byproduct and get it cracked to allow even further processing."
 				""
 				"Taking some time to figure out which cracking method for what product is the best for you is recommended."
+				""
+				"Note: Chemical Reactors can be used for cracking but are less efficient."
 			]
+			icon: "gtceu:cracker"
 			id: "22F56435C5449158"
 			rewards: [{
 				id: "336298AD9BCF6974"
@@ -1096,11 +1120,19 @@
 			}]
 			size: 1.0d
 			subtitle: "Cracked at cracking"
-			tasks: [{
-				id: "0654E39159A0538C"
-				item: "gtceu:cracker"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0654E39159A0538C"
+					item: "gtceu:cracker"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "182199E0547C46D6"
+					type: "checkmark"
+				}
+			]
+			title: "Oil Cracking"
 			x: -10.5d
 			y: 2.0d
 		}
@@ -1116,6 +1148,7 @@
 			]
 			dependency_requirement: "one_completed"
 			description: ["I hope you like having many distillation towers."]
+			icon: "gtceu:dichlorobenzene_bucket"
 			id: "439D8AE6D3DC41AF"
 			rewards: [{
 				count: 2
@@ -2259,7 +2292,10 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["3B2D79D40B9617D5"]
+			dependencies: [
+				"3B2D79D40B9617D5"
+				"020048FAC9576691"
+			]
 			description: [
 				"The Nuclear Reactor can be used to transform &8Thorium&r into &aUranium&r and &2Uraniums&r into &cPlutoniums&r. Additionally it produces quite a lot of power."
 				""
@@ -2267,6 +2303,7 @@
 				""
 				"Oh, and maybe look into paralleling this thing when you can, you could say it causes quite the reaction."
 			]
+			hide_dependency_lines: true
 			id: "68865F1DDBFFFACE"
 			optional: true
 			rewards: [{
@@ -2426,6 +2463,49 @@
 			}]
 			x: -9.5d
 			y: -9.0d
+		}
+		{
+			dependencies: ["3306CAE5E57839A2"]
+			description: ["A type of reinforced Glass, with better sealing capacities."]
+			id: "020048FAC9576691"
+			rewards: [{
+				id: "64A00C5F06E018B8"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			size: 1.0d
+			tasks: [{
+				id: "6FF7150FB49BBC1A"
+				item: "gtceu:laminated_glass"
+				type: "item"
+			}]
+			x: -10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["020048FAC9576691"]
+			description: ["A &oBIG&r barrel that can scale with your power allowing you to barrel even harder."]
+			id: "3DBCF29F5183C6C5"
+			tasks: [{
+				id: "448AC96F3048A100"
+				item: "gtceu:industrial_barrel"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0AB3A8C14C3A0512"]
+			description: ["Heavy Oil can alternatively be made in a Pyrolysed Oven"]
+			icon: "minecraft:spruce_log"
+			id: "74186F521D41913D"
+			tasks: [{
+				id: "0E8DB02CDB2185B9"
+				title: "Pyrolyses Oil"
+				type: "checkmark"
+			}]
+			x: -8.5d
+			y: 0.0d
 		}
 	]
 	title: "Automation Age"

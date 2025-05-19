@@ -43,7 +43,7 @@ ServerEvents.recipes(event => {
         .duration(400)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
-        event.recipes.gtceu.chemical_plant(id('plat_line'))
+    event.recipes.gtceu.chemical_plant(id('plat_line'))
         .itemInputs('6x gtceu:platinum_group_sludge_dust')
         .inputFluids('gtceu:aqua_regia 1500')
         .itemOutputs('gtceu:platinum_dust', 'gtceu:palladium_dust', 'gtceu:ruthenium_dust', 'gtceu:rhodium_dust', 'gtceu:osmium_dust', 'gtceu:iridium_dust')
@@ -71,5 +71,13 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:hydrogen 2000', 'gtceu:fluorine 7000')
         .duration(800)
         .EUt(GTValues.VHA[GTValues.ZPM]);
+
+    event.recipes.gtceu.chemical_plant(id('uranite_line'))
+        .itemInputs('30x gtceu:uraninite_dust')
+        .inputFluids('gtceu:hydrofluoric_acid 40000')
+        .itemOutputs('9x gtceu:uranium_dust', 'gtceu:uranium_235_dust')
+        .outputFluids('gtceu:fluorine 40000', 'gtceu:hydrogen 40000', 'gtceu:oxygen 20000')
+        .duration(480)
+        .EUt(GTValues.VHA[GTValues.LuV]);
 
 });
