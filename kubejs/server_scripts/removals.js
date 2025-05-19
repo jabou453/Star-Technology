@@ -20,7 +20,9 @@ ServerEvents.recipes(event => {
         'createdieselgenerators:gasoline',  'ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:canner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator',
         'ae2:vibration_chamber', 'exnihilosequentia:mechanical_sieve', 'exnihilosequentia:mechanical_hammer', 'systeams:frost_boiler', 'exnihilosequentia:golden_mesh',
-        'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'thermal:gunpowder_4', 'thermal:dirt_crafting', '#thermal:rockwool', 'create:brass_block', 'create:zinc_block', 
+        'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'thermal:gunpowder_4', 'thermal:dirt_crafting', '#thermal:rockwool', 'create:brass_block', 'create:zinc_block',
+        'createdieselgenerators:wire_cutters', 'createdieselgenerators:hammer', 'createdieselgenerators:pumpjack_hole', 'createdieselgenerators:bulk_fermenter',
+        'createdieselgenerators:chemical_turret',
         // Following 2 to be removed for Zeta due to exploits and bugs
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer'
     ];
@@ -43,7 +45,8 @@ ServerEvents.recipes(event => {
 
     const toRemoveType = ['thermal:sawmill', 'thermal:pulverizer', 'thermal:insolator', 'thermal:centrifuge', 'thermal:crucible', 'thermal:chiller', 'thermal:refinery',
         'thermal:pyrolyzer', 'thermal:crystallizer', 'thermal:press', 'thermal:smelter', 'exnihilosequentia:precipitate', 'exnihilosequentia:compost', 'exnihilosequentia:solidifying',
-        'exnihilosequentia:transition', 'expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger'
+        'exnihilosequentia:transition', 'expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'createdieselgenerators:bulk_fermenting', 'createdieselgenerators:compression_molding',
+        'createdieselgenerators:casting'
     ];
 
     toRemoveOutput.forEach(element => {
@@ -104,4 +107,6 @@ ServerEvents.recipes(event => {
     event.remove({ input: /thermal:.*_nugget/});
     event.remove({ output: /exnihilosequentia:.*_nugget/});
     event.remove({ input: /exnihilosequentia:.*_nugget/});
+    event.remove({ input: Item.of('createdieselgenerators:mold').ignoreNBT()});
+    event.remove({ output: 'createdieselgenerators:mold'});
 });
