@@ -718,6 +718,24 @@ ServerEvents.recipes(event => {
         .EUt(280)
         .duration(120);
 
+    // Mushroom Decomp
+
+    event.shapeless(Item.of('3x minecraft:brown_mushroom'), ['minecraft:brown_mushroom_block', '#forge:tools/mortars']).id('start:shapeless/brown_mushroom');
+    event.recipes.gtceu.macerator(id('brown_mushrooms'))
+        .itemInputs('minecraft:brown_mushroom_block')
+        .itemOutputs('3x minecraft:brown_mushroom')
+        .chancedOutput('minecraft:brown_mushroom', 2500, 0)
+        .duration(45)
+        .EUt(8);
+
+    event.shapeless(Item.of('3x minecraft:red_mushroom'), ['minecraft:red_mushroom_block', '#forge:tools/mortars']).id('start:shapeless/red_mushroom');
+    event.recipes.gtceu.macerator(id('red_mushrooms'))
+        .itemInputs('minecraft:red_mushroom_block')
+        .itemOutputs('3x minecraft:red_mushroom')
+        .chancedOutput('minecraft:red_mushroom', 2500, 0)
+        .duration(45)
+        .EUt(8);
+
     //Tom's / Chipped Fixes
 
     event.replaceInput({id: 'chipped:benches/mechanist_workbench'}, 'minecraft:tnt', 'minecraft:red_concrete');

@@ -942,6 +942,7 @@
 			dependencies: [
 				"7AC55BA8BDD0F3D2"
 				"4F3EE28B3F38FC85"
+				"5B91E94506FB37D6"
 			]
 			description: [
 				"A Fusion Reactor that can do parallels. Long gone are the days of excessive Fusion spam, now all you need to do is figure out how to efficiently wallshare these."
@@ -1452,7 +1453,7 @@
 					type: "item"
 				}
 			]
-			x: 3.5d
+			x: 5.5d
 			y: 7.0d
 		}
 		{
@@ -1779,7 +1780,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["4F3EE28B3F38FC85"]
@@ -2017,6 +2018,25 @@
 				type: "item"
 			}]
 			x: 11.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"07AD6651D0B40E22"
+				"0DA1386616FF7222"
+			]
+			description: [
+				"Have you ever wanted to process millions of items at once? "
+				""
+				"Well now you can."
+			]
+			id: "13118B7518370623"
+			tasks: [{
+				id: "7C4394204677D241"
+				item: "gtceu:bulk_ore_processing_array"
+				type: "item"
+			}]
+			x: 3.5d
 			y: 5.0d
 		}
 	]

@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:calamatium_fluoride_dust')
         .outputFluids('gtceu:hydrogen 2000')
         .duration(600)
-        .EUt(30000);
+        .EUt(80000);
 
     event.recipes.gtceu.large_chemical_reactor(id('calamatium_fluoride'))
         .itemInputs('gtceu:calamatium_fluoride_dust')
@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:hydrofluoric_acid 2000')
         .outputFluids('gtceu:oxygen 1000')
         .duration(600)
-        .EUt(30000);
+        .EUt(80000);
 
     event.recipes.gtceu.centrifuge(id('impure_isovol_solution'))
         .inputFluids('gtceu:impure_isovol_solution 1000')
@@ -43,7 +43,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:isovol_fluoride_dust')
         .outputFluids('gtceu:hydrogen 2000')
         .duration(600)
-        .EUt(30000);
+        .EUt(80000);
 
 
     event.recipes.gtceu.large_chemical_reactor(id('isovol_fluoride'))
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:hydrofluoric_acid 2000')
         .outputFluids('gtceu:oxygen 1000')
         .duration(600)
-        .EUt(30000);
+        .EUt(80000);
 
     event.replaceInput({id: 'gtceu:electric_blast_furnace/blast_calamatium_gas'},
         Fluid.of('gtceu:krypton 10'),

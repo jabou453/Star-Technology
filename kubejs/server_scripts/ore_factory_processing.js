@@ -87,8 +87,7 @@ const oreProcessableTiers = {
         { material: 'stibiopalladinite', secondary: 'clausthalite', tertiary: 'berzelianite', quaternary: 'tiemannite', quinary: 'stibiopalladinite' },
         { material: 'berzelianite', secondary: 'umangite', tertiary: 'aguilarite', quaternary: 'polybasite', quinary: 'berzelianite' },
         { material: 'umangite', secondary: 'berzelianite', tertiary: 'aguilarite', quaternary: 'polybasite', quinary: 'umangite' },
-        { material: 'aguilarite', secondary: 'berzelianite', tertiary: 'umangite', quaternary: 'polybasite', quinary: 'aguilarite' },
-        { material: 'rheniite', secondary: 'molybdenite', tertiary: 'sulfur', quaternary: 'molybdenum', quinary: 'rheniite' }
+        { material: 'aguilarite', secondary: 'berzelianite', tertiary: 'umangite', quaternary: 'polybasite', quinary: 'aguilarite' }
     ]
 };
 
@@ -104,7 +103,11 @@ const fluids = {
     water: 'minecraft:water 100',
     distilled_water: 'gtceu:distilled_water 100',
     sodium_persulfate: 'gtceu:sodium_persulfate 100',
-    sodium_persulfate_5x: 'gtceu:sodium_persulfate 500'
+    sodium_persulfate_5x: 'gtceu:sodium_persulfate 500',
+    water_bulk: 'minecraft:water 204800',
+    distilled_bulk: 'gtceu:distilled_water 204800',
+    sodium_persulfate_bulk: 'gtceu:sodium_persulfate 204800',
+    sodium_persulfate_5x_bulk: 'gtceu:sodium_persulfate 1024000'
 };
 
 /*
@@ -171,7 +174,7 @@ const electric_processing = (event, materialObj, tier) => {
         .itemInputs(crushed_ore(materialObj.material, 1))
         .inputFluids(fluid)
         .itemOutputs(dust(materialObj.material, 1))
-        .chancedOutput(dust(materialObj.material, 1), 5000, 150)
+        .chancedOutput(dust(materialObj.material, 1), 5000, 0)
         .chancedOutput(dust(materialObj.secondary, 1), 2500, 100)
         .chancedOutput(dust(materialObj.tertiary, 1), 1250, 50)
         .chancedOutput(dust(materialObj.quaternary, 1), 750, 100)
@@ -189,11 +192,22 @@ const plant_primitive_processing = (event, materialObj) => {
        .itemInputs(crushed_ore(materialObj.material, 1))
        .inputFluids(fluids.water)
        .itemOutputs(dust(materialObj.material, 1))
-       .chancedOutput(dust(materialObj.material, 1), 9500, 50)
-       .chancedOutput(dust(materialObj.secondary, 1), 6500, 100)
-       .chancedOutput(dust(materialObj.tertiary, 1), 5250, 50)
+       .chancedOutput(dust(materialObj.material, 1), 9500, 0)
+       .chancedOutput(dust(materialObj.secondary, 1), 6500, 0)
+       .chancedOutput(dust(materialObj.tertiary, 1), 5250, 0)
        .duration(240)
        .EUt(GTValues.VHA[GTValues.LV]);
+
+    event.recipes.gtceu.bulk_ore_processing_array(id(`${materialObj.material}`))
+       .itemInputs(crushed_ore(materialObj.material, 2048))
+       .inputFluids(fluids.water_bulk)
+       .itemOutputs(dust(materialObj.material, 2048))
+       .itemOutputs(dust(materialObj.material, 2048))
+       .chancedOutput(dust(materialObj.secondary, 2048), 7200, 0)
+       .chancedOutput(dust(materialObj.tertiary, 2048), 5600, 0)
+       .duration(240 * 2048 * .5)
+       .EUt(GTValues.VHA[GTValues.LV]);
+
 };
 
 /*
@@ -209,15 +223,27 @@ const plant_electric_processing = (event, materialObj, tier) => {
         'ev': GTValues.VHA[GTValues.EV]
     }
     const fluid = (tier == 'lv' || tier == 'mv') ? fluids.distilled_water : fluids.sodium_persulfate;
+    const fluid_bulk = (tier == 'lv' || tier == 'mv') ? fluids.distilled_bulk : fluids.sodium_persulfate_bulk;
     event.recipes.gtceu.plant_ore_processing(id(`${materialObj.material}`))
         .itemInputs(crushed_ore(materialObj.material, 1))
         .inputFluids(fluid)
         .itemOutputs(dust(materialObj.material, 1))
-        .chancedOutput(dust(materialObj.material, 1), 7500, 150)
-        .chancedOutput(dust(materialObj.secondary, 1), 5500, 100)
-        .chancedOutput(dust(materialObj.tertiary, 1), 3250, 50)
-        .chancedOutput(dust(materialObj.quaternary, 1), 1750, 100)
+        .chancedOutput(dust(materialObj.material, 1), 7500, 0)
+        .chancedOutput(dust(materialObj.secondary, 1), 5500, 0)
+        .chancedOutput(dust(materialObj.tertiary, 1), 3250, 0)
+        .chancedOutput(dust(materialObj.quaternary, 1), 1750, 0)
         .duration(240)
+        .EUt(voltages[tier]);
+
+    event.recipes.gtceu.bulk_ore_processing_array(id(`${materialObj.material}`))
+        .itemInputs(crushed_ore(materialObj.material, 2048))
+        .inputFluids(fluid_bulk)
+        .itemOutputs(dust(materialObj.material, 2048))
+        .chancedOutput(dust(materialObj.material, 2048), 8000, 0)
+        .chancedOutput(dust(materialObj.secondary, 2048), 6000, 0)
+        .chancedOutput(dust(materialObj.tertiary, 2048), 3600, 0)
+        .chancedOutput(dust(materialObj.quaternary, 2048), 2000, 0)
+        .duration(240 * 2048 * .5)
         .EUt(voltages[tier]);
 };
 
@@ -229,12 +255,24 @@ const plant_ore_processing = (event, materialObj) => {
         .itemInputs(crushed_ore(materialObj.material, 1))
         .inputFluids(fluids.sodium_persulfate_5x)
         .itemOutputs(dust(materialObj.material, 1))
-        .chancedOutput(dust(materialObj.material, 1), 7500, 150)
-        .chancedOutput(dust(materialObj.secondary, 1), 5500, 100)
-        .chancedOutput(dust(materialObj.tertiary, 1), 3250, 50)
-        .chancedOutput(dust(materialObj.quaternary, 1), 1750, 100)
-        .chancedOutput(dust(materialObj.quinary, 1), 750, 150)
+        .chancedOutput(dust(materialObj.material, 1), 8000, 0)
+        .chancedOutput(dust(materialObj.secondary, 1), 6000, 0)
+        .chancedOutput(dust(materialObj.tertiary, 1), 3600, 0)
+        .chancedOutput(dust(materialObj.quaternary, 1), 2000, 0)
+        .chancedOutput(dust(materialObj.quinary, 1), 1000, 0)
         .duration(320)
+        .EUt(GTValues.VA[GTValues.IV]);
+
+    event.recipes.gtceu.bulk_ore_processing_array(id(`${materialObj.material}`))
+        .itemInputs(crushed_ore(materialObj.material, 2048))
+        .inputFluids(fluids.sodium_persulfate_5x_bulk)
+        .itemOutputs(dust(materialObj.material, 2048))
+        .chancedOutput(dust(materialObj.material, 2048), 8000, 0)
+        .chancedOutput(dust(materialObj.secondary, 2048), 6000, 0)
+        .chancedOutput(dust(materialObj.tertiary, 2048), 3600, 0)
+        .chancedOutput(dust(materialObj.quaternary, 2048), 2000, 0)
+        .chancedOutput(dust(materialObj.quinary, 2048), 1000, 0)
+        .duration(320 * 2048 * .5)
         .EUt(GTValues.VA[GTValues.IV]);
 };
 
@@ -295,6 +333,21 @@ ServerEvents.recipes(event => {
         L: 'gtceu:iv_machine_hull',
         W: 'gtceu:platinum_single_cable'
     }).id('start:shaped/ore_processing_plant');
+
+    event.recipes.gtceu.assembly_line(id('bulk_processing_array'))
+        .itemInputs('gtceu:uhv_machine_hull', '18x #gtceu:circuits/uhv','64x kubejs:uepic_chip', '8x gtceu:uhv_electric_motor',
+            '12x kubejs:uhv_super_magnetic_core', '8x kubejs:uhv_microfluidic_flow_valve','6x gtceu:pure_netherite_gear', '4x gtceu:small_zircalloy_4_gear'
+        )
+        .inputFluids('gtceu:polyether_ether_ketone 12000','gtceu:utopian_akreyrium 750')
+        .itemOutputs('gtceu:bulk_ore_processing_array')
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:ore_processing_plant'))
+                .EUt(GTValues.VHA[GTValues.UHV])
+                .CWUt(144)
+            )
+        .duration(3000)
+        .EUt(GTValues.VHA[GTValues.UEV]);
 
     // Iterate over each tier and processable item and register the recipes
     Object.keys(oreProcessableTiers).forEach((tier) => {
