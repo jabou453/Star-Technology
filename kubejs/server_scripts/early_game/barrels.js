@@ -4,21 +4,19 @@ if (global.packmode !== 'hard'){
 ServerEvents.recipes(event => {
 const id = global.id
     event.shaped('gtceu:ulv_barrel',[
-        'ABA',
+        'ADA',
         'ACA',
         'ADA'],{
         A: '#forge:stripped_logs',
-        B: 'minecraft:chest',
         C: 'woodenbucket:wooden_bucket',
         D: '#minecraft:wooden_slabs'
     }).id('start:shaped/ulv_barrel');
 
     event.shaped('gtceu:ulv_stone_barrel',[
-        'ABA',
+        'ADA',
         'ACA',
         'ADA'],{
             A: '#forge:stone',
-            B: 'minecraft:chest',
             C: 'minecraft:bucket',
             D: 'minecraft:stone_slab'
     }).id('start:shaped/ulv_stone_barrel');
@@ -32,9 +30,9 @@ const id = global.id
             .duration(15);
     }
 
-    sbarrel('cobblestone','minecraft:water','minecraft:lava','')
-    sbarrel('obsidian','minecraft:lava','minecraft:water',1)
-    sbarrel('blackstone','exnihilosequentia:witch_water','minecraft:lava','')
+    sbarrel('cobblestone','minecraft:water','minecraft:lava',0)
+    sbarrel('obsidian','minecraft:lava','minecraft:water',10)
+    sbarrel('blackstone','exnihilosequentia:witch_water','minecraft:lava',0)
 
     event.recipes.gtceu.stone_barrel(id(`tempered_glass`))
         .itemInputs(`minecraft:glass`)

@@ -123,7 +123,10 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["1F5CCE8CFD02903A"]
+			dependencies: [
+				"1F5CCE8CFD02903A"
+				"397C622B06B1165A"
+			]
 			description: ["A faster and more advanced version of the Primitive Ore Factory, capable of handling higher tier ores."]
 			id: "0E88CB5E68212006"
 			rewards: [{
