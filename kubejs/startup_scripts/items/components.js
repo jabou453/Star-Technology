@@ -31,5 +31,14 @@ StartupEvents.registry('item', event => {
         .tooltip('§7Ultra Excessive Power IC')
         .texture('kubejs:item/chips_n_wafers/uepic_chip');
 
+    event.create('draco_boule')
+        .displayName('§5Draco§r-doped Boule')
+        .tooltip('§7Draconically Infused Circuit Boule')
+        .texture('kubejs:item/chips_n_wafers/draco_boule');
+
+    event.create('draco_wafer')
+        .displayName('§5Draco§r-doped Wafer')
+        .tooltip('§7Draconically Infused Circuit Wafer')
+        .texture('kubejs:item/chips_n_wafers/draco_wafer');
 
 });

@@ -640,11 +640,11 @@
 			dependencies: ["3AE729D3F47E9A2B"]
 			id: "06EC98F6E6AFC2AF"
 			tasks: [{
-				id: "7585DCB3290D83B9"
-				title: "Drag Boule"
-				type: "checkmark"
+				id: "3E9EBE180652C5E4"
+				item: "kubejs:draco_boule"
+				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 0.0d
 		}
 		{
@@ -653,11 +653,11 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "6D4BC401FE89651A"
-				title: "drag wafer"
-				type: "checkmark"
+				id: "57C24BDAFAED1B95"
+				item: "kubejs:draco_wafer"
+				type: "item"
 			}]
-			x: 10.0d
+			x: 8.0d
 			y: -2.0d
 		}
 		{
@@ -669,7 +669,7 @@
 				type: "checkmark"
 			}]
 			x: 8.0d
-			y: -4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["5E96ECB0768B5D80"]
@@ -735,7 +735,7 @@
 			id: "24E2CB89693EDEA3"
 			tasks: [{
 				id: "1DA3A7C22624348C"
-				title: "Draconic Neuroloom"
+				title: "Awakened Draconic Neuroloom"
 				type: "checkmark"
 			}]
 			x: 4.0d
@@ -755,7 +755,7 @@
 				type: "checkmark"
 			}]
 			x: 6.0d
-			y: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["72A79F7AE189FD12"]
@@ -768,10 +768,13 @@
 				type: "checkmark"
 			}]
 			x: 6.0d
-			y: 0.0d
+			y: -2.0d
 		}
 		{
-			dependencies: ["3AE729D3F47E9A2B"]
+			dependencies: [
+				"0DF30CDA8DE68E0C"
+				"3AE729D3F47E9A2B"
+			]
 			id: "694E1F6458D5F72F"
 			tasks: [{
 				id: "6D44D00AECEBA049"
@@ -779,7 +782,7 @@
 				type: "checkmark"
 			}]
 			x: 8.0d
-			y: -2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -793,7 +796,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["24E2CB89693EDEA3"]
@@ -803,7 +806,7 @@
 				item: "start_core:uiv_parallel_hatch"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: -6.0d
 		}
 		{
@@ -864,25 +867,6 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["5944C4DE27F98FF3"]
-			id: "7525302103768D45"
-			tasks: [
-				{
-					id: "128F90FB76A495C2"
-					item: "start_core:uev_parallel_hatch"
-					type: "item"
-				}
-				{
-					id: "5944C92937337165"
-					item: "start_core:uev_absolute_parallel_hatch"
-					type: "item"
-				}
-			]
-			title: "UEV Parallel Hatches"
-			x: 4.0d
-			y: -6.0d
-		}
-		{
 			dependencies: ["295442FA6CE0BA13"]
 			id: "218CABD676F3B732"
 			tasks: [{
@@ -892,49 +876,6 @@
 			}]
 			x: -3.0d
 			y: -1.0d
-		}
-		{
-			dependencies: ["5E7153B7A10FC241"]
-			description: [
-				"The Maker of Gates has some &mfun&r in store for you....... "
-				"{image:komarumod:textures/painting/komaru_god.png width:100 height:100 align:center}"
-			]
-			icon: {
-				Count: 1
-				id: "ftbquests:custom_icon"
-				tag: {
-					Icon: "komarumod:textures/painting/komaru_chonky.png"
-				}
-			}
-			id: "72020C00A8BBD75A"
-			optional: true
-			rewards: [
-				{
-					auto: "enabled"
-					id: "7CF70A1AC4379D48"
-					item: "minecraft:cookie"
-					type: "item"
-				}
-				{
-					auto: "enabled"
-					command: "/playsound gtceu:sus master @a"
-					elevate_perms: true
-					icon: "gtceu:sus_record"
-					id: "65DBA10EF47C4036"
-					silent: true
-					title: "Sus"
-					type: "command"
-				}
-			]
-			shape: "rsquare"
-			size: 4.0d
-			tasks: [{
-				id: "4C50248BDC04F8FA"
-				title: "Dont Worry About it... Here's a cookie"
-				type: "checkmark"
-			}]
-			x: 11.5d
-			y: 1.5d
 		}
 	]
 	title: "Draconic Empires"

@@ -1141,4 +1141,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     //UIV Materials
     conductor('polonium_bismide', ['1x polonium', '1x bismuth'], 0x016038, DULL, [14400, 'highest', VA('uev'), 1800], [V('uiv'), 5, 24, false], [bolt_and_screw,spring,small_spring]);
+
+    compLiquidStill('dragon_breath', ['1x mystery'], [no_decomp])
+
 });
