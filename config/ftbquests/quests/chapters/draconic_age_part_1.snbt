@@ -292,14 +292,9 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["01FBF9CDD9066AF5"]
+			dependencies: ["395C32B51E768458"]
 			id: "0168A45EB73911AC"
 			tasks: [
-				{
-					id: "69CCBF0C08150E76"
-					title: "Dragon Harvesting"
-					type: "checkmark"
-				}
 				{
 					id: "2905E8DC5AFA2279"
 					item: "kubejs:draconic_stem_cells"
@@ -321,8 +316,8 @@
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 2.0d
+			x: -2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["059CB064A515B157"]
@@ -346,8 +341,8 @@
 				item: "kubejs:draconic_neuro_processing_unit"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 2.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["18FD654260DFF1D6"]
@@ -537,7 +532,7 @@
 				type: "checkmark"
 			}]
 			x: -2.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["1772F46C9EAF6FB7"]
@@ -547,8 +542,8 @@
 				title: "Circuit Packs"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 4.0d
+			x: -4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [

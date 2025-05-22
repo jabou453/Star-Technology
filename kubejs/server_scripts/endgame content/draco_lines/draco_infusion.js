@@ -11,6 +11,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UEV]);
     
     event.remove({id: 'minecraft:popped_chorus_fruit'});
+    event.replaceInput({ input: 'minecraft:popped_chorus_fruit' },'minecraft:popped_chorus_fruit','minecraft:chorus_fruit');
     event.recipes.gtceu.large_quantum_compressor(id('true_absolute_chorus'))
         .itemInputs('kubejs:void_core', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit'
             ,'64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit'

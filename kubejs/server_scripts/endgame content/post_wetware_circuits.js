@@ -24,13 +24,13 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UV]);
 
-    // event.recipes.gtceu.circuit_assembler(id('draconic_neuro_processing_unit'))
-    //     .itemInputs('kubejs:draconic_wetware_printed_circuit_board', '8x kubejs:draconic_brain_matter_cells', '16x gtceu:polybenzimidazole_small_fluid_pipe', '16x gtceu:blue_steel_plate', '32x gtceu:silicone_rubber_foil', '16x gtceu:tritanium_bolt')
-    //     .inputFluids('gtceu:sterilized_growth_medium 500')
-    //     .itemOutputs('1x kubejs:draconic_neuro_processing_unit')
-    //     .duration(600)
-    //     .cleanroom(CleanroomType.CLEANROOM)
-    //     .EUt(GTValues.VHA[GTValues.UV]);
+    event.recipes.gtceu.circuit_assembler(id('draconic_neuro_processing_unit'))
+        .itemInputs('kubejs:draconic_wetware_printed_circuit_board', '16x kubejs:draconic_brain_matter_cells', '16x gtceu:polyether_ether_ketone_small_fluid_pipe', '16x gtceu:platinum_plate', '32x gtceu:silicone_rubber_foil', '16x gtceu:tritanium_bolt')
+        .inputFluids('gtceu:sterilized_growth_medium 750')
+        .itemOutputs('1x kubejs:draconic_neuro_processing_unit')
+        .duration(600)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
     // event.recipes.gtceu.circuit_assembler(id('draconic_wetware_microchip_processor'))
     //     .itemInputs('kubejs:draconic_neuro_processing_unit', 'gtceu:crystal_cpu', 'gtceu:qbit_cpu_chip', '12x gtceu:advanced_smd_capacitor', '12x gtceu:advanced_smd_transistor', '16x gtceu:fine_yttrium_barium_cuprate_wire')
