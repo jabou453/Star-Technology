@@ -44,11 +44,36 @@ ServerEvents.recipes(event => {
 
     // Infusion
 
-    // event.recipes.gtceu.draco_infusion(id('draco_boule'))
-    //     .itemInputs()
-    //     .inputFluids()
-    //     .itemOutputs()
-    //     .duration()
-    //     .EUt();
+    event.recipes.gtceu.draco_infusion(id('draco_boule'))
+        .itemInputs('gtceu:neutronium_boule', '8x kubejs:draconic_stem_cells', '1x gtceu:neutronium_block', '32x gtceu:silicon_block', 
+            '32x gtceu:silicon_block', '1x gtceu:neutronium_block', '8x kubejs:draconic_stem_cells')
+        .inputFluids('gtceu:pure_dragon_breath 60000')
+        .itemOutputs('kubejs:draco_boule')
+        .duration(6000)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.draco_infusion(id('draco_ware_casing'))
+        .itemInputs('gtceu:high_power_casing', 'gtceu:uev_sensor', '8x gtceu:fine_thorium_plut_duranide_241_wire', '2x kubejs:draconic_brain_matter_cells', 
+            '2x kubejs:draconic_brain_matter_cells', '8x gtceu:fine_thorium_plut_duranide_241_wire', 'gtceu:uev_sensor')
+        .inputFluids('gtceu:dragon_breath 8000')
+        .itemOutputs('kubejs:draco_ware_casing')
+        .duration(800)
+        .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.draco_infusion(id('draco_resilient_fusion_glass'))
+        .itemInputs('gtceu:fusion_glass', '2x kubejs:draconic_scale_cells', '4x gtceu:neutron_reflector', 'gtceu:uhv_field_generator', 
+            'gtceu:uhv_field_generator', '4x gtceu:neutron_reflector', '2x kubejs:draconic_scale_cells')
+        .inputFluids('gtceu:dragon_breath 4000')
+        .itemOutputs('kubejs:draco_resilient_fusion_glass')
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.draco_infusion(id('draco_assembly_grating'))
+        .itemInputs('gtceu:assembly_line_grating', '8x gtceu:void_foil', '8x gtceu:void_foil', '1x gtceu:uev_robot_arm', 
+            '1x gtceu:uev_robot_arm', '8x gtceu:void_foil', '8x gtceu:void_foil')
+        .inputFluids('gtceu:dragon_breath 6000')
+        .itemOutputs('kubejs:draco_assembly_grating')
+        .duration(600)
+        .EUt(GTValues.VHA[GTValues.UEV]);
 
     });

@@ -11,7 +11,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 });
 
-GTCEuStartupEvents.registry('gtceu:machine', event => {
+GTCEuStartupEvents.registry('gtceu:machine', event => { // Filler pre-multi
 
     event.create('draco_infusion', 'simple')
         .tiers(GTValues.UIV)
