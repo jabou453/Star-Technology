@@ -1144,4 +1144,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquidStill('dragon_breath', ['1x mystery'], [no_decomp])
 
+    compLiquidStill('pure_dragon_breath', ['1x mystery'], [no_decomp])
+
+
 });

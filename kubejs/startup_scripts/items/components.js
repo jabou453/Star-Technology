@@ -32,13 +32,34 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/chips_n_wafers/uepic_chip');
 
     event.create('draco_boule')
-        .displayName('§5Draco§r-doped Boule')
-        .tooltip('§7Draconically Infused Circuit Boule')
+        .displayName('§5Draco§r-doped Neutronium-Silicate Boule')
+        .tooltip('§7Raw Circuit')
         .texture('kubejs:item/chips_n_wafers/draco_boule');
 
     event.create('draco_wafer')
         .displayName('§5Draco§r-doped Wafer')
-        .tooltip('§7Draconically Infused Circuit Wafer')
+        .tooltip('§7Raw Circuit Wafer')
         .texture('kubejs:item/chips_n_wafers/draco_wafer');
+
+    event.create('draco_advanced_soc_wafer')
+        .displayName('§5Dr§rASoC Wafer')
+        .tooltip('§7Raw Draconically Advanced Circuit')
+        .texture('kubejs:item/chips_n_wafers/draco_advanced_soc_wafer');
+
+    event.create('draco_advanced_soc')
+        .displayName('§5Dr§rASoC')
+        .tooltip('§7Draconically Advanced System on Chip')
+        .texture('kubejs:item/chips_n_wafers/draco_advanced_soc');
+
+    event.create('uipic_wafer')
+        .displayName('UIPIC Wafer')
+        .tooltip('§7Raw Ultra Immense Power Circuit')
+        .texture('kubejs:item/chips_n_wafers/uipic_wafer');
+
+    event.create('uipic_chip')
+        .displayName('UIPIC Chip')
+        .tooltip('§7Ultra Immense Power IC')
+        .texture('kubejs:item/chips_n_wafers/uipic_chip');
+
 
 });

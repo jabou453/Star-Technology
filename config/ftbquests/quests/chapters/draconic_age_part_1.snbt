@@ -527,15 +527,16 @@
 			dependencies: ["395C32B51E768458"]
 			id: "1772F46C9EAF6FB7"
 			tasks: [{
-				id: "57E957460CE75A2E"
-				title: "Draconic Circuit Factory"
-				type: "checkmark"
+				id: "4AAC7E72D6B3BBFC"
+				item: "gtceu:draco_circuit_assembler"
+				type: "item"
 			}]
 			x: -2.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["1772F46C9EAF6FB7"]
+			icon: "kubejs:luv_universal_circuit"
 			id: "324630FF56F505DA"
 			tasks: [{
 				id: "1E5FDD16FC5DDAA3"
@@ -653,18 +654,18 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0DF30CDA8DE68E0C"]
 			id: "074635DC3322DC99"
 			tasks: [{
-				id: "33F82DA31DE8BF87"
-				title: "drag soc"
-				type: "checkmark"
+				id: "096716469F4806A5"
+				item: "kubejs:draco_advanced_soc_wafer"
+				type: "item"
 			}]
 			x: 8.0d
-			y: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["5E96ECB0768B5D80"]
@@ -754,28 +755,31 @@
 		}
 		{
 			dependencies: ["72A79F7AE189FD12"]
-			icon: "minecraft:dragon_breath"
 			id: "3AE729D3F47E9A2B"
 			subtitle: "No linger stinky"
 			tasks: [{
-				id: "553429266D192AF8"
-				title: "Purified Dragon's Breath"
-				type: "checkmark"
+				id: "0CF6EA4214D2778A"
+				item: "gtceu:pure_dragon_breath_bucket"
+				type: "item"
 			}]
 			x: 6.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"0DF30CDA8DE68E0C"
-				"3AE729D3F47E9A2B"
-			]
+			dependencies: ["3AE729D3F47E9A2B"]
 			id: "694E1F6458D5F72F"
-			tasks: [{
-				id: "6D44D00AECEBA049"
-				title: "UIPIC Chips"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "14D8819BD3B9A996"
+					item: "kubejs:uipic_chip"
+					type: "item"
+				}
+				{
+					id: "471872EA9404A875"
+					item: "kubejs:uipic_wafer"
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: -4.0d
 		}

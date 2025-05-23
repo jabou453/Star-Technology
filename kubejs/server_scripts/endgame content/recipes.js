@@ -126,52 +126,6 @@ ServerEvents.recipes(event => {
         .duration(1100)
         .EUt(GTValues.VHA[GTValues.UEV]);
 
-    event.recipes.gtceu.chemical_reactor(id('uepic_wafer'))
-        .itemInputs('gtceu:uhpic_wafer','4x gtceu:silicon_carbide_over_bismuth_tritelluride_dust')
-        .inputFluids('gtceu:neutronium 576')
-        .itemOutputs('kubejs:uepic_wafer')
-        .duration(1200)
-        .EUt((GTValues.VA[GTValues.UV]))
-        .cleanroom(CleanroomType.CLEANROOM);
-
-    event.recipes.gtceu.cutter(id('uepic_chip'))
-        .itemInputs('kubejs:uepic_wafer')
-        .itemOutputs('2x kubejs:uepic_chip')
-        .duration(900)
-        .EUt((GTValues.VA[GTValues.UV]))
-        .cleanroom(CleanroomType.STERILE_CLEANROOM);
-
-    event.recipes.gtceu.circuit_assembler(id('3d_nand_chip'))
-        .itemInputs('64x gtceu:nand_memory_chip', '12x gtceu:cerium_tritelluride_bolt', '2x #gtceu:circuits/iv')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 216')
-        .itemOutputs('6x kubejs:3d_nand_chip')
-        .duration(600)
-        .EUt((GTValues.VA[GTValues.ZPM]))
-        .cleanroom(CleanroomType.STERILE_CLEANROOM);
-
-    event.recipes.gtceu.circuit_assembler(id('3d_nor_chip'))
-        .itemInputs('64x gtceu:nor_memory_chip', '12x gtceu:cerium_tritelluride_bolt', '2x #gtceu:circuits/iv')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 216')
-        .itemOutputs('6x kubejs:3d_nor_chip')
-        .duration(600)
-        .EUt((GTValues.VA[GTValues.ZPM]))
-        .cleanroom(CleanroomType.STERILE_CLEANROOM);
-
-    event.recipes.gtceu.chemical_reactor(id('qram'))
-        .itemInputs('gtceu:ram_wafer','2x gtceu:silicon_carbide_over_bismuth_tritelluride_dust')
-        .inputFluids('gtceu:radon 250')
-        .itemOutputs('kubejs:qram_wafer')
-        .duration(1500)
-        .EUt((GTValues.VA[GTValues.UV]))
-        .cleanroom(CleanroomType.STERILE_CLEANROOM);
-
-    event.recipes.gtceu.cutter(id('qram_chip'))
-        .itemInputs('kubejs:qram_wafer')
-        .itemOutputs('12x kubejs:qram_chip')
-        .duration(900)
-        .EUt((GTValues.VA[GTValues.UHV]))
-        .cleanroom(CleanroomType.STERILE_CLEANROOM);
-
     event.recipes.gtceu.chemical_plant(id('borax'))
         .itemInputs('12x gtceu:boron_dust', '6x gtceu:sodium_bisulfate_dust')
         .inputFluids('minecraft:water 39000')
