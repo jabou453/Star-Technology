@@ -53,8 +53,8 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.draco_infusion(id('draco_ware_casing'))
-        .itemInputs('gtceu:high_power_casing', 'gtceu:uev_sensor', '8x gtceu:fine_thorium_plut_duranide_241_wire', '2x kubejs:draconic_brain_matter_cells', 
-            '2x kubejs:draconic_brain_matter_cells', '8x gtceu:fine_thorium_plut_duranide_241_wire', 'gtceu:uev_sensor')
+        .itemInputs('gtceu:high_power_casing', 'gtceu:uev_sensor', '1x #gtceu:circuits/uev', '2x kubejs:draconic_brain_matter_cells', 
+            '2x kubejs:draconic_brain_matter_cells', '1x #gtceu:circuits/uev', 'gtceu:uev_sensor')
         .inputFluids('gtceu:dragon_breath 8000')
         .itemOutputs('kubejs:draco_ware_casing')
         .duration(800)

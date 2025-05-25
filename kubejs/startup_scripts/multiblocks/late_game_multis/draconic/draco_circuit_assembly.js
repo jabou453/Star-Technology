@@ -1,17 +1,17 @@
-const $FactoryBlockPattern = Java.loadClass('com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern')
+const $RelativeDirection = Java.loadClass('com.gregtechceu.gtceu.api.pattern.util.RelativeDirection');
+const $AssemblyOrderedInputs = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.electric.AssemblyLineMachine');
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('draco_circuit_assembler')
         .category('draco_circuit_assembler')
         .setEUIO('in')
-        .setMaxIOSize(16, 1, 3, 0)
+        .setMaxIOSize(16, 1, 4, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_MASS_FAB, FillDirection.LEFT_TO_RIGHT)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ASSEMBLER);
 
 });
-
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
@@ -20,7 +20,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .recipeType('draco_circuit_assembler')
         .recipeModifier(GTRecipeModifiers.OC_NON_PERFECT_SUBTICK)
         .appearanceBlock(() => Block.getBlock('kubejs:enriched_naquadah_machine_casing'))
-        .pattern(definition => FactoryBlockPattern.start()
+        .pattern(definition => FactoryBlockPattern.start($RelativeDirection.BACK, $RelativeDirection.UP, $RelativeDirection.RIGHT)
             .aisle('SSISS', 'SSDSS', '@SSSS', ' SSS ')
             .aisle('SSISS', 'GCDCG', 'RACAR', ' SGS ').setRepeatable(3, 15)
             .aisle('SSOSS', 'SSDSS', 'SSSSS', ' SSS ')
@@ -33,11 +33,12 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('A', Predicates.blocks('gtceu:assembly_line_casing'))
             .where('C', Predicates.blocks('gtceu:assembly_line_unit'))
             .where('D', Predicates.blocks('kubejs:draco_ware_casing'))
-            .where('I', Predicates.blocks('gtceu:ulv_input_bus'))
+            .where('I', Predicates.blocks('gtceu:ulv_input_bus')) //ideally want inputs to act like Ass-Line does
             .where('O', Predicates.abilities(PartAbility.EXPORT_ITEMS))
             .where('R', Predicates.blocks('kubejs:draco_assembly_grating'))
             .where(' ', Predicates.any())
             .build())
         .workableCasingRenderer('kubejs:block/casings/naquadah/casing',
             'gtceu:block/multiblock/assembly_line', false);
+
 });

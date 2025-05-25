@@ -22,7 +22,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('H', Predicates.blocks(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING.get()).setMinGlobalLimited(22)
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                .or(Predicates.abilities($StarTPartAbility.ABSOLUTE_PARALLEL_HATCH).setMinGlobalLimited(1)))
+                .or(Predicates.abilities($StarTPartAbility.ABSOLUTE_PARALLEL_HATCH).setMaxGlobalLimited(1)))
             .where('M', Predicates.blocks('kubejs:magmada_alloy_coil_block'))
             .where('S', Predicates.blocks('start_core:enriched_naquadah_engine_intake_casing'))
             .where('F', Predicates.blocks('start_core:enriched_naquadah_firebox_casing'))

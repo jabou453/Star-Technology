@@ -381,9 +381,9 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "0CDF1129CD1EC487"
-				title: "Draconic Infusion Array"
-				type: "checkmark"
+				id: "6C03B25DB18C6546"
+				item: "gtceu:draco_infusion"
+				type: "item"
 			}]
 			x: -4.0d
 			y: 4.0d
