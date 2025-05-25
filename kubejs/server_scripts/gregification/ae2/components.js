@@ -24,10 +24,10 @@ ServerEvents.recipes(event => {
         .EUt(128);
 
     [
-        {chip: 'silicon', voltage: 'mv', n: 2},
-        {chip: 'phosphorus', voltage: 'hv', n: 4},
-        {chip: 'naquadah', voltage: 'ev', n: 8},
-        {chip: 'neutronium', voltage: 'iv', n: 16}
+        {chip: 'silicon', voltage: 'mv', n: 2, dura: 200},
+        {chip: 'phosphorus', voltage: 'hv', n: 4, dura: 160},
+        {chip: 'naquadah', voltage: 'ev', n: 8, dura: 120},
+        {chip: 'neutronium', voltage: 'iv', n: 16, dura: 80}
     ].forEach(tier => {
         event.recipes.gtceu.cutter(id(`${tier.chip}_chip`))
             .itemInputs(`gtceu:${tier.chip}_wafer`)
@@ -37,10 +37,10 @@ ServerEvents.recipes(event => {
 
         ['logic', 'engineering', 'calculation'].forEach(type => {
             event.recipes.gtceu.me_circuit_assembler(id(`${type}_processor_${tier.chip}`))
-                .itemInputs(`kubejs:${tier.chip}_chip`, `ae2:printed_${type}_processor`)
+                .itemInputs(`kubejs:${tier.chip}_chip`, `ae2:printed_${type}_processor`, 'ae2:printed_silicon')
                 .inputFluids('gtceu:skystone 144')
                 .itemOutputs(`${tier.n}x ae2:${type}_processor`)
-                .duration(400)
+                .duration(tier.dura)
                 .EUt(global.va[tier.voltage]);
         });
     
@@ -58,18 +58,6 @@ ServerEvents.recipes(event => {
             .duration(400)
             .EUt(global.va['mv']);
 
-        event.recipes.gtceu.compressor(id(`${type.material}_skystone_plate`))
-            .itemInputs(`gtceu:${type.material}_skystone_alloy_dust`)
-            .itemOutputs(`gtceu:${type.material}_skystone_alloy_plate`)
-            .duration(200)
-            .EUt(global.va['mv']);
-
-        event.recipes.gtceu.forming_press(id(`${type.circuit}_press`))
-            .itemInputs('gtceu:double_sky_steel_plate', `gtceu:${type.material}_dust`)
-            .itemOutputs(`ae2:${type.circuit}_processor_press`)
-            .duration(600)
-            .EUt(65);
-
         event.recipes.gtceu.forming_press(id(`printed_${type.circuit}_processor`))
             .itemInputs(`gtceu:${type.material}_skystone_alloy_plate`)
             .notConsumable(`ae2:${type.circuit}_processor_press`)
@@ -78,13 +66,21 @@ ServerEvents.recipes(event => {
             .EUt(global.va['mv']);
     });
 
+    event.recipes.gtceu.forming_press(id('printed_silicon_processor'))
+        .itemInputs('gtceu:silicon_plate')
+        .notConsumable('ae2:silicon_press')
+        .itemOutputs('ae2:printed_silicon')
+        .duration(400)
+        .EUt(global.va['mv']);
+
+
     [
         {type: 'formation', catalyst: 'ae2:certus_quartz_crystal'},
         {type: 'annihilation', catalyst: 'minecraft:quartz'}
     ].forEach(tier => {
         event.recipes.gtceu.me_core_assembler(id(`${tier.type}_core`))
             .itemInputs('ae2:logic_processor', `${tier.catalyst}`, '6x gtceu:fluix_steel_foil')
-            .itemOutputs(`2x ae2:${tier.type}_core`)
+            .itemOutputs(`4x ae2:${tier.type}_core`)
             .duration(400)
             .EUt(128);
     });
@@ -115,7 +111,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.precise_me_circuit_assembler(id(`${type.circuit}_processor_soc`))
             .notConsumable(`ae2:${type.circuit}_processor_press`)
             .itemInputs('kubejs:ae2_soc', `gtceu:${type.material}_skystone_alloy_plate`)
-            .inputFluids('gtceu:sky_steel 576')
+            .inputFluids('gtceu:sky_steel 288')
             .itemOutputs(`8x ae2:${type.circuit}_processor`)
             .duration(400)
             .EUt(global.va['iv']);

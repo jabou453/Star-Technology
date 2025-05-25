@@ -4,25 +4,8 @@ ServerEvents.recipes(event => {
     // Credit for the idea of uncrafting Crafting Storage and Storage Cells in packers goes to AncientSkies
 
     //housings
-    const housing = (type, mat) => {
-        event.remove({output: `ae2:${type}_cell_housing`})
-        event.recipes.gtceu.assembler(id(`${type}_cell_housing`))
-            .itemInputs('gtceu:sky_steel_frame', '8x gtceu:ram_chip', `4x gtceu:${mat}_skystone_alloy_plate`)
-            .inputFluids('gtceu:soldering_alloy 144')
-            .itemOutputs(`ae2:${type}_cell_housing`)
-            .duration(400)
-            .EUt(128);
-        event.remove({output: `megacells:mega_${type}_cell_housing`})
-        event.recipes.gtceu.assembler(id(`mega_${type}_cell_housing`))
-            .itemInputs('gtceu:tungsten_carbide_frame', '8x gtceu:data_stick', `4x gtceu:netherite_${mat}_skystone_alloy_plate`)
-            .inputFluids('gtceu:soldering_alloy 144')
-            .itemOutputs(`megacells:mega_${type}_cell_housing`)
-            .duration(400)
-            .EUt(8192);
-    }
-
-    housing('item', 'certus_quartz');
-    housing('fluid', 'gold')
+    event.replaceInput({ id: 'ae2:network/cells/item_cell_housing'}, 'minecraft:iron_ingot', 'gtceu:diamond_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:network/cells/fluid_cell_housing'}, 'minecraft:copper_ingot', 'gtceu:gold_skystone_alloy_plate');
 
     //storage cells
     const packaging = (tier, type, mat) => {

@@ -1,33 +1,33 @@
 ServerEvents.recipes(event => {
     const id = global.id;
     
-    event.remove({output: 'ae2:cell_component_1k'})
+        event.remove({output: 'ae2:cell_component_1k'})
     event.recipes.gtceu.me_core_assembler(id('cell_component_1k'))
-        .itemInputs('3x ae2:logic_processor', '#gtceu:circuits/ulv', '16x gtceu:fine_red_alloy_wire')
-        .inputFluids('gtceu:sky_steel 144')
+        .itemInputs('3x ae2:logic_processor', '#gtceu:circuits/ulv', '12x gtceu:fine_red_alloy_wire')
+        .inputFluids('gtceu:sky_steel 18')
         .itemOutputs('ae2:cell_component_1k')
         .duration(400)
         .EUt(global.v['ulv']);
 
-    const storage_base = (higher, lower, voltage, wire) => {
+    const storage_base = (higher, lower, voltage, wire, multiplier) => {
         event.remove({output: higher})
         event.recipes.gtceu.me_core_assembler(higher.split(':')[1])
-            .itemInputs(`3x ${lower}`, `#gtceu:circuits/${voltage}`, `16x gtceu:fine_${wire}_wire`)
-            .inputFluids('gtceu:sky_steel 144')
+            .itemInputs(`3x ${lower}`, `#gtceu:circuits/${voltage}`, `12x gtceu:fine_${wire}_wire`)
+            .inputFluids(`gtceu:sky_steel ${36*multiplier}`)
             .itemOutputs(higher)
             .duration(400)
             .EUt(global.v[`${voltage}`]);
     }
 
-    storage_base('ae2:cell_component_4k', 'ae2:cell_component_1k', 'lv', 'tin');
-    storage_base('ae2:cell_component_16k', 'ae2:cell_component_4k', 'mv', 'copper');
-    storage_base('ae2:cell_component_64k', 'ae2:cell_component_16k', 'hv', 'gold');
-    storage_base('ae2:cell_component_256k', 'ae2:cell_component_64k', 'ev', 'aluminium');
-    storage_base('megacells:cell_component_1m', 'ae2:cell_component_256k', 'iv', 'platinum');
-    storage_base('megacells:cell_component_4m', 'megacells:cell_component_1m', 'luv', 'niobium_titanium');
-    storage_base('megacells:cell_component_16m', 'megacells:cell_component_4m', 'zpm', 'vanadium_gallium');
-    storage_base('megacells:cell_component_64m', 'megacells:cell_component_16m', 'uv', 'yttrium_barium_cuprate');
-    storage_base('megacells:cell_component_256m', 'megacells:cell_component_64m', 'uhv', 'europium');
+    storage_base('ae2:cell_component_4k', 'ae2:cell_component_1k', 'lv', 'tin', 1);
+    storage_base('ae2:cell_component_16k', 'ae2:cell_component_4k', 'mv', 'copper', 2);
+    storage_base('ae2:cell_component_64k', 'ae2:cell_component_16k', 'hv', 'gold', 4);
+    storage_base('ae2:cell_component_256k', 'ae2:cell_component_64k', 'ev', 'aluminium', 8);
+    storage_base('megacells:cell_component_1m', 'ae2:cell_component_256k', 'iv', 'platinum', 16);
+    storage_base('megacells:cell_component_4m', 'megacells:cell_component_1m', 'luv', 'niobium_titanium', 32);
+    storage_base('megacells:cell_component_16m', 'megacells:cell_component_4m', 'zpm', 'vanadium_gallium', 64);
+    storage_base('megacells:cell_component_64m', 'megacells:cell_component_16m', 'uv', 'yttrium_barium_cuprate', 128);
+    storage_base('megacells:cell_component_256m', 'megacells:cell_component_64m', 'uhv', 'europium', 256);
 
     const spatial = (tier, storage, voltage) => {
         event.remove({output: `ae2:spatial_cell_component_${tier}`})
@@ -42,9 +42,5 @@ ServerEvents.recipes(event => {
     spatial('2', '16', 'mv');
     spatial('16', '64', 'hv');
     spatial('128', '256', 'ev');
-
-    event.replaceInput({ id: 'ae2:network/cells/item_cell_housing'}, 'minecraft:iron_ingot', 'gtceu:diamond_skystone_alloy_plate');
-    event.replaceInput({ id: 'ae2:netwokr/cells/fluix_cell_housing'}, 'minecraft:copper_ingot', 'gtceu:gold_skystone_alloy_plate');
-
 
 });

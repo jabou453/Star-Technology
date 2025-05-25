@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
     rubberType('gtceu:silicone_rubber', 72);
     rubberType('gtceu:styrene_butadiene_rubber', 36);
 
-    //gerging cable anchors
+    //greging cable anchors
     const metaltype = (wire, amount) => {
         event.recipes.gtceu.cutter(id(`${wire}_cable_anchor`))
             .itemInputs(`gtceu:${wire}_single_wire`)

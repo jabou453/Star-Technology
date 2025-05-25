@@ -59,7 +59,7 @@ ServerEvents.recipes(event => {
         'ABA'], {
         A: 'gtceu:double_silicon_plate',
         B: 'gtceu:diamond_skystone_alloy_plate',
-        C: '#gtceu:batteries/lv'
+        C: 'gtceu:energium_dust'
     });
 
     shapedRecipeRem('ae2:spatial_io_port', [
@@ -88,8 +88,8 @@ ServerEvents.recipes(event => {
         'FCF',
         'HFH'
     ], {
-        C: 'gtceu:star_steel_frame',
-        F: 'ae2:fluix_crystal',
+        C: 'gtceu:fluix_steel_frame',
+        F: 'gtceu:diamond_skystone_alloy_plate',
         H: 'ae2:engineering_processor'
     });
 
@@ -100,20 +100,21 @@ ServerEvents.recipes(event => {
         ], {
             C: 'minecraft:crafting_table',
             F: 'ae2:quartz_glass',
-            H: 'gtceu:star_steel_plate',
+            H: 'gtceu:gold_skystone_alloy_plate',
             J: 'ae2:annihilation_core',
             B: 'ae2:formation_core'
         });
 
     shapedRecipeRem('ae2:pattern_provider', [
             'HFH',
-            'J B',
+            'JAB',
             'HFH'
         ], {
             F: 'minecraft:crafting_table',
-            H: 'gtceu:star_steel_plate',
+            H: 'gtceu:gold_skystone_alloy_plate',
             J: 'ae2:annihilation_core',
-            B: 'ae2:formation_core'
+            B: 'ae2:formation_core',
+            A: 'gtceu:sky_steel_frame'
         });
 
     shapedRecipeRem('ae2:crafting_unit', [
@@ -121,9 +122,9 @@ ServerEvents.recipes(event => {
             'BCB',
             'HFH'
         ], {
-            C: 'ae2:logic_processor',
+            C: 'gtceu:fluix_steel_frame',
             F: 'ae2:calculation_processor',
-            H: 'gtceu:star_steel_plate',
+            H: 'gtceu:sky_steel_plate',
             B: 'ae2:fluix_glass_cable'
         });
 
@@ -132,30 +133,32 @@ ServerEvents.recipes(event => {
             'FCF',
             'HFH'
         ], {
-            C: '#forge:ingots/copper',
+            C: 'gtceu:sky_steel_frame',
             F: 'ae2:quartz_glass',
-            H: 'gtceu:star_steel_plate',
+            H: 'gtceu:sky_steel_plate',
         });
 
     shapedRecipeRem('ae2:interface', [
             'HFH',
-            'J B',
+            'JAB',
             'HFH'
         ], {
             F: '#forge:glass',
-            H: 'gtceu:star_steel_plate',
+            H: 'gtceu:certus_quartz_skystone_alloy_plate',
             J: 'ae2:annihilation_core',
-            B: 'ae2:formation_core'
+            B: 'ae2:formation_core',
+            A: 'gtceu:sky_steel_frame'
         });
 
     shapedRecipeRem('ae2:drive', [
             'HFH',
-            'B B',
+            'BAB',
             'HFH'
         ], {
             F: 'ae2:engineering_processor',
-            H: 'gtceu:star_steel_plate',
-            B: 'ae2:fluix_glass_cable'
+            H: 'gtceu:sky_steel_plate',
+            B: 'ae2:fluix_glass_cable',
+            A: 'gtceu:fluix_steel_frame'
         });
 
     shapedRecipeRem('ae2:condenser', [
@@ -163,9 +166,9 @@ ServerEvents.recipes(event => {
             'FCF',
             'HFH'
         ], {
-            C: 'ae2:fluix_dust',
+            C: 'gtceu:quantum_star',
             F: '#forge:glass',
-            H: 'gtceu:star_steel_plate',
+            H: 'gtceu:sky_steel_plate',
         });
 
     shapedRecipeRem('ae2:cell_workbench', [
@@ -173,9 +176,9 @@ ServerEvents.recipes(event => {
             'CEC',
             'CCC'
         ], {
-            A: '#minecraft:wool',
+            A: 'gtceu:certus_quartz_skystone_alloy_plate',
             B: 'ae2:calculation_processor',
-            C: 'gtceu:star_steel_plate',
+            C: 'gtceu:sky_steel_plate',
             E: '#forge:chests/wooden'
         });
 
@@ -186,21 +189,22 @@ ServerEvents.recipes(event => {
         ], {
             A: '#forge:glass',
             B: 'ae2:drive',
-            C: 'ae2:fluix_glass_cable',
-            D: 'gtceu:star_steel_plate',
+            C: 'gtceu:sky_steel_frame',
+            D: 'gtceu:sky_steel_plate',
             E: 'ae2:engineering_processor'
         });
 
     shapedRecipeRem('ae2:chest', [
             'ABA',
-            'C C',
+            'CFC',
             'DED'
         ], {
             A: '#forge:glass',
             B: 'ae2:terminal',
             C: 'ae2:fluix_glass_cable',
-            D: 'gtceu:star_steel_plate',
-            E: '#forge:ingots/copper'
+            D: 'gtceu:sky_steel_plate',
+            E: 'gtceu:gold_skystone_alloy_ingot',
+            F: 'gtceu:sky_steel_frame'
         });
 
     assembler_rem('quantum_ring', 'ae2:quantum_ring', ['gtceu:tungsten_carbide_frame', 'gtceu:ev_field_generator', 'gtceu:ev_emitter', 'gtceu:quantum_star', '6x gtceu:double_fluix_steel_plate'], 2048);
@@ -208,6 +212,14 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: 'ae2:network/parts/tunnels_me'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
     event.replaceInput({ id: 'ae2:misc/tiny_tnt'},'minecraft:gunpowder','gtceu:gelled_toluene');
     event.replaceInput({ id: 'ae2:network/crafting/patterns_blank'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:network/blocks/energy_dense_energy_cell'},'ae2:calculation_processor','gtceu:energium_dust');
+    event.replaceInput({ id: 'ae2:network/parts/export_bus'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:network/parts/import_bus'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:materials/basiccard'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:materials/basiccard'},'minecraft:gold_ingot','gtceu:gold_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:materials/advancedcard'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:materials/advancedcard'},'minecraft:diamond','gtceu:diamond_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:network/wireless_booster'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate')
  
     shapedRecipeRem('ae2:memory_card',[
         '   ',
@@ -219,6 +231,44 @@ ServerEvents.recipes(event => {
             D: 'minecraft:redstone'
         }
     );
+
+    shapedRecipeRem('merequester:requester',[
+        'ABA',
+        'CDC',
+        'EFE'],{
+            A: 'gtceu:certus_quartz_skystone_alloy_plate',
+            B: '#ae2:interface',
+            C: 'ae2:crafting_accelerator',
+            D: 'ae2:engineering_processor',
+            E: 'gtceu:gold_skystone_alloy_ingot',
+            F: 'gtceu:flawless_certus_quartz_gem'
+
+        })
+
+    shapedRecipeRem('ae2:pattern_access_terminal',[
+        'AB',
+        'C '],{
+            A: 'gtceu:computer_monitor_cover',
+            B: 'ae2:engineering_processor',
+            C: '#ae2:pattern_provider'
+    });
+    
+    shapedRecipeRem('ae2:terminal',[
+        'AB',
+        'CD'],{
+            A: 'ae2:formation_core',
+            B: 'gtceu:computer_monitor_cover',
+            C: 'ae2:logic_processor',
+            D: 'ae2:annihilation_core'
+    });
+
+    shapedRecipeRem('merequester:requester_terminal',[
+        'AB',
+        'C '],{
+            A: 'gtceu:computer_monitor_cover',
+            B: 'ae2:logic_processor',
+            C: 'merequester:requester'
+    });
 
     ['lv', 'mv', 'hv', 'ev', 'iv', 'luv'].forEach(voltage => {
         event.shaped(`gtceu:${voltage}_me_core_assembler`, [
