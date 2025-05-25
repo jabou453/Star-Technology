@@ -39,8 +39,12 @@ ServerEvents.recipes(event => {
             .EUt(global.v[voltage]);
     }
 
-    spatial('2', '16', 'hv');
-    spatial('16', '64', 'ev');
-    spatial('128', '256', 'iv');
+    spatial('2', '16', 'mv');
+    spatial('16', '64', 'hv');
+    spatial('128', '256', 'ev');
+
+    event.replaceInput({ id: 'ae2:network/cells/item_cell_housing'}, 'minecraft:iron_ingot', 'gtceu:diamond_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:netwokr/cells/fluix_cell_housing'}, 'minecraft:copper_ingot', 'gtceu:gold_skystone_alloy_plate');
+
 
 });

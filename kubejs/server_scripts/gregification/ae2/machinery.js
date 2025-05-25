@@ -1,21 +1,6 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    event.recipes.gtceu.wiremill(id('fluix_glass_cables'))
-        .itemInputs('ae2:quartz_fiber', 'gtceu:fluix_steel_foil')
-        .itemOutputs('ae2:fluix_glass_cable')
-        .duration(40)
-        .EUt(16);
-    
-    event.shaped('ae2:energy_cell', [
-        'ABA',
-        'BCB',
-        'ABA'],{
-        A: 'gtceu:double_silicon_plate',
-        B: 'gtceu:diamond_skystone_alloy_plate',
-        C: '#gtceu:batteries/lv'
-    }).id('start:shaped/energy_cell');
-
     const assembler = (id1, output, input, eu) => {
         event.recipes.gtceu.assembler(id(`${id1}`))
             .itemInputs(input)
@@ -30,38 +15,13 @@ ServerEvents.recipes(event => {
         assembler(id1, output, input, eu)
     }
 
-    const machine = (machine, frame, inputs) => {
-        inputs.unshift(`gtceu:${frame}_frame`);
-        assembler_rem(`${machine}`, `ae2:${machine}`, inputs, 128);
-    }
-
-    machine('controller', 'fluix_steel', ['4x ae2:engineering_processor', '2x #gtceu:circuits/mv', '6x gtceu:certus_quartz_skystone_alloy_plate']);
-    machine('drive', 'sky_steel', ['2x ae2:calculation_processor', 'gtceu:lv_super_chest', '6x gtceu:certus_quartz_skystone_alloy_plate']);
-    machine('pattern_provider', 'steel', ['2x ae2:crafting_card', '2x minecraft:crafting_table', '6x gtceu:sky_steel_plate']);
-    machine('interface', 'steel', ['2x gtceu:lv_conveyor_module', '2x gtceu:lv_electric_pump', '6x gtceu:blue_alloy_plate']);
-    machine('dense_energy_cell', 'black_steel', ['8x ae2:energy_cell', '6x gtceu:double_fluix_steel_plate']);
-    machine('molecular_assembler', 'steel', ['2x gtceu:lv_robot_arm', 'minecraft:crafting_table', '6x ae2:quartz_glass']);
-    machine('crafting_unit', 'steel', ['4x ae2:calculation_processor', '6x gtceu:sky_steel_plate']);
-    machine('chest', 'steel', ['gtceu:lv_super_chest', 'ae2:terminal', '6x gtceu:certus_quartz_skystone_alloy_plate']);
-    machine('energy_acceptor', 'sky_steel', ['gtceu:mv_4a_energy_converter', '6x gtceu:certus_quartz_skystone_alloy_plate']);
-    machine('io_port', 'steel', ['ae2:drive', '6x gtceu:certus_quartz_skystone_alloy_plate']);
-    machine('condenser', 'fluix_steel', ['2x gtceu:ev_field_generator', 'gtceu:quantum_star', '6x gtceu:double_ruthenium_plate']);
-    machine('cell_workbench', 'fluix_steel', ['ae2:io_port', 'ae2:basic_card', '6x gtceu:double_red_steel_plate']);
-    assembler_rem('import_bus', 'ae2:import_bus', ['gtceu:lv_input_bus', 'ae2:fluix_glass_cable', 'gtceu:lv_input_hatch'], 128);
-    assembler_rem('export_bus', 'ae2:export_bus', ['gtceu:lv_output_bus', 'ae2:fluix_glass_cable', 'gtceu:lv_output_hatch'], 128);
-    assembler_rem('requester', 'merequester:requester', ['gtceu:red_steel_frame', '5x ae2:crafting_card', '#gtceu:circuits/ev', '5x gtceu:double_kanthal_plate'], 512);
-    assembler_rem('oversize_interface', 'expatternprovider:oversize_interface', ['expatternprovider:ex_interface', '4x ae2:capacity_card', '6x gtceu:tantalum_carbide_plate'], 2048);
-
-    assembler_rem('basic_card', 'ae2:basic_card', ['3x gtceu:certus_quartz_skystone_alloy_plate', '3x ae2:calculation_processor', 'gtceu:redstone_plate', 'gtceu:gold_skystone_alloy_plate'], 128);
-    assembler_rem('advanced_card', 'ae2:advanced_card', ['3x gtceu:certus_quartz_skystone_alloy_plate', '3x ae2:calculation_processor', 'gtceu:redstone_plate', 'gtceu:diamond_skystone_alloy_plate'], 512);
-    
-    ['interface', 'pattern_provider'].forEach(type => {
-        assembler_rem(`mega_${type}`, `megacells:mega_${type}`, [`ae2:${type}`, '4x ae2:calculation_processor', '#gtceu:circuits/hv', '6x gtceu:double_black_steel_plate'], 512);
-    });
-
     const extended = (item, input) => {
         assembler_rem(`extended_${item}`, `expatternprovider:ex_${item}`, [`ae2:${input}`, '4x ae2:engineering_processor', '#gtceu:circuits/ev', '6x gtceu:double_fluix_steel_plate'], 2048);
     }
+
+    ['interface', 'pattern_provider'].forEach(type => {
+        assembler_rem(`mega_${type}`, `megacells:mega_${type}`, [`ae2:${type}`, '4x ae2:calculation_processor', '#gtceu:circuits/hv', '6x gtceu:double_black_steel_plate'], 512);
+    });
     
     ['interface', 'pattern_provider', 'molecular_assembler', 'drive', 'io_port'].forEach(type => {
             extended(`${type}`, `${type}`);
@@ -70,60 +30,195 @@ ServerEvents.recipes(event => {
     ['import_bus', 'export_bus'].forEach(type => {
         extended(`${type}_part`, `${type}`);
     });
-    
-    const matrix = (type, frame, primary, secondary) => {
-        assembler_rem(`assembler_matrix_${type}`, `expatternprovider:assembler_matrix_${type}`, [`${frame}`, `16x ${primary}`, `8x ${secondary}`, '6x gtceu:double_ruthenium_plate'], 8192);
-    }
-    matrix('frame', 'gtceu:tungsten_steel_frame', 'gtceu:sky_steel_rod', 'gtceu:polybenzimidazole_foil');
-    matrix('wall', 'gtceu:stainless_steel_frame', 'gtceu:sky_steel_rod', 'gtceu:polybenzimidazole_foil');
-    matrix('speed', 'gtceu:hssg_frame', 'ae2:calculation_processor', 'ae2:speed_card');
-    matrix('pattern', 'expatternprovider:ex_pattern_provider', 'ae2:engineering_processor', '#gtceu:circuits/iv');
-    matrix('crafter', 'expatternprovider:ex_molecular_assembler', 'ae2:logic_processor', 'gtceu:iv_robot_arm');
 
     ['import_bus', 'export_bus', 'import_hatch', 'export_hatch'].forEach(type => {
         event.remove({id: `gtceu:assembler/me_${type}`})
     });
+
     ['input_bus', 'output_bus', 'input_hatch', 'output_hatch'].forEach(type => {
         assembler(`me_${type}`, `gtceu:me_${type}`, [`gtceu:ev_${type}`, '#gtceu:circuits/ev', 'ae2:fluix_smart_cable'], 8192);
     });
 
-    assembler_rem('terminal', 'ae2:terminal', ['gtceu:computer_monitor_cover', 'ae2:formation_core', 'ae2:annihilation_core', '#gtceu:circuits/mv'], 128);
-    assembler_rem('pattern_access_terminal', 'ae2:pattern_access_terminal', ['gtceu:computer_monitor_cover', 'ae2:wireless_receiver', 'gtceu:lv_emitter', '#gtceu:circuits/mv'], 128);
-    assembler_rem('requester_terminal', 'merequester:requester_terminal', ['gtceu:computer_monitor_cover', 'merequester:requester', 'ae2:crafting_card', '#gtceu:circuits/mv'], 128);
-    assembler_rem('crafting_terminal', 'ae2:crafting_terminal', ['ae2:terminal', 'minecraft:crafting_table', 'ae2:crafting_card', '#gtceu:circuits/mv'], 128);
-    assembler_rem('pattern_encoding_terminal', 'ae2:pattern_encoding_terminal', ['ae2:terminal', 'expatternprovider:pattern_modifier', 'ae2:crafting_card', 'ae2:cell_component_1k'], 128);
-    assembler_rem('extended_pattern_access_terminal', 'expatternprovider:ex_pattern_access_part', ['ae2:pattern_access_terminal', 'ae2:wireless_receiver', 'gtceu:lv_emitter', 'ae2:cell_component_1k'], 128);
+    event.replaceInput({ id: 'ae2:network/blocks/spatial_io_pylon'}, 'ae2:fluix_crystal','gtceu:fluix_steel_frame')
 
-    const wireless = (wireless, base) => {
-        assembler_rem(wireless.split(':')[1], `${wireless}`, [`${base}`, 'ae2:wireless_receiver', 'ae2:dense_energy_cell', 'gtceu:circuits/hv'], 512)
+    event.recipes.gtceu.wiremill(id('fluix_glass_cables'))
+        .itemInputs('ae2:quartz_fiber', 'gtceu:fluix_steel_foil')
+        .itemOutputs('ae2:fluix_glass_cable')
+        .duration(40)
+        .EUt(16);
+    
+    const shapedRecipeRem = (output, pattern, key) => {
+        event.remove({output: `${output}`});
+        event.shaped(`${output}`, pattern, key).id(`start:shaped/ae/${output.split(':')[1]}`);
     }
 
-    event.remove({output: 'ae2:spatial_io_port'})
-    event.shaped(Item.of('ae2:spatial_io_port'), [
+
+    shapedRecipeRem('ae2:energy_cell', [
+        'ABA',
+        'BCB',
+        'ABA'], {
+        A: 'gtceu:double_silicon_plate',
+        B: 'gtceu:diamond_skystone_alloy_plate',
+        C: '#gtceu:batteries/lv'
+    });
+
+    shapedRecipeRem('ae2:spatial_io_port', [
         'AAA',
         'BCB',
         'DED'
     ], {
-        A: 'ae2:quartz_glass',
+        A: 'thermal:obsidian_glass',
         B: 'ae2:fluix_glass_cable',
         C: 'ae2:io_port',
         D: 'gtceu:sky_steel_plate',
         E: 'ae2:engineering_processor'
-    }).id('start:shaped/spatial_io_port');
+    });
     
-    event.shaped('ae2:quantum_link', [
+    shapedRecipeRem('ae2:quantum_link', [
         'ABA',
         'BCB',
         'ABA'],{
         A: 'gtceu:double_tungsten_plate',
         B: 'gtceu:tungsten_rod',
         C: 'thermal:enderium_glass'
-    }).id('start:shaped/qunatum_link');
+    });
+
+    shapedRecipeRem('ae2:controller', [
+        'HFH',
+        'FCF',
+        'HFH'
+    ], {
+        C: 'gtceu:star_steel_frame',
+        F: 'ae2:fluix_crystal',
+        H: 'ae2:engineering_processor'
+    });
+
+    shapedRecipeRem('ae2:molecular_assembler', [
+            'HFH',
+            'JCB',
+            'HFH'
+        ], {
+            C: 'minecraft:crafting_table',
+            F: 'ae2:quartz_glass',
+            H: 'gtceu:star_steel_plate',
+            J: 'ae2:annihilation_core',
+            B: 'ae2:formation_core'
+        });
+
+    shapedRecipeRem('ae2:pattern_provider', [
+            'HFH',
+            'J B',
+            'HFH'
+        ], {
+            F: 'minecraft:crafting_table',
+            H: 'gtceu:star_steel_plate',
+            J: 'ae2:annihilation_core',
+            B: 'ae2:formation_core'
+        });
+
+    shapedRecipeRem('ae2:crafting_unit', [
+            'HFH',
+            'BCB',
+            'HFH'
+        ], {
+            C: 'ae2:logic_processor',
+            F: 'ae2:calculation_processor',
+            H: 'gtceu:star_steel_plate',
+            B: 'ae2:fluix_glass_cable'
+        });
+
+    shapedRecipeRem('ae2:energy_acceptor', [
+            'HFH',
+            'FCF',
+            'HFH'
+        ], {
+            C: '#forge:ingots/copper',
+            F: 'ae2:quartz_glass',
+            H: 'gtceu:star_steel_plate',
+        });
+
+    shapedRecipeRem('ae2:interface', [
+            'HFH',
+            'J B',
+            'HFH'
+        ], {
+            F: '#forge:glass',
+            H: 'gtceu:star_steel_plate',
+            J: 'ae2:annihilation_core',
+            B: 'ae2:formation_core'
+        });
+
+    shapedRecipeRem('ae2:drive', [
+            'HFH',
+            'B B',
+            'HFH'
+        ], {
+            F: 'ae2:engineering_processor',
+            H: 'gtceu:star_steel_plate',
+            B: 'ae2:fluix_glass_cable'
+        });
+
+    shapedRecipeRem('ae2:condenser', [
+            'HFH',
+            'FCF',
+            'HFH'
+        ], {
+            C: 'ae2:fluix_dust',
+            F: '#forge:glass',
+            H: 'gtceu:star_steel_plate',
+        });
+
+    shapedRecipeRem('ae2:cell_workbench', [
+            'ABA',
+            'CEC',
+            'CCC'
+        ], {
+            A: '#minecraft:wool',
+            B: 'ae2:calculation_processor',
+            C: 'gtceu:star_steel_plate',
+            E: '#forge:chests/wooden'
+        });
+
+    shapedRecipeRem('ae2:io_port', [
+            'AAA',
+            'BCB',
+            'DED'
+        ], {
+            A: '#forge:glass',
+            B: 'ae2:drive',
+            C: 'ae2:fluix_glass_cable',
+            D: 'gtceu:star_steel_plate',
+            E: 'ae2:engineering_processor'
+        });
+
+    shapedRecipeRem('ae2:chest', [
+            'ABA',
+            'C C',
+            'DED'
+        ], {
+            A: '#forge:glass',
+            B: 'ae2:terminal',
+            C: 'ae2:fluix_glass_cable',
+            D: 'gtceu:star_steel_plate',
+            E: '#forge:ingots/copper'
+        });
 
     assembler_rem('quantum_ring', 'ae2:quantum_ring', ['gtceu:tungsten_carbide_frame', 'gtceu:ev_field_generator', 'gtceu:ev_emitter', 'gtceu:quantum_star', '6x gtceu:double_fluix_steel_plate'], 2048);
 
-    assembler_rem('wireless_connector', 'expatternprovider:wireless_connect', ['gtceu:steel_frame', '2x gtceu:hv_emitter', '#gtceu:circuits/ev', '6x gtceu:fluix_steel_foil', '6x gtceu:neodymium_plate'], 512);
-    assembler_rem('p2p_tunnel', 'ae2:me_p2p_tunnel', ['gtceu:double_black_steel_plate', '2x gtceu:hv_emitter', '#gtceu:circuits/ev', '6x gtceu:fluix_steel_foil', '6x gtceu:certus_quartz_plate'], 512);
+    event.replaceInput({ id: 'ae2:network/parts/tunnels_me'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2:misc/tiny_tnt'},'minecraft:gunpowder','gtceu:gelled_toluene');
+    event.replaceInput({ id: 'ae2:network/crafting/patterns_blank'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
+ 
+    shapedRecipeRem('ae2:memory_card',[
+        '   ',
+        'ABB',
+        'CDC'],{
+            A: 'ae2:calculation_processor',
+            B: 'gtceu:diamond_skystone_alloy_plate',
+            C: 'gtceu:gold_skystone_alloy_plate',
+            D: 'minecraft:redstone'
+        }
+    );
 
     ['lv', 'mv', 'hv', 'ev', 'iv', 'luv'].forEach(voltage => {
         event.shaped(`gtceu:${voltage}_me_core_assembler`, [
@@ -151,8 +246,6 @@ ServerEvents.recipes(event => {
         }).id(`start:shaped/${voltage}_me_circuit_assembler`);
     });
 
-    assembler_rem('mega_crafting_unit', 'megacells:mega_crafting_unit', ['gtceu:netherite_certus_quartz_skystone_alloy_frame', '8x ae2:crafting_unit', '6x gtceu:ruthenium_plate'], 8192);
-
     event.shaped('2x kubejs:fluix_steel_casing', [
         'ABA',
         'ACA',
@@ -178,8 +271,8 @@ ServerEvents.recipes(event => {
 
 
     event.recipes.gtceu.assembler(id('precise_me_core_assembler'))
-    .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_conveyor_module', 'gtceu:iv_robot_arm', '2x #gtceu:circuits/iv',
-        '16x gtceu:fine_tantalum_wire', '8x gtceu:mercury_barium_calcium_cuprate_single_wire')
+        .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_conveyor_module', 'gtceu:iv_robot_arm', '2x #gtceu:circuits/iv',
+            '16x gtceu:fine_tantalum_wire', '8x gtceu:mercury_barium_calcium_cuprate_single_wire')
         .itemOutputs('gtceu:precise_me_core_assembler')
         .duration(600)
         .EUt(8192);

@@ -2,18 +2,6 @@ ServerEvents.recipes(event => {
     const id = global.id;
 
     ['sky', 'fluix'].forEach(alloy => {
-        event.recipes.gtceu.alloy_smelter(id(`${alloy}_steel_ingot`))
-            .itemInputs(`ae2:${alloy}_dust`, '2x gtceu:steel_ingot')
-            .itemOutputs(`3x gtceu:${alloy}_steel_ingot`)
-            .duration(160)
-            .EUt(56);
-
-        event.recipes.gtceu.alloy_smelter(id(`${alloy}_steel_dust`))
-            .itemInputs(`ae2:${alloy}_dust`, '2x gtceu:steel_dust')
-            .itemOutputs(`3x gtceu:${alloy}_steel_ingot`)
-            .duration(160)
-            .EUt(56);
-
         event.recipes.gtceu.mixer(id(`${alloy}_steel`))
             .itemInputs(`ae2:${alloy}_dust`, '2x gtceu:steel_dust')
             .itemOutputs(`3x gtceu:${alloy}_steel_dust`)
@@ -94,10 +82,9 @@ ServerEvents.recipes(event => {
         {type: 'formation', catalyst: 'ae2:certus_quartz_crystal'},
         {type: 'annihilation', catalyst: 'minecraft:quartz'}
     ].forEach(tier => {
-        event.remove({output: `ae2:${tier.type}_core`})
         event.recipes.gtceu.me_core_assembler(id(`${tier.type}_core`))
             .itemInputs('ae2:logic_processor', `${tier.catalyst}`, '6x gtceu:fluix_steel_foil')
-            .itemOutputs(`ae2:${tier.type}_core`)
+            .itemOutputs(`2x ae2:${tier.type}_core`)
             .duration(400)
             .EUt(128);
     });
@@ -133,5 +120,7 @@ ServerEvents.recipes(event => {
             .duration(400)
             .EUt(global.va['iv']);
     });
+
+    event.replaceInput({id: 'ae2:network/wireless_part'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
 
 });
