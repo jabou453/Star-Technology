@@ -343,7 +343,7 @@
 				"79428BAEAA7856E1"
 				"6AA4CC44DE1C8E1E"
 			]
-			description: ["This one has a build in Jetpack."]
+			description: ["This one has a built-in Jetpack."]
 			id: "1602A4A4D00C9724"
 			rewards: [{
 				id: "3BD74F896357D2D8"
@@ -385,7 +385,7 @@
 		{
 			dependencies: ["53A9F3758C218CDC"]
 			description: [
-				"Paralleling allows you to do more a recipe at once."
+				"Paralleling allows you to do more batches of a recipe at once."
 				""
 				""
 				"{ \"text\": \"Read More About It Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"70EE9D4811A27CF2\" } }"
@@ -880,7 +880,7 @@
 		}
 		{
 			dependencies: ["4E546CE15A52D7DD"]
-			description: ["A stronger fiber based circuit board, made by layering multiple normal ones over eachother."]
+			description: ["A stronger fiber-based circuit board, made by layering multiple normal ones over eachother."]
 			hide_dependency_lines: true
 			id: "51C60C25C3C9C770"
 			rewards: [{
@@ -1684,7 +1684,7 @@
 			description: [
 				"Unfortunately, you can connect only one HPCA to the research station. However, this multiblock can route the computation from several HPCAs into the research station!"
 				""
-				"HPCA's will need bridging components to be able to connect and transmit CWU through these."
+				"HPCAs will need bridging components to be able to connect and transmit CWU through these."
 			]
 			id: "0687F0D2A9EC1AA4"
 			rewards: [{
@@ -1707,7 +1707,7 @@
 				"182D948925141764"
 				"138E77CDBA50A619"
 			]
-			description: ["A machine capable of tearing space-time using the power of netherstars, allowing you to harvest Naquadah from it."]
+			description: ["A machine capable of tearing space-time using the power of Nether Stars, allowing you to harvest Naquadah from it."]
 			hide_dependency_lines: false
 			id: "1F416C7A641914EC"
 			rewards: [{

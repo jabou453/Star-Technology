@@ -358,7 +358,7 @@
 		}
 		{
 			dependencies: ["2F87FC1D5BB43220"]
-			description: ["Liquid Echo's from sources unknown."]
+			description: ["Liquid Echoes from sources unknown."]
 			icon: {
 				Count: 1
 				id: "gtceu:echo_r_bucket"
@@ -464,7 +464,7 @@
 		}
 		{
 			dependencies: ["75F0388FAB52E0B3"]
-			description: ["A casing to pay homage to an early contributer of the pack, keeping it going."]
+			description: ["A casing to pay homage to an early contributor of the pack, keeping it going."]
 			id: "10D78E10735CD210"
 			rewards: [{
 				id: "3A14DEA6D1AA0502"
@@ -623,7 +623,7 @@
 				"7FFCAD92772A175F"
 				"3792C5D89B1301A0"
 			]
-			description: ["A powerfull and large multiblock that can assemble parts of a Stargate."]
+			description: ["A powerful and large multiblock that can assemble parts of a Stargate."]
 			id: "1004D6D7636E0321"
 			rewards: [{
 				count: 2
@@ -646,7 +646,7 @@
 				"6D169C5E35C9EF6C"
 				"1102670352911334"
 			]
-			description: ["Try a variety of singularities so that you don't drain yourself of 1 material"]
+			description: ["Try a variety of singularities so that you don't drain yourself of one material."]
 			id: "0508AE03C730BE6C"
 			rewards: [{
 				id: "2B9821F0ED86771C"
@@ -688,7 +688,7 @@
 		}
 		{
 			dependencies: ["5BDA17962F4630EB"]
-			description: ["A Quantum Star that has been arificially made more dense, to the point it will exert it's own gravitational force."]
+			description: ["A Quantum Star that has been artificially made more dense, to the point it starts exerting its own gravitational force."]
 			hide_dependency_lines: true
 			id: "7FFCAD92772A175F"
 			rewards: [{
@@ -780,7 +780,7 @@
 		}
 		{
 			dependencies: ["56D5872D2C33A9CC"]
-			description: ["The path to the sands of Abydos, inscriped on a piece of whispering gemstone."]
+			description: ["The path to the sands of Abydos, inscribed on a piece of whispering gemstone."]
 			id: "66D2FB63E81E03AB"
 			rewards: [{
 				id: "37AFE192D0BE0925"
@@ -798,7 +798,7 @@
 		}
 		{
 			dependencies: ["7A38469EAAABEAAE"]
-			description: ["A machine that sends signals into deep space in the hopes to enscribe the location of found dimensions and cosmic bodies onto coordinate crystals."]
+			description: ["A machine that sends signals into deep space in the hopes of inscribing the location of found dimensions and cosmic bodies onto coordinate crystals."]
 			id: "56D5872D2C33A9CC"
 			rewards: [{
 				count: 2
@@ -818,7 +818,7 @@
 		}
 		{
 			dependencies: ["2F87FC1D5BB43220"]
-			description: ["A blank slate, that with carefull processing and some luck could be inscribed with coordinates to different realms."]
+			description: ["A blank slate, that with careful processing and some luck could be inscribed with coordinates to different realms."]
 			hide_dependency_lines: true
 			id: "7A38469EAAABEAAE"
 			rewards: [{
@@ -896,7 +896,7 @@
 				"2EDE996312B1C69E"
 				"5FB0649F878A32D5"
 			]
-			description: ["Visits the sands that hide the remnants of an ancient race of beings, long since gone."]
+			description: ["Visit the sands that hide the remnants of an ancient race of beings, long since gone."]
 			icon: "minecraft:sand"
 			id: "1FB502D770A4A59B"
 			rewards: [{
@@ -942,7 +942,7 @@
 				"0508AE03C730BE6C"
 				"1004D6D7636E0321"
 			]
-			description: ["An extremely dense and resistant block, that can resistant the force of rifts in space."]
+			description: ["An extremely dense and resistant block, that can resist the force of rifts in space."]
 			id: "70D35B4C1D6A143D"
 			rewards: [{
 				id: "3B90C26F72F5A63B"
@@ -964,7 +964,7 @@
 				"70D35B4C1D6A143D"
 				"1E47910C2F2112E1"
 			]
-			description: ["A sturdy frame for Chevrons, allowing them to be used in powerfull machines."]
+			description: ["A sturdy frame for Chevrons, allowing them to be used in powerful machines."]
 			id: "433E2BCC63E779AF"
 			rewards: [{
 				id: "3D4753FAE4D98706"
@@ -986,7 +986,7 @@
 				"70D35B4C1D6A143D"
 				"43B5477B959B2736"
 			]
-			description: ["A computer integrate into a Ring Block that can communicate with Chevrons to achieve a miracle."]
+			description: ["A computer integrated into a Ring Block that can communicate with Chevrons to achieve a miracle."]
 			id: "5C7A92625D07C55D"
 			rewards: [{
 				id: "398ACC54F4F42715"
@@ -1063,7 +1063,7 @@
 		}
 		{
 			dependencies: ["3FC351F05F2AC743"]
-			description: ["A colorfull multiblock used for precise laser cutting to make some incredibly exotic materials."]
+			description: ["A colorful multiblock used for precise laser cutting to make some incredibly exotic materials."]
 			id: "1C81273869C0EC9F"
 			rewards: [{
 				id: "32925D70150DF477"
@@ -1335,7 +1335,7 @@
 		}
 		{
 			dependencies: ["2EDE996312B1C69E"]
-			description: ["Right Click the bottom part of the stargate (works for any) with a mallet to reset it's power NBT data to fix the issue. Make sure to let it charge up for a bit before you go dialing."]
+			description: ["Right-click the bottom part of the stargate (works for any) with a mallet to reset its power NBT data to fix the issue. Make sure to let it charge up for a bit before you go dialing."]
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"

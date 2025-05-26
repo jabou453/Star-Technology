@@ -639,9 +639,9 @@
 			dependencies: ["6F05FAE3F5AAC357"]
 			description: [
 				"This machine can do 3 things."
-				"1. Reactive the Dormant Bacteria to a usable form"
-				"2. Mutate a bacteria so that it may have a new affinity"
-				"3. Mutate a bacteria so that it may be a new type"
+				"1. Reactivate the Dormant Bacteria to a usable form"
+				"2. Mutate bacteria so that it may have a new affinity"
+				"3. Mutate bacteria so that it may be a new type"
 				"With all of this and the breeder (more information there) you should be able to get the exact type of bacteria you desire."
 			]
 			id: "7F72F9E28713D965"
@@ -705,6 +705,139 @@
 			title: "Otherworldly Biology"
 			x: -0.5d
 			y: -3.0d
+		}
+		{
+			dependencies: ["7F72F9E28713D965"]
+			description: ["Awoken Bacteria. These come in all kinds of types and seem to produce some familiar liquids."]
+			id: "305974D431F17AF0"
+			rewards: [{
+				id: "0707F4889D91098E"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0AF4E3E277B5B04F"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						display: {
+							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
+						}
+						items: [
+							{
+								Count: 1b
+								id: "start_core:bacteria_methane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_octane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butadiene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_benzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_toluene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetone"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetic_acid"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methyl_acetate"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_creosote"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_phenol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_dimethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_naphthalene"
+								tag: { }
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Bacterial Colonies"
+			x: 1.5d
+			y: -5.0d
 		}
 		{
 			dependencies: ["3479CEBD73550718"]
@@ -773,7 +906,7 @@
 				"4D04123F036F181E"
 				"1BE69DB2DFDC35C8"
 			]
-			description: ["A new Stellarium alloy, that is mixed with materials not normally found in your home isle."]
+			description: ["A new Stellarium alloy mixed with materials not normally found on your home isle."]
 			id: "30C974448C57F0EC"
 			rewards: [{
 				id: "470268845820F4F7"
@@ -882,7 +1015,7 @@
 			description: [
 				"The core of an Ancient Stargate."
 				""
-				"This can accurately detect and use Chevrons to lock on planest far beyond Abydos."
+				"This can accurately detect and use Chevrons to lock on planets far beyond Abydos."
 			]
 			id: "6F9793149DE81FCC"
 			rewards: [{
@@ -983,7 +1116,7 @@
 		}
 		{
 			dependencies: ["379D69A44FC5B2F2"]
-			description: ["So this is what makes the Gates Beyond Comprehention...."]
+			description: ["So this is what makes the Gates Beyond Comprehension...."]
 			id: "64F0BB858EEB7913"
 			rewards: [{
 				count: 2
@@ -1027,7 +1160,7 @@
 		}
 		{
 			dependencies: ["2D064F759D13FE4B"]
-			description: ["The path to the hellfires of the Nether, inscriped on a piece of whispering gemstone."]
+			description: ["The path to the hellfires of the Nether, inscribed on a piece of whispering gemstone."]
 			id: "29DAE5F27A1D4115"
 			rewards: [{
 				id: "361187FB10BF0C39"
@@ -1044,7 +1177,7 @@
 		}
 		{
 			dependencies: ["2D064F759D13FE4B"]
-			description: ["The path to the shattered void of the End, inscriped on a piece of whispering gemstone."]
+			description: ["The path to the shattered void of the End, inscribed on a piece of whispering gemstone."]
 			id: "14479FB9FCF478D6"
 			rewards: [{
 				id: "2EFAEEDC5007A402"
@@ -1191,7 +1324,7 @@
 		}
 		{
 			dependencies: ["47DF7968E9B98C65"]
-			description: ["Mutate and Breed Bacteria to fit you needs and help you gather all the hydrocarbons you could need."]
+			description: ["Mutate and Breed Bacteria to fit your needs and help you gather all the hydrocarbons you could need."]
 			icon: "gtceu:ethylbenzene_bucket"
 			id: "2F91771A1872EB4E"
 			optional: true
@@ -1412,7 +1545,7 @@
 				"146F88E5C1119649"
 				"624480A1E62B52EF"
 			]
-			description: ["A machine that can engrave runes ontop of eachother using lost Abydos technology."]
+			description: ["A machine that can engrave runes on top of each other using lost Abydos technology."]
 			id: "2C354B0735DF8023"
 			rewards: [{
 				count: 2
@@ -1717,7 +1850,7 @@
 				"707C2E9BA62A60C5"
 				"5C39B74171CC21F9"
 			]
-			description: ["These Magma's need to a little more to break down."]
+			description: ["These Magmas need to a little more to break down."]
 			id: "05E824087CE7825D"
 			shape: "gear"
 			size: 1.5d
@@ -1750,7 +1883,7 @@
 			description: [
 				"A shard of the &5&l&o&mAbyss&r"
 				""
-				"Forged from echos of a void and altered stars"
+				"Forged from echoes of a void and altered stars"
 				""
 				"It must be at the heart of something strong"
 			]
