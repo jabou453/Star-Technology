@@ -81,10 +81,10 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.recipes.gtceu.chemical_plant(id('sodium_persulfate'))
-        .itemInputs('10x gtceu:sodium_dust', '10x gtceu:sulfur_dust')
-        .inputFluids('gtceu:oxygen 40000')
-        .outputFluids('gtceu:sodium_persulfate 10000')
-        .duration(240)
+        .itemInputs('1x gtceu:sodium_dust', '1x gtceu:sulfur_dust')
+        .inputFluids('gtceu:oxygen 4000')
+        .outputFluids('gtceu:sodium_persulfate 500')
+        .duration(80)
         .EUt(GTValues.VHA[GTValues.EV]);
 
 });
