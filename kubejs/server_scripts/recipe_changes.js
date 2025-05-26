@@ -546,7 +546,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('9x gtceu:duralumin_dust')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.HV])
-        .circuit(2);
+        .circuit(4);
 
     event.recipes.gtceu.mixer(id('beryllium_aluminium_alloy'))
         .itemInputs('7x gtceu:beryllium_dust', '1x gtceu:aluminium_dust')

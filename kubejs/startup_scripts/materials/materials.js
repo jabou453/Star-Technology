@@ -237,6 +237,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('netherite', no_decomp);
     matmod('echo_shard', lens);
     matmod('copper', gear);
+    matmod('ruthenium_trinium_americium_neutronate', fine_wire);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
@@ -1176,7 +1177,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngotPlasma('starium_alloy', ['4x mystery', '2x estalt', '2x pure_netherite'], 0x2253d2, SHINY, [15199, 'highest', VA('uev'), 3600], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
 
-    conductorPlasma('seaborgium_palladium_enriched_estalt_flerovium_alloy', ['4x seaborgium', '8x palladium', '3x enriched_estalt', '2x flerovium'], 0x73022b, DULL, [15469, 'highest', VA('uev'), 1800], [V('uev'), 32, 0, true], [no_decomp, no_abs_recipe]);
+    conductorPlasma('seaborgium_palladium_enriched_estalt_flerovium_alloy', ['4x seaborgium', '8x palladium', '3x enriched_estalt', '2x flerovium'], 0x73022b, DULL, [15469, 'highest', VA('uev'), 1800], [V('uev'), 32, 0, true], [no_decomp, no_abs_recipe, fine_wire]);
 
     compDust('iron_titanium_oxide', ['3x iron', '2x titanium', '7x oxygen'], 0x82229b, [no_decomp]);
 

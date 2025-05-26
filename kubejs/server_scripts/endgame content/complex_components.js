@@ -17,8 +17,8 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UV]);
     
     const ComponentComposition = [
-        {Tier: 'uhv', PrimaryMaterial: 'zalloy', SupportMaterial: 'zircalloy_4', TierMaterial: 'neutronium', Tier1Under: 'uv', Tier2Under: 'zpm', Rubber: 'styrene_butadiene_rubber', Plastic: 'polyether_ether_ketone', WireTypeComputational: 'iron_selenide_over_strontium_titanium_oxide', WireTypeMechanical: 'zirconium', CableType: 'zirconium_selenide_diiodide', GlassType: 'fusion_glass', CatalystType: 'gravi_star', PrimaryMagnet: 'pure_netherite', SecondaryMagnet: 'samarium', Fluid: 'naquadria', VoltageCoil: 'thorium_plut_duranide_241', EUt: GTValues.VHA[GTValues.UHV], Scaler: 1, Coolant: 'liquid_helium'},
-        // {Tier: 'uev', PrimaryMaterial: 'starium_alloy', SupportMaterial: 'magmada_alloy', TierMaterial: 'mythrolic_alloy', Tier1Under: 'uhv', Tier2Under: 'uv', Rubber: 'styrene_butadiene_rubber', Plastic: 'polyether_ether_ketone', WireTypeComputational: 'astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide', WireTypeMechanical: 'hafnium', CableType: 'astatium_bioselex_carbonite', GlassType: 'fusion_glass', CatalystType: 'gravi_star', PrimaryMagnet: 'zapolgium', SecondaryMagnet: 'pure_netherite', Fluid: 'isovol', VoltageCoil: 'aurourium', EUt: GTValues.VHA[GTValues.UEV], Scaler: 2, Coolant: 'liquid_helium'},
+        {Tier: 'uhv', PrimaryMaterial: 'zalloy', SupportMaterial: 'zircalloy_4', TierMaterial: 'neutronium', Tier1Under: 'uv', Tier2Under: 'zpm', Rubber: 'styrene_butadiene_rubber', Plastic: 'polyether_ether_ketone', WireTypeComputational: 'iron_selenide_over_strontium_titanium_oxide', WireTypeMechanical: 'zirconium', CableType: 'zirconium_selenide_diiodide', GlassType: 'fusion_glass', CatalystType: 'gravi_star', PrimaryMagnet: 'pure_netherite', SecondaryMagnet: 'samarium', Fluid: 'naquadria', VoltageCoil: 'thorium_plut_duranide_241', EUt: GTValues.VHA[GTValues.UHV], Scaler: 1, Coolant: 'liquid_helium', SuperConductor: 'ruthenium_trinium_americium_neutronate'},
+        {Tier: 'uev', PrimaryMaterial: 'starium_alloy', SupportMaterial: 'magmada_alloy', TierMaterial: 'mythrolic_alloy', Tier1Under: 'uhv', Tier2Under: 'uv', Rubber: 'styrene_butadiene_rubber', Plastic: 'polyether_ether_ketone', WireTypeComputational: 'astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide', WireTypeMechanical: 'hafnium', CableType: 'astatium_bioselex_carbonite', GlassType: 'fusion_glass', CatalystType: 'gravi_star', PrimaryMagnet: 'zapolgium', SecondaryMagnet: 'pure_netherite', Fluid: 'isovol', VoltageCoil: 'aurourium', EUt: GTValues.VHA[GTValues.UEV], Scaler: 2, Coolant: 'liquid_helium', SuperConductor: 'seaborgium_palladium_enriched_estalt_flerovium_alloy'},
         /*{Tier: 'uiv', PrimaryMaterial: 'zalloy', SupportMaterial: 'zircalloy_4', TierMaterial: 'neutronium', Tier1Under: 'uv', Tier2Under: 'zpm', Rubber: 'stytene_butadiene_rubber', Plastic: 'polyether_ether_ketone', WireTypeComputational: 'iron_selenide_over_strontium_titanium_oxide', WireTypeMechanical: 'zirconium', GlassType: 'fusion_glass', CatalystType: 'gravi_star', PrimaryMagnet: 'pure_netherite', SecondaryMagnet: 'samarium', Fluid: 'naquadria', VoltageCoil: 'thorium_plut_duranide_241', EUt: GTValues.VHA[GTValues.UHV], Scaler: 1},
         {Tier: 'uxv', PrimaryMaterial: 'zalloy', SupportMaterial: 'zircalloy_4', TierMaterial: 'neutronium', Tier1Under: 'uv', Tier2Under: 'zpm', Rubber: 'stytene_butadiene_rubber', Plastic: 'polyether_ether_ketone', WireTypeComputational: 'iron_selenide_over_strontium_titanium_oxide', WireTypeMechanical: 'zirconium', GlassType: 'fusion_glass', CatalystType: 'gravi_star', PrimaryMagnet: 'pure_netherite', SecondaryMagnet: 'samarium', Fluid: 'naquadria', VoltageCoil: 'thorium_plut_duranide_241', EUt: GTValues.VHA[GTValues.UHV], Scaler: 1},
         {Tier: 'opv', PrimaryMaterial: 'zalloy', SupportMaterial: 'zircalloy_4', TierMaterial: 'neutronium', Tier1Under: 'uv', Tier2Under: 'zpm', Rubber: 'stytene_butadiene_rubber', Plastic: 'polyether_ether_ketone', WireTypeComputational: 'iron_selenide_over_strontium_titanium_oxide', WireTypeMechanical: 'zirconium', GlassType: 'fusion_glass', CatalystType: 'gravi_star', PrimaryMagnet: 'pure_netherite', SecondaryMagnet: 'samarium',  Fluid: 'naquadria', VoltageCoil: 'thorium_plut_duranide_241', EUt: GTValues.VHA[GTValues.UHV], Scaler: 1}
@@ -50,9 +50,9 @@ ServerEvents.recipes(event => {
         .EUt(comp.EUt);
 
     event.recipes.gtceu.component_part_assembly(id(`${comp.Tier}_precision_drive_mechanism`))
-        .itemInputs(`gtceu:${comp.PrimaryMaterial}_frame`, `gtceu:${comp.Tier1Under}_conveyor_module`, `#gtceu:circuits/${comp.Tier1Under}`,
+        .itemInputs(`gtceu:${comp.PrimaryMaterial}_frame`, `gtceu:${comp.Tier1Under}_electric_motor`, `#gtceu:circuits/${comp.Tier1Under}`,
             `gtceu:${comp.SupportMaterial}_gear`, `gtceu:small_${comp.PrimaryMaterial}_gear`,`8x gtceu:${comp.PrimaryMaterial}_round`)
-        .inputFluids(`gtceu:lubricant ${250+comp.Scaler*250}`, `gtceu:${comp.Rubber} 1152`)
+        .inputFluids(`gtceu:lubricant ${250+comp.Scaler*250}`, `gtceu:${comp.Rubber} 1728`)
         .itemOutputs(`kubejs:${comp.Tier}_precision_drive_mechanism`) 
         .duration(600)
         .EUt(comp.EUt);
@@ -74,15 +74,15 @@ ServerEvents.recipes(event => {
         .EUt(comp.EUt);
 
     event.recipes.gtceu.component_part_assembly(id(`${comp.Tier}_catalyst_core`))
-        .itemInputs(`gtceu:${comp.PrimaryMaterial}_frame`, `gtceu:${comp.Tier1Under}_field_generator`,`gtceu:${comp.CatalystType}`, `gtceu:${comp.GlassType}`, `4x gtceu:${comp.PrimaryMaterial}_rod`, `4x gtceu:${comp.SupportMaterial}_ring`)
+        .itemInputs(`4x gtceu:long_${comp.PrimaryMaterial}_rod`, `gtceu:${comp.GlassType}`,`gtceu:${comp.CatalystType}`, `32x gtceu:fine_${comp.SuperConductor}_wire`, `gtceu:${comp.Tier1Under}_emitter`, `4x gtceu:${comp.SupportMaterial}_ring`)
         .inputFluids(`gtceu:${comp.Fluid} 576`)
         .itemOutputs(`kubejs:${comp.Tier}_catalyst_core`) 
         .duration(800)
         .EUt(comp.EUt);
 
     event.recipes.gtceu.component_part_assembly(id(`${comp.Tier}_high_strength_panel`))
-        .itemInputs(`2x gtceu:double_${comp.PrimaryMaterial}_plate`, `8x gtceu:${comp.SupportMaterial}_screw`, `gtceu:${comp.Tier1Under}_electric_piston`)
-        .inputFluids(`gtceu:${comp.TierMaterial} 576`)
+        .itemInputs(`2x gtceu:double_${comp.PrimaryMaterial}_plate`, `#gtceu:circuits/${comp.Tier}`, `8x gtceu:${comp.SupportMaterial}_screw`)
+        .inputFluids(`gtceu:${comp.TierMaterial} 576`, `gtceu:${comp.Plastic} ${396+comp.Scaler*36}`)
         .itemOutputs(`kubejs:${comp.Tier}_high_strength_panel`) 
         .duration(300)
         .EUt(comp.EUt);
@@ -170,7 +170,7 @@ ServerEvents.recipes(event => {
             .EUt(comp.EUt/4);
 
         event.recipes.gtceu.assembly_line(id(`${comp.Tier}_field_generator`))
-            .itemInputs(`gtceu:${comp.PrimaryMaterial}_frame`, `2x kubejs:${comp.Tier}_high_strength_panel`, `kubejs:${comp.Tier}_catalyst_core`, `2x gtceu:${comp.Tier}_emitter`, `kubejs:${comp.Tier}_computational_matrix`, `64x gtceu:fine_${comp.WireTypeComputational}_wire`, `2x kubejs:${comp.Tier}_micropower_router`)
+            .itemInputs(`gtceu:${comp.PrimaryMaterial}_frame`, `2x kubejs:${comp.Tier}_high_strength_panel`, `kubejs:${comp.Tier}_catalyst_core`, `2x gtceu:${comp.Tier}_emitter`, `kubejs:${comp.Tier}_computational_matrix`, `64x gtceu:fine_${comp.SuperConductor}_wire`, `2x kubejs:${comp.Tier}_micropower_router`)
             .inputFluids(`gtceu:indium_tin_lead_cadmium_soldering_alloy ${864*(2**comp.Scaler)}`, `gtceu:${comp.Fluid} 576`)
             .itemOutputs(`gtceu:${comp.Tier}_field_generator`)
             .stationResearch(

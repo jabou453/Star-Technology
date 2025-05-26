@@ -38,8 +38,8 @@ StartupEvents.registry('item', event => {
     }
     
     partTiers('uhv','4','UHV');
-    // partTiers('uev','a','UEV');
-    // partTiers('uiv','2','UIV');
+    partTiers('uev','a','UEV');
+    partTiers('uiv','2','UIV');
     // partTiers('uxv','e','UXV');
     // partTiers('opv','9§l','OpV');
 
