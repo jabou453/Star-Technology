@@ -4,10 +4,28 @@ ServerEvents.recipes(event => {
     // Credit for the idea of uncrafting Crafting Storage and Storage Cells in packers goes to AncientSkies
 
     //housings
+    
     event.replaceInput({ id: 'ae2:network/cells/item_cell_housing'}, 'minecraft:iron_ingot', 'gtceu:diamond_skystone_alloy_plate');
     event.replaceInput({ id: 'ae2:network/cells/fluid_cell_housing'}, 'minecraft:copper_ingot', 'gtceu:gold_skystone_alloy_plate');
 
+    event.remove({id: 'megacells:cells/mega_item_cell_housing'});
+    event.recipes.gtceu.assembler(id('mega_item_cell_housing'))
+            .itemInputs(['6x gtceu:netherite_certus_quartz_skystone_alloy_plate','gtceu:laminated_glass','4x #gtceu:circuits/ev'])
+            .inputFluids('gtceu:fluix_steel 576')
+            .itemOutputs('megacells:mega_item_cell_housing')
+            .duration(400)
+            .EUt(2048);
+
+    event.remove({id: 'megacells:cells/mega_fluid_cell_housing'});
+    event.recipes.gtceu.assembler(id('mega_fluid_cell_housing'))
+            .itemInputs(['6x gtceu:netherite_gold_skystone_alloy_plate','gtceu:laminated_glass','4x #gtceu:circuits/ev'])
+            .inputFluids('gtceu:fluix_steel 576')
+            .itemOutputs('megacells:mega_fluid_cell_housing')
+            .duration(400)
+            .EUt(2048);
+
     //storage cells
+
     const packaging = (tier, type, mat) => {
         //Base
         event.remove({output: `ae2:${type}_storage_cell_${tier}k`})
@@ -34,8 +52,8 @@ ServerEvents.recipes(event => {
         //MEGA
         event.remove({output: `megacells:${type}_storage_cell_${tier}m`})
         event.recipes.gtceu.assembler(id(`${type}_storage_cell_${tier}m`))
-            .itemInputs('gtceu:tungsten_carbide_frame', `megacells:cell_component_${tier}m`, '8x gtceu:data_stick', `4x gtceu:netherite_${mat}_skystone_alloy_plate`)
-            .inputFluids('gtceu:soldering_alloy 144')
+            .itemInputs(`6x gtceu:netherite_${mat}_skystone_alloy_plate`,`megacells:cell_component_${tier}m`,'gtceu:laminated_glass','4x #gtceu:circuits/ev')
+            .inputFluids('gtceu:fluix_steel 576')
             .itemOutputs(`megacells:${type}_storage_cell_${tier}m`)
             .duration(400)
             .EUt(8192*tier);
@@ -58,6 +76,16 @@ ServerEvents.recipes(event => {
         packaging(tier, 'item', 'certus_quartz');
         packaging(tier, 'fluid', 'gold');
     });
+
+    event.remove({id: 'megacells:cells/standard/bulk_item_cell'});
+    event.recipes.gtceu.assembler(id('bulk_item_cell'))
+            .itemInputs(`6x gtceu:netherite_certus_quartz_skystone_alloy_plate`,'megacells:bulk_cell_component','gtceu:laminated_glass','4x #gtceu:circuits/ev')
+            .inputFluids('gtceu:fluix_steel 576')
+            .itemOutputs('megacells:bulk_item_cell')
+            .duration(400)
+            .EUt(8192);
+
+    //crafting storage
 
     ['1', '4', '16', '64', '256'].forEach(tier => {
         //Base

@@ -19,6 +19,9 @@ ServerEvents.recipes(event => {
             .EUt(global.v[`${voltage}`]);
     }
 
+    event.replaceInput({id: 'megacells:crafting/bulk_cell_component'},'megacells:accumulation_processor','#gtceu:circuits/iv');
+    event.replaceInput({id: 'megacells:crafting/bulk_cell_component'},'ae2:quartz_vibrant_glass','gtceu:laminated_glass');    
+
     storage_base('ae2:cell_component_4k', 'ae2:cell_component_1k', 'lv', 'tin', 1);
     storage_base('ae2:cell_component_16k', 'ae2:cell_component_4k', 'mv', 'copper', 2);
     storage_base('ae2:cell_component_64k', 'ae2:cell_component_16k', 'hv', 'gold', 4);

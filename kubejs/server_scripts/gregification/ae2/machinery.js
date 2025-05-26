@@ -15,15 +15,40 @@ ServerEvents.recipes(event => {
         assembler(id1, output, input, eu)
     }
 
-    const extended = (item, input) => {
-        assembler_rem(`extended_${item}`, `expatternprovider:ex_${item}`, [`ae2:${input}`, '4x ae2:engineering_processor', '#gtceu:circuits/ev', '6x gtceu:double_fluix_steel_plate'], 2048);
+    const assemblerfluid = (id1, output, inputit, inputfl, eu) => {
+        event.recipes.gtceu.assembler(id(`${id1}`))
+            .itemInputs(inputit)
+            .inputFluids(`gtceu:${inputfl}`)
+            .itemOutputs(`${output}`)
+            .duration(400)
+            .EUt(eu);
     }
 
-    ['interface', 'pattern_provider'].forEach(type => {
-        assembler_rem(`mega_${type}`, `megacells:mega_${type}`, [`ae2:${type}`, '4x ae2:calculation_processor', '#gtceu:circuits/hv', '6x gtceu:double_black_steel_plate'], 512);
-    });
+    const assemblerfluid_rem = (id1, output, inputit, inputfl, eu) => {
+        event.remove({output: `${output}`})
+        assemblerfluid(id1, output, inputit, inputfl, eu)
+    }
+
+    const extended = (item, input) => {
+        assemblerfluid_rem(`extended_${item}`, `expatternprovider:ex_${item}`, [`ae2:${input}`, '4x ae2:calculation_processor', '#gtceu:circuits/ev', '8x gtceu:diamond_skystone_alloy_plate'],'sky_steel 576', 2048);
+    }
+
+    const assemblerspecex = (item,input) => {
+        assembler_rem(`${item}_storage_bus`,`expatternprovider:${item}_storage_bus`,['2x ae2:storage_bus',`${input}`],2048);
+        assembler_rem(`${item}_export_bus`,`expatternprovider:${item}_export_bus`,['2x ae2:export_bus',`${input}`],2048);
+    }
+
+    event.remove({ id: 'megacells:network/mega_interface'});
+    event.remove({ id: 'megacells:network/mega_pattern_provider'});
+    assemblerfluid('mega_interface','megacells:mega_interface', ['ae2:interface', '4x ae2:calculation_processor', '#gtceu:circuits/hv', '8x gtceu:diamond_skystone_alloy_plate'],'sky_steel 576', 512);
+    assemblerfluid('mega_pattern_provider','megacells:mega_pattern_provider', ['ae2:pattern_provider', '4x ae2:calculation_processor', '#gtceu:circuits/hv', '8x gtceu:diamond_skystone_alloy_plate'],'sky_steel 576', 512);
     
-    ['interface', 'pattern_provider', 'molecular_assembler', 'drive', 'io_port'].forEach(type => {
+    event.remove({ id: 'expatternprovider:ei'});
+    event.remove({ id: 'expatternprovider:epp'});
+    assemblerfluid('ex_interface', 'expatternprovider:ex_interface', ['megacells:mega_interface', '4x ae2:calculation_processor', '#gtceu:circuits/ev', '8x gtceu:diamond_skystone_alloy_plate'],'sky_steel 576', 2048);
+    assemblerfluid('ex_pattern_provider', 'expatternprovider:ex_pattern_provider', ['megacells:mega_pattern_provider', '4x ae2:calculation_processor', '#gtceu:circuits/ev', '8x gtceu:diamond_skystone_alloy_plate'],'sky_steel 576', 2048);
+
+    ['molecular_assembler', 'drive', 'io_port'].forEach(type => {
             extended(`${type}`, `${type}`);
     });
     
@@ -39,7 +64,9 @@ ServerEvents.recipes(event => {
         assembler(`me_${type}`, `gtceu:me_${type}`, [`gtceu:ev_${type}`, '#gtceu:circuits/ev', 'ae2:fluix_smart_cable'], 8192);
     });
 
-    event.replaceInput({ id: 'ae2:network/blocks/spatial_io_pylon'}, 'ae2:fluix_crystal','gtceu:fluix_steel_frame')
+    assemblerspecex('tag','gtceu:item_tag_filter');
+    assemblerspecex('mod','gtceu:item_filter');
+    assemblerspecex('precise','gtceu:mv_robot_arm');
 
     event.recipes.gtceu.wiremill(id('fluix_glass_cables'))
         .itemInputs('ae2:quartz_fiber', 'gtceu:fluix_steel_foil')
@@ -104,14 +131,28 @@ ServerEvents.recipes(event => {
             J: 'ae2:annihilation_core',
             B: 'ae2:formation_core'
         });
-
-    shapedRecipeRem('ae2:pattern_provider', [
+    
+    event.remove({ id: 'ae2:network/blocks/pattern_providers_interface'});
+    event.shaped('ae2:pattern_provider', [
             'HFH',
             'JAB',
             'HFH'
         ], {
             F: 'minecraft:crafting_table',
             H: 'gtceu:gold_skystone_alloy_plate',
+            J: 'ae2:annihilation_core',
+            B: 'ae2:formation_core',
+            A: 'gtceu:sky_steel_frame'
+        });
+
+    event.remove({ id: 'ae2:network/blocks/interfaces_interface'});
+    event.shaped('ae2:interface', [
+            'HFH',
+            'JAB',
+            'HFH'
+        ], {
+            F: '#forge:glass',
+            H: 'gtceu:certus_quartz_skystone_alloy_plate',
             J: 'ae2:annihilation_core',
             B: 'ae2:formation_core',
             A: 'gtceu:sky_steel_frame'
@@ -136,18 +177,6 @@ ServerEvents.recipes(event => {
             C: 'gtceu:sky_steel_frame',
             F: 'ae2:quartz_glass',
             H: 'gtceu:sky_steel_plate',
-        });
-
-    shapedRecipeRem('ae2:interface', [
-            'HFH',
-            'JAB',
-            'HFH'
-        ], {
-            F: '#forge:glass',
-            H: 'gtceu:certus_quartz_skystone_alloy_plate',
-            J: 'ae2:annihilation_core',
-            B: 'ae2:formation_core',
-            A: 'gtceu:sky_steel_frame'
         });
 
     shapedRecipeRem('ae2:drive', [
@@ -209,6 +238,12 @@ ServerEvents.recipes(event => {
 
     assembler_rem('quantum_ring', 'ae2:quantum_ring', ['gtceu:tungsten_carbide_frame', 'gtceu:ev_field_generator', 'gtceu:ev_emitter', 'gtceu:quantum_star', '6x gtceu:double_fluix_steel_plate'], 2048);
 
+    assemblerfluid_rem('mega_energy_cell', 'megacells:mega_energy_cell', ['gtceu:netherite_gold_skystone_alloy_frame', '8x ae2:dense_energy_cell', '4x #gtceu:circuits/iv'], 'fluix_steel 576', 8192);
+
+    assemblerfluid_rem('mega_crafting_unit','megacells:mega_crafting_unit',['gtceu:netherite_certus_quartz_skystone_alloy_frame', '8x ae2:crafting_unit','#gtceu:circuits/iv'],'fluix_steel 576',8192);
+
+    assemblerfluid_rem('ex_pattern_access_part','expatternprovider:ex_pattern_access_part',['ae2:pattern_access_terminal','4x gtceu:double_certus_quartz_skystone_alloy_plate','4x ae2:engineering_processor','#gtceu:circuits/ev'],'fluix_steel 567', 2048);
+
     event.replaceInput({ id: 'ae2:network/parts/tunnels_me'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
     event.replaceInput({ id: 'ae2:misc/tiny_tnt'},'minecraft:gunpowder','gtceu:gelled_toluene');
     event.replaceInput({ id: 'ae2:network/crafting/patterns_blank'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
@@ -219,8 +254,16 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: 'ae2:materials/basiccard'},'minecraft:gold_ingot','gtceu:gold_skystone_alloy_plate');
     event.replaceInput({ id: 'ae2:materials/advancedcard'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
     event.replaceInput({ id: 'ae2:materials/advancedcard'},'minecraft:diamond','gtceu:diamond_skystone_alloy_plate');
-    event.replaceInput({ id: 'ae2:network/wireless_booster'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate')
- 
+    event.replaceInput({ id: 'ae2:network/wireless_booster'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2netanalyser:analyser'},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
+    event.replaceInput({ id: 'ae2netanalyser:analyser'},'minecraft:copper_ingot','gtceu:gold_skystone_alloy_plate');
+    event.replaceInput({ id: 'megacells:network/cell_dock'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
+    event.replaceInput({ id: 'megacells:network/cell_dock'},'minecraft:copper_ingot','gtceu:gold_skystone_alloy_plate');
+    event.replaceInput({ id: 'megacells:crafting/decompression_module'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
+    event.replaceInput({ id: 'megacells:crafting/decompression_module'},'megacells:accumulation_processor','#gtceu:circuits/hv');
+    event.replaceInput({ id: 'ae2:network/blocks/spatial_io_pylon'}, 'ae2:fluix_crystal','gtceu:fluix_steel_frame');
+    event.replaceInput({ id: 'expatternprovider:ingredient_buffer'}, 'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
+    
     shapedRecipeRem('ae2:memory_card',[
         '   ',
         'ABB',
@@ -243,7 +286,7 @@ ServerEvents.recipes(event => {
             E: 'gtceu:gold_skystone_alloy_ingot',
             F: 'gtceu:flawless_certus_quartz_gem'
 
-        })
+        });
 
     shapedRecipeRem('ae2:pattern_access_terminal',[
         'AB',
