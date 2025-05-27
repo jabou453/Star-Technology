@@ -1,5 +1,5 @@
 # Star Technology(StarT for short)
-<a href="https://trulyno.github.io/StarT-docs/">Official Wiki</a>
+<a href="https://StarT-Dev-Team.github.io/StarT-Wiki/">Official Wiki</a>
 <p style="text-align: center;">🚀 Minecraft 1.20.1 | ⚙️ GregTech CEu Modern | 🛠️ Work in Progress</p>
 <p style="text-align: center;">Minimum RAM: 4GB | Recommended: 6GB+</p>
 <h1 style="text-align: center;">What is Star Technology?</h1>
@@ -25,4 +25,4 @@ Inspired by legendary **GregTech modpacks** like _Nomifactory, Gregtech: New Hor
 <h1 style="text-align: center;">Join the Community!</h1>
 
 💬 [**\[Discord Server\]**](https://discord.gg/startechnology) – Share your progress, get support, and chat with fellow players and devs!  
-🐞 [**\[Issue Tracker\]**](https://github.com/trulyno/star-technology/issues) – Report bugs & help us improve the modpack!
+🐞 [**\[Issue Tracker\]**](https://github.com/StarT-Dev-Team/star-technology/issues) – Report bugs & help us improve the modpack!
