@@ -28,23 +28,23 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.LuV]);
     
     event.recipes.gtceu.large_chemical_reactor(id('44_difluorobenzophenone_process'))
-        .inputFluids('gtceu:fluorobenzene 1000','gtceu:4_fluorobenzoyl_chloride 1000')
-        .outputFluids('gtceu:hydrochloric_acid 1000')
-        .itemOutputs('gtceu:44_difluorobenzophenone_dust')
+        .inputFluids('gtceu:fluorobenzene 500','gtceu:4_fluorobenzoyl_chloride 500')
+        .outputFluids('gtceu:hydrochloric_acid 500')
+        .itemOutputs('12x gtceu:44_difluorobenzophenone_dust')
         .duration(120)
         .EUt(GTValues.VA[GTValues.LuV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('hydroquinone_process'))
-        .inputFluids('gtceu:benzene 1000','gtceu:propene 1000','gtceu:oxygen 3000')
-        .outputFluids('gtceu:acetone 1000')
-        .itemOutputs('gtceu:hydroquinone_dust')
-        .duration(200)
+        .inputFluids('gtceu:benzene 500','gtceu:propene 500','gtceu:oxygen 500')
+        .outputFluids('gtceu:acetone 500')
+        .itemOutputs('7x gtceu:hydroquinone_dust')
+        .duration(160)
         .EUt(GTValues.VA[GTValues.ZPM]);
 
-    event.recipes.gtceu.large_chemical_reactor(id('disodium_salt_of_hydroquinone_process'))
-        .itemInputs('gtceu:soda_ash_dust','gtceu:hydroquinone_dust')
-        .outputFluids('gtceu:carbon_acid 1000')
-        .itemOutputs('gtceu:disodium_salt_of_hydroquinone_dust')
+    event.recipes.gtceu.large_chemical_reactor(id('disodium_salt_of_hydroquinone_process')) 
+        .itemInputs('3x gtceu:soda_ash_dust','7x gtceu:hydroquinone_dust')
+        .outputFluids('gtceu:carbon_acid 500')
+        .itemOutputs('7x gtceu:disodium_salt_of_hydroquinone_dust')
         .duration(120)
         .EUt(GTValues.VA[GTValues.IV]);
 
@@ -52,32 +52,30 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:sodium_dust')
         .inputFluids('gtceu:carbon_acid 1000')
         .outputFluids('gtceu:hydrogen 1000')
-        .itemOutputs('gtceu:sodium_bicarbonate_dust')
+        .itemOutputs('6x gtceu:sodium_bicarbonate_dust')
         .duration(120)
         .EUt(GTValues.VA[GTValues.HV]);
 
     event.recipes.gtceu.electrolyzer(id('sodium_bicarbonate_to_soda_ash_dust'))
-        .itemInputs('2x gtceu:sodium_bicarbonate_dust')
-        .outputFluids('minecraft:water 1000','gtceu:carbon_dioxide 1000')
-        .itemOutputs('gtceu:soda_ash_dust')
+        .itemInputs('12x gtceu:sodium_bicarbonate_dust')
+        .outputFluids('gtceu:hydrogen 2000')
+        .itemOutputs('6x gtceu:soda_ash_dust')
         .duration(120)
         .EUt(GTValues.VA[GTValues.HV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('peek_process'))
-        .itemInputs('gtceu:44_difluorobenzophenone_dust','gtceu:disodium_salt_of_hydroquinone_dust')
-        .outputFluids('gtceu:polyether_ether_ketone 1008')
+        .itemInputs('12x gtceu:44_difluorobenzophenone_dust','7x gtceu:disodium_salt_of_hydroquinone_dust')
+        .outputFluids('gtceu:polyether_ether_ketone 2448')
         .itemOutputs('2x gtceu:sodium_fluoride_dust')
         .duration(250)
         .EUt(GTValues.VA[GTValues.LuV]);
 
     //effortless chemical plant recipe
     
-    event.recipes.gtceu.chemical_plant(id('effortless_peek_process'))
-        .inputFluids('gtceu:benzene 3000','gtceu:methanol 1000','gtceu:propene 1000','gtceu:oxygen 8000')
-        .itemInputs('gtceu:soda_ash_dust')
-        .outputFluids('gtceu:polyether_ether_ketone 1008','gtceu:acetone 1000','gtceu:carbon_acid 1000','minecraft:water 4000')
-        .itemOutputs('gtceu:sodium_oxide_dust')
-        .duration(100)
-        .EUt(GTValues.VA[GTValues.UHV]);
+    event.recipes.gtceu.chemical_plant(id('peek_skip'))
+        .inputFluids('gtceu:benzene 2000','gtceu:toluene 1000','gtceu:propene 1000','gtceu:oxygen 2000')
+        .outputFluids('gtceu:polyether_ether_ketone 4896','gtceu:acetone 1000','gtceu:hydrogen 4000')
+        .duration(64)
+        .EUt(GTValues.VA[GTValues.UEV] * .3);
 
 });

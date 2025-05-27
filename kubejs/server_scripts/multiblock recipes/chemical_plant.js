@@ -84,7 +84,15 @@ ServerEvents.recipes(event => {
         .itemInputs('1x gtceu:sodium_dust', '1x gtceu:sulfur_dust')
         .inputFluids('gtceu:oxygen 4000')
         .outputFluids('gtceu:sodium_persulfate 500')
-        .duration(80)
+        .duration(120)
         .EUt(GTValues.VHA[GTValues.EV]);
+
+    event.recipes.gtceu.chemical_plant(id('borax'))
+        .itemInputs('4x gtceu:boron_dust', '14x gtceu:sodium_bisulfate_dust')
+        .inputFluids('minecraft:water 12000')
+        .itemOutputs('23x gtceu:borax_dust')
+        .outputFluids('gtceu:diluted_sulfuric_acid 3000', 'gtceu:oxygen 6000')
+        .duration(400)
+        .EUt((GTValues.VA[GTValues.LuV]));
 
 });

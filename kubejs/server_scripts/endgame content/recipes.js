@@ -119,20 +119,12 @@ ServerEvents.recipes(event => {
         .duration(1000)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
-    event.recipes.gtceu.assembler(id('magmada_alloy'))
+    event.recipes.gtceu.assembler(id('magmada_alloy_coil'))
         .itemInputs('8x gtceu:magmada_alloy_double_wire', '8x gtceu:lepton_coalescing_superalloy_foil')
         .inputFluids('gtceu:zalloy 144')
         .itemOutputs('kubejs:magmada_alloy_coil_block')
         .duration(1100)
         .EUt(GTValues.VHA[GTValues.UEV]);
-
-    event.recipes.gtceu.chemical_plant(id('borax'))
-        .itemInputs('12x gtceu:boron_dust', '6x gtceu:sodium_bisulfate_dust')
-        .inputFluids('minecraft:water 39000')
-        .itemOutputs('3x gtceu:borax_dust')
-        .outputFluids('gtceu:sulfuric_acid 6000')
-        .duration(400)
-        .EUt((GTValues.VA[GTValues.LuV]))
 
     event.recipes.gtceu.mixer(id('thorium_plut_duranide_241'))
         .itemInputs('4x gtceu:thorium_dust', 'gtceu:duranium_dust', '3x gtceu:plutonium_241_dust')

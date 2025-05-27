@@ -8,15 +8,14 @@ ServerEvents.recipes(event => {
     [
         {plastic: 'polyether_ether_ketone', abreviation: 'peek', quantity: 16},
         {plastic: 'poly_34_ethylenedioxythiophene_polystyrene_sulfate', abreviation: 'pedot_pss', quantity: 16},
-    ]
-    CR(id(`plastic_boards_${abreviation}`))
-        .itemInputs(`gtceu:${plastic}_plate`, '4x gtceu:copper_foil')
+    ].forEach(type=>{
+    CR(id(`plastic_boards_${type.abreviation}`))
+        .itemInputs(`gtceu:${type.plastic}_plate`, '4x gtceu:copper_foil')
         .inputFluids('gtceu:sulfuric_acid 250')
-        .itemOutputs(`${quantity}x gtceu:plastic_circuit_board`)
+        .itemOutputs(`${type.quantity}x gtceu:plastic_circuit_board`)
         .duration(500)
         .EUt(10);
-
-    
+    });   
 
     // non-cleanroom etching with CuCl
     [
