@@ -80,19 +80,4 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(GTValues.VA[GTValues.UHV]);
 
-    // PEEK usages 
-    event.recipes.gtceu.chemical_reactor(id('plastic_boards_peek'))
-        .itemInputs('gtceu:polyether_ether_ketone_plate', '4x gtceu:copper_foil')
-        .inputFluids('gtceu:sulfuric_acid 250')
-        .itemOutputs('16x gtceu:plastic_circuit_board')
-        .duration(500)
-        .EUt(10);
-
-    event.recipes.gtceu.large_chemical_reactor(id('plastic_boards_peek'))
-        .itemInputs('gtceu:polyether_ether_ketone_plate', '4x gtceu:copper_foil')
-        .inputFluids('gtceu:sulfuric_acid 250')
-        .itemOutputs('16x gtceu:plastic_circuit_board')
-        .duration(500)
-        .EUt(10);
-
 });

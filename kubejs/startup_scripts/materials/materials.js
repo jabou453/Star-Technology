@@ -346,8 +346,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).gas().element(GTElements.get(name)).color(color).flags(flags);
     }
 
-    const polymerFluid = (name, elements, color, pipe, flags) => {
+    const polymerFluidPipe = (name, elements, color, pipe, flags) => {
             event.create(name).polymer().fluid().components(elements).color(color).flags(flags).fluidPipeProperties(pipe[0], pipe[1], pipe[2], pipe[3], pipe[4], pipe[5]);
+    }
+
+    const polymerFluid = (name, elements, color, flags) => {
+            event.create(name).polymer().fluid().components(elements).color(color).flags(flags);
     }
 
     const conductor = (name, elements, color, icon, blasting, cable, flags) => {
@@ -797,14 +801,14 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('44_difluorobenzophenone', ['13x carbon','8x hydrogen','1x oxygen','2x fluorine'], 0xeee1c9 ,[no_decomp]); //naming like this: 4_4_di... will make kubejs go error to annoy you :)
     
-    polymerFluid('polyether_ether_ketone', ['19x carbon','12x hydrogen','3x oxygen'], 0xccbba7, [550, 600, true, true, true, false], [foil, plates, ring, plates, no_decomp]);
+    polymerFluidPipe('polyether_ether_ketone', ['19x carbon','12x hydrogen','3x oxygen'], 0xccbba7, [550, 600, true, true, true, false], [foil, plates, ring, plates, no_decomp]);
     
     // SiC/Bi2Te3 Line
-    compDust('sodium_borohydride', ['1x sodium','1x boron','4x hydrogen'], 0xE3DEC8, []);
+    compDust('sodium_borohydride', ['1x sodium','1x boron','4x hydrogen'], 0xE3DEC8, [no_decomp]);
 
-    compGas('nitrate', ['1x nitrogen', '3x oxygen'], 0xDBC365, []);
+    compGas('nitrate', ['1x nitrogen', '3x oxygen'], 0xDBC365, [no_decomp]); //Hide in JEI
 
-    compDust('bismuth_3_nitrate', ['1x bismuth', '3x nitrate'], 0xDEDBCD, []);
+    compDust('bismuth_3_nitrate', ['1x bismuth', '3x nitrate'], 0xDEDBCD, [no_decomp]);
 
     compDust('sodium_nitrate', ['1x sodium','1x nitrogen','3x oxygen'], 0xE6E5E5, []);
 
@@ -812,9 +816,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('silicon_carbide', ['1x silicon', '1x carbon'], 0xB79F8D, []);
         
-    compDust('bismuth_tritelluride', ['2x bismuth', '3x tellurium'], 0xDEB18E, []);
+    compDust('bismuth_tritelluride', ['2x bismuth', '3x tellurium'], 0xDEB18E, [no_decomp]); //Hide in JEI
 
-    compDust('silicon_carbide_over_bismuth_tritelluride', ['1x silicon_carbide', '1x bismuth_tritelluride'], 0x86C455, []);
+    compDust('silicon_carbide_over_bismuth_tritelluride', ['1x silicon_carbide', '1x bismuth_tritelluride'], 0x86C455, [no_decomp]);
 
     //Hexafluorobromic Acid
     compDustIcon('nickel_fluoride', ['1x nickel', '2x fluorine'], 0xA7A9A8, METALLIC, []);
@@ -842,7 +846,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquid('uranium_tetrafluoride', ['1x uranium', '4x fluorine'], 0x6CAB3F, [no_decomp]);
 
-    compLiquid('hydroxide',['1x oxygen','1x hydrogen'],0xC0D4DD, []);
+    compLiquid('hydroxide',['1x oxygen','1x hydrogen'],0xC0D4DD, []); //Hide in JEI
 
     compLiquid('caesium_oganesson_hexanitrate', ['2x caesium', '1x oganesson', '6x nitrate'], 0x769192, [no_decomp]);
 
@@ -979,7 +983,36 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquid('poly_34_ethylenedioxythiophene_polystyrene_sulfate_solution', ['1x poly_34_ethylenedioxythiophene_polystyrene_sulfate_paste', '2x water'], 0x6C7FB0, [no_decomp]);
 
-    polymerFluid('poly_34_ethylenedioxythiophene_polystyrene_sulfate', ['8x carbon', '7x hydrogen', '1x sulfur', '3x oxygen'], 0x26396D, [675, 800, true, true, true, false], [foil, plates, ring, plates, no_decomp]); //PEDOT
+    polymerFluidPipe('poly_34_ethylenedioxythiophene_polystyrene_sulfate', ['8x carbon', '7x hydrogen', '1x sulfur', '3x oxygen'], 0x26396D, [675, 800, true, true, true, false], [foil, plates, ring, plates, no_decomp]); //PEDOT
+
+    //FFKM Line [Rubber After SBR]
+    compLiquid('perfluoromethyl_vinyl_ether', ['3x carbon', '6x fluorine', '1x oxygen'], 0xD0E5E5, [no_decomp]);
+
+    compLiquid('hexafluorobutadiene', ['4x carbon', '6x fluorine'], 0xB8D2D9, [no_decomp]);
+
+    compDust('raw_perfluoroelastomer_rubber', ['3x tetrafluoroethylene', '1x perfluoromethyl_vinyl_ether', '1x hexafluorobutadiene'], 0xB0CCCC, [no_decomp]);
+
+    polymerFluid('perfluoroelastomer_rubber', ['1x raw_perfluoroelastomer_rubber'], 0x536767, [foil, plates, ring, plates, rod, no_decomp]);
+
+
+    //Polyimide Line [Insulator UHV+]
+    compLiquid('azanide', ['1x nitrogen', '2x hydrogen'], 0xBFC7E5, [no_decomp]); //Hide in JEI
+
+    compLiquid('benzophenone', ['13x carbon', '10x hydrogen', '1x oxygen'], 0xE5D3B5, [no_decomp]);
+
+    compLiquid('methylamine', ['1x carbon', '3x hydrogen', '1x nitrogen', '2x hydrogen'], 0xD8D8E5, [no_decomp]);
+
+    compDust('benzophenone_3344_tetracarboxylic_dianhydride', ['17x carbon', '6x hydrogen', '7x oxygen'], 0xD1B9A3, [no_decomp]);
+
+    compLiquid('y_butyrolactone', ['4x carbon', '6x hydrogen', '2x oxygen'], 0xD6E2E2, [no_decomp]);
+
+    compLiquid('m_phelyenediamine', ['6x carbon', '4x hydrogen', '2x azanide'], 0xE2BFC0, [no_decomp]);
+
+    compDust('n_methyl_2_pyrrolidone', ['5x carbon', '9x hydrogen', '1x nitrogen', '1x oxygen'], 0xBDC8D8, [no_decomp]);
+
+    compLiquid('polyamic_acid', ['17x carbon', '12x hydrogen', '2x nitrogen', '6x oxygen'], 0xCBBFA3, [no_decomp]);
+
+    polymerFluid('polyimide', ['17x carbon', '10x hydrogen', '2x nitrogen', '4x oxygen'], 0xD6A970, [foil, plates, plates, rod, no_decomp]);
 
     // Large Multis
     const largeMulti = (name,components,color) => {

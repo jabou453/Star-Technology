@@ -1,8 +1,6 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    
-
     event.recipes.gtceu.fluid_heater(id('sorbitol_heating'))
         .inputFluids('gtceu:sorbitol 500')
         .outputFluids('gtceu:sorbitan 450','gtceu:steam 2456')
@@ -27,14 +25,15 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.large_chemical_reactor(id('benzene_oxidization'))
         .inputFluids('gtceu:benzene 1500', 'gtceu:oxygen 11500')
         .outputFluids('gtceu:maleic_anhydride 2000', 'minecraft:water 2500', 'gtceu:carbon_dioxide 1000')
+        .circuit(3)
         .duration(526)
-        .EUt(GTValues.VHA[GTValues.UV]);
+        .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('maleic_anhydride_esterification'))
         .inputFluids('gtceu:maleic_anhydride 250', 'gtceu:methanol 500')
         .outputFluids('gtceu:dimethyl_maleate 250', 'gtceu:oxygen 250')
-        .duration(508)
-        .EUt(GTValues.VHA[GTValues.LuV]);
+        .duration(418)
+        .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('dimethyl_maleate_hydrogenation'))
         .inputFluids('gtceu:dimethyl_maleate 1000', 'gtceu:hydrogen 5000')
@@ -57,6 +56,14 @@ ServerEvents.recipes(event => {
         .itemOutputs('9x gtceu:thiophene_dust')
         .duration(654)
         .EUt(GTValues.VA[GTValues.UV]);
+    
+    event.recipes.gtceu.large_chemical_reactor(id('benzoyl_peroxidization'))
+        .inputFluids('gtceu:benzoyl_chloride 2000')
+        .itemInputs('5x gtceu:calcium_hydroxide_dust')
+        .outputFluids('gtceu:hydrogen_chloride 2000')
+        .itemOutputs('28x gtceu:benzoyl_peroxide_dust', '1x gtceu:calcium_dust')
+        .duration(451)
+        .EUt(GTValues.VA[GTValues.ZPM]);
 
     const CRtype = [event.recipes.gtceu.large_chemical_reactor, event.recipes.gtceu.chemical_reactor]
     CRtype.forEach(CR=>{
@@ -65,14 +72,6 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:dimethylformamide 1000', 'minecraft:water 1000')
         .duration(567)
         .EUt(GTValues.VA[GTValues.LuV]);
-
-    CR(id('benzoyl_peroxidization'))
-        .inputFluids('gtceu:benzoyl_chloride 2000')
-        .itemInputs('5x gtceu:calcium_hydroxide_dust')
-        .outputFluids('gtceu:hydrogen_chloride 2000')
-        .itemOutputs('28x gtceu:benzoyl_peroxide_dust', '1x gtceu:calcium_dust')
-        .duration(451)
-        .EUt(GTValues.VA[GTValues.IV]);
 
     CR(id('hydrogen_chloride'))
         .inputFluids('gtceu:monochloramine 1000', 'gtceu:hydrogen 2000')

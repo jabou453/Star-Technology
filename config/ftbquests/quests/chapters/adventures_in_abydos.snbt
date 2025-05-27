@@ -2016,14 +2016,14 @@
 		{
 			dependencies: ["7F72F9E28713D965"]
 			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
-			id: "305974D431F17AF0"
+			id: "7D29B653F8C14ABC"
 			rewards: [{
-				id: "0707F4889D91098E"
+				id: "5B3778E2E7B9B0E4"
 				item: "kubejs:coin"
 				type: "item"
 			}]
 			tasks: [{
-				id: "0AF4E3E277B5B04F"
+				id: "3B32A5E4F0DFED06"
 				item: {
 					Count: 1
 					id: "itemfilters:or"

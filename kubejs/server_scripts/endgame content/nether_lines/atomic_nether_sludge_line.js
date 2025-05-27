@@ -141,7 +141,7 @@ ServerEvents.recipes(event => {
         .itemInputs('1x gtceu:sodium_seaborgate_dust')
         .inputFluids('gtceu:hydrochloric_acid 2000')
         .itemOutputs('1x gtceu:seaborgium_dioxide_dust', '4x gtceu:salt_dust')
-        .outputFluids('gtceu:hydroxide 2000')
+        .outputFluids('gtceu:hydrogen 2000', 'gtceu:oxygen 2000')
         .duration(140)
         .EUt(GTValues.V[GTValues.UV]);
 

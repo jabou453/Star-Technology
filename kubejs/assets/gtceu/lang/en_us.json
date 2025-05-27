@@ -754,6 +754,21 @@
     "material.gtceu.dimethyl_succinate": "Dimethyl Succinate",
     "material.gtceu.14_butanediol": "1,4-Butanediol",
 
+    "material.gtceu.perfluoromethyl_vinyl_ether": "Perfluoromethyl Vinyl Ether",
+    "material.gtceu.hexafluorobutadiene": "Hexafluorobutadiene",
+    "material.gtceu.raw_perfluoroelastomer_rubber": "Raw Perfluoroelastomer Rubber",
+    "material.gtceu.perfluoroelastomer_rubber": "Perfluoroelastomer Rubber",
+
+    "material.gtceu.azanide": "Azanide Ion",
+    "material.gtceu.benzophenone": "Benzophenone",
+    "material.gtceu.methylamine": "Methylamine",
+    "material.gtceu.benzophenone_3344_tetracarboxylic_dianhydride": "3,3′,4,4′-Benzophenone Tetracarboxylic Dianhydride",
+    "material.gtceu.y_butyrolactone": "γ-Butyrolactone",
+    "material.gtceu.m_phelyenediamine": "Meta-Phenylenediamine",
+    "material.gtceu.n_methyl_2_pyrrolidone": "N-Methyl-2-Pyrrolidone",
+    "material.gtceu.polyamic_acid": "Polyamic Acid",
+    "material.gtceu.polyimide": "Polyimide",
+
     "gtceu.molten_destabilizing": "Molten Destabilization",
     "block.gtceu.molten_destabilizer": "Molten Destabilizer Controller",
     "gtceu.latex_plantation": "Latex Plantation",
