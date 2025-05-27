@@ -6,26 +6,16 @@ ServerEvents.recipes(event => {
     .itemOutputs('17x gtceu:runic_laser_source_base_dust')
     .duration(12000)
     .EUt(GTValues.VHA[GTValues.UV]);
-
-    const singularity_materials = ['aluminium', 'silver', 'tin', 'platinum', 'copper', 'iron', 'lead', 'nickel', 'gold'];
-
-    singularity_materials.forEach(element => {
-        event.recipes.gtceu.large_quantum_compressor(`${element}_singularity`)
-            .itemInputs(`64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `64x #forge:storage_blocks/${element}`, `32x #forge:storage_blocks/${element}`)
-            .itemOutputs(Item.of('extendedcrafting:singularity', `{Id:'extendedcrafting:${element}'}`))
-            .duration(24000)
-            .EUt(GTValues.VHA[GTValues.ZPM]);
-    });
         
-    runicEngraving('aluminium','1','.8')
-    runicEngraving('tin','1','1')
-    runicEngraving('iron','2','1.8')
-    runicEngraving('nickel','2','1.6')
-    runicEngraving('copper','2','1.8')
-    runicEngraving('silver','3','2.6')
-    runicEngraving('lead','3','2.4')
-    runicEngraving('gold','3','2.5')
-    runicEngraving('platinum','4','3')
+    // runicEngraving('aluminium','1','.8')
+    // runicEngraving('tin','1','1')
+    // runicEngraving('iron','2','1.8')
+    // runicEngraving('nickel','2','1.6')
+    // runicEngraving('copper','2','1.8')
+    // runicEngraving('silver','3','2.6')
+    // runicEngraving('lead','3','2.4')
+    // runicEngraving('gold','3','2.5')
+    // runicEngraving('platinum','4','3')
 
     function runicEngraving(material,amount,dur){
 

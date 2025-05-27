@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('runic_circuitry_assembling_station')
         .category('runic_circuitry_assembling_station')
         .setEUIO('in')
-        .setMaxIOSize(2, 1, 0, 0)
+        .setMaxIOSize(3, 1, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ELECTROLYZER);
 

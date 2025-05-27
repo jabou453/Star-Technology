@@ -7,13 +7,27 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC);
 
+    event.create('quantum_compressor_extraction')
+        .category('large_quantum_compressor')
+        .setEUIO('in')
+        .setMaxIOSize(1, 0, 0, 2)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS , FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.ARC);
+
+    event.create('quantum_compressor_infusion')
+        .category('large_quantum_compressor')
+        .setEUIO('in')
+        .setMaxIOSize(2, 1, 3, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS , FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.ARC);
+
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('large_quantum_compressor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('large_quantum_compressor')
+        .recipeTypes(['quantum_compressor_extraction', 'quantum_compressor_infusion'])
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(GCYMBlocks.CASING_STRESS_PROOF)
         .pattern(definition => FactoryBlockPattern.start()
