@@ -101,7 +101,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.EV]);
     });
 
-    event.recipes.gtceu.chemical_plant(id('edot_synthesis'))
+    event.recipes.gtceu.advanced_chemistry(id('edot_synthesis'))
         .itemInputs('9x gtceu:thiophene_dust', '6x gtceu:potassium_carbonate_dust', '6x gtceu:sodium_hydroxide_dust')
         .inputFluids('gtceu:12_dibromoethane', 'gtceu:dimethylformamide 2000', 'gtceu:sulfuric_acid 1000', 'gtceu:carbon_monoxide 1000')
         .itemOutputs('4x gtceu:potassium_bromide_dust', '8x gtceu:sodium_nitrite_dust')
@@ -110,7 +110,7 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.CLEANROOM)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
-    event.recipes.gtceu.chemical_plant(id('pss_synthesis'))
+    event.recipes.gtceu.advanced_chemistry(id('pss_synthesis'))
         .itemInputs('14x gtceu:benzoyl_peroxide_dust', '7x gtceu:sodium_bisulfate_dust')
         .inputFluids('gtceu:styrene 875', 'gtceu:chlorosulfonic_acid 500', 'minecraft:water 500')
         .itemOutputs('6x gtceu:sodium_bicarbonate_dust')

@@ -70,12 +70,4 @@ ServerEvents.recipes(event => {
         .duration(250)
         .EUt(GTValues.VA[GTValues.LuV]);
 
-    //effortless chemical plant recipe
-    
-    event.recipes.gtceu.chemical_plant(id('peek_skip'))
-        .inputFluids('gtceu:benzene 2000','gtceu:toluene 1000','gtceu:propene 1000','gtceu:oxygen 2000')
-        .outputFluids('gtceu:polyether_ether_ketone 4896','gtceu:acetone 1000','gtceu:hydrogen 4000')
-        .duration(64)
-        .EUt(GTValues.VA[GTValues.UEV] * .3);
-
 });

@@ -107,7 +107,7 @@ ServerEvents.recipes(event => {
         .duration(114)
         .EUt(GTValues.V[GTValues.MV]);
 
-    event.recipes.gtceu.chemical_plant(id('seaborgium_cerium_tricarbon_octasulfate_restructure'))
+    event.recipes.gtceu.advanced_chemistry(id('seaborgium_cerium_tricarbon_octasulfate_restructure'))
         .itemInputs('1x gtceu:seaborgium_cerium_tricarbon_octasulfate_dust', '8x gtceu:chromium_trioxide_dust')
         .outputFluids('gtceu:carbon_dioxide 3000')
         .itemOutputs('1x gtceu:cerium_4_sulfate_dust', '5x gtceu:chromium_sulfate_dust', '1x gtceu:seaborgium_trisulfate_dust')
@@ -268,7 +268,7 @@ ServerEvents.recipes(event => {
         .duration(320)
         .EUt(GTValues.V[GTValues.MV]);
 
-    event.recipes.gtceu.chemical_plant(id('hafnium_thorium_iron_2_hydroxide_potassium_disilicate_acid_dipping'))
+    event.recipes.gtceu.advanced_chemistry(id('hafnium_thorium_iron_2_hydroxide_potassium_disilicate_acid_dipping'))
         .itemInputs('1x gtceu:hafnium_thorium_iron_2_hydroxide_potassium_disilicate_dust')
         .inputFluids('gtceu:hydrochloric_acid 8000')
         .itemOutputs('4x gtceu:potassium_hydroxide_dust', '2x gtceu:silicon_dioxide_dust', '1x gtceu:iron_2_hydroxide_dust', '1x gtceu:hafnium_thorium_octachloride_dust')

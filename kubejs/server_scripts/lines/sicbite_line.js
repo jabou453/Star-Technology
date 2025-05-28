@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
         .duration(400)
         .EUt(GTValues.VHA[GTValues.LuV]);
 
-    event.recipes.gtceu.chemical_plant(id('sicbite_3'))
+    event.recipes.gtceu.advanced_chemistry(id('sicbite_3'))
         .itemInputs('2x gtceu:silicon_carbide_dust', '26x gtceu:bismuth_3_nitrate_dust', '3x gtceu:tellurium_dust', '36x gtceu:sodium_borohydride_dust')
         .itemOutputs('8x gtceu:silicon_carbide_over_bismuth_tritelluride_dust', '30x gtceu:sodium_nitrate_dust')
         .outputFluids('gtceu:diborane 3000', 'gtceu:hydrogen 6000')

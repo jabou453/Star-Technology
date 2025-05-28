@@ -1223,9 +1223,17 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //UIV Materials
     conductor('polonium_bismide', ['1x polonium', '1x bismuth'], 0x016038, DULL, [14400, 'highest', VA('uev'), 1800], [V('uiv'), 5, 24, false], [bolt_and_screw,spring,small_spring]);
 
-    compLiquidStill('dragon_breath', ['1x mystery'], [no_decomp])
+    compIngot('diamane', ['1x carbon'], 0x62777A, [], [4000, 'low', VA('lv'), 1], [no_decomp]);
 
-    compLiquidStill('pure_dragon_breath', ['1x mystery'], [no_decomp])
+    compDust('iridium_iv_oxide', ['1x iridium', '2x oxygen'], 0xBEDED9, [no_decomp]);
+        
+    compDust('bismuth_iii_oxide', ['2x bismuth', '3x oxygen'], 0xD5E5DC, [no_decomp]);
+
+    compIngot('bismuth_iridate', ['2x bismuth', '2x iridium', '7x oxygen'], 0x68CF93, [], [8600, 'high', VA('zpm'), 1080], [foil, no_decomp, no_abs_recipe]);
+
+    compLiquidStill('dragon_breath', ['1x mystery'], [no_decomp]);
+
+    compLiquidStill('pure_dragon_breath', ['1x mystery'], [no_decomp]);
 
 
 });

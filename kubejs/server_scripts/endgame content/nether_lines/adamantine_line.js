@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
         .duration(120)
         .EUt(GTValues.VHA[GTValues.UEV]);
 
-    event.recipes.gtceu.chemical_plant(id('adamantine'))
+    event.recipes.gtceu.advanced_chemistry(id('adamantine'))
         .itemInputs('gtceu:adamantine_hydroxide_dust')
         .itemInputs('3x gtceu:sodium_dust')
         .itemOutputs('gtceu:adamantine_dust')

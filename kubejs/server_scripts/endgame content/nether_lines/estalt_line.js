@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
         .duration(600)
         .EUt(GTValues.VHA[GTValues.UV]);
 
-    event.recipes.gtceu.chemical_plant(id('tytite_estaltadyne_dust'))
+    event.recipes.gtceu.advanced_chemistry(id('tytite_estaltadyne_dust'))
         .itemInputs('1x gtceu:magnemalic_estaltadyne_dust')
         .itemInputs('15x gtceu:sodium_hydroxide_dust')
         .inputFluids('gtceu:oxygen 15000')

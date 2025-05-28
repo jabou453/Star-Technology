@@ -132,6 +132,35 @@ ServerEvents.recipes(event => {
         .circuit(4)
         .duration(1000)
         .EUt(GTValues.VA[GTValues.UV]);
+
+    event.remove({output: 'gtceu:hot_diamane_ingot'});
+    event.recipes.gtceu.heat_chamber(id('hot_diamane'))
+        .itemInputs('3x gtceu:graphene_dust', '1x gtceu:diamond_dust')
+        .inputFluids('gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 36')
+        .itemOutputs('1x gtceu:hot_diamane_ingot')
+        .duration(140)
+        .EUt(GTValues.VHA[GTValues.UV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('iridium_iv_oxide'))
+        .itemInputs('1x gtceu:iridium_dust')
+        .inputFluids('gtceu:oxygen 2000')
+        .itemOutputs('3x gtceu:iridium_iv_oxide_dust')
+        .duration(228)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('bismuth_iii_oxide'))
+        .itemInputs('26x gtceu:bismuth_3_nitrate_dust')
+        .inputFluids('minecraft:water 3000')
+        .itemOutputs('5x gtceu:bismuth_iii_oxide_dust')
+        .outputFluids('gtceu:nitric_acid 6000')
+        .duration(328)
+        .EUt(GTValues.VHA[GTValues.LuV]);
+
+    event.recipes.gtceu.mixer(id('bismuth_iridate'))
+        .itemInputs('5x gtceu:bismuth_iii_oxide_dust', '6x gtceu:iridium_iv_oxide_dust')
+        .itemOutputs('11x gtceu:bismuth_iridate_dust')
+        .duration(412)
+        .EUt(GTValues.VA[GTValues.ZPM]);
     
     //UHV,UEV Rotor Holder
 
