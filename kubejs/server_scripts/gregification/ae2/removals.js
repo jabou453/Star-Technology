@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
     
     [
         'ae2:inscriber', 'ae2:vibration_chamber', 'ae2:silicon', 'ae2:charger', 'expatternprovider:ex_inscriber', 'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer',
-        'ae2:crystal_resonance_generator', 'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', /megacells:sky_steel.*/, 'ae2:spatial_anchor'
+        'ae2:crystal_resonance_generator', 'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', /megacells:sky_steel.*/, 'ae2:spatial_anchor','expatternprovider:silicon_block'
     ].forEach(element => {
         event.remove({ output: element});
     });
