@@ -1,6 +1,3 @@
-const $StarTRecipeModifiers = Java.loadClass('com.startechnology.start_core.recipe.StarTRecipeModifiers')
-const $StarTPartAbility = Java.loadClass('com.startechnology.start_core.machine.StarTPartAbility')
-
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('super_compact_heat_chamber', 'multiblock')

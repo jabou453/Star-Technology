@@ -524,7 +524,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["395C32B51E768458"]
+			dependencies: ["0168A45EB73911AC"]
 			id: "1772F46C9EAF6FB7"
 			tasks: [{
 				id: "4AAC7E72D6B3BBFC"
@@ -569,7 +569,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["26FDB9612063F49D"]
@@ -580,7 +580,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["66D49CB8D8819E3F"]
@@ -591,7 +591,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["6F3DF16481990D99"]
@@ -603,7 +603,7 @@
 				item: "kubejs:draconic_wetware_processor_mainframe"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: -4.0d
 		}
 		{
@@ -676,7 +676,7 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["5E96ECB0768B5D80"]
@@ -691,29 +691,17 @@
 		}
 		{
 			dependencies: ["09B55AFE7C06EC82"]
-			icon: "mysticalagriculture:dragon_egg_essence"
-			id: "72A79F7AE189FD12"
-			tasks: [{
-				id: "0906D1053893328C"
-				title: "Draconic Essence"
-				type: "checkmark"
-			}]
-			x: 4.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["09B55AFE7C06EC82"]
 			id: "41B4DE81AFC054B9"
 			tasks: [{
 				id: "06B8EC7B4599E429"
 				title: "Dragon Breeding Array"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 2.0d
+			x: 3.0d
+			y: 1.0d
 		}
 		{
-			dependencies: ["72A79F7AE189FD12"]
+			dependencies: ["3AE729D3F47E9A2B"]
 			id: "37F9C85CFCFFDA5F"
 			tasks: [{
 				id: "54F9F9AC4FCB27C0"
@@ -727,6 +715,7 @@
 			dependencies: [
 				"37F9C85CFCFFDA5F"
 				"5944C4DE27F98FF3"
+				"694E1F6458D5F72F"
 			]
 			id: "24E2CB89693EDEA3"
 			tasks: [{
@@ -734,14 +723,11 @@
 				title: "Awakened Draconic Neuroloom"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: -4.0d
+			x: 5.0d
+			y: -3.0d
 		}
 		{
-			dependencies: [
-				"694E1F6458D5F72F"
-				"24E2CB89693EDEA3"
-			]
+			dependencies: ["24E2CB89693EDEA3"]
 			id: "38C2E3061C764F05"
 			shape: "gear"
 			size: 1.5d
@@ -751,10 +737,10 @@
 				type: "checkmark"
 			}]
 			x: 6.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
-			dependencies: ["72A79F7AE189FD12"]
+			dependencies: ["09B55AFE7C06EC82"]
 			id: "3AE729D3F47E9A2B"
 			subtitle: "No linger stinky"
 			tasks: [{
@@ -762,8 +748,8 @@
 				item: "gtceu:pure_dragon_breath_bucket"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -2.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
@@ -780,33 +766,26 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: -4.0d
-		}
-		{
-			dependencies: [
-				"694E1F6458D5F72F"
-				"24E2CB89693EDEA3"
-			]
-			id: "1ED881AC9E6961A3"
-			tasks: [{
-				id: "34B182CD5468F45A"
-				item: "start_core:uiv_absolute_parallel_hatch"
-				type: "item"
-			}]
 			x: 6.0d
-			y: -4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["24E2CB89693EDEA3"]
 			id: "7FABD2E818B70D35"
-			tasks: [{
-				id: "1A9F5B4EAFB66C03"
-				item: "start_core:uiv_parallel_hatch"
-				type: "item"
-			}]
-			x: 4.0d
-			y: -6.0d
+			tasks: [
+				{
+					id: "1A9F5B4EAFB66C03"
+					item: "start_core:uiv_parallel_hatch"
+					type: "item"
+				}
+				{
+					id: "3D4851F9B51362B4"
+					item: "start_core:uiv_absolute_parallel_hatch"
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["41B4DE81AFC054B9"]
@@ -818,8 +797,8 @@
 				title: "Target Breeding Dragons"
 				type: "checkmark"
 			}]
-			x: 8.0d
-			y: 2.0d
+			x: 3.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["5E96ECB0768B5D80"]
@@ -863,7 +842,7 @@
 				type: "checkmark"
 			}]
 			x: 8.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["295442FA6CE0BA13"]

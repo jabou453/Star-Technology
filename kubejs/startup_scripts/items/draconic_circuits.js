@@ -11,7 +11,7 @@ StartupEvents.registry('item', event => {
 
     event.create('draconic_neuro_processing_unit')
         .displayName('Draconic Neuro Processing Unit')
-        .tooltip('§d§oNeuro-sama!')
+        .tooltip(`§d§oNeuro-sama!§r§7's CPU`)
         .texture('kubejs:item/circuits/draconic_neuro_processing_unit');
 
     event.create('draconic_wetware_microchip_processor')

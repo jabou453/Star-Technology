@@ -1,63 +1,42 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    // === Circuit Packs ===
+    //Input Loaders
+        const DrCirBoard = 'kubejs:draconic_wetware_printed_circuit_board';
+        const DrCPU = 'kubejs:draconic_neuro_processing_unit';
+        const Tra = 'kubejs:draconic_qmd_transistor';
+        const Res = 'kubejs:draconic_qmd_resistor';
+        const Cap = 'kubejs:draconic_qmd_capacitor';
+        const Dio = 'kubejs:draconic_qmd_diode';
+        const Ind = 'kubejs:draconic_qmd_inductor';
+        const Solder = 'gtceu:indium_tin_lead_cadmium_soldering_alloy';
+        const SGM = 'gtceu:sterilized_growth_medium';
+        const PEEK = 'gtceu:polyether_ether_ketone';
+        const PEDOT_PSS = 'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate'
 
-    // event.recipes.gtceu.draco_circuit_assembler(id('ulv_pack'))
-    //     .itemInputs('16x gtceu:nand_chip', '8x gtceu:simple_soc', '16x gtceu:fine_red_alloy_wire')
-    //     .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 18')
-    //     .itemOutputs('64x kubejs:ulv_universal_circuit')
-    //     .duration(200)
-    //     .CWUt(16)
-    //     .EUt(GTValues.VHA[GTValues.EV]);
+    // === Controller ===
 
-    // event.recipes.gtceu.draco_circuit_assembler(id('lv_pack'))
-    //     .itemInputs('16x kubejs:ulv_universal_circuit', '16x gtceu:microchip_processor', '8x gtceu:soc', '16x gtceu:fine_copper_wire')
-    //     .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 36')
-    //     .itemOutputs('64x kubejs:lv_universal_circuit')
-    //     .duration(200)
-    //     .CWUt(32)
-    //     .EUt(GTValues.VHA[GTValues.IV]);
-
-    // event.recipes.gtceu.draco_circuit_assembler(id('mv_pack'))
-    //     .itemInputs('16x kubejs:lv_universal_circuit','16x kubejs:ulv_universal_circuit', '16x gtceu:micro_processor', '8x gtceu:soc', '16x gtceu:fine_annealed_copper_wire')
-    //     .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 72')
-    //     .itemOutputs('64x kubejs:mv_universal_circuit')
-    //     .duration(200)
-    //     .CWUt(48)
-    //     .EUt(GTValues.VHA[GTValues.LuV]);
-
-    // event.recipes.gtceu.draco_circuit_assembler(id('hv_pack'))
-    //     .itemInputs('16x kubejs:mv_universal_circuit','16x kubejs:lv_universal_circuit','16x kubejs:ulv_universal_circuit', '16x gtceu:nano_processor', '8x gtceu:advanced_soc', '16x gtceu:fine_platinum_wire')
-    //     .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 144')
-    //     .itemOutputs('64x kubejs:hv_universal_circuit')
-    //     .duration(200)
-    //     .CWUt(64)
-    //     .EUt(GTValues.VHA[GTValues.ZPM]);
-
-    // event.recipes.gtceu.draco_circuit_assembler(id('ev_pack'))
-    //     .itemInputs('16x kubejs:hv_universal_circuit','16x kubejs:mv_universal_circuit','16x kubejs:lv_universal_circuit','16x kubejs:ulv_universal_circuit', '16x gtceu:quantum_processor', '8x gtceu:advanced_soc', '16x gtceu:fine_niobium_titanium_wire')
-    //     .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 576')
-    //     .itemOutputs('64x kubejs:ev_universal_circuit')
-    //     .duration(200)
-    //     .CWUt(80)
-    //     .EUt(GTValues.VHA[GTValues.UV]);
-
-    // event.recipes.gtceu.draco_circuit_assembler(id('iv_pack'))
-    //     .itemInputs('16x kubejs:ev_universal_circuit','16x kubejs:hv_universal_circuit','16x kubejs:mv_universal_circuit','16x kubejs:lv_universal_circuit','16x kubejs:ulv_universal_circuit', '16x gtceu:crystal_processor', '8x gtceu:crystal_soc', '16x gtceu:fine_yttrium_barium_cuprate_wire')
-    //     .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 1152')
-    //     .itemOutputs('64x kubejs:iv_universal_circuit')
-    //     .duration(200)
-    //     .CWUt(96)
-    //     .EUt(GTValues.VHA[GTValues.UHV]);
-
-    // event.recipes.gtceu.draco_circuit_assembler(id('luv_pack'))
-    //     .itemInputs('16x kubejs:iv_universal_circuit','16x kubejs:ev_universal_circuit','16x kubejs:hv_universal_circuit','16x kubejs:mv_universal_circuit','16x kubejs:lv_universal_circuit','16x kubejs:ulv_universal_circuit', '16x gtceu:wetware_processor', '8x gtceu:highly_advanced_soc', '16x gtceu:fine_naquadah_wire')
-    //     .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 2304')
-    //     .itemOutputs('64x kubejs:luv_universal_circuit')
-    //     .duration(200)
-    //     .CWUt(112)
-    //     .EUt(GTValues.VHA[GTValues.UEV]);
+    event.recipes.gtceu.assembly_line(id('draco_circuit_assembler'))
+        .itemInputs(
+            'gtceu:void_frame','6x kubejs:draco_ware_casing','6x kubejs:uev_computational_matrix','4x gtceu:uev_sensor',
+            '4x gtceu:uev_robot_arm','4x gtceu:uev_robot_arm','2x gtceu:uev_conveyor_module','2x gtceu:uev_conveyor_module',
+            '32x gtceu:fine_seaborgium_palladium_enriched_estalt_flerovium_alloy_wire','8x gtceu:calamatium_screw'
+        )
+        .inputFluids(
+            `${Solder} 125000`,
+            `${PEEK} 75000`,
+            `${SGM} 50000`,
+            `gtceu:isovol 28800`
+        )
+        .itemOutputs('gtceu:draco_circuit_assembler')
+        .duration(4800)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:large_circuit_assembler'))
+                .EUt(GTValues.VA[GTValues.UEV])
+                .CWUt(192)
+            )
+        .EUt(GTValues.VHA[GTValues.UIV]); 
 
     // === Draconic Circuits ===
 
@@ -77,52 +56,43 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
-    event.recipes.gtceu.draco_circuit_assembler(id('draconic_wetware_microchip_processor'))
-        .itemInputs('kubejs:draconic_neuro_processing_unit', 'gtceu:crystal_cpu', 'gtceu:qbit_cpu_chip', '12x gtceu:advanced_smd_capacitor', '12x gtceu:advanced_smd_transistor', '16x gtceu:fine_yttrium_barium_cuprate_wire')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 72')
-        .itemOutputs('3x kubejs:draconic_wetware_microchip_processor')
-        .duration(200)
-        .CWUt(144)
-        .EUt(GTValues.VHA[GTValues.UV]);
+    
 
-    event.recipes.gtceu.draco_circuit_assembler(id('draconic_wetware_microchip_processor_cheap'))
-        .itemInputs('kubejs:draconic_neuro_processing_unit', 'gtceu:highly_advanced_soc', '16x gtceu:fine_yttrium_barium_cuprate_wire', '8x gtceu:iron_selenide_over_strontium_titanium_oxide_bolt')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 72')
-        .itemOutputs('6x kubejs:draconic_wetware_microchip_processor')
-        .duration(50)
-        .CWUt(144)
-        .EUt(GTValues.VHA[GTValues.UEV]);
+    const DracoCircuitAssembler = (type,output,ItemIn,FluidIn,Dur,eu,researchItem,cwu) => {
+        
+    event.recipes.gtceu.draco_circuit_assembler(id(type))
+        .itemInputs(ItemIn).inputFluids(FluidIn).itemOutputs(output)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of(`${researchItem}`))
+                .EUt(eu * .5)
+                .CWUt(cwu)
+            )
+        .duration(Dur).EUt(eu);  
 
-    event.recipes.gtceu.draco_circuit_assembler(id('draconic_processor'))
-        .itemInputs('kubejs:draconic_neuro_processing_unit', 'gtceu:crystal_cpu', 'gtceu:qbit_cpu_chip', '12x gtceu:advanced_smd_capacitor', '12x gtceu:advanced_smd_transistor', '16x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 72')
-        .itemOutputs('2x kubejs:draconic_wetware_processor')
-        .duration(200)
-        .CWUt(144)
-        .EUt(GTValues.VHA[GTValues.UV]);
+    let researchBaseID = `${researchItem.replace(':','_')}`;
+    let researchRecipeID = `1_x_${researchBaseID}`;
+    let researchNBT = `1x_${researchBaseID}`;
+    let dataItem = (cwu > 0 && cwu < 32) ? 'gtceu:data_orb' : (cwu < 160) ? 'gtceu:data_module' : 'start_core:data_dna_disk';
+    let recipeType = 'gtceu:draco_circuit_assembler';
+    
+        event.recipes.gtceu.research_station(researchRecipeID)
+            .itemInputs(dataItem)
+            .itemInputs(researchItem)
+            .itemOutputs(Item.of(`${dataItem}`, `{assembly_line_research:{research_id:"${researchNBT}",research_type:"${recipeType}"}}`))
+            .CWUt(cwu)
+            .totalCWU(((Dur + 1600)/2) ** 2)
+            .EUt(eu * .5);
+    
+    }
 
-    event.recipes.gtceu.draco_circuit_assembler(id('draconic_processor_assembly'))
-        .itemInputs('kubejs:draconic_wetware_printed_circuit_board', '2x kubejs:draconic_wetware_processor', '8x gtceu:advanced_smd_inductor', '16x gtceu:advanced_smd_capacitor', '18x kubejs:qram_chip', '24x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 144')
-        .itemOutputs('2x kubejs:draconic_wetware_processor_assembly')
-        .duration(400)
-        .CWUt(144)
-        .EUt(GTValues.VHA[GTValues.UV]);
-
-    event.recipes.gtceu.draco_circuit_assembler(id('draconic_processor_supercomputer'))
-        .itemInputs('kubejs:draconic_wetware_printed_circuit_board', '2x kubejs:draconic_wetware_processor_assembly', '16x gtceu:advanced_smd_diode', '8x kubejs:3d_nor_chip', '24x kubejs:qram_chip', '32x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire', '64x gtceu:polyether_ether_ketone_foil', '4x gtceu:tritanium_plate')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 1152')
-        .itemOutputs('kubejs:draconic_wetware_processor_computer')
-        .duration(400)
-        .CWUt(144)
-        .EUt(GTValues.VHA[GTValues.UHV]);
-
-    event.recipes.gtceu.draco_circuit_assembler(id('draconic_processor_mainframe'))
-        .itemInputs('2x gtceu:neutronium_frame', '2x kubejs:draconic_wetware_processor_computer', '48x gtceu:advanced_smd_diode', '48x gtceu:advanced_smd_capacitor', '48x gtceu:advanced_smd_transistor', '48x gtceu:advanced_smd_resistor', '48x gtceu:advanced_smd_inductor', '64x gtceu:polyether_ether_ketone_foil', '32x gtceu:polyether_ether_ketone_foil', '24x kubejs:qram_chip', '2x gtceu:ruthenium_trinium_americium_neutronate_double_wire', '16x gtceu:tritanium_plate')
-        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 2880', 'gtceu:polyether_ether_ketone 1152')
-        .itemOutputs('kubejs:draconic_wetware_processor_mainframe')
-        .duration(2000)
-        .CWUt(144)
-        .EUt(GTValues.VHA[GTValues.UEV]);
+    //Draconic Wetware
+    DracoCircuitAssembler('draconic_wetware_microchip_processor','4x kubejs:draconic_wetware_microchip_processor',[DrCirBoard, 'gtceu:crystal_cpu', `2x ${Res}`, `2x ${Cap}`, `2x ${Tra}`, '4x gtceu:fine_yttrium_barium_cuprate_wire'], [`${Solder} 72`, `${SGM} 50`], 400, GTValues.VHA[GTValues.UHV], DrCirBoard, 144);
+    DracoCircuitAssembler('cheap_draconic_wetware_microchip_processor','8x kubejs:draconic_wetware_microchip_processor',[DrCirBoard, 'kubejs:draco_advanced_soc', '4x gtceu:fine_yttrium_barium_cuprate_wire', '4x gtceu:trinium_bolt'], [`${Solder} 72`, `${SGM} 50`], 100, GTValues.VHA[GTValues.UEV] * 1.2, 'kubejs:draconic_brain_matter_cells', 160);
+    DracoCircuitAssembler('draconic_wetware_processor','2x kubejs:draconic_wetware_processor',[DrCPU, 'gtceu:crystal_cpu', 'gtceu:qbit_cpu_chip', `4x ${Res}`, `4x ${Cap}`, `4x ${Tra}`, '4x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire'], [`${Solder} 144`, `${SGM} 125`], 400, GTValues.VHA[GTValues.UHV], DrCPU, 144);
+    DracoCircuitAssembler('cheap_draconic_wetware_processor','4x kubejs:draconic_wetware_processor',[DrCPU, 'kubejs:draco_advanced_soc', '4x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire', '4x gtceu:naquadria_bolt'], [`${Solder} 144`, `${SGM} 125`], 100, GTValues.VHA[GTValues.UIV] * 1.2, 'kubejs:draco_advanced_soc', 160);
+    DracoCircuitAssembler('draconic_wetware_processor_assembly','2x kubejs:draconic_wetware_processor_assembly',[DrCirBoard, '2x kubejs:draconic_wetware_processor', `6x ${Ind}`, `12x ${Cap}`, '6x kubejs:qram_chip', '8x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire'], [`${Solder} 288`, `${SGM} 250`], 800, GTValues.VA[GTValues.UHV], 'kubejs:draconic_wetware_processor', 176);
+    DracoCircuitAssembler('draconic_wetware_processor_computer','kubejs:draconic_wetware_processor_computer',[DrCirBoard, '2x kubejs:draconic_wetware_processor_assembly', `6x ${Dio}`, `8x kubejs:3d_nor_chip`, '12x kubejs:qram_chip', '2x gtceu:uhpic_chip', '16x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire', `32x ${PEEK}_foil`, '8x gtceu:americium_plate', '12x gtceu:isovol_screw'], [`${Solder} 1152`,  `${PEEK} 576`, `${SGM} 500`], 1600, GTValues.VA[GTValues.UHV], 'kubejs:draconic_wetware_processor_assembly', 192);
+    DracoCircuitAssembler('draconic_wetware_processor_mainframe','kubejs:draconic_wetware_processor_mainframe',['2x gtceu:starium_alloy_frame', '2x kubejs:draconic_wetware_processor_computer', `24x ${Dio}`, `24x ${Cap}`, `24x ${Tra}`, `24x ${Res}`, `24x ${Ind}`, `64x ${PEDOT_PSS}_foil`, '12x kubejs:qram_chip', '2x kubejs:uepic_chip', '8x gtceu:seaborgium_palladium_enriched_estalt_flerovium_alloy_double_wire', '16x gtceu:americium_plate', '24x gtceu:isovol_screw'], [`${Solder} 2880`,  `${PEDOT_PSS} 1152`, `${SGM} 1000`], 2400, GTValues.VA[GTValues.UEV], 'kubejs:draconic_wetware_processor_computer', 256);
 
 });
