@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         {metal: 'sky', gas: 'nitrogen 1000', temper: 1600, molten: false},
         {metal: 'fluix', gas: 'helium 300', temper: 1900, molten: true}
     ].forEach(abs => {
-        const fluid = (abs.molten == true) ? `molten_${abs.metal}` : abs.metal;
+        const fluid = abs.molten ? `molten_${abs.metal}` : abs.metal;
         event.recipes.gtceu.alloy_blast_smelter(id(`${abs.metal}_steel`))
             .itemInputs(`ae2:${abs.metal}_dust`, '2x gtceu:steel_dust')
             .outputFluids(`gtceu:${fluid}_steel 432`)
@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
             .outputFluids(`gtceu:${fluid}_steel 432`)
             .blastFurnaceTemp(abs.temper)
             .circuit(13)
-            .duration(900)
+            .duration(600)
             .EUt(120);
     });
 
