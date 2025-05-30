@@ -14,11 +14,6 @@ ServerEvents.recipes(event => {
         .duration(88)
         .EUt(2);
 
-    event.replaceInput({id: 'create:mixing/compat/ae2/fluix_crystal'},
-        'ae2:certus_quartz_crystal',
-        'ae2:charged_certus_quartz_crystal'
-    );
-
     [
         {filter: '#forge:dusts/certus_quartz', replacement: 'gtceu:certus_quartz_dust'},
         {filter: '#forge:gems/certus_quartz', replacement: 'ae2:certus_quartz_crystal'}

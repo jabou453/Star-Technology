@@ -127,6 +127,13 @@ ServerEvents.recipes(event => {
             .itemOutputs(`ae2:crafting_${output}`)
             .duration(200)
             .EUt(128);
+
+        event.recipes.gtceu.packer(id(`crafting_${output}_uncrafting`))
+            .itemInputs(`ae2:crafting_${output}`)
+            .itemOutputs('ae2:crafting_unit', `ae2:${catalyst}`)
+            .circuit(2)
+            .duration(100)
+            .EUt(7);
             
         event.remove({output: `megacells:mega_crafting_${output}`})
         event.recipes.gtceu.canner(id(`mega_crafting_${output}`))
@@ -134,6 +141,13 @@ ServerEvents.recipes(event => {
             .itemOutputs(`megacells:mega_crafting_${output}`)
             .duration(200)
             .EUt(128);
+
+        event.recipes.gtceu.packer(id(`mega_crafting_${output}_uncrafting`))
+            .itemInputs(`megacells:mega_crafting_${output}`)
+            .itemOutputs('megacells:mega_crafting_unit', `ae2:${catalyst}`)
+            .circuit(2)
+            .duration(100)
+            .EUt(7);
     }
 
     canner('accelerator', 'engineering_processor');

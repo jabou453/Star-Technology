@@ -9,6 +9,31 @@ ServerEvents.recipes(event => {
             .EUt(56);
     });
 
+    event.remove({ id: `gtceu:alloy_blast_smelter/sky_steel`});
+    event.remove({ id: `gtceu:alloy_blast_smelter/sky_steel_gas`});
+    [
+        {metal: 'sky', gas: 'nitrogen 1000', temper: 1600, molten: false},
+        {metal: 'fluix', gas: 'helium 300', temper: 1900, molten: true}
+    ].forEach(abs => {
+        const fluid = (abs.molten == true) ? `molten_${abs.metal}` : abs.metal;
+        event.recipes.gtceu.alloy_blast_smelter(id(`${abs.metal}_steel`))
+            .itemInputs(`ae2:${abs.metal}_dust`, '2x gtceu:steel_dust')
+            .outputFluids(`gtceu:${fluid}_steel 432`)
+            .blastFurnaceTemp(abs.temper)
+            .circuit(3)
+            .duration(900)
+            .EUt(120);
+
+        event.recipes.gtceu.alloy_blast_smelter(id(`${abs.metal}_steel_gas`))
+            .itemInputs(`ae2:${abs.metal}_dust`, '2x gtceu:steel_dust')
+            .inputFluids(`gtceu:${abs.gas}`)
+            .outputFluids(`gtceu:${fluid}_steel 432`)
+            .blastFurnaceTemp(abs.temper)
+            .circuit(13)
+            .duration(900)
+            .EUt(120);
+    });
+
     ['gold', 'certus_quartz'].forEach(mat => {
         event.recipes.gtceu.mixer(id(`netherite_${mat}_skystone_alloy`))
             .itemInputs('4x gtceu:pure_netherite_dust', '2x gtceu:diamond_skystone_alloy_dust', `gtceu:${mat}_skystone_alloy_dust`)
@@ -27,7 +52,8 @@ ServerEvents.recipes(event => {
         {chip: 'silicon', voltage: 'mv', n: 2, dura: 200},
         {chip: 'phosphorus', voltage: 'hv', n: 4, dura: 160},
         {chip: 'naquadah', voltage: 'ev', n: 8, dura: 120},
-        {chip: 'neutronium', voltage: 'iv', n: 16, dura: 80}
+        {chip: 'neutronium', voltage: 'iv', n: 16, dura: 80},
+        {chip: 'draco', voltage: 'uv', n: 64, dura: 60}
     ].forEach(tier => {
         event.recipes.gtceu.cutter(id(`${tier.chip}_chip`))
             .itemInputs(`gtceu:${tier.chip}_wafer`)
@@ -87,7 +113,8 @@ ServerEvents.recipes(event => {
 
     [// free lenses: white, l_gray, lime
         {type: 'naquadah', n: 1, time: 900, volt: 'ev'},
-        {type: 'neutronium', n: 4, time: 500, volt: 'iv'}
+        {type: 'neutronium', n: 4, time: 500, volt: 'iv'},
+        {type: 'draco', n: 16, time: 200, volt: 'uv'}
     ].forEach(wafer => {
         event.recipes.gtceu.laser_engraver(id(`engrave_ae2_soc_${wafer.type}`))
             .itemInputs(`gtceu:${wafer.type}_wafer`)

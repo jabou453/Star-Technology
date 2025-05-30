@@ -1,21 +1,23 @@
 
 StartupEvents.registry('item', event => {
 
-    event.create('silicon_chip')
-        .displayName('Silicon Chip')
-        .texture('kubejs:item/chips_n_wafers/empty_silicon_chip');
+    const chipBoule = (boule, doped) => {
+        if (doped == false) {
+            event.create(`${boule.toLowerCase()}_chip`)
+                .displayName(`${boule} Chip`)
+                .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
+        } else if (doped == true) {
+            event.create(`${boule.toLowerCase()}_chip`)
+                .displayName(`${boule}-Doped Chip`)
+                .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
+        };
+    };
 
-    event.create('phosphorus_chip')
-        .displayName('Phosphorus-Doped Chip')
-        .texture('kubejs:item/chips_n_wafers/empty_phosphorus_chip');
-
-    event.create('naquadah_chip')
-        .displayName('Naquadah-Doped Chip')
-        .texture('kubejs:item/chips_n_wafers/empty_naquadah_chip');
-
-    event.create('neutronium_chip')
-        .displayName('Neutronium-Doped Chip')
-        .texture('kubejs:item/chips_n_wafers/empty_neutronium_chip');
+    chipBoule('Silicon', false)
+    chipBoule('Phosphorus', true)
+    chipBoule('Naquadah', true)
+    chipBoule('Neutronium', true)
+    chipBoule('Draco', false)
 
     event.create('ae2_soc_wafer')
         .displayName('AE2 SoC Wafer')

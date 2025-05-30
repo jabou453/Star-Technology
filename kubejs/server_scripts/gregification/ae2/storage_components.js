@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
     const id = global.id;
     
-        event.remove({output: 'ae2:cell_component_1k'})
+    event.remove({output: 'ae2:cell_component_1k'})
     event.recipes.gtceu.me_core_assembler(id('cell_component_1k'))
         .itemInputs('3x ae2:logic_processor', '#gtceu:circuits/ulv', '12x gtceu:fine_red_alloy_wire')
         .inputFluids('gtceu:sky_steel 18')
