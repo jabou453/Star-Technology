@@ -120,7 +120,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.assembler(id('magmada_alloy_coil'))
-        .itemInputs('8x gtceu:magmada_alloy_double_wire', '8x gtceu:lepton_coalescing_superalloy_foil')
+        .itemInputs('8x gtceu:magmada_alloy_double_wire', '8x gtceu:pure_netherite_foil')
         .inputFluids('gtceu:zalloy 144')
         .itemOutputs('kubejs:magmada_alloy_coil_block')
         .duration(1100)
