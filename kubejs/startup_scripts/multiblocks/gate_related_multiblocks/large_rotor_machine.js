@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('large_rotor_machine')
-        .category('large_rotor_machine')
+        .category('gate_construction')
         .setEUIO('in')
         .setMaxIOSize(9, 1, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRUDER , FillDirection.LEFT_TO_RIGHT)

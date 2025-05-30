@@ -2,7 +2,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('hellforge')
-        .category('hellforge')
+        .category('extemely_advanced')
         .setEUIO('in')
         .setMaxIOSize(0, 0, 8, 1)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

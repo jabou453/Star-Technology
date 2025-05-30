@@ -2,7 +2,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('draco_infusion')
-        .category('draco_infusion')
+        .category('extemely_advanced')
         .setEUIO('in')
         .setMaxIOSize(7, 1, 1, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

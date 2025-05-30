@@ -2,7 +2,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('stone_barrel')
-        .category('stone_barrel')
+        .category('primitive')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 2, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

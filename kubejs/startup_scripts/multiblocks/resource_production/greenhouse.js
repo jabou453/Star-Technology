@@ -1,21 +1,21 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('tree_greenhouse')
-        .category('greenhouse')
+        .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(2, 2, 3, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_SLICE , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CHAINSAW_TOOL);
     
     event.create('wild_garden')
-        .category('greenhouse')
+        .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(2, 12, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_SIFT , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CENTRIFUGE);
     
     event.create('crop_greenhouse')
-        .category('large_farm')
+        .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(3, 2, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)

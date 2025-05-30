@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('large_quantum_compressor')
-        .category('large_quantum_compressor')
+        .category('gate_construction')
         .setEUIO('in')
         .setMaxIOSize(18, 1, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_COMPRESS , FillDirection.LEFT_TO_RIGHT)

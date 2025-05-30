@@ -1,14 +1,14 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('chemical_skip')
-        .category('chemical_plant')
+        .category('highly_advanced')
         .setEUIO('in')
         .setMaxIOSize(9, 9, 9, 9)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CHEMICAL);
     
     event.create('advanced_chemistry')
-        .category('chemical_plant')
+        .category('highly_advanced')
         .setEUIO('in')
         .setMaxIOSize(9, 9, 9, 9)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE , FillDirection.LEFT_TO_RIGHT)

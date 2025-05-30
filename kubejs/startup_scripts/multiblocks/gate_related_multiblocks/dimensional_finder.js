@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('dimensional_finder')
-        .category('dimensional_finder')
+        .category('gate_construction')
         .setEUIO('in')
         .setMaxIOSize(3, 1, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR , FillDirection.LEFT_TO_RIGHT)

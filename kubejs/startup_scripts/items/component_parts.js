@@ -36,7 +36,8 @@ StartupEvents.registry('item', event => {
             .displayName(`§${color}${tier_proper}§r Micro-Power Router`);
     
     }
-    
+        
+    partTiers('ruined','7','Ruined');
     partTiers('uhv','4','UHV');
     partTiers('uev','a','UEV');
     partTiers('uiv','2','UIV');

@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('cyclonic_sifter')
-        .category('cyclonic_sifter')
+        .category('ultimate')
         .setEUIO('in')
         .setMaxIOSize(2, 6, 2, 3)
         .setSound(GTSoundEntries.CENTRIFUGE)

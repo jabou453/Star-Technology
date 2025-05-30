@@ -2,7 +2,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('exotic_gas_siphon')
-        .category('exotic_gas_siphon')
+        .category('highly_advanced')
         .setEUIO('in')
         .setMaxIOSize(1, 0, 0, 18)
         .setSlotOverlay(false, false, GuiTextures.INT_CIRCUIT_OVERLAY)

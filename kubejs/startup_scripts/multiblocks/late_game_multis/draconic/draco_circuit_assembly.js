@@ -1,10 +1,7 @@
-const $ResearchManager = Java.loadClass('com.gregtechceu.gtceu.utils.ResearchManager')
-const $GTRecipeType = Java.loadClass('com.gregtechceu.gtceu.api.recipe.GTRecipeType');
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('draco_circuit_assembler')
-        .category('draco_circuit_assembler')
+        .category('extemely_advanced')
         .setEUIO('in')
         .setMaxIOSize(16, 1, 3, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
@@ -36,7 +33,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('A', Predicates.blocks('gtceu:assembly_line_casing'))
             .where('C', Predicates.blocks('gtceu:assembly_line_unit'))
             .where('D', Predicates.blocks('kubejs:draco_ware_casing'))
-            .where('I', Predicates.abilities(PartAbility.IMPORT_ITEMS)) //ideally want inputs to act like Ass-Line does
+            .where('I', Predicates.abilities(PartAbility.IMPORT_ITEMS))
             .where('O', Predicates.abilities(PartAbility.EXPORT_ITEMS).addTooltips(Component.translatable("gtceu.multiblock.pattern.location_end")))
             .where('P', Predicates. blocks('kubejs:enriched_naquadah_machine_casing')
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1)))

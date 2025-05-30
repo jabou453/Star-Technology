@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('injection_mixer')
-        .category('injection_mixer')
+        .category('ultimate')
         .setEUIO('in')
         .setMaxIOSize(6, 3, 6, 3)
         .setSound(GTSoundEntries.MIXER)

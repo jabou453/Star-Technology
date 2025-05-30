@@ -2,7 +2,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('super_cooler')
-        .category('super_cooler')
+        .category('extemely_advanced')
         .setEUIO('in')
         .setMaxIOSize(0, 0, 2, 2)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

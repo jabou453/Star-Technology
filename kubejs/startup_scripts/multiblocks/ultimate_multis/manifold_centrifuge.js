@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('manifold_centrifuge')
-        .category('manifold_centrifuge')
+        .category('ultimate')
         .setEUIO('in')
         .setMaxIOSize(3, 3, 3, 3)
         .setSound(GTSoundEntries.CENTRIFUGE)
