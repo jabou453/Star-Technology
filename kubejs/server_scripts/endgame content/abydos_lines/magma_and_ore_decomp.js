@@ -5,24 +5,24 @@ ServerEvents.recipes(event => {
     
     event.recipes.gtceu.molten_destabilizing(id('decomp_abydos_titanite_rich_magma'))
         .inputFluids('gtceu:abydos_titanite_rich_magma 80000')
-        .outputFluids('gtceu:titanite 30000')
-        .outputFluids('gtceu:molten_ore_mixture 15000')
-        .outputFluids('gtceu:calaverite 10000')
-        .outputFluids('gtceu:sylvanite 10000')
-        .outputFluids('gtceu:tiemannite 10000')
-        .outputFluids('gtceu:strontianite 5000')
-        .itemOutputs('80x gtceu:deepslate_dust')
+        .outputFluids('gtceu:titanite 30000',
+            'gtceu:molten_ore_mixture 16000',
+            'gtceu:calaverite 10000',
+            'gtceu:sylvanite 10000',
+            'gtceu:tiemannite 9000',
+            'gtceu:strontianite 5000')
+        .itemOutputs('64x gtceu:deepslate_dust')
         .duration(2400)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
     event.recipes.gtceu.molten_destabilizing(id('decomp_abydos_zapolite_rich_magma'))
         .inputFluids('gtceu:abydos_zapolite_rich_magma 80000')
-        .outputFluids('gtceu:zapolite 30000')
-        .outputFluids('gtceu:molten_ore_mixture 15000')
-        .outputFluids('gtceu:crookesite 15000')
-        .outputFluids('gtceu:clausthalite 10000')
-        .outputFluids('gtceu:iodargyrite 5000')
-        .itemOutputs('80x gtceu:deepslate_dust')
+        .outputFluids('gtceu:zapolite 30000',
+            'gtceu:molten_ore_mixture 16000',
+            'gtceu:crookesite 17500',
+            'gtceu:clausthalite 9500',
+            'gtceu:iodargyrite 7000')
+        .itemOutputs('64x gtceu:deepslate_dust')
         .duration(2400)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 

@@ -1,9 +1,9 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('molten_destabilizing')
         .category('resource_production')
-        .setMaxIOSize(0, 9, 1, 6)
+        .setMaxIOSize(0, 12, 1, 8)
         .setSound(GTSoundEntries.MINER)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT); //Distillation Tower Bar (Scaled Properly as Overly more Ideal)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_DISTILLATION_TOWER, FillDirection.LEFT_TO_RIGHT);
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {

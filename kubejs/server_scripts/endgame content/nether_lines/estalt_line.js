@@ -3,9 +3,9 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.molten_destabilizing(id('molten_estaltadyne_mixture'))
         .inputFluids('gtceu:molten_estaltadyne_mixture 300000')
-        .outputFluids('gtceu:estaltadyne 200000')
-        .outputFluids('gtceu:highly_unstable_nether_magma 50000')
-        .outputFluids('gtceu:molten_ore_mixture 50000')
+        .outputFluids('gtceu:estaltadyne 200000',
+            'gtceu:highly_unstable_nether_magma 50000',
+            'gtceu:molten_ore_mixture 50000')
         .itemOutputs('32x gtceu:netherrack_dust')
         .duration(3600)
         .EUt(GTValues.VHA[GTValues.UV]);

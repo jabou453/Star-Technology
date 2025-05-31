@@ -452,13 +452,31 @@ ServerEvents.recipes(event => {
             .duration(48000)
             .EUt(GTValues.VHA[GTValues.UEV]);
 
-        //THE Ancient Gate
-        event.recipes.gtceu.gate_assembly(id('ancient_gate'))
-            .itemInputs('14x kubejs:ancient_stargate_ring_block', '9x kubejs:ancient_stargate_chevron_block', 'kubejs:ancient_stargate_base_block')
-            .inputFluids('gtceu:naquadria 72000', 'gtceu:liquid_nether_air 250000', 'gtceu:liquid_ender_air 250000')
-            .itemOutputs('sgjourney:milky_way_stargate {BlockEntityTag:{LocalPointOfOrigin:1b}}')
+        //Gate Crafting
+        const GateCraft = (gate,fluid1,fluid2,fluid3,eut,sgGate) => {
+            let B = `kubejs:${gate}_stargate_base_block`;
+            let R = `kubejs:${gate}_stargate_ring_block`;
+            let C = `kubejs:${gate}_stargate_chevron_block`;
+        event.recipes.gtceu.gate_assembly(id(`${gate}_gate`))
+            .itemInputs(B,C,R,R,C,R,R,C,R,R,C,R,C,R,C,R,R,C,R,R,C,R,R,C)
+            .perTick(true)
+            .inputFluids(fluid1)
+            .inputFluids(fluid2)
+            .inputFluids(fluid3)
+            .perTick(false)
+            .itemOutputs(`sgjourney:${sgGate}_stargate {BlockEntityTag:{LocalPointOfOrigin:1b}}`)
             .duration(64000)
-            .EUt(GTValues.VA[GTValues.UEV]);
+            .EUt(eut);
+
+            //[--][14][13][12][11][10][--]
+            //[16][15][--][--][--][09][08]
+            //[17][--][--][--][--][--][07]
+            //[18][--][--][OP][--][--][06]
+            //[19][--][--][--][--][--][05]
+            //[20][21][--][--][--][03][04]
+            //[--][22][23][00][01][02][--]
+        }
+        GateCraft('ancient', 'gtceu:naquadria 16', 'gtceu:liquid_nether_air 50', 'gtceu:liquid_ender_air 50', GTValues.VA[GTValues.UEV],'milky_way');
 
 });
 
