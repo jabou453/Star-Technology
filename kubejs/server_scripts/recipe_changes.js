@@ -8,9 +8,9 @@ ServerEvents.recipes(event => {
     
     event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust').id('start:pressing/compressed_fireclay');
 
-    event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot');
+    event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 400);
 
-    event.campfireCooking('minecraft:glass', 'gtceu:glass_dust');
+    event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 300);
 
     event.replaceInput({ id: 'gtceu:shaped/bronze_primitive_blast_furnace' },
         '#forge:plates/iron',
