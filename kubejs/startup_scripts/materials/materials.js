@@ -182,7 +182,9 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.Netherite.setComponents('4x debris', '4x gold');
     GTMaterials.Netherite.setMaterialIconSet(DULL);
     GTMaterials.Netherite.addFlags(rod);
-
+    GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
+    GTMaterials.get('netherite_hexammine_sulfate').setFormula('[*Nr*(NH3)6]SO4');
+    
 });
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
