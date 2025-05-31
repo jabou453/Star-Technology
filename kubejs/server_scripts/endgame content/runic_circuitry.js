@@ -98,12 +98,13 @@ ServerEvents.recipes(event => {
             // Each option decreases the chance of consuming the singularity by 25%
             let chance = 10000 - (i - 1) * 2500;
             // Each option increases the infusion consumption by 1 mB
+            let consumption = i * i - 2*i + 2; // [1,2,3,4] => [1,2,5,10]
 
             event.recipes.gtceu.runic_circuitry_assembling_station(id(`${singularity}_${plating}_option_${i}`))
                 .itemInputs(`gtceu:dense_${plate}_plate`)
                 .chancedInput(`kubejs:singularity_${singularity}`, chance, 0)
                 .perTick(true)
-                .inputFluids(`gtceu:runic_convergence_infusion ${i}`) // consider making it ${i * i - 2i + 2} goes from [1,2,3,4] => [1,2,5,10]
+                .inputFluids(`gtceu:runic_convergence_infusion ${consumption}`)
                 .perTick(false)
                 .itemOutputs(`kubejs:${plating}`)
                 .blastFurnaceTemp(10500 + (tier >= 2.5) ? 1000 : 0)
