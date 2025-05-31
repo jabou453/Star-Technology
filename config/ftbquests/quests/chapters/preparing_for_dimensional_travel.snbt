@@ -333,7 +333,7 @@
 				item: "gtceu:large_rotor_machine"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: -3.5d
 		}
 		{
@@ -485,6 +485,7 @@
 				"7FFCAD92772A175F"
 			]
 			description: ["A colorfull multiblock that can inscribe ancient runes upon dense and strong materials."]
+			hide_dependency_lines: false
 			id: "6D169C5E35C9EF6C"
 			rewards: [{
 				count: 2
@@ -499,7 +500,7 @@
 				item: "gtceu:runic_circuitry_assembling_station"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 7.0d
 			y: -1.5d
 		}
 		{
@@ -645,6 +646,7 @@
 			dependencies: [
 				"6D169C5E35C9EF6C"
 				"1102670352911334"
+				"6D573ACD05D0EF96"
 			]
 			description: ["Try a variety of singularities so that you don't drain yourself of one material."]
 			id: "0508AE03C730BE6C"
@@ -683,13 +685,13 @@
 				item: "gtceu:super_pressure_heat_chamber"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["5BDA17962F4630EB"]
 			description: ["A Quantum Star that has been artificially made more dense, to the point it starts exerting its own gravitational force."]
-			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "7FFCAD92772A175F"
 			rewards: [{
 				id: "41645C4A24DF3CD2"
@@ -701,8 +703,8 @@
 				item: "gtceu:gravi_star"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -3.5d
+			x: -4.0d
+			y: 0.5d
 		}
 		{
 			dependencies: [
@@ -814,7 +816,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 4.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2F87FC1D5BB43220"]
@@ -833,7 +835,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 6.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["707C2E9BA62A60C5"]
@@ -1101,7 +1103,7 @@
 				}
 				type: "item"
 			}]
-			x: -4.0d
+			x: -2.0d
 			y: -3.5d
 		}
 		{
@@ -1176,8 +1178,11 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["630F50E03EC3D144"]
-			description: ["Pure points of &o&lIMMENSE&r mass with which you can write runes that can perform near magic tasks."]
+			dependencies: [
+				"630F50E03EC3D144"
+				"7FFCAD92772A175F"
+			]
+			description: ["Gravi-Stars &l&oCollapsed&r upon themselves enabling cross-dimensional travel."]
 			id: "1102670352911334"
 			rewards: [{
 				id: "256ED95E87DEA426"
@@ -1186,134 +1191,39 @@
 			}]
 			tasks: [
 				{
-					id: "02E1F6A2DCF9CD07"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:gold"
-						}
-					}
-					optional_task: true
+					id: "6049FCC3C141FBB1"
+					item: "kubejs:singularity_nebular"
 					type: "item"
 				}
 				{
-					id: "6D6D20417495FCED"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:nickel"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "6D1422700BCD5EDF"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:lead"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "0210836066D09A35"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:iron"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "1733575CA240FE1A"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:copper"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "087315C6FEF9218E"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:platinum"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "7AE4D886A5F2911A"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:tin"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "6F69E130B21AC5EC"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:aluminium"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "477D63A1113A02D8"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:silver"
-						}
-					}
-					optional_task: true
+					id: "0F833F29C57E60EC"
+					item: "kubejs:singularity_zenith"
 					type: "item"
 				}
 			]
 			title: "Singularities"
-			x: 7.0d
-			y: -0.5d
+			x: 4.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["52B553FDB34B1475"]
 			description: ["This multiblock performs two major functions: compressing materials into super dense infusions and colapsing gravi-stars into singularities."]
 			id: "630F50E03EC3D144"
 			rewards: [{
+				count: 2
 				id: "3264040D4AF02053"
 				item: "kubejs:coin"
 				type: "item"
 			}]
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
 				id: "216373443959C451"
 				item: "gtceu:large_quantum_compressor"
 				type: "item"
 			}]
 			x: 7.0d
-			y: 2.5d
+			y: 0.5d
 		}
 		{
 			id: "18A35D008CA73084"
