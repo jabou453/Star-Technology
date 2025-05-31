@@ -1579,7 +1579,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["721A2D614DBBAECC"]
+			dependencies: ["491FFE3B635316B0"]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1
@@ -2862,6 +2862,118 @@
 			title: "Twinkling Muon Infused Flux"
 			x: 16.5d
 			y: 16.0d
+		}
+		{
+			dependencies: ["10575AA87FEC2AD8"]
+			id: "15F316991165C760"
+			tasks: [{
+				id: "5D8729D472E459B1"
+				item: "gtceu:netherite_trisulfate_complex_bucket"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["182D948925141764"]
+			id: "10575AA87FEC2AD8"
+			tasks: [{
+				id: "62477706EFB8D197"
+				item: "gtceu:pure_netherite_dust"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["15F316991165C760"]
+			id: "0FC2F1EE502BDDBF"
+			tasks: [{
+				id: "27B60363E95DA32D"
+				item: "gtceu:netherite_hexammine_sulfate_dust"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0FC2F1EE502BDDBF"]
+			id: "3DF3436DEA28DE6B"
+			tasks: [{
+				id: "5E75E2EBF0E07A57"
+				item: "gtceu:voidic_nitride_bucket"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["15F316991165C760"]
+			id: "3C8D1539C267CCBC"
+			tasks: [{
+				id: "1E95BE37B669147F"
+				item: "gtceu:netherite_tetrahydroxide_dust"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["3C8D1539C267CCBC"]
+			id: "4943E89C4B316F50"
+			tasks: [{
+				id: "34C55262AD8BD6F9"
+				item: "gtceu:astral_fluorosilicate_bucket"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"3DF3436DEA28DE6B"
+				"4943E89C4B316F50"
+			]
+			id: "02720C1A85346FB6"
+			tasks: [{
+				id: "5E79F02996FD8A6B"
+				item: "gtceu:primordial_nitrosilicate_bucket"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"4DDA332F7E9B545E"
+				"02720C1A85346FB6"
+			]
+			id: "6D573ACD05D0EF96"
+			rewards: [{
+				count: 3
+				id: "4435562203EF0D17"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "025D733A8E106AD6"
+				item: "gtceu:runic_convergence_infusion_bucket"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			id: "4DDA332F7E9B545E"
+			tasks: [{
+				id: "6F7B485C1EBF2FD9"
+				item: "gtceu:magnesium_nitride_bucket"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 7.5d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"

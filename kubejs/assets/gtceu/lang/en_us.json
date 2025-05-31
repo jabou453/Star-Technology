@@ -730,6 +730,18 @@
     "material.gtceu.activated_nether": "Activated §4Nether§r",
     "material.gtceu.deactivated_nether": "Deactivated §4Nether§r",
 
+    "material.gtceu.intangibility_infusion": "Intangibility Infusion",
+    "material.gtceu.paradoxicity_infusion": "Paradoxicity Infusion",
+    "material.gtceu.causality_infusion": "Causality Infusion",
+    "material.gtceu.netherite_trisulfate_complex": "Netherite Trisulfate Complex",
+    "material.gtceu.netherite_hexammine_sulfate": "Netherite Hexammine Sulfate",
+    "material.gtceu.voidic_nitride": "Voidic Nitride",
+    "material.gtceu.netherite_tetrahydroxide": "Netherite Tetrahydroxide",
+    "material.gtceu.astral_fluorosilicate": "Astral Fluorosilicate",
+    "material.gtceu.primordial_nitrosilicate": "Primordial Nitrosilicate",
+    "material.gtceu.magnesium_nitride": "Magnesium Nitride",
+    "material.gtceu.runic_convergence_infusion": "Runic Convergence Infusion",
+
     "gtceu.molten_destabilizing": "Molten Destabilization",
     "block.gtceu.molten_destabilizer": "Molten Destabilizer Controller",
     "gtceu.latex_plantation": "Latex Plantation",

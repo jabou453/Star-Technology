@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer(id('primordial_nitrosilicate'))
         .inputFluids('gtceu:voidic_nitride 1000', 'gtceu:astral_fluorosilicate 1000')
-        .outputFluids('gtceu:primordial_nitrosilicate 2000')
+        .outputFluids('gtceu:primordial_nitrosilicate 1000')
         .duration(200)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
@@ -91,11 +91,11 @@ ServerEvents.recipes(event => {
         const { singularity, plate, plating, tier, duration_multiplier } = foo;
 
         for (let i = 1; i <= 4; i++) {
-            // Each option adds 10 seconds
+            // Each option adds 25 seconds
             let duration = 4000 * duration_multiplier + (i - 1) * 500;
             // Each option adds 20% more energy consumption
             let eut = GTValues.VHA[GTValues.LuV + Math.floor(tier)] + i * 0.5 * GTValues.VHA[GTValues.LuV + Math.floor(tier)];
-            // Each option decreases the chance of consuming the singularity by 10%
+            // Each option decreases the chance of consuming the singularity by 25%
             let chance = 10000 - (i - 1) * 2500;
             // Each option increases the infusion consumption by 1 mB
 
@@ -103,7 +103,7 @@ ServerEvents.recipes(event => {
                 .itemInputs(`gtceu:dense_${plate}_plate`)
                 .chancedInput(`kubejs:singularity_${singularity}`, chance, 0)
                 .perTick(true)
-                .inputFluids(`gtceu:runic_convergence_infusion ${i}`)
+                .inputFluids(`gtceu:runic_convergence_infusion ${i}`) // consider making it ${i * i - 2i + 2} goes from [1,2,3,4] => [1,2,5,10]
                 .perTick(false)
                 .itemOutputs(`kubejs:${plating}`)
                 .blastFurnaceTemp(10500 + (tier >= 2.5) ? 1000 : 0)
