@@ -25,7 +25,7 @@
     "block.gtceu.large_rotor_machine.tooltip.0": "§7A machine that can fold together rods using large amounts of rotational force, condensing layers on top of layers to create some incredibly resilient materials.",
     "block.gtceu.large_rotor_machine.tooltip.1": "Can use §3Parallel§r hatches",
 
-    "block.gtceu.large_quantum_compressor.tooltip.0": "§7This multi can compress extremely large amounts of matter into a single point, triggering a gravitational collapse to create singularities.",
+    "block.gtceu.large_quantum_compressor.tooltip.0": "§7This multi can compress large amounts of matter into infusions and colapse gravi-stars into a singularities via said infusions.",
     "block.gtceu.large_quantum_compressor.tooltip.1": "Can use §3Parallel§r hatches",
 
     "block.gtceu.runic_circuitry_assembling_station.tooltip.0": "§7An apparatus crossing the boundaries between technology and magic, that can inscribe dense plates with pure singularities to write runes containing mystical powers.",
@@ -729,6 +729,18 @@
     "material.gtceu.polonium_bismide": "Polonium-Bismide",
     "material.gtceu.activated_nether": "Activated §4Nether§r",
     "material.gtceu.deactivated_nether": "Deactivated §4Nether§r",
+
+    "material.gtceu.intangibility_infusion": "Intangibility Infusion",
+    "material.gtceu.paradoxicity_infusion": "Paradoxicity Infusion",
+    "material.gtceu.causality_infusion": "Causality Infusion",
+    "material.gtceu.netherite_trisulfate_complex": "Netherite Trisulfate Complex",
+    "material.gtceu.netherite_hexammine_sulfate": "Netherite Hexammine Sulfate",
+    "material.gtceu.voidic_nitride": "Voidic Nitride",
+    "material.gtceu.netherite_tetrahydroxide": "Netherite Tetrahydroxide",
+    "material.gtceu.astral_fluorosilicate": "Astral Fluorosilicate",
+    "material.gtceu.primordial_nitrosilicate": "Primordial Nitrosilicate",
+    "material.gtceu.magnesium_nitride": "Magnesium Nitride",
+    "material.gtceu.runic_convergence_infusion": "Runic Convergence Infusion",
 
     "gtceu.molten_destabilizing": "Molten Destabilization",
     "block.gtceu.molten_destabilizer": "Molten Destabilizer Controller",

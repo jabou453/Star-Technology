@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('runic_circuitry_assembling_station')
         .category('runic_circuitry_assembling_station')
         .setEUIO('in')
-        .setMaxIOSize(2, 1, 0, 0)
+        .setMaxIOSize(3, 1, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ELECTROLYZER);
 
@@ -28,10 +28,10 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('B', Predicates.blocks('kubejs:lumium_casing')
                 .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1).setPreviewCount(1)))
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1).setPreviewCount(0)))
             .where('C', Predicates.blocks('kubejs:lumium_casing')
-                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
-                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1)))
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(0))
+                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(0)))
             .where('#', Predicates.any())
             .where(' ', Predicates.blocks('minecraft:air'))
             .where('D', Predicates.blocks('gtceu:naquadah_coil_block'))
