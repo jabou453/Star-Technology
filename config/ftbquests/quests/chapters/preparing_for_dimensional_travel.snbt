@@ -1300,7 +1300,7 @@
 		}
 		{
 			dependencies: ["52B553FDB34B1475"]
-			description: ["A machine with the ability to compress enormous amounts of raw elements into a single point."]
+			description: ["This multiblock performs two major functions: compressing materials into super dense infusions and colapsing gravi-stars into singularities."]
 			id: "630F50E03EC3D144"
 			rewards: [{
 				id: "3264040D4AF02053"
