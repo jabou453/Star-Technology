@@ -1,14 +1,7 @@
-GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-    event.create('precise_me_circuit_assembler')
-        .category('precise_me_circuit_assembler')
-        .setMaxIOSize(3, 1, 3, 0)
-        .setSound(GTSoundEntries.COMPUTATION);
-});
-
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create('precise_me_circuit_assembler', 'multiblock')
+    event.create('large_me_assembler', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('precise_me_circuit_assembler')
+        .recipeType('me_assembler')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
 		.appearanceBlock(() => Block.getBlock('kubejs:fluix_steel_casing'))
 		.pattern(definition => FactoryBlockPattern.start()

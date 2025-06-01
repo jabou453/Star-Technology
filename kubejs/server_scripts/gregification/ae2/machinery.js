@@ -118,8 +118,8 @@ ServerEvents.recipes(event => {
             'HFH'
         ], {
             C: 'minecraft:crafting_table',
-            F: 'ae2:quartz_glass',
-            H: 'gtceu:gold_skystone_alloy_plate',
+            H: 'ae2:quartz_glass',
+            F: 'gtceu:gold_skystone_alloy_plate',
             J: 'ae2:annihilation_core',
             B: 'ae2:formation_core'
         });
@@ -129,8 +129,8 @@ ServerEvents.recipes(event => {
             'JAB',
             'HFH'
         ], {
-            F: 'minecraft:crafting_table',
-            H: 'gtceu:gold_skystone_alloy_plate',
+            H: 'minecraft:crafting_table',
+            F: 'gtceu:gold_skystone_alloy_plate',
             J: 'ae2:annihilation_core',
             B: 'ae2:formation_core',
             A: 'gtceu:sky_steel_frame'
@@ -141,8 +141,8 @@ ServerEvents.recipes(event => {
             'JAB',
             'HFH'
         ], {
-            F: '#forge:glass',
-            H: 'gtceu:certus_quartz_skystone_alloy_plate',
+            H: '#forge:glass',
+            F: 'gtceu:certus_quartz_skystone_alloy_plate',
             J: 'ae2:annihilation_core',
             B: 'ae2:formation_core',
             A: 'gtceu:sky_steel_frame'
@@ -154,8 +154,8 @@ ServerEvents.recipes(event => {
             'HFH'
         ], {
             C: 'gtceu:fluix_steel_frame',
-            F: 'ae2:calculation_processor',
-            H: 'gtceu:sky_steel_plate',
+            H: 'ae2:calculation_processor',
+            F: 'gtceu:sky_steel_plate',
             B: 'ae2:fluix_glass_cable'
         });
 
@@ -306,29 +306,30 @@ ServerEvents.recipes(event => {
         });
 
     ['lv', 'mv', 'hv', 'ev', 'iv', 'luv'].forEach(voltage => {
-        event.shaped(`gtceu:${voltage}_me_core_assembler`, [
+        let cable = (voltage) => {
+            let mat;
+            switch(voltage) {
+                case 'lv': {mat = 'tin'; break}
+                case 'mv': {mat = 'copper'; break}
+                case 'hv': {mat = 'gold'; break}
+                case 'ev': {mat = 'aluminium'; break}
+                case 'iv': {mat = 'platinum'; break}
+                case 'luv': {mat = 'niobium_titanium'; break}
+            }
+            return mat
+        };
+        event.shaped(`gtceu:${voltage}_me_assembler`, [
             'ABC',
             'DED',
-            'CCF'],{
+            'FFG'],{
             A: `gtceu:${voltage}_emitter`,
             B: `gtceu:${voltage}_conveyor_module`,
             C: `#gtceu:circuits/${voltage}`,
             D: `gtceu:${voltage}_robot_arm`,
             E: `gtceu:${voltage}_machine_hull`,
-            F: `gtceu:${voltage}_electric_motor`
-        }).id(`start:shaped/${voltage}_me_core_assembler`);
-        
-        event.shaped(`gtceu:${voltage}_me_circuit_assembler`, [
-            'ABC',
-            'DEC',
-            'AAF'],{
-            A: `#gtceu:circuits/${voltage}`,
-            B: `gtceu:${voltage}_sensor`,
-            C: `gtceu:${voltage}_robot_arm`,
-            D: `gtceu:${voltage}_emitter`,
-            E: `gtceu:${voltage}_machine_hull`,
-            F: `gtceu:${voltage}_conveyor_module`
-        }).id(`start:shaped/${voltage}_me_circuit_assembler`);
+            F: `gtceu:${cable(voltage)}_single_cable`,
+            G: `gtceu:${voltage}_electric_motor`
+        }).id(`start:shaped/${voltage}_me_assembler`);
     });
 
     event.shaped('2x kubejs:fluix_steel_casing', [
@@ -347,18 +348,10 @@ ServerEvents.recipes(event => {
         .duration(50)
         .EUt(16);
 
-    event.recipes.gtceu.assembler(id('precise_me_circuit_assembler'))
+    event.recipes.gtceu.assembler(id('precise_me_assembler'))
         .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_robot_arm', 'gtceu:iv_emitter', '2x #gtceu:circuits/iv',
             '16x gtceu:fine_vanadium_gallium_wire', '8x gtceu:uranium_triplatinum_single_wire')
-        .itemOutputs('gtceu:precise_me_circuit_assembler')
-        .duration(600)
-        .EUt(8192);
-
-
-    event.recipes.gtceu.assembler(id('precise_me_core_assembler'))
-        .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_conveyor_module', 'gtceu:iv_robot_arm', '2x #gtceu:circuits/iv',
-            '16x gtceu:fine_tantalum_wire', '8x gtceu:mercury_barium_calcium_cuprate_single_wire')
-        .itemOutputs('gtceu:precise_me_core_assembler')
+        .itemOutputs('gtceu:precise_me_assembler')
         .duration(600)
         .EUt(8192);
 

@@ -761,16 +761,10 @@
     "gtceu.stirling_generator": "Stirling Generator",
     "gtceu.auto_scavenger": "Auto Scavenger",
 
-    "gtceu.ME_core_assembler": "ME Core Assembler",
-    "block.gtceu.ME_core_assembler": "ME Core Assembler",
+    "gtceu.me_assembler": "ME Assembler",
+    "block.gtceu.me_assembler": "ME Assembler",
 
-    "gtceu.me_circuit_assembler": "ME Circuit Assembler",
-    "gtceu.me_core_assembler": "ME Core Assembler",
-
-    "block.gtceu.precise_me_core_assembler": "Precise ME Core Assembler Controller",
-
-    "gtceu.precise_me_circuit_assembler": "Precise ME Circuit Assembler",
-    "block.gtceu.precise_me_circuit_assembler": "Precise ME Circuit Assembler Controller",
+    "block.gtceu.large_me_assembler": "Large ME Assembler Controller",
 
     "material.gtceu.skystone": "Skystone",
     "material.gtceu.gold_skystone_alloy": "Gold Skystone Alloy",

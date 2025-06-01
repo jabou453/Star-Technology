@@ -62,9 +62,9 @@ ServerEvents.recipes(event => {
             .EUt(global.va[tier.voltage]);
 
         ['logic', 'engineering', 'calculation'].forEach(type => {
-            event.recipes.gtceu.me_circuit_assembler(id(`${type}_processor_${tier.chip}`))
+            event.recipes.gtceu.me_assembler(id(`${type}_processor_${tier.chip}`))
                 .itemInputs(`kubejs:${tier.chip}_chip`, `ae2:printed_${type}_processor`, 'ae2:printed_silicon')
-                .inputFluids('gtceu:skystone 144')
+                .inputFluids('gtceu:soldering_alloy 144')
                 .itemOutputs(`${tier.n}x ae2:${type}_processor`)
                 .duration(tier.dura)
                 .EUt(global.va[tier.voltage]);
@@ -116,45 +116,45 @@ ServerEvents.recipes(event => {
         {type: 'formation', catalyst: 'ae2:certus_quartz_crystal'},
         {type: 'annihilation', catalyst: 'minecraft:quartz'}
     ].forEach(tier => {
-        event.recipes.gtceu.me_core_assembler(id(`${tier.type}_core`))
+        event.recipes.gtceu.me_assembler(id(`${tier.type}_core`))
             .itemInputs('ae2:logic_processor', `${tier.catalyst}`, '6x gtceu:fluix_steel_foil')
             .itemOutputs(`4x ae2:${tier.type}_core`)
             .duration(400)
             .EUt(128);
     });
 
-    [// free lenses: white, l_gray, lime
-        {type: 'naquadah', n: 1, time: 900, volt: 'ev'},
-        {type: 'neutronium', n: 4, time: 500, volt: 'iv'},
-        {type: 'draco', n: 16, time: 200, volt: 'uv'}
-    ].forEach(wafer => {
-        event.recipes.gtceu.laser_engraver(id(`engrave_ae2_soc_${wafer.type}`))
-            .itemInputs(`gtceu:${wafer.type}_wafer`)
-            .notConsumable('#forge:lenses/magenta')
-            .itemOutputs(`${wafer.n}x kubejs:ae2_soc_wafer`)
-            .duration(wafer.time)
-            .EUt(global.va[wafer.volt]);
-    });
+    // [// free lenses: white, l_gray, lime
+    //     {type: 'naquadah', n: 1, time: 900, volt: 'ev'},
+    //     {type: 'neutronium', n: 4, time: 500, volt: 'iv'},
+    //     {type: 'draco', n: 16, time: 200, volt: 'uv'}
+    // ].forEach(wafer => {
+    //     event.recipes.gtceu.laser_engraver(id(`engrave_ae2_soc_${wafer.type}`))
+    //         .itemInputs(`gtceu:${wafer.type}_wafer`)
+    //         .notConsumable('#forge:lenses/magenta')
+    //         .itemOutputs(`${wafer.n}x kubejs:ae2_soc_wafer`)
+    //         .duration(wafer.time)
+    //         .EUt(global.va[wafer.volt]);
+    // });
 
-    event.recipes.gtceu.cutter(id('ae2_soc'))
-        .itemInputs('kubejs:ae2_soc_wafer')
-        .itemOutputs('6x kubejs:ae2_soc')
-        .duration(900)
-        .EUt(global.va['ev']);
+    // event.recipes.gtceu.cutter(id('ae2_soc'))
+    //     .itemInputs('kubejs:ae2_soc_wafer')
+    //     .itemOutputs('6x kubejs:ae2_soc')
+    //     .duration(900)
+    //     .EUt(global.va['ev']);
 
-    [
-        {circuit: 'logic', material: 'gold'},
-        {circuit: 'engineering', material: 'diamond'},
-        {circuit: 'calculation', material: 'certus_quartz'}
-    ].forEach(type => {
-        event.recipes.gtceu.precise_me_circuit_assembler(id(`${type.circuit}_processor_soc`))
-            .notConsumable(`ae2:${type.circuit}_processor_press`)
-            .itemInputs('kubejs:ae2_soc', `gtceu:${type.material}_skystone_alloy_plate`)
-            .inputFluids('gtceu:sky_steel 288')
-            .itemOutputs(`8x ae2:${type.circuit}_processor`)
-            .duration(400)
-            .EUt(global.va['iv']);
-    });
+    // [
+    //     {circuit: 'logic', material: 'gold'},
+    //     {circuit: 'engineering', material: 'diamond'},
+    //     {circuit: 'calculation', material: 'certus_quartz'}
+    // ].forEach(type => {
+    //     event.recipes.gtceu.precise_me_assembler(id(`${type.circuit}_processor_soc`))
+    //         .notConsumable(`ae2:${type.circuit}_processor_press`)
+    //         .itemInputs('kubejs:ae2_soc', `gtceu:${type.material}_skystone_alloy_plate`)
+    //         .inputFluids('gtceu:sky_steel 288')
+    //         .itemOutputs(`8x ae2:${type.circuit}_processor`)
+    //         .duration(400)
+    //         .EUt(global.va['iv']);
+    // });
 
     event.replaceInput({id: 'ae2:network/wireless_part'},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate');
 

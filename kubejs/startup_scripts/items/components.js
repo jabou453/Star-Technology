@@ -1,23 +1,23 @@
 
 StartupEvents.registry('item', event => {
 
-    const chipBoule = (boule, doped) => {
+    const chipBoule = (boule, color, doped) => {
         if (doped) {
             event.create(`${boule.toLowerCase()}_chip`)
-                .displayName(`${boule}-Doped Chip`)
+                .displayName(`${color}${boule}§r-Doped Chip`)
                 .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
         } else {
             event.create(`${boule.toLowerCase()}_chip`)
-                .displayName(`${boule} Chip`)
+                .displayName(`${color}${boule}§r Chip`)
                 .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
         };
     };
 
-    chipBoule('Silicon', false)
-    chipBoule('Phosphorus', true)
-    chipBoule('Naquadah', true)
-    chipBoule('Neutronium', true)
-    chipBoule('Draco', true)
+    chipBoule('Silicon', '§r', false)
+    chipBoule('Phosphorus', '§r', true)
+    chipBoule('Naquadah', '§r', true)
+    chipBoule('Neutronium', '§r', true)
+    chipBoule('Draco', '§5', true)
 
     event.create('ae2_soc_wafer')
         .displayName('AE2 SoC Wafer')
