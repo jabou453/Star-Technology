@@ -536,6 +536,7 @@
 		}
 		{
 			dependencies: ["1772F46C9EAF6FB7"]
+			description: ["Get Universal Circuits in Mass"]
 			icon: "kubejs:luv_universal_circuit"
 			id: "324630FF56F505DA"
 			tasks: [{
