@@ -923,7 +923,7 @@
 		}
 		{
 			dependencies: ["30C974448C57F0EC"]
-			description: ["The &2UEV&r superconductor, can hold 1024 amps in a 1x wire"]
+			description: ["The &2UEV&r superconductor, can hold 256 amps in a 1x wire"]
 			id: "1C0B16612DBBE8CA"
 			rewards: [{
 				id: "7EE50E0E44FBAE00"
