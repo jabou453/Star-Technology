@@ -34,6 +34,7 @@ ServerEvents.recipes(event => {
     rubberType('gtceu:rubber', 144);
     rubberType('gtceu:silicone_rubber', 72);
     rubberType('gtceu:styrene_butadiene_rubber', 36);
+    rubberType('gtceu:perfluoroelastomer_rubber', 18);
 
     //greging cable anchors
     const metaltype = (wire, amount) => {

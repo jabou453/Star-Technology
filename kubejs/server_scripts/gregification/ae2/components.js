@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
 
     ['gold', 'certus_quartz'].forEach(mat => {
         event.recipes.gtceu.mixer(id(`netherite_${mat}_skystone_alloy`))
-            .itemInputs('4x gtceu:pure_netherite_dust', '2x gtceu:diamond_skystone_alloy_dust', `gtceu:${mat}_skystone_alloy_dust`)
+            .itemInputs('4x gtceu:netherite_dust', '2x gtceu:diamond_skystone_alloy_dust', `gtceu:${mat}_skystone_alloy_dust`)
             .itemOutputs(`3x gtceu:netherite_${mat}_skystone_alloy_dust`)
             .duration(160)
             .EUt(2048);
@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
         .EUt(128);
 
     [
-        {chip: 'silicon', voltage: 'mv', n: 2, dura: 200},
+        {chip: 'silicon', voltage: 'mv', n: 1, dura: 200},
         {chip: 'phosphorus', voltage: 'hv', n: 4, dura: 160},
         {chip: 'naquadah', voltage: 'ev', n: 8, dura: 120},
         {chip: 'neutronium', voltage: 'iv', n: 16, dura: 80},
@@ -78,11 +78,17 @@ ServerEvents.recipes(event => {
         {circuit: 'calculation', material: 'certus_quartz'}
     ].forEach(type => {
         event.recipes.gtceu.mixer(id(`${type.material}_skystone_alloy`))
-            .itemInputs(`gtceu:${type.material}_dust`)
-            .inputFluids('gtceu:skystone 72')
-            .itemOutputs(`gtceu:${type.material}_skystone_alloy_dust`)
+            .itemInputs(`2x gtceu:${type.material}_dust`)
+            .inputFluids('gtceu:skystone 144')
+            .itemOutputs(`3x gtceu:${type.material}_skystone_alloy_dust`)
             .duration(400)
             .EUt(global.va['mv']);
+
+        event.recipes.gtceu.forming_press(id(`${type.circuit}_press`))
+            .itemInputs('gtceu:double_sky_steel_plate', `gtceu:${type.material}_dust`)
+            .itemOutputs(`ae2:${type.circuit}_processor_press`)
+            .duration(600)
+            .EUt(65);
 
         event.recipes.gtceu.forming_press(id(`printed_${type.circuit}_processor`))
             .itemInputs(`gtceu:${type.material}_skystone_alloy_plate`)
@@ -91,6 +97,12 @@ ServerEvents.recipes(event => {
             .duration(400)
             .EUt(global.va['mv']);
     });
+
+    event.recipes.gtceu.forming_press(id('silicon_press'))
+        .itemInputs('gtceu:double_sky_steel_plate', 'gtceu:silicon_press_dust')
+        .itemOutputs('ae2:silicon_press_processor_press')
+        .duration(600)
+        .EUt(65);
 
     event.recipes.gtceu.forming_press(id('printed_silicon_processor'))
         .itemInputs('gtceu:silicon_plate')

@@ -38,13 +38,9 @@ ServerEvents.recipes(event => {
         assembler_rem(`${item}_export_bus`,`expatternprovider:${item}_export_bus`,['2x ae2:export_bus',`${input}`],2048);
     }
 
-    event.remove({ id: 'megacells:network/mega_interface'});
-    event.remove({ id: 'megacells:network/mega_pattern_provider'});
     assemblerfluid('mega_interface','megacells:mega_interface', ['ae2:interface', '4x ae2:calculation_processor', '#gtceu:circuits/hv', '8x gtceu:diamond_skystone_alloy_plate'],'sky_steel 576', 512);
     assemblerfluid('mega_pattern_provider','megacells:mega_pattern_provider', ['ae2:pattern_provider', '4x ae2:calculation_processor', '#gtceu:circuits/hv', '8x gtceu:diamond_skystone_alloy_plate'],'sky_steel 576', 512);
     
-    event.remove({ id: 'expatternprovider:ei'});
-    event.remove({ id: 'expatternprovider:epp'});
     assemblerfluid('ex_interface', 'expatternprovider:ex_interface', ['megacells:mega_interface', '4x ae2:calculation_processor', '#gtceu:circuits/ev', '4x gtceu:double_certus_quartz_skystone_alloy_plate'],'sky_steel 576', 2048);
     assemblerfluid('ex_pattern_provider', 'expatternprovider:ex_pattern_provider', ['megacells:mega_pattern_provider', '4x ae2:calculation_processor', '#gtceu:circuits/ev', '4x gtceu:double_gold_skystone_alloy_plate'],'sky_steel 576', 2048);
 
@@ -54,10 +50,6 @@ ServerEvents.recipes(event => {
     
     ['import_bus', 'export_bus'].forEach(type => {
         assemblerfluid_rem(`extended_${type}_part`, `expatternprovider:ex_${type}_part`,[`ae2:${type}`, '4x ae2:calculation_processor', '#gtceu:circuits/ev', '4x gtceu:certus_quartz_skystone_alloy_plate','4x gtceu:gold_skystone_alloy_plate'],'sky_steel 576', 2048);
-    });
-
-    ['import_bus', 'export_bus', 'import_hatch', 'export_hatch'].forEach(type => {
-        event.remove({id: `gtceu:assembler/me_${type}`})
     });
 
     ['input_bus', 'output_bus', 'input_hatch', 'output_hatch'].forEach(type => {
@@ -84,7 +76,7 @@ ServerEvents.recipes(event => {
         'ABA',
         'BCB',
         'ABA'], {
-        A: 'gtceu:double_silicon_plate',
+        A: 'gtceu:silicon_plate',
         B: 'gtceu:diamond_skystone_alloy_plate',
         C: 'gtceu:energium_dust'
     });
@@ -132,7 +124,6 @@ ServerEvents.recipes(event => {
             B: 'ae2:formation_core'
         });
     
-    event.remove({ id: 'ae2:network/blocks/pattern_providers_interface'});
     event.shaped('ae2:pattern_provider', [
             'HFH',
             'JAB',
@@ -145,7 +136,6 @@ ServerEvents.recipes(event => {
             A: 'gtceu:sky_steel_frame'
         });
 
-    event.remove({ id: 'ae2:network/blocks/interfaces_interface'});
     event.shaped('ae2:interface', [
             'HFH',
             'JAB',
@@ -237,7 +227,6 @@ ServerEvents.recipes(event => {
         });
 
     shapedRecipeRem('ae2:memory_card',[
-        '   ',
         'ABB',
         'CDC'],{
             A: 'ae2:calculation_processor',
@@ -381,7 +370,6 @@ ServerEvents.recipes(event => {
 
     assemblerfluid_rem('ex_pattern_access_part','expatternprovider:ex_pattern_access_part',['ae2:pattern_access_terminal','4x gtceu:double_certus_quartz_skystone_alloy_plate','4x ae2:engineering_processor','#gtceu:circuits/ev'],'fluix_steel 567', 2048);
     
-    event.remove({ id: 'expatternprovider:oversize_interface'});
     assemblerfluid('oversize_interface','expatternprovider:oversize_interface',['expatternprovider:ex_interface','4x ae2:capacity_card','4x gtceu:gold_skystone_alloy_plate'],'sky_steel 576',2048);
 
     assemblerfluid_rem('pattern_terminal_upgrade','expatternprovider:pattern_terminal_upgrade',['4x gtceu:double_certus_quartz_skystone_alloy_plate','4x ae2:engineering_processor','#gtceu:circuits/ev'],'fluix_steel 576',2048);
@@ -399,30 +387,34 @@ ServerEvents.recipes(event => {
     assemblerfluid_rem('assembler_matrix_crafter','expatternprovider:assembler_matrix_crafter',['expatternprovider:assembler_matrix_wall','2x expatternprovider:ex_molecular_assembler'],'netherite_certus_quartz_skystone_alloy 576',2048);
     assemblerfluid_rem('assembler_matrix_speed','expatternprovider:assembler_matrix_speed',['expatternprovider:assembler_matrix_wall','2x ae2:speed_card'],'netherite_certus_quartz_skystone_alloy 576',2048);
 
+    const repIn = (recId, target, replace) => {
+        event.replaceInput({ id: recId}, target, replace)
+    };
+
     ['ae2:network/parts/tunnels_me', 'ae2:network/parts/export_bus', 'ae2:network/parts/import_bus', 'ae2:materials/basiccard', 'ae2:materials/advancedcard',
         'ae2netanalyser:analyser', 'ae2:network/parts/formation_plane', 'ae2:network/parts/formation_plane_alt', 'ae2:network/parts/annihilation_plane_alt',
         'ae2:network/parts/annihilation_plane_alt2'].forEach(type => {
-        event.replaceInput({ id: `${type}`},'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
+        repIn(`${type}`,'minecraft:iron_ingot','gtceu:certus_quartz_skystone_alloy_plate');
     });
 
     ['ae2:network/crafting/patterns_blank', 'ae2:network/wireless_booster', 'megacells:network/cell_dock', 'megacells:crafting/decompression_module',
         'expatternprovider:ingredient_buffer', 'expatternprovider:wireless_tool'].forEach(type => {
-       event.replaceInput({ id: `${type}`},'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate'); 
+       repIn(`${type}`,'minecraft:iron_ingot','gtceu:diamond_skystone_alloy_plate'); 
     });
 
-    event.replaceInput({ id: 'ae2:misc/tiny_tnt'},'minecraft:gunpowder','gtceu:gelled_toluene');
-    event.replaceInput({ id: 'ae2:network/blocks/energy_dense_energy_cell'},'ae2:calculation_processor','gtceu:energium_dust');
-    event.replaceInput({ id: 'ae2:materials/basiccard'},'minecraft:gold_ingot','gtceu:gold_skystone_alloy_plate');
-    event.replaceInput({ id: 'ae2:materials/advancedcard'},'minecraft:diamond','gtceu:diamond_skystone_alloy_plate');
-    event.replaceInput({ id: 'ae2netanalyser:analyser'},'minecraft:copper_ingot','gtceu:gold_skystone_alloy_plate');
-    event.replaceInput({ id: 'megacells:network/cell_dock'},'minecraft:copper_ingot','gtceu:gold_skystone_alloy_plate');
-    event.replaceInput({ id: 'megacells:crafting/decompression_module'},'megacells:accumulation_processor','#gtceu:circuits/hv');
-    event.replaceInput({ id: 'ae2:network/blocks/spatial_io_pylon'}, 'ae2:fluix_crystal','gtceu:fluix_steel_frame');
-    event.replaceInput({ id: 'expatternprovider:wireless_tool'}, 'ae2:calculation_processor','gtceu:machine_memory_card');
-    event.replaceInput({ id: 'expatternprovider:water_cell'}, 'minecraft:diamond','gtceu:double_diamond_skystone_alloy_plate');
-    event.replaceInput({ id: 'expatternprovider:cobblestone_cell'}, 'minecraft:diamond','gtceu:double_diamond_skystone_alloy_plate');
-    event.replaceInput({ id: 'aeinfinitybooster:infinity_card'}, 'minecraft:netherite_ingot','gtceu:netherite_certus_quartz_skystone_alloy_plate');
-    event.replaceInput({ id: 'aeinfinitybooster:dimension_card'}, 'minecraft:ender_eye','gtceu:exquisite_echo_shard_gem');
-    event.replaceInput({ id: 'aeinfinitybooster:dimension_card'}, 'minecraft:nether_star','gtceu:quantum_star');
+    repIn('ae2:misc/tiny_tnt','minecraft:gunpowder','gtceu:gelled_toluene');
+    repIn('ae2:network/blocks/energy_dense_energy_cell','ae2:calculation_processor','gtceu:energium_dust');
+    repIn('ae2:materials/basiccard','minecraft:gold_ingot','gtceu:gold_skystone_alloy_plate');
+    repIn('ae2:materials/advancedcard','minecraft:diamond','gtceu:diamond_skystone_alloy_plate');
+    repIn('ae2netanalyser:analyser','minecraft:copper_ingot','gtceu:gold_skystone_alloy_plate');
+    repIn('megacells:network/cell_dock','minecraft:copper_ingot','gtceu:gold_skystone_alloy_plate');
+    repIn('megacells:crafting/decompression_module','megacells:accumulation_processor','#gtceu:circuits/hv');
+    repIn('ae2:network/blocks/spatial_io_pylon', 'ae2:fluix_crystal','gtceu:fluix_steel_frame');
+    repIn('expatternprovider:wireless_tool', 'ae2:calculation_processor','gtceu:machine_memory_card');
+    repIn('expatternprovider:water_cell', 'minecraft:diamond','gtceu:double_diamond_skystone_alloy_plate');
+    repIn('expatternprovider:cobblestone_cell', 'minecraft:diamond','gtceu:double_diamond_skystone_alloy_plate');
+    repIn('aeinfinitybooster:infinity_card', 'minecraft:netherite_ingot','gtceu:netherite_certus_quartz_skystone_alloy_plate');
+    repIn('aeinfinitybooster:dimension_card', 'minecraft:ender_eye','gtceu:exquisite_echo_shard_gem');
+    repIn('aeinfinitybooster:dimension_card', 'minecraft:nether_star','gtceu:quantum_star');
 
 });

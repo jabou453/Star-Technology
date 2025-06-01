@@ -10,9 +10,15 @@ ServerEvents.recipes(event => {
     [
         'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz', 'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals',
         'ae2:transform/fluix_crystal', 'ae2:transform/certus_quartz_crystals', 'ae2:network/cables/covered_fluix', 'ae2:network/parts/quartz_fiber_part',
-        'ae2:network/cables/glass_fluix', 'ae2:network/parts/cable_anchor', /expatternprovider:cutter.*/, 'create:mixing/compat/ae2/fluix_crystal'
+        'ae2:network/cables/glass_fluix', 'ae2:network/parts/cable_anchor', /expatternprovider:cutter.*/, 'create:mixing/compat/ae2/fluix_crystal',
+        'expatternprovider:oversize_interface', 'megacells:network/mega_interface', 'megacells:network/mega_pattern_provider', 'expatternprovider:ei',
+        'expatternprovider:epp', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/blocks/interfaces_interface'
     ].forEach(element => {
         event.remove({ id: element});
+    });
+
+    ['import_bus', 'export_bus', 'import_hatch', 'export_hatch'].forEach(type => {
+        event.remove({id: `gtceu:assembler/me_${type}`})
     });
 
     [

@@ -30,7 +30,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('me_core_assembler', 'simple')
         .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV)
         .definition((tier, builder) => {
-            return builder
+            builder
                 .recipeType('me_core_assembler')
                 .workableTieredHullRenderer("gtceu:block/machines/assembler")
         }

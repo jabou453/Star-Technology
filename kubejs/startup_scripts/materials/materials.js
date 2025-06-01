@@ -786,7 +786,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compIngotLiquid('sky_steel', ['1x skystone', '2x steel'], 0xCCFFCC, METALLIC, [1600, 'low', VA('mv'), 400], [no_decomp, plates, rod, frame]);
     
     const skystone_alloys = (material, color, icon) => {
-        event.create(`${material}_skystone_alloy`).ingot().components('skystone', `${material}`).color(color).secondaryColor(0x414445).iconSet(icon).blastTemp(1600, 'low', VA('mv'), 200).flags(no_decomp, plates);
+        event.create(`${material}_skystone_alloy`).ingot().components('skystone', `2x ${material}`).color(color).secondaryColor(0x414445).iconSet(icon).blastTemp(1600, 'low', VA('mv'), 200).flags(no_decomp, plates);
     }
     
     skystone_alloys('gold', 0xCFBE38, 'METALLIC');
@@ -796,7 +796,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compIngotLiquid('fluix_steel', ['1x fluix', '2x steel'], 0x8F5CCB, METALLIC, [1900, 'mid', VA('mv'), 400], [no_decomp, plates, rod, frame, foil]);
 
     const netherite_skystone_alloys = (material, color, icon) => {
-        event.create(`netherite_${material}_skystone_alloy`).ingot().fluid().components('4x pure_netherite', '2x diamond_skystone_alloy', `${material}_skystone_alloy`)
+        event.create(`netherite_${material}_skystone_alloy`).ingot().fluid().components('4x netherite', '2x diamond_skystone_alloy', `${material}_skystone_alloy`)
             .color(color).secondaryColor(0x0D0702).iconSet(icon).flags(no_decomp, plates, rod, frame).blastTemp(4000, 'high', VA('iv'), 800);
     }
     

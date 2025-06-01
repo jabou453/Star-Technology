@@ -2,13 +2,13 @@
 StartupEvents.registry('item', event => {
 
     const chipBoule = (boule, doped) => {
-        if (doped == false) {
-            event.create(`${boule.toLowerCase()}_chip`)
-                .displayName(`${boule} Chip`)
-                .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
-        } else if (doped == true) {
+        if (doped) {
             event.create(`${boule.toLowerCase()}_chip`)
                 .displayName(`${boule}-Doped Chip`)
+                .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
+        } else {
+            event.create(`${boule.toLowerCase()}_chip`)
+                .displayName(`${boule} Chip`)
                 .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
         };
     };
@@ -17,7 +17,7 @@ StartupEvents.registry('item', event => {
     chipBoule('Phosphorus', true)
     chipBoule('Naquadah', true)
     chipBoule('Neutronium', true)
-    chipBoule('Draco', false)
+    chipBoule('Draco', true)
 
     event.create('ae2_soc_wafer')
         .displayName('AE2 SoC Wafer')
