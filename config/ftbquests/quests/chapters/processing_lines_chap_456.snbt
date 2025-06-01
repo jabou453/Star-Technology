@@ -428,8 +428,8 @@
 					type: "item"
 				}
 			]
-			x: -0.5d
-			y: 10.0d
+			x: 1.0d
+			y: 11.5d
 		}
 		{
 			dependencies: ["5D66D12C6EBB3A43"]
@@ -449,8 +449,8 @@
 					type: "item"
 				}
 			]
-			x: 1.0d
-			y: 10.0d
+			x: 2.5d
+			y: 11.5d
 		}
 		{
 			dependencies: ["615443BBE5BF322A"]
@@ -470,8 +470,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 10.0d
+			x: 4.0d
+			y: 11.5d
 		}
 		{
 			dependencies: [
@@ -485,8 +485,8 @@
 				item: "gtceu:44_difluorobenzophenone_dust"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 10.0d
+			x: 5.5d
+			y: 11.5d
 		}
 		{
 			dependencies: ["7CACFC7C9101EA59"]
@@ -506,8 +506,8 @@
 					type: "item"
 				}
 			]
-			x: 3.5d
-			y: 9.0d
+			x: 5.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["111033FEFA89BA91"]
@@ -518,8 +518,8 @@
 				item: "gtceu:hydroquinone_dust"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 8.0d
+			x: 4.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["59546613EC1FC027"]
@@ -530,8 +530,8 @@
 				item: "gtceu:disodium_salt_of_hydroquinone_dust"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.0d
+			x: 5.5d
+			y: 9.5d
 		}
 		{
 			dependencies: [
@@ -553,8 +553,8 @@
 				type: "item"
 			}]
 			title: "Liquid PEEK Plastic"
-			x: 5.25d
-			y: 9.0d
+			x: 6.75d
+			y: 10.5d
 		}
 		{
 			dependencies: ["6CC13BE9AD447218"]
@@ -2941,8 +2941,8 @@
 				item: "gtceu:benzophenone_bucket"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 11.5d
+			x: 2.5d
+			y: 12.75d
 		}
 		{
 			id: "1B683817D057B4A5"
@@ -2951,8 +2951,8 @@
 				item: "gtceu:acetic_acid_bucket"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 12.0d
+			x: 1.5d
+			y: 13.0d
 		}
 		{
 			id: "188295DEDBC77EAD"
@@ -2961,8 +2961,8 @@
 				item: "gtceu:maleic_anhydride_bucket"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 13.0d
+			x: -0.5d
+			y: 14.0d
 		}
 		{
 			dependencies: [
@@ -2976,8 +2976,8 @@
 				item: "gtceu:benzophenone_3344_tetracarboxylic_dianhydride_dust"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 13.0d
+			x: 2.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["1B5330F9A07294AD"]
@@ -2987,8 +2987,8 @@
 				item: "gtceu:dimethyl_succinate_bucket"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 16.5d
+			x: -0.5d
+			y: 17.5d
 		}
 		{
 			dependencies: [
@@ -3001,8 +3001,8 @@
 				item: "gtceu:dimethyl_maleate_bucket"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 15.0d
+			x: -0.5d
+			y: 16.0d
 		}
 		{
 			dependencies: ["441B116F6D8FDC08"]
@@ -3012,8 +3012,8 @@
 				item: "gtceu:14_butanediol_bucket"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 16.5d
+			x: 1.0d
+			y: 17.5d
 		}
 		{
 			dependencies: [
@@ -3027,8 +3027,8 @@
 				item: "gtceu:polyamic_acid_bucket"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 13.0d
+			x: 4.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["6BD12CC3A72DFAF4"]
@@ -3040,8 +3040,8 @@
 				item: "gtceu:polyimide_bucket"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 13.0d
+			x: 6.0d
+			y: 14.0d
 		}
 		{
 			dependencies: [
@@ -3054,8 +3054,8 @@
 				item: "gtceu:n_methyl_2_pyrrolidone_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 15.0d
+			x: 4.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["5CFDB5A139301559"]
@@ -3065,8 +3065,8 @@
 				item: "gtceu:m_phelyenediamine_bucket"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 14.5d
+			x: 5.0d
+			y: 15.5d
 		}
 		{
 			id: "5CFDB5A139301559"
@@ -3075,8 +3075,8 @@
 				item: "gtceu:nitrobenzene_bucket"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 16.0d
+			x: 5.0d
+			y: 17.0d
 		}
 		{
 			dependencies: ["5C5912F0ED3ED0F3"]
@@ -3086,8 +3086,8 @@
 				item: "gtceu:y_butyrolactone_bucket"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 16.5d
+			x: 2.5d
+			y: 17.5d
 		}
 		{
 			dependencies: [
@@ -3100,8 +3100,8 @@
 				item: "gtceu:methylamine_bucket"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 15.0d
+			x: 2.5d
+			y: 16.0d
 		}
 		{
 			id: "7AB2F356B5B0FDFD"
@@ -3110,8 +3110,8 @@
 				item: "gtceu:methanol_bucket"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 15.0d
+			x: 1.0d
+			y: 16.0d
 		}
 		{
 			id: "75B49A50671FBADE"
@@ -3120,8 +3120,8 @@
 				item: "gtceu:ammonia_bucket"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 14.0d
+			x: 1.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["10575AA87FEC2AD8"]
@@ -3131,8 +3131,8 @@
 				item: "gtceu:netherite_trisulfate_complex_bucket"
 				type: "item"
 			}]
-			x: -7.0d
-			y: 9.0d
+			x: -0.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["182D948925141764"]
@@ -3142,8 +3142,8 @@
 				item: "gtceu:pure_netherite_dust"
 				type: "item"
 			}]
-			x: -8.5d
-			y: 9.0d
+			x: -2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["15F316991165C760"]
@@ -3153,8 +3153,8 @@
 				item: "gtceu:netherite_hexammine_sulfate_dust"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 7.5d
+			x: 0.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["0FC2F1EE502BDDBF"]
@@ -3164,8 +3164,8 @@
 				item: "gtceu:voidic_nitride_bucket"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 7.5d
+			x: 1.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["15F316991165C760"]
@@ -3175,8 +3175,8 @@
 				item: "gtceu:netherite_tetrahydroxide_dust"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 10.5d
+			x: 0.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["3C8D1539C267CCBC"]
@@ -3186,8 +3186,8 @@
 				item: "gtceu:astral_fluorosilicate_bucket"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 10.5d
+			x: 1.5d
+			y: 9.5d
 		}
 		{
 			dependencies: [
@@ -3200,8 +3200,8 @@
 				item: "gtceu:primordial_nitrosilicate_bucket"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 9.0d
+			x: 1.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -3222,8 +3222,8 @@
 				item: "gtceu:runic_convergence_infusion_bucket"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 9.0d
+			x: 3.0d
+			y: 8.0d
 		}
 		{
 			id: "4DDA332F7E9B545E"
@@ -3232,8 +3232,8 @@
 				item: "gtceu:magnesium_nitride_bucket"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 7.5d
+			x: 5.0d
+			y: 8.0d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"

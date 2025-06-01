@@ -1521,7 +1521,7 @@
 			tasks: [
 				{
 					consume_items: true
-					count: 128L
+					count: 64L
 					id: "64DCEB931D509752"
 					item: "kubejs:coin"
 					type: "item"
