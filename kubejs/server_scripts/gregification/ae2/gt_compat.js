@@ -14,6 +14,26 @@ ServerEvents.recipes(event => {
         .duration(88)
         .EUt(2);
 
+    event.recipes.gtceu.macerator(id('sky_dust'))
+        .itemInputs('ae2:sky_stone_block')
+        .itemOutputs('ae2:sky_dust')
+        .duration(88)
+        .EUt(2);
+
+    event.recipes.gtceu.chemical_bath(id('fluix_steel_cool_down'))
+        .itemInputs('gtceu:hot_fluix_steel_ingot')
+        .inputFluids('minecraft:water 100')
+        .itemOutputs('gtceu:fluix_steel_ingot')
+        .duration(400)
+        .EUt(120);
+
+    event.recipes.gtceu.chemical_bath(id('fluix_steel_cool_down_distilled_water'))
+        .itemInputs('gtceu:hot_fluix_steel_ingot')
+        .inputFluids('gtceu:distilled_water 100')
+        .itemOutputs('gtceu:fluix_steel_ingot')
+        .duration(250)
+        .EUt(120);
+
     [
         {filter: '#forge:dusts/certus_quartz', replacement: 'gtceu:certus_quartz_dust'},
         {filter: '#forge:gems/certus_quartz', replacement: 'ae2:certus_quartz_crystal'}

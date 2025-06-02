@@ -183,6 +183,10 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.Netherite.setMaterialIconSet(DULL);
     GTMaterials.Netherite.addFlags(rod);
 
+    GTMaterials.get('netherite').setFormula('Nr');
+    GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
+    GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
+
 });
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -385,7 +389,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     }
 
 
-    elemIngot('magnetic_zapolgium', GTElements.get('zapolgium'), 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
+    elemIngot('magnetic_zapolgium', 'zapolgium', 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
     elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3750], []);
 
@@ -627,7 +631,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         //Extended Debris
         compDustLiquid('ancient_debris', ['1x mystery'], 0x603d1a, [no_decomp]);
 
-        compIngot('ancient_netherite', ['4x gold','4x mystery'], 0x46271b, [], [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp]);
+        elemIngot('ancient_netherite', 'ancient_netherite', 0x46271b, DULL, [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp]);
 
         //Atomic Nether Dust Line
         compDustIcon('atomic_nether_sludge', ['1x mystery','1x mystery','1x mystery','1x mystery'], 0x883039, RADIOACTIVE, [no_decomp]);

@@ -99,8 +99,8 @@ ServerEvents.recipes(event => {
     });
 
     event.recipes.gtceu.forming_press(id('silicon_press'))
-        .itemInputs('gtceu:double_sky_steel_plate', 'gtceu:silicon_press_dust')
-        .itemOutputs('ae2:silicon_press_processor_press')
+        .itemInputs('gtceu:double_sky_steel_plate', 'gtceu:silicon_dust')
+        .itemOutputs('ae2:silicon_press')
         .duration(600)
         .EUt(65);
 

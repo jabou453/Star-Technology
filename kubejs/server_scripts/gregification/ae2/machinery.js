@@ -348,10 +348,10 @@ ServerEvents.recipes(event => {
         .duration(50)
         .EUt(16);
 
-    event.recipes.gtceu.assembler(id('precise_me_assembler'))
+    event.recipes.gtceu.assembler(id('large_me_assembler'))
         .itemInputs('kubejs:fluix_steel_casing', '2x gtceu:iv_robot_arm', 'gtceu:iv_emitter', '2x #gtceu:circuits/iv',
             '16x gtceu:fine_vanadium_gallium_wire', '8x gtceu:uranium_triplatinum_single_wire')
-        .itemOutputs('gtceu:precise_me_assembler')
+        .itemOutputs('gtceu:large_me_assembler')
         .duration(600)
         .EUt(8192);
 
