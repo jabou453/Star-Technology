@@ -178,11 +178,18 @@ ServerEvents.recipes(event => {
     );
 
     event.recipes.gtceu.bender(id('nether_star_foil'))
-            .itemInputs('gtceu:nether_star_plate')
-            .itemOutputs('4x gtceu:nether_star_foil')
-            .duration(300)
-            .circuit(1)
-            .EUt(GTValues.VA[GTValues.IV]);
+        .itemInputs('gtceu:nether_star_plate')
+        .itemOutputs('4x gtceu:nether_star_foil')
+        .duration(300)
+        .circuit(1)
+        .EUt(GTValues.VA[GTValues.IV]);
+
+    event.recipes.gtceu.bender(id('echo_shard_foil'))
+        .itemInputs('gtceu:echo_shard_plate')
+        .itemOutputs('4x gtceu:echo_shard_foil')
+        .duration(160)
+        .circuit(1)
+        .EUt(GTValues.VA[GTValues.LuV]);
 
     //Classic Gate Components
     event.recipes.gtceu.assembly_line(id('classic_stargate_computer_core'))
@@ -257,11 +264,7 @@ ServerEvents.recipes(event => {
         .duration(12000)
         .EUt(GTValues.VHA[GTValues.UV]);
 
-    event.recipes.gtceu.large_rotor_machine(id('crude_stargate_rod'))
-        .itemInputs('32x gtceu:neutronium_foil', '48x gtceu:weapon_grade_naquadah_foil', '32x gtceu:neutronium_foil', '48x gtceu:weapon_grade_naquadah_foil', '16x gtceu:nether_star_foil', '48x gtceu:weapon_grade_naquadah_foil', 'gtceu:long_void_rod', '48x gtceu:weapon_grade_naquadah_foil', '32x gtceu:neutronium_foil')
-        .itemOutputs('kubejs:crude_stargate_rod')
-        .duration(1600)
-        .EUt(GTValues.VHA[GTValues.LuV]);
+    
     
     event.recipes.gtceu.super_pressure_heat_chamber(id('stargate_rod'))
         .itemInputs('kubejs:crude_stargate_rod')
@@ -282,21 +285,23 @@ ServerEvents.recipes(event => {
         )
         .EUt(GTValues.VHA[GTValues.UHV]);
 
+    //Crude Gate Rods
+    const CrudeRod = (type, core, coreFoil, MainOutline, SpecialOutline, Fluid, eu) => {
+    event.recipes.gtceu.large_rotor_machine(id(`${type}_stargate_rod`))
+        .itemInputs('gtceu:long_void_rod', SpecialOutline, MainOutline, MainOutline, core, SpecialOutline, SpecialOutline, coreFoil, MainOutline, MainOutline, coreFoil, SpecialOutline, SpecialOutline, coreFoil, MainOutline, MainOutline, SpecialOutline)
+        .inputFluids('gtceu:lubricant 50000', Fluid)
+        .itemOutputs(`kubejs:${type}_stargate_rod`)
+        .duration(1600)
+        .EUt(eu);
+    };
+    CrudeRod('crude', 'gtceu:gravi_star', '8x gtceu:nether_star_foil', '16x gtceu:neutronium_foil', '24x gtceu:weapon_grade_naquadah_foil', 'gtceu:nether_star_concentrate 1440', GTValues.VHA[GTValues.LuV]);
+    CrudeRod('untreated_infernal', 'kubejs:inferno_fragment', '12x gtceu:netherite_foil', '16x gtceu:void_foil', '12x kubejs:stargate_rod', 'gtceu:blaze 14400', GTValues.VHA[GTValues.UV]);
+    CrudeRod('untreated_abyssal', 'kubejs:abyss_fragment', '12x gtceu:echo_shard_foil', '16x gtceu:void_foil', '12x kubejs:stargate_rod', 'thermal:ender 14400', GTValues.VHA[GTValues.UV]);  
+
     //Ancient Gate
         
         //Gate Rods
-        event.recipes.gtceu.large_rotor_machine(id('untreated_infernal_stargate_rod'))
-            .itemInputs('32x gtceu:void_foil', '16x kubejs:stargate_rod', '32x gtceu:void_foil', '16x kubejs:stargate_rod', 'kubejs:inferno_fragment', '16x kubejs:stargate_rod', 'gtceu:long_void_rod', '16x kubejs:stargate_rod', '32x gtceu:void_foil')
-            .itemOutputs('kubejs:untreated_infernal_stargate_rod')
-            .duration(1600)
-            .EUt(GTValues.VHA[GTValues.UV]);
-
-        event.recipes.gtceu.large_rotor_machine(id('untreated_abyssal_stargate_rod'))
-            .itemInputs('32x gtceu:void_foil', '16x kubejs:stargate_rod', '32x gtceu:void_foil', '16x kubejs:stargate_rod', 'kubejs:abyss_fragment', '16x kubejs:stargate_rod', 'gtceu:long_void_rod', '16x kubejs:stargate_rod', '32x gtceu:void_foil')
-            .itemOutputs('kubejs:untreated_abyssal_stargate_rod')
-            .duration(1600)
-            .EUt(GTValues.VHA[GTValues.UV]);
-
+        
         event.recipes.gtceu.super_pressure_heat_chamber(id('infernal_stargate_rod'))
             .itemInputs('64x minecraft:blaze_rod','kubejs:untreated_infernal_stargate_rod','64x minecraft:blaze_rod')
             .inputFluids('gtceu:blaze 64000')
@@ -403,9 +408,9 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VH[GTValues.UEV]);
 
         event.recipes.gtceu.assembly_line(id('inferno_fragment'))
-            .itemInputs('16x gtceu:quantum_star', '16x minecraft:blaze_rod','16x gtceu:quantum_star', '16x minecraft:blaze_rod','16x gtceu:quantum_star', '16x minecraft:blaze_rod','16x gtceu:quantum_star', '16x minecraft:blaze_rod',
-                '16x gtceu:quantum_star', '16x minecraft:blaze_rod','16x gtceu:quantum_star', '16x minecraft:blaze_rod','16x gtceu:quantum_star', '16x minecraft:blaze_rod','16x gtceu:quantum_star', '16x minecraft:blaze_rod')
-            .inputFluids('gtceu:neutronium 24000','gtceu:utopian_akreyrium 18000','gtceu:blaze 6000')
+            .itemInputs('12x gtceu:gravi_star', '16x minecraft:blaze_rod','12x gtceu:gravi_star', '16x minecraft:blaze_rod','12x gtceu:gravi_star', '16x minecraft:blaze_rod','12x gtceu:gravi_star', '16x minecraft:blaze_rod',
+                '12x gtceu:gravi_star', '16x minecraft:blaze_rod','12x gtceu:gravi_star', '16x minecraft:blaze_rod','12x gtceu:gravi_star', '16x minecraft:blaze_rod','12x gtceu:gravi_star', '16x minecraft:blaze_rod')
+            .inputFluids('gtceu:neutronium 20000','gtceu:utopian_akreyrium 16000','minecraft:lava 8000')
             .itemOutputs('kubejs:inferno_fragment')
             .duration(4800)
             .stationResearch(
@@ -417,9 +422,9 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UEV]);
 
         event.recipes.gtceu.assembly_line(id('abyss_fragment'))
-            .itemInputs('16x gtceu:quantum_star', '16x minecraft:echo_shard','16x gtceu:quantum_star', '16x minecraft:echo_shard','16x gtceu:quantum_star', '16x minecraft:echo_shard','16x gtceu:quantum_star', '16x minecraft:echo_shard',
-                '16x gtceu:quantum_star', '16x minecraft:echo_shard','16x gtceu:quantum_star', '16x minecraft:echo_shard','16x gtceu:quantum_star', '16x minecraft:echo_shard','16x gtceu:quantum_star', '16x minecraft:echo_shard')
-            .inputFluids('gtceu:neutronium 24000','gtceu:utopian_akreyrium 18000','gtceu:echo_r 6000')
+            .itemInputs('12x gtceu:gravi_star', '16x minecraft:echo_shard','12x gtceu:gravi_star', '16x minecraft:echo_shard','12x gtceu:gravi_star', '16x minecraft:echo_shard','12x gtceu:gravi_star', '16x minecraft:echo_shard',
+                '12x gtceu:gravi_star', '16x minecraft:echo_shard','12x gtceu:gravi_star', '16x minecraft:echo_shard','12x gtceu:gravi_star', '16x minecraft:echo_shard','12x gtceu:gravi_star', '16x minecraft:echo_shard')
+            .inputFluids('gtceu:neutronium 20000','gtceu:utopian_akreyrium 16000','gtceu:echo_r 8000')
             .itemOutputs('kubejs:abyss_fragment')
             .duration(4800)
             .stationResearch(

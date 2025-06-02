@@ -8,14 +8,14 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setSound(GTSoundEntries.ARC);
 
     event.create('quantum_compressor_extraction')
-        .category('large_quantum_compressor')
+        .category('gate_construction')
         .setEUIO('in')
         .setMaxIOSize(1, 0, 0, 2)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC);
 
     event.create('quantum_compressor_infusion')
-        .category('large_quantum_compressor')
+        .category('gate_construction')
         .setEUIO('in')
         .setMaxIOSize(2, 1, 3, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR , FillDirection.LEFT_TO_RIGHT)

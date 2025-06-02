@@ -181,7 +181,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.Netherite.setMaterialARGB(0x1a0d00);
     GTMaterials.Netherite.setComponents('4x debris', '4x gold');
     GTMaterials.Netherite.setMaterialIconSet(DULL);
-    GTMaterials.Netherite.addFlags(rod);
+    GTMaterials.Netherite.addFlags(rod, foil);
     GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
     GTMaterials.get('netherite_hexammine_sulfate').setFormula('[*Nr*(NH3)6]SO4');
     
@@ -237,7 +237,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('sterling_silver', [rod, frame]);
     matmod('nether_star', foil);
     matmod('netherite', no_decomp);
-    matmod('echo_shard', lens);
+    matmod('echo_shard', [lens, foil]);
     matmod('copper', gear);
     matmod('ruthenium_trinium_americium_neutronate', fine_wire);
 
