@@ -3,7 +3,7 @@
 	default_quest_shape: "square"
 	filename: "power"
 	group: "28726466D987C725"
-	icon: "kubejs:mv_upgrade_kit"
+	icon: "kubejs:mv_upgraade_kit"
 	id: "10A89CD14C4DAF63"
 	order_index: 0
 	quest_links: [{
@@ -108,18 +108,6 @@
 		}
 		{
 			dependencies: ["28FB566FC1E35413"]
-			id: "7242D13C6F27BECB"
-			shape: "square"
-			tasks: [{
-				id: "5068F763D25AC096"
-				item: "thermal:refined_fuel_bucket"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 3.5d
-		}
-		{
-			dependencies: ["7242D13C6F27BECB"]
 			id: "0C81D0F1D42C092B"
 			shape: "square"
 			tasks: [{
@@ -127,7 +115,7 @@
 				item: "gtceu:diesel_bucket"
 				type: "item"
 			}]
-			x: -10.0d
+			x: -9.0d
 			y: 3.5d
 		}
 		{
@@ -140,7 +128,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 4.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7E508B071C59EB73"]
@@ -152,7 +140,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 5.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["285392E7B24481C3"]
@@ -164,7 +152,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 6.5d
+			y: 5.5d
 		}
 		{
 			dependencies: [
@@ -464,14 +452,13 @@
 			id: "08F1DEFEB060C74C"
 			shape: "square"
 			tasks: [{
-				id: "47B43BAD0AA3B791"
+				id: "2EDDF4BFBC3DA665"
 				item: {
 					Count: 1
-					id: "kubejs:lv_arc_kit"
+					id: "kubejs:lv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.95f
-							DynamoPower: 0.5f
+							DynamoEnergy: 1.1f
 							Type: "Dynamo"
 						}
 					}
@@ -489,14 +476,13 @@
 			id: "238AD90B9828A7B0"
 			shape: "square"
 			tasks: [{
-				id: "1784B159D603DC45"
+				id: "730671D296A9FDA4"
 				item: {
 					Count: 1
-					id: "kubejs:mv_arc_kit"
+					id: "kubejs:mv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.9f
-							DynamoPower: 0.75f
+							DynamoEnergy: 1.32f
 							Type: "Dynamo"
 						}
 					}
@@ -514,14 +500,13 @@
 			id: "612BB2D1A5C10C7B"
 			shape: "square"
 			tasks: [{
-				id: "2B79348BC44F6C9C"
+				id: "2BC9405104D50BCC"
 				item: {
 					Count: 1
-					id: "kubejs:hv_arc_kit"
+					id: "kubejs:hv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.8f
-							DynamoPower: 1.0f
+							DynamoEnergy: 1.58f
 							Type: "Dynamo"
 						}
 					}
@@ -539,14 +524,13 @@
 			id: "7F229469E1A4C2EF"
 			shape: "square"
 			tasks: [{
-				id: "6B0FEFA3DD061DBB"
+				id: "3384B6C45D3ECCBF"
 				item: {
 					Count: 1
-					id: "kubejs:ev_arc_kit"
+					id: "kubejs:ev_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.75f
-							DynamoPower: 2.0f
+							DynamoEnergy: 1.9f
 							Type: "Dynamo"
 						}
 					}
@@ -564,13 +548,14 @@
 			id: "7B16D5BEC4CDB611"
 			shape: "square"
 			tasks: [{
-				id: "1693CBDB66379472"
+				id: "26DC377D99850D15"
 				item: {
 					Count: 1
-					id: "kubejs:lv_mci_kit"
+					id: "kubejs:lv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.1f
+							DynamoEnergy: 0.67f
+							DynamoPower: 0.5f
 							Type: "Dynamo"
 						}
 					}
@@ -588,13 +573,14 @@
 			id: "1B43A54DA21C5F87"
 			shape: "square"
 			tasks: [{
-				id: "2DDD24ABA6AD377A"
+				id: "42E9EE4954EA6DE4"
 				item: {
 					Count: 1
-					id: "kubejs:mv_mci_kit"
+					id: "kubejs:mv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.25f
+							DynamoEnergy: 0.5f
+							DynamoPower: 1.0f
 							Type: "Dynamo"
 						}
 					}
@@ -612,13 +598,14 @@
 			id: "206E8AD2E23335B9"
 			shape: "square"
 			tasks: [{
-				id: "1465BABECD269969"
+				id: "77B89D61B3CCF7CD"
 				item: {
 					Count: 1
-					id: "kubejs:hv_mci_kit"
+					id: "kubejs:hv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.5f
+							DynamoEnergy: 0.33f
+							DynamoPower: 2.0f
 							Type: "Dynamo"
 						}
 					}
@@ -636,13 +623,14 @@
 			id: "0C6AB44DAB2C8C91"
 			shape: "square"
 			tasks: [{
-				id: "0DA081A760A80400"
+				id: "5D08C2E00A2D8FCC"
 				item: {
 					Count: 1
-					id: "kubejs:ev_mci_kit"
+					id: "kubejs:ev_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 2.0f
+							DynamoEnergy: 0.25f
+							DynamoPower: 3.0f
 							Type: "Dynamo"
 						}
 					}
@@ -1625,13 +1613,13 @@
 			]
 			id: "3A485956C34C8840"
 			tasks: [{
-				id: "23098FEE229E0194"
+				id: "43336F4858ECFE9C"
 				item: {
 					Count: 1
-					id: "kubejs:mv_upgrade_kit"
+					id: "kubejs:mv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 16.0f
+							BaseMod: 12.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1649,13 +1637,13 @@
 			]
 			id: "50DED4576C89E893"
 			tasks: [{
-				id: "0B56EB7746082D00"
+				id: "0FFFC4310BE7E52C"
 				item: {
 					Count: 1
-					id: "kubejs:lv_upgrade_kit"
+					id: "kubejs:lv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 4.0f
+							BaseMod: 6.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1673,13 +1661,13 @@
 			]
 			id: "3FE17E376E30FFE4"
 			tasks: [{
-				id: "5F12A9B7928071B1"
+				id: "41E49D5E9F070FF8"
 				item: {
 					Count: 1
-					id: "kubejs:hv_upgrade_kit"
+					id: "kubejs:hv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 64.0f
+							BaseMod: 24.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1697,13 +1685,13 @@
 			]
 			id: "40F4E7B58257EF09"
 			tasks: [{
-				id: "702CE165410C9FCC"
+				id: "5E662ABFA472940F"
 				item: {
 					Count: 1
-					id: "kubejs:ev_upgrade_kit"
+					id: "kubejs:ev_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 256.0f
+							BaseMod: 48.0f
 							Type: "Upgrade"
 						}
 					}
@@ -2223,17 +2211,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["53770EB175F44961"]
-			id: "3BD8E184D172519C"
-			tasks: [{
-				id: "686A5DFDFB3E8114"
-				item: "systeams:steamiestest_ball"
-				type: "item"
-			}]
-			x: -10.5d
-			y: 1.0d
-		}
-		{
 			hide_dependent_lines: true
 			icon: {
 				Count: 1
@@ -2276,6 +2253,70 @@
 			}]
 			x: -8.5d
 			y: 6.0d
+		}
+		{
+			dependencies: [
+				"2FCCE10E5C3E858D"
+				"21B905AA3AE6059F"
+			]
+			id: "64162DB23206AD7A"
+			tasks: [{
+				id: "56273B4421B2772D"
+				item: "start_core:dream_link_node"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"09FB26E3AADE4FAD"
+				"6FB365E6C91B482E"
+			]
+			id: "60523CDE5E5695DB"
+			tasks: [{
+				id: "1B37F38662D1FC93"
+				item: "start_core:daydream_spire"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"64162DB23206AD7A"
+				"3F34F4AC99C45E6F"
+			]
+			id: "09FB26E3AADE4FAD"
+			tasks: [{
+				id: "26068CED640F31E9"
+				item: "start_core:oneiric_relay"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["60523CDE5E5695DB"]
+			id: "6AE6DD48D6ED455D"
+			tasks: [{
+				id: "6FC1B8EF87485258"
+				item: "start_core:beacon_of_lucidity"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6AE6DD48D6ED455D"]
+			id: "23BDEA7B6A537297"
+			tasks: [{
+				id: "505882F029B90FAC"
+				item: "start_core:paragon_of_the_veil"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.5d
 		}
 	]
 	title: "Power"
