@@ -2150,6 +2150,7 @@
 				""
 				"{image:komarumod:textures/painting/komaru_god.png width:100 height:100 align:center}"
 			]
+			hide_dependent_lines: true
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -2258,6 +2259,8 @@
 			dependencies: [
 				"2FCCE10E5C3E858D"
 				"21B905AA3AE6059F"
+				"5BA69EDC3C223B2C"
+				"4F3EE28B3F38FC85"
 			]
 			id: "64162DB23206AD7A"
 			tasks: [{
@@ -2272,6 +2275,8 @@
 			dependencies: [
 				"09FB26E3AADE4FAD"
 				"6FB365E6C91B482E"
+				"694E1F6458D5F72F"
+				"24E2CB89693EDEA3"
 			]
 			id: "60523CDE5E5695DB"
 			tasks: [{
@@ -2286,6 +2291,8 @@
 			dependencies: [
 				"64162DB23206AD7A"
 				"3F34F4AC99C45E6F"
+				"7AC55BA8BDD0F3D2"
+				"5944C4DE27F98FF3"
 			]
 			id: "09FB26E3AADE4FAD"
 			tasks: [{
@@ -2297,7 +2304,10 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["60523CDE5E5695DB"]
+			dependencies: [
+				"60523CDE5E5695DB"
+				"611614FF7006D32B"
+			]
 			id: "6AE6DD48D6ED455D"
 			tasks: [{
 				id: "6FC1B8EF87485258"
@@ -2308,7 +2318,10 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["6AE6DD48D6ED455D"]
+			dependencies: [
+				"6AE6DD48D6ED455D"
+				"611614FF7006D32B"
+			]
 			id: "23BDEA7B6A537297"
 			tasks: [{
 				id: "505882F029B90FAC"
