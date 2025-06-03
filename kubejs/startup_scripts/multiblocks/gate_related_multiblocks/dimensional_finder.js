@@ -5,14 +5,15 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setEUIO('in')
         .setMaxIOSize(3, 1, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR , FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.COMPUTATION);
+        .setSound(GTSoundEntries.COMPUTATION)
+        .setMaxTooltips(4);
 
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('dimensional_finder', 'multiblock')
-        .rotationState(RotationState.NON_Y_AXIS) //Need to add a cant be rotated at all later on
+        .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('dimensional_finder')
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
@@ -33,6 +34,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(1).setPreviewCount(0))
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(3).setPreviewCount(0))
                 .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(0))
+                .or(Predicates.abilities(PartAbility.COMPUTATION_DATA_RECEPTION).setMaxGlobalLimited(1).setPreviewCount(0))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .where('T', Predicates.blocks('gtceu:trinaquadalloy_frame'))
             .where('S', Predicates.blocks('gtceu:sturdy_machine_casing'))
