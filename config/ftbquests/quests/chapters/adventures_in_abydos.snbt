@@ -1531,7 +1531,7 @@
 				}
 			]
 			title: "Runic Engraved Casings"
-			x: 7.5d
+			x: 5.5d
 			y: -5.0d
 		}
 		{
@@ -1596,7 +1596,8 @@
 		{
 			dependencies: [
 				"6D169C5E35C9EF6C"
-				"1102670352911334"
+				"4D5EEE7D7EC1FAFA"
+				"6D573ACD05D0EF96"
 			]
 			description: ["Even more runes."]
 			id: "3C3E585C933C9515"
@@ -1844,7 +1845,10 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["2C354B0735DF8023"]
+			dependencies: [
+				"2C354B0735DF8023"
+				"5FCA8ED151CEB5C1"
+			]
 			hide_dependent_lines: true
 			id: "59B0F5DB2C1E96DC"
 			tasks: [{
@@ -1852,8 +1856,8 @@
 				title: "Rune Infused Armor"
 				type: "checkmark"
 			}]
-			x: 5.5d
-			y: -5.0d
+			x: 6.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -2038,6 +2042,36 @@
 			}]
 			x: 3.5d
 			y: 5.0d
+		}
+		{
+			dependencies: ["630F50E03EC3D144"]
+			description: ["Gravi-Stars &o&lCollapsed&r with even greater intensity."]
+			id: "4D5EEE7D7EC1FAFA"
+			rewards: [{
+				id: "370282BF6FAD644A"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "581A32B15ECB77AE"
+					item: "kubejs:singularity_hyperion"
+					type: "item"
+				}
+				{
+					id: "6F7BCBBC1EDBD225"
+					item: "kubejs:singularity_spectral"
+					type: "item"
+				}
+				{
+					id: "17C1596CF139EAD6"
+					item: "kubejs:singularity_astral"
+					type: "item"
+				}
+			]
+			title: "Advanced Singularities"
+			x: 8.5d
+			y: -4.0d
 		}
 	]
 	title: "Adventures in Abydos"
