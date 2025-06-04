@@ -436,8 +436,8 @@
     "gtceu.large_rock_crusher": "Large Rock Crusher",
     "block.gtceu.large_rock_crusher": "Large Rock Crusher Controller",
     
-    "block.gtceu.solid_blast_furnace": "Bessemer Blast Furnace Controller",
-    "gtceu.bessemer_blast_furnace": "Bessemer Blast Furnace",
+    "block.gtceu.solid_blast_furnace": "Solid Blast Furnace Controller",
+    "gtceu.solid_blast_furnace": "Solid Blast Furnace",
 
     "gtceu.jei.ore_vein.zapolite_vein": "Abydos Zapolite Vein",
     "material.gtceu.gritty_akreyrium": "Gritty Akreyrium",
