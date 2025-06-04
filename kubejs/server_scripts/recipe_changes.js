@@ -775,6 +775,23 @@ ServerEvents.recipes(event => {
     }
     nuggetFixMod('create');nuggetFixMod('thermal');nuggetFixMod('exnihilosequentia');
 
+    // Effortless Building Upgrade Accessibility
+    const reachUpgrade = (type,mat,dye,core) => {
+    event.remove({output: `effortlessbuilding:reach_upgrade${type}`});
+    event.shaped(Item.of(`effortlessbuilding:reach_upgrade${type}`), [
+        ' D ',
+        'MCM',
+        ' D '
+    ], {
+        D: `${dye}`,
+        M: `${mat}`,
+        C: `${core}`
+    }).id(`start:shaped/reach_upgrade${type}`);
+    }
+    reachUpgrade('1','minecraft:slime_ball','minecraft:lime_dye',`minecraft:ender_pearl`);
+    reachUpgrade('2','minecraft:glowstone_dust','minecraft:orange_dye',`effortlessbuilding:reach_upgrade1`);
+    reachUpgrade('3','minecraft:amethyst_shard','minecraft:purple_dye',`effortlessbuilding:reach_upgrade2`);
+
 });
 
 if (global.packmode == 'default'){ //To easy in HM (has its own thing) and for Abydos makes player switch it upa bit

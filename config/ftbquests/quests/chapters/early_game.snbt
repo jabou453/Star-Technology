@@ -2472,6 +2472,44 @@
 			x: 0.25d
 			y: -2.25d
 		}
+		{
+			dependencies: ["6D5287A0FB892DFF"]
+			description: [
+				"Ever feel like you should be able to build more with effortless building, well consume these to increase your reach."
+				""
+				"&4Warning&r: Upgrade can be lost on death or relog in some instances so having some in a chest isn't a horrible idea."
+			]
+			id: "4E4CDE5CDFA24839"
+			tasks: [{
+				id: "6E6BE35F63091CD7"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						display: {
+							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"Reach Upgrades\"}"
+						}
+						items: [
+							{
+								Count: 1b
+								id: "effortlessbuilding:reach_upgrade1"
+							}
+							{
+								Count: 1b
+								id: "effortlessbuilding:reach_upgrade2"
+							}
+							{
+								Count: 1b
+								id: "effortlessbuilding:reach_upgrade3"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.25d
+		}
 	]
 	title: "Early Game"
 }
