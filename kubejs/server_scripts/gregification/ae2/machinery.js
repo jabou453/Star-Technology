@@ -361,7 +361,7 @@ ServerEvents.recipes(event => {
 
     assemblerfluid_rem('mega_crafting_unit','megacells:mega_crafting_unit',['gtceu:netherite_certus_quartz_skystone_alloy_frame', '8x ae2:crafting_unit','#gtceu:circuits/iv'],'fluix_steel 576',8192);
 
-    assemblerfluid_rem('ex_pattern_access_part','expatternprovider:ex_pattern_access_part',['ae2:pattern_access_terminal','4x gtceu:double_certus_quartz_skystone_alloy_plate','4x ae2:engineering_processor','#gtceu:circuits/ev'],'fluix_steel 567', 2048);
+    assemblerfluid_rem('ex_pattern_access_part','expatternprovider:ex_pattern_access_part',['ae2:pattern_access_terminal','4x gtceu:certus_quartz_skystone_alloy_plate','4x ae2:engineering_processor','#gtceu:circuits/hv'],'fluix_steel 576', 128);
     
     assemblerfluid('oversize_interface','expatternprovider:oversize_interface',['expatternprovider:ex_interface','4x ae2:capacity_card','4x gtceu:gold_skystone_alloy_plate'],'sky_steel 576',2048);
 

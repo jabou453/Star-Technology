@@ -709,6 +709,7 @@
 			y: -3.0d
 		}
 		{
+			dependencies: ["50EA5165AF923EB4"]
 			id: "689579627AADC578"
 			shape: "circle"
 			tasks: [{
@@ -1121,7 +1122,7 @@
 				item: "megacells:mega_interface"
 				type: "item"
 			}]
-			x: -11.0d
+			x: -9.0d
 			y: -1.0d
 		}
 		{
@@ -1132,8 +1133,8 @@
 				item: "megacells:mega_pattern_provider"
 				type: "item"
 			}]
-			x: -7.0d
-			y: -1.0d
+			x: -11.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1146,7 +1147,7 @@
 				item: "expatternprovider:ex_interface"
 				type: "item"
 			}]
-			x: -9.0d
+			x: -7.0d
 			y: 1.0d
 		}
 		{
@@ -1160,7 +1161,7 @@
 				item: "expatternprovider:ex_pattern_provider"
 				type: "item"
 			}]
-			x: -7.0d
+			x: -9.0d
 			y: 1.0d
 		}
 		{
@@ -1171,8 +1172,8 @@
 				item: "expatternprovider:oversize_interface"
 				type: "item"
 			}]
-			x: -11.0d
-			y: 1.0d
+			x: -7.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["45EA9095FAF7DDD6"]
@@ -1212,7 +1213,7 @@
 				item: "expatternprovider:ex_molecular_assembler"
 				type: "item"
 			}]
-			x: -5.0d
+			x: -9.0d
 			y: 3.0d
 		}
 		{
@@ -1224,7 +1225,7 @@
 				item: "expatternprovider:ex_pattern_access_part"
 				type: "item"
 			}]
-			x: -9.0d
+			x: -5.0d
 			y: 3.0d
 		}
 		{
@@ -1370,7 +1371,7 @@
 				title: "Mega Machines"
 				type: "checkmark"
 			}]
-			x: -9.0d
+			x: -11.0d
 			y: -1.0d
 		}
 		{
@@ -1383,6 +1384,48 @@
 			}]
 			x: 0.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"14C0B19E6CFFD112"
+				"6D441C650137BD6D"
+			]
+			id: "41C6F59DB92F79A7"
+			tasks: [
+				{
+					id: "1FD3B7BF3F89717B"
+					item: "expatternprovider:assembler_matrix_frame"
+					type: "item"
+				}
+				{
+					id: "685BA4EB9F697B9F"
+					item: "expatternprovider:assembler_matrix_wall"
+					type: "item"
+				}
+				{
+					id: "726A4A2CCE884F93"
+					item: "expatternprovider:assembler_matrix_pattern"
+					type: "item"
+				}
+				{
+					id: "0864D2C12378B7DA"
+					item: "expatternprovider:assembler_matrix_crafter"
+					type: "item"
+				}
+				{
+					id: "1EB84282EFCA0FCB"
+					item: "expatternprovider:assembler_matrix_speed"
+					type: "item"
+				}
+				{
+					id: "2F265B1AD4C7DBD7"
+					item: "expatternprovider:assembler_matrix_glass"
+					type: "item"
+				}
+			]
+			title: "Assembler Matrix"
+			x: -11.0d
+			y: 3.0d
 		}
 	]
 	title: "Applied Energistics"

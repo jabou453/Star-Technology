@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
     ['gold', 'certus_quartz'].forEach(mat => {
         event.recipes.gtceu.mixer(id(`netherite_${mat}_skystone_alloy`))
             .itemInputs('4x gtceu:netherite_dust', '2x gtceu:diamond_skystone_alloy_dust', `gtceu:${mat}_skystone_alloy_dust`)
-            .itemOutputs(`3x gtceu:netherite_${mat}_skystone_alloy_dust`)
+            .itemOutputs(`7x gtceu:netherite_${mat}_skystone_alloy_dust`)
             .duration(160)
             .EUt(2048);
     });
@@ -47,6 +47,29 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:skystone 144')
         .duration(200)
         .EUt(128);
+
+    event.recipes.gtceu.rock_breaker(id(`sky_stone`))
+        .notConsumable(`ae2:sky_dust`)
+        .itemOutputs(`ae2:sky_stone_block`)
+        .duration(48)
+        .EUt(84)
+        .addDataString('fluidA', 'minecraft:lava')
+        .addDataString('fluidB', 'thermal:ender');
+    
+    event.recipes.gtceu.large_rock_crusher(id(`sky_stone_block`))
+        .notConsumable(`ae2:sky_dust`)
+        .notConsumableFluid('thermal:ender 1000')
+        .notConsumableFluid('minecraft:lava 1000')
+        .itemOutputs(`ae2:sky_stone_block`)
+        .duration(48)
+        .EUt(84);
+
+    event.recipes.gtceu.mixer(id('sky_dust'))
+        .itemInputs('6x gtceu:stone_dust', '4x gtceu:ender_pearl_dust', '1x minecraft:redstone', '1x minecraft:glowstone_dust')
+        .itemOutputs('3x ae2:sky_dust') //keep at low output
+        .circuit(4)
+        .duration(360)
+        .EUt(112);
 
     [
         {chip: 'silicon', voltage: 'mv', n: 1, dura: 200},
