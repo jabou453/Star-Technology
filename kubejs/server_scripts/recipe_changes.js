@@ -288,6 +288,7 @@ ServerEvents.recipes(event => {
     casingDouble('atomic','trinaquadalloy','gtceu');
     casingDouble('noble_mixing','astrenalloy_nx','kubejs');
     casingDouble('quake_proof','thacoloy_nq_42x','kubejs');
+    casingDouble('superalloy','lepton_coalescing_superalloy','kubejs');
 
     event.recipes.gtceu.assembler(id('silicone_rubber_casing'))
         .itemInputs('gtceu:solid_machine_casing') 

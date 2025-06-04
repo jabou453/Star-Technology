@@ -20,8 +20,6 @@ ServerEvents.recipes(event => {
     wirelessControllers('oneiric_relay', ['gtceu:uev_machine_hull', '32x gtceu:uev_emitter', '10x #gtceu:circuits/uiv', '12x gtceu:uev_sensor', '64x gtceu:normal_laser_pipe', '48x kubejs:uepic_chip', '64x gtceu:normal_laser_pipe', '48x kubejs:uepic_chip', '64x gtceu:normal_laser_pipe', '48x kubejs:uepic_chip', '64x gtceu:normal_laser_pipe', '48x kubejs:uepic_chip', '64x gtceu:mythrolic_alloy_foil', '8x gtceu:seaborgium_palladium_enriched_estalt_flerovium_alloy_hex_wire'], ['gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 25600', 'gtceu:indium_tin_lead_cadmium_soldering_alloy 14400', 'gtceu:isovol 12800'], 'start_core:dream_link_node', 192, GTValues.VHA[GTValues.UEV]);
     //wirelessControllers('daydream_spire', ['gtceu:uiv_machine_hull', '32x gtceu:uiv_emitter', '10x #gtceu:circuits/uxv', '12x gtceu:uiv_sensor', '64x gtceu:normal_laser_pipe', '48x kubejs:uipic_chip', '64x gtceu:normal_laser_pipe', '48x kubejs:uipic_chip', '64x gtceu:normal_laser_pipe', '48x kubejs:uipic_chip', '64x gtceu:normal_laser_pipe', '48x kubejs:uipic_chip', '64x gtceu:|tbh material|_foil', '8x gtceu:|tbh superconductor|_hex_wire'], ['gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 25600', 'gtceu:indium_tin_lead_cadmium_soldering_alloy 14400', 'gtceu:calamatium 12800'], 'start_core:oneiric_relay', 224, GTValues.VHA[GTValues.UIV]);
 
-
-
     // === Hatches & Covers ===
     
     const WirelessTiers = (tier, chip, cable, material, eu, cwu, scaler) => {
