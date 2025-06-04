@@ -1,10 +1,10 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
-    event.create('solid_blast_furnace')
-        .category('solid_blast_furnace')
-        .setMaxIOSize(3, 3, 0, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.FURNACE);
+    // event.create('solid_blast_furnace')
+    //     .category('solid_blast_furnace')
+    //     .setMaxIOSize(3, 3, 0, 0)
+    //     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
+    //     .setSound(GTSoundEntries.FURNACE);
 
     event.create('bessemer_blast_furnace')
         .category('bessemer_blast_furnace')
@@ -17,7 +17,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('solid_blast_furnace', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes(['bessemer_blast_furnace', 'solid_blast_furnace'])
+        .recipeType('bessemer_blast_furnace')
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('DDD', 'PPP', 'PPP', 'PPP')

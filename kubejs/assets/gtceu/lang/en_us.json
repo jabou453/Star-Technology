@@ -91,7 +91,7 @@
     
     "block.gtceu.large_stone_barrel.tooltip.0": "§7A larger stone barrel that can make all kinds of stones and lava.",
     
-    "block.gtceu.solid_blast_furnace.tooltip.0": "§7An upgraded primitive blast furnace, capable of making more alloys and better steel protection.",
+    "block.gtceu.solid_blast_furnace.tooltip.0": "§7An upgraded primitive blast furnace.",
 
     "block.gtceu.rock_filtrator.tooltip.0": "§7A multiblock that can sieve through gravel and sand more precisely than a basic sieve could ever achieve, uncovering the gems hidden inside.",
     "block.gtceu.rock_filtrator.tooltip.1": "Can only have §bone§r Energy Hatch",
@@ -436,10 +436,8 @@
     "gtceu.large_rock_crusher": "Large Rock Crusher",
     "block.gtceu.large_rock_crusher": "Large Rock Crusher Controller",
     
-    "block.gtceu.solid_blast_furnace": "Solid Blast Furnace Controller",
-    "gtceu.solid_blast_furnace": "Solid Blast Furnace",
+    "block.gtceu.solid_blast_furnace": "Bessemer Blast Furnace Controller",
     "gtceu.bessemer_blast_furnace": "Bessemer Blast Furnace",
-
 
     "gtceu.jei.ore_vein.zapolite_vein": "Abydos Zapolite Vein",
     "material.gtceu.gritty_akreyrium": "Gritty Akreyrium",

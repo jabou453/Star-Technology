@@ -1365,6 +1365,20 @@
 					item: "travelanchors:travel_anchor"
 					type: "item"
 				}
+				{
+					id: "588A5043CB619D20"
+					item: {
+						Count: 1
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "travelanchors:teleportation"
+								lvl: 1s
+							}]
+						}
+					}
+					type: "item"
+				}
 			]
 			shape: "rsquare"
 			tasks: [{
