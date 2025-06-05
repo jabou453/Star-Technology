@@ -436,11 +436,12 @@
     "block.gtceu.t_large_wiremill": "Large Wiremill Controller",
     "gtceu.large_rock_crusher": "Large Rock Crusher",
     "block.gtceu.large_rock_crusher": "Large Rock Crusher Controller",
+
+    "block.gtceu.mega_abs": "Hellfire Alloy Materializer",
     
     "block.gtceu.solid_blast_furnace": "Solid Blast Furnace Controller",
     "gtceu.solid_blast_furnace": "Solid Blast Furnace",
     "gtceu.bessemer_blast_furnace": "Bessemer Blast Furnace",
-
 
     "gtceu.jei.ore_vein.zapolite_vein": "Abydos Zapolite Vein",
     "material.gtceu.gritty_akreyrium": "Gritty Akreyrium",

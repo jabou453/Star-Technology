@@ -81,4 +81,14 @@ StartupEvents.registry('block', event => {
         .requiresTool(false)
         .textureAll('kubejs:block/multiblock/draco_resilient_fusion_glass');
 
+    event.create('extreme_temperature_smelting_casing')
+        .displayName('Extreme Temperature Smelting Casing')
+        .hardness(5)
+        .resistance(10)
+        .material('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/ultimate_multis/extreme_temperature_smelting_casing');
+
 });

@@ -31,3 +31,9 @@
             // sets multiblock to use Assembly Line Recipe Logic
         //Predicates.abilities(PartAbility.EXPORT_ITEMS).addTooltips(Component.translatable("gtceu.multiblock.pattern.location_end")
             // this give preview output distinction that output is on end (purely cosmetic)
+
+    //Heat Coiled Machine Loader
+    const $CoiledMulti = Java.loadClass('com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine')
+        //.machine((holder) => new $CoiledMulti(holder))  
+            // sets multiblock to use Heat Coiled Machine Recipe Logic
+

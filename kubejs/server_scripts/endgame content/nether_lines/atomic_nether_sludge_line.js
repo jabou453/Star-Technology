@@ -304,6 +304,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:carbon_dioxide 2000', 'gtceu:steam 1000')
         .itemOutputs('1x gtceu:sodium_hafnate_dust')
         .duration(8600)
+        .blastFurnaceTemp(3960)
         .EUt(GTValues.VH[GTValues.LuV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('hafnium_chlorination'))

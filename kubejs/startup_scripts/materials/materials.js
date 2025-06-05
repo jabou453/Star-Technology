@@ -636,7 +636,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         //Extended Debris
         compDustLiquid('ancient_debris', ['1x mystery'], 0x603d1a, [no_decomp]);
 
-        compIngot('ancient_netherite', ['4x gold','4x mystery'], 0x46271b, [], [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp]);
+        compIngot('ancient_netherite', ['4x gold','4x mystery'], 0x46271b, [], [12349, 'highest', VA('uhv'), 2400], [plates,rod,no_decomp,dense_plate]);
 
         //Atomic Nether Dust Line
         compDustIcon('atomic_nether_sludge', ['1x mystery','1x mystery','1x mystery','1x mystery'], 0x883039, RADIOACTIVE, [no_decomp]);
@@ -997,8 +997,16 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('raw_perfluoroelastomer_rubber', ['3x tetrafluoroethylene', '1x perfluoromethyl_vinyl_ether', '1x hexafluorobutadiene'], 0xB0CCCC, [no_decomp]);
 
-    polymerFluid('perfluoroelastomer_rubber', ['1x raw_perfluoroelastomer_rubber'], 0x536767, [foil, plates, ring, plates, rod, no_decomp]);
-
+    event.create('perfluoroelastomer_rubber')
+        .polymer()
+        .fluid()
+        .components('1x raw_perfluoroelastomer_rubber')
+        .color(0x536767)
+        .flags(foil, plates, ring, plates, rod, no_decomp)
+        .toolStats(ToolProperty.Builder.of(1, 1, 65535, 1, [
+			GTToolType.SOFT_MALLET,
+            GTToolType.PLUNGER
+		]).unbreakable().build());
 
     //Polyimide Line [Insulator UHV+]
     compLiquid('azanide', ['1x nitrogen', '2x hydrogen'], 0xBFC7E5, [no_decomp]); //Hide in JEI

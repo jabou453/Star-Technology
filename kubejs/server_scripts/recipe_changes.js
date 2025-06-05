@@ -430,6 +430,32 @@ ServerEvents.recipes(event => {
         E: 'gtceu:energium_dust'
     }).id('start:shaped/neodymium_magnet');
 
+    //Added Tools
+
+        //Mallet + Plunger
+        [
+        'perfluoroelastomer_rubber' 
+        ].forEach(material => {
+            event.shaped(Item.of(`gtceu:${material}_mallet`), [
+                'II ',
+                'IIS',
+                'II '
+            ], {
+                I: `gtceu:${material}_ingot`,
+                S: 'minecraft:stick'
+            }).id(`start:shaped/${material}_mallet`);
+            event.shaped(Item.of(`gtceu:${material}_plunger`), [
+                'WPP',
+                ' SP',
+                'S F'
+            ], {
+                W: '#forge:tools/wire_cutters',
+                F: '#forge:tools/files',
+                P: `gtceu:${material}_plate`,
+                S: `#forge:rods`
+            });
+        });
+
     //plates
     [
         {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},

@@ -266,8 +266,8 @@
 				item: "gtceu:magmatic_plasma_bucket"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: -1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
@@ -785,6 +785,7 @@
 					type: "item"
 				}
 			]
+			title: "Hyper Parallel Hatches"
 			x: 5.0d
 			y: -5.0d
 		}
@@ -855,6 +856,38 @@
 			}]
 			x: -3.0d
 			y: -1.0d
+		}
+		{
+			dependencies: ["310FC3F86513555F"]
+			id: "5FEC7470D01CEBDD"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "67F0D3F6D4404EBF"
+				item: "gtceu:mega_abs"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5944C4DE27F98FF3"]
+			id: "0ECE55AB7BBDAAA4"
+			tasks: [
+				{
+					id: "1BD274EF66F992D9"
+					item: "start_core:uev_absolute_parallel_hatch"
+					type: "item"
+				}
+				{
+					id: "49D422384FDA1B13"
+					item: "start_core:uev_parallel_hatch"
+					type: "item"
+				}
+			]
+			title: "Mega Parallel Hatches"
+			x: 4.0d
+			y: -6.0d
 		}
 	]
 	title: "Draconic Empires"
