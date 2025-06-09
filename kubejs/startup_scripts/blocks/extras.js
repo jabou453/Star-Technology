@@ -81,7 +81,6 @@ StartupEvents.registry('block', event => {
         .requiresTool(false)
         .textureAll('kubejs:block/multiblock/draco_resilient_fusion_glass');
 
-
     event.create('heart_of_the_flame')
         .displayName('§6Heart of the Flame')
         .hardness(5)
@@ -92,4 +91,46 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
         .textureAll('kubejs:block/multiblock/heart_of_the_flame');
+
+    event.create('husk_of_the_flame')
+        .displayName('§7Husk of the Flame')
+        .hardness(5)
+        .resistance(10)
+        .lightLevel(2)
+        .soundType('metal')
+        .requiresTool(true)
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .textureAll('kubejs:block/husk_of_the_flame');
+
+    event.create('husk_brick')
+        .displayName('§7Husk Brick')
+        .hardness(5)
+        .resistance(10)
+        .soundType('metal')
+        .requiresTool(true)
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .textureAll('kubejs:block/husk_brick');
+
+    event.create('cryostone')
+        .displayName('Cryostone')
+        .hardness(2)
+        .resistance(2)
+        .material('stone')
+        .requiresTool(true)
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_stone_tool')
+        .textureAll('kubejs:block/cryostone');
+
+    event.create('brimstone')
+        .displayName('Brimstone')
+        .hardness(2)
+        .resistance(2)
+        .material('stone')
+        .requiresTool(true)
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_stone_tool')
+        .textureAll('kubejs:block/brimstone');
+
 });

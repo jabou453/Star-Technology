@@ -133,27 +133,40 @@ ServerEvents.recipes(event => {
         .duration(50)
         .EUt(16);
 
-    event.recipes.gtceu.assembly_line(id('mega_abs'))
-        .itemInputs(
-            'gtceu:uev_alloy_smelter', '8x #gtceu:circuits/uev', '4x gtceu:uev_field_generator', '4x gtceu:dense_ancient_netherite_plate',
-            '2x gtceu:uev_robot_arm', '4x gtceu:uev_electric_pump', '12x kubejs:uev_microfluidic_flow_valve', '16x kubejs:uev_super_magnetic_core',
-            '6x gtceu:seaborgium_palladium_enriched_estalt_flerovium_alloy_quadruple_wire', '2x gtceu:calamatium_rotor', '2x gtceu:polonium_bismide_spring', '8x gtceu:calamatium_screw'
-        )
-        .inputFluids(
-            'gtceu:indium_tin_lead_cadmium_soldering_alloy 13824',
-            'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 10368',
-            'gtceu:utopian_akreyrium 12000',
-            'gtceu:perfluoroelastomer_rubber 8640'
-        )
-        .itemOutputs('gtceu:mega_abs')
-        .duration(1800)
-        .stationResearch(
-            researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of('gtceu:alloy_blast_smelter'))
-                .EUt(GTValues.VHA[GTValues.UEV])
-                .CWUt(192)
-            )
-        .EUt(GTValues.VHA[GTValues.UIV]);
+    event.recipes.gtceu.assembler(id('subzero_casing'))
+        .itemInputs('4x gtceu:aluminium_plate', '2x gtceu:pure_netherite_plate', 'gtceu:void_frame')
+        .itemOutputs('2x kubejs:subzero_casing')
+        .circuit(6)
+        .duration(50)
+        .EUt(16);
+
+    event.recipes.gtceu.compressor(id('reinforced_brimstone_casing'))
+        .itemInputs('64x kubejs:brimstone')
+        .itemOutputs('kubejs:reinforced_brimstone_casing')
+        .duration(320)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.compressor(id('reinforced_cryostone_casing'))
+        .itemInputs('64x kubejs:cryostone')
+        .itemOutputs('kubejs:reinforced_cryostone_casing')
+        .duration(320)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.autoclave(id('brimstone'))
+        .itemInputs('kubejs:brimstone', '64x minecraft:netherrack')
+        .inputFluids('gtceu:blaze 500')
+        .itemOutputs('kubejs:brimstone')
+        .chancedOutput('kubejs:brimstone', 6660, 0)
+        .duration(240)
+        .EUt(GTValues.VHA[GTValues.LuV]);
+
+    event.recipes.gtceu.autoclave(id('cryostone'))
+        .itemInputs('kubejs:cryostone', '64x minecraft:netherrack')
+        .inputFluids('gtceu:liquid_helium 500')
+        .itemOutputs('kubejs:cryostone')
+        .chancedOutput('kubejs:cryostone', 6660, 0)
+        .duration(240)
+        .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.recipes.gtceu.mixer(id('thorium_plut_duranide_241'))
         .itemInputs('4x gtceu:thorium_dust', 'gtceu:duranium_dust', '3x gtceu:plutonium_241_dust')

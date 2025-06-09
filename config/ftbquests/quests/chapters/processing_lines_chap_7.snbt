@@ -3294,6 +3294,124 @@
 			x: -2.0d
 			y: 16.5d
 		}
+		{
+			dependencies: [
+				"35D3561C76338E25"
+				"4B109E84470D2549"
+			]
+			id: "53A2FF89C0F89921"
+			tasks: [{
+				id: "74BB8D94F9C05537"
+				item: "start_core:flamewake_solvent_bucket"
+				type: "item"
+			}]
+			x: 14.5d
+			y: 13.0d
+		}
+		{
+			dependencies: [
+				"53A2FF89C0F89921"
+				"31E7FE4E816A71CF"
+			]
+			id: "75C33909E2CD5EC0"
+			tasks: [{
+				id: "2997E6C1E7BE5A16"
+				item: "start_core:emberheart_nectar_bucket"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 13.0d
+		}
+		{
+			dependencies: [
+				"75C33909E2CD5EC0"
+				"0A2485513EE939AE"
+				"67C9D32CB509441E"
+			]
+			id: "4C773DDE876192B5"
+			tasks: [{
+				id: "5D473395D331925E"
+				item: "start_core:igniferous_elixir_bucket"
+				type: "item"
+			}]
+			x: 17.5d
+			y: 13.0d
+		}
+		{
+			dependencies: [
+				"4C773DDE876192B5"
+				"48F36A3DE988B233"
+			]
+			id: "694454E74A037992"
+			tasks: [{
+				id: "6ACB3796A0A5C7D7"
+				item: "start_core:blazing_phlogiston_bucket"
+				type: "item"
+			}]
+			x: 19.0d
+			y: 13.0d
+		}
+		{
+			id: "35D3561C76338E25"
+			tasks: [{
+				id: "6D6FCD339C588E53"
+				item: "gtceu:utopian_akreyrium_bucket"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 13.0d
+		}
+		{
+			id: "0A2485513EE939AE"
+			tasks: [{
+				id: "75700C5FF295B123"
+				item: "sgjourney:pegasus_stargate"
+				type: "item"
+			}]
+			x: 17.5d
+			y: 14.5d
+		}
+		{
+			id: "31E7FE4E816A71CF"
+			tasks: [{
+				id: "3A5CB99E473EE85F"
+				item: "minecraft:end_stone"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 14.5d
+		}
+		{
+			id: "4B109E84470D2549"
+			tasks: [{
+				id: "240EEDB6C428F338"
+				item: "minecraft:netherrack"
+				type: "item"
+			}]
+			x: 14.5d
+			y: 14.5d
+		}
+		{
+			id: "48F36A3DE988B233"
+			tasks: [{
+				id: "5AE6F2B8D9BDD893"
+				item: "minecraft:deepslate"
+				type: "item"
+			}]
+			x: 19.0d
+			y: 11.5d
+		}
+		{
+			id: "67C9D32CB509441E"
+			tasks: [{
+				amount: 1000L
+				fluid: "minecraft:water"
+				id: "46E829742B78CCAE"
+				type: "fluid"
+			}]
+			x: 17.5d
+			y: 11.5d
+		}
 	]
 	title: "Processing Lines (Chap 7..)"
 }

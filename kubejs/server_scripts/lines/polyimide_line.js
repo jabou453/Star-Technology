@@ -29,6 +29,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.large_chemical_reactor(id('y_butyrolactone'))
         .inputFluids('gtceu:14_butanediol 1000', 'gtceu:oxygen 2000')
         .outputFluids('gtceu:y_butyrolactone 1000', 'minecraft:water 2000')
+        .duration(372)
         .EUt(GTValues.VA[GTValues.ZPM])
 
     event.recipes.gtceu.large_chemical_reactor(id('nmp'))

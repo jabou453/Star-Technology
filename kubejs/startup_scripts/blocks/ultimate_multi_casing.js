@@ -28,4 +28,34 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:needs_iron_tool')
         .requiresTool(false)
         .textureAll('kubejs:block/casings/ultimate_multis/extreme_temperature_smelting_casing');
+
+    event.create('subzero_casing')
+        .displayName('Subzero Casing')
+        .hardness(5)
+        .resistance(10)
+        .material('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/ultimate_multis/subzero_casing');
+
+    event.create('reinforced_cryostone_casing')
+        .displayName('Reinforced Cryostone Casing')
+        .hardness(5)
+        .resistance(10)
+        .material('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/ultimate_multis/reinforced_cryostone_casing');
+
+    event.create('reinforced_brimstone_casing')
+        .displayName('Reinforced Brimstone Casing')
+        .hardness(5)
+        .resistance(10)
+        .material('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/ultimate_multis/reinforced_brimstone_casing');
 });

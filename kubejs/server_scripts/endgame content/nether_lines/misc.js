@@ -71,21 +71,27 @@ ServerEvents.recipes(event => {
         .duration(124)
         .EUt(380644);
 
-    //Quantum Cooling
-    event.recipes.gtceu.super_cooler(id('bec_og'))
-        .inputFluids('gtceu:oganesson 500')
-        .inputFluids('gtceu:superstate_helium_3 7500')
-        .outputFluids('gtceu:bec_og 500')
-        .outputFluids('gtceu:helium_3 5000')
-        .duration(320)
-        .EUt(GTValues.VHA[GTValues.UEV]);
-
-    event.recipes.gtceu.super_cooler(id('superstate_helium_3'))
-        .inputFluids('gtceu:helium_3 5000')
-        .inputFluids('gtceu:liquid_helium 5000')
-        .outputFluids('gtceu:superstate_helium_3 5000')
-        .outputFluids('gtceu:helium 2500')
-        .duration(400)
-        .EUt(GTValues.VA[GTValues.UHV]);
+    // H.A.M Controller
+    event.recipes.gtceu.assembly_line(id('mega_abs'))
+        .itemInputs(
+            'gtceu:uev_alloy_smelter', '8x #gtceu:circuits/uev', '4x gtceu:uev_field_generator', '4x gtceu:dense_ancient_netherite_plate',
+            '2x gtceu:uev_robot_arm', '4x gtceu:uev_electric_pump', '12x kubejs:uev_microfluidic_flow_valve', '16x kubejs:uev_super_magnetic_core',
+            '6x gtceu:seaborgium_palladium_enriched_estalt_flerovium_alloy_quadruple_wire', '2x gtceu:calamatium_rotor', '2x gtceu:polonium_bismide_spring', '8x gtceu:calamatium_screw'
+        )
+        .inputFluids(
+            'gtceu:indium_tin_lead_cadmium_soldering_alloy 13824',
+            'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 10368',
+            'gtceu:utopian_akreyrium 12000',
+            'gtceu:perfluoroelastomer_rubber 8640'
+        )
+        .itemOutputs('gtceu:mega_abs')
+        .duration(1800)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:alloy_blast_smelter'))
+                .EUt(GTValues.VHA[GTValues.UEV])
+                .CWUt(192)
+            )
+        .EUt(GTValues.VHA[GTValues.UIV]);
 
 });
