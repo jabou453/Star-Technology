@@ -205,6 +205,12 @@
     "block.gtceu.large_rock_crusher.tooltip.1": "Has §6Perfect Overclock",
     "block.gtceu.large_rock_crusher.tooltip.2": "Can only have §bone§r Energy Hatch",
     
+    "block.gtceu.high_pressure_steam_hammer.tooltip.0": "§7A larger variant of the forge hammer capable of running multiple recipes at once.",
+
+    "block.gtceu.kiln.tooltip.0": "§7A stronger, beefier version of the campfire for your manufacturing needs.",
+
+    "block.gtceu.steam_kiln.tooltip.0": "§7A kiln with busses and steam parallels.",
+
     "material.gtceu.soul_infused": "Soul Infused",
     "material.gtceu.signalum": "Signalum",
     "material.gtceu.lumium": "Lumium",
