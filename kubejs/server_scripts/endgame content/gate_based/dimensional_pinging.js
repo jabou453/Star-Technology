@@ -110,7 +110,7 @@ ServerEvents.recipes(event => {
         .dimension('minecraft:cavum_tenebrae');*/
 
     const CrystalDuping = (type,eutScale) => {
-        event.recipes.gtceu.scanner(`${type}_crystal_duping`)
+        event.recipes.gtceu.scanner(id(`${type}_crystal_duping`))
         .itemInputs('kubejs:coordinate_crystal',`kubejs:${type}_coordinate_crystal`)
         .itemOutputs(`2x kubejs:${type}_coordinate_crystal`)
         .duration(6000)

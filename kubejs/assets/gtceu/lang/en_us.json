@@ -91,7 +91,7 @@
     
     "block.gtceu.large_stone_barrel.tooltip.0": "§7A larger stone barrel that can make all kinds of stones and lava.",
     
-    "block.gtceu.solid_blast_furnace.tooltip.0": "§7An upgraded primitive blast furnace, capable of making more alloys and better steel protection.",
+    "block.gtceu.solid_blast_furnace.tooltip.0": "§7An upgraded primitive blast furnace.",
 
     "block.gtceu.rock_filtrator.tooltip.0": "§7A multiblock that can sieve through gravel and sand more precisely than a basic sieve could ever achieve, uncovering the gems hidden inside.",
     "block.gtceu.rock_filtrator.tooltip.1": "Can only have §bone§r Energy Hatch",
@@ -205,6 +205,12 @@
     "block.gtceu.large_rock_crusher.tooltip.1": "Has §6Perfect Overclock",
     "block.gtceu.large_rock_crusher.tooltip.2": "Can only have §bone§r Energy Hatch",
     
+    "block.gtceu.high_pressure_steam_hammer.tooltip.0": "§7A larger variant of the forge hammer capable of running multiple recipes at once.",
+
+    "block.gtceu.kiln.tooltip.0": "§7A stronger, beefier version of the campfire for your manufacturing needs.",
+
+    "block.gtceu.steam_kiln.tooltip.0": "§7A kiln with busses and steam parallels.",
+
     "material.gtceu.soul_infused": "Soul Infused",
     "material.gtceu.signalum": "Signalum",
     "material.gtceu.lumium": "Lumium",
@@ -398,7 +404,7 @@
     "gtceu.mechanical_sieve": "Mechanical Sieve",
     "block.gtceu.petrochemistry_plant": "Petrochemistry Plant Controller",
     "gtceu.petrochemistry_plant": "Oil Refining",
-    "material.gtceu.star_steel": "Star Steel",
+    "material.gtceu.sky_steel": "Sky Steel",
     "material.gtceu.birmabright": "Birmabright",
     "material.gtceu.duralumin": "Duralumin",
     "material.gtceu.hydronalium": "Hydronalium",
@@ -438,8 +444,6 @@
     
     "block.gtceu.solid_blast_furnace": "Solid Blast Furnace Controller",
     "gtceu.solid_blast_furnace": "Solid Blast Furnace",
-    "gtceu.bessemer_blast_furnace": "Bessemer Blast Furnace",
-
 
     "gtceu.jei.ore_vein.zapolite_vein": "Abydos Zapolite Vein",
     "material.gtceu.gritty_akreyrium": "Gritty Akreyrium",
@@ -744,11 +748,13 @@
 
     "gtceu.molten_destabilizing": "Molten Destabilization",
     "block.gtceu.molten_destabilizer": "Molten Destabilizer Controller",
+    
     "gtceu.latex_plantation": "Latex Plantation",
     "block.gtceu.latex_plantation": "Latex Plantation Controller",
 
     "block.gtceu.kiln": "Kiln",
     "gtceu.kiln": "Kiln",
+    "gtceu.steam_kiln": "Steam Kiln",
     "block.gtceu.rugged_alloyer": "Rugged Alloyer",
     "gtceu.rugged_alloyer": "Rugged Alloyer",
     "material.gtceu.pig_iron": "Pig Iron",
@@ -770,6 +776,19 @@
     "block.gtceu.steam_kiln": "Steam Kiln Controller",
     "block.gtceu.steam_liquifier": "Steam Liquifier Controller",
     "gtceu.stirling_generator": "Stirling Generator",
-    "gtceu.auto_scavenger": "Auto Scavenger"
+    "gtceu.auto_scavenger": "Auto Scavenger",
+
+    "gtceu.me_assembler": "ME Assembler",
+    "block.gtceu.me_assembler": "ME Assembler",
+
+    "block.gtceu.large_me_assembler": "Large ME Assembler Controller",
+
+    "material.gtceu.skystone": "Skystone",
+    "material.gtceu.gold_skystone_alloy": "Gold Skystone Alloy",
+    "material.gtceu.diamond_skystone_alloy": "Diamond Skystone Alloy",
+    "material.gtceu.certus_quartz_skystone_alloy": "Certus Quartz Skystone Alloy",
+    "material.gtceu.fluix_steel": "Fluix Steel", 
+    "material.gtceu.netherite_gold_skystone_alloy": "Netherite-Gold Skystone Alloy",
+    "material.gtceu.netherite_certus_quartz_skystone_alloy": "Netherite-Certus Quartz Skystone Alloy"
 
 }

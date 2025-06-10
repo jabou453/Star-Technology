@@ -1,6 +1,32 @@
 
 StartupEvents.registry('item', event => {
 
+    const chipBoule = (boule, color, doped) => {
+        if (doped) {
+            event.create(`${boule.toLowerCase()}_chip`)
+                .displayName(`${color}${boule}§r-Doped Chip`)
+                .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
+        } else {
+            event.create(`${boule.toLowerCase()}_chip`)
+                .displayName(`${color}${boule}§r Chip`)
+                .texture(`kubejs:item/chips_n_wafers/empty_${boule.toLowerCase()}_chip`);
+        };
+    };
+
+    chipBoule('Silicon', '§r', false)
+    chipBoule('Phosphorus', '§r', true)
+    chipBoule('Naquadah', '§r', true)
+    chipBoule('Neutronium', '§r', true)
+    chipBoule('Draco', '§5', true)
+
+    event.create('ae2_soc_wafer')
+        .displayName('AE2 SoC Wafer')
+        .texture('kubejs:item/chips_n_wafers/ae2_soc_wafer');
+
+    event.create('ae2_soc')
+        .displayName('AE2 SoC')
+        .texture('kubejs:item/chips_n_wafers/ae2_soc_chip');
+
     event.create('3d_nand_chip')
         .displayName('3D-NAND Memory Chip Array')
         .tooltip('§7Complex NAND Logic Gate')

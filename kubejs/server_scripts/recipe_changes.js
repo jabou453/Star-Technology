@@ -8,9 +8,9 @@ ServerEvents.recipes(event => {
     
     event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust').id('start:pressing/compressed_fireclay');
 
-    event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot');
+    event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 400);
 
-    event.campfireCooking('minecraft:glass', 'gtceu:glass_dust');
+    event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 300);
 
     event.replaceInput({ id: 'gtceu:shaped/bronze_primitive_blast_furnace' },
         '#forge:plates/iron',
@@ -440,9 +440,28 @@ ServerEvents.recipes(event => {
             event.recipes.create.pressing(`gtceu:${foo}_plate`,`${type.mod}:${foo}_ingot`).id(`start:pressing/${foo}_plate`);
         });
     });
+
+    event.shaped(Item.of('16x minecraft:stick'), [
+        'L',
+        'L'
+    ], {
+        L: '#minecraft:logs'
+    }).id('start:shaped/bulk_stick');
+
+    event.shaped(Item.of('4x minecraft:chest'), [
+        'LLL',
+        'L L',
+        'LLL'
+    ], {
+        L: '#minecraft:logs'
+    }).id('start:shaped/bulk_chest');
     
     })()
-    } 
+    }
+    
+    [1,2,4].forEach(size => {
+        event.remove({id: `functionalstorage:oak_drawer_alternate_x${size}`});
+    });
 
     event.replaceInput({id: 'enderchests:ender_pouch'}, 'minecraft:leather', 'gtceu:carbon_fiber_plate');
 
@@ -686,6 +705,23 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: `${mod}:brass_nugget`},`${mod}:brass_nugget`,`gtceu:brass_nugget`);
     }
     nuggetFixMod('create');nuggetFixMod('thermal');nuggetFixMod('exnihilosequentia');
+
+    // Effortless Building Upgrade Accessibility
+    const reachUpgrade = (type,mat,dye,core) => {
+    event.remove({output: `effortlessbuilding:reach_upgrade${type}`});
+    event.shaped(Item.of(`effortlessbuilding:reach_upgrade${type}`), [
+        ' D ',
+        'MCM',
+        ' D '
+    ], {
+        D: `${dye}`,
+        M: `${mat}`,
+        C: `${core}`
+    }).id(`start:shaped/reach_upgrade${type}`);
+    }
+    reachUpgrade('1','minecraft:slime_ball','minecraft:lime_dye',`minecraft:ender_pearl`);
+    reachUpgrade('2','minecraft:glowstone_dust','minecraft:orange_dye',`effortlessbuilding:reach_upgrade1`);
+    reachUpgrade('3','minecraft:amethyst_shard','minecraft:purple_dye',`effortlessbuilding:reach_upgrade2`);
 
 });
 

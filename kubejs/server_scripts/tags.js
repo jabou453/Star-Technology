@@ -87,6 +87,9 @@ ServerEvents.tags('item', event=>{
         /create:gold.*/,
         'create:powdered_obsidian'
     ]
+    const Megacells = [
+        /megacells:sky_steel.*/
+    ]
 
     thermal.forEach((item)=> {
         event.removeAllTagsFrom(`${item}`)
@@ -98,6 +101,9 @@ ServerEvents.tags('item', event=>{
         event.removeAllTagsFrom(`${item}`)
     });
     Create.forEach((item)=> {
+        event.removeAllTagsFrom(`${item}`)
+    });
+    Megacells.forEach((item)=> {
         event.removeAllTagsFrom(`${item}`)
     });
 });

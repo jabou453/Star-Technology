@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
     const id = global.id;
 
     // Boron Nitride (Mixing Casing)
-    event.recipes.gtceu.chemical_plant("boron_nitride")
+    event.recipes.gtceu.chemical_plant(id("boron_nitride"))
         .itemInputs('1x gtceu:boron_dust')
         .inputFluids('gtceu:nitrogen 1000')
         .itemOutputs('1x gtceu:boron_nitride_dust')

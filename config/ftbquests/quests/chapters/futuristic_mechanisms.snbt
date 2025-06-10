@@ -1804,7 +1804,7 @@
 		}
 		{
 			dependencies: ["7FD0034E639F3B2D"]
-			description: ["&cZPM&r superconductor, can hold 64 amps in a 1x cable."]
+			description: ["&cZPM&r superconductor, can hold 96 amps in a 1x cable."]
 			id: "3A603E70EB4B856F"
 			tasks: [{
 				id: "4380C92864BF9161"
@@ -1829,7 +1829,7 @@
 		{
 			dependencies: ["3325914DB92AEF1B"]
 			description: [
-				"&3UV&r superconductor, can hold 32 amps in a 1x cable."
+				"&3UV&r superconductor, can hold 48 amps in a 1x cable."
 				""
 				"Prismalium is not the only &3UV&r superconductor. There is also Melodium, which is shown in the next quest chapter."
 			]
