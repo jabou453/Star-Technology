@@ -864,7 +864,10 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["1B32FFCDA1C87B90"]
+			dependencies: [
+				"7AAF2D8BC72919DB"
+				"51639FA6915BC51A"
+			]
 			id: "3DB836585182F614"
 			tasks: [{
 				id: "5AFD383C58F00AFC"
@@ -872,13 +875,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -7.0d
+			y: -6.0d
 		}
 		{
-			dependencies: [
-				"3DB836585182F614"
-				"1B32FFCDA1C87B90"
-			]
+			dependencies: ["3DB836585182F614"]
 			id: "120C7AB980EAE90D"
 			tasks: [{
 				id: "587F1FE713F04F02"
@@ -886,13 +886,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -6.0d
+			y: -5.0d
 		}
 		{
-			dependencies: [
-				"120C7AB980EAE90D"
-				"7AAF2D8BC72919DB"
-			]
+			dependencies: ["120C7AB980EAE90D"]
 			id: "6E149057874AC992"
 			tasks: [{
 				id: "264FDE7BA1BFD770"
@@ -900,13 +897,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -5.0d
+			y: -4.0d
 		}
 		{
-			dependencies: [
-				"6E149057874AC992"
-				"4F2692F874F68EF8"
-			]
+			dependencies: ["6E149057874AC992"]
 			id: "5B70B50435FD572D"
 			tasks: [{
 				id: "60393B8F173667FF"
@@ -914,13 +908,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -4.0d
+			y: -3.0d
 		}
 		{
-			dependencies: [
-				"5B70B50435FD572D"
-				"121EFB24BE239D59"
-			]
+			dependencies: ["5B70B50435FD572D"]
 			id: "6F4474291CE8042C"
 			tasks: [{
 				id: "33CB0C708F1ACCC9"
@@ -928,13 +919,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -3.0d
+			y: -2.0d
 		}
 		{
-			dependencies: [
-				"6F4474291CE8042C"
-				"51F889E1432E4DAD"
-			]
+			dependencies: ["6F4474291CE8042C"]
 			id: "21C399BC8BE2785F"
 			tasks: [{
 				id: "6B0B411795F0AB60"
@@ -942,7 +930,7 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["3DB836585182F614"]
@@ -953,7 +941,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -7.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["120C7AB980EAE90D"]
@@ -964,7 +952,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -6.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["6E149057874AC992"]
@@ -975,7 +963,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -5.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["5B70B50435FD572D"]
@@ -986,7 +974,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -4.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["6F4474291CE8042C"]
@@ -997,7 +985,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -3.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["21C399BC8BE2785F"]
@@ -1008,11 +996,11 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
-				"2C72517EAF0E4F9E"
+				"6F408C9FD7D65DF4"
 				"7AAF2D8BC72919DB"
 			]
 			id: "0C98CEC5242B2FB0"
@@ -1026,8 +1014,8 @@
 		}
 		{
 			dependencies: [
-				"590C298B843E22D5"
-				"7AAF2D8BC72919DB"
+				"2C72517EAF0E4F9E"
+				"4F2692F874F68EF8"
 			]
 			id: "4A2B54786509F5E4"
 			tasks: [{
@@ -1040,8 +1028,8 @@
 		}
 		{
 			dependencies: [
-				"0035C9FAB741E166"
-				"4F2692F874F68EF8"
+				"590C298B843E22D5"
+				"121EFB24BE239D59"
 			]
 			id: "4DA961ED5AF34D63"
 			tasks: [{
@@ -1054,8 +1042,8 @@
 		}
 		{
 			dependencies: [
-				"620F96D00BB9BFD0"
-				"4F2692F874F68EF8"
+				"0035C9FAB741E166"
+				"51F889E1432E4DAD"
 			]
 			id: "7E26E2727F86A2CE"
 			tasks: [{
@@ -1068,8 +1056,8 @@
 		}
 		{
 			dependencies: [
-				"18F6E5836D82D628"
-				"5D107FD21879F54B"
+				"620F96D00BB9BFD0"
+				"0055CE82469F239C"
 			]
 			id: "470AEDAED3B9A2AA"
 			tasks: [{
@@ -1082,7 +1070,7 @@
 		}
 		{
 			dependencies: [
-				"72DDEB53C9BDDBFC"
+				"18F6E5836D82D628"
 				"5D107FD21879F54B"
 			]
 			id: "723224D36C88ACA9"
@@ -1579,8 +1567,8 @@
 		}
 		{
 			dependencies: [
-				"723224D36C88ACA9"
-				"21B905AA3AE6059F"
+				"72DDEB53C9BDDBFC"
+				"007D5B58CBF1BBE2"
 			]
 			description: ["The last 2 Solar Panels are merely compressed variants of the previous ones, to allow for more compact solar setups"]
 			id: "2D9EFD27A3C32062"
@@ -1590,20 +1578,6 @@
 				type: "item"
 			}]
 			x: -10.5d
-			y: -1.0d
-		}
-		{
-			dependencies: [
-				"2D9EFD27A3C32062"
-				"21B905AA3AE6059F"
-			]
-			id: "1F83DC0B3C633298"
-			tasks: [{
-				id: "7222356ABCE66FCC"
-				item: "solarflux:sp_8"
-				type: "item"
-			}]
-			x: -9.5d
 			y: -1.0d
 		}
 		{
@@ -2330,6 +2304,38 @@
 			}]
 			x: 10.0d
 			y: 4.5d
+		}
+		{
+			dependencies: [
+				"7AAF2D8BC72919DB"
+				"51639FA6915BC51A"
+			]
+			id: "6F408C9FD7D65DF4"
+			tasks: [{
+				id: "56D5298101B5D5DE"
+				item: "solarflux:mirror"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -7.0d
+		}
+		{
+			description: ["While expensive to make and not your best source it is free energy from the &e&lSUN&r."]
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "gtceu:item/solar_panel"
+				}
+			}
+			id: "51639FA6915BC51A"
+			tasks: [{
+				id: "2880D8142FDC174B"
+				title: "What is Solar?"
+				type: "checkmark"
+			}]
+			x: -8.5d
+			y: -7.0d
 		}
 	]
 	title: "Power"
