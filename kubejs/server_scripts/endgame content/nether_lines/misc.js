@@ -20,33 +20,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('2x gtceu:sodium_dust','5x gtceu:echo_shard_dust')
         .duration(80)
         .EUt(GTValues.VHA[GTValues.UIV]);
-
-    //Plasmas/Fusion
-    event.recipes.gtceu.fusion_reactor(id('magmatic_plasma'))
-        .inputFluids('gtceu:highly_unstable_nether_magma 2560', 'gtceu:iron_plasma 128')
-        .outputFluids('gtceu:magmatic_plasma 64')
-        .duration(132)
-        .EUt(66666)
-        .fusionStartEU(720000000);
-        
-    event.recipes.gtceu.plasma_generator(id('magmatic_plasma'))
-        .inputFluids('gtceu:magmatic_plasma 1')
-        .outputFluids('gtceu:highly_unstable_nether_magma 1')
-        .duration(333)
-        .EUt(-2048);
-
-    event.recipes.gtceu.plasma_generator(id('argon_plasma'))
-        .inputFluids('gtceu:argon_plasma 1')
-        .outputFluids('gtceu:argon 1')
-        .duration(80)
-        .EUt(-2048);
-
-    event.recipes.gtceu.fusion_reactor(id('aurourium'))
-        .inputFluids('gtceu:nether_star_concentrate 64', 'gtceu:seaborgium 64')
-        .outputFluids('gtceu:aurourium 32')
-        .duration(80)
-        .EUt(783552)
-        .fusionStartEU(888888888);
     
     //Ancient Netherite
     event.recipes.gtceu.assembler(id('ancient_netherite_reinforced_mesh'))
