@@ -864,10 +864,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: [
-				"7AAF2D8BC72919DB"
-				"51639FA6915BC51A"
-			]
+			dependencies: ["51639FA6915BC51A"]
 			id: "3DB836585182F614"
 			tasks: [{
 				id: "5AFD383C58F00AFC"
@@ -1678,7 +1675,7 @@
 		{
 			dependencies: ["7DDFBCDFC3F09A6B"]
 			description: [
-				"Each tier of rotor holder up on top of its inherent 10% efficiency bonus ([1-.1] or .9 or 90% fuel consumption), each tier up doubles consumption and power giving you a 2x energy output for 1.8x more fuel. It is always worth it if you can supply enough fuel."
+				"Each tier of rotor holder up on top of its inherent &b10% efficiency bonus&r &7([1-.1] or .9 or 90% fuel consumption)&r, each tier up doubles consumption and power giving you a &62x energy&r output for 1.8x more fuel. It is always worth it if you can supply enough fuel."
 				""
 				"In other words it doubles parallels and give efficiency."
 			]
@@ -1705,7 +1702,7 @@
 			]
 			id: "754D5D2F2D109193"
 			tasks: [{
-				id: "42CCF2CFC2C51426"
+				id: "318A4B800B95E110"
 				item: {
 					Count: 1
 					id: "itemfilters:or"
@@ -1741,6 +1738,10 @@
 							{
 								Count: 1b
 								id: "gtceu:uhv_rotor_holder"
+							}
+							{
+								Count: 1b
+								id: "gtceu:uev_rotor_holder"
 							}
 						]
 					}
@@ -2208,7 +2209,7 @@
 				"7DDFBCDFC3F09A6B"
 				"121EFB24BE239D59"
 			]
-			description: ["Parallels can make it scale just a little."]
+			description: ["Parallels can make it scale just a \"little\"."]
 			id: "29A144BD0E7C524F"
 			tasks: [{
 				id: "0D35589F9644A1F9"
