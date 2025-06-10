@@ -60,4 +60,41 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 	GTMaterials.RedAlloy.addFlags(spring);
 	GTMaterials.Lead.addFlags(small_gear);
 
+	const compDustIcon = (name, elements, color, icon, flags) => {
+        event.create(name).dust().components(elements).color(color).iconSet(icon).flags(flags);
+    }
+	const DustNoComp = (name, color, flags) => {
+        event.create(name).dust().color(color).flags(flags);
+    }
+	const LiquidNoComp = (name, color, flags) => {
+        event.create(name).fluid().color(color).flags(flags);
+    }
+	const compLiquidTemp = (name, heat, elements, color, flags) => {
+        event.create(name).liquid(new GTFluidBuilder().temperature(heat)).components(elements).color(color).flags(flags);
+    }
+	
+	compDustIcon('metallic_ore_sludge', ['8x pentlandite', '5x gold', '2x silver'],0xA4AC72,METALLIC,no_decomp)
+	LiquidNoComp('raw_ore_concentrate',0x7C8478,no_decomp);
+	LiquidNoComp('raw_ore_residue',0x908784,no_decomp);
+	LiquidNoComp('diluted_drilling_formula',0xDFD2A0,no_decomp);
+	LiquidNoComp('concentrate_drilling_formula',0xEDDC9E,no_decomp);
+	LiquidNoComp('residue_drilling_formula',0xE2CF84,no_decomp);
+	LiquidNoComp('slurry_drilling_formula',0xDCD0A0,no_decomp);
+	LiquidNoComp('poor_mixture_drilling_formula',0xCCC29C,no_decomp);
+	LiquidNoComp('rich_mixture_drilling_formula',0xB9B08B,no_decomp);
+	
+	compLiquidTemp('molten_waste',1170,'mystery',0x806861,no_decomp);
+	compLiquidTemp('cooled_molten_waste',515,'mystery',0x6D5852,no_decomp);
+
+	compLiquidTemp('impure_molten_ore_mixture',2190,'mystery',0x746E6D, no_decomp);
+	compLiquidTemp('pure_molten_ore_mixture',2635,'mystery',0x5C5451, no_decomp);
+
+	compLiquidTemp('cooled_molten_bauxite_ore', 480, ['1x bauxite'], 0x9B9B83, [no_decomp]);
+    compLiquidTemp('cooled_molten_pitchblende_ore', 480, ['1x pitchblende'], 0x95A96F, [no_decomp]);
+    compLiquidTemp('cooled_molten_molybdenite_ore', 480, ['1x molybdenite'], 0xA6B38D, [no_decomp]);
+    compLiquidTemp('cooled_molten_ilmenite_ore', 480, ['1x ilmenite'], 0xAE9279, [no_decomp]);
+    compLiquidTemp('cooled_molten_tungstate_ore', 480, ['1x tungstate'], 0x848E97, [no_decomp]);
+    compLiquidTemp('cooled_molten_bastnasite_ore', 480, ['1x bastnasite'], 0x80766F, [no_decomp]);
+    compLiquidTemp('cooled_molten_cooperite_ore', 480, ['1x cooperite'], 0x8B8A76, [no_decomp]);
+
 });

@@ -139,19 +139,4 @@ ServerEvents.recipes(event => {
         S: `#forge:tools/screwdrivers`
     });
 
-    const PrimSifter = (input,mesh,output,scaler) => {
-    event.recipes.gtceu.primitive_sifter(id(`${output.split(':')[1]}_${mesh}`))
-        .itemInputs(`16x ${input}`)
-        .notConsumable(`exnihilosequentia:${mesh}_mesh`)
-        .itemOutputs(`${2*scaler}x ${output}`)
-        .duration(600)
-        .EUt(30);
-    }
-    PrimSifter('minecraft:sand','string','minecraft:coal',3);
-    PrimSifter('minecraft:sand','flint','minecraft:lapis_lazuli',1.5);
-    PrimSifter('minecraft:sand','iron','minecraft:diamond',.5);
-    PrimSifter('exnihilosequentia:dust','string','minecraft:quartz',3);
-    PrimSifter('exnihilosequentia:dust','flint','minecraft:amethyst_shard',1.5);
-    PrimSifter('exnihilosequentia:dust','iron','minecraft:ender_pearl',.5);
-
 });

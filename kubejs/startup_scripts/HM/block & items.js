@@ -170,6 +170,24 @@ StartupEvents.registry('block', event => {
 		.tagBlock("mineable/pickaxe")
 		.tagBlock('minecraft:needs_iron_tool')
 		.textureAll('kubejs:block/hm/high_steam_machine_casing');
+
+	event.create('refined_sand', 'falling')
+		.displayName('Refined Sand')
+		.hardness(1)
+		.resistance(1)
+		.soundType('sand')
+		.requiresTool(false)
+		.tagBlock("mineable/shovel")
+		.textureAll('kubejs:block/hm/refined_sand');
+
+	event.create('refined_dust', 'falling')
+		.displayName('Refined Dust')
+		.hardness(1)
+		.resistance(1)
+		.soundType('sand')
+		.requiresTool(false)
+		.tagBlock("mineable/shovel")
+		.textureAll('kubejs:block/hm/refined_dust');
 });
 
 ItemEvents.modification(event => {

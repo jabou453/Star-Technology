@@ -13,7 +13,8 @@ StartupEvents.registry('item', event => {
         { name: 'Green_Sapphire', color: '§a' },
         { name: 'Blue_Topaz', color: '§3' },
         { name: 'Apatite', color: '§b' },
-        { name: 'Monazite', color: '§2' }
+        { name: 'Monazite', color: '§2' },
+        { name: 'Realgar', color: '§4' }
     ].forEach(geode => {
         const {name, color} = geode;
         event.create(`${name.toLowerCase()}_geode`)
