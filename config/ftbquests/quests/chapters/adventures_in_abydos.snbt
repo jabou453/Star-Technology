@@ -2187,14 +2187,14 @@
 		{
 			dependencies: ["7F72F9E28713D965"]
 			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
-			id: "7D29B653F8C14ABC"
+			id: "56A015318588C9F4"
 			rewards: [{
-				id: "5B3778E2E7B9B0E4"
+				id: "4697E0C4626AEE1A"
 				item: "kubejs:coin"
 				type: "item"
 			}]
 			tasks: [{
-				id: "3B32A5E4F0DFED06"
+				id: "67A611680844E291"
 				item: {
 					Count: 1
 					id: "itemfilters:or"
@@ -2323,10 +2323,10 @@
 				"59B0F5DB2C1E96DC"
 			]
 			icon: "minecraft:netherrack"
-			id: "1E3EF64C0A4EE438"
+			id: "0B00FD5F7735E3E0"
 			optional: true
 			rewards: [{
-				id: "5440DF6C322F753F"
+				id: "4D0262DA27C9357F"
 				item: "kubejs:coin"
 				type: "item"
 			}]
@@ -2336,7 +2336,7 @@
 			tasks: [{
 				dimension: "minecraft:the_nether"
 				icon: "minecraft:netherrack"
-				id: "537A1229A7EED7D1"
+				id: "3D62E0DEA1D5CAC6"
 				title: "To The Nether"
 				type: "dimension"
 			}]
