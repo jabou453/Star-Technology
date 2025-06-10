@@ -239,6 +239,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('netherite', no_decomp);
     matmod('echo_shard', lens);
     matmod('copper', gear);
+    matmod('rhodium_plated_palladium', frame);
+    matmod('darmstadtium', frame);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
