@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
         ['zapolite','crookesite','clausthalite','iodargyrite','titanite','calaverite','sylvanite',
         'tiemannite','strontianite'].forEach(type=>{
             event.remove({id: `gtceu:extractor/extract_${type}_dust`});
-            event.recipes.gtceu.autoclave(`raw_${type}`)
+            event.recipes.gtceu.autoclave(id(`raw_${type}`))
                 .itemInputs('gtceu:deepslate_dust')
                 .inputFluids(`gtceu:${type} 1000`)
                 .itemOutputs(`gtceu:raw_${type}`)
@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
     const seleniumGalides = [{dust:'clausthalite',dustAmount:'2',selenium:'1',byproduct:'lead',byproductAmount:'1'},{dust:'klockmannite',dustAmount:'2',selenium:'1',byproduct:'copper',byproductAmount:'1'},
         {dust:'berzelianite',dustAmount:'3',selenium:'1',byproduct:'copper',byproductAmount:'2'},{dust:'umangite',dustAmount:'5',selenium:'2',byproduct:'copper',byproductAmount:'3'}]
         seleniumGalides.forEach(type=>{
-        event.recipes.gtceu.electric_blast_furnace(`${type.dust}_decomp`)
+        event.recipes.gtceu.electric_blast_furnace(id(`${type.dust}_decomp`))
             .itemInputs(`${type.dustAmount}x gtceu:${type.dust}_dust`)
             .inputFluids('gtceu:carbon_acid 1000')
             .outputFluids('gtceu:steam 1000','gtceu:carbon_dioxide')
@@ -69,7 +69,7 @@ ServerEvents.recipes(event => {
             .blastFurnaceTemp(3249)
             .EUt(GTValues.VHA[GTValues.EV]);
     });
-    event.recipes.gtceu.electric_blast_furnace(`tiemannite_decomp`)
+    event.recipes.gtceu.electric_blast_furnace(id(`tiemannite_decomp`))
         .itemInputs(`2x gtceu:tiemannite_dust`)
         .inputFluids('gtceu:carbon_acid 1000')
         .outputFluids('gtceu:mercury 1000','gtceu:steam 1000','gtceu:carbon_dioxide')
@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
         .duration(200)
         .blastFurnaceTemp(3249)
         .EUt(GTValues.VHA[GTValues.EV]);
-    event.recipes.gtceu.electric_blast_furnace(`crookesite_decomp`)
+    event.recipes.gtceu.electric_blast_furnace(id(`crookesite_decomp`))
         .itemInputs(`12x gtceu:crookesite_dust`)
         .inputFluids('gtceu:carbon_acid 1000')
         .outputFluids('gtceu:steam 1000','gtceu:carbon_dioxide')
@@ -85,7 +85,7 @@ ServerEvents.recipes(event => {
         .duration(200)
         .blastFurnaceTemp(3249)
         .EUt(GTValues.VHA[GTValues.EV]);
-    event.recipes.gtceu.electric_blast_furnace(`aguilarite_decomp`)
+    event.recipes.gtceu.electric_blast_furnace(id(`aguilarite_decomp`))
         .itemInputs(`5x gtceu:aguilarite_dust`)
         .inputFluids('gtceu:carbon_acid 1000')
         .outputFluids('gtceu:hydrogen_sulfide 1000','gtceu:carbon_dioxide','gtceu:oxygen 1000')
@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
         .duration(200)
         .blastFurnaceTemp(3249)
         .EUt(GTValues.VHA[GTValues.EV]);
-    event.recipes.gtceu.electric_blast_furnace(`stibiopalladinite_decomp`)
+    event.recipes.gtceu.electric_blast_furnace(id(`stibiopalladinite_decomp`))
         .itemInputs(`7x gtceu:stibiopalladinite_dust`)
         .inputFluids('gtceu:carbon_acid 1000')
         .outputFluids('gtceu:steam 1000','gtceu:carbon_dioxide')

@@ -181,14 +181,14 @@ ServerEvents.recipes(event => {
 //   }).id('start:shaped/pressure_cracker');
 
 //   ['diamond', 'emerald', 'ruby', 'green_sapphire', 'sapphire', 'quartzite', 'certus_quartz', 'blue_topaz', 'topaz', 'amethyst'].forEach(type => {
-//     event.recipes.gtceu.heated_cracking_unit(`${type}_cracking`)
+//     event.recipes.gtceu.heated_cracking_unit(id(`${type}_cracking`))
 //       .itemInputs(`kubejs:${type}_geode`)
 //       .itemOutputs(`kubejs:cracked_${type}_geode`)
 //       .blastFurnaceTemp(1800)
 //       .duration(600)
 //       .EUt(60);
 
-//     event.recipes.gtceu.pressure_cracker(`${type}_cracking`)
+//     event.recipes.gtceu.pressure_cracker(id(`${type}_cracking`))
 //       .itemInputs(`kubejs:${type}_geode`)
 //       .itemOutputs(`kubejs:cracked_${type}_geode`)
 //       .blastFurnaceTemp(1800)
@@ -198,7 +198,7 @@ ServerEvents.recipes(event => {
 
 //   //crushing
 //   ['diamond', 'emerald', 'ruby', 'green_sapphire', 'sapphire', 'quartzite', 'certus_quartz', 'blue_topaz', 'topaz', 'amethyst'].forEach(type => {
-//     event.recipes.gtceu.macerator(`cracked_${type}_geode_crushing`)
+//     event.recipes.gtceu.macerator(id(`cracked_${type}_geode_crushing`))
 //         .itemInputs(`kubejs:cracked_${type}_geode`)
 //         .itemOutputs(`2x gtceu:crushed_${type}_ore`)
 //         .chancedOutput(`gtceu:crushed_${type}_ore`, 5000, 1500)

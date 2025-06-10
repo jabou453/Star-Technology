@@ -9,5 +9,6 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
     elem('enriched_estalt', 133, 212, 'El+');
     elem('calamatium', 134, 211, 'Ct');
     elem('isovol', 135, 221, 'Is');
+    elem('ancient_netherite', 124, 295, 'Nr+');
 
 });

@@ -26,7 +26,7 @@ input.forEach(i=>{
     event.shaped(Item.of(`gtceu:${i.tier}_machine_casing`), 
         ['PPP','PWP','PPP'], 
         {P: `gtceu:${i.main}_plate`,W: '#forge:tools/wrenches'}).id(`start:shaped/${i.tier}_machine_casing`);
-    event.recipes.gtceu.assembler(`${i.tier}_machine_casing`) 
+    event.recipes.gtceu.assembler(id(`${i.tier}_machine_casing`)) 
         .itemInputs(`8x gtceu:${i.main}_plate`) 
         .circuit(8) 
         .itemOutputs(`gtceu:${i.tier}_machine_casing`) 
@@ -35,7 +35,7 @@ input.forEach(i=>{
     event.shaped(Item.of(`gtceu:${i.tier}_machine_hull`),
         ['   ','LPL','CMC'],
         {P: `gtceu:${i.main}_plate`,L: `gtceu:${i.plastic}_plate`,C: `gtceu:${i.cable}_single_cable`, M: `gtceu:${i.tier}_machine_casing`}).id(`start:shaped/${i.tier}_machine_hull`);
-    event.recipes.gtceu.assembler(`${i.tier}_machine_hull`) 
+    event.recipes.gtceu.assembler(id(`${i.tier}_machine_hull`)) 
         .itemInputs(`gtceu:${i.tier}_machine_casing`, `2x gtceu:${i.cable}_single_cable`) 
         .inputFluids(`gtceu:${i.plastic} 288`) 
         .itemOutputs(`gtceu:${i.tier}_machine_hull`) 
@@ -176,7 +176,7 @@ input.forEach(i=>{
 
     const energyIO = [{type:'input',powerTr:'single_cable',math4a:'4',laserType:'target',laserPart:'sensor'},{type:'output',powerTr:'spring',math4a:'1',laserType:'source',laserPart:'emitter'}]
     energyIO.forEach(e=>{
-    event.recipes.gtceu.assembly_line(`${i.tier}_energy_${e.type}_hatch`)
+    event.recipes.gtceu.assembly_line(id(`${i.tier}_energy_${e.type}_hatch`))
         .itemInputs(`gtceu:${i.tier}_machine_hull`,`4x gtceu:${i.cable}_${e.powerTr}`,`2x ${i.chip}_chip`,`#gtceu:circuits/${i.tier}`,`2x kubejs:${i.tier}_voltage_coil`)
         .inputFluids(`gtceu:sodium_potassium ${i.math*4000+12000}`, `gtceu:indium_tin_lead_cadmium_soldering_alloy ${1440*(2**i.math)}`)
         .itemOutputs(`gtceu:${i.tier}_energy_${e.type}_hatch`)
@@ -187,32 +187,32 @@ input.forEach(i=>{
                 .CWUt(i.math*64+64))
         .duration(800)
         .EUt(491520*(4**i.math));
-    event.recipes.gtceu.assembler(`${i.tier}_energy_${e.type}_hatch_4a`)
+    event.recipes.gtceu.assembler(id(`${i.tier}_energy_${e.type}_hatch_4a`))
         .itemInputs(`gtceu:${i.tier}_energy_${e.type}_hatch`,`2x gtceu:${i.cable}_quadruple_wire`,`2x gtceu:${i.main}_plate`)
         .itemOutputs(`gtceu:${i.tier}_energy_${e.type}_hatch_4a`)
         .duration(100)
         .EUt(122880*e.math4a*(4**i.math));
-    event.recipes.gtceu.assembler(`${i.tier}_energy_${e.type}_hatch_16a`)
+    event.recipes.gtceu.assembler(id(`${i.tier}_energy_${e.type}_hatch_16a`))
         .itemInputs(`gtceu:${i.tier}_transformer_1a`,`gtceu:${i.tier}_energy_${e.type}_hatch_4a`,`2x gtceu:${i.cable}_octal_wire`,`4x gtceu:${i.main}_plate`)
         .itemOutputs(`gtceu:${i.tier}_energy_${e.type}_hatch_16a`)
         .duration(200)
         .EUt(491520*(4**i.math));
-    event.recipes.gtceu.assembler(`${i.tier}_substation_${e.type}_hatch_64a`)
+    event.recipes.gtceu.assembler(id(`${i.tier}_substation_${e.type}_hatch_64a`))
         .itemInputs(`gtceu:${i.tier}_transformer_16a`,`gtceu:${i.tier}_energy_${e.type}_hatch_16a`,`2x gtceu:${i.cable}_hex_wire`,`6x gtceu:${i.main}_plate`)
         .itemOutputs(`gtceu:${i.tier}_substation_${e.type}_hatch_64a`)
         .duration(400)
         .EUt(491520*(4**i.math));
-    event.recipes.gtceu.assembler(`${i.tier}_256a_laser_${e.laserType}_hatch`)
+    event.recipes.gtceu.assembler(id(`${i.tier}_256a_laser_${e.laserType}_hatch`))
         .itemInputs(`gtceu:${i.tier}_machine_hull`,'gtceu:diamond_lens',`gtceu:${i.tier}_${e.laserPart}`,`gtceu:${i.tier}_electric_pump`,`4x gtceu:${i.cable}_single_cable`)
         .itemOutputs(`gtceu:${i.tier}_256a_laser_${e.laserType}_hatch`)
         .duration(300) .circuit(1)
         .EUt(491520*(4**i.math));
-    event.recipes.gtceu.assembler(`${i.tier}_1024a_laser_${e.laserType}_hatch`)
+    event.recipes.gtceu.assembler(id(`${i.tier}_1024a_laser_${e.laserType}_hatch`))
         .itemInputs(`gtceu:${i.tier}_machine_hull`,'2x gtceu:diamond_lens',`2x gtceu:${i.tier}_${e.laserPart}`,`2x gtceu:${i.tier}_electric_pump`,`4x gtceu:${i.cable}_double_cable`)
         .itemOutputs(`gtceu:${i.tier}_1024a_laser_${e.laserType}_hatch`)
         .duration(600) .circuit(2)
         .EUt(491520*(4**i.math));
-    event.recipes.gtceu.assembler(`${i.tier}_4096a_laser_${e.laserType}_hatch`)
+    event.recipes.gtceu.assembler(id(`${i.tier}_4096a_laser_${e.laserType}_hatch`))
         .itemInputs(`gtceu:${i.tier}_machine_hull`,'4x gtceu:diamond_lens',`4x gtceu:${i.tier}_${e.laserPart}`,`4x gtceu:${i.tier}_electric_pump`,`4x gtceu:${i.cable}_quadruple_cable`)
         .itemOutputs(`gtceu:${i.tier}_4096a_laser_${e.laserType}_hatch`)
         .duration(1200) .circuit(3)
@@ -224,21 +224,21 @@ input.forEach(i=>{
 
     const io = [{typeIO:'input',circ:'1'},{typeIO:'output',circ:'2'}]
     io.forEach(n=>{
-    event.recipes.gtceu.assembler(`uhv_${n.typeIO}_bus`)
+    event.recipes.gtceu.assembler(id(`uhv_${n.typeIO}_bus`))
         .itemInputs(`gtceu:uhv_machine_hull`, `gtceu:mv_super_chest`)
         .inputFluids('gtceu:polyether_ether_ketone 216')
         .itemOutputs(`gtceu:uhv_${n.typeIO}_bus`)
         .duration(300)
         .EUt(GTValues.VA[GTValues.UHV])
         .circuit(n.circ);
-    event.recipes.gtceu.assembler(`uhv_${n.typeIO}_hatch`)
+    event.recipes.gtceu.assembler(id(`uhv_${n.typeIO}_hatch`))
         .itemInputs(`gtceu:uhv_machine_hull`, `gtceu:mv_super_tank`)
         .inputFluids('gtceu:polyether_ether_ketone 216')
         .itemOutputs(`gtceu:uhv_${n.typeIO}_hatch`)
         .duration(300)
         .EUt(GTValues.VA[GTValues.UHV])
         .circuit(n.circ);
-    event.recipes.gtceu.assembler(`uhv_dual_${n.typeIO}_hatch`)
+    event.recipes.gtceu.assembler(id(`uhv_dual_${n.typeIO}_hatch`))
         .itemInputs(`gtceu:uhv_${n.typeIO}_bus`,`gtceu:uhv_${n.typeIO}_hatch`,'gtceu:zapolgium_nonuple_fluid_pipe', '3x gtceu:neutronium_frame')
         .inputFluids('gtceu:polyether_ether_ketone 864')
         .itemOutputs(`gtceu:uhv_dual_${n.typeIO}_hatch`)
@@ -293,7 +293,7 @@ input.forEach(i=>{
         ['SCE','CHC','BCB'], 
         {S: `gtceu:${t.tier}_sensor`, E: `gtceu:${t.tier}_emitter`, C: `#gtceu:circuits/${t.tier1up}`, H: `gtceu:${t.tier}_machine_hull`, B: `gtceu:${t.cable}_double_cable`}).id(`start:shaped/${t.tier}_parallel_hatch`);
     
-        event.recipes.gtceu.assembler(`${t.tier}_absolute_parallel_hatch`)
+        event.recipes.gtceu.assembler(id(`${t.tier}_absolute_parallel_hatch`))
             .itemInputs(
                 `start_core:${t.tier}_parallel_hatch`,
                 `4x gtceu:${t.tier}_sensor`, 

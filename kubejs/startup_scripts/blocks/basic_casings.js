@@ -43,4 +43,14 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:needs_iron_tool')
         .textureAll('kubejs:block/casings/machine_casing_peek');
 
+        event.create('fluix_steel_casing')
+            .displayName('Fluix Steel Casing')
+            .hardness(5)
+            .resistance(1)
+            .soundType('metal')
+            .requiresTool(true)
+            .tagBlock('mineable/pickaxe')
+            .tagBlock('minecraft:needs_iron_tool')
+            .textureAll('kubejs:block/casings/fluix_casing');
+
 });

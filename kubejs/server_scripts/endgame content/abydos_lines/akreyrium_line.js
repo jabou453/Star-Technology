@@ -247,7 +247,7 @@ ServerEvents.recipes(event => {
     
     // Injection
     const add_injection_recipe = (akreyType, amount, catalyst) => {
-        event.recipes.gtceu.injection_mixer(`${akreyType}_${amount}_${catalyst}`)
+        event.recipes.gtceu.injection_mixer(id(`${akreyType}_${amount}_${catalyst}`))
             .itemInputs(`1x kubejs:${catalyst}_injection_catalyst`)
             .itemOutputs('1x kubejs:damaged_injection_catalyst')
             .inputFluids(`gtceu:sparse_${akreyType}_akreyrium 1000`)

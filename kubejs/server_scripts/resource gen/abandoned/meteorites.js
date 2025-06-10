@@ -75,7 +75,7 @@
 //         .EUt(100);
 
 //     function drone(meteorite, fuel, duration, energy){
-//         event.recipes.gtceu.drone_pad(`${meteorite}_meteorite`)
+//         event.recipes.gtceu.drone_pad(id(`${meteorite}_meteorite`))
 //             .notConsumable(`kubejs:${meteorite}_scan_file`)
 //             .itemInputs('kubejs:cargo_drone')
 //             .inputFluids(`gtceu:rocket_fuel ${fuel}`)
@@ -83,7 +83,7 @@
 //             .duration(duration)
 //             .EUt(energy);
 
-//         event.recipes.gtceu.docking_station(`${meteorite}_meteorite`)
+//         event.recipes.gtceu.docking_station(id(`${meteorite}_meteorite`))
 //             .notConsumable(`kubejs:${meteorite}_scan_file`)
 //             .itemInputs('kubejs:cargo_drone')
 //             .inputFluids(`gtceu:rocket_fuel ${fuel}`)
@@ -98,7 +98,7 @@
 //     drone('bastnasite', 8000, 6000, 512);
 
 //     function macerate(type, rock, ore, dust, duration, eu){
-//         event.recipes.gtceu.macerator(`${type}_meteorite`)
+//         event.recipes.gtceu.macerator(id(`${type}_meteorite`))
 //             .itemInputs(`kubejs:${type}_meteorite`)
 //             .itemOutputs(`64x ${rock}`, `5x gtceu:crushed_${ore}_ore`, `2x gtceu:${dust}_dust`)
 //             .duration(duration)

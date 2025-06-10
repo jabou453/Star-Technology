@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
     //Better Vacuum Freezer
         event.remove({id: `gtceu:vacuum_freezer/${m}`})
         event.remove({id: `gtceu:vacuum_freezer/cool_hot_${m}_ingot`})
-        event.recipes.gtceu.vacuum_freezer(`${m}_from_molten`)
+        event.recipes.gtceu.vacuum_freezer(id(`${m}_from_molten`))
             .inputFluids(`gtceu:molten_${m} 144`)
             .inputFluids('gtceu:superstate_helium_3 500')
             .notConsumable('gtceu:ingot_casting_mold')
@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
             .duration(900)
             .EUt(GTValues.V[GTValues.UV]);
     
-        event.recipes.gtceu.vacuum_freezer(`${m}_from_hot_ingot`)
+        event.recipes.gtceu.vacuum_freezer(id(`${m}_from_hot_ingot`))
             .itemInputs(`gtceu:hot_${m}_ingot`)
             .inputFluids('gtceu:superstate_helium_3 500')
             .itemOutputs(`gtceu:${m}_ingot`)
@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.V[GTValues.UV]);
 
     //Super Cooler
-    event.recipes.gtceu.super_cooler(`${m}`)
+    event.recipes.gtceu.super_cooler(id(`${m}`))
         .inputFluids(`gtceu:${m}_plasma 144`)
         .inputFluids('gtceu:bec_og 250')
         .outputFluids(`gtceu:molten_${m} 144`)

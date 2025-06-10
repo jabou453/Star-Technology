@@ -48,7 +48,7 @@ ServerEvents.recipes(event => {
     }
 
     //Usage
-    event.recipes.gtceu.latex_plantation(`latex`)
+    event.recipes.gtceu.latex_plantation(id(`latex`))
 		.notConsumable('gtceu:wood_screw')
 		.outputFluids(`thermal:latex 100`)
 		.duration(160);

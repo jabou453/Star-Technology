@@ -185,6 +185,10 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
     GTMaterials.get('netherite_hexammine_sulfate').setFormula('[*Nr*(NH3)6]SO4');
     
+    GTMaterials.get('netherite').setFormula('Nr');
+    GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
+    GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
+
 });
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -239,6 +243,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('netherite', no_decomp);
     matmod('echo_shard', lens);
     matmod('copper', gear);
+    matmod('vanadium_gallium', fine_wire);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
@@ -389,8 +394,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).fluid().color(color);
     }
 
-
-    elemIngot('magnetic_zapolgium', GTElements.get('zapolgium'), 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
+    elemIngot('magnetic_zapolgium', 'zapolgium', 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
     elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3750], []);
 
@@ -632,7 +636,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         //Extended Debris
         compDustLiquid('ancient_debris', ['1x mystery'], 0x603d1a, [no_decomp]);
 
-        compIngot('ancient_netherite', ['4x gold','4x mystery'], 0x46271b, [], [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp]);
+        elemIngot('ancient_netherite', 'ancient_netherite', 0x46271b, DULL, [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp]);
 
         //Atomic Nether Dust Line
         compDustIcon('atomic_nether_sludge', ['1x mystery','1x mystery','1x mystery','1x mystery'], 0x883039, RADIOACTIVE, [no_decomp]);
@@ -779,9 +783,34 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Misc
     compIngotLiquid('indium_tin_lead_cadmium_soldering_alloy', ['14x indium', '3x tin', '2x lead', '1x cadmium'], 0xa6a6a6, DULL, [], []);
 
-    compIngotLiquid('star_steel', ['2x steel', '1x mystery'], 0xccffcc, METALLIC, [], [no_decomp, plates, rod, frame]);
-
     compIngotLiquid('thorium_plut_duranide_241',  ['4x thorium', '1x duranium', '3x plutonium_241'], 0xEC342A, [], [10199, 'highest', VA('uv'), 850], [fine_wire, no_decomp, foil]);
+
+
+    // AE2 (constants left due to sec color components)
+    elemFluid('skystone', 'skystone', 0x414445, []);
+
+    event.create('fluix')
+        .element(GTElements.get('fluix'))
+
+    compIngotLiquid('sky_steel', ['1x skystone', '2x steel'], 0xCCFFCC, METALLIC, [1600, 'low', VA('mv'), 400], [no_decomp, plates, rod, frame]);
+    
+    const skystone_alloys = (material, color, icon) => {
+        event.create(`${material}_skystone_alloy`).ingot().components('skystone', `2x ${material}`).color(color).secondaryColor(0x414445).iconSet(icon).blastTemp(1600, 'low', VA('mv'), 200).flags(no_decomp, plates);
+    }
+    
+    skystone_alloys('gold', 0xCFBE38, 'METALLIC');
+    skystone_alloys('diamond', 0x9BD6D8, 'SHINY');
+    skystone_alloys('certus_quartz', 0x67D6DB, 'DULL');
+
+    compIngotLiquid('fluix_steel', ['1x fluix', '2x steel'], 0x8F5CCB, METALLIC, [1900, 'mid', VA('mv'), 400], [no_decomp, plates, rod, frame, foil]);
+
+    const netherite_skystone_alloys = (material, color, icon) => {
+        event.create(`netherite_${material}_skystone_alloy`).ingot().fluid().components('4x netherite', '2x diamond_skystone_alloy', `${material}_skystone_alloy`)
+            .color(color).secondaryColor(0x0D0702).iconSet(icon).flags(no_decomp, plates, rod, frame).blastTemp(4000, 'high', VA('iv'), 800);
+    }
+    
+    netherite_skystone_alloys('gold', 0x978B2D, 'METALLIC');
+    netherite_skystone_alloys('certus_quartz', 0x396A6C, 'DULL');
 
     // PEEK plastic Line
     compDust('disodium_salt_of_hydroquinone', ['6x carbon','4x hydrogen','2x oxygen','2x sodium'], 0xeaeaf9, no_decomp);
