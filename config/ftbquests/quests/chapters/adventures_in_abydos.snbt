@@ -931,7 +931,7 @@
 		}
 		{
 			dependencies: ["30C974448C57F0EC"]
-			description: ["The &2UEV&r superconductor, can hold 1024 amps in a 1x wire"]
+			description: ["The &2UEV&r superconductor, can hold 256 amps in a 1x wire"]
 			id: "1C0B16612DBBE8CA"
 			rewards: [{
 				id: "7EE50E0E44FBAE00"
@@ -1435,7 +1435,7 @@
 					type: "item"
 				}
 			]
-			x: 5.5d
+			x: 7.5d
 			y: 7.0d
 		}
 		{
@@ -1763,7 +1763,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 7.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["4F3EE28B3F38FC85"]
@@ -2022,8 +2022,167 @@
 				item: "gtceu:bulk_ore_processing_array"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 5.0d
+			x: 2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7F72F9E28713D965"]
+			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
+			id: "7D29B653F8C14ABC"
+			rewards: [{
+				id: "5B3778E2E7B9B0E4"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3B32A5E4F0DFED06"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						display: {
+							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
+						}
+						items: [
+							{
+								Count: 1b
+								id: "start_core:bacteria_methane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_octane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butadiene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_benzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_toluene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetone"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetic_acid"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methyl_acetate"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_creosote"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_phenol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_dimethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_naphthalene"
+								tag: { }
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Bacterial Colonies"
+			x: 1.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"5E7153B7A10FC241"
+				"59B0F5DB2C1E96DC"
+			]
+			icon: "minecraft:netherrack"
+			id: "1E3EF64C0A4EE438"
+			optional: true
+			rewards: [{
+				id: "5440DF6C322F753F"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "octagon"
+			size: 1.0d
+			subtitle: "Not Yet Accessible"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:netherrack"
+				id: "537A1229A7EED7D1"
+				title: "To The Nether"
+				type: "dimension"
+			}]
+			x: 11.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["7F72F9E28713D965"]
@@ -2213,6 +2372,128 @@
 			title: "Advanced Singularities"
 			x: 8.5d
 			y: -4.0d
+		}
+		{
+			dependencies: [
+				"4F3EE28B3F38FC85"
+				"2D064F759D13FE4B"
+			]
+			description: [
+				"Have you ever thought that wires were a little... excessive. Well now they arent needed."
+				""
+				"If you love using Converters after &aUEV&r that no longer becomes an as direct solution."
+				""
+				""
+				"{ \"text\": \"Read more about how wireless power works here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2F63F0E239737E38\" } }"
+			]
+			id: "141911C5DD68CD2A"
+			rewards: [{
+				id: "73B232401A84DDAC"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "66552A0737028183"
+				item: "start_core:dream_link_node"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["141911C5DD68CD2A"]
+			description: [
+				"&lWireless Power&r Adds the Following for &3UV&f and &4Higher&f:&r"
+				""
+				"- Covers: Let your single blocks run from anywhere in the Dream Link's range (Beware of Overvolting)"
+				""
+				"- Hatches: All your regular hatches and the brand new addition of 64a Hatches"
+			]
+			id: "659690E81B3E3AE7"
+			rewards: [{
+				count: 2
+				id: "00C995FE80302AE3"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "55F419E4EF98D96F"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							display: {
+								Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"UV Wireless Power\"}"
+							}
+							items: [
+								{
+									Count: 1b
+									id: "start_core:uv_2a_dream_link_cover_item"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_2a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_4a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_16a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_64a_dream_link_energy_hatch"
+								}
+							]
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6F69C60333996AA1"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							display: {
+								Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"UHV Wireless Power\"}"
+							}
+							items: [
+								{
+									Count: 1b
+									id: "start_core:uhv_2a_dream_link_cover_item"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_2a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_4a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_16a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_64a_dream_link_energy_hatch"
+								}
+							]
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["3479CEBD73550718"]

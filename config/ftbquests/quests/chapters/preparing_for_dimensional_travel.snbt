@@ -508,7 +508,7 @@
 		}
 		{
 			dependencies: ["52B553FDB34B1475"]
-			description: ["The secondary &3UV&r superconductor, can hold 256 amps in a 1x cable."]
+			description: ["The secondary &3UV&r superconductor, can hold 128 amps in a 1x cable."]
 			id: "622066696CCF9754"
 			rewards: [{
 				id: "17C57D476BB71F90"
@@ -572,7 +572,7 @@
 		}
 		{
 			dependencies: ["253AECE450920D99"]
-			description: ["&4UHV&r superconductor, can hold 512 amps in a 1x cable."]
+			description: ["&4UHV&r superconductor, can hold 192 amps in a 1x cable."]
 			id: "55102B0E5D0238E1"
 			rewards: [{
 				id: "664E3AF7B9872F12"

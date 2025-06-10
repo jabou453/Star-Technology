@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     ['mythrillic','adamantamite'].forEach(type=>{
-        event.recipes.gtceu.heat_chamber(`activated_nether_by_enriched_${type}_to_atomic_nether_sludge`)
+        event.recipes.gtceu.heat_chamber(id(`activated_nether_by_enriched_${type}_to_atomic_nether_sludge`))
             .inputFluids(`gtceu:enriched_${type}_mixture 1000`)
             .itemInputs('1x gtceu:activated_nether_dust')
             .outputFluids(`gtceu:molten_${type}_mixture 1000`)
@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UHV]); 
     });
 
-    event.recipes.gtceu.heat_chamber(`enriched_estaltadyne_mixture_to_solution`)
+    event.recipes.gtceu.heat_chamber(id(`enriched_estaltadyne_mixture_to_solution`))
         .inputFluids(`gtceu:enriched_estaltadyne_mixture 4000`)
         .itemInputs(`1x gtceu:polonium_dust`)
         .outputFluids(`gtceu:enriched_estaltadyne_solution 4000`)

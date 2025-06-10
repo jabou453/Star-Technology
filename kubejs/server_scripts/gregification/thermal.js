@@ -56,20 +56,21 @@ ServerEvents.recipes(event => {
         .EUt(30);
 
     // Dynamo new fuels and fuel recipes
-    event.recipes.thermal.compression_fuel('gtceu:creosote', 20000);
-    event.recipes.thermal.compression_fuel('gtceu:bio_diesel', 1024000);
-    event.recipes.thermal.compression_fuel('gtceu:diesel', 1920000);
-    event.recipes.thermal.compression_fuel('gtceu:cetane_boosted_diesel', 2560000);
-    event.recipes.thermal.compression_fuel('gtceu:gasoline', 6400000);
-    event.recipes.thermal.compression_fuel('gtceu:high_octane_gasoline', 12800000);
-    event.recipes.thermal.compression_fuel('gtceu:naphtha', 1280000);
-    event.recipes.gtceu.mixer(id('refined_fuel'))
-        .inputFluids('gtceu:light_fuel 1000', 'gtceu:heavy_fuel 1000')
-        .outputFluids('thermal:refined_fuel 2000')
-        .duration(20)
-        .circuit(0)
-        .EUt(30);
+    event.remove({type: 'thermal:compression_fuel', input: 'thermal:tree_oil'});
+    event.remove({type: 'thermal:compression_fuel', input: 'thermal:refined_fuel'});
+    event.recipes.thermal.compression_fuel('gtceu:bio_diesel', 512000);
+    event.recipes.thermal.compression_fuel('gtceu:diesel', 960000);
+    event.recipes.thermal.compression_fuel('gtceu:cetane_boosted_diesel', 128000);
+    event.recipes.thermal.compression_fuel('gtceu:gasoline', 320000);
+    event.recipes.thermal.compression_fuel('gtceu:high_octane_gasoline', 6400000);
+    event.recipes.thermal.compression_fuel('gtceu:naphtha', 480000);
 
+    event.remove({id: 'gtceu:combustion_generator/naphtha'});
+    event.recipes.gtceu.combustion_generator(id('naphtha'))
+        .inputFluids('gtceu:naphtha 4')
+        .duration(30)
+        .EUt(-32);
+    
     event.recipes.gtceu.brewery(id('sunflower_oil'))
         .itemInputs('16x minecraft:sunflower')
         .outputFluids('thermal_extra:sunflower_oil 500')
@@ -96,8 +97,132 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .duration(600)
         .EUt(325);
+    
+    event.recipes.thermal.lapidary_fuel('gtceu:diatron_gem', 750000);
+    event.recipes.thermal.lapidary_fuel('gtceu:flawless_diatron_gem', 750000 * 2.5);
+    event.recipes.thermal.lapidary_fuel('gtceu:exquisite_diatron_gem', 750000 * 6.25);
+    event.remove({type: 'thermal:lapidary_fuel', input: 'minecraft:diamond'});
+    event.recipes.thermal.lapidary_fuel('minecraft:diamond', 300000);
 
-    // event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores'); // Got Packmoded
+    event.remove({mod: 'systeams'});
+       
+    event.custom({
+        'type': 'systeams:steam',
+        'ingredient': {
+            'fluid_tag': 'forge:steam',
+            'amount': 1000
+        },
+        'energy': 1000
+    });
+
+    event.custom({
+        'type': 'systeams:boiling',
+        'ingredient': {
+            'fluid': `minecraft:water`,
+            'amount': 100
+        },
+        'result': {
+            'fluid': `systeams:steam`,
+            'amount': 400
+        }
+        });
+
+    event.custom({
+        'type': 'systeams:boiling',
+        'ingredient': {
+            'fluid_tag': `forge:steam`,
+            'amount': 96
+        },
+        'result': {
+            'fluid': `systeams:steamier`,
+            'amount': 120
+        }
+        });
+
+        let steamToIer = new JSONObject()
+        steamToIer.add('amount', 960)
+        steamToIer.add('value', {tag:'forge:steam'})
+
+    event.recipes.gtceu.fluid_heater(id(`steam_tag`))
+        .inputFluids(FluidIngredientJS.of(steamToIer))
+        .outputFluids(`systeams:steamier 1200`)
+        .duration(30)
+        .EUt(30);
+   
+    const SysteamSteams = (type, prior, scale) => {    
+    event.recipes.gtceu.steam_turbine(id(`${type}`))
+        .inputFluids(`systeams:${type} ${640 - 40 * scale}`) 
+        .outputFluids(`gtceu:distilled_water ${scale + 4}`)
+        .duration(10 - scale)
+        .EUt(-32);
+
+    event.custom({
+        'type': 'systeams:steam',
+        'ingredient': {
+            'fluid': `systeams:${type}`,
+            'amount': 1000
+        },
+        'energy': 1000
+    });
+
+    if (type !== 'steamier') {
+    event.custom({
+        'type': 'systeams:boiling',
+        'ingredient': {
+            'fluid': `systeams:${prior}`,
+            'amount': 96
+        },
+        'result': {
+            'fluid': `systeams:${type}`,
+            'amount': 120
+        }
+        });
+    event.recipes.gtceu.fluid_heater(id(`${type}`))
+        .inputFluids(`systeams:${prior} 960`)
+        .outputFluids(`systeams:${type} 1200`)
+        .duration(30)
+        .EUt(30);
+    }}
+    SysteamSteams('steamier', 'steam', 1);
+    SysteamSteams('steamiest', 'steamier', 2);
+    SysteamSteams('steamiester', 'steamiest', 3);
+        
+    event.recipes.gtceu.mixer(id('diatron_dust'))
+        .itemInputs('1x gtceu:energium_dust', '2x gtceu:diamond_dust')
+        .itemOutputs('3x gtceu:diatron_dust')
+        .duration(120)
+        .EUt(480);
+
+    event.recipes.gtceu.autoclave(id('diatron_dis_water'))
+        .itemInputs('gtceu:diatron_dust')
+        .inputFluids('gtceu:distilled_water 50')
+        .itemOutputs('gtceu:diatron_gem')
+        .duration(600)
+        .EUt(24);
+
+    event.recipes.gtceu.autoclave(id('diatron_water'))
+        .itemInputs('gtceu:diatron_dust')
+        .inputFluids('minecraft:water 250')
+        .chancedOutput('gtceu:diatron_gem', 7000, 1000)
+        .duration(1200)
+        .EUt(24);
+
+    event.remove({id: 'gtceu:laser_engraver/engrave_diatron_flawless_gem_to_gem'});
+    event.remove({id: 'gtceu:laser_engraver/engrave_diatron_exquisite_gem_to_flawless_gem'});
+    event.recipes.gtceu.laser_engraver(id('engrave_diatron_flawless_gem_to_gem'))
+        .itemInputs('2x gtceu:diatron_gem')
+        .notConsumable('#forge:lenses/white')
+        .itemOutputs('gtceu:flawless_diatron_gem')
+        .duration(200)
+        .EUt(240);
+    event.recipes.gtceu.laser_engraver(id('engrave_diatron_exquisite_gem_to_flawless_gem'))
+        .itemInputs('2x gtceu:flawless_diatron_gem')
+        .notConsumable('#forge:lenses/white')
+        .itemOutputs('gtceu:exquisite_diatron_gem')
+        .duration(200)
+        .EUt(240);
+
+    // === === ===
 
     event.replaceInput({ id: 'thermal:device_water_gen' },
         'minecraft:copper_ingot',
@@ -165,7 +290,7 @@ ServerEvents.recipes(event => {
         {id: 'twinite', glass: 'thermal_extra:twinite', base: 'gtceu:laminated', fluid: 'gtceu:twinite 144', voltage: 'luv'},
         {id: 'dragonsteel', glass: 'thermal_extra:dragonsteel', base: 'gtceu:fusion', fluid: 'gtceu:dragonsteel 144', voltage: 'zpm'}
     ].forEach(type=> {
-        event.recipes.gtceu.fluid_solidifier(`${type.id}_glass`)
+        event.recipes.gtceu.fluid_solidifier(id(`${type.id}_glass`))
             .itemInputs(`${type.base}_glass`)
             .inputFluids(type.fluid)
             .itemOutputs(`${type.glass}_glass`)

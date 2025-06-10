@@ -1,4 +1,3 @@
-
 StartupEvents.registry('item', event => {
 
     event.create('naquadic_netherite_fibers')
