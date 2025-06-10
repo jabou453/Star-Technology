@@ -183,8 +183,8 @@
 				item: "gtceu:zpm_energy_input_hatch"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 3.0d
+			x: 6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["2587E109968EFBB4"]
@@ -252,7 +252,7 @@
 				}
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: 1.0d
 		}
 		{
@@ -292,7 +292,7 @@
 				item: "gtceu:twinite_ingot"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: 3.0d
 		}
 		{
@@ -335,15 +335,15 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
-			y: 0.0d
+			x: -6.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
 				"79428BAEAA7856E1"
 				"6AA4CC44DE1C8E1E"
 			]
-			description: ["This one has a build in Jetpack."]
+			description: ["This one has a built-in Jetpack."]
 			id: "1602A4A4D00C9724"
 			rewards: [{
 				id: "3BD74F896357D2D8"
@@ -360,8 +360,8 @@
 				}
 				type: "item"
 			}]
-			x: -5.0d
-			y: 2.0d
+			x: -7.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3B2D79D40B9617D5"]
@@ -379,13 +379,13 @@
 				item: "gtceu:rhodium_plated_palladium_ingot"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: 1.0d
 		}
 		{
 			dependencies: ["53A9F3758C218CDC"]
 			description: [
-				"Paralleling allows you to do more a recipe at once."
+				"Paralleling allows you to do more batches of a recipe at once."
 				""
 				""
 				"{ \"text\": \"Read More About It Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"70EE9D4811A27CF2\" } }"
@@ -407,7 +407,10 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["020048FAC9576691"]
+			dependencies: [
+				"020048FAC9576691"
+				"53A9F3758C218CDC"
+			]
 			description: ["A multiblock acting as a gigantic battery. Later on you &lwill&r need this."]
 			id: "5B72F7526494EAEC"
 			rewards: [{
@@ -423,49 +426,8 @@
 				item: "gtceu:power_substation"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -5.0d
-		}
-		{
-			dependencies: ["30F3A744CD40A14A"]
-			description: ["A type of reinforced Glass, with better sealing capacities."]
-			id: "020048FAC9576691"
-			rewards: [{
-				id: "64A00C5F06E018B8"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "6FF7150FB49BBC1A"
-				item: "gtceu:laminated_glass"
-				type: "item"
-			}]
-			x: -8.0d
-			y: -3.0d
-		}
-		{
-			dependencies: ["3306CAE5E57839A2"]
-			description: [
-				"A fun chemical line to close off the first Processing Lines chapter."
-				""
-				"{ \"text\": \"Chemical Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"3306CAE5E57839A2\" } }"
-			]
-			id: "30F3A744CD40A14A"
-			rewards: [{
-				id: "5C35BB521BF7274D"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				id: "4C46EC3EC41D6F8A"
-				item: "gtceu:polyvinyl_butyral_plate"
-				type: "item"
-			}]
-			x: -10.0d
-			y: -3.0d
+			x: -6.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -559,8 +521,8 @@
 				}
 			]
 			title: "EV Substation Hatches"
-			x: -10.0d
-			y: -5.0d
+			x: -8.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["3B2D79D40B9617D5"]
@@ -614,7 +576,7 @@
 				item: "gtceu:luv_sensor"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -8.0d
 			y: -1.0d
 		}
 		{
@@ -633,10 +595,13 @@
 				type: "item"
 			}]
 			x: -8.0d
-			y: -1.0d
+			y: -3.0d
 		}
 		{
-			dependencies: ["127464E65103D2B0"]
+			dependencies: [
+				"127464E65103D2B0"
+				"19BBC64C57C460E6"
+			]
 			description: [
 				"This multiblock provides computation to the research station. By playing around with components, you can generate enough computation to research things."
 				""
@@ -659,13 +624,14 @@
 				item: "gtceu:high_performance_computation_array"
 				type: "item"
 			}]
-			x: -10.0d
-			y: -1.0d
+			x: -8.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
 				"2658276EC0740F69"
 				"127464E65103D2B0"
+				"19BBC64C57C460E6"
 			]
 			description: ["Scanner are not powerful enough to research high tier technologies. This multiblock can research almost anything!"]
 			id: "19D9B5FFD3D767C2"
@@ -680,8 +646,8 @@
 				item: "gtceu:research_station"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 1.0d
+			x: -10.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["5AD5C15F6C0F4BC2"]
@@ -698,8 +664,8 @@
 				item: "gtceu:luv_scanner"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 1.0d
+			x: -10.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["67ABB3BF6D0C183B"]
@@ -807,13 +773,14 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
+			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				id: "73D704EF2E4A92C8"
 				item: "gtceu:exquisite_emerald_gem"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: -1.0d
 		}
 		{
@@ -913,7 +880,7 @@
 		}
 		{
 			dependencies: ["4E546CE15A52D7DD"]
-			description: ["A stronger fiber based circuit board, made by layering multiple normal ones over eachother."]
+			description: ["A stronger fiber-based circuit board, made by layering multiple normal ones over eachother."]
 			hide_dependency_lines: true
 			id: "51C60C25C3C9C770"
 			rewards: [{
@@ -1143,6 +1110,7 @@
 		{
 			dependencies: ["36C01453717B249D"]
 			description: ["A precious metal made with 3 types of expensive resources. Used for &cZPM&r Field Generators and the second tier of Fusion Reactors."]
+			hide_dependent_lines: true
 			id: "19BBC64C57C460E6"
 			rewards: [{
 				id: "16D4F77CFAA94E4B"
@@ -1155,7 +1123,7 @@
 				item: "gtceu:uranium_rhodium_dinaquadide_ingot"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: -1.0d
 		}
 		{
@@ -1173,8 +1141,8 @@
 				item: "gtceu:naquadah_alloy_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 1.0d
+			x: 4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["65D76272BA5E67FC"]
@@ -1243,8 +1211,8 @@
 				item: "gtceu:trinium_coil_block"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 3.0d
+			x: 6.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["111033FEFA89BA91"]
@@ -1297,7 +1265,7 @@
 				item: "gtceu:zpm_energy_input_hatch_4a"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 8.0d
 			y: 5.0d
 		}
 		{
@@ -1315,7 +1283,7 @@
 				item: "gtceu:zpm_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 10.0d
 			y: 5.0d
 		}
 		{
@@ -1372,8 +1340,8 @@
 				item: "gtceu:indium_tin_barium_titanium_cuprate_ingot"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -1.0d
+			x: 4.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1403,7 +1371,7 @@
 			]
 			title: "UHPIC Chips"
 			x: 2.0d
-			y: -3.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["2911EC7333E0E9C5"]
@@ -1533,8 +1501,8 @@
 				item: "gtceu:naquadah_wafer"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -5.0d
+			x: 2.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["6131A76D203DE6AB"]
@@ -1626,7 +1594,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 5.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1716,7 +1684,7 @@
 			description: [
 				"Unfortunately, you can connect only one HPCA to the research station. However, this multiblock can route the computation from several HPCAs into the research station!"
 				""
-				"HPCA's will need bridging components to be able to connect and transmit CWU through these."
+				"HPCAs will need bridging components to be able to connect and transmit CWU through these."
 			]
 			id: "0687F0D2A9EC1AA4"
 			rewards: [{
@@ -1731,7 +1699,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 1.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -1739,7 +1707,7 @@
 				"182D948925141764"
 				"138E77CDBA50A619"
 			]
-			description: ["A machine capable of tearing space-time using the power of netherstars, allowing you to harvest Naquadah from it."]
+			description: ["A machine capable of tearing space-time using the power of Nether Stars, allowing you to harvest Naquadah from it."]
 			hide_dependency_lines: false
 			id: "1F416C7A641914EC"
 			rewards: [{
@@ -1826,7 +1794,7 @@
 		}
 		{
 			dependencies: ["7FD0034E639F3B2D"]
-			description: ["&cZPM&r superconductor, can hold 64 amps in a 1x cable."]
+			description: ["&cZPM&r superconductor, can hold 96 amps in a 1x cable."]
 			id: "3A603E70EB4B856F"
 			tasks: [{
 				id: "4380C92864BF9161"
@@ -1845,13 +1813,13 @@
 				item: "gtceu:twinite_single_wire"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["3325914DB92AEF1B"]
 			description: [
-				"&3UV&r superconductor, can hold 32 amps in a 1x cable."
+				"&3UV&r superconductor, can hold 48 amps in a 1x cable."
 				""
 				"Prismalium is not the only &3UV&r superconductor. There is also Melodium, which is shown in the next quest chapter."
 			]
@@ -1861,8 +1829,8 @@
 				item: "gtceu:prismalium_single_wire"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 5.0d
+			x: 8.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [

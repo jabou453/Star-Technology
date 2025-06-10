@@ -639,9 +639,9 @@
 			dependencies: ["6F05FAE3F5AAC357"]
 			description: [
 				"This machine can do 3 things."
-				"1. Reactive the Dormant Bacteria to a usable form"
-				"2. Mutate a bacteria so that it may have a new affinity"
-				"3. Mutate a bacteria so that it may be a new type"
+				"1. Reactivate the Dormant Bacteria to a usable form"
+				"2. Mutate bacteria so that it may have a new affinity"
+				"3. Mutate bacteria so that it may be a new type"
 				"With all of this and the breeder (more information there) you should be able to get the exact type of bacteria you desire."
 			]
 			id: "7F72F9E28713D965"
@@ -708,7 +708,7 @@
 		}
 		{
 			dependencies: ["7F72F9E28713D965"]
-			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
+			description: ["Awoken Bacteria. These come in all kinds of types and seem to produce some familiar liquids."]
 			id: "305974D431F17AF0"
 			rewards: [{
 				id: "0707F4889D91098E"
@@ -906,7 +906,7 @@
 				"4D04123F036F181E"
 				"1BE69DB2DFDC35C8"
 			]
-			description: ["A new Stellarium alloy, that is mixed with materials not normally found in your home isle."]
+			description: ["A new Stellarium alloy mixed with materials not normally found on your home isle."]
 			id: "30C974448C57F0EC"
 			rewards: [{
 				id: "470268845820F4F7"
@@ -923,7 +923,7 @@
 		}
 		{
 			dependencies: ["30C974448C57F0EC"]
-			description: ["The &2UEV&r superconductor, can hold 1024 amps in a 1x wire"]
+			description: ["The &2UEV&r superconductor, can hold 256 amps in a 1x wire"]
 			id: "1C0B16612DBBE8CA"
 			rewards: [{
 				id: "7EE50E0E44FBAE00"
@@ -942,6 +942,7 @@
 			dependencies: [
 				"7AC55BA8BDD0F3D2"
 				"4F3EE28B3F38FC85"
+				"5B91E94506FB37D6"
 			]
 			description: [
 				"A Fusion Reactor that can do parallels. Long gone are the days of excessive Fusion spam, now all you need to do is figure out how to efficiently wallshare these."
@@ -1014,7 +1015,7 @@
 			description: [
 				"The core of an Ancient Stargate."
 				""
-				"This can accurately detect and use Chevrons to lock on planest far beyond Abydos."
+				"This can accurately detect and use Chevrons to lock on planets far beyond Abydos."
 			]
 			id: "6F9793149DE81FCC"
 			rewards: [{
@@ -1115,7 +1116,7 @@
 		}
 		{
 			dependencies: ["379D69A44FC5B2F2"]
-			description: ["So this is what makes the Gates Beyond Comprehention...."]
+			description: ["So this is what makes the Gates Beyond Comprehension...."]
 			id: "64F0BB858EEB7913"
 			rewards: [{
 				count: 2
@@ -1159,7 +1160,7 @@
 		}
 		{
 			dependencies: ["2D064F759D13FE4B"]
-			description: ["The path to the hellfires of the Nether, inscriped on a piece of whispering gemstone."]
+			description: ["The path to the hellfires of the Nether, inscribed on a piece of whispering gemstone."]
 			id: "29DAE5F27A1D4115"
 			rewards: [{
 				id: "361187FB10BF0C39"
@@ -1176,7 +1177,7 @@
 		}
 		{
 			dependencies: ["2D064F759D13FE4B"]
-			description: ["The path to the shattered void of the End, inscriped on a piece of whispering gemstone."]
+			description: ["The path to the shattered void of the End, inscribed on a piece of whispering gemstone."]
 			id: "14479FB9FCF478D6"
 			rewards: [{
 				id: "2EFAEEDC5007A402"
@@ -1349,7 +1350,7 @@
 		}
 		{
 			dependencies: ["47DF7968E9B98C65"]
-			description: ["Mutate and Breed Bacteria to fit you needs and help you gather all the hydrocarbons you could need."]
+			description: ["Mutate and Breed Bacteria to fit your needs and help you gather all the hydrocarbons you could need."]
 			icon: "gtceu:ethylbenzene_bucket"
 			id: "2F91771A1872EB4E"
 			optional: true
@@ -1452,7 +1453,7 @@
 					type: "item"
 				}
 			]
-			x: 3.5d
+			x: 5.5d
 			y: 7.0d
 		}
 		{
@@ -1530,7 +1531,7 @@
 				}
 			]
 			title: "Runic Engraved Casings"
-			x: 7.5d
+			x: 5.5d
 			y: -5.0d
 		}
 		{
@@ -1570,7 +1571,7 @@
 				"146F88E5C1119649"
 				"624480A1E62B52EF"
 			]
-			description: ["A machine that can engrave runes ontop of eachother using lost Abydos technology."]
+			description: ["A machine that can engrave runes on top of each other using lost Abydos technology."]
 			id: "2C354B0735DF8023"
 			rewards: [{
 				count: 2
@@ -1595,7 +1596,8 @@
 		{
 			dependencies: [
 				"6D169C5E35C9EF6C"
-				"1102670352911334"
+				"4D5EEE7D7EC1FAFA"
+				"6D573ACD05D0EF96"
 			]
 			description: ["Even more runes."]
 			id: "3C3E585C933C9515"
@@ -1779,7 +1781,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["4F3EE28B3F38FC85"]
@@ -1843,7 +1845,10 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["2C354B0735DF8023"]
+			dependencies: [
+				"2C354B0735DF8023"
+				"5FCA8ED151CEB5C1"
+			]
 			hide_dependent_lines: true
 			id: "59B0F5DB2C1E96DC"
 			tasks: [{
@@ -1851,8 +1856,8 @@
 				title: "Rune Infused Armor"
 				type: "checkmark"
 			}]
-			x: 5.5d
-			y: -5.0d
+			x: 6.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -1875,7 +1880,7 @@
 				"707C2E9BA62A60C5"
 				"5C39B74171CC21F9"
 			]
-			description: ["These Magma's need to a little more to break down."]
+			description: ["These Magmas need to a little more to break down."]
 			id: "05E824087CE7825D"
 			shape: "gear"
 			size: 1.5d
@@ -1908,7 +1913,7 @@
 			description: [
 				"A shard of the &5&l&o&mAbyss&r"
 				""
-				"Forged from echos of a void and altered stars"
+				"Forged from echoes of a void and altered stars"
 				""
 				"It must be at the heart of something strong"
 			]
@@ -2018,6 +2023,55 @@
 			}]
 			x: 11.5d
 			y: 5.0d
+		}
+		{
+			dependencies: [
+				"07AD6651D0B40E22"
+				"0DA1386616FF7222"
+			]
+			description: [
+				"Have you ever wanted to process millions of items at once? "
+				""
+				"Well now you can."
+			]
+			id: "13118B7518370623"
+			tasks: [{
+				id: "7C4394204677D241"
+				item: "gtceu:bulk_ore_processing_array"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["630F50E03EC3D144"]
+			description: ["Gravi-Stars &o&lCollapsed&r with even greater intensity."]
+			id: "4D5EEE7D7EC1FAFA"
+			rewards: [{
+				id: "370282BF6FAD644A"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "581A32B15ECB77AE"
+					item: "kubejs:singularity_hyperion"
+					type: "item"
+				}
+				{
+					id: "6F7BCBBC1EDBD225"
+					item: "kubejs:singularity_spectral"
+					type: "item"
+				}
+				{
+					id: "17C1596CF139EAD6"
+					item: "kubejs:singularity_astral"
+					type: "item"
+				}
+			]
+			title: "Advanced Singularities"
+			x: 8.5d
+			y: -4.0d
 		}
 	]
 	title: "Adventures in Abydos"

@@ -2006,7 +2006,9 @@
 			dependencies: [
 				"7F66E57359872C20"
 				"03B49B558B85346B"
+				"439D8AE6D3DC41AF"
 			]
+			description: ["A polymer used to coat materials making them more secure."]
 			id: "3306CAE5E57839A2"
 			rewards: [{
 				count: 3
