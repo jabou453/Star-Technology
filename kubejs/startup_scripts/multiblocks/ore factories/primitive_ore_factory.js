@@ -1,9 +1,9 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 	event.create('primitive_ore_processing')
 		.category('ore_processing')
-		.setMaxIOSize(2, 4, 1, 0)
+		.setMaxIOSize(3, 4, 1, 0)
 		.setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
-		.setSound(GTSoundEntries.BATH);
+		.setSound(GTSoundEntries.FURNACE);
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
@@ -35,20 +35,21 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 				size: [166, 100],
 				background: GuiTextures.PRIMITIVE_BACKGROUND,
 				progress: {
-					pos: [77, 38],
+					pos: [73, 38],
 					size: [20, 18],
 					texture: GuiTextures.PRIMITIVE_BLAST_FURNACE_PROGRESS_BAR
 				},
 				inputs: [
-					{ type: 'item', index: 0, pos: [34, 29], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'item', index: 1, pos: [52, 29], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'fluid', index: 0, pos: [34, 47], texture: GuiTextureGroup(GuiTextures.PRIMITIVE_SLOT, GuiTextures.PRIMITIVE_LARGE_FLUID_TANK_OVERLAY.getSubTexture(0, 0.04, 1, 0.22)) },
+					{ type: 'item', index: 0, pos: [30, 29], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 1, pos: [48, 29], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 2, pos: [39, 49], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'fluid', index: 0, pos: [73, 62], texture: GuiTextureGroup(GuiTextures.PRIMITIVE_SLOT, GuiTextures.PRIMITIVE_LARGE_FLUID_TANK_OVERLAY.getSubTexture(0, 0.04, 1, 0.22)) },
 				],
 				outputs: [
-					{ type: 'item', index: 0, pos: [104, 29], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'item', index: 1, pos: [122, 29], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'item', index: 2, pos: [122, 47], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'item', index: 3, pos: [104, 47], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 0, pos: [100, 29], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 1, pos: [118, 29], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 2, pos: [118, 49], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 3, pos: [100, 49], texture: GuiTextures.PRIMITIVE_SLOT },
 				]
 			})
 		);
