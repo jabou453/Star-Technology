@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('primitive_sifter')
-        .category('primitive_sifter')
+        .category('resource_gen')
         .setEUIO('in')
         .setMaxIOSize(2, 1, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_SIFT, FillDirection.LEFT_TO_RIGHT)

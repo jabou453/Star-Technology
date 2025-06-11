@@ -173,7 +173,6 @@ ServerEvents.recipes(event => {
     SolidBlast('rose_quartz',['1x create:rose_quartz','gtceu:tiny_quartz_sand_dust'],['minecraft:quartz','8x minecraft:redstone'],480);
     }
     burnable(2,'#minecraft','coals',1,'');
-    burnable(16,'#minecraft','poor_coals',1.5,'');
     burnable(1,'gtceu','coke_gem',.8,'dark_');
     
 

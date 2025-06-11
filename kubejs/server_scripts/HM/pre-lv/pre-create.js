@@ -141,31 +141,34 @@ ServerEvents.recipes(event => {
 	event.remove({ id: 'gtceu:smelting/fireclay_brick' });
 	event.remove({ id: 'gtceu:smelting/coke_oven_brick' });
 
+	const kilnRecipe = [event.recipes.gtceu.kiln/*, event.recipes.gtceu.steam_kiln*/]
+	kilnRecipe.forEach(Kiln => {
+
 	[
 		{ fuel: 'coals', burnMultiplier: 1 },
-		{ fuel: 'poor_coals', burnMultiplier: 1.8 }
+		{ fuel: 'poor_coals', burnMultiplier: 1.6 }
 	].forEach(coal => {
 		const { fuel, burnMultiplier: burn } = coal;
 
-		event.recipes.gtceu.kiln(id(`brick_${fuel}`))
+		Kiln(id(`brick_${fuel}`))
 			.itemInputs('4x gtceu:compressed_clay', `#minecraft:${fuel}`)
 			.itemOutputs('4x minecraft:brick')
 			.duration(400 * burn);
-		event.recipes.gtceu.kiln(id(`coke_oven_brick_${fuel}`))
+		Kiln(id(`coke_oven_brick_${fuel}`))
 			.itemInputs('4x gtceu:compressed_coke_clay', `2x #minecraft:${fuel}`)
 			.itemOutputs('4x gtceu:coke_oven_brick')
 			.duration(500 * burn);
-		event.recipes.gtceu.kiln(id(`firebrick_${fuel}`))
+		Kiln(id(`firebrick_${fuel}`))
 			.itemInputs('4x gtceu:compressed_fireclay', `2x #minecraft:${fuel}`)
 			.itemOutputs('4x gtceu:firebrick')
 			.duration(600 * burn);
-		event.recipes.gtceu.kiln(id(`glass_${fuel}`))
+		Kiln(id(`glass_${fuel}`))
 			.itemInputs('gtceu:glass_dust', `#minecraft:${fuel}`)
 			.itemOutputs('minecraft:glass')
 			.duration(800 * burn);
 
 		['ingot', 'ball'].forEach(MoldType => {
-			event.recipes.gtceu.kiln(id(`${MoldType}_ceramic_casting_mold_firing_${fuel}`))
+			Kiln(id(`${MoldType}_ceramic_casting_mold_firing_${fuel}`))
 				.itemInputs(`kubejs:unfired_${MoldType}_ceramic_casting_mold`, `#minecraft:${fuel}`)
 				.itemOutputs(`kubejs:${MoldType}_ceramic_casting_mold`)
 				.duration(300 * burn);
@@ -183,13 +186,12 @@ ServerEvents.recipes(event => {
 			{ ore: 'galena', metal: 'lead' },
 		].forEach(chunk => {
 			const { ore, metal } = chunk;
-			const t = (ore == 'chalcopyrite') ? 2 : 1;
 			const mod = (metal == 'iron') ? 'minecraft' : 'gtceu';
 
 			event.recipes.gtceu.rugged_alloyer(id(`${ore}_chunks_${fuel}`))
 				.itemInputs(`2x kubejs:${ore}_crushed_ore_chunk`, `#forge:nuggets/${metal}`, `#minecraft:${fuel}`)
 				.itemOutputs(`#forge:ingots/${metal}`, 'gtceu:tiny_ash_dust')
-				.duration(200 * t * burn);
+				.duration(200 * burn);
 
 			if (fuel == 'coals') {
 				event
@@ -207,6 +209,7 @@ ServerEvents.recipes(event => {
 			.itemInputs('4x exnihilosequentia:andesite_pebble', '4x gtceu:zinc_nugget', `2x #minecraft:${fuel}`)
 			.itemOutputs('4x create:andesite_alloy', 'gtceu:tiny_ash_dust')
 			.duration(600 * burn);
+	});
 	});
 
 	[

@@ -64,23 +64,23 @@ ServerEvents.recipes(event => {
 	sieve('flint', .2, sand, 'exnihilosequentia:crushed_dripstone', false);
 
 	// Other Crushed
-	sieve('string', .5, cCalc, 'gtceu:small_calcite_dust', false);
+	sieve('string', .55, cCalc, 'gtceu:small_calcite_dust', false);
 	sieve('string', .2, cCalc, 'gtceu:tiny_sulfur_dust', false);
-	sieve('flint', .4, cCalc, 'gtceu:calcite_dust', false);
+	sieve('flint', .25, cCalc, 'gtceu:calcite_dust', false);
 	sieve('flint', .15, cCalc, 'gtceu:small_sulfur_dust', false);
 	sieve('flint', .6, cCalc, dust, false);
 
-	sieve('string', .5, cDrip, 'gtceu:small_gypsum_dust', false);
+	sieve('string', .55, cDrip, 'gtceu:small_gypsum_dust', false);
 	sieve('string', .15, cDrip, 'minecraft:clay_ball', false);
-	sieve('flint', .4, cDrip, 'gtceu:gypsum_dust', false);
+	sieve('flint', .25, cDrip, 'gtceu:gypsum_dust', false);
 	sieve('flint', .25, cDrip, 'minecraft:clay_ball', false);
 	sieve('flint', .6, cDrip, dust, false);
 
 	// Dust
 	sieve('string', .35, dust, 'gtceu:small_redstone_dust', false);
-	sieve('string', .08, dust, 'gtceu:quartzite_gem', false);
+	sieve('string', .08, dust, 'minecraft:quartz', false);
 	sieve('flint', .125, dust, 'minecraft:redstone', false);
-	sieve('flint', .03, dust, 'gtceu:raw_quartzite', false);
+	sieve('flint', .12, dust, 'minecraft:quartz', false);
 
 	// Mud (temp)
 	sieve('flint', .1, mud, 'thermal:slime_mushroom_spores', false);

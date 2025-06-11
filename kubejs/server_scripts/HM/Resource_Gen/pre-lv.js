@@ -225,7 +225,7 @@ ServerEvents.recipes(event => {
 	primitive_processing.forEach(material => {
 		event.recipes.gtceu.primitive_ore_processing(id(`crushed_${material.primary}_ore`))
 			.itemInputs(`gtceu:crushed_${material.primary}_ore`, '2x #minecraft:coals')
-			.inputFluids('minecraft:water 1000')
+			.inputFluids('minecraft:water 500')
 			.itemOutputs(`gtceu:${material.primary}_dust`)
 			.chancedOutput(`gtceu:${material.primary}_dust`, 5000, 0)
 			.chancedOutput(`gtceu:${material.secondary}_dust`, 2500, 0)
@@ -233,35 +233,23 @@ ServerEvents.recipes(event => {
 			.duration(400);
 		event.recipes.gtceu.steam_ore_processing(id(`crushed_${material.primary}_ore`))
 			.itemInputs(`gtceu:crushed_${material.primary}_ore`)
-			.inputFluids('minecraft:water 1000')
+			.inputFluids('minecraft:water 500')
 			.itemOutputs(`gtceu:${material.primary}_dust`)
 			.chancedOutput(`gtceu:${material.primary}_dust`, 5000, 0)
 			.chancedOutput(`gtceu:${material.secondary}_dust`, 2500, 0)
 			.chancedOutput(`gtceu:${material.tertiary}_dust`, 1250, 0)
 			.duration(320)
 			.EUt(GTValues.VA[GTValues.ULV]);
-	});
 
-	const primitive_chunk_processing = [
-		{ primary: 'hematite', secondary: 'magnetite', tertiary: 'nickel' },
-		{ primary: 'chalcopyrite', secondary: 'pyrite', tertiary: 'gold' },
-		{ primary: 'sphalerite', secondary: 'zinc', tertiary: 'gallium' },
-		{ primary: 'cassiterite', secondary: 'tin', tertiary: 'bismuth' },
-		{ primary: 'galena', secondary: 'sulfur', tertiary: 'silver' },
-		{ primary: 'magnetite', secondary: 'gold', tertiary: 'iron' },
-		{ primary: 'pyrite', secondary: 'sulfur', tertiary: 'antimony' }
-	]
-
-	primitive_chunk_processing.forEach(material => {
+		// Chunk Processing
 		event.recipes.gtceu.primitive_ore_processing(id(`${material.primary}crushed_ore_chunk`))
 			.itemInputs(`4x kubejs:${material.primary}_crushed_ore_chunk`, '2x #minecraft:coals')
-			.inputFluids('minecraft:water 1000')
-			.itemOutputs(`gtceu:${material.primary}_dust`)
-			.chancedOutput(`gtceu:${material.primary}_dust`, 2000, 0)
-			.chancedOutput(`gtceu:${material.secondary}_dust`, 2000, 0)
-			.chancedOutput(`gtceu:${material.tertiary}_dust`, 1000, 0)
+			.inputFluids('minecraft:water 500')
+			.chancedOutput(`gtceu:${material.primary}_dust`, 9000, 0)
+			.chancedOutput(`gtceu:${material.secondary}_dust`, 1500, 0)
+			.chancedOutput(`gtceu:${material.tertiary}_dust`, 750, 0)
 			.duration(480);
-	});		
+	});	
 
 	event.recipes.gtceu.barrel(id('slitake'))
 		.notConsumable('thermal:slime_mushroom_spores')
@@ -285,6 +273,21 @@ ServerEvents.recipes(event => {
 		.itemInputs('4x #minecraft:leaves')
 		.itemOutputs('1x minecraft:dirt')
 		.duration(160);
+
+	event.recipes.gtceu.latex_plantation(id(`latex`))
+		.chancedInput(`minecraft:bone_meal`, 2500, 0)
+		.notConsumable('gtceu:wood_screw')
+		.outputFluids(`thermal:latex 25`)
+		.duration(400);
+    const latexType = [{ fuel: 'minecraft:bone_meal', circ: '1' }, { fuel: 'thermal:compost', circ: '2' }, { fuel: 'gtceu:fertilizer', circ: '3' }]
+	latexType.forEach(latex => {
+		event.recipes.gtceu.latex_plantation(id(`latex_${latex.circ}`))
+			.chancedInput(`${latex.fuel}`, 2500, 0)
+			.notConsumable('gtceu:iron_screw')
+			.circuit(latex.circ)
+			.outputFluids(`thermal:latex ${25 + 25 * latex.circ}`)
+			.duration(400);
+	});
 
 });
 

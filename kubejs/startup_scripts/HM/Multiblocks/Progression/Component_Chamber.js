@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('component_chamber')
-        .category('component_chamber')
+        .category('HM')
         .setEUIO('in')
         .setMaxIOSize(10, 1, 3, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

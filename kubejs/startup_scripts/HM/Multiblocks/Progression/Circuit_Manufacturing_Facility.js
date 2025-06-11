@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('circuit_facility')
-        .category('circuit_facility')
+        .category('HM')
         .setEUIO('in')
         .setMaxIOSize(12, 1, 3, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT, FillDirection.LEFT_TO_RIGHT)

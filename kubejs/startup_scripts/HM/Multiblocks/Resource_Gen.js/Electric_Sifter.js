@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('electric_sifter')
-        .category('electric_sifter')
+        .category('resource_gen')
         .setEUIO('in')
         .setMaxIOSize(2, 6, 0, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
