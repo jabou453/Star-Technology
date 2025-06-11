@@ -1,4 +1,5 @@
 {
+	autofocus_id: "492C6E73D0CAC383"
 	default_hide_dependency_lines: false
 	default_quest_shape: "hexagon"
 	filename: "so_it_begins"
@@ -654,6 +655,7 @@
 				"218CF08B9647CA00"
 				"6A62DF26FC748F1A"
 			]
+			hide_dependent_lines: true
 			icon: {
 				Count: 1
 				id: "woodenbucket:wooden_bucket"
@@ -729,7 +731,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 0.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -756,7 +758,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -919,8 +921,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 2.0d
-			y: 1.5d
+			x: 3.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1750,8 +1752,8 @@
 					type: "item"
 				}
 				{
-					id: "2321A6982321702F"
-					item: "pipez:fluid_pipe"
+					id: "184B13A1BE4EB562"
+					item: "create:mechanical_pump"
 					type: "item"
 				}
 			]
@@ -1924,8 +1926,8 @@
 				item: "create:steam_engine"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 12.0d
+			x: 5.75d
+			y: 12.75d
 		}
 		{
 			dependencies: ["50F2743FA699173A"]
@@ -1967,7 +1969,7 @@
 		{
 			dependencies: [
 				"0E087C29644BA666"
-				"7D83A21F7DB27B47"
+				"54AAB5395E468898"
 			]
 			id: "629BDB317D0A8DD3"
 			tasks: [{
@@ -2323,7 +2325,6 @@
 			dependencies: ["3D9B291441B63F78"]
 			hide_until_deps_complete: true
 			id: "774543EADD91A140"
-			invisible: true
 			tasks: [{
 				id: "41E9893B1CD434F8"
 				item: "minecraft:blast_furnace"
@@ -3550,6 +3551,55 @@
 				}
 			]
 			x: 12.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"410385DA7FBBD2FA"
+				"684FAA520167CC51"
+			]
+			id: "45424F34C5C5475B"
+			tasks: [{
+				id: "745F9DF71D53C668"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						display: {
+							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"Diesel Engines\"}"
+						}
+						items: [
+							{
+								Count: 1b
+								id: "createdieselgenerators:diesel_engine"
+							}
+							{
+								Count: 1b
+								id: "createdieselgenerators:large_diesel_engine"
+							}
+							{
+								Count: 1b
+								id: "createdieselgenerators:huge_diesel_engine"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 5.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["396FCF5D31059F6B"]
+			description: ["Its.... food?"]
+			id: "2A70451774756418"
+			tasks: [{
+				id: "006E18BC1884B2C9"
+				item: "minecraft:cocoa_beans"
+				type: "item"
+			}]
+			title: "Nom Nom"
+			x: 2.0d
 			y: 1.5d
 		}
 	]

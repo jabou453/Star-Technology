@@ -364,23 +364,87 @@ ServerEvents.recipes(event => {
 	event.recipes.create.compacting(['kubejs:unfired_ball_ceramic_casting_mold', 'minecraft:bowl'], ['kubejs:unfired_raw_ceramic_casting_mold', 'minecraft:bowl']).id('start:compacting/unfired_ball_ceramic_casting_mold');
 	event.recipes.create.compacting(['kubejs:unfired_ingot_ceramic_casting_mold', 'gtceu:wood_plate'], ['kubejs:unfired_raw_ceramic_casting_mold', 'gtceu:wood_plate']).id('start:compacting/unfired_ingot_ceramic_casting_mold');
 
-	event.recipes.gtceu.auto_scavenger(id('flint'))
+	['coals','poor_coals'].forEach(fuelType => {
+		let boost = (fuelType == 'coals') ? .6 : 1;
+	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_${fuelType}`))
 		.notConsumable('minecraft:coarse_dirt')
+		.chancedInput(`#minecraft:${fuelType}`, 250, 0)
 		.chancedOutput('kubejs:flint_shard', 9500, 0)
 		.chancedOutput('kubejs:flint_shard', 8000, 0)
 		.chancedOutput('kubejs:flint_shard', 6500, 0)
-		.duration(200);
+		.duration(160);
+	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_1_${fuelType}`))
+		.notConsumable('minecraft:coarse_dirt')
+		.chancedInput('kubejs:basic_scavenging_rod', 40, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 500, 0)
+		.chancedOutput('minecraft:flint', 8000, 0)
+		.chancedOutput('minecraft:flint', 6400, 0)
+		.chancedOutput('minecraft:flint', 4800, 0)
+		.chancedOutput('kubejs:flint_shard', 8000, 0)
+		.chancedOutput('kubejs:flint_shard', 7500, 0)
+		.chancedOutput('kubejs:flint_shard', 7000, 0)
+		.chancedOutput('kubejs:flint_shard', 6500, 0)
+		.chancedOutput('kubejs:flint_shard', 6000, 0)
+		.chancedOutput('kubejs:flint_shard', 5500, 0)
+		.chancedOutput('kubejs:flint_shard', 5000, 0)
+		.duration(200 * boost);
+	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_2_${fuelType}`))
+		.notConsumable('minecraft:coarse_dirt')
+		.chancedInput('kubejs:scavenging_rod', 20, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 500, 0)
+		.chancedOutput('exnihilosequentia:stone_pebble', 5000, 0)
+		.chancedOutput('minecraft:flint', 9000, 0)
+		.chancedOutput('minecraft:flint', 8000, 0)
+		.chancedOutput('minecraft:flint', 7000, 0)
+		.chancedOutput('minecraft:flint', 6000, 0)
+		.chancedOutput('kubejs:flint_shard', 9500, 0)
+		.chancedOutput('kubejs:flint_shard', 9000, 0)
+		.chancedOutput('kubejs:flint_shard', 8500, 0)
+		.chancedOutput('kubejs:flint_shard', 8000, 0)
+		.chancedOutput('kubejs:flint_shard', 7500, 0)
+		.duration(200 * boost);
+	event.recipes.gtceu.auto_scavenger(id(`grass_1_${fuelType}`))
+		.notConsumable('minecraft:grass_block')
+		.chancedInput('kubejs:basic_scavenging_rod', 60, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 1000, 0)
+		.chancedOutput('exnihilosequentia:stone_pebble', 400, 0)
+		.chancedOutput('exnihilosequentia:andesite_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:basalt_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:blackstone_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:deepslate_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:diorite_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:granite_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:tuff_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:calcite_pebble', 1200, 0)
+		.chancedOutput('exnihilosequentia:dripstone_pebble', 1200, 0)
+		.duration(320 * boost);
+	event.recipes.gtceu.auto_scavenger(id(`grass_2_${fuelType}`))
+		.notConsumable('minecraft:grass_block')
+		.chancedInput('kubejs:scavenging_rod', 30, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 1000, 0)
+		.chancedOutput('exnihilosequentia:stone_pebble', 750, 0)
+		.chancedOutput('exnihilosequentia:andesite_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:basalt_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:blackstone_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:deepslate_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:diorite_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:granite_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:tuff_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:calcite_pebble', 1750, 0)
+		.chancedOutput('exnihilosequentia:dripstone_pebble', 1750, 0)
+		.duration(320 * boost);
+	});
 
 	event.shaped('gtceu:ulv_auto_scavenger',[
-		'GRG',
-		'PCP',
-		'TET'
+		'GEG',
+		'PDP',
+		'TCT'
 	],{
 		G: 'gtceu:small_bronze_gear',
-		R: 'kubejs:scavenging_rod',
 		P: 'create:precision_mechanism',
 		C: 'create:brass_casing',
 		T: 'gtceu:treated_wood_plate',
+		D: 'create:deployer',
 		E: 'create:electron_tube'
 	}).id('start:shaped/ulv_auto_scavenger');
 

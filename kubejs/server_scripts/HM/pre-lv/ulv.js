@@ -94,7 +94,7 @@ ServerEvents.recipes(event => {
           A: inputs[0],B: inputs[1],C: inputs[2],D: inputs[3],E: inputs[4],F: inputs[5],G: inputs[6],H: inputs[7],I: inputs[8]
       }).id(`start:mechanical_crafting/ulv_${output}`);
     } 
-    UlvMachine('circuit_assembler',['kubejs:ulv_robot_arm','#gtceu:circuits/lv','kubejs:ulv_emitter','kubejs:ulv_conveyor_module','gtceu:ulv_machine_hull','kubejs:ulv_conveyor_module','gtceu:red_alloy_single_cable','#gtceu:circuits/lv','gtceu:red_alloy_single_cable']);
+    // UlvMachine('circuit_assembler',['kubejs:ulv_robot_arm','#gtceu:circuits/lv','kubejs:ulv_emitter','kubejs:ulv_conveyor_module','gtceu:ulv_machine_hull','kubejs:ulv_conveyor_module','gtceu:red_alloy_single_cable','#gtceu:circuits/lv','gtceu:red_alloy_single_cable']);
     UlvMachine('assembler',['kubejs:ulv_robot_arm','#gtceu:circuits/ulv','kubejs:ulv_robot_arm','kubejs:ulv_conveyor_module','gtceu:ulv_machine_hull','kubejs:ulv_conveyor_module','gtceu:red_alloy_single_cable','#gtceu:circuits/ulv','gtceu:red_alloy_single_cable']);
     UlvMachine('centrifuge',['#gtceu:circuits/ulv','kubejs:ulv_electric_motor','#gtceu:circuits/ulv','gtceu:red_alloy_single_cable','gtceu:ulv_machine_hull','gtceu:red_alloy_single_cable','#gtceu:circuits/ulv','kubejs:ulv_electric_motor','#gtceu:circuits/ulv']);
     UlvMachine('mixer',['#forge:glass','gtceu:cast_iron_rotor','#forge:glass','#forge:glass','kubejs:ulv_electric_motor','#forge:glass','#gtceu:circuits/ulv','gtceu:ulv_machine_hull','#gtceu:circuits/ulv']);

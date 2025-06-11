@@ -32,7 +32,7 @@ BlockEvents.rightClicked('minecraft:coarse_dirt', event => {
 		dig();
 	};
 
-	if (item.id == 'kubejs:basic_scavenging_rod') {
+	if (item.id == 'kubejs:basic_scavenging_rod' && player.isCrouching()) {
 		pop_up('kubejs:flint_shard', 0.5);
 		pop_up('minecraft:flint', 0.2);
 		pop_up('kubejs:flint_shard', 0.5);
@@ -43,7 +43,7 @@ BlockEvents.rightClicked('minecraft:coarse_dirt', event => {
 		dig();
 	};
 
-	if (item.id == 'kubejs:scavenging_rod') {
+	if (item.id == 'kubejs:scavenging_rod' && player.isCrouching()) {
 		pop_up('kubejs:flint_shard', 0.5);
 		pop_up('minecraft:flint', 0.5);
 		pop_up('kubejs:flint_shard', 0.5);
@@ -68,36 +68,36 @@ BlockEvents.rightClicked('minecraft:grass_block', event => {
 		player.swing();
 	}
 
-	if (item.id == 'kubejs:basic_scavenging_rod') {
-		pop_up('exnihilosequentia:stone_pebble', 0.03);
-		pop_up('exnihilosequentia:andesite_pebble', 0.09);
-		pop_up('exnihilosequentia:basalt_pebble', 0.09);
-		pop_up('exnihilosequentia:blackstone_pebble', 0.09);
-		pop_up('exnihilosequentia:deepslate_pebble', 0.09);
-		pop_up('exnihilosequentia:diorite_pebble', 0.09);
-		pop_up('exnihilosequentia:granite_pebble', 0.09);
-		pop_up('exnihilosequentia:tuff_pebble', 0.09);
-		pop_up('exnihilosequentia:calcite_pebble', 0.09);
-		pop_up('exnihilosequentia:dripstone_pebble', 0.09);
-		pop_up('minecraft:cookie', 0.008);
+	if (item.id == 'kubejs:basic_scavenging_rod' && player.isCrouching()) {
+		pop_up('exnihilosequentia:stone_pebble', 0.02);
+		pop_up('exnihilosequentia:andesite_pebble', 0.06);
+		pop_up('exnihilosequentia:basalt_pebble', 0.06);
+		pop_up('exnihilosequentia:blackstone_pebble', 0.06);
+		pop_up('exnihilosequentia:deepslate_pebble', 0.06);
+		pop_up('exnihilosequentia:diorite_pebble', 0.06);
+		pop_up('exnihilosequentia:granite_pebble', 0.06);
+		pop_up('exnihilosequentia:tuff_pebble', 0.06);
+		pop_up('exnihilosequentia:calcite_pebble', 0.06);
+		pop_up('exnihilosequentia:dripstone_pebble', 0.06);
+		pop_up('minecraft:cookie', 0.005);
 		player.addExhaustion(.03)
 
 		damage_tool(event);
 		dig();
 	};
 
-	if (item.id == 'kubejs:scavenging_rod') {
-		pop_up('exnihilosequentia:stone_pebble', 0.05);
-		pop_up('exnihilosequentia:andesite_pebble', 0.15);
-		pop_up('exnihilosequentia:basalt_pebble', 0.15);
-		pop_up('exnihilosequentia:blackstone_pebble', 0.15);
-		pop_up('exnihilosequentia:deepslate_pebble', 0.15);
-		pop_up('exnihilosequentia:diorite_pebble', 0.15);
-		pop_up('exnihilosequentia:granite_pebble', 0.15);
-		pop_up('exnihilosequentia:tuff_pebble', 0.15);
-		pop_up('exnihilosequentia:calcite_pebble', 0.15);
-		pop_up('exnihilosequentia:dripstone_pebble', 0.15);
-		pop_up('minecraft:cookie', 0.01);
+	if (item.id == 'kubejs:scavenging_rod' && player.isCrouching()) {
+		pop_up('exnihilosequentia:stone_pebble', 0.04);
+		pop_up('exnihilosequentia:andesite_pebble', 0.1);
+		pop_up('exnihilosequentia:basalt_pebble', 0.1);
+		pop_up('exnihilosequentia:blackstone_pebble', 0.1);
+		pop_up('exnihilosequentia:deepslate_pebble', 0.1);
+		pop_up('exnihilosequentia:diorite_pebble', 0.1);
+		pop_up('exnihilosequentia:granite_pebble', 0.1);
+		pop_up('exnihilosequentia:tuff_pebble', 0.1);
+		pop_up('exnihilosequentia:calcite_pebble', 0.1);
+		pop_up('exnihilosequentia:dripstone_pebble', 0.1);
+		pop_up('minecraft:cookie', 0.008);
 		player.addExhaustion(.02)
 
 		damage_tool(event);
@@ -242,7 +242,7 @@ ServerEvents.recipes(event => {
 			.EUt(GTValues.VA[GTValues.ULV]);
 
 		// Chunk Processing
-		event.recipes.gtceu.primitive_ore_processing(id(`${material.primary}crushed_ore_chunk`))
+		event.recipes.gtceu.primitive_ore_processing(id(`${material.primary}_crushed_ore_chunk`))
 			.itemInputs(`4x kubejs:${material.primary}_crushed_ore_chunk`, '2x #minecraft:coals')
 			.inputFluids('minecraft:water 500')
 			.chancedOutput(`gtceu:${material.primary}_dust`, 9000, 0)

@@ -14,7 +14,7 @@ ServerEvents.recipes(event => {
     // LV
     event.recipes.gtceu.rock_filtrator(id('hm_lv_geodes'))
         .itemInputs('64x minecraft:gravel')
-        .chancedInput('exnihilosequentia:string_mesh', 20, 0)
+        .chancedInput('exnihilosequentia:string_mesh', 10, 0)
         .inputFluids('gtceu:distilled_water 1000')
         .chancedOutput('4x kubejs:quartzite_geode', 3000, 0)
         .chancedOutput('3x kubejs:realgar_geode', 5000, 0)
@@ -26,7 +26,7 @@ ServerEvents.recipes(event => {
     // MV
     event.recipes.gtceu.rock_filtrator(id('hm_mv_geodes'))
         .itemInputs('64x minecraft:gravel')
-        .chancedInput('exnihilosequentia:flint_mesh', 20, 0)
+        .chancedInput('exnihilosequentia:flint_mesh', 10, 0)
         .inputFluids('gtceu:distilled_water 1000')
         .chancedOutput('3x kubejs:green_sapphire_geode', 3000, 0)
         .chancedOutput('3x kubejs:spessartine_geode', 3000, 0)
@@ -38,7 +38,7 @@ ServerEvents.recipes(event => {
     // HV
     event.recipes.gtceu.rock_filtrator(id('hm_hv_geodes'))
         .itemInputs('64x minecraft:gravel')
-        .chancedInput('exnihilosequentia:iron_mesh', 20, 0)
+        .chancedInput('exnihilosequentia:iron_mesh', 10, 0)
         .inputFluids('gtceu:distilled_water 1000')
         .chancedOutput('3x kubejs:apatite_geode', 4500, 0)
         .chancedOutput('3x kubejs:monazite_geode', 4000, 0)

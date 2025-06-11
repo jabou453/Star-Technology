@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.electric_sifter(id(`refined_${type}_processing`))
             .itemInputs(`32x kubejs:refined_${type}`)
-            .chancedInput('exnihilosequentia:iron_mesh', 20, 0)
+            .chancedInput('exnihilosequentia:iron_mesh', 10, 0)
             .itemOutputs(outputs)
             .duration(1120)
             .EUt(GTValues.VA[GTValues.LV]);
@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.mechanical_sieve(id(`crushed_${input}_mechanical_sieve`))
             .itemInputs(`32x exnihilosequentia:crushed_${input}`)
-            .chancedInput('exnihilosequentia:iron_mesh', 20, 0)
+            .chancedInput('exnihilosequentia:iron_mesh', 10, 0)
             .itemOutputs(`16x gtceu:crushed_${output1}_ore`,`8x gtceu:crushed_${output2}_ore`,`4x gtceu:crushed_${output3}_ore`)
             .duration(960)
             .EUt(GTValues.VA[GTValues.LV]);

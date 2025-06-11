@@ -8,8 +8,8 @@ ServerEvents.recipes(event => {
 
     // Manufacturing Facility Controller
     event.recipes.gtceu.assembler(id('circuit_manufacturing_facility'))
-      .itemInputs('3x gtceu:lv_machine_hull', '16x #gtceu:circuits/ulv', '8x kubejs:ulv_robot_arm', '2x create:mechanical_arm',
-        '6x kubejs:ulv_conveyor_module', '8x gtceu:steel_gear', '4x kubejs:ulv_electric_motor','2x kubejs:ulv_emitter', '24x gtceu:tin_single_cable')
+      .itemInputs('1x gtceu:lv_machine_hull', '8x #gtceu:circuits/ulv', '6x kubejs:ulv_robot_arm', '6x kubejs:ulv_conveyor_module',
+         '4x gtceu:steel_gear', '4x kubejs:ulv_electric_motor','2x kubejs:ulv_emitter', '12x gtceu:tin_single_cable')
       .inputFluids('gtceu:tin 1296')
       .itemOutputs('gtceu:circuit_manufacturing_facility')
       .circuit(2)

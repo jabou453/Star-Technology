@@ -29,18 +29,21 @@ ServerEvents.recipes(event => {
     SteamIO('input',['gtceu:bronze_machine_casing','minecraft:chest']);
     SteamIO('output',['minecraft:chest','gtceu:bronze_machine_casing']);
 
-    const SteamCasing = (id2,type,core,plate) => {
+    const SteamCasing = (id2,type,core,mat) => {
     if(core == false)
     event.recipes.create.mechanical_crafting(Item.of(`${id2}:${type}`, 2), [
-        'PPP',
-        'P P',
-        'PPP'
+        'PSP',
+        'DFD',
+        'PSP'
     ], {
-        P: `gtceu:${plate}_plate`
+        P: `gtceu:${mat}_plate`,
+        D: `gtceu:double_${mat}_plate`,
+        S: `gtceu:${mat}_screw`,
+        F: `gtceu:${mat}_frame`
     }).id(`start:shaped/${type}`);
     if(core == false)
     event.recipes.gtceu.assembler(id(`${type}`))
-        .itemInputs(`8x gtceu:${plate}_plate`)
+        .itemInputs(`gtceu:${mat}_frame`, `4x gtceu:${mat}_plate`, `2x gtceu:double_${mat}_plate`, `2x gtceu:${mat}_screw`)
         .itemOutputs(`2x ${id2}:${type}`)
         .circuit(8)
         .duration(50)
@@ -51,13 +54,13 @@ ServerEvents.recipes(event => {
         'PCP',
         'PSP'
     ], {
-        P: `gtceu:${plate}_plate`,
+        P: `gtceu:${mat}_plate`,
         C: `${core}`,
-        S: `gtceu:${plate}_screw`
+        S: `gtceu:${mat}_screw`
     }).id(`start:mechanical_crafter/${type}`);
     if(core !== false)
     event.recipes.gtceu.assembler(id(`${type}`))
-        .itemInputs(`${core}`, `6x gtceu:${plate}_plate`, `2x gtceu:${plate}_screw`)
+        .itemInputs(`${core}`, `6x gtceu:${mat}_plate`, `2x gtceu:${mat}_screw`)
         .itemOutputs(`2x ${id2}:${type}`)
         .circuit(6)
         .duration(50)
@@ -65,9 +68,9 @@ ServerEvents.recipes(event => {
     }
     SteamCasing('gtceu','steam_machine_casing','minecraft:bricks','bronze');
     SteamCasing('kubejs','high_steam_machine_casing','gtceu:firebricks','cast_iron');
-    SteamCasing('gtceu','industrial_steam_casing',false,'double_brass');
-    SteamCasing('gtceu','bronze_machine_casing',false,'double_bronze');
-    SteamCasing('gtceu','steel_machine_casing',false,'double_cast_iron');
+    SteamCasing('gtceu','industrial_steam_casing',false,'brass');
+    SteamCasing('gtceu','bronze_machine_casing',false,'bronze');
+    SteamCasing('gtceu','steel_machine_casing',false,'cast_iron');
 
     const BrickedCasing = (block,brick) => {
         const material = (block == 'steel') ? 'cast_iron' : `${block}` ;

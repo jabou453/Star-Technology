@@ -291,6 +291,17 @@ ServerEvents.recipes(event => {
 
 	event.replaceInput({output: 'minecraft:fishing_rod'}, 'gtceu:iron_ring', 'gtceu:steel_ring')
 
+	event.recipes.create.mechanical_crafting(Item.of('gtceu:steam_ore_factory'), [
+        'CIC',
+        'GOG',
+        'CIC'
+    ], {
+        O: 'gtceu:primitive_ore_factory',
+		I: 'gtceu:tin_alloy_large_fluid_pipe',
+		G: 'gtceu:potin_gear',
+		C: 'kubejs:high_steam_machine_casing'
+    }).id('start:shaped/steam_ore_factory');
+
 	//Mass Removals
 
 	const ThermalRemoval = ['redstone_servo', 'device_tree_extractor', 'drill_head', 'fluid_cell_frame','device_rock_gen','device_water_gen'];

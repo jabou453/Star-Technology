@@ -51,7 +51,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .flags(no_abs_recipe, not_alloy, foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, bolt_and_screw, no_decomp, no_smelt);
 
 	GTMaterials.Iron.addFlags(foil, fine_wire);
-	GTMaterials.Brass.addFlags(ring, foil);
+	GTMaterials.Brass.addFlags(ring, foil, frame);
 	GTMaterials.TinAlloy.addFlags(ring, foil, rotor);
 	GTMaterials.Potin.addFlags(foil, ring, small_gear);
 	GTMaterials.Cupronickel.addFlags(ring);

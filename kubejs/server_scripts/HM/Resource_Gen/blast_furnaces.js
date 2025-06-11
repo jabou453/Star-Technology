@@ -62,8 +62,8 @@ ServerEvents.recipes(event => {
         .EUt(7);
 
     event.recipes.gtceu.assembler(id('bessemer_forgery'))
-        .itemInputs('gtceu:solid_machine_casing','4x gtceu:long_steel_rod','4x #gtceu:circuits/lv','create:basin','2x gtceu:potin_gear',
-            '4x gtceu:small_steel_gear','4x kubejs:ulv_robot_arm','2x kubejs:ulv_conveyor_module','2x kubejs:ulv_electric_pump')
+        .itemInputs('gtceu:lv_machine_hull','4x gtceu:long_steel_rod','4x #gtceu:circuits/lv','create:basin','2x gtceu:potin_gear',
+            '4x gtceu:small_steel_gear','4x kubejs:ulv_robot_arm','3x kubejs:ulv_electric_pump')
         .inputFluids('gtceu:tin_alloy 1152')
         .itemOutputs('gtceu:bessemer_forgery')
         .duration(400)
