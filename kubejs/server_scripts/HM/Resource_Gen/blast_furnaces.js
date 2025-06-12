@@ -168,7 +168,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(outputSolid[0],outputSolid[1],`${amount}x gtceu:tiny_${ash}ash_dust`)
             .duration(dura * duraChange);
     }
-    SolidBlast('andesite_alloy',['10x create:andesite_alloy','gtceu:sulfur_dust'],['2x minecraft:andesite','2x gtceu:sphalerite_dust'],400);
+    SolidBlast('andesite_alloy',['10x create:andesite_alloy','gtceu:sulfur_dust'],['2x exnihilosequentia:crushed_andesite','2x gtceu:sphalerite_dust'],400);
     SolidBlast('rose_quartz-ite',['1x create:rose_quartz','gtceu:tiny_quartz_sand_dust'],['gtceu:quartzite_gem','10x minecraft:redstone'],400);
     SolidBlast('rose_quartz',['1x create:rose_quartz','gtceu:tiny_quartz_sand_dust'],['minecraft:quartz','8x minecraft:redstone'],480);
     }

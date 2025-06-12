@@ -32,7 +32,7 @@ BlockEvents.rightClicked('minecraft:coarse_dirt', event => {
 		dig();
 	};
 
-	if (item.id == 'kubejs:basic_scavenging_rod' && player.isCrouching()) {
+	if (item.id == 'kubejs:basic_scavenging_rod') {
 		pop_up('kubejs:flint_shard', 0.5);
 		pop_up('minecraft:flint', 0.2);
 		pop_up('kubejs:flint_shard', 0.5);
@@ -43,7 +43,7 @@ BlockEvents.rightClicked('minecraft:coarse_dirt', event => {
 		dig();
 	};
 
-	if (item.id == 'kubejs:scavenging_rod' && player.isCrouching()) {
+	if (item.id == 'kubejs:scavenging_rod') {
 		pop_up('kubejs:flint_shard', 0.5);
 		pop_up('minecraft:flint', 0.5);
 		pop_up('kubejs:flint_shard', 0.5);
@@ -68,7 +68,7 @@ BlockEvents.rightClicked('minecraft:grass_block', event => {
 		player.swing();
 	}
 
-	if (item.id == 'kubejs:basic_scavenging_rod' && player.isCrouching()) {
+	if (item.id == 'kubejs:basic_scavenging_rod') {
 		pop_up('exnihilosequentia:stone_pebble', 0.02);
 		pop_up('exnihilosequentia:andesite_pebble', 0.06);
 		pop_up('exnihilosequentia:basalt_pebble', 0.06);
@@ -86,7 +86,7 @@ BlockEvents.rightClicked('minecraft:grass_block', event => {
 		dig();
 	};
 
-	if (item.id == 'kubejs:scavenging_rod' && player.isCrouching()) {
+	if (item.id == 'kubejs:scavenging_rod') {
 		pop_up('exnihilosequentia:stone_pebble', 0.04);
 		pop_up('exnihilosequentia:andesite_pebble', 0.1);
 		pop_up('exnihilosequentia:basalt_pebble', 0.1);

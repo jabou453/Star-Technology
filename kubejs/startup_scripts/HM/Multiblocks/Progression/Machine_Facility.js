@@ -22,3 +22,18 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     );
 
 });
+
+// .pattern(definition => FactoryBlockPattern.start()
+// 	.aisle("#BBBBB#", "BCCCCCB", "BCADACB", "BCCCCCB", "#BBBBB#") 
+// 	.aisle("BCCCCCB", "A#####A", "A##E##A", "A#####A", "BCCCCCB") 
+// 	.aisle("BCCCCCB", "A##E##A", "DFFFFFD", "A##E##A", "BCADACB") 
+// 	.aisle("BCCCCCB", "A#####A", "A##E##A", "A#####A", "BCCCCCB") 
+// 	.aisle("#BBBBB#", "BCCCCCB", "BCA@ACB", "BCCCCCB", "#BBBBB#") 
+// 	.where("A", Predicates.blocks("gtceu:tempered_glass"))
+// 	.where("B", Predicates.blocks("gtceu:cast_iron_frame"))
+// 	.where("#", Predicates.any())
+// 	.where("C", Predicates.blocks("gtceu:solid_machine_casing"))
+// 	.where("D", Predicates.blocks("kubejs:meshblock"))
+// 	.where("E", Predicates.blocks("gtceu:steel_gearbox"))
+// 	.where("F", Predicates.blocks("gtceu:steel_pipe_casing"))
+// 	.where("@", Predicates.controller(Predicates.blocks(definition.get())))

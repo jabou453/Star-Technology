@@ -843,6 +843,55 @@ ServerEvents.recipes(event => {
 	BetterCasings('copper','pig_iron','create:fluid_pipe');
 	BetterCasings('brass','treated_wood','gtceu:brass_plate');
 
+	// C:DG
+	event.recipes.create.mechanical_crafting(Item.of(`createdieselgenerators:engine_piston`, 2), [
+			' BD',
+			'NRB',
+			'GN '
+		], {
+			D: 'gtceu:double_iron_plate',
+			B: 'gtceu:iron_bolt',
+			N: 'gtceu:iron_ring',
+			R: 'gtceu:iron_rod',
+			G: 'gtceu:small_iron_gear'
+		}).id(`start:mechanical_crafter/engine_piston`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`createdieselgenerators:diesel_engine`), [
+			'CLC',
+			'PSP',
+			'TTT'
+		], {
+			C: 'gtceu:brass_screw',
+			L: 'gtceu:brass_plate',
+			P: 'createdieselgenerators:engine_piston',
+			S: 'create:shaft',
+			T: 'gtceu:cast_iron_plate'
+		}).id(`start:mechanical_crafter/diesel_engine`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`createdieselgenerators:large_diesel_engine`), [
+			'PLP',
+			'SES'
+		], {
+			E: 'createdieselgenerators:diesel_engine',
+			L: 'gtceu:brass_plate',
+			P: 'createdieselgenerators:engine_piston',
+			S: 'create:shaft'
+		}).id(`start:mechanical_crafter/large_diesel_engine`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`createdieselgenerators:huge_diesel_engine`), [
+			'PDT R',
+			'PCOOS',
+			'PDT R'
+		], {
+			D: 'gtceu:double_brass_plate',
+			P: 'gtceu:brass_plate',
+			T: 'createdieselgenerators:engine_piston',
+			S: 'create:shaft',
+			C: 'create:fluid_pipe',
+			O: 'gtceu:iron_rod',
+			R: 'gtceu:cast_iron_ring'
+		}).id(`start:mechanical_crafter/huge_diesel_engine`);
+
 	// Removals
 	const CreateRemoval = ['windmill_bearing', 'spout', 'fluid_pipe', 'chute', 'depot', 'basin', 'mechanical_mixer', 'mechanical_press', 'hand_crank', 'millstone',
 		'crushing_wheel', 'smart_chute', 'fluid_tank', 'steam_engine', 'piston_extension_pole', 'mechanical_bearing', 'clockwork_bearing', 'weighted_ejector',

@@ -126,21 +126,23 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["252D805B25FC7F50"]
+			dependencies: [
+				"252D805B25FC7F50"
+				"267B7EA717164DBF"
+			]
 			id: "04484024F218D22C"
 			tasks: [{
 				id: "7BF2D616335BFD3E"
 				item: "gtceu:good_electronic_circuit"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 9.0d
 			y: -3.0d
 		}
 		{
 			dependencies: [
 				"04484024F218D22C"
 				"1310FDCA32DF3A78"
-				"267B7EA717164DBF"
 			]
 			id: "74E1AC370CB6C546"
 			tasks: [{
@@ -148,7 +150,7 @@
 				item: "gtceu:electric_blast_furnace"
 				type: "item"
 			}]
-			x: 9.0d
+			x: 10.5d
 			y: -3.0d
 		}
 		{
@@ -173,7 +175,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: -6.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["267B7EA717164DBF"]
@@ -191,8 +193,8 @@
 				item: "gtceu:void_extractor"
 				type: "item"
 			}]
-			x: 9.0d
-			y: -4.5d
+			x: 6.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -206,8 +208,8 @@
 				item: "gtceu:rock_filtrator"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -3.0d
+			x: 9.0d
+			y: -4.5d
 		}
 		{
 			dependencies: [
@@ -221,7 +223,7 @@
 				item: "gtceu:max_electric_sifter"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 7.5d
 			y: -6.0d
 		}
 		{
@@ -241,8 +243,8 @@
 				}
 			]
 			title: "Refined Sediments"
-			x: 5.25d
-			y: -5.25d
+			x: 6.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["70CC78611FA39F52"]
@@ -352,7 +354,7 @@
 				item: "gtceu:diode"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 7.5d
 			y: -1.5d
 		}
 		{
@@ -363,7 +365,7 @@
 				item: "gtceu:arsenic_dust"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 6.0d
 			y: -1.5d
 		}
 		{
@@ -538,7 +540,7 @@
 				item: "gtceu:ilc_wafer"
 				type: "item"
 			}]
-			x: 13.5d
+			x: 15.0d
 			y: -4.5d
 		}
 		{
@@ -553,8 +555,8 @@
 				item: "gtceu:basic_integrated_circuit"
 				type: "item"
 			}]
-			x: 15.0d
-			y: -4.5d
+			x: 16.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["681213C699587816"]
@@ -648,8 +650,8 @@
 				item: "gtceu:vanadium_steel_ingot"
 				type: "item"
 			}]
-			x: 10.5d
-			y: -3.0d
+			x: 12.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["0FBAB25F82CE854D"]
@@ -660,7 +662,7 @@
 				type: "checkmark"
 			}]
 			x: 12.0d
-			y: -4.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["1B1D258E686DB33C"]
@@ -1115,8 +1117,8 @@
 				item: "gtceu:mv_cutter"
 				type: "item"
 			}]
-			x: 12.0d
-			y: -3.0d
+			x: 13.5d
+			y: -4.5d
 		}
 		{
 			dependencies: [
@@ -1656,7 +1658,7 @@
 				item: "gtceu:graphite_dust"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 19.5d
 			y: -6.0d
 		}
 		{
@@ -1667,7 +1669,7 @@
 				item: "gtceu:annealed_copper_ingot"
 				type: "item"
 			}]
-			x: 16.5d
+			x: 18.0d
 			y: -6.0d
 		}
 		{
