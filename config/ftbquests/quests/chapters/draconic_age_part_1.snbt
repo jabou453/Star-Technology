@@ -109,11 +109,6 @@
 			id: "059CB064A515B157"
 			tasks: [
 				{
-					id: "47744266B3A437CB"
-					title: "Hell Alloys"
-					type: "checkmark"
-				}
-				{
 					id: "32A5C9625179E385"
 					item: "gtceu:magmada_alloy_ingot"
 					type: "item"
@@ -129,35 +124,31 @@
 					type: "item"
 				}
 			]
+			title: "UEV Alloys"
 			x: -2.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["665FC02BC2BC414F"]
-			hide_dependent_lines: true
-			id: "64E470F6BFEE8C3F"
-			tasks: [{
-				id: "4695A96894815210"
-				item: "gtceu:superstate_helium_3_bucket"
-				type: "item"
-			}]
-			x: -2.0d
-			y: -6.0d
-		}
-		{
 			dependencies: [
 				"665FC02BC2BC414F"
-				"64E470F6BFEE8C3F"
 				"295442FA6CE0BA13"
 			]
 			id: "70EEDB38B78F5C7F"
-			tasks: [{
-				id: "35B242E33E98B4B7"
-				item: "gtceu:bec_og_bucket"
-				type: "item"
-			}]
-			x: -2.0d
-			y: -4.0d
+			tasks: [
+				{
+					id: "35B242E33E98B4B7"
+					item: "gtceu:bec_og_bucket"
+					type: "item"
+				}
+				{
+					id: "05D34BDDBD6A9D56"
+					item: "gtceu:superstate_helium_3_bucket"
+					type: "item"
+				}
+			]
+			title: "Advanced Cooling Materials"
+			x: -3.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -172,7 +163,7 @@
 				item: "kubejs:magmada_alloy_coil_block"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: -4.0d
 		}
 		{
@@ -220,7 +211,7 @@
 				title: "Hellforged Armor"
 				type: "checkmark"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: -6.0d
 		}
 		{
@@ -268,8 +259,8 @@
 				item: "gtceu:magmatic_plasma_bucket"
 				type: "item"
 			}]
-			x: 1.0d
-			y: -3.0d
+			x: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
@@ -612,8 +603,8 @@
 				item: "kubejs:draconic_wetware_processor_mainframe"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -4.0d
+			x: 2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -627,8 +618,8 @@
 				title: "mk4 Fusion"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: -6.0d
+			x: 0.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["2E34F23A42004285"]
@@ -733,7 +724,7 @@
 				title: "Awakened Draconic Neuroloom"
 				type: "checkmark"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: -4.0d
 		}
 		{
@@ -746,7 +737,7 @@
 				title: "Aux2"
 				type: "checkmark"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: -4.0d
 		}
 		{
@@ -853,7 +844,7 @@
 				title: "Exotic Matters"
 				type: "checkmark"
 			}]
-			x: 10.0d
+			x: 8.0d
 			y: -4.0d
 		}
 		{

@@ -78,8 +78,9 @@ ServerEvents.recipes(event => {
         {chip: 'neutronium', voltage: 'iv', n: 16, dura: 80},
         {chip: 'draco', voltage: 'uv', n: 64, dura: 60}
     ].forEach(tier => {
+        let modID = (tier.chip !== 'draco') ? 'gtceu' : 'kubejs' ;
         event.recipes.gtceu.cutter(id(`${tier.chip}_chip`))
-            .itemInputs(`gtceu:${tier.chip}_wafer`)
+            .itemInputs(`${modID}:${tier.chip}_wafer`)
             .itemOutputs(`8x kubejs:${tier.chip}_chip`)
             .duration(900)
             .EUt(global.va[tier.voltage]);

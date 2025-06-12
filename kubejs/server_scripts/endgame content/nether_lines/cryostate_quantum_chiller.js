@@ -55,16 +55,6 @@ ServerEvents.recipes(event => {
             if (BulkVac.outputs.fluid?.length == 1) {OutFluid = BulkVac.outputs.fluid[0].content;}
             if (BulkVac.outputs.item?.length == 1) {OutItem = BulkVac.outputs.item[0].content;}
 
-        let Greater15000 = [
-            'mythrolic_alloy',
-            'magmada_alloy',
-            'starium_alloy',
-            'seaborgium_palladium_enriched_estalt_flerovium_alloy',
-            'xeproda',
-            'rhexis',
-            'chalyblux'
-        ]; //Add to list as needed (must add to const at bottom as well)
-
     // Fluid => Cooled Fluid
     if (InItem == false) {
         let adjFluidIn = (InFluid1.value[0].tag == `forge:water`) ? Fluid.of(`minecraft:water`, InFluid1.amount * 256) : Fluid.of(`gtceu:${InFluid1.value[0].tag.slice(6)}`, InFluid1.amount * 256);  
@@ -75,8 +65,6 @@ ServerEvents.recipes(event => {
         .EUt(EUt);
     }
     if (InItem !== false) {
-            let OutputName = OutItem.ingredient.item.slice(6).replace("_ingot", "");
-    if (!Greater15000.includes(OutputName)) { 
     // Cooling Hot Ingots
     if (InItem.ingredient.item !== 'gtceu:ingot_casting_mold') {
         // Cooled Without Fluid
@@ -122,14 +110,12 @@ ServerEvents.recipes(event => {
         }
     }
     }
-    }
         
     }); 
         
     // >15000K Cooling
-    const Material15000Plus = (type,eut,dur,hasMolten) => {    
+    const Material15000PlusAlloy = (type,dur) => {    
         
-        if (hasMolten == true) {
         event.remove({id: `gtceu:vacuum_freezer/${type}`});
         event.recipes.gtceu.vacuum_freezer(`${type}_from_molten`)
             .inputFluids(`gtceu:molten_${type} 144`)
@@ -137,42 +123,21 @@ ServerEvents.recipes(event => {
             .notConsumable('gtceu:ingot_casting_mold')
             .itemOutputs(`gtceu:${type}_ingot`)
             .outputFluids('gtceu:helium_3 250')
-            .duration(dur * 20 * .32)
-            .EUt(eut / 24);    
+            .duration(dur * 20 )
+            .EUt(GTValues.VA[GTValues.UV]);    
         event.recipes.gtceu.bulk_vacuum_cooling(`${type}_from_molten`)
             .inputFluids(`gtceu:molten_${type} 36864`)
             .inputFluids('gtceu:superstate_helium_3 128000')
             .notConsumable('gtceu:ingot_casting_mold')
             .itemOutputs(`256x gtceu:${type}_ingot`)
             .outputFluids('gtceu:helium_3 64000')
-            .duration(dur * 20 * .32 * 192)
-            .EUt(eut / 24);
+            .duration(dur * 20 * 192)
+            .EUt(GTValues.VA[GTValues.UV]);    
+        };
 
-        }
-        
-        event.remove({id: `gtceu:vacuum_freezer/cool_hot_${type}_ingot`});
-        event.recipes.gtceu.vacuum_freezer(`${type}_from_hot_ingot`)
-            .itemInputs(`gtceu:hot_${type}_ingot`)
-            .inputFluids('gtceu:superstate_helium_3 500')
-            .itemOutputs(`gtceu:${type}_ingot`)
-            .outputFluids('gtceu:helium_3 250')
-            .duration(dur * 20 * .32)
-            .EUt(eut / 24);
-        event.recipes.gtceu.bulk_vacuum_cooling(`${type}_from_hot_ingot`)
-            .itemInputs(`256x gtceu:hot_${type}_ingot`)
-            .inputFluids('gtceu:superstate_helium_3 128000')
-            .itemOutputs(`256x gtceu:${type}_ingot`)
-            .outputFluids('gtceu:helium_3 64000')
-            .duration(dur * 20 * .32 * 192)
-            .EUt(eut / 24);
-        
-    };
-    Material15000Plus('mythrolic_alloy', GTValues.VHA[GTValues.UEV], 43.6, true);
-    Material15000Plus('magmada_alloy', GTValues.VHA[GTValues.UEV], 52.4, true);
-    Material15000Plus('starium_alloy', GTValues.VA[GTValues.UEV], 39.8, true);
-    Material15000Plus('seaborgium_palladium_enriched_estalt_flerovium_alloy', GTValues.VHA[GTValues.UIV], 47.4, true);
-    Material15000Plus('xeproda', GTValues.VA[GTValues.UEV], 162.5, false);
-    Material15000Plus('rhexis', GTValues.VA[GTValues.UIV], 172.5, false);
-    Material15000Plus('chalyblux', GTValues.VA[GTValues.UEV], 187.5, false);
+    Material15000PlusAlloy('mythrolic_alloy', 36.75);
+    Material15000PlusAlloy('magmada_alloy', 49.05);
+    Material15000PlusAlloy('starium_alloy', 24.75);
+    Material15000PlusAlloy('seaborgium_palladium_enriched_estalt_flerovium_alloy', 31.2);
 
 });

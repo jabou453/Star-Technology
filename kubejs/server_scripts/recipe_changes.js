@@ -611,6 +611,15 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.V[GTValues.UHV]);
 
+    event.recipes.gtceu.assembler(id('redstone_variadic_interface'))
+        .itemInputs('gtceu:luv_machine_hull', '2x gtceu:hpic_chip', 'gtceu:redstone_plate', 'gtceu:advanced_item_detector_cover',
+            'gtceu:advanced_fluid_detector_cover', 'gtceu:advanced_energy_detector_cover')
+        .itemOutputs('start_core:redstone_variadic_interface')
+        .inputFluids('gtceu:soldering_alloy 288')
+        .duration(600)
+        .circuit(4)
+        .EUt(GTValues.V[GTValues.EV]);
+
     event.remove({id: 'gtceu:macerator/macerate_naquadah_refined_ore_to_dust'});
     event.recipes.gtceu.macerator(id('macerate_refined_naquadah_ore_to_dust'))
         .itemInputs('gtceu:refined_naquadah_ore')

@@ -49,8 +49,8 @@ ServerEvents.recipes(event => {
     DracoQMD('transistor', 'transistor', 16, ['1x gtceu:pure_netherite_foil', '8x gtceu:fine_tritanium_wire', '1x gtceu:aurourium_foil'], 144, 180);
     DracoQMD('capacitor', 'capacitor', 16, ['2x gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_foil', '2x gtceu:zalloy_foil', '1x gtceu:cerium_tritelluride_foil'], 108, 180);
     DracoQMD('resistor', 'resistor', 16, ['1x gtceu:diamane_dust', '6x gtceu:fine_yttrium_barium_cuprate_wire', '4x gtceu:bismuth_iridate_foil'], 144, 180);
-    DracoQMD('diode_nt', 'diode', 24, ['2x gtceu:silicon_carbide_over_bismuth_tritelluride_dust', '1x gtceu:neutronium_chip', '8x gtceu:fine_stellarium_wire'], 288, 156);
-    DracoQMD('diode_dr', 'diode', 32, ['2x gtceu:silicon_carbide_over_bismuth_tritelluride_dust', '1x gtceu:draco_chip', '8x gtceu:fine_stellarium_wire'], 288, 180);
+    DracoQMD('diode_nt', 'diode', 24, ['2x gtceu:silicon_carbide_over_bismuth_tritelluride_dust', '1x kubejs:neutronium_chip', '8x gtceu:fine_stellarium_wire'], 288, 156);
+    DracoQMD('diode_dr', 'diode', 32, ['2x gtceu:silicon_carbide_over_bismuth_tritelluride_dust', '1x kubejs:draco_chip', '8x gtceu:fine_stellarium_wire'], 288, 180);
 
     // === Material List Loader ===    
         const materialList = (Tier,Tier1,Tier2,Primary,Support,Material,RubberR,RubberF,Plastic,WireTypeComputational,WireTypeMechanical,CableType,GlassType,CatalystType,PrimaryMagnet,SecondaryMagnet,Fluid,VoltageCoil,eut,Scaler,Coolant,SuperConductor,cwu) => {
