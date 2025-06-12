@@ -1538,6 +1538,7 @@
 		}
 		{
 			dependencies: ["7E99889B3427A842"]
+			description: ["The medium used to grow life."]
 			id: "01AF9486EA6DA792"
 			rewards: [{
 				count: 3

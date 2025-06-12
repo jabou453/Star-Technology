@@ -1453,7 +1453,7 @@
 					type: "item"
 				}
 			]
-			x: 5.5d
+			x: 7.5d
 			y: 7.0d
 		}
 		{
@@ -1781,7 +1781,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 7.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["4F3EE28B3F38FC85"]
@@ -2040,8 +2040,8 @@
 				item: "gtceu:bulk_ore_processing_array"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 5.0d
+			x: 2.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["630F50E03EC3D144"]
@@ -2072,6 +2072,128 @@
 			title: "Advanced Singularities"
 			x: 8.5d
 			y: -4.0d
+		}
+		{
+			dependencies: [
+				"4F3EE28B3F38FC85"
+				"2D064F759D13FE4B"
+			]
+			description: [
+				"Have you ever thought that wires were a little... excessive. Well now they arent needed."
+				""
+				"If you love using Converters after &aUEV&r that no longer becomes an as direct solution."
+				""
+				""
+				"{ \"text\": \"Read more about how wireless power works here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2F63F0E239737E38\" } }"
+			]
+			id: "141911C5DD68CD2A"
+			rewards: [{
+				id: "73B232401A84DDAC"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "66552A0737028183"
+				item: "start_core:dream_link_node"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["141911C5DD68CD2A"]
+			description: [
+				"&lWireless Power&r Adds the Following for &3UV&f and &4Higher&f:&r"
+				""
+				"- Covers: Let your single blocks run from anywhere in the Dream Link's range (Beware of Overvolting)"
+				""
+				"- Hatches: All your regular hatches and the brand new addition of 64a Hatches"
+			]
+			id: "659690E81B3E3AE7"
+			rewards: [{
+				count: 2
+				id: "00C995FE80302AE3"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "55F419E4EF98D96F"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							display: {
+								Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"UV Wireless Power\"}"
+							}
+							items: [
+								{
+									Count: 1b
+									id: "start_core:uv_2a_dream_link_cover_item"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_2a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_4a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_16a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uv_64a_dream_link_energy_hatch"
+								}
+							]
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6F69C60333996AA1"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							display: {
+								Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"UHV Wireless Power\"}"
+							}
+							items: [
+								{
+									Count: 1b
+									id: "start_core:uhv_2a_dream_link_cover_item"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_2a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_4a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_16a_dream_link_energy_hatch"
+								}
+								{
+									Count: 1b
+									id: "start_core:uhv_64a_dream_link_energy_hatch"
+								}
+							]
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 7.0d
 		}
 	]
 	title: "Adventures in Abydos"

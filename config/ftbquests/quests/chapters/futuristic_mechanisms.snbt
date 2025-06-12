@@ -8,12 +8,22 @@
 	id: "450EB2B6DF25A9EC"
 	order_index: 3
 	progression_mode: "linear"
-	quest_links: [{
-		id: "2D2DD0A279A4C76F"
-		linked_quest: "445BC7DFD3387DD4"
-		x: 0.0d
-		y: -1.0d
-	}]
+	quest_links: [
+		{
+			id: "2D2DD0A279A4C76F"
+			linked_quest: "445BC7DFD3387DD4"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			id: "114E2ED3560BE835"
+			linked_quest: "01AF9486EA6DA792"
+			shape: "gear"
+			size: 1.25d
+			x: 14.0d
+			y: -7.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["0C0C0FBDE1760110"]
@@ -957,7 +967,7 @@
 				}
 			]
 			x: 14.0d
-			y: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -1017,7 +1027,7 @@
 				item: "gtceu:stem_cells"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.0d
 			y: -5.0d
 		}
 		{
@@ -1916,6 +1926,30 @@
 			}]
 			x: -10.0d
 			y: 5.0d
+		}
+		{
+			dependencies: [
+				"68F878EC21CA1749"
+				"2BA3AAAB77C094BC"
+			]
+			description: ["A stronger &nData Orb&r capable of knowing the most complex ordeals in this realm."]
+			id: "7C182C34888AF189"
+			rewards: [{
+				id: "06C89564F1B6E33A"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "6F22A117CE6F6A88"
+				item: {
+					Count: 1
+					id: "gtceu:data_module"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 14.0d
+			y: -3.0d
 		}
 	]
 	title: "Futuristic Mechanisms"

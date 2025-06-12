@@ -14,7 +14,7 @@ StartupEvents.registry('item', event => {
     //all items => upgrade kits
     const upgrade_kit = (tier) => {
 
-        event.create(`${tier}_upgrade_kit`)
+        event.create(`${tier}_upgraade_kit`)
             .displayName(`${tier.toUpperCase()} Upgrade Kit`)
             .tooltip("§7Augment for Dynamos, RF Cells, Fluid Cells and other Thermal Series machines")
             .texture(`kubejs:item/kits/upgrade_kits/${tier}_kit`);
