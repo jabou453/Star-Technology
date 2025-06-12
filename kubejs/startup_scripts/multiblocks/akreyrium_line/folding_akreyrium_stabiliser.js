@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('folding_akreyrium_stabiliser')
-        .category('folding_akreyrium_stabiliser')
+        .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(2, 2, 2, 2)
         .setSound(GTSoundEntries.MACERATOR)

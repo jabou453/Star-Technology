@@ -3,9 +3,9 @@ ServerEvents.recipes(event => {
     
     event.recipes.gtceu.molten_destabilizing(id('molten_adamantamite_mixture'))
         .inputFluids('gtceu:molten_adamantamite_mixture 300000')
-        .outputFluids('gtceu:adamantamite 200000')
-        .outputFluids('gtceu:highly_unstable_nether_magma 25000')
-        .outputFluids('gtceu:molten_ore_mixture 75000')
+        .outputFluids('gtceu:adamantamite 200000',
+            'gtceu:highly_unstable_nether_magma 25000',
+            'gtceu:molten_ore_mixture 75000')
         .itemOutputs('32x gtceu:netherrack_dust')
         .duration(3600)
         .EUt(GTValues.VHA[GTValues.UV]);
@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
         .duration(120)
         .EUt(GTValues.VHA[GTValues.UEV]);
 
-    event.recipes.gtceu.chemical_plant(id('adamantine'))
+    event.recipes.gtceu.advanced_chemistry(id('adamantine'))
         .itemInputs('gtceu:adamantine_hydroxide_dust')
         .itemInputs('3x gtceu:sodium_dust')
         .itemOutputs('gtceu:adamantine_dust')

@@ -1,5 +1,3 @@
-const $SteamMulti = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.steam.SteamParallelMultiblockMachine');
-
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('steam_ore_processing')

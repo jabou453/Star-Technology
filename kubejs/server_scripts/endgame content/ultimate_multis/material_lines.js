@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
     const id = global.id;
 
     // Boron Nitride (Mixing Casing)
-    event.recipes.gtceu.chemical_plant(id("boron_nitride"))
+    event.recipes.gtceu.advanced_chemistry(id('boron_nitride'))
         .itemInputs('1x gtceu:boron_dust')
         .inputFluids('gtceu:nitrogen 1000')
         .itemOutputs('1x gtceu:boron_nitride_dust')
@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.IV])
 
     // Thallium Tungstate (Shaky Casing)
-    event.recipes.gtceu.chemical_plant(id('thallium_tungstate'))
+    event.recipes.gtceu.advanced_chemistry(id('thallium_tungstate'))
         .itemInputs('1x gtceu:tungsten_dust', '2x gtceu:thallium_dust')
         .inputFluids('gtceu:oxygen 4000')
         .itemOutputs('1x gtceu:thallium_tungstate_dust')

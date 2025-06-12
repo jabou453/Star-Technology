@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('stargate_component_assembly')
-        .category('stargate_component_assembly')
+        .category('gate_construction')
         .setEUIO('in')
         .setMaxIOSize(12, 1, 6, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_MASS_FAB , FillDirection.LEFT_TO_RIGHT)

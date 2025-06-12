@@ -1,12 +1,13 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('component_part_assembly')
-        .category('component_part_assembly')
+        .category('highly_advanced')
         .setEUIO('in')
         .setMaxIOSize(6, 1, 2, 0)
-        // .setHasResearchSlot(true)  need to figure out how this works
+        .setHasResearchSlot(true)
         .setSound(GTSoundEntries.ASSEMBLER)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ASSEMBLER, FillDirection.LEFT_TO_RIGHT);
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE, FillDirection.LEFT_TO_RIGHT)
+        .setMaxTooltips(4);
 
 });
 
@@ -14,25 +15,31 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('component_part_assembly', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
+        .machine((holder) => new $AssemblyLineMulti(holder))
         .recipeType('component_part_assembly')
+        .recipeModifier(GTRecipeModifiers.OC_NON_PERFECT_SUBTICK)
         .appearanceBlock(() => Block.getBlock('kubejs:enriched_naquadah_machine_casing'))
-        .pattern(definition => FactoryBlockPattern.start()
-            .aisle('SSSSS', 'SSSSS', ' SSS ')
-            .aisle('HHBHH', 'G#A#G', ' GGG ')
-            .aisle('HHPHH', 'G#C#G', ' GGG ')
-            .aisle('HHBHH', 'G#A#G', ' GGG ')
-            .aisle('SSSSS', 'SSKSS', ' SSS ')
-            .where('K', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('S', Predicates.blocks('kubejs:enriched_naquadah_machine_casing').setMinGlobalLimited(16)
-                .or(Predicates.autoAbilities(definition.getRecipeTypes()))
-                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))          
+        .pattern(definition => FactoryBlockPattern.start($RelativeDirection.LEFT, $RelativeDirection.UP, $RelativeDirection.BACK)
+            .aisle('SSISS', 'SS@SS', ' SSS ')
+            .aisle('HAIAH', 'GLCLG', ' GSG ')
+            .aisle('HAIAH', 'GCCCG', ' GSG ')
+            .aisle('SSISS', 'SCLCS', ' SSS ')
+            .aisle('HAIAH', 'GCCCG', ' GSG ')
+            .aisle('HAIAH', 'GLCLG', ' GSG ')
+            .aisle('SSOSS', 'SSSSS', ' SSS ')
+            .where('@', Predicates.controller(Predicates.blocks(definition.get())))
+            .where('S', Predicates.blocks('kubejs:enriched_naquadah_machine_casing')
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(3).setPreviewCount(0))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(0))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1)))               
             .where('G', Predicates.blocks('gtceu:fusion_glass'))
+            .where('I', Predicates.blocks('gtceu:ulv_input_bus'))
+            .where('O', Predicates.abilities(PartAbility.EXPORT_ITEMS).addTooltips(Component.translatable("gtceu.multiblock.pattern.location_end")))
             .where('H', Predicates.blocks('gtceu:sturdy_machine_casing'))
-            .where('#', Predicates.blocks('minecraft:air'))
-            .where('A', Predicates.blocks('gtceu:assembly_line_unit'))
+            .where('A', Predicates.blocks('gtceu:assembly_line_grating'))
+            .where('L', Predicates.blocks('gtceu:assembly_line_unit'))
             .where('C', Predicates.blocks('gtceu:fusion_coil'))
-            .where('B', Predicates.blocks('kubejs:enriched_naquadah_gearbox'))
-            .where('P', Predicates.blocks('kubejs:enriched_naquadah_pipe_casing'))
             .where(' ', Predicates.any())
             .build())
         .workableCasingRenderer('kubejs:block/casings/naquadah/casing',

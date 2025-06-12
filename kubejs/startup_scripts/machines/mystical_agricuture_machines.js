@@ -1,6 +1,6 @@
 global.recipe_types(event => {
     event.create('greenhouse_growing')
-        .category('greenhouse')
+        .category('mystical')
         .setEUIO('in')
         .setMaxIOSize(2, 2, 2, 1)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
@@ -8,7 +8,7 @@ global.recipe_types(event => {
         .setSound(GTSoundEntries.CHEMICAL);
     
     event.create('essence_burning')
-        .category('essence')
+        .category('mystical')
         .setEUIO('in')
         .setMaxIOSize(2, 2, 1, 3)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

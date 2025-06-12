@@ -1,6 +1,7 @@
 ClientEvents.lang('en_us', event => {
     event.renameItem('createdieselgenerators:biodiesel_bucket', 'Crude Bio Diesel Bucket');
     event.add('fluid.createdieselgenerators:biodiesel', 'Crude Bio Diesel');
+    event.renameItem('minecraft:popped_chorus_fruit', 'Resilient Chorus Fruit');
     event.renameItem('sgjourney:milky_way_stargate', 'Ancient Stargate');
     event.renameBlock('sgjourney:milky_way_ring', 'Ancient Stargate');
     event.renameBlock('sgjourney:milky_way_dhd', 'Ancient DHD');

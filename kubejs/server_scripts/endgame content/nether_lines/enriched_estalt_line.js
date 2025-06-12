@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
         .duration(240)
         .EUt(GTValues.VHA[GTValues.UV]);
 
-    event.recipes.gtceu.chemical_plant(id('enriched_estaltadyne_naquide_slurry_mixture'))
+    event.recipes.gtceu.advanced_chemistry(id('enriched_estaltadyne_naquide_slurry_mixture'))
         .inputFluids('gtceu:enriched_estaltadyne_slurry 1000')
         .itemInputs('1x gtceu:enriched_naquadah_dust')
         .outputFluids('gtceu:enriched_estaltadyne_naquide_slurry_mixture 1000')

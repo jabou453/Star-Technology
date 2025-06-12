@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    event.recipes.gtceu.chemical_plant(id('estalt_dissolving'))
+    event.recipes.gtceu.advanced_chemistry(id('estalt_dissolving'))
         .itemInputs('6x gtceu:estalt_dust')
         .inputFluids('gtceu:fluoroantimonic_acid 2000')
         .outputFluids('gtceu:impure_calamatium_solution 1000', 'gtceu:impure_isovol_solution 1000', 'gtceu:fluorine 4000')

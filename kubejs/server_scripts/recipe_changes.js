@@ -288,6 +288,7 @@ ServerEvents.recipes(event => {
     casingDouble('atomic','trinaquadalloy','gtceu');
     casingDouble('noble_mixing','astrenalloy_nx','kubejs');
     casingDouble('quake_proof','thacoloy_nq_42x','kubejs');
+    casingDouble('superalloy','lepton_coalescing_superalloy','kubejs');
 
     event.recipes.gtceu.assembler(id('silicone_rubber_casing'))
         .itemInputs('gtceu:solid_machine_casing') 
@@ -430,6 +431,32 @@ ServerEvents.recipes(event => {
         E: 'gtceu:energium_dust'
     }).id('start:shaped/neodymium_magnet');
 
+    //Added Tools
+
+        //Mallet + Plunger
+        [
+        'perfluoroelastomer_rubber' 
+        ].forEach(material => {
+            event.shaped(Item.of(`gtceu:${material}_mallet`), [
+                'II ',
+                'IIS',
+                'II '
+            ], {
+                I: `gtceu:${material}_ingot`,
+                S: 'minecraft:stick'
+            }).id(`start:shaped/${material}_mallet`);
+            event.shaped(Item.of(`gtceu:${material}_plunger`), [
+                'WPP',
+                ' SP',
+                'S F'
+            ], {
+                W: '#forge:tools/wire_cutters',
+                F: '#forge:tools/files',
+                P: `gtceu:${material}_plate`,
+                S: `#forge:rods`
+            });
+        });
+
     //plates
     [
         {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
@@ -464,95 +491,6 @@ ServerEvents.recipes(event => {
 
     event.replaceInput({id: 'enderchests:ender_pouch'}, 'minecraft:leather', 'gtceu:carbon_fiber_plate');
 
-    event.recipes.thermal.lapidary_fuel('gtceu:diatron_gem', 750000);
-    event.recipes.thermal.lapidary_fuel('gtceu:flawless_diatron_gem', 750000 * 2.5);
-    event.recipes.thermal.lapidary_fuel('gtceu:exquisite_diatron_gem', 750000 * 6.25);
-    event.remove({type: 'thermal:lapidary_fuel', input: 'minecraft:diamond'});
-    event.recipes.thermal.lapidary_fuel('minecraft:diamond', 300000);
-    event.remove({mod: 'systeams'});
-    const SteamBoil = (boiling,volume,boiled,power) => {
-        if(boiled == 'steam')
-        event.custom({
-            'type': 'systeams:steam',
-            'ingredient': {
-                'fluid_tag': `forge:steam`,
-                'amount': 1000
-            },
-            'energy': power
-            });
-        else
-        event.custom({
-            'type': 'systeams:steam',
-            'ingredient': {
-                'fluid': `systeams:${boiled}`,
-                'amount': 1000
-            },
-            'energy': power
-            });
-        event.remove({id: `systeams:boiling/${boiling}`});
-        if(boiling == 'water')
-        event.custom({
-            'type': 'systeams:boiling',
-            'ingredient': {
-                'fluid': `minecraft:water`,
-                'amount': 100
-            },
-            'result': {
-                'fluid': `systeams:${boiled}`,
-                'amount': volume
-            }
-            });
-        if(boiling == 'steam')
-        event.custom({
-            'type': 'systeams:boiling',
-            'ingredient': {
-            'fluid_tag': 'forge:steam',
-            'amount': 100
-            },
-            'result': {
-            'fluid': `systeams:${boiled}`,
-            'amount': volume
-            }
-        });
-        else
-        event.custom({
-            'type': 'systeams:boiling',
-            'ingredient': {
-              'fluid': `systeams:${boiling}`,
-              'amount': 100
-            },
-            'result': {
-              'fluid': `systeams:${boiled}`,
-              'amount': volume
-            }
-          });
-    }
-    SteamBoil('water',100,'steam',2000);
-    SteamBoil('steam',80,'steamier',4000);
-    SteamBoil('steamier',60,'steamiest',10000);
-    SteamBoil('steamiest',40,'steamiester',30000);
-    SteamBoil('steamiester',20,'steamiestest',80000);
-
-    event.recipes.gtceu.mixer(id('diatron_dust'))
-        .itemInputs('3x gtceu:energium_dust', '2x gtceu:diamond_dust')
-        .itemOutputs('5x gtceu:diatron_dust')
-        .duration(200)
-        .EUt(480);
-
-    event.recipes.gtceu.autoclave(id('diatron_water'))
-        .itemInputs('gtceu:diatron_dust')
-        .inputFluids('minecraft:water 250')
-        .chancedOutput('gtceu:diatron_gem', 7000, 1000)
-        .duration(1200)
-        .EUt(24);
-
-    event.recipes.gtceu.autoclave(id('diatron_dis_water'))
-        .itemInputs('gtceu:diatron_dust')
-        .inputFluids('gtceu:distilled_water 50')
-        .itemOutputs('gtceu:diatron_gem')
-        .duration(600)
-        .EUt(24);
-
     event.recipes.gtceu.mixer(id('birmabright'))
         .itemInputs('7x gtceu:aluminium_dust', '2x gtceu:magnesium_dust', '1x gtceu:manganese_dust')
         .itemOutputs('10x gtceu:birmabright_dust')
@@ -565,7 +503,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('9x gtceu:duralumin_dust')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.HV])
-        .circuit(2);
+        .circuit(4);
 
     event.recipes.gtceu.mixer(id('beryllium_aluminium_alloy'))
         .itemInputs('7x gtceu:beryllium_dust', '1x gtceu:aluminium_dust')
@@ -672,6 +610,15 @@ ServerEvents.recipes(event => {
         .duration(400)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.V[GTValues.UHV]);
+
+    event.recipes.gtceu.assembler(id('redstone_variadic_interface'))
+        .itemInputs('gtceu:luv_machine_hull', '2x gtceu:hpic_chip', 'gtceu:redstone_plate', 'gtceu:advanced_item_detector_cover',
+            'gtceu:advanced_fluid_detector_cover', 'gtceu:advanced_energy_detector_cover')
+        .itemOutputs('start_core:redstone_variadic_interface')
+        .inputFluids('gtceu:soldering_alloy 288')
+        .duration(600)
+        .circuit(4)
+        .EUt(GTValues.V[GTValues.EV]);
 
     event.remove({id: 'gtceu:macerator/macerate_naquadah_refined_ore_to_dust'});
     event.recipes.gtceu.macerator(id('macerate_refined_naquadah_ore_to_dust'))

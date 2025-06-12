@@ -7,6 +7,12 @@ ServerEvents.recipes(event => {
         .duration(140)
         .EUt(512);
 
+    event.recipes.gtceu.bulk_vacuum_cooling(id('pcb_cooling'))
+        .inputFluids('gtceu:hot_pcb_coolant 307200')
+        .outputFluids('gtceu:pcb_coolant 256000')
+        .duration(140 * 192)
+        .EUt(512);
+
     event.recipes.gtceu.dimensional_destabiliser(id('naquadah_mining'))
         .itemInputs('mysticalagradditions:nether_star_shard')
         .inputFluids('gtceu:pcb_coolant 8000')

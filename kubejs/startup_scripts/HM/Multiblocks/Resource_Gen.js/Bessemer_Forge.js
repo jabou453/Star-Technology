@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('bessemer_forge')
-        .category('resource_gen')
+        .category('primitive')
         .setEUIO('in')
         .setMaxIOSize(2, 0, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_MACERATE, FillDirection.LEFT_TO_RIGHT)

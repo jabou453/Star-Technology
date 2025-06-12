@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('essence_enchancing')
-        .category('essence_enchancing')
+        .category('mystical')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_MAGNET , FillDirection.LEFT_TO_RIGHT)
