@@ -19,19 +19,18 @@
 	quests: [
 		{
 			dependencies: [
-				"3E3F6706B4BF5005"
 				"6974D4ADDEA9535F"
+				"21832BD3160C50D9"
 			]
 			dependency_requirement: "one_completed"
 			id: "48ECF7E173796889"
-			shape: "circle"
 			tasks: [{
 				id: "7632F772571CF472"
 				item: "gtceu:damascus_steel_ingot"
 				type: "item"
 			}]
 			x: 1.5d
-			y: -6.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -68,7 +67,7 @@
 				}
 			]
 			x: 1.5d
-			y: -3.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["583A60E6A408D4DE"]
@@ -2028,6 +2027,18 @@
 			}]
 			x: 25.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["21931BF870070ABA"]
+			id: "21832BD3160C50D9"
+			shape: "circle"
+			tasks: [{
+				id: "2CFF5ED0C040A926"
+				item: "gtceu:carbon_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
 		}
 	]
 	title: "Daring are we?"

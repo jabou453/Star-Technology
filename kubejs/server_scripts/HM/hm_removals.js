@@ -29,7 +29,8 @@ ServerEvents.recipes(event => {
 		'create:crafting/kinetics/belt_connector',
 		'gtceu:shaped/iron_wire_single',
 		'create:splashing/soul_sand',
-		'minecraft:cookie'
+		'minecraft:cookie',
+		'create:crafting/appliances/chain_from_zinc'
 	].forEach(id => event.remove({ id: id }));
 
 	[

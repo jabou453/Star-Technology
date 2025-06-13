@@ -438,13 +438,13 @@ ServerEvents.recipes(event => {
 	event.shapeless(Item.of('3x kubejs:flint_shard'), ['minecraft:flint', '#forge:tools/hammers']).id('start:shapeless/flint_shard');
 
 	event.shaped('gtceu:ulv_auto_scavenger',[
-		'TPT',
-		'GDG',
-		'TCT'
+		'TDT',
+		'GFG',
+		'TPT'
 	],{
 		G: 'gtceu:small_bronze_gear',
 		P: 'create:precision_mechanism',
-		C: 'create:brass_casing',
+		F: 'gtceu:brass_frame',
 		T: 'gtceu:treated_wood_plate',
 		D: 'create:deployer'
 	}).id('start:shaped/ulv_auto_scavenger');

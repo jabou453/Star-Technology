@@ -313,18 +313,19 @@
 				type: "item"
 			}]
 			x: -5.5d
-			y: 1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1EA467441DE65C0D"]
+			hide_dependent_lines: true
 			id: "54CFAAE3EA5F56D0"
 			tasks: [{
 				id: "52653090E4BAA766"
 				item: "farmersdelight:canvas"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 3.0d
+			x: -5.5d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -397,7 +398,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 6.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -442,7 +443,7 @@
 				type: "item"
 			}]
 			title: "INFINITE DIRT"
-			x: -2.5d
+			x: -4.0d
 			y: 6.0d
 		}
 		{
@@ -636,7 +637,7 @@
 			]
 			title: "Metal Rich Stones"
 			x: -2.5d
-			y: 7.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5A3FCB5053FCD9C7"]
@@ -1696,8 +1697,8 @@
 				item: "create:brass_casing"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 15.75d
+			x: 4.25d
+			y: 14.25d
 		}
 		{
 			dependencies: [
@@ -2130,7 +2131,6 @@
 		{
 			dependencies: [
 				"2A7C8C43D6D58B93"
-				"55B15054D3B78F2E"
 				"2B99C65945F68A8E"
 			]
 			dependency_requirement: "one_completed"
@@ -2730,6 +2730,7 @@
 				"7839BE7F2FB6C2A5"
 				"7FD94FACD142A18F"
 			]
+			hide_dependent_lines: true
 			id: "69EEE1EA928D3A75"
 			tasks: [{
 				id: "78CE7226B832EDCA"
@@ -2783,15 +2784,15 @@
 			y: 15.0d
 		}
 		{
-			dependencies: ["63F20D173C5A431F"]
+			dependencies: ["69EEE1EA928D3A75"]
 			id: "55B15054D3B78F2E"
 			tasks: [{
 				id: "09B590B1E7871E88"
 				item: "gtceu:coke_gem"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 3.0d
+			x: 17.0d
+			y: 9.0d
 		}
 		{
 			dependencies: [
@@ -2985,6 +2986,7 @@
 			dependencies: [
 				"0E113E08C05B0914"
 				"19EFB33C0B250C49"
+				"3AE5C6DB766D52B9"
 			]
 			id: "53BA24466D74ADE2"
 			shape: "gear"
@@ -2994,7 +2996,7 @@
 				item: "gtceu:basic_electronic_circuit"
 				type: "item"
 			}]
-			x: 17.5d
+			x: 18.5d
 			y: 6.0d
 		}
 		{
@@ -3032,8 +3034,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 0.0d
+			x: 6.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -3113,8 +3115,8 @@
 				item: "kubejs:ulv_robot_arm"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -1.5d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["564F7A288EB2721A"]
@@ -3402,8 +3404,8 @@
 				item: "gtceu:bessemer_forgery"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 6.0d
+			x: 18.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1645E2B5BEFA80A3"]
@@ -3456,9 +3458,8 @@
 		}
 		{
 			dependencies: [
-				"153EBFA7C41BE761"
-				"24AB0C2B43C66BD3"
 				"456934A9D2781CAD"
+				"1B5EA867C67903E4"
 			]
 			dependency_requirement: "one_completed"
 			id: "18E437A527887211"
@@ -3601,6 +3602,45 @@
 			title: "Nom Nom"
 			x: 2.0d
 			y: 1.5d
+		}
+		{
+			dependencies: ["6C4B325AEF8A5B7D"]
+			id: "7278842A97B2E64A"
+			tasks: [{
+				id: "4D6C7C79E40F95A3"
+				item: {
+					Count: 1
+					id: "exnihilosequentia:iron_crook"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -5.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["55B15054D3B78F2E"]
+			id: "3AE5C6DB766D52B9"
+			tasks: [{
+				id: "7A371C229EC5D0AE"
+				item: "gtceu:resistor"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["55B15054D3B78F2E"]
+			id: "21931BF870070ABA"
+			tasks: [{
+				id: "6B868118A0B135E8"
+				item: "gtceu:dark_ash_dust"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 10.5d
 		}
 	]
 	title: "So It Begins"

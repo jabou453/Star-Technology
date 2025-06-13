@@ -168,9 +168,9 @@ ServerEvents.recipes(event => {
             .itemOutputs(outputSolid[0],outputSolid[1],`${amount}x gtceu:tiny_${ash}ash_dust`)
             .duration(dura * duraChange);
     }
-    SolidBlast('andesite_alloy',['10x create:andesite_alloy','gtceu:sulfur_dust'],['2x exnihilosequentia:crushed_andesite','2x gtceu:sphalerite_dust'],400);
-    SolidBlast('rose_quartz-ite',['1x create:rose_quartz','gtceu:tiny_quartz_sand_dust'],['gtceu:quartzite_gem','10x minecraft:redstone'],400);
-    SolidBlast('rose_quartz',['1x create:rose_quartz','gtceu:tiny_quartz_sand_dust'],['minecraft:quartz','8x minecraft:redstone'],480);
+    SolidBlast('andesite_alloy',['20x create:andesite_alloy','gtceu:sulfur_dust'],['8x exnihilosequentia:crushed_andesite','2x gtceu:sphalerite_dust'],400);
+    SolidBlast('rose_quartz',['1x create:rose_quartz','gtceu:tiny_redstone_dust'],['xycraft_world:xychorium_gem_red', 'minecraft:redstone'],160);
+    SolidBlast('blank_gem',['xycraft_world:xychorium_gem_light','gtceu:tiny_glass_dust'],['minecraft:quartz', 'gtceu:glass_dust'],320);
     }
     burnable(2,'#minecraft','coals',1,'');
     burnable(1,'gtceu','coke_gem',.8,'dark_');

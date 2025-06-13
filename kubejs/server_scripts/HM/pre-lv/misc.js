@@ -75,6 +75,9 @@ ServerEvents.recipes(event => {
 	});
 	event.remove({ id: 'create:compacting/blaze_cake' });
 
+	event.recipes.create.mixing(Fluid.of('thermal:redstone', 1000), [Fluid.of('minecraft:water', 1000), `10x minecraft:redstone`]).heatRequirement('lowheated').id(`start_hm:create_mixer/destabilized_redstone`);
+    event.recipes.create.filling('xycraft_world:xychorium_gem_red', [Fluid.of('thermal:redstone', 500), 'xycraft_world:xychorium_gem_light']).id('start_hm:filling/redstone_gem');
+
 	event.shapeless(Item.of('gtceu:wood_screw'), ['#forge:tools/files', 'gtceu:wood_bolt', 'gtceu:wood_bolt']).id('start:shapeless/wood_screw');
 
 	event.recipes.gtceu.assembler(id('fluid_cell_frame'))
@@ -289,7 +292,20 @@ ServerEvents.recipes(event => {
 		F: 'minecraft:flint'
 	});
 
-	event.replaceInput({output: 'minecraft:fishing_rod'}, 'gtceu:iron_ring', 'gtceu:steel_ring')
+	event.replaceInput({output: 'minecraft:fishing_rod'}, 'gtceu:iron_ring', 'gtceu:steel_ring');
+
+	event.shaped(Item.of('exnihilosequentia:iron_crook'), [
+		' FR',
+		'GDS',
+		'DGV'
+	], {
+		R: 'gtceu:iron_ring',
+		F: '#forge:tools/files',
+		G: '#forge:string',
+		D: 'gtceu:iron_rod',
+		S: 'gtceu:iron_screw',
+		V: '#forge:tools/screwdrivers'
+	});
 
 	event.recipes.create.mechanical_crafting(Item.of('gtceu:steam_ore_factory'), [
         'CIC',
@@ -300,7 +316,7 @@ ServerEvents.recipes(event => {
 		I: 'gtceu:tin_alloy_large_fluid_pipe',
 		G: 'gtceu:potin_gear',
 		C: 'kubejs:high_steam_machine_casing'
-    }).id('start:shaped/steam_ore_factory');
+    }).id('start_hm:mechanical_crafter/steam_ore_factory');
 
 	//Mass Removals
 

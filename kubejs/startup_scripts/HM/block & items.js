@@ -38,22 +38,29 @@ StartupEvents.registry('item', event => {
 
 	// ================================================================================== //
 
-	const to_id = (name) => name.toLowerCase().replace(/\s/g, '_') // move to helpers?
-
-	const ores = ['Hematite', 'Cassiterite', 'Chalcopyrite', 'Sphalerite', 'Pyrite', 'Magnetite', 'Galena']
-
-	ores.forEach(ore => {
-		const name = `${ore} Crushed Ore Chunk`;
-		const id = to_id(name);
+	[
+		{type: 'Hematite', composition: 'Fe₂O₃'},
+		{type:'Cassiterite', composition: 'SnO₂'},
+		{type:'Chalcopyrite', composition: 'CuFeS₂'},
+		{type:'Sphalerite', composition: 'ZnS'},
+		{type:'Pyrite', composition: 'FeS₂'},
+		{type:'Magnetite', composition: 'Fe₃O₄'},
+		{type:'Galena', composition: 'PbS'}
+	].forEach(ore => {
+		const {type, composition} = ore;
+		let to_id = (name) => name.toLowerCase().replace(/\s/g, '_')
+		let name = `${type} Crushed Ore Chunk`;
+		let id = to_id(name);
 
 		event.create(id)
 			.displayName(name)
-			.texture('kubejs:item/hm/pre-lv/' + id)
+			.tooltip(`§e${composition}`)
+			.texture(`kubejs:item/hm/pre-lv/${id}`)
 	});
 
 	// ================================================================================== //
 
-	const parts = [
+	[
 		`Incomplete Long Rod`,
 		`Incomplete Double Plate`,
 		`Incomplete Gear`,
@@ -65,15 +72,14 @@ StartupEvents.registry('item', event => {
 		`Incomplete Fine Wire`,
 		`Incomplete Fluid Pipe`,
 		`Incomplete Item Pipe`,
-	]
-
-	parts.forEach(part =>
-		event
-			.create(to_id(part))
-			.displayName(part)
+	].forEach(name => {
+		let to_id = (name) => name.toLowerCase().replace(/\s/g, '_')
+		let id = to_id(name);
+		event.create(id)
+			.displayName(name)
 			.maxStackSize(64)
-			.texture('kubejs:item/hm/incomplete_parts/' + to_id(part))
-	);
+			.texture(`kubejs:item/hm/incomplete_parts/${id}`)
+	});
 
 	// ================================================================================== //
 
@@ -94,7 +100,7 @@ StartupEvents.registry('item', event => {
 	// ================================================================================== //
 
 	['Electric Motor', 'Electric Pump', 'Conveyor Module', 'Robot Arm', 'Electric Piston', 'Emitter'].forEach(ULVComp => {
-		const id = `${ULVComp.toLowerCase().replace(' ','_')}`
+		let id = `${ULVComp.toLowerCase().replace(' ','_')}`
 		event.create(`ulv_${id}`)
 			.displayName(`ULV ${ULVComp}`)
 			.texture(`kubejs:item/hm/pre-lv/ulv_${id}`);

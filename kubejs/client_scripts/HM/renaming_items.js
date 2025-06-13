@@ -4,6 +4,10 @@ ClientEvents.lang('en_us', event => {
 	event.renameItem('exnihilosequentia:string_mesh', 'Crude Mesh');
 	event.renameItem('exnihilosequentia:flint_mesh', 'Refined Mesh');
 	event.renameItem('exnihilosequentia:iron_mesh', 'Reinforced Mesh');
+
+	event.renameItem('xycraft_world:xychorium_gem_light', 'Blank Infusable Gem');
+	event.renameItem('xycraft_world:xychorium_gem_red', 'Redstone Infused Gem');
+
 	
 	event.renameItem('gtceu:matchbox', 'Fire Starter');
 	event.renameItem('gtceu:vacuum_tube', 'Vacuum Array');
