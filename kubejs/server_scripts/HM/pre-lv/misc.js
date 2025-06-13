@@ -75,8 +75,8 @@ ServerEvents.recipes(event => {
 	});
 	event.remove({ id: 'create:compacting/blaze_cake' });
 
-	event.recipes.create.mixing(Fluid.of('thermal:redstone', 1000), [Fluid.of('minecraft:water', 1000), `10x minecraft:redstone`]).heatRequirement('lowheated').id(`start_hm:create_mixer/destabilized_redstone`);
-    event.recipes.create.filling('xycraft_world:xychorium_gem_red', [Fluid.of('thermal:redstone', 500), 'xycraft_world:xychorium_gem_light']).id('start_hm:filling/redstone_gem');
+	event.recipes.create.mixing(Fluid.of('thermal:redstone', 1000), [Fluid.of('minecraft:water', 1000), `10x minecraft:redstone`]).heatRequirement('lowheated').id(`start:create_mixer/destabilized_redstone`);
+    event.recipes.create.filling('xycraft_world:xychorium_gem_red', [Fluid.of('thermal:redstone', 500), 'xycraft_world:xychorium_gem_light']).id('start:filling/redstone_gem');
 
 	event.shapeless(Item.of('gtceu:wood_screw'), ['#forge:tools/files', 'gtceu:wood_bolt', 'gtceu:wood_bolt']).id('start:shapeless/wood_screw');
 
@@ -272,6 +272,23 @@ ServerEvents.recipes(event => {
 		O: 'gtceu:obsidian_plate'
 	}).id('start:mechanical_crafting/advanced_collector');
 
+	event.recipes.create.mechanical_crafting('2x kubejs:meshblock', [
+		'RSR',
+		'NFN',
+		'RSR'
+	], {
+		R: 'gtceu:treated_wood_rod',
+		S: 'exnihilosequentia:string_mesh',
+		N: 'exnihilosequentia:flint_mesh',
+		F: 'gtceu:treated_wood_frame'
+	}).id('start:mechanical_crafting/meshblock');
+
+	event.recipes.gtceu.assembler(id('meshblock'))
+		.itemInputs('1x gtceu:treated_wood_frame', '2x exnihilosequentia:flint_mesh', '2x exnihilosequentia:string_mesh', '4x gtceu:treated_wood_rod')
+		.itemOutputs('2x kubejs:meshblock')
+		.duration(80)
+		.EUt(6);
+
 	let fluidPipez = 'gtceu:iron_foil'
     event.recipes.create.sequenced_assembly([
         Item.of(`3x pipez:fluid_pipe`),
@@ -316,7 +333,7 @@ ServerEvents.recipes(event => {
 		I: 'gtceu:tin_alloy_large_fluid_pipe',
 		G: 'gtceu:potin_gear',
 		C: 'kubejs:high_steam_machine_casing'
-    }).id('start_hm:mechanical_crafter/steam_ore_factory');
+    }).id('start:mechanical_crafter/steam_ore_factory');
 
 	//Mass Removals
 

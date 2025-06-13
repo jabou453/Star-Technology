@@ -318,15 +318,14 @@ ServerEvents.recipes(event => {
 	});
 
 	event.remove({output: 'gtceu:matchbox'});
-	event.shaped(Item.of('gtceu:matchbox'), [
-		'RRR',
-		'TST',
-		' B '
+	event.remove({output: 'gtceu:matches'});
+	event.shaped(Item.of('2x gtceu:matches'), [
+		'FR',
+		'S '
 	], {
 		R: '#forge:string',
-		T: '#forge:rods/wooden',
-		S: 'farmersdelight:straw',
-		B: 'minecraft:bowl'
+		F: 'gtceu:tiny_flint_dust',
+		S: 'gtceu:wood_bolt',
 	}).id(`start:shaped/fire_starter`);
 
 	event.remove({ id: 'minecraft:flint_and_steel' });

@@ -84,8 +84,8 @@
 			dependencies: ["53BA24466D74ADE2"]
 			id: "16ED2B1E235E2B57"
 			tasks: [{
-				id: "7E5BF4136A0D3781"
-				item: "gtceu:lv_machine_facility"
+				id: "3166F98475FCE9E8"
+				item: "gtceu:machine_facility"
 				type: "item"
 			}]
 			x: -1.5d
@@ -218,8 +218,8 @@
 			description: [""]
 			id: "304825F186EF4C61"
 			tasks: [{
-				id: "65B06192669ADE25"
-				item: "gtceu:max_electric_sifter"
+				id: "58987656A240990F"
+				item: "gtceu:electric_sifter"
 				type: "item"
 			}]
 			x: 7.5d
@@ -415,8 +415,8 @@
 			dependencies: ["3DCEFC726A1157B1"]
 			id: "5D0F60CFECDD2C99"
 			tasks: [{
-				id: "149E58DB91CE5FF2"
-				item: "gtceu:mv_component_chamber"
+				id: "2DA1E50EF242D0BB"
+				item: "gtceu:component_chamber"
 				type: "item"
 			}]
 			x: 9.0d
