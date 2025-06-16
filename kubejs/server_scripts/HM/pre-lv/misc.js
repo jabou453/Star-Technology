@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
 	});
 	event.remove({ id: 'create:compacting/blaze_cake' });
 
-	event.recipes.create.mixing(Fluid.of('thermal:redstone', 1000), [Fluid.of('minecraft:water', 1000), `10x minecraft:redstone`]).heatRequirement('lowheated').id(`start:create_mixer/destabilized_redstone`);
+	event.recipes.create.mixing(Fluid.of('thermal:redstone', 1000), [Fluid.of('minecraft:water', 1000), `10x minecraft:redstone`]).heatRequirement('superheated').id(`start:create_mixer/destabilized_redstone`);
     event.recipes.create.filling('xycraft_world:xychorium_gem_red', [Fluid.of('thermal:redstone', 500), 'xycraft_world:xychorium_gem_light']).id('start:filling/redstone_gem');
 
 	event.shapeless(Item.of('gtceu:wood_screw'), ['#forge:tools/files', 'gtceu:wood_bolt', 'gtceu:wood_bolt']).id('start:shapeless/wood_screw');
@@ -133,6 +133,7 @@ ServerEvents.recipes(event => {
 	event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('kjs:smelting/slitake_manual_only').id('start:smelting/slime_ball');
 
 	event.replaceInput({ output: 'toms_storage:ts.storage_terminal' }, 'minecraft:glowstone', '#gtceu:circuits/ulv');
+	event.replaceInput({ output: 'toms_storage:ts.storage_terminal' }, '#forge:chests/wooden', 'toms_storage:ts.trim');
 	event.replaceInput({ output: 'toms_storage:ts.wireless_terminal' }, 'minecraft:glowstone', '#gtceu:circuits/ulv');
 	event.remove({ output: 'modularrouters:modular_router' });
 	event.replaceInput({ output: 'functionalstorage:configuration_tool' }, 'minecraft:emerald', '#forge:dyes/lime');
@@ -307,7 +308,37 @@ ServerEvents.recipes(event => {
 		'FFF'
 	], {
 		F: 'minecraft:flint'
-	});
+	}).id('start:shaped/flint_block');
+
+	event.shaped(Item.of('toms_storage:ts.trim', 2), [
+		'CSC',
+		'SWS',
+		'CSC'
+	], {
+		C: 'createdieselgenerators:chip_wood_block',
+		W: 'gtceu:wood_crate',
+		S: '#minecraft:wooden_slabs'
+	}).id('start:shaped/trim');
+
+	event.shaped(Item.of('toms_storage:ts.open_crate'), [
+		'T',
+		'B',
+		'T'
+	], {
+		T: 'toms_storage:ts.trim',
+		B: 'minecraft:barrel'
+	}).id('start:shaped/open_crate');
+
+	event.shaped(Item.of('toms_storage:ts.inventory_proxy'), [
+		'THT',
+		'LCL',
+		'THT'
+	], {
+		T: '#minecraft:wooden_trapdoors',
+		H: 'minecraft:hopper',
+		L: 'minecraft:lapis_lazuli',
+		C: 'toms_storage:ts.open_crate'
+	}).id('start:shaped/inventory_proxy');
 
 	event.replaceInput({output: 'minecraft:fishing_rod'}, 'gtceu:iron_ring', 'gtceu:steel_ring');
 
@@ -348,5 +379,9 @@ ServerEvents.recipes(event => {
 	const MinecraftRemoval = ['stonecutter', 'furnace', 'campfire', 'composter']
 	MinecraftRemoval.forEach(item => {
 		event.remove({ output: `minecraft:${item}` })
+	});
+	const TomsSSRemoval = ['trim','open_crate','inventory_proxy']
+	TomsSSRemoval.forEach(item => {
+		event.remove({ output: `toms_storage:ts.${item}` })
 	});
 });

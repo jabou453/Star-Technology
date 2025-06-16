@@ -728,13 +728,6 @@ ServerEvents.recipes(event => {
 		D: 'create_new_age:overcharged_diamond'
 	}).id('start:mechanical_crafter/fluxuated_magnetite');
 
-	event.recipes.gtceu.assembler(id('neodymium_magnet'))
-		.itemInputs('create_new_age:fluxuated_magnetite')
-		.inputFluids('gtceu:neodymium 576')
-		.itemOutputs('create_new_age:netherite_magnet')
-		.duration(200)
-		.EUt(120);
-
 	event.shaped(Item.of('3x create:belt_connector'), [
 		'RRR',
 		'HSW'
@@ -750,6 +743,16 @@ ServerEvents.recipes(event => {
 	], {
 		R: 'gtceu:rubber_plate'
 	}).id('start:mechanical_crafter/belt_connector');
+
+	event.recipes.create.mechanical_crafting(Item.of('create:mechanical_piston'), [
+		'SAP',
+		' C '
+	], {
+		S: 'create:piston_extension_pole',
+		A: 'create:andesite_casing',
+		P: 'minecraft:piston',
+		C: 'create:cogwheel'
+	}).id('start:mechanical_crafter/mechanical_piston');
 
 	const CNA_wire = (material, energy, output) => {
 		event.custom({
@@ -916,6 +919,130 @@ ServerEvents.recipes(event => {
 			R: 'gtceu:cast_iron_ring'
 		}).id(`start:mechanical_crafter/huge_diesel_engine`);
 
+	event.recipes.create.mechanical_crafting(Item.of(`create:chain_conveyor`, 2), [
+			'ACNA',
+			'CGC ',
+			'ACNA'
+		], {
+			A: 'create:andesite_alloy',
+			C: 'create:andesite_casing',
+			N: 'gtceu:iron_ring',
+			G: 'create:large_cogwheel'
+		}).id(`start:mechanical_crafter/chain_conveyor`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:transmitter`, 4), [
+			' E ',
+			'PPP'
+		], {
+			E: 'kubejs:ulv_emitter',
+			P: 'gtceu:copper_plate'
+		}).id(`start:mechanical_crafter/transmitter`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:display_link`, 2), [
+			' T ',
+			'GCG'
+		], {
+			T: 'create:transmitter',
+			C: 'create:brass_casing',
+			G: 'gtceu:gold_foil'
+		}).id(`start:mechanical_crafter/display_link`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:package_frogport`, 3), [
+			' G G ',
+			'AFVFA',
+			'ASSSA',
+			'OoCoO'
+		], {
+			G: 'gtceu:glass_tube',
+			A: 'create:andesite_alloy',
+			F: 'gtceu:iron_foil',
+			V: 'create:item_vault',
+			S: 'minecraft:slime_ball',
+			O: 'gtceu:iron_gear',
+			o: 'gtceu:small_iron_gear',
+			C: 'create:andesite_casing'
+		}).id(`start:mechanical_crafter/package_frogport`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:packager`), [
+			'NLN',
+			'AFC',
+			'RBP'
+		], {
+			N: 'gtceu:pig_iron_ring',
+			L: 'create:andesite_funnel',
+			A: 'kubejs:ulv_robot_arm',
+			F: 'gtceu:pig_iron_frame',
+			C: 'kubejs:ulv_conveyor_module',
+			R: 'xycraft_world:xychorium_gem_red',
+			B: 'create:bound_cardboard_block',
+			P: 'minecraft:stone_pressure_plate'
+		}).id(`start:mechanical_crafter/packager`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:repackager`), [
+			'NLN',
+			'CFA',
+			'PBR'
+		], {
+			N: 'gtceu:pig_iron_ring',
+			L: 'create:andesite_funnel',
+			A: 'kubejs:ulv_robot_arm',
+			F: 'gtceu:pig_iron_frame',
+			C: 'kubejs:ulv_conveyor_module',
+			R: 'xycraft_world:xychorium_gem_red',
+			B: 'create:bound_cardboard_block',
+			P: '#minecraft:wooden_pressure_plates'
+		}).id(`start:mechanical_crafter/repackager`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:stock_link`, 2), [
+			'UTR',
+			'AVA'
+		], {
+			U: '#gtceu:circuits/ulv',
+			T: 'create:transmitter',
+			R: '#gtceu:resistors',
+			A: 'create:andesite_alloy',
+			V: 'create:item_vault'
+		}).id(`start:mechanical_crafter/stock_link`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:stock_ticker`), [
+			'GGG',
+			'GLG',
+			'PSP'
+		], {
+			G: '#forge:glass_panes',
+			L: 'create:stock_link',
+			P: 'minecraft:paper',
+			S: 'gtceu:gold_spring'
+		}).id(`start:mechanical_crafter/stock_ticker`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:factory_gauge`, 4), [
+			'PPP',
+			'MLM',
+			'PPP'
+		], {
+			M: 'create:precision_mechanism',
+			L: 'create:stock_link',
+			P: 'minecraft:paper'
+		}).id(`start:mechanical_crafter/factory_gauge`);
+
+	event.recipes.create.mechanical_crafting(Item.of(`create:redstone_requester`), [
+			'LVC',
+			'PPP'
+		], {
+			V: 'create:item_vault',
+			L: 'create:stock_link',
+			C: 'minecraft:comparator',
+			P: 'gtceu:iron_plate'
+		}).id(`start:mechanical_crafter/redstone_requester`);
+
+	event.shaped(Item.of('create:redstone_link', 2), [
+		'T',
+		'P'
+	], {
+		T: 'create:transmitter',
+		P: 'gtceu:iron_plate'
+	}).id(`start:shaped/redstone_link`);
+
 	event.shaped(Item.of('create:wrench'), [
 		'FDT',
 		'WSG',
@@ -940,21 +1067,92 @@ ServerEvents.recipes(event => {
 		C: 'create:chute'
 	}).id(`start:shaped/item_hatch`);
 
+	event.shaped(Item.of('create:redstone_contact'), [
+		'B',
+		'O'
+	], {
+		O: 'minecraft:observer',
+		B: 'minecraft:stone_button'
+	}).id(`start:shaped/redstone_contact`);
+
+	event.shaped(Item.of('create:schematicannon'), [
+		'SPL',
+		'PGP',
+		'ADA'
+	], {
+		S: '#forge:string',
+		P: '#minecraft:wooden_slabs',
+		L: 'gtceu:lead_small_fluid_pipe',
+		G: 'gtceu:cast_iron_gear',
+		A: 'create:andesite_alloy',
+		D: 'minecraft:dispenser'
+	}).id(`start:shaped/schematicannon`);
+
+	event.shaped(Item.of('create:display_board', 3), [
+		'APA',
+		'CEC',
+		'APA'
+	], {
+		A: 'create:andesite_alloy',
+		P: 'minecraft:paper',
+		C: 'create:cogwheel',
+		E: 'create:electron_tube'
+	}).id(`start:shaped/display_board`);
+
+	event.shaped(Item.of('createdieselgenerators:basin_lid'), [
+		' A ',
+		'PCP',
+		'AAA'
+	], {
+		A: 'create:andesite_alloy',
+		P: 'gtceu:iron_plate',
+		C: 'minecraft:clock'
+	}).id(`start:shaped/basin_lid`);
+
+	[{type: 'hose', casing: 'copper', base: 'create:fluid_pipe'}, {type: 'elevator', casing: 'brass', base: 'gtceu:iron_plate'}].forEach( pulley => {
+	event.recipes.create.mechanical_crafting(Item.of(`create:${pulley.type}_pulley`), [
+			'RCR',
+			'SWS',
+			' B ',
+			' N '
+		], {
+			R: 'gtceu:rubber_plate',
+			C: `create:${pulley.casing}_casing`,
+			S: 'create:shaft',
+			W: '#minecraft:wool',
+			B: `${pulley.base}`,
+			N: 'gtceu:rubber_ring'
+		}).id(`start:mechanical_crafter/${pulley.type}_pulley`);
+	});
+
 	// Removals
-	const CreateRemoval = ['windmill_bearing', 'spout', 'fluid_pipe', 'chute', 'depot', 'basin', 'mechanical_mixer', 'mechanical_press', 'hand_crank', 'millstone',
+	const CreateRemoval = [
+		'windmill_bearing', 'spout', 'fluid_pipe', 'chute', 'depot', 'basin', 'mechanical_mixer', 'mechanical_press', 'hand_crank', 'millstone',
 		'crushing_wheel', 'smart_chute', 'fluid_tank', 'steam_engine', 'piston_extension_pole', 'mechanical_bearing', 'clockwork_bearing', 'weighted_ejector',
 		'encased_fan', 'large_water_wheel', 'encased_chain_drive', 'gearshift', 'gantry_shaft', 'gantry_carriage', 'mechanical_drill', 'sticker', 'mechanical_saw',
 		'deployer', 'andesite_casing', 'brass_casing', 'mechanical_crafter', 'copper_casing', 'sequenced_gearshift', 'nozzle', 'adjustable_chain_gearshift', 'water_wheel',
 		'andesite_funnel', 'mechanical_arm', 'item_vault', 'flywheel', 'brass_hand', 'whisk', 'propeller', 'electron_tube', 'rotation_speed_controller', 'brass_tunnel',
-		'andesite_tunnel', 'brass_funnel', 'white_sail', 'wrench', 'hose_pulley', 'transmitter', 'pulp', 'cardboard', 'item_hatch'];
+		'andesite_tunnel', 'brass_funnel', 'white_sail', 'wrench', 'hose_pulley', 'transmitter', 'pulp', 'cardboard', 'item_hatch', 'elevator_pulley', 'redstone_contact',
+		'schematicannon', 'display_board', 'chain_conveyor', 'redstone_link', 'package_frogport', 'display_link', 'packager', 'repackager'
+	];
 	CreateRemoval.forEach(item => {
 		event.remove({ output: `create:${item}` });
 	});
-	const CNA = ['layered_magnet', 'fluxuated_magnetite', 'energiser_t1', 'energiser_t2', 'energiser_t3', 'electrical_connector', 'generator_coil', 'basic_motor', 'advanced_motor', 'reinforced_motor']
+	const CreateIDRemoval = [
+		'crafting/logistics/stock_link', 'crafting/logistics/stock_ticker', 'crafting/logistics/redstone_requester', 'crafting/logistics/factory_gauge'
+	];
+	CreateIDRemoval.forEach(item => {
+		event.remove({ id: `create:${item}` });
+	});
+	const CNA = [
+		'layered_magnet', 'fluxuated_magnetite', 'energiser_t1', 'energiser_t2', 'energiser_t3', 'electrical_connector', 'generator_coil', 'basic_motor', 'advanced_motor', 'reinforced_motor'
+	];
 	CNA.forEach(removal => {
 		event.remove({ output: `create_new_age:${removal}` })
 	});
-	const CDiesel = ['engine_piston', 'engine_silencer', 'engine_turbocharger', 'diesel_engine', 'large_diesel_engine', 'huge_diesel_engine', 'wood_chip'];
+	const CDiesel = [
+		'engine_piston', 'engine_silencer', 'engine_turbocharger', 'diesel_engine', 'large_diesel_engine', 'huge_diesel_engine', 'wood_chip', 'basin_lid'
+	];
 	CDiesel.forEach(removal => {
 		event.remove({ output: `createdieselgenerators:${removal}` })
 	});

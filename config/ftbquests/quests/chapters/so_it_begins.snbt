@@ -1693,11 +1693,18 @@
 				"4002DDFC6025B01D"
 			]
 			id: "224916FFC857C099"
-			tasks: [{
-				id: "666AF49A691416E1"
-				item: "create:deployer"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "666AF49A691416E1"
+					item: "create:deployer"
+					type: "item"
+				}
+				{
+					id: "54EA4A006BA4683D"
+					item: "create:electron_tube"
+					type: "item"
+				}
+			]
 			x: -1.0d
 			y: 13.5d
 		}
@@ -2136,7 +2143,6 @@
 				"2A7C8C43D6D58B93"
 				"2B99C65945F68A8E"
 			]
-			dependency_requirement: "one_completed"
 			hide_dependent_lines: true
 			id: "3A3BD0ECA7FC8D38"
 			shape: "gear"
@@ -2236,8 +2242,9 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["19EFB33C0B250C49"]
+			dependencies: ["684FAA520167CC51"]
 			description: ["Change recipe to be harder"]
+			hide_dependency_lines: true
 			id: "4AAF919793BA49F1"
 			shape: "rsquare"
 			tasks: [{
@@ -2246,7 +2253,7 @@
 				type: "item"
 			}]
 			title: "Tom's Storage"
-			x: 14.0d
+			x: 17.0d
 			y: 9.0d
 		}
 		{
@@ -2326,7 +2333,6 @@
 		}
 		{
 			dependencies: ["3D9B291441B63F78"]
-			hide_until_deps_complete: true
 			id: "774543EADD91A140"
 			tasks: [{
 				id: "41E9893B1CD434F8"
@@ -2407,7 +2413,6 @@
 				{
 					id: "30352B6F8EFE7659"
 					item: "gtceu:lp_steam_compressor"
-					optional_task: true
 					type: "item"
 				}
 				{
@@ -2474,26 +2479,31 @@
 				{
 					id: "38F8EC6AB6E3F981"
 					item: "gtceu:hp_steam_extractor"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "2CBD468AD073F8A0"
 					item: "gtceu:hp_steam_macerator"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "7BBF6F4F1DBE670E"
 					item: "gtceu:hp_steam_compressor"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "4BA49CE35A1D80A3"
 					item: "gtceu:hp_steam_forge_hammer"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "5968B94F01311316"
 					item: "gtceu:hp_steam_furnace"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -2637,7 +2647,6 @@
 				"7839BE7F2FB6C2A5"
 				"37340815DAE2C133"
 			]
-			hide_dependent_lines: true
 			id: "63F20D173C5A431F"
 			tasks: [{
 				id: "62C243B5C7735754"
@@ -2794,8 +2803,8 @@
 				item: "gtceu:coke_gem"
 				type: "item"
 			}]
-			x: 17.0d
-			y: 9.0d
+			x: 18.5d
+			y: 10.5d
 		}
 		{
 			dependencies: [
@@ -3151,7 +3160,6 @@
 				"4D8EFEA7036CD327"
 			]
 			hide_dependency_lines: true
-			hide_dependent_lines: true
 			id: "51B433A0377CCC0A"
 			tasks: [{
 				id: "6285EC47EDAEAF5A"
@@ -3159,7 +3167,7 @@
 				type: "item"
 			}]
 			x: 15.5d
-			y: 1.5d
+			y: 7.5d
 		}
 		{
 			dependencies: [
@@ -3173,13 +3181,13 @@
 				item: "modularrouters:modular_router"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 14.0d
 			y: 9.0d
 		}
 		{
 			dependencies: [
-				"5FCECF8863271771"
 				"29C78EFA4596B27E"
+				"63F20D173C5A431F"
 			]
 			hide_dependency_lines: true
 			id: "6BF9BA9DD881787D"
@@ -3188,8 +3196,8 @@
 				item: "minecraft:prismarine_crystals"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 1.5d
+			x: 17.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["6994BA308DC55ED2"]
@@ -3246,6 +3254,7 @@
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "43AA7FB2483BE561"
+			shape: "rsquare"
 			tasks: [{
 				id: "01404C2CC8625DAF"
 				item: "gtceu:ulv_advanced_composter"
@@ -3407,8 +3416,8 @@
 				item: "gtceu:bessemer_forgery"
 				type: "item"
 			}]
-			x: 18.5d
-			y: 4.0d
+			x: 20.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1645E2B5BEFA80A3"]
@@ -3504,8 +3513,8 @@
 				item: "gtceu:maintenance_hatch"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 7.5d
+			x: 17.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -3542,6 +3551,7 @@
 		{
 			dependencies: ["43AA7FB2483BE561"]
 			id: "3571684AAD0C7958"
+			shape: "rsquare"
 			tasks: [
 				{
 					id: "36795976C16AB6C7"
@@ -3631,8 +3641,8 @@
 				item: "gtceu:resistor"
 				type: "item"
 			}]
-			x: 17.0d
-			y: 7.5d
+			x: 18.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["55B15054D3B78F2E"]
@@ -3642,8 +3652,8 @@
 				item: "gtceu:dark_ash_dust"
 				type: "item"
 			}]
-			x: 17.0d
-			y: 10.5d
+			x: 18.5d
+			y: 12.0d
 		}
 		{
 			dependencies: ["65DA1BDA4D9A9B56"]
@@ -3675,6 +3685,60 @@
 			}]
 			x: 2.0d
 			y: 4.5d
+		}
+		{
+			dependencies: ["51B433A0377CCC0A"]
+			id: "3FFA0D14E4C013FD"
+			shape: "rsquare"
+			tasks: [{
+				id: "1696C92D89FD29E6"
+				item: "create:transmitter"
+				type: "item"
+			}]
+			x: 15.5d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"3FFA0D14E4C013FD"
+				"3AE5C6DB766D52B9"
+			]
+			id: "2C7CE8FB665CD9D9"
+			shape: "rsquare"
+			tasks: [{
+				id: "56DE831B7D00B30C"
+				item: "create:stock_link"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"19EFB33C0B250C49"
+				"4AAF919793BA49F1"
+			]
+			id: "3ED631E50781A07F"
+			shape: "rsquare"
+			tasks: [{
+				id: "12D3CDDDB1B18DF8"
+				item: "toms_storage:ts.storage_terminal"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["30352B6F8EFE7659"]
+			dependency_requirement: "one_completed"
+			id: "53993AE645CAEE6D"
+			tasks: [{
+				id: "0C8BA23ADFFF3F1B"
+				item: "createdieselgenerators:basin_lid"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 13.5d
 		}
 	]
 	title: "So It Begins"
