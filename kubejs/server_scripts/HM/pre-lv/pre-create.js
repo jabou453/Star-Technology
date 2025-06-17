@@ -476,16 +476,15 @@ ServerEvents.recipes(event => {
 
 	event.remove({ id: /^gtceu:mixer\/concrete.*/ })
 	event.recipes.gtceu.mixer(id('concrete'))
-		.itemInputs('3x gtceu:stone_dust', 'gtceu:calcite_dust', '2x gtceu:gypsum_dust')
-		.inputFluids('minecraft:water 1000')
-		.outputFluids('gtceu:concrete 1000')
+		.itemInputs('3x gtceu:stone_dust', 'gtceu:calcite_dust', 'gtceu:gypsum_dust')
+		.inputFluids('minecraft:water 1200')
+		.outputFluids('gtceu:concrete 1500')
 		.duration(50)
 		.EUt(6);
 
 	event.shaped(Item.of('woodenbucket:wooden_bucket', '{Fluid:{Amount:1000,FluidName:"gtceu:concrete"}}'), [
-		'GCG',
 		'SSS',
-		' B '
+		'CBG'
 	], {
 		G: 'gtceu:gypsum_dust',
 		C: 'gtceu:calcite_dust',
@@ -510,9 +509,8 @@ ServerEvents.recipes(event => {
 	}).replaceIngredient('woodenbucket:wooden_bucket', 'minecraft:air').id('start:shaped/liquid_concrete_wooden_bucket');
 
 	event.shaped('gtceu:concrete_bucket', [
-		'GCG',
 		'SSS',
-		' B '
+		'CBG'
 	], {
 		G: 'gtceu:gypsum_dust',
 		C: 'gtceu:calcite_dust',
@@ -531,7 +529,7 @@ ServerEvents.recipes(event => {
 			.EUt(2);
 	});
 
-	event.recipes.create.mixing(Fluid.of('gtceu:concrete', 1200), [Fluid.of('minecraft:water', 1000), '3x gtceu:stone_dust', 'gtceu:calcite_dust', '2x gtceu:gypsum_dust']).id('start:create_mixer/liquid_concrete');
+	event.recipes.create.mixing(Fluid.of('gtceu:concrete', 1200), [Fluid.of('minecraft:water', 1000), '3x gtceu:stone_dust', 'gtceu:calcite_dust', 'gtceu:gypsum_dust']).id('start:create_mixer/liquid_concrete');
 
 	event.custom({
 		"type": "farmersdelight:cutting",

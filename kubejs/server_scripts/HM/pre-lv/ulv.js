@@ -248,35 +248,6 @@ ServerEvents.recipes(event => {
       .duration(120)
       .EUt(4);
 
-    event.remove({ output: /^gtceu:.*firebox_casing/ });
-    event.remove({ output: /^gtceu:.*gearbox/ });
-    event.remove({ output: /^gtceu:.*pipe_casing/ });
-
-    const SpecialCasing = (material, tier) => {
-      event.recipes.gtceu.assembler(id(`${material}_gearbox`))
-        .itemInputs(`4x gtceu:${material}_plate`, `2x gtceu:${material}_gear`, `2x gtceu:small_${material}_gear`, `gtceu:${material}_frame`)
-        .circuit(4)
-        .itemOutputs(`gtceu:${material}_gearbox`)
-        .duration(100)
-        .EUt(2 * (4 ** tier));
-
-      event.recipes.gtceu.assembler(id(`${material}_firebox_casing`))
-        .itemInputs(`4x gtceu:${material}_plate`, `4x gtceu:${material}_rod`, `gtceu:${material}_frame`)
-        .circuit(2)
-        .itemOutputs(`gtceu:${material}_firebox_casing`)
-        .duration(100)
-        .EUt(2 * (4 ** tier));
-
-      event.recipes.gtceu.assembler(id(`${material}_pipe_casing`))
-        .itemInputs(`4x gtceu:${material}_plate`, `4x gtceu:${material}_small_fluid_pipe`, `gtceu:${material}_frame`)
-        .circuit(3)
-        .itemOutputs(`gtceu:${material}_pipe_casing`)
-        .duration(100)
-        .EUt(2 * (4 ** tier));
-    }
-    SpecialCasing('bronze',0);
-    SpecialCasing('steel',1);
-
     event.recipes.create.mechanical_crafting('2x gtceu:resistor', [
       ' PPP ',
       'WRCRW',
@@ -299,6 +270,6 @@ ServerEvents.recipes(event => {
     });
     event.remove({id: /^gtceu:shaped\/energy_hatch/});
     event.remove({id: /^gtceu:shaped\/dynamo_hatch/});
-    event.remove({output: /^gtceu:lv_.*/});
+    // event.remove({output: /^gtceu:lv_.*/});
 
 });

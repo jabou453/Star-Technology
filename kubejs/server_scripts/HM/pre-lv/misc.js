@@ -366,6 +366,43 @@ ServerEvents.recipes(event => {
 		C: 'kubejs:high_steam_machine_casing'
     }).id('start:mechanical_crafter/steam_ore_factory');
 
+	event.remove({ id: 'gtceu:shaped/shape_empty' });
+	event.shaped(Item.of('gtceu:gear_casting_mold'), [
+		'   ',
+		' PH',
+		'   '
+	], {
+		P: 'gtceu:empty_mold',
+		H: '#forge:tools/hammers'
+	}).id('start:shaped/gear_casting_mold');
+
+	event.shaped(Item.of('gtceu:small_gear_casting_mold'), [
+		'   ',
+		'   ',
+		'H P'
+	], {
+		P: 'gtceu:empty_mold',
+		H: '#forge:tools/hammers'
+	}).id('start:shaped/small_gear_casting_mold');
+
+	event.shaped(Item.of('gtceu:gear_extruder_mold'), [
+		'W  ',
+		' R ',
+		'   '
+	], {
+		R: 'gtceu:ring_extruder_mold',
+		W: '#forge:tools/wire_cutters'
+	}).id('start:shaped/gear_extruder_mold');
+
+	event.shaped(Item.of('gtceu:small_gear_extruder_mold'), [
+		' W ',
+		' R ',
+		'   '
+	], {
+		R: 'gtceu:ring_extruder_mold',
+		W: '#forge:tools/wire_cutters'
+	}).id('start:shaped/small_gear_extruder_mold');
+
 	//Mass Removals
 
 	const ThermalRemoval = ['redstone_servo', 'device_tree_extractor', 'drill_head', 'fluid_cell_frame','device_rock_gen','device_water_gen'];

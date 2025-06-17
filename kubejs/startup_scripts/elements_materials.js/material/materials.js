@@ -230,7 +230,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('lead', gear);
     matmod('silver', gear);
     matmod('naquadah', dense_plate);
-    matmod('enriched_naquadah', [dense_plate, rotor, gear, frame, long_rod]);
+    matmod('enriched_naquadah', [dense_plate, rotor, gear, small_gear, frame, long_rod]);
     matmod('naquadria', dense_plate);
     matmod('neutronium', [foil, small_gear,rotor]);
     matmod('europium', small_spring);

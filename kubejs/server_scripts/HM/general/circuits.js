@@ -3,7 +3,6 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    event.remove({ type: 'gtceu:circuit_assembler'});
     event.remove({ output: /^gtceu:.*electronic_circuit/ })
 
     // Manufacturing Facility Controller
@@ -46,28 +45,28 @@ ServerEvents.recipes(event => {
         .EUt(120);
     
     // Parts
-    event.recipes.gtceu.circuit_assembler(id('redstone_servo'))
+    event.recipes.gtceu.assembler(id('redstone_servo')) //move to cf?
         .itemInputs('2x create:electron_tube', '2x gtceu:steel_plate', '2x gtceu:red_alloy_bolt')
         .inputFluids('gtceu:soldering_alloy 72')
         .itemOutputs('2x thermal:redstone_servo')
         .duration(600)
         .EUt(6);
 
-    event.recipes.gtceu.circuit_assembler(id('electron_tube'))
+    event.recipes.gtceu.assembler(id('electron_tube')) //move to cf?
         .itemInputs('gtceu:glass_tube', 'create:polished_rose_quartz', 'gtceu:red_alloy_bolt', 'gtceu:steel_ring')
         .inputFluids('gtceu:tin 72')
         .itemOutputs('3x create:electron_tube')
         .duration(400)
         .EUt(4);
 
-    event.recipes.gtceu.circuit_assembler(id('resistor'))
+    event.recipes.gtceu.assembler(id('resistor'))
         .itemInputs('3x minecraft:paper', 'gtceu:coke_dust', 'gtceu:copper_single_wire')
         .inputFluids('gtceu:glue 100')
         .itemOutputs('2x gtceu:resistor')
         .duration(400)
         .EUt(7);
 
-    event.recipes.gtceu.circuit_assembler(id('diode'))
+    event.recipes.gtceu.assembler(id('diode'))
         .itemInputs('6x gtceu:fine_annealed_copper_wire', 'gtceu:small_gallium_arsenide_dust', 'gtceu:glass_tube')
         .inputFluids('gtceu:polyethylene 144')
         .itemOutputs('2x gtceu:diode')

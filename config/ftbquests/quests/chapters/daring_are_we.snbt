@@ -116,6 +116,8 @@
 		{
 			dependencies: ["1A42A49F4F4E7E29"]
 			id: "267B7EA717164DBF"
+			shape: "gear"
+			size: 1.25d
 			tasks: [{
 				id: "09F3E73828714864"
 				item: "gtceu:lv_energy_input_hatch"

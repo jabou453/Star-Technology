@@ -99,6 +99,15 @@ StartupEvents.registry('item', event => {
 
 	// ================================================================================== //
 
+	event.create('iron_sand_paper')
+		.displayName('Iron Sand Paper')
+		.rarity('common')
+		.maxDamage(96)
+		.unstackable()
+		.texture(`kubejs:item/hm/pre-lv/iron_sand_paper`);
+
+	// ================================================================================== //
+
 	['Electric Motor', 'Electric Pump', 'Conveyor Module', 'Robot Arm', 'Electric Piston', 'Emitter'].forEach(ULVComp => {
 		let id = `${ULVComp.toLowerCase().replace(' ','_')}`
 		event.create(`ulv_${id}`)
