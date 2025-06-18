@@ -15,7 +15,7 @@
 	quest_links: [{
 		id: "5C3A70141044636D"
 		linked_quest: "179A15014A5716B5"
-		x: 13.0d
+		x: 18.5d
 		y: 9.0d
 	}]
 	quests: [
@@ -367,8 +367,8 @@
 				item: "gtceu:biphenyl_dust"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 8.5d
+			x: 6.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["073FA13EEEA78C5F"]
@@ -388,8 +388,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 8.5d
+			x: 7.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["721A2D614DBBAECC"]
@@ -407,8 +407,8 @@
 				item: "gtceu:pcb_coolant_bucket"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.5d
+			x: 9.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["111033FEFA89BA91"]
@@ -428,8 +428,8 @@
 					type: "item"
 				}
 			]
-			x: 3.5d
-			y: 6.5d
+			x: 1.0d
+			y: 11.5d
 		}
 		{
 			dependencies: ["5D66D12C6EBB3A43"]
@@ -449,8 +449,8 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 6.5d
+			x: 2.5d
+			y: 11.5d
 		}
 		{
 			dependencies: ["615443BBE5BF322A"]
@@ -470,8 +470,8 @@
 					type: "item"
 				}
 			]
-			x: 6.5d
-			y: 6.5d
+			x: 4.0d
+			y: 11.5d
 		}
 		{
 			dependencies: [
@@ -485,8 +485,8 @@
 				item: "gtceu:44_difluorobenzophenone_dust"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.5d
+			x: 5.5d
+			y: 11.5d
 		}
 		{
 			dependencies: ["7CACFC7C9101EA59"]
@@ -506,8 +506,8 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: 7.5d
+			x: 5.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["111033FEFA89BA91"]
@@ -518,8 +518,8 @@
 				item: "gtceu:hydroquinone_dust"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 8.5d
+			x: 4.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["59546613EC1FC027"]
@@ -530,8 +530,8 @@
 				item: "gtceu:disodium_salt_of_hydroquinone_dust"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 8.5d
+			x: 5.5d
+			y: 9.5d
 		}
 		{
 			dependencies: [
@@ -553,8 +553,8 @@
 				type: "item"
 			}]
 			title: "Liquid PEEK Plastic"
-			x: 9.25d
-			y: 7.5d
+			x: 6.75d
+			y: 10.5d
 		}
 		{
 			dependencies: ["6CC13BE9AD447218"]
@@ -575,8 +575,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 10.5d
+			x: 3.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["24AE98EABF69F2D1"]
@@ -596,8 +596,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 10.5d
+			x: 5.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["0FDF7E1C23F592F7"]
@@ -617,8 +617,8 @@
 					type: "item"
 				}
 			]
-			x: 5.5d
-			y: 10.5d
+			x: 6.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["49D1C5BC82F5471E"]
@@ -638,8 +638,8 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: 10.5d
+			x: 8.0d
+			y: 6.5d
 		}
 		{
 			dependencies: [
@@ -663,8 +663,8 @@
 					type: "item"
 				}
 			]
-			x: 8.5d
-			y: 10.5d
+			x: 9.5d
+			y: 6.5d
 		}
 		{
 			description: ["Try using the Aquatic Entangler to automate this. If it is too slow, you can upgrade it with the Upgrade Kits you made before. These increase the amount of fish per catch by quite a bit."]
@@ -675,8 +675,8 @@
 				item: "gtceu:meat_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 11.5d
+			x: 8.5d
+			y: 7.5d
 		}
 		{
 			dependencies: ["3DB8A5E51DB80275"]
@@ -687,8 +687,8 @@
 				item: "gtceu:collagen_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 13.0d
+			x: 8.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["56CA67C022703D4E"]
@@ -709,7 +709,7 @@
 				}
 			]
 			x: 8.5d
-			y: 14.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["4F91534D92E0366C"]
@@ -721,7 +721,7 @@
 				type: "item"
 			}]
 			x: 9.5d
-			y: 13.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["43DE1BCB61604947"]
@@ -732,8 +732,8 @@
 				item: "gtceu:agar_dust"
 				type: "item"
 			}]
-			x: 9.5d
-			y: 11.5d
+			x: 10.0d
+			y: 7.5d
 		}
 		{
 			dependencies: [
@@ -814,8 +814,8 @@
 				}
 				type: "item"
 			}]
-			x: 29.0d
-			y: 9.5d
+			x: 13.5d
+			y: 10.5d
 		}
 		{
 			dependencies: ["39305F8DD4712D2B"]
@@ -1310,7 +1310,7 @@
 				}
 			]
 			title: "Lepton-Sparse Akreyrium"
-			x: 19.5d
+			x: 22.5d
 			y: 9.0d
 		}
 		{
@@ -1331,8 +1331,8 @@
 				}
 				type: "item"
 			}]
-			x: 27.5d
-			y: 12.0d
+			x: 12.0d
+			y: 11.5d
 		}
 		{
 			dependencies: [
@@ -1349,8 +1349,8 @@
 				}
 				type: "item"
 			}]
-			x: 27.0d
-			y: 10.5d
+			x: 12.0d
+			y: 9.5d
 		}
 		{
 			dependencies: [
@@ -1367,7 +1367,7 @@
 				}
 				type: "item"
 			}]
-			x: 27.0d
+			x: 13.5d
 			y: 8.5d
 		}
 		{
@@ -1382,8 +1382,8 @@
 				}
 				type: "item"
 			}]
-			x: 27.5d
-			y: 7.0d
+			x: 15.0d
+			y: 9.5d
 		}
 		{
 			id: "54EC42CB74C59F5F"
@@ -1396,8 +1396,8 @@
 				}
 				type: "item"
 			}]
-			x: 26.0d
-			y: 7.0d
+			x: 16.5d
+			y: 8.5d
 		}
 		{
 			id: "01D169FDC848B8A1"
@@ -1410,8 +1410,8 @@
 				}
 				type: "item"
 			}]
-			x: 25.5d
-			y: 8.0d
+			x: 13.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["1AAB9C20E833029A"]
@@ -1438,8 +1438,8 @@
 				}
 			]
 			title: "Nitric Acid"
-			x: 25.5d
-			y: 9.0d
+			x: 14.0d
+			y: 7.5d
 		}
 		{
 			id: "4D4E3428BFB10838"
@@ -1452,8 +1452,8 @@
 				}
 				type: "item"
 			}]
-			x: 25.5d
-			y: 10.0d
+			x: 11.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -1463,8 +1463,8 @@
 				item: "gtceu:activated_carbon_dust"
 				type: "item"
 			}]
-			x: 25.5d
-			y: 11.0d
+			x: 11.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["7658E16BA79A7632"]
@@ -1557,8 +1557,8 @@
 				}
 				type: "item"
 			}]
-			x: 10.5d
-			y: 10.5d
+			x: 11.5d
+			y: 6.5d
 		}
 		{
 			dependencies: [
@@ -1639,7 +1639,6 @@
 		{
 			dependencies: [
 				"1C9EB97C0D3C475B"
-				"144338235815C08C"
 				"1C81273869C0EC9F"
 				"60ECE277341A9408"
 			]
@@ -1662,8 +1661,8 @@
 				}
 				type: "item"
 			}]
-			x: 7.0d
-			y: 16.0d
+			x: 18.5d
+			y: 17.5d
 		}
 		{
 			dependencies: ["3722C0427C9AF100"]
@@ -1677,8 +1676,8 @@
 				}
 				type: "item"
 			}]
-			x: 5.5d
-			y: 16.0d
+			x: 16.5d
+			y: 17.5d
 		}
 		{
 			dependencies: ["5728078931762D8E"]
@@ -1692,13 +1691,12 @@
 				}
 				type: "item"
 			}]
-			x: 4.0d
-			y: 16.0d
+			x: 15.0d
+			y: 17.5d
 		}
 		{
 			dependencies: [
 				"74476363CA71A782"
-				"50C1449ADC8D4063"
 				"60ECE277341A9408"
 			]
 			id: "5728078931762D8E"
@@ -1711,8 +1709,8 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
-			y: 16.0d
+			x: 13.5d
+			y: 17.5d
 		}
 		{
 			dependencies: ["050206AAE7043982"]
@@ -1727,54 +1725,8 @@
 				}
 				type: "item"
 			}]
-			x: 1.0d
-			y: 16.0d
-		}
-		{
-			dependencies: [
-				"23A6938803281145"
-				"39FF89B370D09B88"
-			]
-			icon: {
-				Count: 1
-				id: "gtceu:neon_bucket"
-				tag: { }
-			}
-			id: "50C1449ADC8D4063"
-			tasks: [
-				{
-					id: "2BF78212CFDEB3CC"
-					item: {
-						Count: 1
-						id: "gtceu:neon_bucket"
-						tag: { }
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "4776623ACCD09557"
-					type: "checkmark"
-				}
-			]
-			title: "Neon"
-			x: 2.0d
-			y: 15.0d
-		}
-		{
-			dependencies: ["4BCC078B76C6CAE3"]
-			id: "144338235815C08C"
-			tasks: [{
-				id: "39AC0ACAB8458741"
-				item: {
-					Count: 1
-					id: "gtceu:nether_star_lens"
-					tag: { }
-				}
-				type: "item"
-			}]
-			x: 6.5d
-			y: 15.0d
+			x: 12.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["493DD013C818BB7B"]
@@ -1816,7 +1768,7 @@
 				}
 				type: "item"
 			}]
-			x: 18.5d
+			x: 21.5d
 			y: 8.0d
 		}
 		{
@@ -1843,7 +1795,7 @@
 				type: "item"
 			}]
 			x: 12.5d
-			y: -0.5d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -1873,8 +1825,8 @@
 				}
 			]
 			title: "Dichlorobenzene"
-			x: 10.5d
-			y: -0.5d
+			x: 11.0d
+			y: -1.0d
 		}
 		{
 			id: "361BFCF1A91F1CA8"
@@ -1887,8 +1839,8 @@
 				}
 				type: "item"
 			}]
-			x: 11.0d
-			y: -1.5d
+			x: 11.5d
+			y: 0.0d
 		}
 		{
 			icon: {
@@ -1914,7 +1866,7 @@
 				}
 			]
 			title: "Chlorine Gas"
-			x: 9.0d
+			x: 10.0d
 			y: -0.5d
 		}
 		{
@@ -1941,7 +1893,7 @@
 				}
 			]
 			title: "Benzene"
-			x: 9.5d
+			x: 10.0d
 			y: -1.5d
 		}
 		{
@@ -1953,8 +1905,8 @@
 				title: "postioner"
 				type: "checkmark"
 			}]
-			x: 15.5d
-			y: 7.5d
+			x: 14.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["4BCC078B76C6CAE3"]
@@ -2169,7 +2121,7 @@
 				item: "kubejs:crystalline_akreyrium"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 22.5d
 			y: 7.0d
 		}
 		{
@@ -2181,7 +2133,7 @@
 				item: "kubejs:amorphous_akreyrium"
 				type: "item"
 			}]
-			x: 20.5d
+			x: 23.5d
 			y: 10.0d
 		}
 		{
@@ -2205,7 +2157,7 @@
 				}
 			]
 			title: "Lepton-Flux Akreyrium"
-			x: 21.5d
+			x: 24.5d
 			y: 9.0d
 		}
 		{
@@ -2216,7 +2168,7 @@
 				item: "gtceu:lepton_coalescing_superalloy_ingot"
 				type: "item"
 			}]
-			x: 20.5d
+			x: 23.5d
 			y: 8.0d
 		}
 		{
@@ -2237,7 +2189,7 @@
 				item: "gtceu:utopian_akreyrium_bucket"
 				type: "item"
 			}]
-			x: 23.5d
+			x: 26.5d
 			y: 9.0d
 		}
 		{
@@ -2257,7 +2209,7 @@
 				}
 			]
 			title: "Electron Sparse Akreyrium"
-			x: 19.5d
+			x: 22.5d
 			y: 11.0d
 		}
 		{
@@ -2277,7 +2229,7 @@
 				}
 			]
 			title: "Muon Sparse Akreyrium"
-			x: 19.5d
+			x: 22.5d
 			y: 15.0d
 		}
 		{
@@ -2297,7 +2249,7 @@
 				}
 			]
 			title: "Tau Sparse Akreyrium"
-			x: 19.5d
+			x: 22.5d
 			y: 13.0d
 		}
 		{
@@ -2312,7 +2264,7 @@
 				item: "kubejs:electron_injection_catalyst"
 				type: "item"
 			}]
-			x: 20.5d
+			x: 23.5d
 			y: 12.0d
 		}
 		{
@@ -2327,7 +2279,7 @@
 				item: "kubejs:muon_injection_catalyst"
 				type: "item"
 			}]
-			x: 20.5d
+			x: 23.5d
 			y: 16.0d
 		}
 		{
@@ -2342,7 +2294,7 @@
 				item: "kubejs:tau_injection_catalyst"
 				type: "item"
 			}]
-			x: 20.5d
+			x: 23.5d
 			y: 14.0d
 		}
 		{
@@ -2361,7 +2313,7 @@
 				item: "gtceu:dense_tau_akreyrium_bucket"
 				type: "item"
 			}]
-			x: 21.5d
+			x: 24.5d
 			y: 13.0d
 		}
 		{
@@ -2380,7 +2332,7 @@
 				item: "gtceu:dense_muon_akreyrium_bucket"
 				type: "item"
 			}]
-			x: 21.5d
+			x: 24.5d
 			y: 15.0d
 		}
 		{
@@ -2399,7 +2351,7 @@
 				item: "gtceu:dense_electron_akreyrium_bucket"
 				type: "item"
 			}]
-			x: 21.5d
+			x: 24.5d
 			y: 11.0d
 		}
 		{
@@ -2425,7 +2377,7 @@
 				type: "item"
 			}]
 			title: "Better Akreyrium"
-			x: 23.5d
+			x: 26.5d
 			y: 13.0d
 		}
 		{
@@ -2449,7 +2401,7 @@
 				}
 			]
 			title: "Partial Superalloy Looping"
-			x: 23.5d
+			x: 26.5d
 			y: 11.0d
 		}
 		{
@@ -2461,7 +2413,7 @@
 				type: "item"
 			}]
 			title: "Catalyst Recycling"
-			x: 25.5d
+			x: 28.5d
 			y: 13.0d
 		}
 		{
@@ -2476,7 +2428,7 @@
 				item: "kubejs:blank_injection_catalyst"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 21.0d
 			y: 10.5d
 		}
 		{
@@ -2496,7 +2448,7 @@
 				}
 			]
 			title: "Alternating Electron Infused Flux"
-			x: 18.5d
+			x: 21.5d
 			y: 12.0d
 		}
 		{
@@ -2521,7 +2473,7 @@
 				}
 			]
 			title: "Brilliant Muon Infused Flux"
-			x: 18.5d
+			x: 21.5d
 			y: 16.0d
 		}
 		{
@@ -2545,7 +2497,7 @@
 				}
 			]
 			title: "Ethereal Tau Infused Flux"
-			x: 18.5d
+			x: 21.5d
 			y: 14.0d
 		}
 		{
@@ -2559,7 +2511,7 @@
 				item: "gtceu:alpha_phase_electron_infusion_agent_dust"
 				type: "item"
 			}]
-			x: 16.5d
+			x: 19.5d
 			y: 12.0d
 		}
 		{
@@ -2573,7 +2525,7 @@
 				item: "gtceu:beta_phase_electron_infusion_agent_dust"
 				type: "item"
 			}]
-			x: 16.5d
+			x: 19.5d
 			y: 10.0d
 		}
 		{
@@ -2584,7 +2536,7 @@
 				item: "gtceu:gamma_phase_electron_infusion_agent_dust"
 				type: "item"
 			}]
-			x: 14.5d
+			x: 17.5d
 			y: 10.0d
 		}
 		{
@@ -2595,7 +2547,7 @@
 				item: "gtceu:weak_beta_phase_electron_infusion_agent_dust"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 18.5d
 			y: 11.0d
 		}
 		{
@@ -2606,7 +2558,7 @@
 				item: "gtceu:weak_gamma_phase_electron_infusion_agent_dust"
 				type: "item"
 			}]
-			x: 13.5d
+			x: 16.5d
 			y: 11.0d
 		}
 		{
@@ -2617,7 +2569,7 @@
 				item: "gtceu:tri_phase_electron_infusion_agent_dust"
 				type: "item"
 			}]
-			x: 14.5d
+			x: 17.5d
 			y: 12.0d
 		}
 		{
@@ -2628,7 +2580,7 @@
 				item: "gtceu:di_phase_electron_infusion_agent_dust"
 				type: "item"
 			}]
-			x: 12.5d
+			x: 15.5d
 			y: 12.0d
 		}
 		{
@@ -2648,7 +2600,7 @@
 				}
 			]
 			title: "Mono-Phase Electron Infused Flux"
-			x: 12.5d
+			x: 15.5d
 			y: 14.0d
 		}
 		{
@@ -2671,7 +2623,7 @@
 				}
 			]
 			title: "Lepton-Flavour Foundational Flux"
-			x: 12.5d
+			x: 15.5d
 			y: 16.0d
 		}
 		{
@@ -2682,7 +2634,7 @@
 				item: "gtceu:lepton_coalescing_superalloy_ingot"
 				type: "item"
 			}]
-			x: 11.5d
+			x: 14.5d
 			y: 15.0d
 		}
 		{
@@ -2702,7 +2654,7 @@
 				}
 			]
 			title: "Superlight Tau Infused Flux"
-			x: 16.5d
+			x: 19.5d
 			y: 14.0d
 		}
 		{
@@ -2725,7 +2677,7 @@
 				}
 			]
 			title: "Superheavy Tau Infused Flux"
-			x: 17.5d
+			x: 20.5d
 			y: 15.0d
 		}
 		{
@@ -2737,7 +2689,7 @@
 				item: "kubejs:aspect_of_weight"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 18.5d
 			y: 13.0d
 		}
 		{
@@ -2761,7 +2713,7 @@
 				}
 			]
 			title: "Heavy Tau Infused Flux"
-			x: 15.5d
+			x: 18.5d
 			y: 15.0d
 		}
 		{
@@ -2781,7 +2733,7 @@
 				}
 			]
 			title: "Light Tau Infused Flux"
-			x: 14.5d
+			x: 17.5d
 			y: 14.0d
 		}
 		{
@@ -2801,7 +2753,7 @@
 				}
 			]
 			title: "Radiant Muon Infused Flux"
-			x: 19.5d
+			x: 22.5d
 			y: 17.0d
 		}
 		{
@@ -2821,7 +2773,7 @@
 				}
 			]
 			title: "Shining Muon Infused Flux"
-			x: 18.5d
+			x: 21.5d
 			y: 18.0d
 		}
 		{
@@ -2841,7 +2793,7 @@
 				}
 			]
 			title: "Glowing Muon Infused Flux"
-			x: 17.5d
+			x: 20.5d
 			y: 17.0d
 		}
 		{
@@ -2861,8 +2813,316 @@
 				}
 			]
 			title: "Twinkling Muon Infused Flux"
-			x: 16.5d
+			x: 19.5d
 			y: 16.0d
+		}
+		{
+			dependencies: ["19E8066A06379A19"]
+			id: "19834448E1EA758C"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "1390FFD3ACF319F6"
+				item: "gtceu:perfluoroelastomer_rubber_bucket"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["6373DC17B2A31150"]
+			id: "75BA1748F4DA8A86"
+			tasks: [{
+				id: "7531E696AEEDDF25"
+				item: "gtceu:tetrafluoroethylene_bucket"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 12.5d
+		}
+		{
+			dependencies: [
+				"042874C597262403"
+				"500FB846B2A5EDB1"
+				"2FA4D8E5C281EE8F"
+			]
+			id: "07234A79406AB3AA"
+			tasks: [{
+				id: "4C583C81005F5CAA"
+				item: "gtceu:perfluoromethyl_vinyl_ether_bucket"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 14.0d
+		}
+		{
+			id: "042874C597262403"
+			tasks: [{
+				id: "0B29E44716380BF8"
+				item: "gtceu:methanol_bucket"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 13.0d
+		}
+		{
+			id: "2FA4D8E5C281EE8F"
+			tasks: [{
+				id: "514979C07F9F607D"
+				item: "gtceu:fluorine_bucket"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 15.0d
+		}
+		{
+			id: "500FB846B2A5EDB1"
+			tasks: [{
+				id: "4541E6CC51C0F4D9"
+				item: "gtceu:vinyl_acetate_bucket"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"07234A79406AB3AA"
+				"75BA1748F4DA8A86"
+				"2F16B7E71F407709"
+			]
+			id: "19E8066A06379A19"
+			tasks: [{
+				id: "6F81C7FA60B6A1E9"
+				item: "gtceu:raw_perfluoroelastomer_rubber_dust"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"424C253C168CF038"
+				"3AD0847FDCE274A3"
+			]
+			id: "2F16B7E71F407709"
+			tasks: [{
+				id: "2E61EB7F4E80AA17"
+				item: "gtceu:hexafluorobutadiene_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 15.5d
+		}
+		{
+			id: "3AD0847FDCE274A3"
+			tasks: [{
+				id: "522EBFE2A5E6FAA7"
+				item: "gtceu:hydrofluoric_acid_bucket"
+				type: "item"
+			}]
+			x: 11.5d
+			y: 16.0d
+		}
+		{
+			id: "424C253C168CF038"
+			tasks: [{
+				id: "241CE39114796864"
+				item: "gtceu:butadiene_bucket"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 16.0d
+		}
+		{
+			dependencies: ["615443BBE5BF322A"]
+			id: "44FC99192BD230B8"
+			tasks: [{
+				id: "1D6E77E49802545B"
+				item: "gtceu:benzophenone_bucket"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 12.75d
+		}
+		{
+			id: "1B683817D057B4A5"
+			tasks: [{
+				id: "20C8CF9DF133FA96"
+				item: "gtceu:acetic_acid_bucket"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 13.0d
+		}
+		{
+			id: "188295DEDBC77EAD"
+			tasks: [{
+				id: "04798C77DD891397"
+				item: "gtceu:maleic_anhydride_bucket"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"188295DEDBC77EAD"
+				"1B683817D057B4A5"
+				"44FC99192BD230B8"
+			]
+			id: "6EA82ACC5F03E1BC"
+			tasks: [{
+				id: "3E9773015E53DF87"
+				item: "gtceu:benzophenone_3344_tetracarboxylic_dianhydride_dust"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["1B5330F9A07294AD"]
+			id: "441B116F6D8FDC08"
+			tasks: [{
+				id: "6D3E052A66E9A36B"
+				item: "gtceu:dimethyl_succinate_bucket"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 17.5d
+		}
+		{
+			dependencies: [
+				"188295DEDBC77EAD"
+				"7AB2F356B5B0FDFD"
+			]
+			id: "1B5330F9A07294AD"
+			tasks: [{
+				id: "168244E75B84246F"
+				item: "gtceu:dimethyl_maleate_bucket"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 16.0d
+		}
+		{
+			dependencies: ["441B116F6D8FDC08"]
+			id: "5C5912F0ED3ED0F3"
+			tasks: [{
+				id: "3447645F34E3DF76"
+				item: "gtceu:14_butanediol_bucket"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 17.5d
+		}
+		{
+			dependencies: [
+				"7D40FFCC210E4C76"
+				"6EA82ACC5F03E1BC"
+				"612DA88E65A91C56"
+			]
+			id: "6BD12CC3A72DFAF4"
+			tasks: [{
+				id: "75C0B9EED465EA45"
+				item: "gtceu:polyamic_acid_bucket"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["6BD12CC3A72DFAF4"]
+			id: "31EADD276ECB7B25"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "3779AD0AB1186433"
+				item: "gtceu:polyimide_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"42A7EEB8EDD45512"
+				"28A1B23E9197F5B7"
+			]
+			id: "7D40FFCC210E4C76"
+			tasks: [{
+				id: "7652602B53F6DEBD"
+				item: "gtceu:n_methyl_2_pyrrolidone_dust"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["5CFDB5A139301559"]
+			id: "612DA88E65A91C56"
+			tasks: [{
+				id: "05EA8CE72B93B3A4"
+				item: "gtceu:m_phelyenediamine_bucket"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 15.5d
+		}
+		{
+			id: "5CFDB5A139301559"
+			tasks: [{
+				id: "6A183BE6AE5F2A29"
+				item: "gtceu:nitrobenzene_bucket"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["5C5912F0ED3ED0F3"]
+			id: "42A7EEB8EDD45512"
+			tasks: [{
+				id: "14B3901F922CECAC"
+				item: "gtceu:y_butyrolactone_bucket"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 17.5d
+		}
+		{
+			dependencies: [
+				"75B49A50671FBADE"
+				"7AB2F356B5B0FDFD"
+			]
+			id: "28A1B23E9197F5B7"
+			tasks: [{
+				id: "7707308BA088A968"
+				item: "gtceu:methylamine_bucket"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 16.0d
+		}
+		{
+			id: "7AB2F356B5B0FDFD"
+			tasks: [{
+				id: "1D5DE38DB7F14DF0"
+				item: "gtceu:methanol_bucket"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 16.0d
+		}
+		{
+			id: "75B49A50671FBADE"
+			tasks: [{
+				id: "47856BB151864C59"
+				item: "gtceu:ammonia_bucket"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["10575AA87FEC2AD8"]
@@ -2872,8 +3132,8 @@
 				item: "gtceu:netherite_trisulfate_complex_bucket"
 				type: "item"
 			}]
-			x: -7.0d
-			y: 9.0d
+			x: -0.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["182D948925141764"]
@@ -2883,8 +3143,8 @@
 				item: "gtceu:pure_netherite_dust"
 				type: "item"
 			}]
-			x: -8.5d
-			y: 9.0d
+			x: -2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["15F316991165C760"]
@@ -2894,8 +3154,8 @@
 				item: "gtceu:netherite_hexammine_sulfate_dust"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 7.5d
+			x: 0.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["0FC2F1EE502BDDBF"]
@@ -2905,8 +3165,8 @@
 				item: "gtceu:voidic_nitride_bucket"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 7.5d
+			x: 1.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["15F316991165C760"]
@@ -2916,8 +3176,8 @@
 				item: "gtceu:netherite_tetrahydroxide_dust"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 10.5d
+			x: 0.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["3C8D1539C267CCBC"]
@@ -2927,8 +3187,8 @@
 				item: "gtceu:astral_fluorosilicate_bucket"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 10.5d
+			x: 1.5d
+			y: 9.5d
 		}
 		{
 			dependencies: [
@@ -2941,8 +3201,8 @@
 				item: "gtceu:primordial_nitrosilicate_bucket"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 9.0d
+			x: 1.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -2963,18 +3223,19 @@
 				item: "gtceu:runic_convergence_infusion_bucket"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 9.0d
+			x: 3.0d
+			y: 8.0d
 		}
 		{
+			dependencies: ["111033FEFA89BA91"]
 			id: "4DDA332F7E9B545E"
 			tasks: [{
 				id: "6F7B485C1EBF2FD9"
 				item: "gtceu:magnesium_nitride_bucket"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 7.5d
+			x: 5.0d
+			y: 8.0d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"

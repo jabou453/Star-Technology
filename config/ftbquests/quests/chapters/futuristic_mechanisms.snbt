@@ -13,7 +13,7 @@
 			id: "2D2DD0A279A4C76F"
 			linked_quest: "445BC7DFD3387DD4"
 			x: 0.0d
-			y: -1.0d
+			y: 1.0d
 		}
 		{
 			id: "114E2ED3560BE835"
@@ -263,7 +263,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 1.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -283,8 +283,8 @@
 				item: "gtceu:luv_machine_hull"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -1.0d
+			x: 0.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["689150D2A185216C"]
@@ -303,7 +303,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 3.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["53A9F3758C218CDC"]
@@ -389,8 +389,8 @@
 				item: "gtceu:rhodium_plated_palladium_ingot"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 1.0d
+			x: 0.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["53A9F3758C218CDC"]
@@ -413,8 +413,8 @@
 				item: "gtceu:iv_parallel_hatch"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -2.0d
+			x: -2.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -462,7 +462,7 @@
 				type: "item"
 			}]
 			shape: "gear"
-			size: 1.5d
+			size: 1.25d
 			tasks: [
 				{
 					id: "74F58207D106C0AD"
@@ -937,8 +937,8 @@
 				item: "gtceu:luv_parallel_hatch"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 0.0d
+			x: -2.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["6CC13BE9AD447218"]
@@ -1511,8 +1511,8 @@
 				item: "gtceu:naquadah_wafer"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -3.0d
+			x: -2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["6131A76D203DE6AB"]
@@ -1586,7 +1586,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -3.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["36C01453717B249D"]
@@ -1716,6 +1716,7 @@
 				"023794367F1B28D1"
 				"182D948925141764"
 				"138E77CDBA50A619"
+				"53A9F3758C218CDC"
 			]
 			description: ["A machine capable of tearing space-time using the power of Nether Stars, allowing you to harvest Naquadah from it."]
 			hide_dependency_lines: false
@@ -1726,7 +1727,7 @@
 				type: "item"
 			}]
 			shape: "gear"
-			size: 1.5d
+			size: 1.25d
 			tasks: [{
 				id: "450942C5A4B02270"
 				item: {
@@ -1737,7 +1738,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: -3.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -1824,7 +1825,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 3.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["3325914DB92AEF1B"]
@@ -1949,6 +1950,18 @@
 				type: "item"
 			}]
 			x: 14.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["023794367F1B28D1"]
+			description: ["A way to monitor your multiblocks with &credstone&r outputs allowing for complex systems."]
+			id: "0BF27AFE0C572EF0"
+			tasks: [{
+				id: "6B9F58B53AFE96DE"
+				item: "start_core:redstone_variadic_interface"
+				type: "item"
+			}]
+			x: 2.0d
 			y: -3.0d
 		}
 	]

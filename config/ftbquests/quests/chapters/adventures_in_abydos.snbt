@@ -67,6 +67,7 @@
 				"512757BEBFD1F584"
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
+				"588B98BE82BB689C"
 			]
 			description: ["A small computer that can regulate mechanisms."]
 			id: "4DD3C38FCD8D704D"
@@ -88,6 +89,7 @@
 				"6110BA7B3E84F06F"
 				"0254109773A2D93C"
 				"73D0DC357821B395"
+				"4E761937069F4A8D"
 			]
 			description: ["A mechanism that can create rotation with large amounts of force."]
 			id: "06F8BF8FB54B3BEE"
@@ -109,6 +111,7 @@
 				"6110BA7B3E84F06F"
 				"0254109773A2D93C"
 				"73D0DC357821B395"
+				"5C92E3705080A08C"
 			]
 			description: ["A mechanism that can do precise movements with directives."]
 			id: "0A321FE2FB18EA8B"
@@ -129,6 +132,7 @@
 			dependencies: [
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
+				"05B9D0B5977E3F05"
 			]
 			description: ["A valve that can measure the tiniest amounts of fluid and accurately dose them."]
 			id: "05EEBCD256194C78"
@@ -151,6 +155,7 @@
 				"3A52F8061046CB05"
 				"182D948925141764"
 				"73D0DC357821B395"
+				"0D4EFA300817A74D"
 			]
 			description: ["A magnetic field controller."]
 			id: "6D7188F8CA92DAAF"
@@ -171,6 +176,7 @@
 			dependencies: [
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
+				"00B6B1AFD9AB29C3"
 			]
 			description: ["A sturdy core that can precisely regulate it's inner working environment."]
 			id: "77E6700262CDB4E0"
@@ -192,6 +198,7 @@
 				"6110BA7B3E84F06F"
 				"0254109773A2D93C"
 				"73D0DC357821B395"
+				"1D259520871C3A28"
 			]
 			description: ["A sturdy plating that can resist wear and tear from high stress machinery."]
 			id: "433B94A266536D86"
@@ -214,6 +221,7 @@
 				"3A52F8061046CB05"
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
+				"05B9D0B5977E3F05"
 			]
 			description: ["A controller that can precisely regulate energy transfer."]
 			id: "7BBEB3C2DADBAD8B"
@@ -1323,32 +1331,6 @@
 			y: -6.0d
 		}
 		{
-			dependencies: [
-				"5E7153B7A10FC241"
-				"59B0F5DB2C1E96DC"
-			]
-			icon: "minecraft:netherrack"
-			id: "1E3EF64C0A4EE438"
-			optional: true
-			rewards: [{
-				id: "5440DF6C322F753F"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.0d
-			subtitle: "Not Yet Accessible"
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				icon: "minecraft:netherrack"
-				id: "537A1229A7EED7D1"
-				title: "To The Nether"
-				type: "dimension"
-			}]
-			x: 11.0d
-			y: -6.0d
-		}
-		{
 			dependencies: ["47DF7968E9B98C65"]
 			description: ["Mutate and Breed Bacteria to fit your needs and help you gather all the hydrocarbons you could need."]
 			icon: "gtceu:ethylbenzene_bucket"
@@ -2044,6 +2026,324 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["7F72F9E28713D965"]
+			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
+			id: "7D29B653F8C14ABC"
+			rewards: [{
+				id: "5B3778E2E7B9B0E4"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3B32A5E4F0DFED06"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						display: {
+							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
+						}
+						items: [
+							{
+								Count: 1b
+								id: "start_core:bacteria_methane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_octane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butadiene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_benzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_toluene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetone"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetic_acid"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methyl_acetate"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_creosote"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_phenol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_dimethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_naphthalene"
+								tag: { }
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Bacterial Colonies"
+			x: 1.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"5E7153B7A10FC241"
+				"59B0F5DB2C1E96DC"
+			]
+			icon: "minecraft:netherrack"
+			id: "1E3EF64C0A4EE438"
+			optional: true
+			rewards: [{
+				id: "5440DF6C322F753F"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "octagon"
+			size: 1.0d
+			subtitle: "Not Yet Accessible"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:netherrack"
+				id: "537A1229A7EED7D1"
+				title: "To The Nether"
+				type: "dimension"
+			}]
+			x: 11.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["7F72F9E28713D965"]
+			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
+			id: "56A015318588C9F4"
+			rewards: [{
+				id: "4697E0C4626AEE1A"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "67A611680844E291"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						display: {
+							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
+						}
+						items: [
+							{
+								Count: 1b
+								id: "start_core:bacteria_methane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_octane"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_propene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_butadiene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_benzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_toluene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetone"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_acetic_acid"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_methyl_acetate"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethanol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_creosote"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_phenol"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_dimethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_ethylbenzene"
+								tag: { }
+							}
+							{
+								Count: 1b
+								id: "start_core:bacteria_naphthalene"
+								tag: { }
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			title: "Bacterial Colonies"
+			x: 1.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"5E7153B7A10FC241"
+				"59B0F5DB2C1E96DC"
+			]
+			icon: "minecraft:netherrack"
+			id: "0B00FD5F7735E3E0"
+			optional: true
+			rewards: [{
+				id: "4D0262DA27C9357F"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "octagon"
+			size: 1.0d
+			subtitle: "Not Yet Accessible"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:netherrack"
+				id: "3D62E0DEA1D5CAC6"
+				title: "To The Nether"
+				type: "dimension"
+			}]
+			x: 11.0d
+			y: -6.0d
+		}
+		{
 			dependencies: ["630F50E03EC3D144"]
 			description: ["Gravi-Stars &o&lCollapsed&r with even greater intensity."]
 			id: "4D5EEE7D7EC1FAFA"
@@ -2194,6 +2494,55 @@
 			]
 			x: 5.5d
 			y: 7.0d
+		}
+		{
+			dependencies: ["3479CEBD73550718"]
+			id: "077F46BD75F325FD"
+			tasks: [
+				{
+					id: "588B98BE82BB689C"
+					item: "kubejs:ruined_computational_matrix"
+					type: "item"
+				}
+				{
+					id: "4E761937069F4A8D"
+					item: "kubejs:ruined_transmission_assembly"
+					type: "item"
+				}
+				{
+					id: "5C92E3705080A08C"
+					item: "kubejs:ruined_precision_drive_mechanism"
+					type: "item"
+				}
+				{
+					id: "6F6122F842882759"
+					item: "kubejs:ruined_microfluidic_flow_valve"
+					type: "item"
+				}
+				{
+					id: "0D4EFA300817A74D"
+					item: "kubejs:ruined_super_magnetic_core"
+					type: "item"
+				}
+				{
+					id: "00B6B1AFD9AB29C3"
+					item: "kubejs:ruined_catalyst_core"
+					type: "item"
+				}
+				{
+					id: "1D259520871C3A28"
+					item: "kubejs:ruined_high_strength_panel"
+					type: "item"
+				}
+				{
+					id: "05B9D0B5977E3F05"
+					item: "kubejs:ruined_micropower_router"
+					type: "item"
+				}
+			]
+			title: "Ruined Component Parts"
+			x: -2.5d
+			y: -3.0d
 		}
 	]
 	title: "Adventures in Abydos"

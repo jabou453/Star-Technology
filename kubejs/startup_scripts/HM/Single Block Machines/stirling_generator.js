@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('stirling_generator')
-        .category('stirling_generator')
+        .category('primitive')
         .setEUIO('out')
         .setMaxIOSize(1, 0, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, FillDirection.LEFT_TO_RIGHT)

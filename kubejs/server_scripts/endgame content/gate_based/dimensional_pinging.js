@@ -42,9 +42,10 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.dimensional_finder(id('abydos_coordinate_crystal'))
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
             .inputFluids('gtceu:naquadria 9072')
-            .chancedOutput('kubejs:abydos_coordinate_crystal', 250, 50)
-            .duration(12000)
-            .EUt(GTValues.VHA[GTValues.UV])
+            .chancedOutput('kubejs:abydos_coordinate_crystal', 500, 0)
+            .totalCWU(300 * 20 * 128)
+            .CWUt(128)
+            .EUt(GTValues.VA[GTValues.UV])
             .dimension('minecraft:overworld'); 
         })()
     }   
@@ -55,8 +56,9 @@ ServerEvents.recipes(event => {
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
             .inputFluids('gtceu:naquadria 9072')
             .chancedOutput('kubejs:abydos_coordinate_crystal', 9900, 0)
-            .duration(120)
-            .EUt(GTValues.VHA[GTValues.UV])
+            .totalCWU(128 * 20 * 20)
+            .CWUt(128)
+            .EUt(GTValues.VA[GTValues.UV])
             .dimension('sgjourney:abydos');
         })()
     }   
@@ -64,17 +66,19 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.dimensional_finder(id('nether_coordinate_crystal'))
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:netherrack', 'gtceu:uhv_sensor')
         .inputFluids('minecraft:lava 5000')
-        .chancedOutput('kubejs:nether_coordinate_crystal', 250, 50)
-        .duration(12000)
+        .chancedOutput('kubejs:nether_coordinate_crystal', 500, 0)
+        .totalCWU(300 * 20 * 160)
+        .CWUt(160)
         .EUt(GTValues.VHA[GTValues.UHV])
         .dimension('sgjourney:abydos');
 
     event.recipes.gtceu.dimensional_finder(id('end_coordinate_crystal'))
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:end_stone', 'gtceu:uhv_sensor')
         .inputFluids('gtceu:echo_r 5000')
-        .chancedOutput('kubejs:end_coordinate_crystal', 250, 50)
-        .duration(12000)
-        .EUt(GTValues.VHA[GTValues.UHV])
+        .chancedOutput('kubejs:end_coordinate_crystal', 500, 0)
+        .totalCWU(300 * 20 * 192)
+        .CWUt(192)
+        .EUt(GTValues.VA[GTValues.UHV])
         .dimension('sgjourney:abydos');
 
     /*event.recipes.gtceu.dimensional_finder(id('lantea_coordinate_crystal'))
@@ -110,7 +114,7 @@ ServerEvents.recipes(event => {
         .dimension('minecraft:cavum_tenebrae');*/
 
     const CrystalDuping = (type,eutScale) => {
-        event.recipes.gtceu.scanner(id(`${type}_crystal_duping`))
+        event.recipes.gtceu.scanner(`${type}_crystal_duping`)
         .itemInputs('kubejs:coordinate_crystal',`kubejs:${type}_coordinate_crystal`)
         .itemOutputs(`2x kubejs:${type}_coordinate_crystal`)
         .duration(6000)

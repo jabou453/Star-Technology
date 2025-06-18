@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('rock_filtrator')
-        .category('rock_filtrator')
+        .category('resource_production')
         .setMaxIOSize(2, 9, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_SIFT , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MACERATOR);

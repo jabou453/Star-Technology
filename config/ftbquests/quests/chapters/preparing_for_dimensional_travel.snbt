@@ -103,7 +103,8 @@
 		{
 			dependencies: [
 				"5BDA17962F4630EB"
-				"1A4583EB1A3D538F"
+				"31EADD276ECB7B25"
+				"444598F0FA4D23BC"
 			]
 			description: [
 				"The heart of every &4UHV&r machine"
@@ -340,8 +341,10 @@
 			dependencies: [
 				"027C5CE3CFCB5649"
 				"4DE40B37D609B921"
+				"7FB86A5B9F6F6F35"
+				"7FFCAD92772A175F"
 			]
-			description: ["Currently unusable because it isn't done quite yet."]
+			description: ["Untempered and Unstable. Soon it will be ready to do something unimaginable."]
 			id: "5E9936C099FF589C"
 			rewards: [{
 				id: "05AE9E61C946D871"
@@ -858,6 +861,7 @@
 		{
 			dependencies: ["3ECCE739DE8F5F2C"]
 			description: ["A parallel EBF. Nothing needs to be said, just get it right now."]
+			icon: "minecraft:cooked_chicken"
 			id: "2EE4C6540FE3D4CF"
 			optional: true
 			rewards: [{
@@ -877,6 +881,7 @@
 		{
 			dependencies: ["3ECCE739DE8F5F2C"]
 			description: ["A parallel freezer. Very much necessary to keep up with the RHF on the left."]
+			icon: "minecraft:ice"
 			id: "17C47EC4E8337D7B"
 			optional: true
 			rewards: [{
@@ -1286,6 +1291,36 @@
 			}]
 			title: "&o&9Absorbing Hidden Knowledge"
 			x: 10.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"11D51899B980082B"
+				"60ECE277341A9408"
+			]
+			description: ["Even stronger and more condensed &o&dNether Stars&r even more capable of manipulating the fabric of space."]
+			hide_dependency_lines: true
+			icon: "gtceu:nether_star_concentrate_bucket"
+			id: "7FB86A5B9F6F6F35"
+			rewards: [{
+				id: "3E5689E13AD8D5CF"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "63AF5ACFB599117E"
+					item: "gtceu:nether_star_concentrate_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "63AB3A6BB237EC9F"
+					type: "checkmark"
+				}
+			]
+			title: "Nether Star Concentrate"
+			x: -4.0d
 			y: -3.5d
 		}
 	]

@@ -1514,6 +1514,39 @@
 			x: 4.5d
 			y: 3.0d
 		}
+		{
+			can_repeat: true
+			hide_until_deps_complete: true
+			icon: "minecraft:dragon_breath"
+			id: "7A188FDFA4C591D7"
+			rewards: [{
+				count: 128
+				id: "476116DFED4CC404"
+				item: "minecraft:dragon_breath"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.15d
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "64DCEB931D509752"
+					item: "kubejs:coin"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "7FCC562221676BFD"
+					item: "minecraft:dragon_breath"
+					type: "item"
+				}
+			]
+			title: "Dragon Breath"
+			x: 0.0d
+			y: 4.0249999999999995d
+		}
 	]
 	title: "Shop"
 }

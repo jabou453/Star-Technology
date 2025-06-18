@@ -1,14 +1,14 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('industrial_barrel_aqueous')
-        .category('industrial_barrel')
+        .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(2, 2, 2, 2)
         .setProgressBar(GuiTextures.PROGRESS_BAR_BATH , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.BATH);
        
     event.create('industrial_barrel_magmatic')
-        .category('industrial_barrel')
+        .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(2, 2, 2, 2)
         .setProgressBar(GuiTextures.PROGRESS_BAR_BATH , FillDirection.LEFT_TO_RIGHT)

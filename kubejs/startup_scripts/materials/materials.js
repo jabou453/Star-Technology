@@ -181,10 +181,9 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.Netherite.setMaterialARGB(0x1a0d00);
     GTMaterials.Netherite.setComponents('4x debris', '4x gold');
     GTMaterials.Netherite.setMaterialIconSet(DULL);
-    GTMaterials.Netherite.addFlags(rod);
+    GTMaterials.Netherite.addFlags(rod, foil);
     GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
     GTMaterials.get('netherite_hexammine_sulfate').setFormula('[*Nr*(NH3)6]SO4');
-    
     GTMaterials.get('netherite').setFormula('Nr');
     GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
     GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
@@ -241,11 +240,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('sterling_silver', [rod, frame]);
     matmod('nether_star', foil);
     matmod('netherite', no_decomp);
-    matmod('echo_shard', lens);
+    matmod('echo_shard', [lens, foil]);
     matmod('copper', gear);
     matmod('vanadium_gallium', fine_wire);
     matmod('rhodium_plated_palladium', frame);
     matmod('darmstadtium', frame);
+    matmod('ruthenium_trinium_americium_neutronate', fine_wire);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
@@ -354,8 +354,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).gas().element(GTElements.get(name)).color(color).flags(flags);
     }
 
-    const polymerFluid = (name, elements, color, pipe, flags) => {
+    const polymerFluidPipe = (name, elements, color, pipe, flags) => {
             event.create(name).polymer().fluid().components(elements).color(color).flags(flags).fluidPipeProperties(pipe[0], pipe[1], pipe[2], pipe[3], pipe[4], pipe[5]);
+    }
+
+    const polymerFluid = (name, elements, color, flags) => {
+            event.create(name).polymer().fluid().components(elements).color(color).flags(flags);
     }
 
     const conductor = (name, elements, color, icon, blasting, cable, flags) => {
@@ -385,11 +389,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     }
 
     const compIngotPlasma = (name, elements, color, icon, blasting, flags) => {
-        event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
+        event.create(name).ingot().fluid().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
     }
 
     const conductorPlasma = (name, elements, color, icon, blasting, cable, flags) => {
-        event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
+        event.create(name).ingot().fluid().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
 
     const quCompInfusions = (name, color) => {
@@ -398,11 +402,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     elemIngot('magnetic_zapolgium', 'zapolgium', 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
-    elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3750], []);
+    elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3250], []);
 
-    elemIngotFluid('rhexis', 0x330000, DULL, [15499, 'highest', VA('uiv'), 4750], []);
+    elemIngotFluid('rhexis', 0x330000, DULL, [15499, 'highest', VA('uiv'), 3450], []);
 
-    elemIngotFluid('chalyblux', 0xffcccc, DULL, [15499, 'highest', VA('uev'), 5750], []);
+    elemIngotFluid('chalyblux', 0xffcccc, DULL, [15499, 'highest', VA('uev'), 3750], []);
 
     elemIngotFluid('mythril', 0x006666, METALLIC, [11299, 'highest', VA('uhv'), 2400], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
 
@@ -482,7 +486,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Crown Ethers
     compLiquid('sulfur_dichloride', ['1x sulfur', '2x chlorine'], 0xcc0000, []);
 
-    compLiquid('thionyl_chloride', ['1x sulfur', '1x oxygen', '2x chlorine'], 0xffffcc, []);
+    compLiquid('thionyl_chloride', ['1x sulfur', '1x oxygen', '2x chlorine'], 0xffffcc, [no_decomp]);
 
     compLiquid('sulfuryl_chloride', ['1x sulfur', '2x oxygen', '2x chlorine'], 0xffffcc, []);
 
@@ -516,21 +520,21 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquid('18_crown_6_k', ['1x potassium', '12x carbon', '24x hydrogen', '6x oxygen'], 0x4d9900, [no_decomp]);
 
-    compDust('4_toluenesulfonyl_chloride', ['7x carbon', '7x hydrogen', '2x chlorine', '2x oxygen', '1x sulfur'], 0xffccc, []);
+    compDust('4_toluenesulfonyl_chloride', ['7x carbon', '7x hydrogen', '2x chlorine', '2x oxygen', '1x sulfur'], 0xffccc, [no_decomp]);
 
-    compDust('triethylene_glycol_ditosylate', ['20x carbon', '26x hydrogen', '8x oxygen', '2x sulfur'], 0xb8b894, []);
+    compDust('triethylene_glycol_ditosylate', ['20x carbon', '26x hydrogen', '8x oxygen', '2x sulfur'], 0xb8b894, [no_decomp]);
 
     compDust('sodium_azide', ['1x sodium', '3x nitrogen'], 0xcc6699, []);
 
     compDust('palladium_on_carbon', ['1x palladium', '1x carbon'], 0xff9900, []);
 
-    compDust('sodium_p_toluenesulfonate', ['7x carbon', '7x hydrogen', '1x sodium', '3x oxygen', '1x sulfur'], 0x00cc00, []);
+    compDust('sodium_p_toluenesulfonate', ['7x carbon', '7x hydrogen', '1x sodium', '3x oxygen', '1x sulfur'], 0x00cc00, [no_decomp]);
 
-    compDust('triethylene_glycol_diazide', ['6x carbon', '12x hydrogen', '2x oxygen', '6x nitrogen'], 0x6666ff, []);
+    compDust('triethylene_glycol_diazide', ['6x carbon', '12x hydrogen', '2x oxygen', '6x nitrogen'], 0x6666ff, [no_decomp]);
 
-    compDust('triethylene_glycol_diamine', ['6x carbon', '16x hydrogen', '2x oxygen', '2x nitrogen'], 0xcc00cc, []);
+    compDust('triethylene_glycol_diamine', ['6x carbon', '16x hydrogen', '2x oxygen', '2x nitrogen'], 0xcc00cc, [no_decomp]);
 
-    compLiquid('cryptand', ['18x carbon', '36x hydrogen', '6x oxygen', '2x nitrogen'], 0x993333, []);
+    compLiquid('cryptand', ['18x carbon', '36x hydrogen', '6x oxygen', '2x nitrogen'], 0x993333, [no_decomp]);
 
     compLiquid('cryptand_k', ['1x potassium', '18x carbon', '36x hydrogen', '6x oxygen', '2x nitrogen'], 0x602020, [no_decomp]);
 
@@ -638,7 +642,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         //Extended Debris
         compDustLiquid('ancient_debris', ['1x mystery'], 0x603d1a, [no_decomp]);
 
-        elemIngot('ancient_netherite', 'ancient_netherite', 0x46271b, DULL, [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp]);
+        elemIngot('ancient_netherite', 'ancient_netherite', 0x46271b, DULL, [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp,dense_plate]);
 
         //Atomic Nether Dust Line
         compDustIcon('atomic_nether_sludge', ['1x mystery','1x mystery','1x mystery','1x mystery'], 0x883039, RADIOACTIVE, [no_decomp]);
@@ -817,28 +821,30 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // PEEK plastic Line
     compDust('disodium_salt_of_hydroquinone', ['6x carbon','4x hydrogen','2x oxygen','2x sodium'], 0xeaeaf9, no_decomp);
 
-    compDust('hydroquinone', ['6x carbon','6x hydrogen','2x oxygen'], 0xf9f9ff, []);
+    compDust('hydroquinone', ['6x carbon','6x hydrogen','2x oxygen'], 0xf9f9ff, [no_decomp]);
+
+    compDust('sodium_fluoride', ['1x sodium','1x fluorine'], 0xDEDEE2, []);
 
     compGas('carbon_acid', ['2x hydrogen','1x carbon','3x oxygen'], 0x333333, [no_decomp]);
 
-    compLiquid('fluorobenzene', ['6x carbon','5x hydrogen','1x fluorine'], 0xffffff, []);
+    compLiquid('fluorobenzene', ['6x carbon','5x hydrogen','1x fluorine'], 0xffffff, [no_decomp]);
 
-    compLiquid('4_fluorobenzoyl_chloride', ['7x carbon','4x hydrogen','1x chlorine','1x fluorine','1x oxygen'], 0xfffff0, []);
+    compLiquid('4_fluorobenzoyl_chloride', ['7x carbon','4x hydrogen','1x chlorine','1x fluorine','1x oxygen'], 0xfffff0, [no_decomp]);
     
-    compLiquid('benzoyl_chloride', ['7x carbon','5x hydrogen','1x chlorine','1x oxygen'], 0xfffadf, []);
+    compLiquid('benzoyl_chloride', ['7x carbon','5x hydrogen','1x chlorine','1x oxygen'], 0xfffadf, [no_decomp]);
 
-    compLiquid('benzotrichloride', ['7x carbon','5x hydrogen','3x chlorine'], 0xddd8bc, []);
+    compLiquid('benzotrichloride', ['7x carbon','5x hydrogen','3x chlorine'], 0xddd8bc, [no_decomp]);
 
     compDust('44_difluorobenzophenone', ['13x carbon','8x hydrogen','1x oxygen','2x fluorine'], 0xeee1c9 ,[no_decomp]); //naming like this: 4_4_di... will make kubejs go error to annoy you :)
     
-    polymerFluid('polyether_ether_ketone', ['19x carbon','12x hydrogen','3x oxygen'], 0xccbba7, [550, 600, true, true, true, false], [foil, plates, ring, plates, no_decomp]);
+    polymerFluidPipe('polyether_ether_ketone', ['19x carbon','12x hydrogen','3x oxygen'], 0xccbba7, [550, 600, true, true, true, false], [foil, plates, ring, plates, no_decomp]);
     
     // SiC/Bi2Te3 Line
-    compDust('sodium_borohydride', ['1x sodium','1x boron','4x hydrogen'], 0xE3DEC8, []);
+    compDust('sodium_borohydride', ['1x sodium','1x boron','4x hydrogen'], 0xE3DEC8, [no_decomp]);
 
-    compGas('nitrate', ['1x nitrogen', '3x oxygen'], 0xDBC365, []);
+    compGas('nitrate', ['1x nitrogen', '3x oxygen'], 0xDBC365, [no_decomp]); //Hide in JEI
 
-    compDust('bismuth_3_nitrate', ['1x bismuth', '3x nitrate'], 0xDEDBCD, []);
+    compDust('bismuth_3_nitrate', ['1x bismuth', '3x nitrate'], 0xDEDBCD, [no_decomp]);
 
     compDust('sodium_nitrate', ['1x sodium','1x nitrogen','3x oxygen'], 0xE6E5E5, []);
 
@@ -846,9 +852,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('silicon_carbide', ['1x silicon', '1x carbon'], 0xB79F8D, []);
         
-    compDust('bismuth_tritelluride', ['2x bismuth', '3x tellurium'], 0xDEB18E, []);
+    compDust('bismuth_tritelluride', ['2x bismuth', '3x tellurium'], 0xDEB18E, [no_decomp]); //Hide in JEI
 
-    compDust('silicon_carbide_over_bismuth_tritelluride', ['1x silicon_carbide', '1x bismuth_tritelluride'], 0x86C455, []);
+    compDust('silicon_carbide_over_bismuth_tritelluride', ['1x silicon_carbide', '1x bismuth_tritelluride'], 0x86C455, [no_decomp]);
 
     //Hexafluorobromic Acid
     compDustIcon('nickel_fluoride', ['1x nickel', '2x fluorine'], 0xA7A9A8, METALLIC, []);
@@ -876,7 +882,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquid('uranium_tetrafluoride', ['1x uranium', '4x fluorine'], 0x6CAB3F, [no_decomp]);
 
-    compLiquid('hydroxide',['1x oxygen','1x hydrogen'],0xC0D4DD, []);
+    compLiquid('hydroxide',['1x oxygen','1x hydrogen'],0xC0D4DD, []); //Hide in JEI
 
     compLiquid('caesium_oganesson_hexanitrate', ['2x caesium', '1x oganesson', '6x nitrate'], 0x769192, [no_decomp]);
 
@@ -969,6 +975,88 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compDust('seaborgium_cerium_tricarbon_tetrakis_orthosilicate_linked_dipolonium_diplatinum_tris_pyrophosphate', ['1x seaborgium_cerium_tricarbon_tetrakis_orthosilicate', '1x dipolonium_diplatinum_tris_pyrophosphate'], 0x526A48, [no_decomp]);
 
     compDust('flerovium_hexaoxide_octafluorosulfatoplutonate_enriched_rare_earth', ['1x flerovium_hexaoxide_octafluorosulfatoplutonate', '6x mystery'], 0x6A4852, [no_decomp]);
+ 
+    // PEDOT:PSS plastic Line
+    compLiquid('maleic_anhydride', ['4x carbon', '2x hydrogen', '3x oxygen'], 0xAAA099, [no_decomp]);
+
+    compLiquid('dimethyl_maleate', ['6x carbon', '10x hydrogen', '4x oxygen'], 0xC2BFB7, [no_decomp]);
+
+    compLiquid('dimethyl_succinate', ['4x carbon', '10x hydrogen', '3x oxygen'], 0xD0CCC4, [no_decomp]);
+
+    compLiquid('14_butanediol', ['4x carbon', '10x hydrogen', '2x oxygen'], 0xB8C4C4, [no_decomp]);
+
+    compDust('thiophene', ['4x carbon', '4x hydrogen', '1x sulfur'], 0xC8B680, [no_decomp]);
+
+    compLiquid('12_dibromoethane', ['2x carbon', '4x hydrogen', '2x bromine'], 0xB0A6CC, [no_decomp]);
+
+    compGas('dimethylformamide', ['3x carbon', '7x hydrogen', '1x nitrogen', '1x oxygen'], 0xA3B0B7, [no_decomp]); // DMF
+
+    compLiquid('34_ethylenedioxythiophene', ['6x carbon', '6x hydrogen', '2x oxygen', '1x sulfur'], 0x8A9A86, [no_decomp]); // EDOT
+
+    compDust('potassium_bromide', ['1x potassium', '1x bromine'], 0xD0D0D0, []);
+
+    compDust('benzoyl_peroxide', ['14x carbon', '10x hydrogen', '4x oxygen'], 0xC6A8A8, [no_decomp]);
+
+    compGas('hydrogen_chloride', ['1x hydrogen', '1x chlorine'], 0xA8CCC2, []);
+
+    compLiquid('chlorosulfonic_acid', ['1x hydrogen', '1x sulfur', '3x oxygen', '1x chlorine'], 0xA84E4E, [no_decomp]);
+
+    compLiquid('polystyrene_sulfate', ['8x carbon', '8x hydrogen', '3x oxygen', '1x sulfur'], 0xD8C6F0, [no_decomp]); // PSS
+
+    compDust('ferric_nitrate', ['1x iron', '3x nitrate'], 0xAF5F5F, []);
+
+    compLiquid('poly_34_ethylenedioxythiophene', ['6x carbon', '4x hydrogen', '2x oxygen', '1x sulfur'], 0x7C8FB2, [no_decomp]); //PEDOT
+    
+    compLiquid('sorbitol', ['6x carbon', '14x hydrogen', '6x oxygen'], 0xF8F0E8, [no_decomp]); //gotten from bacteria
+
+    compLiquid('sorbitan', ['6x carbon', '12x hydrogen', '5x oxygen'], 0xE8D6C6, [no_decomp]); //losses a water to steam
+
+    compLiquid('sorbitan_monoester', ['24x carbon', '46x hydrogen', '6x oxygen'], 0xD9CBB3, [no_decomp]);
+    
+    compLiquid('polysorbate_20', ['1x sorbitan_monoester', '20x ethylene_glycol'], 0xA0D7DD, [no_decomp]);
+
+    compDust('poly_34_ethylenedioxythiophene_polystyrene_sulfate_paste', ['9x carbon', '7x hydrogen', '1x sulfur', '3x oxygen'], 0x5D5A85, [no_decomp]);
+
+    compLiquid('poly_34_ethylenedioxythiophene_polystyrene_sulfate_solution', ['1x poly_34_ethylenedioxythiophene_polystyrene_sulfate_paste', '2x water'], 0x6C7FB0, [no_decomp]);
+
+    polymerFluidPipe('poly_34_ethylenedioxythiophene_polystyrene_sulfate', ['8x carbon', '7x hydrogen', '1x sulfur', '3x oxygen'], 0x26396D, [675, 800, true, true, true, false], [foil, plates, ring, plates, no_decomp]); //PEDOT
+
+    //FFKM Line [Rubber After SBR]
+    compLiquid('perfluoromethyl_vinyl_ether', ['3x carbon', '6x fluorine', '1x oxygen'], 0xD0E5E5, [no_decomp]);
+
+    compLiquid('hexafluorobutadiene', ['4x carbon', '6x fluorine'], 0xB8D2D9, [no_decomp]);
+
+    compDust('raw_perfluoroelastomer_rubber', ['3x tetrafluoroethylene', '1x perfluoromethyl_vinyl_ether', '1x hexafluorobutadiene'], 0xB0CCCC, [no_decomp]);
+
+    event.create('perfluoroelastomer_rubber')
+        .polymer()
+        .fluid()
+        .components('1x raw_perfluoroelastomer_rubber')
+        .color(0x536767)
+        .flags(foil, plates, ring, plates, rod, no_decomp)
+        .toolStats(ToolProperty.Builder.of(1, 1, 65535, 1, [
+			GTToolType.SOFT_MALLET,
+            GTToolType.PLUNGER
+		]).unbreakable().build());
+
+    //Polyimide Line [Insulator UHV+]
+    compLiquid('azanide', ['1x nitrogen', '2x hydrogen'], 0xBFC7E5, [no_decomp]); //Hide in JEI
+
+    compLiquid('benzophenone', ['13x carbon', '10x hydrogen', '1x oxygen'], 0xE5D3B5, [no_decomp]);
+
+    compLiquid('methylamine', ['1x carbon', '3x hydrogen', '1x nitrogen', '2x hydrogen'], 0xD8D8E5, [no_decomp]);
+
+    compDust('benzophenone_3344_tetracarboxylic_dianhydride', ['17x carbon', '6x hydrogen', '7x oxygen'], 0xD1B9A3, [no_decomp]);
+
+    compLiquid('y_butyrolactone', ['4x carbon', '6x hydrogen', '2x oxygen'], 0xD6E2E2, [no_decomp]);
+
+    compLiquid('m_phelyenediamine', ['6x carbon', '4x hydrogen', '2x azanide'], 0xE2BFC0, [no_decomp]);
+
+    compDust('n_methyl_2_pyrrolidone', ['5x carbon', '9x hydrogen', '1x nitrogen', '1x oxygen'], 0xBDC8D8, [no_decomp]);
+
+    compLiquid('polyamic_acid', ['17x carbon', '12x hydrogen', '2x nitrogen', '6x oxygen'], 0xCBBFA3, [no_decomp]);
+
+    polymerFluid('polyimide', ['17x carbon', '10x hydrogen', '2x nitrogen', '4x oxygen'], 0xD6A970, [foil, plates, plates, rod, no_decomp]);
 
     // Large Multis
     const largeMulti = (name,components,color) => {
@@ -1151,33 +1239,45 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquidTemp('superstate_helium_3', 2, ['1x helium_3'], 0xedfaf5, [no_decomp]);
     
-    conductorPlasma('magmada_alloy', ['4x adamantine', '1x neutronium', '3x tungsten'], 0xda8607, SHINY, [15049, 'highest', VA('uev'), 3600], [V('uhv'), 1, 3, false], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, rotor, no_abs_recipe]);
+    conductorPlasma('magmada_alloy', ['4x adamantine', '1x neutronium', '3x rtm_alloy'], 0xda8607, SHINY, [17890, 'highest', VA('uev'), 3600], [V('uhv'), 1, 3, false], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, rotor, no_abs_recipe]);
 
     event.create('mythrolic_alloy')
-        .components('5x mythril', '2x osmium', '2x tantalum', '1x iridium')
+        .components('5x mythril', '4x hsss', '2x darmstadtium')
         .ingot()
         .fluid()
         .plasma()
         .color(0x30956c)
-        .blastTemp(14999, 'highest', VA('uev'), 3600)
+        .blastTemp(18550, 'highest', VA('uev'), 3600)
         .iconSet(SHINY)
         .fluidPipeProperties(120000, 6000, true,true,true,true)
         .flags(plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, rotor, ring, foil, no_decomp, no_abs_recipe);
 
-    compIngotPlasma('starium_alloy', ['4x mystery', '2x estalt', '2x pure_netherite'], 0x2253d2, SHINY, [15199, 'highest', VA('uev'), 3600], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
+    compIngotPlasma('starium_alloy', ['4x mystery', '2x trinaquadalloy', '2x estalt'], 0x2253d2, SHINY, [18200, 'highest', VA('uev'), 3600], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
 
-    conductorPlasma('seaborgium_palladium_enriched_estalt_flerovium_alloy', ['4x seaborgium', '8x palladium', '3x enriched_estalt', '2x flerovium'], 0x73022b, DULL, [15469, 'highest', VA('uev'), 1800], [V('uev'), 32, 0, true], [no_decomp, no_abs_recipe]);
+    conductorPlasma('seaborgium_palladium_enriched_estalt_flerovium_alloy', ['4x seaborgium', '8x palladium', '3x enriched_estalt', '2x flerovium'], 0x73022b, DULL, [17950, 'highest', VA('uev'), 1800], [V('uev'), 32, 0, true], [no_decomp, no_abs_recipe, fine_wire]);
 
     compDust('iron_titanium_oxide', ['3x iron', '2x titanium', '7x oxygen'], 0x82229b, [no_decomp]);
 
     compDust('astatine_bis_tritelluride_cobo_selenium', ['1x astatine', '1x bismuth_tritelluride', '4x cobalt', '2x selenium'], 0x123718, [no_decomp]);
 
-    conductor('astatium_bioselex_carbonite', ['1x astatine', '2x bismuth', '3x selenium', '2x thallium', '4x sulfur', '1x carbon'], 0x305f84, DULL, [14900, 'highest', VA('uv'), 4000], [V('uev'), 3, 16, false] ,[spring, no_decomp]);
+    conductor('astatium_bioselex_carbonite', ['1x astatine', '2x bismuth', '3x selenium', '2x thallium', '4x sulfur', '1x carbon'], 0x305f84, DULL, [13475, 'highest', VA('uv'), 4000], [V('uev'), 3, 16, false] ,[spring, no_decomp]);
 
     conductor('astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide', ['1x astatine_bis_tritelluride_cobo_selenium', 'iron_titanium_oxide'], 0xe61485, DULL, [14799, 'highest', VA('uhv'), 2500], [V('uev'), 2, 12, false], [fine_wire, bolt_and_screw]);
 
     //UIV Materials
     conductor('polonium_bismide', ['1x polonium', '1x bismuth'], 0x016038, DULL, [14400, 'highest', VA('uev'), 1800], [V('uiv'), 5, 24, false], [bolt_and_screw,spring,small_spring]);
+
+    compIngot('diamane', ['1x carbon'], 0x62777A, [], [4000, 'low', VA('lv'), 1], [no_decomp]);
+
+    compDust('iridium_iv_oxide', ['1x iridium', '2x oxygen'], 0xBEDED9, [no_decomp]);
+        
+    compDust('bismuth_iii_oxide', ['2x bismuth', '3x oxygen'], 0xD5E5DC, [no_decomp]);
+
+    compIngot('bismuth_iridate', ['2x bismuth', '2x iridium', '7x oxygen'], 0x68CF93, [], [8600, 'high', VA('zpm'), 1080], [foil, no_decomp, no_abs_recipe]);
+
+    compLiquidStill('dragon_breath', ['1x mystery'], [no_decomp]);
+
+    compLiquidStill('pure_dragon_breath', ['1x mystery'], [no_decomp]);
 
     // Quantrum Comporessor Infusions
     quCompInfusions('intangibility_infusion', 0x00AAAA);

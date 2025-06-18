@@ -68,4 +68,10 @@ StartupEvents.registry('item', event => {
     event.create('ancient_netherite_reinforced_mesh')
         .displayName('Ancient-Netherite Reinforced Mesh')
         .texture('kubejs:item/ancient_netherite_reinforced_mesh');
+
+    // Purpur
+    event.create('true_absolute_chorus')
+        .displayName('Awakened Chorus Core')
+        .texture('kubejs:item/true_absolute_chorus')
+        .glow(true);
 });

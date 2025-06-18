@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
-    event.recipes.gtceu.chemical_plant(id('runic_convergence_infusion'))
+    event.recipes.gtceu.advanced_chemistry(id('runic_convergence_infusion'))
         .inputFluids('gtceu:primordial_nitrosilicate 1000', 'gtceu:magnesium_nitride 1000')
         .outputFluids('gtceu:runic_convergence_infusion 1000')
         .duration(200)

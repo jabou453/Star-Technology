@@ -9,7 +9,12 @@
 	id: "5617484BFC479624"
 	order_index: 6
 	progression_mode: "linear"
-	quest_links: [ ]
+	quest_links: [{
+		id: "5CAD94E1138B5355"
+		linked_quest: "53A2FF89C0F89921"
+		x: -5.0d
+		y: -1.0d
+	}]
 	quests: [
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -35,66 +40,74 @@
 			dependencies: ["4DF07CB3D60C901C"]
 			id: "71145B6D6BA8016A"
 			tasks: [{
-				id: "6D0F2C19F28F64B7"
-				title: "Find Collapsed Hellforge"
-				type: "checkmark"
+				id: "208B4A54456B3399"
+				item: "kubejs:husk_of_the_flame"
+				type: "item"
 			}]
 			x: -6.0d
-			y: -4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
 			id: "709EF5314988C381"
-			tasks: [{
-				id: "03C1C4B51E9D50B0"
-				title: "Hellstones"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "5739D00D6B85CE74"
+					item: "kubejs:cryostone"
+					type: "item"
+				}
+				{
+					id: "0EAB900EAB4C2ABF"
+					item: "kubejs:brimstone"
+					type: "item"
+				}
+			]
+			title: "Hellstones"
 			x: -6.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
-			dependencies: ["709EF5314988C381"]
+			dependencies: [
+				"709EF5314988C381"
+				"0032335FFAE6E012"
+			]
 			id: "665FC02BC2BC414F"
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "54FCC26C066840E9"
-				item: "gtceu:uev_super_cooler"
+				id: "11B60F351E78B31D"
+				item: "gtceu:cryostate_quantum_chiller"
 				type: "item"
 			}]
 			x: -4.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
 				"709EF5314988C381"
 				"71145B6D6BA8016A"
+				"0032335FFAE6E012"
+				"295442FA6CE0BA13"
+				"53A2FF89C0F89921"
 			]
 			id: "1EB60E6DE2086158"
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "3B8803F13E83A948"
-				item: "gtceu:uev_hellforge"
+				id: "5A3365B01BF98E8E"
+				item: "start_core:hellforge"
 				type: "item"
 			}]
 			x: -4.0d
-			y: -4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
 				"1EB60E6DE2086158"
 				"70EEDB38B78F5C7F"
-				"0032335FFAE6E012"
 			]
 			id: "059CB064A515B157"
 			tasks: [
-				{
-					id: "47744266B3A437CB"
-					title: "Hell Alloys"
-					type: "checkmark"
-				}
 				{
 					id: "32A5C9625179E385"
 					item: "gtceu:magmada_alloy_ingot"
@@ -111,35 +124,31 @@
 					type: "item"
 				}
 			]
+			title: "UEV Alloys"
 			x: -2.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["665FC02BC2BC414F"]
-			hide_dependent_lines: true
-			id: "64E470F6BFEE8C3F"
-			tasks: [{
-				id: "4695A96894815210"
-				item: "gtceu:superstate_helium_3_bucket"
-				type: "item"
-			}]
-			x: -2.0d
-			y: -6.0d
-		}
-		{
 			dependencies: [
 				"665FC02BC2BC414F"
-				"64E470F6BFEE8C3F"
 				"295442FA6CE0BA13"
 			]
 			id: "70EEDB38B78F5C7F"
-			tasks: [{
-				id: "35B242E33E98B4B7"
-				item: "gtceu:bec_og_bucket"
-				type: "item"
-			}]
-			x: -2.0d
-			y: -4.0d
+			tasks: [
+				{
+					id: "35B242E33E98B4B7"
+					item: "gtceu:bec_og_bucket"
+					type: "item"
+				}
+				{
+					id: "05D34BDDBD6A9D56"
+					item: "gtceu:superstate_helium_3_bucket"
+					type: "item"
+				}
+			]
+			title: "Advanced Cooling Materials"
+			x: -3.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -154,8 +163,8 @@
 				item: "kubejs:magmada_alloy_coil_block"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -2.0d
+			x: -2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -170,22 +179,6 @@
 			}]
 			x: -4.0d
 			y: 0.0d
-		}
-		{
-			dependencies: [
-				"310FC3F86513555F"
-				"64E470F6BFEE8C3F"
-				"295442FA6CE0BA13"
-			]
-			icon: "gtceu:uev_electric_motor"
-			id: "2CE91E9D83810377"
-			tasks: [{
-				id: "24F41E9B905A4942"
-				title: "UEV Components"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: -4.0d
 		}
 		{
 			dependencies: ["799F6F79B9FF86DF"]
@@ -210,7 +203,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["2CE91E9D83810377"]
+			dependencies: ["310FC3F86513555F"]
 			hide_dependent_lines: true
 			id: "6180202612DCDBF4"
 			tasks: [{
@@ -218,7 +211,7 @@
 				title: "Hellforged Armor"
 				type: "checkmark"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: -6.0d
 		}
 		{
@@ -266,8 +259,8 @@
 				item: "gtceu:magmatic_plasma_bucket"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
@@ -292,14 +285,9 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["01FBF9CDD9066AF5"]
+			dependencies: ["395C32B51E768458"]
 			id: "0168A45EB73911AC"
 			tasks: [
-				{
-					id: "69CCBF0C08150E76"
-					title: "Dragon Harvesting"
-					type: "checkmark"
-				}
 				{
 					id: "2905E8DC5AFA2279"
 					item: "kubejs:draconic_stem_cells"
@@ -321,8 +309,8 @@
 					type: "item"
 				}
 			]
-			x: -4.0d
-			y: 2.0d
+			x: -2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["059CB064A515B157"]
@@ -346,7 +334,7 @@
 				item: "kubejs:draconic_neuro_processing_unit"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: 2.0d
 		}
 		{
@@ -386,9 +374,9 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "0CDF1129CD1EC487"
-				title: "Draconic Infusion Array"
-				type: "checkmark"
+				id: "6C03B25DB18C6546"
+				item: "gtceu:draco_infusion"
+				type: "item"
 			}]
 			x: -4.0d
 			y: 4.0d
@@ -409,18 +397,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["2DACE6EF41A118D9"]
-			icon: "gtceu:uiv_electric_motor"
-			id: "5E96ECB0768B5D80"
-			tasks: [{
-				id: "0D4319348CE9080F"
-				title: "UIV Components"
-				type: "checkmark"
-			}]
-			x: 2.0d
-			y: 4.0d
-		}
-		{
 			dependencies: ["097D8B4DF03A8617"]
 			id: "2DACE6EF41A118D9"
 			shape: "gear"
@@ -431,7 +407,7 @@
 				type: "checkmark"
 			}]
 			x: 0.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["097D8B4DF03A8617"]
@@ -486,7 +462,7 @@
 				type: "checkmark"
 			}]
 			x: -6.0d
-			y: -2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["1AEBAE3050B72906"]
@@ -512,9 +488,24 @@
 					item: "gtceu:mythril_ingot"
 					type: "item"
 				}
+				{
+					id: "56AE36AC68B935A6"
+					item: "gtceu:enriched_estalt_ingot"
+					type: "item"
+				}
+				{
+					id: "51FB398DCA9F9C4D"
+					item: "gtceu:calamatium_ingot"
+					type: "item"
+				}
+				{
+					id: "5C52FE121278FC16"
+					item: "gtceu:isovol_ingot"
+					type: "item"
+				}
 			]
 			x: -4.0d
-			y: -2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["1AEBAE3050B72906"]
@@ -525,30 +516,35 @@
 				item: "gtceu:atomic_nether_sludge_dust"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -2.0d
+			x: -5.0d
+			y: -5.0d
 		}
 		{
-			dependencies: ["395C32B51E768458"]
+			dependencies: [
+				"0168A45EB73911AC"
+				"395C32B51E768458"
+			]
 			id: "1772F46C9EAF6FB7"
 			tasks: [{
-				id: "57E957460CE75A2E"
-				title: "Draconic Circuit Factory"
-				type: "checkmark"
+				id: "4AAC7E72D6B3BBFC"
+				item: "gtceu:draco_circuit_assembler"
+				type: "item"
 			}]
 			x: -2.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["1772F46C9EAF6FB7"]
+			description: ["Get Universal Circuits in Mass"]
+			icon: "kubejs:luv_universal_circuit"
 			id: "324630FF56F505DA"
 			tasks: [{
 				id: "1E5FDD16FC5DDAA3"
 				title: "Circuit Packs"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 4.0d
+			x: -4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -562,7 +558,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["169C2E9DA1CF8F53"]
@@ -573,7 +569,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["26FDB9612063F49D"]
@@ -584,7 +580,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["66D49CB8D8819E3F"]
@@ -595,7 +591,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["6F3DF16481990D99"]
@@ -608,12 +604,12 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
 				"5944C4DE27F98FF3"
-				"2CE91E9D83810377"
+				"310FC3F86513555F"
 			]
 			hide_dependent_lines: true
 			id: "2E34F23A42004285"
@@ -622,8 +618,8 @@
 				title: "mk4 Fusion"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: -6.0d
+			x: 0.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["2E34F23A42004285"]
@@ -633,18 +629,18 @@
 				title: "Preon Plasma"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 8.0d
+			x: -3.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
 			id: "06EC98F6E6AFC2AF"
 			tasks: [{
-				id: "7585DCB3290D83B9"
-				title: "Drag Boule"
-				type: "checkmark"
+				id: "3E9EBE180652C5E4"
+				item: "kubejs:draco_boule"
+				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 0.0d
 		}
 		{
@@ -653,57 +649,46 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "6D4BC401FE89651A"
-				title: "drag wafer"
-				type: "checkmark"
+				id: "57C24BDAFAED1B95"
+				item: "kubejs:draco_wafer"
+				type: "item"
 			}]
-			x: 10.0d
-			y: -2.0d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0DF30CDA8DE68E0C"]
 			id: "074635DC3322DC99"
 			tasks: [{
-				id: "33F82DA31DE8BF87"
-				title: "drag soc"
-				type: "checkmark"
+				id: "096716469F4806A5"
+				item: "kubejs:draco_advanced_soc_wafer"
+				type: "item"
 			}]
 			x: 8.0d
-			y: -4.0d
+			y: -2.0d
 		}
 		{
-			dependencies: ["5E96ECB0768B5D80"]
+			dependencies: ["3F9D1B0CED0D4133"]
 			id: "032E72446266F7D4"
 			tasks: [{
 				id: "741E0E4603A5AAA7"
 				title: "sterile maintence hatch"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: 6.0d
+			x: 0.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["5E96ECB0768B5D80"]
+			dependencies: ["2DACE6EF41A118D9"]
+			description: ["Not added till Theta"]
 			id: "09B55AFE7C06EC82"
 			tasks: [{
 				id: "3C1633006F6ECB70"
 				title: "Abyssal Room"
 				type: "checkmark"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 2.0d
-		}
-		{
-			dependencies: ["09B55AFE7C06EC82"]
-			icon: "mysticalagriculture:dragon_egg_essence"
-			id: "72A79F7AE189FD12"
-			tasks: [{
-				id: "0906D1053893328C"
-				title: "Draconic Essence"
-				type: "checkmark"
-			}]
-			x: 4.0d
-			y: 0.0d
 		}
 		{
 			dependencies: ["09B55AFE7C06EC82"]
@@ -713,11 +698,11 @@
 				title: "Dragon Breeding Array"
 				type: "checkmark"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["72A79F7AE189FD12"]
+			dependencies: ["3AE729D3F47E9A2B"]
 			id: "37F9C85CFCFFDA5F"
 			tasks: [{
 				id: "54F9F9AC4FCB27C0"
@@ -731,21 +716,19 @@
 			dependencies: [
 				"37F9C85CFCFFDA5F"
 				"5944C4DE27F98FF3"
+				"694E1F6458D5F72F"
 			]
 			id: "24E2CB89693EDEA3"
 			tasks: [{
 				id: "1DA3A7C22624348C"
-				title: "Draconic Neuroloom"
+				title: "Awakened Draconic Neuroloom"
 				type: "checkmark"
 			}]
 			x: 4.0d
 			y: -4.0d
 		}
 		{
-			dependencies: [
-				"694E1F6458D5F72F"
-				"24E2CB89693EDEA3"
-			]
+			dependencies: ["24E2CB89693EDEA3"]
 			id: "38C2E3061C764F05"
 			shape: "gear"
 			size: 1.5d
@@ -758,51 +741,51 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["72A79F7AE189FD12"]
-			icon: "minecraft:dragon_breath"
+			dependencies: ["09B55AFE7C06EC82"]
 			id: "3AE729D3F47E9A2B"
 			subtitle: "No linger stinky"
 			tasks: [{
-				id: "553429266D192AF8"
-				title: "Purified Dragon's Breath"
-				type: "checkmark"
+				id: "0CF6EA4214D2778A"
+				item: "gtceu:pure_dragon_breath_bucket"
+				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
 			id: "694E1F6458D5F72F"
-			tasks: [{
-				id: "6D44D00AECEBA049"
-				title: "UIPIC Chips"
-				type: "checkmark"
-			}]
-			x: 8.0d
-			y: -2.0d
-		}
-		{
-			dependencies: [
-				"694E1F6458D5F72F"
-				"24E2CB89693EDEA3"
+			tasks: [
+				{
+					id: "14D8819BD3B9A996"
+					item: "kubejs:uipic_chip"
+					type: "item"
+				}
+				{
+					id: "471872EA9404A875"
+					item: "kubejs:uipic_wafer"
+					type: "item"
+				}
 			]
-			id: "1ED881AC9E6961A3"
-			tasks: [{
-				id: "34B182CD5468F45A"
-				item: "start_core:uiv_absolute_parallel_hatch"
-				type: "item"
-			}]
 			x: 6.0d
 			y: -2.0d
 		}
 		{
 			dependencies: ["24E2CB89693EDEA3"]
 			id: "7FABD2E818B70D35"
-			tasks: [{
-				id: "1A9F5B4EAFB66C03"
-				item: "start_core:uiv_parallel_hatch"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "1A9F5B4EAFB66C03"
+					item: "start_core:uiv_parallel_hatch"
+					type: "item"
+				}
+				{
+					id: "3D4851F9B51362B4"
+					item: "start_core:uiv_absolute_parallel_hatch"
+					type: "item"
+				}
+			]
+			title: "Hyper Parallel Hatches"
 			x: 6.0d
 			y: -6.0d
 		}
@@ -816,30 +799,31 @@
 				title: "Target Breeding Dragons"
 				type: "checkmark"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["5E96ECB0768B5D80"]
+			dependencies: ["2DACE6EF41A118D9"]
 			id: "10D5DA8708208783"
 			tasks: [{
-				id: "787FB5314DFFE1C8"
-				title: "Gate 3 Line...."
-				type: "checkmark"
+				id: "4F21CDEF48DEB549"
+				item: "minecraft:bedrock"
+				type: "item"
 			}]
-			x: 14.0d
+			title: "Gate 3 Line"
+			x: 16.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["5E96ECB0768B5D80"]
+			dependencies: ["2DACE6EF41A118D9"]
 			id: "2594F1414C9BEC4F"
 			tasks: [{
 				id: "4133AF79C6DF333A"
 				title: "Better Infra...."
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 4.0d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			id: "51FAA26B6A537091"
@@ -849,8 +833,8 @@
 				id: "19E2EB40AB845664"
 				type: "checkmark"
 			}]
-			x: 5.5d
-			y: 1.25d
+			x: 4.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["38C2E3061C764F05"]
@@ -861,26 +845,7 @@
 				type: "checkmark"
 			}]
 			x: 8.0d
-			y: -6.0d
-		}
-		{
-			dependencies: ["5944C4DE27F98FF3"]
-			id: "7525302103768D45"
-			tasks: [
-				{
-					id: "128F90FB76A495C2"
-					item: "start_core:uev_parallel_hatch"
-					type: "item"
-				}
-				{
-					id: "5944C92937337165"
-					item: "start_core:uev_absolute_parallel_hatch"
-					type: "item"
-				}
-			]
-			title: "UEV Parallel Hatches"
-			x: 4.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["295442FA6CE0BA13"]
@@ -894,47 +859,50 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["5E7153B7A10FC241"]
-			description: [
-				"The Maker of Gates has some &mfun&r in store for you....... "
-				"{image:komarumod:textures/painting/komaru_god.png width:100 height:100 align:center}"
-			]
-			icon: {
-				Count: 1
-				id: "ftbquests:custom_icon"
-				tag: {
-					Icon: "komarumod:textures/painting/komaru_chonky.png"
-				}
-			}
-			id: "72020C00A8BBD75A"
-			optional: true
-			rewards: [
+			dependencies: ["310FC3F86513555F"]
+			id: "5FEC7470D01CEBDD"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "67F0D3F6D4404EBF"
+				item: "gtceu:mega_abs"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5944C4DE27F98FF3"]
+			id: "0ECE55AB7BBDAAA4"
+			tasks: [
 				{
-					auto: "enabled"
-					id: "7CF70A1AC4379D48"
-					item: "minecraft:cookie"
+					id: "1BD274EF66F992D9"
+					item: "start_core:uev_absolute_parallel_hatch"
 					type: "item"
 				}
 				{
-					auto: "enabled"
-					command: "/playsound gtceu:sus master @a"
-					elevate_perms: true
-					icon: "gtceu:sus_record"
-					id: "65DBA10EF47C4036"
-					silent: true
-					title: "Sus"
-					type: "command"
+					id: "49D422384FDA1B13"
+					item: "start_core:uev_parallel_hatch"
+					type: "item"
 				}
 			]
-			shape: "rsquare"
-			size: 4.0d
+			title: "Mega Parallel Hatches"
+			x: 4.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["10D5DA8708208783"]
+			id: "66EFD1B3494C51C0"
+			shape: "gear"
+			size: 2.5d
 			tasks: [{
-				id: "4C50248BDC04F8FA"
-				title: "Dont Worry About it... Here's a cookie"
-				type: "checkmark"
+				id: "3FBA22A693DE0C3B"
+				item: "sgjourney:pegasus_stargate"
+				type: "item"
 			}]
-			x: 11.5d
-			y: 1.5d
+			title: "DSG"
+			x: 16.0d
+			y: 0.0d
 		}
 	]
 	title: "Draconic Empires"
