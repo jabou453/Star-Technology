@@ -1,81 +1,75 @@
-// Apply negative effects in specific dimensions
-PlayerEvents.tick(event => {
-    const { player } = event
-    
-    // Check if player is in the target dimension (replace 'minecraft:the_nether' with your dimension)
-    if (player.level.dimension.toString() === 'minecraft:the_nether') {
-        
-        // Check if player has full hazmat armor set
-        const hasFullHazmatSet = checkHazmatArmor(player)
-        
-        // Apply effects only if not wearing protective armor
-        if (!hasFullHazmatSet) {
-            // Apply radiation poisoning every 10 seconds
-            if (player.age % 200 === 0) {
-                player.potionEffects.add('kubejs:radiation_poisoning', 300, 1, false, false)
-                player.potionEffects.add('kubejs:toxic_atmosphere', 200, 0, false, false)
-                
-                // Additional vanilla effects for realism
-                player.potionEffects.add('minecraft:poison', 100, 0, false, false)
-                player.potionEffects.add('minecraft:nausea', 160, 0, false, false)
-            }
+const dimensionEffect = (dimension, armorType, talismanList, effects) => {
+    PlayerEvents.tick(event => {
+        const { player } = event;
             
-            // Optional: Damage over time
-            if (player.age % 100 === 0) {
-                player.attack('kubejs:radiation', 1)
+        const hasFullSet = checkArmor(player, armorType)
+
+        const hasImmunity = checkImmunity(player, talismanList)
+        
+        if (hasFullSet) return
+        if (hasImmunity) return
+        
+        if (player.level.dimension.toString() === `${dimension}`) {
+            if (player.age % 200 === 0) {
+                effects.forEach(effect => {
+                    player.potionEffects.add(effect[0], effect[1], effect[2], effect[3], effect[4])
+                });
             }
         }
-    }
-});
+    });
+};
 
-// Function to check if player has full hazmat armor
-function checkHazmatArmor(player) {
-    const helmet = player.headArmorItem
-    const chestplate = player.chestArmorItem
-    const leggings = player.legsArmorItem
-    const boots = player.feetArmorItem
+dimensionEffect('minecraft:the_nether', 'nether', ['gtceu:lead_block'], [['kubejs:radiation_poisoning', 300, 0, false, false], ['kubejs:toxic_atmosphere', 200, 0, false, false]]);
+
+const checkArmor = (player, type) => {
+    const helmet = player.headArmorItem.id;
+    const chestplate = player.chestArmorItem.id;
+    const leggings = player.legsArmorItem.id;
+    const boots = player.feetArmorItem.id;
     
-    return helmet.id === 'kubejs:hazmat_helmet' &&
-           chestplate.id === 'kubejs:hazmat_chestplate' &&
-           leggings.id === 'kubejs:hazmat_leggings' &&
-           boots.id === 'kubejs:hazmat_boots'
-}
+    if (helmet !== `kubejs:${type}_helmet` || chestplate !== `kubejs:${type}_chestplate` || leggings !== `kubejs:${type}_leggings` || boots !== `kubejs:${type}_boots`) return false
+    return true
+};
 
-// Optional: Remove effects when leaving the dimension
-PlayerEvents.changedDimension(event => {
-    const { player } = event
-    
-    // Remove custom effects when leaving the dangerous dimension
-    if (event.from.toString() === 'minecraft:the_nether') {
-        player.potionEffects.clear('kubejs:radiation_poisoning')
-        player.potionEffects.clear('kubejs:toxic_atmosphere')
-    }
-});
+const checkImmunity = (player, list) => {
+    list.forEach(target => {
+        if (player.inventory.find(target) == -1) return false
+    });
+    return true
+};
 
-// Define what the custom effects do
 PlayerEvents.tick(event => {
-    const { player } = event
-    
-    // Radiation Poisoning effects
+    const { player } = event;
+
+    // Radiation Poisoning
     if (player.hasEffect('kubejs:radiation_poisoning')) {
-        const amplifier = player.getEffect('kubejs:radiation_poisoning').amplifier
         
-        // Reduce max health temporarily
+        let effects = ['minecraft:poison'];
+
         if (player.age % 40 === 0) {
-            player.potionEffects.add('minecraft:weakness', 60, amplifier, false, false)
+            effects.forEach(effect => {
+                player.potionEffects.add(effect, 60, 1, false, false)
+            })
         }
         
-        // Screen effects (optional)
-        if (player.age % 20 === 0) {
+        if (player.age % 100 === 0) {
+            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 1 kubejs:radiation`);
+        }
+        
+        if (player.age % 200 === 0) {
             player.tell(Text.of('§cYou feel sick from radiation...').red())
         }
     }
     
-    // Toxic Atmosphere effects
+    // Toxic Atmosphere
     if (player.hasEffect('kubejs:toxic_atmosphere')) {
-        // Reduced visibility
-        if (player.age % 60 === 0) {
-            player.potionEffects.add('minecraft:darkness', 80, 0, false, false)
+        let effects = ['minecraft:weakness', 'minecraft:nausea', 'minecraft:darkness'/*, ' minecraft:mining_fatigue'*/];
+
+        if (player.age % 40 === 0) {
+            effects.forEach(effect => {
+                player.potionEffects.add(effect, 60, 1, false, false)
+            })
         }
     }
+
 });
