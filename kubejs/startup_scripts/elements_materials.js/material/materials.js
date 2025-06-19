@@ -187,6 +187,8 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('netherite').setFormula('Nr');
     GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
     GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
+    GTMaterials.get('rare_earth').setFormula('?');
+    GTMaterials.get('platinum_group_sludge').setFormula('Pt?');
 
 });
 
@@ -1003,7 +1005,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquid('polystyrene_sulfate', ['8x carbon', '8x hydrogen', '3x oxygen', '1x sulfur'], 0xD8C6F0, [no_decomp]); // PSS
 
-    compDust('ferric_nitrate', ['1x iron', '3x nitrate'], 0xAF5F5F, []);
+    compDust('ferric_nitrate', ['1x iron', '3x nitrate'], 0xAF5F5F, [no_decomp]);
 
     compLiquid('poly_34_ethylenedioxythiophene', ['6x carbon', '4x hydrogen', '2x oxygen', '1x sulfur'], 0x7C8FB2, [no_decomp]); //PEDOT
     

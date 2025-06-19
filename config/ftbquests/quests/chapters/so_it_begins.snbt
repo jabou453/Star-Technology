@@ -2201,6 +2201,11 @@
 					item: "exnihilosequentia:mycelium_spores"
 					type: "item"
 				}
+				{
+					id: "51A142E92BAB1E31"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
 			]
 			x: 6.5d
 			y: 16.5d
@@ -3002,7 +3007,7 @@
 			]
 			id: "53BA24466D74ADE2"
 			shape: "gear"
-			size: 2.0d
+			size: 1.0d
 			tasks: [{
 				id: "35CB1AF9DEB0200D"
 				item: "gtceu:basic_electronic_circuit"
