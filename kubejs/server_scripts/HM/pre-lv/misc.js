@@ -152,7 +152,7 @@ ServerEvents.recipes(event => {
 		C: 'gtceu:ulv_advanced_composter'
 	}).id('start:mechanical_crafting/device_composter');
 
-	event.recipes.create.mechanical_crafting('modularrouters:modular_router', [
+	event.recipes.create.mechanical_crafting('2x modularrouters:modular_router', [
 		'PDP',
 		'DED',
 		'PDP'

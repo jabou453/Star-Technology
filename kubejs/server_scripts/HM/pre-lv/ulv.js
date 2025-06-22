@@ -94,7 +94,6 @@ ServerEvents.recipes(event => {
           A: inputs[0],B: inputs[1],C: inputs[2],D: inputs[3],E: inputs[4],F: inputs[5],G: inputs[6],H: inputs[7],I: inputs[8]
       }).id(`start:mechanical_crafting/ulv_${output}`);
     } 
-    // UlvMachine('circuit_assembler',['kubejs:ulv_robot_arm','#gtceu:circuits/lv','kubejs:ulv_emitter','kubejs:ulv_conveyor_module','gtceu:ulv_machine_hull','kubejs:ulv_conveyor_module','gtceu:red_alloy_single_cable','#gtceu:circuits/lv','gtceu:red_alloy_single_cable']);
     UlvMachine('assembler',['kubejs:ulv_robot_arm','#gtceu:circuits/ulv','kubejs:ulv_robot_arm','kubejs:ulv_conveyor_module','gtceu:ulv_machine_hull','kubejs:ulv_conveyor_module','gtceu:red_alloy_single_cable','#gtceu:circuits/ulv','gtceu:red_alloy_single_cable']);
     UlvMachine('centrifuge',['#gtceu:circuits/ulv','kubejs:ulv_electric_motor','#gtceu:circuits/ulv','gtceu:red_alloy_single_cable','gtceu:ulv_machine_hull','gtceu:red_alloy_single_cable','#gtceu:circuits/ulv','kubejs:ulv_electric_motor','#gtceu:circuits/ulv']);
     UlvMachine('mixer',['#forge:glass','gtceu:cast_iron_rotor','#forge:glass','#forge:glass','kubejs:ulv_electric_motor','#forge:glass','#gtceu:circuits/ulv','gtceu:ulv_machine_hull','#gtceu:circuits/ulv']);
@@ -220,7 +219,7 @@ ServerEvents.recipes(event => {
         .EUt(6);
     if(output == 'emitter')
       event.recipes.gtceu.assembler(id(`ulv_${output}`))
-        .itemInputs(inputs[0],inputs[1],inputs[2],inputs[3])
+        .itemInputs(inputs[0],inputs[1],inputs[2],inputs[3],inputs[4])
         .itemOutputs(`kubejs:ulv_${output}`)
         .duration(100)
         .circuit(1)
@@ -239,7 +238,7 @@ ServerEvents.recipes(event => {
     UlvComponent('electric_piston',['2x gtceu:potin_rod','2x gtceu:red_alloy_single_cable','3x gtceu:potin_plate','1x gtceu:small_potin_gear','1x kubejs:ulv_electric_motor'],'');
     UlvComponent('robot_arm',['3x gtceu:red_alloy_single_cable','2x gtceu:potin_rod','2x kubejs:ulv_electric_motor','1x kubejs:ulv_electric_piston','1x #gtceu:circuits/ulv'],'');
     UlvComponent('electric_pump',['1x gtceu:red_alloy_single_cable','1x gtceu:tin_alloy_normal_fluid_pipe','1x gtceu:cast_iron_screw','1x gtceu:cast_iron_rotor','2x gtceu:rubber_ring','1x kubejs:ulv_electric_motor'],'');
-    UlvComponent('emitter',['4x gtceu:tin_rod','2x gtceu:red_alloy_single_cable','2x #gtceu:circuits/ulv','1x minecraft:prismarine_crystals'],'');
+    UlvComponent('emitter',['1x kubejs:ulv_electric_motor','4x gtceu:zinc_rod','2x gtceu:red_alloy_single_cable','2x #gtceu:circuits/ulv','1x minecraft:prismarine_crystals'],'');
 
     event.recipes.gtceu.assembler(id('ulv_battery'))
       .itemInputs('4x gtceu:copper_foil', '4x minecraft:paper', '2x gtceu:iron_single_wire')

@@ -62,15 +62,23 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(METALLIC)
         .flags(no_abs_recipe, not_alloy, foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, bolt_and_screw, no_decomp, no_smelt);
 
-	GTMaterials.Iron.addFlags(foil, fine_wire);
-	GTMaterials.Brass.addFlags(ring, foil, frame);
-	GTMaterials.TinAlloy.addFlags(ring, foil, rotor);
-	GTMaterials.Potin.addFlags(foil, ring, small_gear);
-	GTMaterials.Cupronickel.addFlags(ring);
-	GTMaterials.Nickel.addFlags(foil);
-	GTMaterials.WroughtIron.addFlags(frame, small_gear);
-	GTMaterials.RedAlloy.addFlags(spring);
-	GTMaterials.Lead.addFlags(small_gear);
+	const matmod = (mat, flag) => {
+        GTMaterials.get(mat).addFlags(flag);
+    }
+	matmod('iron', [foil, fine_wire]);
+	matmod('brass', [ring, foil, frame]);
+	matmod('tin_alloy', [ring, foil, rotor]);
+	matmod('potin', [foil, ring, small_gear]);
+	matmod('cupronickel', [ring]);
+	matmod('nickel', [foil]);
+	matmod('wrought_iron', [frame, small_gear]);
+	matmod('red_alloy', [spring]);
+	matmod('lead', [small_gear]);
+	matmod('black_steel', [bolt_and_screw, rotor, gear, small_gear]);
+	matmod('hsla_steel', [bolt_and_screw, rotor]);
+	matmod('ultimet', [gear, small_gear]);
+	matmod('magnalium', [gear, small_gear]);
+	matmod('damascus_steel', [gear, small_gear]);
 
 	const elemDustFluid = (name, color, flags) => {
         event.create(name).dust().fluid().element(GTElements.get(name)).color(color).flags(flags);

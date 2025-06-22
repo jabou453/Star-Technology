@@ -99,12 +99,12 @@ StartupEvents.registry('item', event => {
 
 	// ================================================================================== //
 
-	event.create('iron_sand_paper')
-		.displayName('Iron Sand Paper')
-		.rarity('common')
-		.maxDamage(96)
-		.unstackable()
-		.texture(`kubejs:item/hm/pre-lv/iron_sand_paper`);
+	// event.create('iron_sand_paper')
+	// 	.displayName('Iron Sand Paper')
+	// 	.rarity('common')
+	// 	.maxDamage(96)
+	// 	.unstackable()
+	// 	.texture(`kubejs:item/hm/pre-lv/iron_sand_paper`);
 
 	// ================================================================================== //
 

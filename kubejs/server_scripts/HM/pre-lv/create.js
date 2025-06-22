@@ -490,9 +490,6 @@ ServerEvents.recipes(event => {
 	sandType.forEach(sand => {
 		event.recipes.create.mixing(Item.of(`1x create:${sand}_paper`).withChance(.9), ['1x farmersdelight:canvas', `1x minecraft:${sand}`, 'gtceu:sticky_resin']).id(`start:create_mixer/${sand}_paper`);
 	});
-		event.recipes.create.mixing(Item.of(`1x kubejs:iron_sand_paper`).withChance(.8), ['1x farmersdelight:canvas', `1x gtceu:iron_dust`, 'gtceu:sticky_resin']).id(`start:create_mixer/iron_sand_paper`);
-
-	event.recipes.create.sandpaper_polishing('create:polished_rose_quartz', 'create:rose_quartz').id('start:sandpaper_polishing/polished_rose_quartz');
 
 	event.recipes.create.mixing(`create:pulp`, [Fluid.of('minecraft:water', 500), '2x createdieselgenerators:wood_chip', '2x gtceu:small_paper_dust', '2x gtceu:small_wood_dust']).id(`start:create_mixer/pulp`);
 

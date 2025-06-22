@@ -15,7 +15,6 @@ ServerEvents.tags('item', event => {
 	event.add('forge:tools/axes', /gtceu:.*axe/);
 	event.add('createlowheated:burner_starters', 'gtceu:matches');
 	event.add('minecraft:poor_coals', 'kubejs:charcoal_pellet');
-	event.add('create:sandpaper', 'kubejs:iron_sand_paper');
 
 	event.add('kubejs:ingot_casting_mold', 'kubejs:ingot_ceramic_casting_mold');
 	event.add('kubejs:ingot_casting_mold', 'gtceu:ingot_casting_mold');

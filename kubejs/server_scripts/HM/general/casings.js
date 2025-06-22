@@ -14,7 +14,6 @@ ServerEvents.recipes(event => {
         let mod = (type == 'enriched_naquadah') ? 'start_core' : 'gtceu' ;
     event.recipes.gtceu.assembler(id(`${type}_firebox_casing_hm`))
         .itemInputs(`6x gtceu:${material}_plate`, `6x gtceu:${material}_rod`, `gtceu:${material}_frame`)
-        .inputFluids(`gtceu:${material} 144`)
         .circuit(2)
         .itemOutputs(`2x ${mod}:${type}_firebox_casing`)
         .duration(100)
@@ -24,7 +23,6 @@ ServerEvents.recipes(event => {
         let mod = (type == 'enriched_naquadah') ? 'kubejs' : 'gtceu' ;
     event.recipes.gtceu.assembler(id(`${type}_pipe_casing_hm`))
         .itemInputs(`6x gtceu:${material}_plate`, `6x gtceu:${material}_small_fluid_pipe`, `gtceu:${material}_frame`)
-        .inputFluids(`gtceu:${material} 144`)
         .circuit(3)
         .itemOutputs(`2x ${mod}:${type}_pipe_casing`)
         .duration(100)
@@ -34,7 +32,6 @@ ServerEvents.recipes(event => {
         let mod = (type == 'enriched_naquadah') ? 'kubejs' : 'gtceu' ;
     event.recipes.gtceu.assembler(id(`${type}_gearbox_hm`))
         .itemInputs(`6x gtceu:${material}_plate`, `2x gtceu:${material}_gear`, `4x gtceu:small_${material}_gear`, `gtceu:${material}_frame`)
-        .inputFluids(`gtceu:${material} 144`)
         .circuit(4)
         .itemOutputs(`2x ${mod}:${type}_gearbox`)
         .duration(100)
@@ -45,7 +42,6 @@ ServerEvents.recipes(event => {
         let engineType = (type == 'titanium') ? 'gtceu:' : `start_core:${type}_` ;
     event.recipes.gtceu.assembler(id(`${engineType.split(':')[1]}engine_intake_casing_hm`))
         .itemInputs(`4x gtceu:${material}_rotor`, `6x gtceu:${material}_normal_fluid_pipe`, `${casingType}_machine_casing`)
-        .inputFluids(`gtceu:${material} 144`)
         .circuit(7)
         .itemOutputs(`2x ${engineType}engine_intake_casing`)
         .duration(100)
