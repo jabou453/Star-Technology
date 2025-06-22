@@ -46,10 +46,11 @@ ServerEvents.recipes(event => {
         ethanol.add('value', {tag:'forge:ethanol'})
 
     event.recipes.gtceu.chemical_reactor(id('ethane_from_ethanol'))
+		.notConsumable('gtceu:nickel_dust')
         .inputFluids(FluidIngredientJS.of(ethanol), 'gtceu:hydrogen 2000')
         .outputFluids('gtceu:ethane 1000', 'minecraft:water 1000')
         .circuit(3)
-        .duration(2850)
+        .duration(3650)
         .EUt(30);
 
 });

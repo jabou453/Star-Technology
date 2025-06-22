@@ -119,46 +119,56 @@ ServerEvents.recipes(event => {
         .EUt(100);
     
     event.remove({type: 'gtceu:electric_blast_furnace',output: 'gtceu:steel_ingot'});
-    [{type:'iron',eut:100,id:'minecraft'},{type:'wrought_iron',eut:30,id:'gtceu'}].forEach(ferrite=>{
+    [{ferriteMulti: .6, type:'iron',eut:100,id:'minecraft'},{ferriteMulti: 1,type:'wrought_iron',eut:30,id:'gtceu'}].forEach(ferrite=>{
 
         event.recipes.gtceu.bessemer_forge(id(`bulk_steel_from_${ferrite.type}_boosted`))
             .itemInputs(`${ferrite.id}:${ferrite.type}_block`)
             .outputFluids('gtceu:steel 1296')
-            .duration(8.5 * 1200)
+            .duration(8.5 * 800 * ferrite.ferriteMulti)
             .EUt(ferrite.eut);
 
-        [{type:'coal',id:'#gtceu:coal_dusts',multi:.9},{type:'coke',id:'#forge:dusts/coke',multi:.8},{type:'non',id:'',multi:1}].forEach(coal=>{
-
-        event.recipes.gtceu.bessemer_forge(id(`steel_from_${ferrite.type}_${coal.type}_boosted`))
-            .itemInputs(`#forge:ingots/${ferrite.type}`,`${coal.id}`)
+        event.recipes.gtceu.bessemer_forge(id(`steel_from_${ferrite.type}_boosted`))
+            .itemInputs(`#forge:ingots/${ferrite.type}`)
             .outputFluids('gtceu:steel 144')
-            .duration(1200 * coal.multi)
+            .duration(800 * ferrite.ferriteMulti)
             .EUt(ferrite.eut);
 
-        })
     });
 
     // Damascus Steel
 
         event.remove({type: 'gtceu:electric_blast_furnace',output: 'gtceu:damascus_steel_ingot'});
 
-        event.recipes.gtceu.reinforced_blast_furnace(id(`damascus_steel`))
-            .itemInputs(`gtceu:steel_ingot`,`2x gtceu:carbon_dust`)
+        event.recipes.gtceu.reinforced_blast_furnace(id(`damascus_steel_coke`))
+            .itemInputs(`1x gtceu:steel_ingot`, `1x gtceu:carbon_dust`, `1x gtceu:coke_gem`)
             .itemOutputs('gtceu:damascus_steel_ingot', `2x gtceu:tiny_dark_ash_dust`)
+            .duration(1440);
+
+        event.recipes.gtceu.reinforced_blast_furnace(id(`damascus_steel_coals`))
+            .itemInputs(`1x gtceu:steel_ingot`, `1x gtceu:carbon_dust`, `1x #minecraft:coals`)
+            .itemOutputs('gtceu:damascus_steel_ingot', `1x gtceu:tiny_dark_ash_dust`)
             .duration(1800);
 
+        event.recipes.gtceu.reinforced_blast_furnace(id(`damascus_steel_block_coke`))
+            .itemInputs(`1x gtceu:steel_block`, `9x gtceu:carbon_dust`, `1x gtceu:coke_block`)
+            .itemOutputs('gtceu:damascus_steel_block', `2x gtceu:dark_ash_dust`)
+            .duration(1440 * 9);
+
+        event.recipes.gtceu.reinforced_blast_furnace(id(`damascus_steel_block_coals`))
+            .itemInputs(`1x gtceu:steel_block`, `9x gtceu:carbon_dust`, `1x #gtceu:coal_blocks`)
+            .itemOutputs('gtceu:damascus_steel_block', `1x gtceu:dark_ash_dust`)
+            .duration(1800 * 9);
+
         event.recipes.gtceu.bessemer_forge(id(`damascus_steel`))
-            .itemInputs(`2x gtceu:carbon_dust`)
-            .inputFluids(`gtceu:steel 144`)
+            .itemInputs(`1x gtceu:carbon_dust`, `gtceu:steel_ingot`)
             .outputFluids(`gtceu:damascus_steel 144`)
-            .duration(1200)
+            .duration(1080)
             .EUt(GTValues.VHA[GTValues.MV]);
 
         event.recipes.gtceu.bessemer_forge(id(`damascus_steel_block`))
-            .itemInputs(`18x gtceu:carbon_dust`)
-            .inputFluids(`gtceu:steel 1296`)
+            .itemInputs(`9x gtceu:carbon_dust`, `gtceu:steel_block`)
             .outputFluids(`gtceu:damascus_steel 1296`)
-            .duration(1200 * 8.5)
+            .duration(9120)
             .EUt(GTValues.VHA[GTValues.MV]);
     
     const burnable = (amount,BurnID,typeBurnable,duraChange,ash) => {

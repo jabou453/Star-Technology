@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
 
     const PrimSifter = (input,mesh,output,scaler) => {
     event.recipes.gtceu.primitive_sifter(id(`${output.split(':')[1]}`))
-        .itemInputs(`48x ${input}`)
+        .itemInputs(`64x ${input}`)
         .chancedInput(`exnihilosequentia:${mesh}_mesh`, 10, 0)
         .itemOutputs(`${scaler}x ${output}`)
         .duration(1600)
@@ -28,10 +28,10 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.sifter(id(`refined_${type}`))
             .itemInputs(`${mod_id}:${type}`)
-            .chancedOutput(`kubejs:refined_${type}`, 8000, 0)
-            .chancedOutput(`${mod_id}:${type}`, 1600, 0)
-            .chancedOutput('gtceu:quartz_sand_dust', 400, 0)
-            .duration(80)
+            .chancedOutput(`kubejs:refined_${type}`, 9000, 0)
+            .chancedOutput(`${mod_id}:${type}`, 800, 0)
+            .chancedOutput('gtceu:quartz_sand_dust', 200, 0)
+            .duration(60)
             .EUt(GTValues.VHA[GTValues.LV]);
 
     }

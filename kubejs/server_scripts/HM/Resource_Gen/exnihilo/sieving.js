@@ -33,7 +33,7 @@ ServerEvents.recipes(event => {
 		sieve('string', .1, c.Crushed, `gtceu:stone_dust`, false);
 		sieve('flint', .4, c.Crushed, `gtceu:crushed_${c.OreType}_ore`, false);
 		sieve('flint', .2, c.Crushed, sand, false);
-		sieve('iron', .1, gravel, `gtceu:crushed_${c.OreType}_ore`, false);
+		sieve('iron', .125, gravel, `gtceu:crushed_${c.OreType}_ore`, false);
 	});
 
 	// Dirt
@@ -44,24 +44,24 @@ ServerEvents.recipes(event => {
 	sieve('string', .8, cdirt, 'exnihilosequentia:stone_pebble', false);
 	sieve('string', .30, cdirt, 'minecraft:flint', false);
 
-	sieve('iron', 1, cdirt, dirt, false);
-	sieve('iron', .2, cdirt, dirt, false);
-	sieve('iron', .2, cdirt, gravel, false);
+	sieve('flint', 1, cdirt, dirt, false);
+	sieve('flint', .2, cdirt, dirt, false);
+	sieve('flint', .2, cdirt, gravel, false);
 
 	// Gravel
 	['andesite', 'basalt', 'blackstone', 'deepslate', 'diorite', 'granite', 'tuff'].forEach(pebble => {
-		sieve('string', .6, gravel, `exnihilosequentia:${pebble}_pebble`, false);
-		sieve('flint', .2, gravel, `exnihilosequentia:crushed_${pebble}`, false);
+		sieve('string', .8, gravel, `exnihilosequentia:${pebble}_pebble`, false);
+		sieve('flint', .25, gravel, `exnihilosequentia:crushed_${pebble}`, false);
 	});
 	sieve('string', .75, gravel, sand, false);
 	//Iron in crushed to get ores
 
 	// Sand
-	sieve('string', .6, sand, 'exnihilosequentia:calcite_pebble', false);
-	sieve('string', .6, sand, 'exnihilosequentia:dripstone_pebble', false);
+	sieve('string', .8, sand, 'exnihilosequentia:calcite_pebble', false);
+	sieve('string', .8, sand, 'exnihilosequentia:dripstone_pebble', false);
 	sieve('string', .75, sand, dust, false);
-	sieve('flint', .2, sand, 'exnihilosequentia:crushed_calcite', false);
-	sieve('flint', .2, sand, 'exnihilosequentia:crushed_dripstone', false);
+	sieve('flint', .25, sand, 'exnihilosequentia:crushed_calcite', false);
+	sieve('flint', .25, sand, 'exnihilosequentia:crushed_dripstone', false);
 
 	// Other Crushed
 	sieve('string', .55, cCalc, 'gtceu:small_calcite_dust', false);

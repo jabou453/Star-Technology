@@ -59,9 +59,9 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.fluid_solidifier(id('cinder_block'))
       .itemInputs('gtceu:wrought_iron_frame')
-      .inputFluids('gtceu:concrete 1000')
-      .itemOutputs('dustrial_decor:cinder_block')
-      .duration(400)
+      .inputFluids('gtceu:concrete 2000')
+      .itemOutputs('2x dustrial_decor:cinder_block')
+      .duration(600)
       .EUt(4);
 
     event.recipes.create.splashing('dustrial_decor:polished_cinder_block','dustrial_decor:cinder_block').id('start:splashing/polished_cinder_block');
