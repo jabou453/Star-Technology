@@ -38,7 +38,7 @@ PlayerEvents.tick(event => {
         }
         
         if (player.age % 100 === 0) {
-            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 1 kubejs:radiation`);
+            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 4 kubejs:radiation`);
         }
         
         if (player.age % 200 === 0) {
@@ -54,6 +54,21 @@ PlayerEvents.tick(event => {
             effects.forEach(effect => {
                 player.potionEffects.add(effect, 60, 1, false, false)
             })
+        }
+    }
+
+    // Abyssal Drain
+    if (player.hasEffect('kubejs:abyssal_drain')) {
+        let effects = ['minecraft:darkness'];
+
+        if (player.age % 40 === 0) {
+            effects.forEach(effect => {
+                player.potionEffects.add(effect, 60, 1, false, false)
+            })
+            
+            if (Math.random() > 0.95) {
+                event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 100 kubejs:abyssal_pull`);
+            }
         }
     }
 

@@ -8,6 +8,16 @@ ItemEvents.armorTierRegistry(event => {
         tier.toughness = 4.0 // diamond has 2.0, netherite 3.0
         tier.knockbackResistance = 1.0
     });
+    
+    event.add('end', tier => {
+        tier.durabilityMultiplier = 80
+        tier.slotProtections = [6, 10, 14, 6]
+        tier.enchantmentValue = 12
+        tier.equipSound = 'minecraft:item.armor.equip_netherite'
+        tier.repairIngredient = '#forge:ingots/neutronium'
+        tier.toughness = 4.0
+        tier.knockbackResistance = 1.0
+    });
 });
 
 StartupEvents.registry('item', event => {
@@ -47,5 +57,30 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/dimensional/nether_talisman');
 
     // End
+    event.create('end_helmet', 'helmet')
+        .tier('end')
+        .displayName('Vac-locked Space Suit Helmet')
+        .texture('kubejs:item/dimensional/end_helmet')
+
+    event.create('end_chestplate', 'chestplate')
+        .tier('end')
+        .displayName('Vac-locked Space Suit Chestplate')
+        .texture('kubejs:item/dimensional/end_chestplate')
+
+    event.create('end_leggings', 'leggings')
+        .tier('end')
+        .displayName('Vac-locked Space Suit Leggings')
+        .texture('kubejs:item/dimensional/end_leggings')
+
+    event.create('end_boots', 'boots')
+        .tier('end')
+        .displayName('Vac-locked Space Suit Boots')
+        .texture('kubejs:item/dimensional/end_boots')
+
+    event.create('end_talisman')
+        .displayName('Elder Dragon Wings')
+        .tooltip('§5The remnants of the once great wings of an Elder Dragon')
+        .rarity('epic')
+        .texture('kubejs:item/dimensional/end_talisman');
 
 });
