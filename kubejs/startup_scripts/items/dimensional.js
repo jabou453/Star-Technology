@@ -1,5 +1,5 @@
 ItemEvents.armorTierRegistry(event => {
-    event.add('kubejs:nether_armor', tier => {
+    event.add('nether', tier => {
         tier.durabilityMultiplier = 80 // Each slot will be multiplied with [13, 15, 16, 11]
         tier.slotProtections = [6, 10, 14, 6] // Slot indicies are [FEET, LEGS, BODY, HEAD]
         tier.enchantmentValue = 12
@@ -21,22 +21,22 @@ StartupEvents.registry('item', event => {
 
     // Nether
     event.create('nether_helmet', 'helmet')
-        .tier('kubejs:nether_armor')
+        .tier('nether')
         .displayName('Runic Infused Hazmat Helmet')
         .texture('kubejs:item/dimensional/nether_helmet')
 
     event.create('nether_chestplate', 'chestplate')
-        .tier('kubejs:nether_armor')
+        .tier('nether')
         .displayName('Runic Infused Hazmat Chestplate')
         .texture('kubejs:item/dimensional/nether_chestplate')
 
     event.create('nether_leggings', 'leggings')
-        .tier('kubejs:nether_armor')
+        .tier('nether')
         .displayName('Runic Infused Hazmat Leggings')
         .texture('kubejs:item/dimensional/nether_leggings')
 
     event.create('nether_boots', 'boots')
-        .tier('kubejs:nether_armor')
+        .tier('nether')
         .displayName('Runic Infused Hazmat Boots')
         .texture('kubejs:item/dimensional/nether_boots')
 
