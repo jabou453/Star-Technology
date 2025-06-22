@@ -12,22 +12,7 @@ ServerEvents.recipes(event => {
 	event.remove({ output: /^create_new_age.*wire/ });
 
 	const minecraft_metals = ['iron', 'copper', 'gold'];
-	// const gt_metals = ['iron', 'copper', 'gold','lead', 'tin', 'zinc', 'bronze', 'brass', 'nickel', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy', 'damascus_steel'];
-	// const all_metals = minecraft_metals.concat(gt_metals);
-
-	// all_metals.forEach(metal => {
-	// 	let mod = minecraft_metals.includes(metal) ? 'minecraft' : 'gtceu';
-
-	// 	event.recipes.create.pressing([`4x gtceu:${metal}_plate`], `${mod}:${metal}_block`).id(`start:pressing/${metal}_plate`);
-	// 	event.recipes.create.compacting(plate(metal), `2x ${mod}:${metal}_ingot`).id(`start:compacting/${metal}_plate`);
-
-	// 	// event.recipes.create.cutting([`2x gtceu:${metal}_rod`], plate(metal)).id(`start:cutting/${metal}_rod`);
-	// 	// event.recipes.create.pressing([`gtceu:${metal}_ring`], rod(metal)).id(`start:pressing/${metal}_ring`);
-	// 	// event.recipes.create.pressing([`gtceu:${metal}_foil`], plate(metal)).id(`start:pressing/${metal}_foil`);
-	// 	// event.recipes.create.cutting([`2x gtceu:${metal}_bolt`], rod(metal)).id(`start:cutting/${metal}_bolt`);
-	// 	// event.recipes.create.compacting([`gtceu:${metal}_screw`], `2x gtceu:${metal}_bolt`).id(`start:compacting/${metal}_screw`);
-	// });
-
+	
 	const plates = ['iron', 'copper', 'gold','lead', 'tin', 'zinc', 'bronze', 'brass', 'nickel', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy', 'damascus_steel'];
 	const plates_block = ['iron', 'copper', 'lead'];
 	const rods = ['iron', 'copper', 'gold','lead', 'tin', 'zinc', 'bronze', 'brass', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy', 'damascus_steel'];
