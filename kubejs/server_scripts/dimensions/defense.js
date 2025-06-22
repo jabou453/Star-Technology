@@ -9,13 +9,14 @@ const dimensionEffect = (dimension, armorType, talismanList, effectList) => {
         if (hasFullSet) return
         if (hasImmunity) return
         
-        if (player.level.dimension.toString() === `${dimension}`) {
-            if (player.age % 200 === 0) {
-                effectList.forEach(effect => {
-                    player.potionEffects.add(effect[0], 300, 0, false, false)
-                });
-            }
+        if (player.level.dimension.toString() !== `${dimension}`) return
+
+        if (player.age % 200 === 0) {
+            effectList.forEach(effect => {
+                player.potionEffects.add(effect, 300, 0, false, false)
+            });
         }
+        
     });
 };
 
@@ -23,13 +24,24 @@ dimensionEffect('sgjourney:abydos', 'gtceu:quarktech', ['kubejs:abydos_talisman'
 dimensionEffect('minecraft:the_nether', 'kubejs:nether', ['kubejs:nether_talisman'], ['kubejs:radiation_poisoning', 'kubejs:toxic_atmosphere']);
 
 const checkArmor = (player, type) => {
+    let armorCheck = false
+
     const helmet = player.headArmorItem.id;
     const chestplate = player.chestArmorItem.id;
     const leggings = player.legsArmorItem.id;
     const boots = player.feetArmorItem.id;
     
-    if (helmet !== `${type}_helmet` || chestplate !== `${type}_chestplate` || leggings !== `${type}_leggings` || boots !== `${type}_boots`) return false
-    return true
+    if (helmet == `${type}_helmet` &&
+        chestplate == `${type}_chestplate` &&
+        leggings == `${type}_leggings` &&
+        boots == `${type}_boots`) armorCheck = true
+
+    if (type == 'gtceu:quarktech') {
+        if (helmet == 'gtceu:quarktech_helmet' &&
+            chestplate == 'gtceu:advanced_quarktech_chestplate' &&
+            leggings == 'gtceu:quarktech_leggings' &&
+            boots == 'gtceu:quarktech_boots') armorCheck = true}
+    return armorCheck
 };
 
 const checkImmunity = (player, list) => {
