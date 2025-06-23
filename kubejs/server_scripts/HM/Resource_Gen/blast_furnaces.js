@@ -29,8 +29,26 @@ ServerEvents.recipes(event => {
     ['brass', 'bronze', 'pig_iron', 'tin_alloy'].forEach(dust => {
 		event
 			.blasting(`gtceu:${dust}_ingot`, `gtceu:${dust}_dust`)
-			.id(`kubejs:blasting/${dust}_dust_manual_only`);
+			.id(`start:blasting/${dust}_dust_manual_only`);
+        event.recipes.gtceu
+			.gt_blasting(id(`${dust}_from_dust`))
+            .itemInputs(`gtceu:${dust}_dust`)
+            .itemOutputs(`gtceu:${dust}_ingot`)
+            .duration(100)
+            .EUt(8);
 	});
+
+    // event.forEachRecipe({type:'minecraft:blasting'}, BlastParse => {
+    //     let ParseBlast = JSON.parse(BlastParse.json);
+    //         let InItem = ParseBlast.inputs.item[0].content;
+    //         let OutItem = ParseBlast.outputs.item[0].content;
+
+    //     event.recipes.gtceu.gt_blasting(id(`smelt_${OutItem.value.item}_from_${InItem.value.item}`))
+    //         .itemInputs(InItem.ingredient.item)
+    //         .itemOutputs(OutItem.ingredient.item)
+    //         .duration(100)
+    //         .EUt(8);
+    // });
 
     event.remove({output: 'gtceu:primitive_blast_furnace'});
     event.recipes.create.mechanical_crafting('gtceu:primitive_blast_furnace', [
@@ -179,11 +197,13 @@ ServerEvents.recipes(event => {
             .duration(dura * duraChange);
     }
     SolidBlast('andesite_alloy',['20x create:andesite_alloy','gtceu:sulfur_dust'],['8x exnihilosequentia:crushed_andesite','2x gtceu:sphalerite_dust'],400);
-    SolidBlast('rose_quartz',['1x create:rose_quartz','gtceu:tiny_redstone_dust'],['xycraft_world:xychorium_gem_red', 'minecraft:redstone'],160);
-    SolidBlast('blank_gem',['xycraft_world:xychorium_gem_light','gtceu:tiny_glass_dust'],['minecraft:quartz', 'gtceu:glass_dust'],320);
+    SolidBlast('rose_quartz',['1x create:rose_quartz','gtceu:tiny_redstone_dust'],['xycraft_world:xychorium_gem_red', 'minecraft:redstone'],80);
+    SolidBlast('blank_gem',['xycraft_world:xychorium_gem_light','gtceu:tiny_glass_dust'],['minecraft:quartz', 'gtceu:glass_dust'],200);
     }
     burnable(2,'#minecraft','coals',1,'');
     burnable(1,'gtceu','coke_gem',.8,'dark_');
+
+
     
 
 });

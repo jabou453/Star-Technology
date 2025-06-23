@@ -2432,6 +2432,11 @@
 					optional_task: true
 					type: "item"
 				}
+				{
+					id: "29DA45961C8114B3"
+					item: "gtceu:lp_blast_furnace"
+					type: "item"
+				}
 			]
 			title: "Low Pressure Steam Machines"
 			x: 8.0d
@@ -2509,6 +2514,11 @@
 					id: "5968B94F01311316"
 					item: "gtceu:hp_steam_furnace"
 					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7990E95B803F867D"
+					item: "gtceu:hp_blast_furnace"
 					type: "item"
 				}
 			]
@@ -3202,7 +3212,7 @@
 				type: "item"
 			}]
 			x: 17.0d
-			y: 12.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["6994BA308DC55ED2"]
@@ -3742,8 +3752,19 @@
 				item: "createdieselgenerators:basin_lid"
 				type: "item"
 			}]
-			x: 17.0d
+			x: 18.5d
 			y: 13.5d
+		}
+		{
+			dependencies: ["301FF7F900A30DC7"]
+			id: "11B71B1B4A0E43A1"
+			tasks: [{
+				id: "4B880AF575171349"
+				item: "gtceu:steam_forge"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 12.0d
 		}
 	]
 	title: "So It Begins"

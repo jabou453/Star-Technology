@@ -60,7 +60,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x696E6C)
 		.secondaryColor(0x4C5052)
         .iconSet(METALLIC)
-        .flags(no_abs_recipe, not_alloy, foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, bolt_and_screw, no_decomp, no_smelt);
+        .flags(not_alloy, foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, bolt_and_screw, no_decomp, no_smelt);
 
 	const matmod = (mat, flag) => {
         GTMaterials.get(mat).addFlags(flag);
