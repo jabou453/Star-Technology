@@ -39,20 +39,10 @@ ServerEvents.recipes(event => {
         'farmersdelight:onion',
         '#forge:crops/onion'
     );
-
-    event.replaceInput({ id: 'thermal:tools/satchel'},
-        '#thermal:rockwool',
-        '#minecraft:wool'
-    );
-
+    
     event.replaceInput({ input: 'farmersdelight:onion'},
         'farmersdelight:onion',
         '#forge:crops/onion'
-    );
-
-    event.replaceInput({ id: 'thermal:tools/satchel'},
-        '#thermal:rockwool',
-        '#minecraft:wool'
     );
 
     ['tiled','framed','horizontal_framed','vertical_framed'].forEach(type => {
@@ -106,6 +96,17 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:rubber 576')
         .duration(240)
         .EUt(8);
+
+    event.replaceInput({ id: 'thermal:tools/satchel'},
+        '#thermal:rockwool',
+        '#minecraft:wool'
+    );
+
+    event.replaceInput({ id: 'thermal:tools/satchel'},
+        '#thermal:rockwool',
+        '#minecraft:wool'
+    );
+
     })()
     }    
 

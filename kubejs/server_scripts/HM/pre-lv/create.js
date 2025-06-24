@@ -1107,6 +1107,16 @@ ServerEvents.recipes(event => {
 		C: 'minecraft:clock'
 	}).id(`start:shaped/basin_lid`);
 
+	event.shaped(Item.of('create:brown_toolbox'), [
+		'RTR',
+		'GCG'
+	], {
+		R: 'gtceu:gold_ring',
+		T: 'gtceu:treated_wood_rod',
+		G: 'create:cogwheel',
+		C: 'minecraft:chest'
+	}).id(`start:shaped/brown_toolbox`);
+
 	[{type: 'hose', casing: 'copper', base: 'create:fluid_pipe'}, {type: 'elevator', casing: 'brass', base: 'gtceu:iron_plate'}].forEach( pulley => {
 	event.recipes.create.mechanical_crafting(Item.of(`create:${pulley.type}_pulley`), [
 			'RCR',
@@ -1131,7 +1141,7 @@ ServerEvents.recipes(event => {
 		'deployer', 'andesite_casing', 'brass_casing', 'mechanical_crafter', 'copper_casing', 'sequenced_gearshift', 'nozzle', 'adjustable_chain_gearshift', 'water_wheel',
 		'andesite_funnel', 'mechanical_arm', 'item_vault', 'flywheel', 'brass_hand', 'whisk', 'propeller', 'electron_tube', 'rotation_speed_controller', 'brass_tunnel',
 		'andesite_tunnel', 'brass_funnel', 'white_sail', 'wrench', 'hose_pulley', 'transmitter', 'pulp', 'cardboard', 'item_hatch', 'elevator_pulley', 'redstone_contact',
-		'schematicannon', 'display_board', 'chain_conveyor', 'redstone_link', 'package_frogport', 'display_link', 'packager', 'repackager'
+		'schematicannon', 'display_board', 'chain_conveyor', 'redstone_link', 'package_frogport', 'display_link', 'packager', 'repackager', 'brown_toolbox'
 	];
 	CreateRemoval.forEach(item => {
 		event.remove({ output: `create:${item}` });

@@ -403,9 +403,44 @@ ServerEvents.recipes(event => {
 		W: '#forge:tools/wire_cutters'
 	}).id('start:shaped/small_gear_extruder_mold');
 
+	let cell = 'gtceu:potin_small_fluid_pipe'
+	event.recipes.create.sequenced_assembly([
+		Item.of(`gtceu:fluid_cell`),
+	], `gtceu:potin_small_fluid_pipe`, [
+		event.recipes.createDeploying(cell, [cell, `gtceu:wrought_iron_ring`]),
+		event.recipes.createDeploying(cell, [cell, `#forge:glass_panes`]),
+		event.recipes.createDeploying(cell, [cell, `gtceu:wrought_iron_ring`]),
+		event.recipes.createDeploying(cell, [cell, `gtceu:rubber_ring`]),
+		event.recipes.createPressing(cell, cell)
+	]).transitionalItem(cell).loops(2).id('start:sequenced_assembly/fluid_cell');
+
+	event.shaped(Item.of('thermal:satchel'), [
+		'FWF',
+		'RCS',
+		'FWS'
+	], {
+		F: 'minecraft:leather',
+		W: '#minecraft:wool',
+		R: 'gtceu:tin_ring',
+		C: 'minecraft:chest',
+		S: '#forge:string'
+	}).id('start:shaped/satchel_leather');
+
+	event.shaped(Item.of('thermal:satchel'), [
+		'FWF',
+		'RCS',
+		'FWS'
+	], {
+		F: 'thermal:beekeeper_fabric',
+		W: '#minecraft:wool',
+		R: 'gtceu:tin_ring',
+		C: 'minecraft:chest',
+		S: '#forge:string'
+	}).id('start:shaped/satchel_fabric');
+
 	//Mass Removals
 
-	const ThermalRemoval = ['redstone_servo', 'device_tree_extractor', 'drill_head', 'fluid_cell_frame','device_rock_gen','device_water_gen'];
+	const ThermalRemoval = ['redstone_servo', 'device_tree_extractor', 'drill_head', 'fluid_cell_frame','device_rock_gen','device_water_gen','satchel'];
 	ThermalRemoval.forEach(item => {
 		event.remove({ output: `thermal:${item}` });
 	});

@@ -3,6 +3,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     .definition((tier, builder) =>{
     builder
         .recipeType('gt_blasting')
-        .workableTieredHullRenderer('gtceu:block/machines/alloy_smelter')
+        .workableCasingRenderer('gtceu:block/casings/steam/bricked_steel/side', 'gtceu:block/machines/gt_blaster_single', false);
     });
+
 });

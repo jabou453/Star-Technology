@@ -2432,11 +2432,6 @@
 					optional_task: true
 					type: "item"
 				}
-				{
-					id: "29DA45961C8114B3"
-					item: "gtceu:lp_blast_furnace"
-					type: "item"
-				}
 			]
 			title: "Low Pressure Steam Machines"
 			x: 8.0d
@@ -2517,8 +2512,9 @@
 					type: "item"
 				}
 				{
-					id: "7990E95B803F867D"
-					item: "gtceu:hp_blast_furnace"
+					id: "752F4C4F70DBB591"
+					item: "gtceu:hp_steam_blast_furnace"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -3326,36 +3322,43 @@
 				{
 					id: "511E0F72E3F16BF8"
 					item: "minecraft:spruce_sapling"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "3C6A153749762D49"
 					item: "minecraft:dark_oak_sapling"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "04A58DAEB33C0A22"
 					item: "minecraft:acacia_sapling"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "2772C0A10ED5E5A6"
 					item: "minecraft:oak_sapling"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "4B1E80B934E7A136"
 					item: "minecraft:birch_sapling"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "527DE4586F690963"
 					item: "minecraft:cherry_sapling"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "118CC04EFB8BCF5A"
 					item: "minecraft:jungle_sapling"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -3496,7 +3499,7 @@
 				type: "item"
 			}]
 			x: 2.75d
-			y: 14.25d
+			y: 12.75d
 		}
 		{
 			dependencies: [
@@ -3765,6 +3768,56 @@
 			}]
 			x: 17.0d
 			y: 12.0d
+		}
+		{
+			dependencies: ["3A3BD0ECA7FC8D38"]
+			id: "7BD4BE74DB9F01B5"
+			tasks: [{
+				id: "25E34D5F3465548D"
+				item: "gtceu:fluid_cell"
+				type: "item"
+			}]
+			x: 9.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"56C1E36895D68D0B"
+				"199D5FCFC471FE62"
+			]
+			dependency_requirement: "one_completed"
+			description: ["Grow some Oak Trees for some Bees to get this early, or wait till leather....."]
+			hide_dependency_lines: true
+			icon: {
+				Count: 1
+				id: "thermal:satchel"
+				tag: { }
+			}
+			id: "550884284DB49951"
+			tasks: [{
+				id: "391306D800987695"
+				item: {
+					Count: 1
+					id: "thermal:satchel"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "Satchel"
+			x: 11.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["21563799A48F1915"]
+			id: "043EB105B5DEB3AC"
+			optional: true
+			tasks: [{
+				id: "77FAB230F6AA96B5"
+				item: "create:brown_toolbox"
+				type: "item"
+			}]
+			x: 2.75d
+			y: 14.25d
 		}
 	]
 	title: "So It Begins"
