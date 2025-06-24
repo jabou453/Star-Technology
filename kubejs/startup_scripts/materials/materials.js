@@ -179,7 +179,6 @@ event.create('netherite')
 GTCEuStartupEvents.materialModification(event => {
 
     GTMaterials.Netherite.setMaterialARGB(0x1a0d00);
-    GTMaterials.Netherite.setComponents('4x debris', '4x gold');
     GTMaterials.Netherite.setMaterialIconSet(DULL);
     GTMaterials.Netherite.addFlags(rod, foil);
     GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
@@ -187,6 +186,11 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('netherite').setFormula('Nr');
     GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
     GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
+    GTMaterials.get('nether_star').setFormula('*');
+    GTMaterials.get('nether_star_concentrate').setFormula('*!*');
+    GTMaterials.get('aurourium').setFormula('*A*');
+    GTMaterials.get('starium_alloy').setFormula('*!*4(Ke6Nq2C)2El2');
+    GTMaterials.get('nyanium').setFormula('*A*7(URhNq2)4(Mg3N2)*Nr*2');
 
 });
 
@@ -563,7 +567,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngot('raw_void', ['1x echo_r', '1x neutronium'], 0x006666, DULL, [], [no_decomp]);
 
-    compIngot('void', ['1x echo_r', '1x neutronium'], 0x001a1a, DULL, [10799, 'highest', VA('uev'), 8000], [rod, foil, plates, long_rod, frame, no_decomp]);
+    compIngotLiquid('void', ['1x echo_r', '1x neutronium'], 0x001a1a, DULL, [10799, 'highest', VA('uev'), 8000], [rod, foil, plates, long_rod, frame, no_decomp]);
     
     //Extended Sculk
     compDustIcon('ionized_sculk', [], 0x061A0D, RADIOACTIVE, [no_decomp]);
@@ -1228,6 +1232,33 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     
     compLiquid('basalz', ['1x mystery'], 0x6f190e, [no_decomp]);
 
+    // Quantrum Comporessor Infusions
+    quCompInfusions('intangibility_infusion', 0x00AAAA);
+
+    quCompInfusions('paradoxicity_infusion', 0xAA00AA);
+
+    quCompInfusions('causality_infusion', 0xFFAA00);
+
+    // Runic Convergence Infusion
+    /*
+        *Nr*(SO₄)₃(OH)₂ - Netherite Trisulfate Complex
+        [*Nr*(NH₃)₆]SO₄ - Netherite Hexammine Sulfate
+        *Nr*₂N₃O₄ - Voidic Nitride
+        *Nr*(OH)₄ - Netherite Tetrahydroxide
+        *Nr*FSi₂O₄ - Astral Fluorosilicate
+        *Nr*₃N₃Si₂O8F - Primordial Nitrosilicate
+        2Mg₃N₂ - Magnesium Nitride
+        *Nr*₃Mg₆N₇Si₂O8F - Runic Convergence Infusion
+    */
+    compLiquid('netherite_trisulfate_complex', ['1x pure_netherite', '3x sulfur', '12x oxygen', '2x hydroxide'], 0x660033, [no_decomp]);
+    compDust('netherite_hexammine_sulfate', ['1x pure_netherite', '6x ammonia', '1x sulfur', '4x oxygen'], 0x400080, [no_decomp]);
+    compLiquid('voidic_nitride', ['2x pure_netherite', '3x nitrogen', '4x oxygen'], 0x000066, [no_decomp]);
+    compDust('netherite_tetrahydroxide', ['1x pure_netherite', '4x hydroxide'], 0x8b8b8b, [no_decomp]);
+    compLiquid('astral_fluorosilicate', ['1x pure_netherite', '1x fluorine', '2x silicon', '4x oxygen'], 0x333300, [no_decomp]);
+    compLiquid('primordial_nitrosilicate', ['3x pure_netherite', '3x nitrogen', '2x silicon', '8x oxygen', '1x fluorine'], 0x990099, [no_decomp]);
+    compLiquid('magnesium_nitride', ['3x magnesium', '2x nitrogen'], 0xcc66ff, []);
+    compLiquid('runic_convergence_infusion', ['3x pure_netherite', '6x magnesium', '7x nitrogen', '2x silicon', '8x oxygen', '1x fluorine'], 0xcc0099, [no_decomp]);
+
     //UEV Materials
     compLiquid('nether_star_concentrate', ['1x mystery'], 0xeeeeee, [no_decomp]);
 
@@ -1251,6 +1282,18 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(SHINY)
         .fluidPipeProperties(120000, 6000, true,true,true,true)
         .flags(plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, rotor, ring, foil, no_decomp, no_abs_recipe);
+
+    event.create('nyanium')
+        .components('7x aurourium', '4x uranium_rhodium_dinaquadide', '1x magnesium_nitride', '2x pure_netherite')
+        .ingot()
+        .fluid()
+        .plasma()
+        .color(0xE4C6EB)
+        .secondaryColor(0x09037C)
+        .blastTemp(17290, 'highest', VA('uev'), 3600)
+        .iconSet(SHINY) // Will Have Own in Theta? but that is a LOT of work
+        .fluidPipeProperties(78500, 2500, true,true,true,true)
+        .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, no_decomp, no_abs_recipe);
 
     compIngotPlasma('starium_alloy', ['4x mystery', '2x trinaquadalloy', '2x estalt'], 0x2253d2, SHINY, [18200, 'highest', VA('uev'), 3600], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
 
@@ -1278,32 +1321,5 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquidStill('dragon_breath', ['1x mystery'], [no_decomp]);
 
     compLiquidStill('pure_dragon_breath', ['1x mystery'], [no_decomp]);
-
-    // Quantrum Comporessor Infusions
-    quCompInfusions('intangibility_infusion', 0x00AAAA);
-
-    quCompInfusions('paradoxicity_infusion', 0xAA00AA);
-
-    quCompInfusions('causality_infusion', 0xFFAA00);
-
-    // Runic Convergence Infusion
-    /*
-        *Nr*(SO₄)₃(OH)₂ - Netherite Trisulfate Complex
-        [*Nr*(NH₃)₆]SO₄ - Netherite Hexammine Sulfate
-        *Nr*₂N₃O₄ - Voidic Nitride
-        *Nr*(OH)₄ - Netherite Tetrahydroxide
-        *Nr*FSi₂O₄ - Astral Fluorosilicate
-        *Nr*₃N₃Si₂O8F - Primordial Nitrosilicate
-        2Mg₃N₂ - Magnesium Nitride
-        *Nr*₃Mg₆N₇Si₂O8F - Runic Convergence Infusion
-    */
-    compLiquid('netherite_trisulfate_complex', ['1x pure_netherite', '3x sulfur', '12x oxygen', '2x hydroxide'], 0x660033, [no_decomp]);
-    compDust('netherite_hexammine_sulfate', ['1x pure_netherite', '6x ammonia', '1x sulfur', '4x oxygen'], 0x400080, [no_decomp]);
-    compLiquid('voidic_nitride', ['2x pure_netherite', '3x nitrogen', '4x oxygen'], 0x000066, [no_decomp]);
-    compDust('netherite_tetrahydroxide', ['1x pure_netherite', '4x hydroxide'], 0x8b8b8b, [no_decomp]);
-    compLiquid('astral_fluorosilicate', ['1x pure_netherite', '1x fluorine', '2x silicon', '4x oxygen'], 0x333300, [no_decomp]);
-    compLiquid('primordial_nitrosilicate', ['3x pure_netherite', '3x nitrogen', '2x silicon', '8x oxygen', '1x fluorine'], 0x990099, [no_decomp]);
-    compLiquid('magnesium_nitride', ['3x magnesium', '2x nitrogen'], 0xcc66ff, []);
-    compLiquid('runic_convergence_infusion', ['3x pure_netherite', '6x magnesium', '7x nitrogen', '2x silicon', '8x oxygen', '1x fluorine'], 0xcc0099, [no_decomp]);
 
 });

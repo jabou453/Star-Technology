@@ -12,7 +12,7 @@
 	quest_links: [{
 		id: "5CAD94E1138B5355"
 		linked_quest: "53A2FF89C0F89921"
-		x: -5.0d
+		x: -3.0d
 		y: -1.0d
 	}]
 	quests: [
@@ -397,15 +397,25 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["097D8B4DF03A8617"]
+			dependencies: [
+				"097D8B4DF03A8617"
+				"1D94473AA9436C60"
+			]
 			id: "2DACE6EF41A118D9"
 			shape: "gear"
 			size: 1.5d
-			tasks: [{
-				id: "1462466F9431F65B"
-				title: "Abyss Coils"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "1462466F9431F65B"
+					title: "Abyss Coils"
+					type: "checkmark"
+				}
+				{
+					id: "1CC08FAE5A9F548A"
+					item: "kubejs:abyssal_coil_block"
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: 4.0d
 		}
@@ -848,7 +858,10 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["295442FA6CE0BA13"]
+			dependencies: [
+				"295442FA6CE0BA13"
+				"6C8C6EA426060065"
+			]
 			id: "218CABD676F3B732"
 			tasks: [{
 				id: "0C141AF8C5ACBF6D"
@@ -856,7 +869,7 @@
 				type: "item"
 			}]
 			x: -3.0d
-			y: -1.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["310FC3F86513555F"]
@@ -903,6 +916,18 @@
 			title: "DSG"
 			x: 16.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["218CABD676F3B732"]
+			hide_dependent_lines: true
+			id: "1D94473AA9436C60"
+			tasks: [{
+				id: "65EAAA869AFF0F87"
+				item: "gtceu:nyanium_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
 		}
 	]
 	title: "Draconic Empires"

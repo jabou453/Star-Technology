@@ -81,10 +81,18 @@ ServerEvents.recipes(event => {
             .duration(SecDurPerIng * 20 * .28325)
             .EUt(eut / 2);
 
+    // EBF Gas Swap
+        if(HeatMK < 900){
+            event.replaceInput({id: `gtceu:electric_blast_furnace/blast_${type}_gas`},
+                Fluid.of('gtceu:krypton 10'),
+                Fluid.of('gtceu:radon 5')
+            );
+        }
     }
     HellForgeMat('mythrolic_alloy', 11, ['gtceu:mythril 720', 'gtceu:hsss 576', 'gtceu:darmstadtium 288'], 'argon', 786, GTValues.VHA[GTValues.UEV], 43.6);
     HellForgeMat('magmada_alloy', 8, ['gtceu:adamantine 576', 'gtceu:neutronium 144', 'gtceu:rtm_alloy 432'], 'magmatic', 812, GTValues.VHA[GTValues.UEV], 52.4);
     HellForgeMat('starium_alloy', 8, ['gtceu:nether_star_concentrate 576', 'gtceu:trinaquadalloy 288', 'gtceu:estalt 288'], 'oxygen', 843, GTValues.VA[GTValues.UEV], 39.8);
     HellForgeMat('seaborgium_palladium_enriched_estalt_flerovium_alloy', 17, ['gtceu:seaborgium 576', 'gtceu:palladium 1152', 'gtceu:enriched_estalt 432', 'gtceu:flerovium 288'], 'nickel', 878, GTValues.VHA[GTValues.UIV], 47.4);
+    HellForgeMat('nyanium', 14, ['gtceu:aurourium 1008', 'gtceu:uranium_rhodium_dinaquadide 576', 'gtceu:magnesium_nitride 144', 'gtceu:pure_netherite 288'], 'nitrogen', 444, GTValues.VA[GTValues.UHV], 76.8);
 
     });

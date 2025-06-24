@@ -139,5 +139,6 @@ ServerEvents.recipes(event => {
     Material15000PlusAlloy('magmada_alloy', 49.05);
     Material15000PlusAlloy('starium_alloy', 24.75);
     Material15000PlusAlloy('seaborgium_palladium_enriched_estalt_flerovium_alloy', 31.2);
+    Material15000PlusAlloy('nyanium', 24.9);
 
 });

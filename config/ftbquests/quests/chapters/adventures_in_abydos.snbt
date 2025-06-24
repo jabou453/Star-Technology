@@ -2381,7 +2381,7 @@
 			description: [
 				"Have you ever thought that wires were a little... excessive. Well now they arent needed."
 				""
-				"If you love using Converters after &aUEV&r that no longer becomes an as direct solution."
+				"If you love using Converters, bad luck, after &aUEV&r that no longer becomes an as direct solution."
 				""
 				""
 				"{ \"text\": \"Read more about how wireless power works here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2F63F0E239737E38\" } }"
@@ -2492,6 +2492,7 @@
 					type: "item"
 				}
 			]
+			title: "Wireless Covers and Hatches"
 			x: 5.5d
 			y: 7.0d
 		}

@@ -121,10 +121,17 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('magmada_alloy_coil'))
         .itemInputs('8x gtceu:magmada_alloy_double_wire', '8x gtceu:pure_netherite_foil')
-        .inputFluids('gtceu:zalloy 144')
+        .inputFluids('gtceu:adamantine 144')
         .itemOutputs('kubejs:magmada_alloy_coil_block')
         .duration(1100)
         .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.assembler(id('abyssal_coil'))
+        .itemInputs('8x gtceu:filler_wire', '8x gtceu:nyanium_foil') //Need Material from Abyss Harvesting + Refinement
+        .inputFluids('gtceu:void 144')
+        .itemOutputs('kubejs:abyssal_coil_block')
+        .duration(1200)
+        .EUt(GTValues.VHA[GTValues.UIV]);
 
     event.recipes.gtceu.assembler(id('extreme_temperature_smelting_casing'))
         .itemInputs('4x gtceu:calamatium_plate', '2x gtceu:astatium_bioselex_carbonite_plate', 'gtceu:enriched_estalt_frame')
