@@ -23,7 +23,7 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .material('metal');
 
-    event.create('abyssal_coil_block', 'gtceu:coil')
+    event.create('abyssal_alloy_coil_block', 'gtceu:coil')
         .temperature(18888)
         .level(40)
         .energyDiscount(20)

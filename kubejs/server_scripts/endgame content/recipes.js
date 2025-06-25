@@ -87,8 +87,10 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('tungsten_disulfide'))
-        .itemInputs('4x gtceu:tungsten_trioxide_dust', 'gtceu:iron_titanium_oxide_dust')
+        .itemInputs('4x gtceu:tungsten_trioxide_dust')
+        .inputFluids('gtceu:hydrogen_sulfide 3000')
         .itemOutputs('3x gtceu:tungsten_disulfide_dust')
+        .outputFluids('minecraft:water 3000')
         .duration(480)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
@@ -118,6 +120,41 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt((GTValues.VHA[GTValues.UEV]));
 
+    event.recipes.gtceu.advanced_chemistry(id('platinum_yttrium_composite'))
+        .itemInputs('4x gtceu:uranium_triplatinum_dust', '26x gtceu:yttrium_barium_cuprate_dust', '12x gtceu:carbon_dust')
+        .itemOutputs('22x gtceu:platinum_yttrium_composite_dust', '3x gtceu:uranite_dust')
+        .outputFluids('gtceu:carbon_dioxide 6000')
+        .duration(152 * 22)
+        .EUt(GTValues.VA[GTValues.UHV]);
+
+    event.recipes.gtceu.advanced_chemistry(id('polonium_iridide_acid'))
+        .itemInputs('3x gtceu:iridium_iv_oxide_dust', '2x gtceu:polonium_dust')
+        .inputFluids('gtceu:phosphoric_acid 1000')
+        .outputFluids('gtceu:polonium_iridide_acid 1000', 'gtceu:oxygen 2000')
+        .duration(1523)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('polonium_flux'))
+        .itemInputs('22x gtceu:platinum_yttrium_composite_dust')
+        .inputFluids('gtceu:polonium_iridide_acid 2000', 'gtceu:hydrogen 10000')
+        .itemOutputs('30x gtceu:polonium_flux_dust')
+        .outputFluids('minecraft:water 8000')
+        .duration(840)
+        .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.mixer(id('hafnide_ito_ceramic'))
+        .itemInputs('14x gtceu:hafnide_ceramic_base_dust', '7x gtceu:indium_tin_oxide_dust')
+        .itemOutputs('21x gtceu:hafnide_ito_ceramic_dust')
+        .duration(1056)
+        .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('indium_tin_oxide'))
+        .itemInputs('2x gtceu:indium_dust', '2x gtceu:tin_dust')
+        .inputFluids('gtceu:oxygen 3000')
+        .itemOutputs('7x gtceu:indium_tin_oxide_dust')
+        .duration(462)
+        .EUt(GTValues.VA[GTValues.UHV]);
+
     event.recipes.gtceu.assembler(id('zalloy_coil'))
         .itemInputs('8x gtceu:zalloy_double_wire', '8x gtceu:neutronium_foil')
         .inputFluids('gtceu:tritanium 144')
@@ -135,7 +172,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.assembler(id('abyssal_coil'))
         .itemInputs('8x gtceu:abyssal_alloy_double_wire', '8x gtceu:nyanium_foil')
         .inputFluids('gtceu:void 144')
-        .itemOutputs('kubejs:abyssal_coil_block')
+        .itemOutputs('kubejs:abyssal_alloy_coil_block')
         .duration(1200)
         .EUt(GTValues.VHA[GTValues.UIV]);
 

@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:high_power_casing', 'gtceu:uev_sensor', '1x #gtceu:circuits/uev', '2x kubejs:draconic_brain_matter_cells', 
             '2x kubejs:draconic_brain_matter_cells', '1x #gtceu:circuits/uev', 'gtceu:uev_sensor')
         .inputFluids('gtceu:dragon_breath 8000')
-        .itemOutputs('kubejs:draco_ware_casing')
+        .itemOutputs('2x kubejs:draco_ware_casing')
         .duration(800)
         .EUt(GTValues.VHA[GTValues.UEV]);
 
@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:fusion_glass', '2x kubejs:draconic_scale_cells', '4x gtceu:neutron_reflector', 'gtceu:uhv_field_generator', 
             'gtceu:uhv_field_generator', '4x gtceu:neutron_reflector', '2x kubejs:draconic_scale_cells')
         .inputFluids('gtceu:dragon_breath 4000')
-        .itemOutputs('kubejs:draco_resilient_fusion_glass')
+        .itemOutputs('2x kubejs:draco_resilient_fusion_glass')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UEV]);
 
@@ -72,7 +72,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:assembly_line_grating', '8x gtceu:void_foil', '8x gtceu:void_foil', '1x gtceu:uev_robot_arm', 
             '1x gtceu:uev_robot_arm', '8x gtceu:void_foil', '8x gtceu:void_foil')
         .inputFluids('gtceu:dragon_breath 6000')
-        .itemOutputs('kubejs:draco_assembly_grating')
+        .itemOutputs('2x kubejs:draco_assembly_grating')
         .duration(600)
         .EUt(GTValues.VHA[GTValues.UEV]);
 

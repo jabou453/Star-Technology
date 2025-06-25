@@ -20,13 +20,13 @@
 			id: "52EF57467B80EB54"
 			linked_quest: "75C33909E2CD5EC0"
 			x: -1.0d
-			y: 5.0d
+			y: 7.0d
 		}
 		{
 			id: "6EBA3C9601A8DDCC"
 			linked_quest: "5080743917931298"
-			x: -3.0d
-			y: 7.0d
+			x: -1.0d
+			y: 5.0d
 		}
 		{
 			id: "02B087F0A2892890"
@@ -267,8 +267,8 @@
 				type: "advancement"
 			}]
 			title: "The Last Dragon Falls"
-			x: -6.0d
-			y: 4.0d
+			x: -8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["6C8C6EA426060065"]
@@ -290,7 +290,7 @@
 				title: "Find Ruined Draconic Infusion Array"
 				type: "checkmark"
 			}]
-			x: -6.0d
+			x: -8.0d
 			y: 2.0d
 		}
 		{
@@ -354,7 +354,7 @@
 				item: "kubejs:draconic_neuro_processing_unit"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: 4.0d
 		}
 		{
@@ -398,7 +398,7 @@
 				item: "gtceu:draco_infusion"
 				type: "item"
 			}]
-			x: -4.0d
+			x: -6.0d
 			y: 2.0d
 		}
 		{
@@ -441,8 +441,8 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "1CC08FAE5A9F548A"
-				item: "kubejs:abyssal_coil_block"
+				id: "3B356CEBB9C8BE26"
+				item: "kubejs:abyssal_alloy_coil_block"
 				type: "item"
 			}]
 			x: 2.0d
@@ -456,7 +456,7 @@
 				item: "gtceu:uiv_machine_hull"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: 8.0d
 		}
 		{
@@ -467,7 +467,7 @@
 				item: "gtceu:uiv_energy_input_hatch"
 				type: "item"
 			}]
-			x: -4.0d
+			x: -2.0d
 			y: 8.0d
 		}
 		{
@@ -478,7 +478,7 @@
 				item: "gtceu:uiv_energy_input_hatch_4a"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -4.0d
 			y: 8.0d
 		}
 		{
@@ -492,7 +492,7 @@
 				item: "gtceu:uiv_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: -8.0d
+			x: -6.0d
 			y: 8.0d
 		}
 		{
@@ -573,7 +573,7 @@
 				item: "gtceu:draco_circuit_assembler"
 				type: "item"
 			}]
-			x: -2.0d
+			x: -4.0d
 			y: 2.0d
 		}
 		{
@@ -586,8 +586,8 @@
 				title: "Circuit Packs"
 				type: "checkmark"
 			}]
-			x: -1.0d
-			y: 3.0d
+			x: -3.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -600,7 +600,7 @@
 				item: "kubejs:draconic_wetware_microchip_processor"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: 2.0d
 		}
 		{
@@ -612,7 +612,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["26FDB9612063F49D"]
@@ -623,7 +623,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["66D49CB8D8819E3F"]
@@ -633,8 +633,8 @@
 				item: "kubejs:draconic_wetware_processor_computer"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -4.0d
+			x: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["6F3DF16481990D99"]
@@ -647,7 +647,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -696,19 +696,22 @@
 				item: "kubejs:draco_advanced_soc_wafer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -2.0d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["3F9D1B0CED0D4133"]
+			dependencies: [
+				"3F9D1B0CED0D4133"
+				"2DACE6EF41A118D9"
+			]
 			id: "032E72446266F7D4"
 			tasks: [{
 				id: "741E0E4603A5AAA7"
 				title: "sterile maintence hatch"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 8.0d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
@@ -741,7 +744,7 @@
 				title: "Pure Dracoyallium"
 				type: "checkmark"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -799,7 +802,7 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 4.0d
 			y: -2.0d
 		}
 		{
@@ -818,7 +821,7 @@
 				}
 			]
 			title: "Hyper Parallel Hatches"
-			x: 6.0d
+			x: 4.0d
 			y: -6.0d
 		}
 		{
@@ -854,7 +857,7 @@
 				title: "Better Infra...."
 				type: "checkmark"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 6.0d
 		}
 		{
@@ -922,7 +925,7 @@
 				}
 			]
 			title: "Mega Parallel Hatches"
-			x: 4.0d
+			x: 2.0d
 			y: -6.0d
 		}
 		{
@@ -952,8 +955,8 @@
 				item: "gtceu:nyanium_ingot"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 3.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
@@ -963,8 +966,8 @@
 				item: "minecraft:dragon_breath"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 3.0d
+			x: -6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
