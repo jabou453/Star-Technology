@@ -84,8 +84,8 @@ ServerEvents.recipes(event => {
         .itemInputs('1x gtceu:sodium_dust', '1x gtceu:sulfur_dust')
         .inputFluids('gtceu:oxygen 4000')
         .outputFluids('gtceu:sodium_persulfate 500')
-        .duration(120)
-        .EUt(GTValues.VHA[GTValues.EV]);
+        .duration(20)
+        .EUt(GTValues.VHA[GTValues.IV]);
 
     event.recipes.gtceu.chemical_skip(id('borax'))
         .itemInputs('4x gtceu:boron_dust', '14x gtceu:sodium_bisulfate_dust')

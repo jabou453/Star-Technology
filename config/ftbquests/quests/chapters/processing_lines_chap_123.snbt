@@ -1433,8 +1433,8 @@
 			id: "11FF8831D1DE5D7B"
 			size: 1.0d
 			tasks: [{
-				id: "2B0374A44EBC8D3D"
-				item: "gtceu:tiny_titanium_trifluoride_dust"
+				id: "79966B1ECB9E4AC9"
+				item: "gtceu:small_titanium_trifluoride_dust"
 				type: "item"
 			}]
 			x: 26.5d

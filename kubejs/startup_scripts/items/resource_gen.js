@@ -74,4 +74,10 @@ StartupEvents.registry('item', event => {
         .displayName('Awakened Chorus Core')
         .texture('kubejs:item/true_absolute_chorus')
         .glow(true);
+
+    // Abyss Harvesting
+    event.create('voidic_reinforced_mesh')
+        .displayName('Voidic Reinforced Mesh')
+        .texture('kubejs:item/voidic_reinforced_mesh');
+
 });

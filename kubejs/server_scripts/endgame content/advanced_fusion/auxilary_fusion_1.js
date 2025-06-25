@@ -34,7 +34,6 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UHV])
         .cleanroom(CleanroomType.STERILE_CLEANROOM);
 
-
     event.recipes.gtceu.assembler(id('auxiliary_fusion_coil_mk1'))
         .itemInputs('1x gtceu:fusion_coil', '2x gtceu:zpm_field_generator', 'gtceu:zpm_electric_pump', '2x gtceu:neutron_reflector', '4x #gtceu:circuits/uv', '4x gtceu:zapolgium_small_fluid_pipe', '4x gtceu:zircalloy_4_plate')
         .inputFluids('gtceu:zirconium_selenide_diiodide 576')

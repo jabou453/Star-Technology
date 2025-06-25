@@ -7,12 +7,12 @@ ServerEvents.recipes(event => {
         .itemInputs('minecraft:dragon_breath')
         .outputFluids('gtceu:dragon_breath 250')
         .itemOutputs('minecraft:glass_bottle')
-        .duration(600)
+        .duration(100)
         .EUt(GTValues.VHA[GTValues.UEV]);
     
     event.remove({id: 'minecraft:popped_chorus_fruit'});
     event.replaceInput({ input: 'minecraft:popped_chorus_fruit' },'minecraft:popped_chorus_fruit','minecraft:chorus_fruit');
-    event.recipes.gtceu.large_quantum_compressor(id('true_absolute_chorus'))
+    event.recipes.gtceu.large_quantum_compressor(id('true_absolute_chorus')) // Needs New System
         .itemInputs('kubejs:void_core', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit'
             ,'64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit'
             ,'64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit', '64x minecraft:popped_chorus_fruit'
@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.draco_infusion(id('draco_boule'))
         .itemInputs('gtceu:neutronium_boule', '8x kubejs:draconic_stem_cells', '1x gtceu:neutronium_block', '32x gtceu:silicon_block', 
             '32x gtceu:silicon_block', '1x gtceu:neutronium_block', '8x kubejs:draconic_stem_cells')
-        .inputFluids('gtceu:pure_dragon_breath 60000')
+        .inputFluids('gtceu:pure_dragon_breath 32000')
         .itemOutputs('kubejs:draco_boule')
         .duration(6000)
         .EUt(GTValues.VHA[GTValues.UHV]);

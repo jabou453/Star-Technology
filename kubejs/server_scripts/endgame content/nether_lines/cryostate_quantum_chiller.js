@@ -140,5 +140,9 @@ ServerEvents.recipes(event => {
     Material15000PlusAlloy('starium_alloy', 24.75);
     Material15000PlusAlloy('seaborgium_palladium_enriched_estalt_flerovium_alloy', 31.2);
     Material15000PlusAlloy('nyanium', 24.9);
+    Material15000PlusAlloy('rhenium_super_composite_alloy', 18.6);
+    Material15000PlusAlloy('abyssal_alloy', 53.4);
+    Material15000PlusAlloy('chaotixic_alloy', 30.75);
+    Material15000PlusAlloy('ohmderblux_alloy', 25.35);
 
 });

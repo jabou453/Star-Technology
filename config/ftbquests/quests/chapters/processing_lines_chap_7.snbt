@@ -3306,12 +3306,12 @@
 				type: "item"
 			}]
 			x: 8.5d
-			y: 11.5d
+			y: 12.0d
 		}
 		{
 			dependencies: [
-				"53A2FF89C0F89921"
 				"31E7FE4E816A71CF"
+				"3596B7A01B5A2972"
 			]
 			id: "75C33909E2CD5EC0"
 			tasks: [{
@@ -3319,8 +3319,8 @@
 				item: "start_core:emberheart_nectar_bucket"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 11.5d
+			x: 10.5d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -3334,8 +3334,8 @@
 				item: "start_core:igniferous_elixir_bucket"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 11.5d
+			x: 12.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -3348,8 +3348,8 @@
 				item: "start_core:blazing_phlogiston_bucket"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 11.5d
+			x: 13.5d
+			y: 12.0d
 		}
 		{
 			id: "35D3561C76338E25"
@@ -3358,8 +3358,8 @@
 				item: "gtceu:utopian_akreyrium_bucket"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 11.5d
+			x: 6.0d
+			y: 12.0d
 		}
 		{
 			id: "0A2485513EE939AE"
@@ -3368,8 +3368,8 @@
 				item: "sgjourney:pegasus_stargate"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 13.0d
+			x: 12.0d
+			y: 13.5d
 		}
 		{
 			id: "31E7FE4E816A71CF"
@@ -3378,8 +3378,8 @@
 				item: "minecraft:end_stone"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 13.0d
+			x: 10.5d
+			y: 13.5d
 		}
 		{
 			id: "4B109E84470D2549"
@@ -3389,7 +3389,7 @@
 				type: "item"
 			}]
 			x: 8.5d
-			y: 13.0d
+			y: 13.5d
 		}
 		{
 			id: "48F36A3DE988B233"
@@ -3398,8 +3398,8 @@
 				item: "minecraft:deepslate"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 10.0d
+			x: 13.5d
+			y: 10.5d
 		}
 		{
 			id: "67C9D32CB509441E"
@@ -3409,8 +3409,424 @@
 				id: "46E829742B78CCAE"
 				type: "fluid"
 			}]
-			x: 11.5d
+			x: 12.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["18FD654260DFF1D6"]
+			icon: "kubejs:void_core"
+			id: "1D3052F94EE128F4"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				id: "1F8B168C07797665"
+				title: "Abyss Harvesting"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["1D3052F94EE128F4"]
+			id: "768BD48ECF6EAC97"
+			tasks: [{
+				id: "1F9C4546E4B3A164"
+				item: "gtceu:high_entropy_voidic_excression_bucket"
+				type: "item"
+			}]
+			x: 17.5d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"768BD48ECF6EAC97"
+				"1D3052F94EE128F4"
+			]
+			id: "6EB25AE9FB659E25"
+			tasks: [{
+				id: "5FF253822262A5DD"
+				item: "gtceu:moderate_entropy_voidic_excression_bucket"
+				type: "item"
+			}]
+			x: 17.5d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"6EB25AE9FB659E25"
+				"1D3052F94EE128F4"
+			]
+			id: "756FE02C55B34F6E"
+			tasks: [{
+				id: "36B9C00695357E8E"
+				item: "gtceu:low_entropy_voidic_excression_bucket"
+				type: "item"
+			}]
+			x: 17.5d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"768BD48ECF6EAC97"
+				"0D3E6EDB52510D76"
+			]
+			id: "3747C55339B65700"
+			tasks: [{
+				id: "5B7AC05E0439AFC0"
+				item: "gtceu:excited_void_entangled_quantum_slurry_bucket"
+				type: "item"
+			}]
+			x: 19.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"6EB25AE9FB659E25"
+				"0D3E6EDB52510D76"
+			]
+			id: "3FC2B057FAEC1613"
+			tasks: [{
+				id: "080D5EE824DD2A94"
+				item: "gtceu:active_void_entangled_quantum_slurry_bucket"
+				type: "item"
+			}]
+			x: 19.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"756FE02C55B34F6E"
+				"0D3E6EDB52510D76"
+			]
+			id: "2A56E7B27F721214"
+			tasks: [{
+				id: "48DC1B4251A5700E"
+				item: "gtceu:dormant_void_entangled_quantum_slurry_bucket"
+				type: "item"
+			}]
+			x: 19.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["2A56E7B27F721214"]
+			id: "63AA8FD624FC4651"
+			tasks: [{
+				id: "3D5BDF517A5EF62D"
+				item: "gtceu:alpha_state_void_sludge_bucket"
+				type: "item"
+			}]
+			x: 20.5d
+			y: 16.0d
+		}
+		{
+			dependencies: ["3FC2B057FAEC1613"]
+			id: "6647C182DFBF66A1"
+			tasks: [{
+				id: "4BCFB6C2B224EA5B"
+				item: "gtceu:beta_state_void_sludge_bucket"
+				type: "item"
+			}]
+			x: 20.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["3747C55339B65700"]
+			id: "0DF40B5B33EC5143"
+			tasks: [{
+				id: "47A2F9F1F10E8764"
+				item: "gtceu:gamma_state_void_sludge_bucket"
+				type: "item"
+			}]
+			x: 20.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["2A56E7B27F721214"]
+			id: "244187B5BC5EDDC8"
+			tasks: [{
+				id: "0171E50E25027F29"
+				item: "gtceu:delta_state_void_sludge_bucket"
+				type: "item"
+			}]
+			x: 20.5d
+			y: 13.0d
+		}
+		{
+			dependencies: ["3FC2B057FAEC1613"]
+			id: "3BE8E1348A8A47DD"
+			tasks: [{
+				id: "389110F2922C232D"
+				item: "gtceu:epsilon_state_void_sludge_bucket"
+				type: "item"
+			}]
+			x: 20.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["3747C55339B65700"]
+			id: "70AFEDB9EA84C58E"
+			tasks: [{
+				id: "6760BEF01A494FD1"
+				item: "gtceu:zeta_state_void_sludge_bucket"
+				type: "item"
+			}]
+			x: 20.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["63AA8FD624FC4651"]
+			id: "68B378F9C61A4476"
+			tasks: [{
+				id: "76CDC89FB6D7ECA2"
+				item: "gtceu:alpha_state_void_residue_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["6647C182DFBF66A1"]
+			id: "2A51E0AEDCCC8F9E"
+			tasks: [{
+				id: "34D955C65BE03CA7"
+				item: "gtceu:beta_state_void_residue_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["0DF40B5B33EC5143"]
+			id: "64B6D570D8C43249"
+			tasks: [{
+				id: "314727F3157D133C"
+				item: "gtceu:gamma_state_void_residue_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["244187B5BC5EDDC8"]
+			id: "622AB20A4B3D2DB6"
+			tasks: [{
+				id: "684C2EFF12656ABC"
+				item: "gtceu:delta_state_void_residue_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["3BE8E1348A8A47DD"]
+			id: "0B9426D5788B0337"
+			tasks: [{
+				id: "6AEC3404967E1EDE"
+				item: "gtceu:epsilon_state_void_residue_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["70AFEDB9EA84C58E"]
+			id: "26795C8AEFF36410"
+			tasks: [{
+				id: "4B312CA0EF8CC43D"
+				item: "gtceu:zeta_state_void_residue_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"68B378F9C61A4476"
+				"64B6D570D8C43249"
+				"2A51E0AEDCCC8F9E"
+			]
+			id: "5080743917931298"
+			tasks: [{
+				id: "3F466B29D47119E7"
+				item: "gtceu:order_centric_void_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"26795C8AEFF36410"
+				"622AB20A4B3D2DB6"
+				"0B9426D5788B0337"
+			]
+			id: "2F6115002741F26F"
+			tasks: [{
+				id: "4482E9505ED7785D"
+				item: "gtceu:chaos_centric_void_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"0DF40B5B33EC5143"
+				"63AA8FD624FC4651"
+				"244187B5BC5EDDC8"
+				"3BE8E1348A8A47DD"
+				"6647C182DFBF66A1"
+				"70AFEDB9EA84C58E"
+			]
+			dependency_requirement: "one_completed"
+			hide_dependency_lines: true
+			id: "35BC1333425C61AD"
+			tasks: [{
+				id: "6791594C58084AFA"
+				item: "gtceu:voidic_waste_residue_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["039F71CBD3C8F048"]
+			id: "2A9BD9AA525AD57F"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "0F81DEA98E4B0534"
+				item: "gtceu:chalyblux_ingot"
+				type: "item"
+			}]
+			x: 28.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7E15AE62D31F95DD"]
+			id: "18BF8EC78B930433"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "499D7AD11F607C89"
+				item: "gtceu:xeproda_ingot"
+				type: "item"
+			}]
+			x: 28.0d
 			y: 10.0d
+		}
+		{
+			dependencies: ["47986C646C594852"]
+			id: "3DF1E6EADE4D3EA0"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "0143D30A10D28C81"
+				item: "gtceu:rhexis_ingot"
+				type: "item"
+			}]
+			x: 28.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["35BC1333425C61AD"]
+			id: "0E75A2FC17ED0C28"
+			shape: "gear"
+			tasks: [{
+				id: "3836AA1BA9B0BF7F"
+				item: "gtceu:rhenium_dust"
+				type: "item"
+			}]
+			x: 25.5d
+			y: 13.5d
+		}
+		{
+			dependencies: ["35BC1333425C61AD"]
+			id: "6614B51E815DAEEC"
+			tasks: [{
+				id: "1F0E3D39638A7619"
+				item: "gtceu:naquadria_waste_bucket"
+				type: "item"
+			}]
+			x: 24.5d
+			y: 14.5d
+		}
+		{
+			dependencies: ["53A2FF89C0F89921"]
+			id: "3596B7A01B5A2972"
+			tasks: [{
+				id: "13CE5DDD1319BD8C"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2F6115002741F26F"]
+			id: "7E15AE62D31F95DD"
+			tasks: [{
+				id: "04D6E0312534B0ED"
+				item: "gtceu:xeproda_dust"
+				type: "item"
+			}]
+			x: 26.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["2F6115002741F26F"]
+			id: "47986C646C594852"
+			tasks: [{
+				id: "7C1543A3A579CA63"
+				item: "gtceu:rhexis_dust"
+				type: "item"
+			}]
+			x: 26.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5080743917931298"]
+			id: "039F71CBD3C8F048"
+			tasks: [{
+				id: "07488655CCE78798"
+				item: "gtceu:chalyblux_dust"
+				type: "item"
+			}]
+			x: 26.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["35BC1333425C61AD"]
+			id: "56A15F5FBB7BF8D4"
+			tasks: [{
+				id: "60F543545D5E9039"
+				item: "gtceu:tiny_echo_shard_dust"
+				type: "item"
+			}]
+			x: 23.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["35BC1333425C61AD"]
+			id: "26B3C85391987ECD"
+			tasks: [{
+				id: "1C843F6A86A04126"
+				item: "gtceu:molten_ore_mixture_bucket"
+				type: "item"
+			}]
+			x: 24.5d
+			y: 12.5d
+		}
+		{
+			dependencies: ["59015C06412CC8D3"]
+			hide_dependency_lines: true
+			id: "0D3E6EDB52510D76"
+			tasks: [{
+				id: "58C695E6E2803C31"
+				item: "kubejs:voidic_reinforced_mesh"
+				type: "item"
+			}]
+			x: 19.0d
+			y: 16.5d
 		}
 	]
 	title: "Processing Lines (Chap 7..)"

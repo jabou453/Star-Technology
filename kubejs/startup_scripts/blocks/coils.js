@@ -28,7 +28,7 @@ StartupEvents.registry('block', event => {
         .level(40)
         .energyDiscount(20)
         .tier(10)
-        .coilMaterial(() => GTMaterials.get('xeproda')) //placeholder
+        .coilMaterial(() => GTMaterials.get('abyssal_alloy'))
         .hardness(5)
         .soundType('metal')
         .requiresTool(true)

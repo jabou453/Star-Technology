@@ -9,12 +9,32 @@
 	id: "5617484BFC479624"
 	order_index: 6
 	progression_mode: "linear"
-	quest_links: [{
-		id: "5CAD94E1138B5355"
-		linked_quest: "53A2FF89C0F89921"
-		x: -3.0d
-		y: -1.0d
-	}]
+	quest_links: [
+		{
+			id: "5CAD94E1138B5355"
+			linked_quest: "53A2FF89C0F89921"
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			id: "52EF57467B80EB54"
+			linked_quest: "75C33909E2CD5EC0"
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			id: "6EBA3C9601A8DDCC"
+			linked_quest: "5080743917931298"
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			id: "02B087F0A2892890"
+			linked_quest: "2F6115002741F26F"
+			x: -3.0d
+			y: 5.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -248,7 +268,7 @@
 			}]
 			title: "The Last Dragon Falls"
 			x: -6.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["6C8C6EA426060065"]
@@ -271,21 +291,21 @@
 				type: "checkmark"
 			}]
 			x: -6.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["28DE3D2A96C4D0C8"]
+			dependencies: ["0168A45EB73911AC"]
 			id: "18FD654260DFF1D6"
 			tasks: [{
 				id: "6E9FE3724FFB98A3"
 				title: "Abyss Harvesting"
 				type: "checkmark"
 			}]
-			x: -6.0d
+			x: -4.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["395C32B51E768458"]
+			dependencies: ["50377ABD674AAC34"]
 			id: "0168A45EB73911AC"
 			tasks: [
 				{
@@ -309,7 +329,7 @@
 					type: "item"
 				}
 			]
-			x: -2.0d
+			x: -4.0d
 			y: 4.0d
 		}
 		{
@@ -335,17 +355,16 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["18FD654260DFF1D6"]
+			dependencies: [
+				"18FD654260DFF1D6"
+				"5080743917931298"
+				"2F6115002741F26F"
+			]
 			id: "7EB9C44EE7515882"
 			tasks: [
-				{
-					id: "0123BA928AA8E0FA"
-					title: "Forgotten Mystical Materials"
-					type: "checkmark"
-				}
 				{
 					id: "42A1C4E86DF3A7BD"
 					item: "gtceu:xeproda_ingot"
@@ -362,13 +381,14 @@
 					type: "item"
 				}
 			]
-			x: -4.0d
+			title: "Voidic Metals"
+			x: -2.0d
 			y: 6.0d
 		}
 		{
 			dependencies: [
-				"01FBF9CDD9066AF5"
 				"7D1C09EB946A29D4"
+				"262BD3D9D1DF7F13"
 			]
 			id: "395C32B51E768458"
 			shape: "gear"
@@ -379,21 +399,37 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"7EB9C44EE7515882"
-				"395C32B51E768458"
-				"468AA2233E2CBB6D"
+				"75C33909E2CD5EC0"
+				"2E34F23A42004285"
 			]
 			id: "097D8B4DF03A8617"
-			tasks: [{
-				id: "589B09C81D06CCA2"
-				title: "End Alloys"
-				type: "checkmark"
-			}]
-			x: -2.0d
+			tasks: [
+				{
+					id: "3D239E0F7B45AE92"
+					item: "gtceu:abyssal_alloy_ingot"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "31FC25EDB350FB8E"
+					item: "gtceu:ohmderblux_alloy_ingot"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "05FA61B9B58E9C76"
+					item: "gtceu:chaotixic_alloy_ingot"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "UIV Alloys"
+			x: 0.0d
 			y: 6.0d
 		}
 		{
@@ -404,19 +440,12 @@
 			id: "2DACE6EF41A118D9"
 			shape: "gear"
 			size: 1.5d
-			tasks: [
-				{
-					id: "1462466F9431F65B"
-					title: "Abyss Coils"
-					type: "checkmark"
-				}
-				{
-					id: "1CC08FAE5A9F548A"
-					item: "kubejs:abyssal_coil_block"
-					type: "item"
-				}
-			]
-			x: 0.0d
+			tasks: [{
+				id: "1CC08FAE5A9F548A"
+				item: "kubejs:abyssal_coil_block"
+				type: "item"
+			}]
+			x: 2.0d
 			y: 4.0d
 		}
 		{
@@ -453,7 +482,10 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["69493DCA3D764771"]
+			dependencies: [
+				"69493DCA3D764771"
+				"3861DC9A29F4DD42"
+			]
 			id: "54944370404CEA94"
 			tasks: [{
 				id: "672EC9D38A3D8F66"
@@ -514,6 +546,7 @@
 					type: "item"
 				}
 			]
+			title: "Mystical Metals"
 			x: -4.0d
 			y: -6.0d
 		}
@@ -553,8 +586,8 @@
 				title: "Circuit Packs"
 				type: "checkmark"
 			}]
-			x: -4.0d
-			y: 2.0d
+			x: -1.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -568,7 +601,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["169C2E9DA1CF8F53"]
@@ -578,7 +611,7 @@
 				item: "kubejs:draconic_wetware_processor"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -589,7 +622,7 @@
 				item: "kubejs:draconic_wetware_processor_assembly"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: -2.0d
 		}
 		{
@@ -632,17 +665,6 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["2E34F23A42004285"]
-			id: "468AA2233E2CBB6D"
-			tasks: [{
-				id: "31D0315C5C9D2CDA"
-				title: "Preon Plasma"
-				type: "checkmark"
-			}]
-			x: -3.0d
-			y: 7.0d
-		}
-		{
 			dependencies: ["3AE729D3F47E9A2B"]
 			id: "06EC98F6E6AFC2AF"
 			tasks: [{
@@ -650,7 +672,7 @@
 				item: "kubejs:draco_boule"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -663,7 +685,7 @@
 				item: "kubejs:draco_wafer"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 0.0d
 		}
 		{
@@ -674,7 +696,7 @@
 				item: "kubejs:draco_advanced_soc_wafer"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: -2.0d
 		}
 		{
@@ -759,7 +781,7 @@
 				item: "gtceu:pure_dragon_breath_bucket"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -777,7 +799,7 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -832,7 +854,7 @@
 				title: "Better Infra...."
 				type: "checkmark"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: 6.0d
 		}
 		{
@@ -868,7 +890,7 @@
 				item: "gtceu:aurourium_ingot"
 				type: "item"
 			}]
-			x: -3.0d
+			x: -5.0d
 			y: 1.0d
 		}
 		{
@@ -882,7 +904,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["5944C4DE27F98FF3"]
@@ -918,16 +940,54 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["218CABD676F3B732"]
-			hide_dependent_lines: true
+			dependencies: [
+				"218CABD676F3B732"
+				"665FC02BC2BC414F"
+				"1EB60E6DE2086158"
+			]
+			hide_dependency_lines: true
 			id: "1D94473AA9436C60"
 			tasks: [{
 				id: "65EAAA869AFF0F87"
 				item: "gtceu:nyanium_ingot"
 				type: "item"
 			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["01FBF9CDD9066AF5"]
+			id: "262BD3D9D1DF7F13"
+			tasks: [{
+				id: "1F896C346CD4D346"
+				item: "minecraft:dragon_breath"
+				type: "item"
+			}]
 			x: -5.0d
-			y: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["01FBF9CDD9066AF5"]
+			id: "50377ABD674AAC34"
+			tasks: [{
+				id: "6281D2E4569CDD46"
+				item: "minecraft:dragon_egg"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["10D5DA8708208783"]
+			hide_dependent_lines: true
+			id: "3861DC9A29F4DD42"
+			tasks: [{
+				id: "3E5D4978743C585A"
+				title: "Quark Infusion"
+				type: "checkmark"
+			}]
+			x: 15.0d
+			y: 3.0d
 		}
 	]
 	title: "Draconic Empires"

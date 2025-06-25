@@ -86,6 +86,12 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
+    event.recipes.gtceu.large_chemical_reactor(id('tungsten_disulfide'))
+        .itemInputs('4x gtceu:tungsten_trioxide_dust', 'gtceu:iron_titanium_oxide_dust')
+        .itemOutputs('3x gtceu:tungsten_disulfide_dust')
+        .duration(480)
+        .EUt(GTValues.VHA[GTValues.ZPM]);
+
     event.recipes.gtceu.polarizer(id('magnetic_zapolgium'))
         .itemInputs('gtceu:zapolgium_ingot')
         .itemOutputs('gtceu:magnetic_zapolgium_ingot')
@@ -127,7 +133,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UEV]);
 
     event.recipes.gtceu.assembler(id('abyssal_coil'))
-        .itemInputs('8x gtceu:filler_wire', '8x gtceu:nyanium_foil') //Need Material from Abyss Harvesting + Refinement
+        .itemInputs('8x gtceu:abyssal_alloy_double_wire', '8x gtceu:nyanium_foil')
         .inputFluids('gtceu:void 144')
         .itemOutputs('kubejs:abyssal_coil_block')
         .duration(1200)

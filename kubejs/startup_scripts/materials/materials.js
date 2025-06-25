@@ -186,11 +186,37 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('netherite').setFormula('Nr');
     GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
     GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
-    GTMaterials.get('nether_star').setFormula('*');
-    GTMaterials.get('nether_star_concentrate').setFormula('*!*');
+    GTMaterials.get('nether_star').setFormula('✧');
+    GTMaterials.get('nether_star_concentrate').setFormula('*✧*');
     GTMaterials.get('aurourium').setFormula('*A*');
-    GTMaterials.get('starium_alloy').setFormula('*!*4(Ke6Nq2C)2El2');
+    GTMaterials.get('starium_alloy').setFormula('*✧*4(Ke6Nq2C)2El2');
     GTMaterials.get('nyanium').setFormula('*A*7(URhNq2)4(Mg3N2)*Nr*2');
+    GTMaterials.get('low_entropy_voidic_excression').setFormula('∅-');
+    GTMaterials.get('moderate_entropy_voidic_excression').setFormula('[∅]');
+    GTMaterials.get('high_entropy_voidic_excression').setFormula('∅+');
+    GTMaterials.get('dormant_void_entangled_quantum_slurry').setFormula('?[∅-]');
+    GTMaterials.get('active_void_entangled_quantum_slurry').setFormula('?[∅]');
+    GTMaterials.get('excited_void_entangled_quantum_slurry').setFormula('?[*∅*]');
+    GTMaterials.get('alpha_state_void_sludge').setFormula('?α∅');
+    GTMaterials.get('beta_state_void_sludge').setFormula('?β∅');
+    GTMaterials.get('gamma_state_void_sludge').setFormula('?γ∅');
+    GTMaterials.get('delta_state_void_sludge').setFormula('?δ∅');
+    GTMaterials.get('epsilon_state_void_sludge').setFormula('?ε∅');
+    GTMaterials.get('zeta_state_void_sludge').setFormula('?ζ∅');
+    GTMaterials.get('alpha_state_void_residue').setFormula('α∅');
+    GTMaterials.get('beta_state_void_residue').setFormula('β∅');
+    GTMaterials.get('gamma_state_void_residue').setFormula('γ∅');
+    GTMaterials.get('delta_state_void_residue').setFormula('δ∅');
+    GTMaterials.get('epsilon_state_void_residue').setFormula('ε∅');
+    GTMaterials.get('zeta_state_void_residue').setFormula('ζ∅');
+    GTMaterials.get('order_centric_void').setFormula('⚖∅');
+    GTMaterials.get('chaos_centric_void').setFormula('✹∅');
+    GTMaterials.get('voidic_waste_residue').setFormula('?∅?');
+    GTMaterials.get('dragon_breath').setFormula('🜍');
+    GTMaterials.get('pure_dragon_breath').setFormula('*🜍*');
+    GTMaterials.get('voidic').setFormula('∅');
+    GTMaterials.get('preon').setFormula('✶');
+    GTMaterials.get('paradox').setFormula('☯');
 
 });
 
@@ -216,6 +242,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Liquids
     element('seaborgium', 'fluid');
     element('flerovium', 'fluid');
+    element('rhenium', 'fluid');
+    element('zirconium', 'fluid');
+    element('hafnium', 'fluid');
 
     // Gasses
     // periodicTableElement('iodine', 'gas');
@@ -426,6 +455,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event.create('zapolgium')
         .ingot()
+        .fluid()
         .element(GTElements.get('zapolgium'))
         .color(0xcc00cc)
         .iconSet(DULL)
@@ -732,13 +762,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
         // Magmas
         compLiquidTemp('highly_unstable_nether_magma', 9001, ['1x mystery'], 0xFFA025, [no_decomp]);
-
-        event.create('magmatic')
-            .components('1x mystery','1x iron','1x mystery')
-            .liquid(new GTFluidBuilder().temperature(14600))
-            .plasma()
-            .color(0xFFD39A)
-            .flags(no_decomp);
 
         compLiquidTemp('debris_rich_nether_magma', 7600, ['1x mystery'], 0x6C3628, [no_decomp]);
  
@@ -1259,6 +1282,49 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid('magnesium_nitride', ['3x magnesium', '2x nitrogen'], 0xcc66ff, []);
     compLiquid('runic_convergence_infusion', ['3x pure_netherite', '6x magnesium', '7x nitrogen', '2x silicon', '8x oxygen', '1x fluorine'], 0xcc0099, [no_decomp]);
 
+    //Abyss Harvesting
+    compLiquidTemp('low_entropy_voidic_excression', 50, '1x mystery', 0x0A0A0A, [no_decomp]);
+
+    compLiquidTemp('moderate_entropy_voidic_excression', 5000, '1x mystery', 0x111111, [no_decomp]);
+
+    compLiquidTemp('high_entropy_voidic_excression', 500000, '1x mystery', 0x1A0E12, [no_decomp]);
+
+    compLiquidTemp('dormant_void_entangled_quantum_slurry', 1000, '1x mystery', 0x7A7A7A, [no_decomp]);
+
+    compLiquidTemp('active_void_entangled_quantum_slurry', 10000, '1x mystery', 0x666666, [no_decomp]);
+
+    compLiquidTemp('excited_void_entangled_quantum_slurry', 100000, '1x mystery', 0x4C4C4C, [no_decomp]);
+   
+    compLiquidTemp('alpha_state_void_sludge', 12500, '1x mystery', 0x4A294A, [no_decomp]);
+
+    compLiquidTemp('beta_state_void_sludge', 25000, '1x mystery', 0x39504A, [no_decomp]);
+
+    compLiquidTemp('gamma_state_void_sludge', 37500, '1x mystery', 0x3A3F5A, [no_decomp]);
+
+    compLiquidTemp('delta_state_void_sludge', 50000, '1x mystery', 0x4D3B2E, [no_decomp]);
+
+    compLiquidTemp('epsilon_state_void_sludge', 62500, '1x mystery', 0x2E4D3B, [no_decomp]);
+
+    compLiquidTemp('zeta_state_void_sludge', 75000, '1x mystery', 0x3F2E4D, [no_decomp]);
+
+    compLiquidTemp('alpha_state_void_residue', 12500, '1x mystery', 0x652165, [no_decomp]);
+
+    compLiquidTemp('beta_state_void_residue', 25000, '1x mystery', 0x486053, [no_decomp]);
+
+    compLiquidTemp('gamma_state_void_residue', 37500, '1x mystery', 0x464A66, [no_decomp]);
+
+    compLiquidTemp('delta_state_void_residue', 50000, '1x mystery', 0x5A4638, [no_decomp]);
+
+    compLiquidTemp('epsilon_state_void_residue', 62500, '1x mystery', 0x365A46, [no_decomp]);
+
+    compLiquidTemp('zeta_state_void_residue', 75000, '1x mystery', 0x54386A, [no_decomp]);
+
+    compLiquidTemp('order_centric_void', 80000, '1x mystery', 0xF0E060, [no_decomp]);
+
+    compLiquidTemp('chaos_centric_void', 80000, '1x mystery', 0xC040F0, [no_decomp]);
+
+    compLiquidTemp('voidic_waste_residue', 10000, '1x mystery', 0x6B4A2F, [no_decomp]);
+
     //UEV Materials
     compLiquid('nether_star_concentrate', ['1x mystery'], 0xeeeeee, [no_decomp]);
 
@@ -1289,7 +1355,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .fluid()
         .plasma()
         .color(0xE4C6EB)
-        .secondaryColor(0x09037C)
+        .secondaryColor(0xA45EF5)
         .blastTemp(17290, 'highest', VA('uev'), 3600)
         .iconSet(SHINY) // Will Have Own in Theta? but that is a LOT of work
         .fluidPipeProperties(78500, 2500, true,true,true,true)
@@ -1297,7 +1363,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngotPlasma('starium_alloy', ['4x mystery', '2x trinaquadalloy', '2x estalt'], 0x2253d2, SHINY, [18200, 'highest', VA('uev'), 3600], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
 
-    conductorPlasma('seaborgium_palladium_enriched_estalt_flerovium_alloy', ['4x seaborgium', '8x palladium', '3x enriched_estalt', '2x flerovium'], 0x73022b, DULL, [17950, 'highest', VA('uev'), 1800], [V('uev'), 32, 0, true], [no_decomp, no_abs_recipe, fine_wire]);
+    conductorPlasma('seaborgium_palladium_enriched_estalt_flerovium_alloy', ['2x seaborgium', '8x palladium', '3x enriched_estalt', '4x flerovium'], 0x73022b, DULL, [17950, 'highest', VA('uev'), 1800], [V('uev'), 32, 0, true], [no_decomp, no_abs_recipe, fine_wire]);
 
     compDust('iron_titanium_oxide', ['3x iron', '2x titanium', '7x oxygen'], 0x82229b, [no_decomp]);
 
@@ -1305,9 +1371,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     conductor('astatium_bioselex_carbonite', ['1x astatine', '2x bismuth', '3x selenium', '2x thallium', '4x sulfur', '1x carbon'], 0x305f84, DULL, [13475, 'highest', VA('uv'), 4000], [V('uev'), 3, 16, false] ,[spring, no_decomp]);
 
-    conductor('astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide', ['1x astatine_bis_tritelluride_cobo_selenium', 'iron_titanium_oxide'], 0xe61485, DULL, [14799, 'highest', VA('uhv'), 2500], [V('uev'), 2, 12, false], [fine_wire, bolt_and_screw]);
+    conductor('astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide', ['1x astatine_bis_tritelluride_cobo_selenium', 'iron_titanium_oxide'], 0xe61485, DULL, [14799, 'highest', VA('uhv'), 2500], [V('uev'), 2, 12, false], [fine_wire, bolt_and_screw, no_decomp]);
 
     //UIV Materials
+    compDustLiquid('tungsten_disulide', ['1x tungsten', '2x sulfur'], 0x928897, [no_decomp]);
+
     conductor('polonium_bismide', ['1x polonium', '1x bismuth'], 0x016038, DULL, [14400, 'highest', VA('uev'), 1800], [V('uiv'), 5, 24, false], [bolt_and_screw,spring,small_spring]);
 
     compIngot('diamane', ['1x carbon'], 0x62777A, [], [4000, 'low', VA('lv'), 1], [no_decomp]);
@@ -1322,4 +1390,64 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquidStill('pure_dragon_breath', ['1x mystery'], [no_decomp]);
 
+    compIngot('hafnide_ceramic_base', ['4x hafnium', '4x tantalum', '5x carbon'], 0x4F4F4F, [], [12900, 'highest', VA('uv'), 970], [no_decomp]);
+
+    compDust('indium_tin_oxide', ['2x indium', '2x tin', '3x oxygen'], 0xA1C1E0, [no_decomp]);
+
+    conductor('hafnide_ito_ceramic', ['4x hafnium', '4x tantalum', '5x carbon', '2x indium', '2x tin', '3x oxygen'], 0x798CA5, DULL, [14520, 'highest', VA('uhv'), 3850], [V('uiv'), 2, 36, false], [spring, no_decomp]);
+
+    compLiquid('polonium_iridide_acid', ['1x iridium', '2x polonium', '1x phosphoric_acid'], 0x8F8B73, [no_decomp]);
+
+    compDust('platinum_yttrium_composite', ['3x platinum', '6x carbon', '2x yttrium', '9x copper', '2x barium'], 0x9F99AA, [no_decomp]);
+
+    conductor('polonium_flux', ['2x iridium', '4x polonium', '2x phosphorus', '3x platinum', '6x carbon', '2x yttrium', '9x copper', '2x barium'], 0x948B90, DULL, [17625, 'highest', VA('uev'), 1650], [V('uiv'), 3, 24, false], [fine_wire, bolt_and_screw, no_decomp]);
+
+    conductorPlasma('rhenium_super_composite_alloy', ['4x rhenium', '2x weapon_grade_naquadah', '7x mercury_barium_calcium_cuprate', '2x titanium_carbide', '1x samarium'], 0xA78B72, DULL, [18850, 'highest', VA('uxv'), 1800], [V('uiv'), 40, 0, true], [no_decomp, no_abs_recipe, fine_wire]);
+
+    conductorPlasma('abyssal_alloy', ['5x xeproda', '3x blue_alloy', '4x void', '1x flerovium', '1x zapolgium'], 0x1C0932, SHINY, [18685, 'highest', VA('uiv'), 3250], [V('uev'), 2, 4, false], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, rotor, no_abs_recipe]);
+
+    event.create('chaotixic_alloy')
+        .components('6x rhexis', '2x stellite_100', '1x hafnium', '12x electrum', '3x vanadium_steel')
+        .ingot()
+        .fluid()
+        .plasma()
+        .color(0xC8A95D)
+        .blastTemp(18795, 'highest', VA('uiv'), 3450)
+        .iconSet(SHINY)
+        .fluidPipeProperties(250000, 30, true,true,true,true)
+        .flags(plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, rotor, ring, foil, no_decomp, no_abs_recipe);
+    
+    compIngotPlasma('ohmderblux_alloy', ['5x chalyblux', '2x maraging_steel_300', '4x zirconium', '9x lumium', '3x ultimet'], 0xD0B660, SHINY, [18590, 'highest', VA('uiv'), 3350], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
+
+    //UXV Materials
+    conductor('lepton_resonant_thallium_antimonide', ['1x thallium', '1x antimony', '1x mystery'], 0x74638F, DULL, [18250, 'highest', VA('uev'), 1800], [V('uxv'), 7, 48, false], [bolt_and_screw,spring,small_spring, no_abs_recipe, no_decomp]);
+
+    //Plasmas
+    event.create('magmatic')
+        .components('1x mystery','1x iron','1x mystery')
+        .liquid(new GTFluidBuilder().temperature(14600))
+        .plasma()
+        .color(0xFFD39A)
+        .flags(no_decomp);
+
+    event.create('voidic')
+        .components('1x mystery')
+        .liquid(new GTFluidBuilder().temperature(25000))
+        .plasma()
+        .color(0x0F0233)
+        .flags(no_decomp);
+
+    event.create('preon')
+        .components('1x mystery')
+        .liquid(new GTFluidBuilder().temperature(48000))
+        .plasma()
+        .color(0xCFB7FD)
+        .flags(no_decomp);
+
+    event.create('paradox')
+        .components('1x mystery')
+        .liquid(new GTFluidBuilder().temperature(50000))
+        .plasma()
+        .color(0xEFE987)
+        .flags(no_decomp);
 });

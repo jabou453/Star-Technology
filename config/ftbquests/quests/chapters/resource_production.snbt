@@ -2417,6 +2417,7 @@
 				"2068B9072855036B"
 				"30AB8331D0B80859"
 			]
+			description: ["{ \"text\": \"Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"3EA66E80E1F54265\" } }"]
 			id: "4D7583FF99404C6D"
 			tasks: [{
 				id: "7BDD424C5B7480B1"
