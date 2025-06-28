@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
         'systeams:frost_boiler', 'exnihilosequentia:golden_mesh', 'minecraft:mycelium', 'thermal:gunpowder_4', 'thermal:dirt_crafting', '#thermal:rockwool', 'create:brass_block', 'create:zinc_block',
         'createdieselgenerators:wire_cutters', 'createdieselgenerators:hammer', 'createdieselgenerators:pumpjack_hole', 'createdieselgenerators:bulk_fermenter',
         'createdieselgenerators:chemical_turret',
-        // Following 2 to be removed for Zeta due to exploits and bugs
+        // Following 2 to be removed for Zeta/Eta due to exploits and bugs
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer'
     ];
     const toRemoveId = ['thermal:slime_mushroom_spores', 'thermal_extra:sticky_ball_to_paper', 'farmersdelight:paper_from_tree_bark', 'create:pressing/sugar_cane',
@@ -99,4 +99,8 @@ ServerEvents.recipes(event => {
     event.remove({ input: /exnihilosequentia:.*_nugget/});
     event.remove({ input: Item.of('createdieselgenerators:mold').ignoreNBT()});
     event.remove({ output: 'createdieselgenerators:mold'});
+
+    //Pattern Buffer Research Removals
+    event.remove({ id: 'gtceu:scanner/1_x_gtceu_luv_dual_input_hatch' });
+    event.remove({ id: 'gtceu:research_station/1_x_gtceu_me_pattern_buffer' });
 });

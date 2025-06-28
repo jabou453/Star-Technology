@@ -289,6 +289,15 @@ ServerEvents.recipes(event => {
 			.duration(400);
 	});
 
+	[0,1,2,3,4].forEach(tier => {
+		let PumpMod = (tier == 0) ? 'kubejs' : 'gtceu' ;
+		let PumpTier = (tier == 0) ? 'ulv' : (tier == 1) ? 'lv' : (tier == 2) ? 'mv' : (tier == 3) ? 'hv' : 'ev' ;
+	event.recipes.gtceu.industrial_pump(id(`water_${tier}`))
+		.notConsumable(`${PumpMod}:${PumpTier}_electric_pump`)
+		.outputFluids(`minecraft:water ${2000 * ( 2 ** tier )}`)
+		.duration(20);
+	});
+
 });
 
 // Jungle Wood Stripping (Bark + Resin)

@@ -820,6 +820,8 @@
     "block.gtceu.steam_forge": "Steam Forge",
     "gtceu.stirling_generator": "Stirling Generator",
     "gtceu.auto_scavenger": "Auto Scavenger",
+    "gtceu.industrial_pump" : "Industrial Pump",
+    "block.gtceu.industrial_pump" : "Industrial Pump",
 
     "material.gtceu.metallic_ore_sludge": "Metallic Ore Sludge",
     "material.gtceu.raw_ore_concentrate": "Raw Ore Concentrate",

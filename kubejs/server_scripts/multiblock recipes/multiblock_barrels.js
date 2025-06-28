@@ -133,8 +133,7 @@ ServerEvents.recipes(event => {
 
     // === INDUSTRIAL BARREL ===
 
-    if (global.packmode !== 'hard'){
-        (() => {   
+    if (global.packmode !== 'hard'){(() => {   
     event.shaped(Item.of('gtceu:industrial_barrel'), [
         'LSL',
         'PEP', 
@@ -147,8 +146,7 @@ ServerEvents.recipes(event => {
         C: '#gtceu:circuits/hv',
         H: 'gtceu:hv_machine_hull'
     }).id('start:shaped/industrial_barrel');
-    })()
-    }
+    })()};
 
     event.recipes.gtceu.industrial_barrel_magmatic(id('lava'))
         .itemInputs('#forge:cobblestone')

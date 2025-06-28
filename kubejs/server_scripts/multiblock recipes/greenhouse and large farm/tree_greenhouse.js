@@ -39,6 +39,7 @@ ServerEvents.recipes(event => {
             .EUt(global.va['lv']);
     })
 
+    if (global.packmode !== 'hard'){(() => {   
     event.shaped(Item.of('gtceu:greenhouse'), [
         'WAW',
         'MHM',
@@ -51,5 +52,6 @@ ServerEvents.recipes(event => {
         S: 'gtceu:steel_plate',
         C: '#gtceu:circuits/mv'
     }).id('start:shaped/greenhouse');
+    })()};
 
 });

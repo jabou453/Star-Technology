@@ -3,7 +3,6 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    // Works
     let Tiers = ['lv','mv','hv','ev','iv','luv','zpm','uv']
     let CompTypes = ['electric_motor','electric_pump','robot_arm','electric_piston','conveyor_module','emitter','sensor','field_generator']
     
@@ -20,6 +19,31 @@ ServerEvents.recipes(event => {
     });
     });
 
+    event.remove({ output: /gtceu:.*voltage_coil/ });
+
+    const VoltageCoil = (type,magnet,wire,tier) => {
+        let power = (tier = 0) ? 7 : 30 * ( 4 ** ( tier - 1 ) ) ;
+        
+        event.recipes.gtceu.assembler(id(`${type}_voltage_coil`))
+            .itemInputs(`gtceu:magnetic_${magnet}_rod`, `16x gtceu:fine_${wire}_wire`)
+            .itemOutputs(`gtceu:${type}_voltage_coil`)
+            .duration(320)
+            .EUt(power);
+    }
+    VoltageCoil('ulv','iron','lead',0);
+    VoltageCoil('lv','steel','damascus_steel',1);
+    VoltageCoil('mv','steel','aluminium',2);
+    VoltageCoil('hv','neodymium','black_steel',3);
+    VoltageCoil('ev','neodymium','platinum',4);
+
+    // Will Require CAL
+    // VoltageCoil('iv','samarium','iridium',0,false);
+    // VoltageCoil('luv','samarium','osmiridium',0,false);
+    // VoltageCoil('zpm','holmium','europium',0,false);
+    // VoltageCoil('uv','holmium','tritanium',0,false);
+
+    // For Components
+    // ULV is Seq Ass / Assember
     // LV is Assembler
     // MV,HV,EV is Component Chamber
     // IV,LuV,ZPM,UV is Component Assembly Line (IV/LuV Scanner, ZPM/UV ResearchStation) // Will do with Theta

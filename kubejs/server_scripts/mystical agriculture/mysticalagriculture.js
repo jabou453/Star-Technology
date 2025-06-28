@@ -135,6 +135,7 @@ ServerEvents.recipes(event => {
         .circuit(1);
 
     // Machine recipes
+    if (global.packmode !== 'hard'){(() => {       
     [
         {voltage: 'lv', metal: 'steel', glass: '#forge:glass', cable: 'tin'},
         {voltage: 'mv', metal: 'aluminium', glass: '#forge:glass', cable: 'copper'},
@@ -209,6 +210,7 @@ ServerEvents.recipes(event => {
         H: 'gtceu:clean_machine_casing',
         C: 'gtceu:aluminium_single_cable'
     }).id('start:shaped/essence_enhancer');
+    })()};
 
     event.recipes.gtceu.chemical_reactor(id('inferium_coal'))
         .itemInputs('minecraft:coal', 'mysticalagriculture:inferium_essence')
