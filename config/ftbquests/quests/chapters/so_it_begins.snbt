@@ -2259,7 +2259,7 @@
 			}]
 			title: "Tom's Storage"
 			x: 17.0d
-			y: 9.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -2292,10 +2292,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"0A8FE243A5A8CC64"
-				"301FF7F900A30DC7"
-			]
+			dependencies: ["301FF7F900A30DC7"]
 			id: "12CC4B7507E55BEC"
 			shape: "rsquare"
 			tasks: [{
@@ -2303,8 +2300,8 @@
 				item: "gtceu:solid_blast_furnace"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 6.0d
+			x: 15.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["6974D4ADDEA9535F"]
@@ -2841,7 +2838,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 7.5d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -2927,7 +2924,6 @@
 		}
 		{
 			dependencies: [
-				"0A8FE243A5A8CC64"
 				"19EFB33C0B250C49"
 				"3571684AAD0C7958"
 				"5C764F939DCEA2B4"
@@ -2940,12 +2936,11 @@
 				item: "gtceu:large_farm"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 3.0d
+			x: 12.5d
+			y: 1.5d
 		}
 		{
 			dependencies: [
-				"0A8FE243A5A8CC64"
 				"19EFB33C0B250C49"
 				"3A1AE7329B090F5C"
 				"1B5EA867C67903E4"
@@ -2957,12 +2952,11 @@
 				item: "gtceu:large_barrel"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 3.0d
+			x: 14.0d
+			y: 1.5d
 		}
 		{
 			dependencies: [
-				"0A8FE243A5A8CC64"
 				"19EFB33C0B250C49"
 				"3A1AE7329B090F5C"
 				"301FF7F900A30DC7"
@@ -2974,8 +2968,8 @@
 				item: "gtceu:large_stone_barrel"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 4.5d
+			x: 14.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["218ACEFEBECC31E9"]
@@ -3170,14 +3164,13 @@
 				"6BF9BA9DD881787D"
 				"4D8EFEA7036CD327"
 			]
-			hide_dependency_lines: true
 			id: "51B433A0377CCC0A"
 			tasks: [{
 				id: "6285EC47EDAEAF5A"
 				item: "kubejs:ulv_emitter"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 14.0d
 			y: 7.5d
 		}
 		{
@@ -3207,8 +3200,8 @@
 				item: "minecraft:prismarine_crystals"
 				type: "item"
 			}]
-			x: 17.0d
-			y: 13.5d
+			x: 15.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["6994BA308DC55ED2"]
@@ -3434,8 +3427,8 @@
 				item: "gtceu:bessemer_forgery"
 				type: "item"
 			}]
-			x: 20.5d
-			y: 6.0d
+			x: 18.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["1645E2B5BEFA80A3"]
@@ -3531,7 +3524,7 @@
 				item: "gtceu:maintenance_hatch"
 				type: "item"
 			}]
-			x: 17.0d
+			x: 15.5d
 			y: 4.5d
 		}
 		{
@@ -3583,7 +3576,7 @@
 				}
 			]
 			x: 12.5d
-			y: 1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -3670,7 +3663,7 @@
 				item: "gtceu:dark_ash_dust"
 				type: "item"
 			}]
-			x: 18.5d
+			x: 17.0d
 			y: 12.0d
 		}
 		{
@@ -3714,7 +3707,7 @@
 				type: "item"
 			}]
 			x: 15.5d
-			y: 9.0d
+			y: 7.5d
 		}
 		{
 			dependencies: [
@@ -3729,7 +3722,7 @@
 				type: "item"
 			}]
 			x: 17.0d
-			y: 10.5d
+			y: 7.5d
 		}
 		{
 			dependencies: [
@@ -3744,7 +3737,7 @@
 				type: "item"
 			}]
 			x: 17.0d
-			y: 7.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["30352B6F8EFE7659"]
@@ -3755,8 +3748,8 @@
 				item: "createdieselgenerators:basin_lid"
 				type: "item"
 			}]
-			x: 18.5d
-			y: 13.5d
+			x: 17.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["301FF7F900A30DC7"]
@@ -3767,10 +3760,13 @@
 				type: "item"
 			}]
 			x: 17.0d
-			y: 12.0d
+			y: 10.5d
 		}
 		{
-			dependencies: ["3A3BD0ECA7FC8D38"]
+			dependencies: [
+				"3A3BD0ECA7FC8D38"
+				"3149BE5A8D986443"
+			]
 			id: "7BD4BE74DB9F01B5"
 			tasks: [{
 				id: "25E34D5F3465548D"

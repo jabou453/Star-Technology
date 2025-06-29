@@ -202,7 +202,7 @@ ServerEvents.recipes(event => {
 
 	event.recipes.gtceu.stone_barrel(id('stone_pebble'))
 		.circuit(0)
-		.inputFluids('minecraft:lava 10', 'minecraft:water 990')
+		.inputFluids('minecraft:lava 10', 'minecraft:water 490')
 		.itemOutputs('4x exnihilosequentia:stone_pebble')
 		.duration(15);
 
@@ -215,12 +215,12 @@ ServerEvents.recipes(event => {
 	const primitive_processing = [
 		{ primary: 'hematite', secondary: 'magnetite', tertiary: 'nickel' },
 		{ primary: 'chalcopyrite', secondary: 'pyrite', tertiary: 'gold' },
-		{ primary: 'sphalerite', secondary: 'zinc', tertiary: 'gallium' },
+		{ primary: 'sphalerite', secondary: 'copper', tertiary: 'gallium' },
 		{ primary: 'cassiterite', secondary: 'tin', tertiary: 'bismuth' },
 		{ primary: 'galena', secondary: 'sulfur', tertiary: 'silver' },
 		{ primary: 'magnetite', secondary: 'gold', tertiary: 'iron' },
 		{ primary: 'pyrite', secondary: 'sulfur', tertiary: 'antimony' }
-	]
+	]  
 
 	primitive_processing.forEach(material => {
 		event.recipes.gtceu.primitive_ore_processing(id(`crushed_${material.primary}_ore`))
@@ -294,7 +294,7 @@ ServerEvents.recipes(event => {
 		let PumpTier = (tier == 0) ? 'ulv' : (tier == 1) ? 'lv' : (tier == 2) ? 'mv' : (tier == 3) ? 'hv' : 'ev' ;
 	event.recipes.gtceu.industrial_pump(id(`water_${tier}`))
 		.notConsumable(`${PumpMod}:${PumpTier}_electric_pump`)
-		.outputFluids(`minecraft:water ${2000 * ( 2 ** tier )}`)
+		.outputFluids(`minecraft:water ${3000 * ( 2 ** tier )}`)
 		.duration(20);
 	});
 

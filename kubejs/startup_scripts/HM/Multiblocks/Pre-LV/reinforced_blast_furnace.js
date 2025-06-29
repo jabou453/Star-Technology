@@ -32,8 +32,8 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 				size: [166, 50],
 				background: GuiTextures.BACKGROUND,
 				progress: {
-					pos: [82, 16],
-					size: [20, 18],
+					pos: [80, 16],
+					size: [20, 20],
 					texture: GuiTextures.PROGRESS_BAR_ARROW
 				},
 				inputs: [

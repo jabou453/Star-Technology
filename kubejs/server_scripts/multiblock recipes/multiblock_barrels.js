@@ -159,9 +159,9 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.industrial_barrel_magmatic(id(`${type}_pebbles`))
             .notConsumableFluid(`minecraft:lava ${fluid_quantity}`)
             .notConsumableFluid(`${aqueous} ${fluid_quantity}`)
-            .itemOutputs(`exnihilosequentia:${type}_pebble`)
+            .itemOutputs(`64x exnihilosequentia:${type}_pebble`)
             .circuit(circuitType)
-            .duration(1)
+            .duration(1 * 64)
             .EUt(GTValues.VHA[GTValues.LV]);
 
     }

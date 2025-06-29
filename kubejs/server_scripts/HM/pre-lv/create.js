@@ -1109,12 +1109,14 @@ ServerEvents.recipes(event => {
 
 	event.shaped(Item.of('create:brown_toolbox'), [
 		'RTR',
-		'GCG'
+		'GCG',
+		'SSS'
 	], {
 		R: 'gtceu:gold_ring',
 		T: 'gtceu:treated_wood_rod',
 		G: 'create:cogwheel',
-		C: 'minecraft:chest'
+		C: 'minecraft:chest',
+		S: 'gtceu:treated_wood_slab'
 	}).id(`start:shaped/brown_toolbox`);
 
 	[{type: 'hose', casing: 'copper', base: 'create:fluid_pipe'}, {type: 'elevator', casing: 'brass', base: 'gtceu:iron_plate'}].forEach( pulley => {

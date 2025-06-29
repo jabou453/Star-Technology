@@ -87,8 +87,6 @@ ServerEvents.recipes(event => {
 		.duration(200)
 		.EUt(7);
 
-	event.remove({ id: /gtceu:shaped\/.*_drum/ });
-
 	event.remove({ id: 'minecraft:iron_trapdoor' });
 	event.shaped('minecraft:iron_trapdoor', [
 		' P ',

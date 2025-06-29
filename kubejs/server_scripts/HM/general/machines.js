@@ -57,6 +57,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: `gtceu:hv_fluid_passthrough_hatch` });
     event.remove({ output: `gtceu:me_stocking_input_hatch` });
     event.remove({ output: `gtceu:me_stocking_input_bus` });
+    // ME Pattern Buffer blanket diabled and ME I/O is in AE-Machinery as a Packmode determinate
 
 
         // gt_machines gcym_machines research_based (69/80)

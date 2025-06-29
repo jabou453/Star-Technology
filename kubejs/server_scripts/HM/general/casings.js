@@ -64,4 +64,64 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(2 * (4 ** 5)); 
 
+    // Storages
+
+    event.remove({ id: /gtceu:shaped\/.*_drum/ });
+    event.remove({ id: /gtceu:assembler\/.*_drum/ });
+    event.remove({ id: 'gtceu:assembler/wood_barrel' });
+    event.remove({ id: /gtceu:shaped\/.*_crate/ });
+    event.remove({ id: /gtceu:assembler\/.*_crate/ });
+
+    const CrateType = (material, tier) => {
+        let material2nd = (material == 'wood') ? 'iron' : material ;
+        event.recipes.gtceu.assembler(id(`${material}_crate_hm`))
+            .itemInputs(`4x gtceu:long_${material2nd}_rod`, `4x gtceu:${material2nd}_screw`, `6x gtceu:${material}_plate`)
+            .itemOutputs(`gtceu:${material}_crate`)
+            .duration(200)
+            .circuit(5)
+            .EUt(2 * (4 ** tier));
+    };
+        event.recipes.create.mechanical_crafting(Item.of(`gtceu:wood_crate`), [
+            'PRSRP',
+            'PSWSP',
+            'PRSRP'
+        ], {
+            S: 'gtceu:iron_screw',
+            P: 'gtceu:wood_plate',
+            W: '#forge:tools/saws',
+            R: 'gtceu:long_iron_rod'
+        });
+    
+    CrateType('wood', 0);
+    CrateType('bronze', 1); 
+    CrateType('steel', 2);
+    CrateType('aluminium', 3);
+    CrateType('stainless_steel', 4);
+    CrateType('titanium', 5);
+    CrateType('tungsten_steel', 6);
+
+    const DrumType = (material, tier, Mod) => {
+        let materialRod = (material == 'wood') ? 'iron' : material ;
+        event.recipes.gtceu.assembler(id(`${material}_drum_hm`))
+            .itemInputs(`2x gtceu:long_${materialRod}_rod`, `1x gtceu:${material}_large_fluid_pipe`, `4x gtceu:${material}_plate`)
+            .itemOutputs(`${Mod}:${material}_drum`)
+            .duration(200)
+            .circuit(2)
+            .EUt(1 * (4 ** tier));
+    };
+
+    DrumType('wood', 0, 'gtceu');
+    DrumType('bronze', 1, 'gtceu');
+    DrumType('steel', 2, 'gtceu');
+    DrumType('gold', 2, 'gtceu');
+    DrumType('aluminium', 3, 'gtceu');
+    DrumType('stainless_steel', 4, 'gtceu');
+    DrumType('titanium', 5, 'gtceu');
+    DrumType('tungsten_steel', 6, 'gtceu');
+    DrumType('enriched_naquadah', 7, 'start_core');
+    DrumType('neutronium', 8, 'start_core');
+
+    // Standard Casing
+
+
 });
