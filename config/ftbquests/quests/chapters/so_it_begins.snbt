@@ -2300,7 +2300,7 @@
 				item: "gtceu:solid_blast_furnace"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 14.0d
 			y: 3.0d
 		}
 		{
@@ -2968,8 +2968,8 @@
 				item: "gtceu:large_stone_barrel"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 3.0d
+			x: 15.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["218ACEFEBECC31E9"]
@@ -3007,7 +3007,7 @@
 			]
 			id: "53BA24466D74ADE2"
 			shape: "gear"
-			size: 1.0d
+			size: 2.0d
 			tasks: [{
 				id: "35CB1AF9DEB0200D"
 				item: "gtceu:basic_electronic_circuit"
@@ -3814,6 +3814,37 @@
 			}]
 			x: 2.75d
 			y: 14.25d
+		}
+		{
+			dependencies: [
+				"0A8FE243A5A8CC64"
+				"3A1AE7329B090F5C"
+				"19EFB33C0B250C49"
+			]
+			id: "649C63B39BF01323"
+			shape: "rsquare"
+			tasks: [{
+				id: "18EFE66C2F4EF2DD"
+				item: "gtceu:industrial_pump"
+				type: "item"
+			}]
+			x: 15.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"3ED631E50781A07F"
+				"373CB1CBF01D4B84"
+			]
+			id: "55D3937DAE01FDFC"
+			shape: "rsquare"
+			tasks: [{
+				id: "7E8EE16C6795FA34"
+				item: "toms_storage:ts.crafting_terminal"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 1.5d
 		}
 	]
 	title: "So It Begins"
