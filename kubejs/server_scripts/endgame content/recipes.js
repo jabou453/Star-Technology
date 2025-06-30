@@ -253,6 +253,26 @@ ServerEvents.recipes(event => {
         .itemOutputs('11x gtceu:bismuth_iridate_dust')
         .duration(412)
         .EUt(GTValues.VA[GTValues.ZPM]);
+
+    event.recipes.gtceu.assembly_line(id('sterile_cleaning_maintenance_hatch'))
+        .itemInputs(
+            '1x gtceu:uiv_machine_hull', '2x gtceu:uiv_robot_arm', '1x gtceu:uiv_emitter', '3x #gtceu:circuits/uiv', 
+            '2x gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_large_fluid_pipe', '1x gtceu:abyssal_alloy_rotor', 
+            '4x gtceu:blacklight', '4x gtceu:polonium_bismide_single_cable'
+        )
+        .inputFluids(
+            'gtceu:indium_tin_lead_cadmium_soldering_alloy 2304',
+            'gtceu:perfluoroelastomer_rubber 1152'
+        )
+        .itemOutputs('start_core:sterile_cleaning_maintenance_hatch')
+        .duration(200)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:cleaning_maintenance_hatch'))
+                .EUt(GTValues.VHA[GTValues.UEV])
+                .CWUt(192)
+            )
+        .EUt(GTValues.VHA[GTValues.UIV]);
     
     //UHV,UEV Rotor Holder
 

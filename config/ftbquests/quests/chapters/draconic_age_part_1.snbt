@@ -4,7 +4,6 @@
 	default_quest_shape: "hexagon"
 	filename: "draconic_age_part_1"
 	group: "1E0FC4EA21F735F7"
-	hide_quest_until_deps_complete: true
 	icon: "minecraft:dragon_egg"
 	id: "5617484BFC479624"
 	order_index: 6
@@ -706,16 +705,20 @@
 			]
 			id: "032E72446266F7D4"
 			tasks: [{
-				id: "741E0E4603A5AAA7"
-				title: "sterile maintence hatch"
-				type: "checkmark"
+				id: "3DC8DB69B3F016B1"
+				item: "start_core:sterile_cleaning_maintenance_hatch"
+				type: "item"
 			}]
 			x: 2.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["2DACE6EF41A118D9"]
+			dependencies: [
+				"2DACE6EF41A118D9"
+				"7C06C42F133DD3F5"
+			]
 			description: ["Not added till Theta"]
+			hide_until_deps_complete: true
 			id: "09B55AFE7C06EC82"
 			tasks: [{
 				id: "3C1633006F6ECB70"
@@ -753,6 +756,7 @@
 				"5944C4DE27F98FF3"
 				"694E1F6458D5F72F"
 			]
+			hide_until_deps_complete: true
 			id: "24E2CB89693EDEA3"
 			tasks: [{
 				id: "1DA3A7C22624348C"
@@ -838,7 +842,11 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["2DACE6EF41A118D9"]
+			dependencies: [
+				"2DACE6EF41A118D9"
+				"7C06C42F133DD3F5"
+			]
+			hide_until_deps_complete: true
 			id: "10D5DA8708208783"
 			tasks: [{
 				id: "4F21CDEF48DEB549"
@@ -850,15 +858,19 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["2DACE6EF41A118D9"]
+			dependencies: [
+				"2DACE6EF41A118D9"
+				"7C06C42F133DD3F5"
+			]
+			hide_until_deps_complete: true
 			id: "2594F1414C9BEC4F"
 			tasks: [{
 				id: "4133AF79C6DF333A"
 				title: "Better Infra...."
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 6.0d
+			x: 3.0d
+			y: 3.0d
 		}
 		{
 			id: "51FAA26B6A537091"
@@ -991,6 +1003,97 @@
 			}]
 			x: 15.0d
 			y: 3.0d
+		}
+		{
+			hide_dependent_lines: true
+			id: "7C06C42F133DD3F5"
+			invisible: true
+			tasks: [{
+				id: "3AF8457A654CA81B"
+				title: "Theta"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"0B475E2385B478C0"
+				"53E595EAB1C90884"
+				"61C534992FB17066"
+			]
+			id: "3BB8848F84026B45"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "184862475E5F6DB3"
+				item: "placeablemaxwell:maxwell"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3BB8848F84026B45"]
+			description: [
+				"Thank you for playing through this pack to its current state, a lot of time has been put in so that it was a unique and enjoyable experience. You are invited to come show off your accomplishment on our discord where we would love to hear what you thought about the pack."
+				""
+				"Know why there is content that exist past this point it is in development and will be available in the next major release &l&9Theta&r&r"
+				""
+				""
+				"-&oStarT Dev Team&r"
+			]
+			id: "46982CD51A50CD07"
+			shape: "pentagon"
+			size: 1.25d
+			subtitle: "Congratulations, for now this is the end of the content, though, if you join the discord you can often see what comes next."
+			tasks: [{
+				id: "5163F1D911C227BB"
+				title: "Thanks"
+				type: "checkmark"
+			}]
+			title: "You have completed the &5&lEta&r Version of &6Star Technology&r"
+			x: 8.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2DACE6EF41A118D9"]
+			id: "0B475E2385B478C0"
+			shape: "pentagon"
+			size: 1.25d
+			tasks: [{
+				id: "29314FA6BB5D9A2A"
+				item: "placeablemaxwell:vasilisa"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2DACE6EF41A118D9"]
+			id: "53E595EAB1C90884"
+			shape: "pentagon"
+			size: 1.25d
+			tasks: [{
+				id: "1738781A05EE828F"
+				item: "placeablemaxwell:valenok"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2DACE6EF41A118D9"]
+			id: "61C534992FB17066"
+			shape: "pentagon"
+			size: 1.25d
+			tasks: [{
+				id: "4646C0AA2053021D"
+				item: "placeablemaxwell:mars"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.5d
 		}
 	]
 	title: "Draconic Empires"

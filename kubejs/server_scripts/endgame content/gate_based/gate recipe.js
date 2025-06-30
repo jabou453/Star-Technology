@@ -483,6 +483,38 @@ ServerEvents.recipes(event => {
         }
         GateCraft('ancient', 'gtceu:naquadria 16', 'gtceu:liquid_nether_air 50', 'gtceu:liquid_ender_air 50', GTValues.VA[GTValues.UEV],'milky_way');
 
+        // Maxwell Line
+        event.remove({ mod: 'placeablemaxwell' });
+        const Gato = (type, rod1, rod2, dye1, dye2) => {
+            let B = '8x kubejs:runic_energized_transportation_plating';
+            let C = '8x kubejs:runic_energized_pathway_plating';
+            let R = `1x kubejs:${rod1}_stargate_rod`;
+            let D = `1x kubejs:${rod2}_stargate_rod`;
+            let F = '2x gtceu:uiv_field_generator';
+            let A = '2x gtceu:uiv_robot_arm';
+            let H = '64x #forge:cooked_fishes'
+        event.recipes.gtceu.gate_assembly(id(`${type}`))
+            .itemInputs(B,R,A,H,F,D,C,D,F,H,A,R,B,R,A,H,F,D,C,D,F,H,A,R)
+            .inputFluids('gtceu:nyanium 72000', `gtceu:${dye1}_dye 1000000`, `gtceu:${dye2}_dye 200000`)
+            .itemOutputs(`placeablemaxwell:${type}`)
+            .duration(32000)
+            .EUt(GTValues.VA[GTValues.UIV]);
+        };
+        Gato('mars', 'abyssal', 'abyssal', 'light_gray', 'gray');
+        Gato('valenok', 'abyssal', 'infernal', 'white', 'orange');
+        Gato('vasilisa', 'infernal', 'infernal', 'gray', 'white');
+        {
+            let M = 'placeablemaxwell:mars'
+            let V = 'placeablemaxwell:valenok'
+            let S = 'placeablemaxwell:vasilisa'
+        event.recipes.gtceu.gate_assembly(id(`maxwell`))
+            .itemInputs(S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M)
+            .inputFluids('gtceu:nyanium 144000', `gtceu:black_dye 2500000`, `gtceu:abyssal_alloy 72000`)
+            .itemOutputs(`placeablemaxwell:maxwell`)
+            .duration(64000)
+            .EUt(GTValues.VA[GTValues.UXV]);
+        };
+
 });
 
 //Gate Energy Resetting

@@ -1689,32 +1689,6 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["5E7153B7A10FC241"]
-			description: [
-				"Thank you for playing through this pack to its current state, a lot of time has been put in so that it was a unique and enjoyable experience. You are invited to come show off your accomplishment on our discord where we would love to hear what you thought about the pack."
-				""
-				"Know why there is content that exist past this point it is in development and will be available in the next major release &l&5Eta&r"
-				""
-				""
-				"-&oStarT Dev Team&r"
-				""
-				""
-				"&m&o&8[The Maker of Gates applauds you, and soon the reasonings as to why the Draconic Empires fell will be unravelled, and you will get 1 step closer to home....]"
-			]
-			id: "46982CD51A50CD07"
-			shape: "pentagon"
-			size: 1.5d
-			subtitle: "Congratulations, for now this is the end of the content, though, if you join the discord you can often see what comes next."
-			tasks: [{
-				id: "5163F1D911C227BB"
-				title: "Thanks"
-				type: "checkmark"
-			}]
-			title: "You have completed the &4&lZeta&r Version of &6Star Technology&r"
-			x: 13.5d
-			y: -5.0d
-		}
-		{
 			id: "39E723ECCBEE0A0A"
 			invisible: true
 			optional: true
