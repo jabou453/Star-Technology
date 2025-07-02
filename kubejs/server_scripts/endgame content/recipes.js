@@ -274,7 +274,7 @@ ServerEvents.recipes(event => {
             )
         .EUt(GTValues.VHA[GTValues.UIV]);
     
-    //UHV,UEV Rotor Holder
+    //UHV,UEV,UIV Rotor Holder
 
     event.shaped(Item.of('gtceu:uhv_rotor_holder'), [
             'NZN',
@@ -295,5 +295,15 @@ ServerEvents.recipes(event => {
         Z: 'gtceu:starium_alloy_gear',
         C: 'gtceu:uev_machine_hull'
     }).id('start:shaped/uev_rotor_holder');
+
+    event.shaped(Item.of('gtceu:uiv_rotor_holder'), [
+        'NZN',
+        'ZCZ',
+        'NZN'
+    ], {
+        N: 'gtceu:small_chaotixic_alloy_gear',
+        Z: 'gtceu:ohmderblux_alloy_gear',
+        C: 'gtceu:uiv_machine_hull'
+    }).id('start:shaped/uiv_rotor_holder');
 
 });

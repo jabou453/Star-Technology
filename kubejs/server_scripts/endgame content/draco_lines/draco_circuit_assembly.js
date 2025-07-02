@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.circuit_assembler(id('draconic_neuro_processing_unit'))
-        .itemInputs('kubejs:draconic_wetware_printed_circuit_board', '16x kubejs:draconic_brain_matter_cells', '16x gtceu:polyether_ether_ketone_small_fluid_pipe', '16x gtceu:platinum_plate', '32x gtceu:silicone_rubber_foil', '16x gtceu:tritanium_bolt')
+        .itemInputs('kubejs:draconic_wetware_printed_circuit_board', '2x kubejs:draconic_brain_matter_cells', '8x gtceu:polyether_ether_ketone_small_fluid_pipe', '16x gtceu:platinum_plate', '32x gtceu:silicone_rubber_foil', '16x gtceu:tritanium_bolt')
         .inputFluids('gtceu:sterilized_growth_medium 750')
         .itemOutputs('1x kubejs:draconic_neuro_processing_unit')
         .duration(600)

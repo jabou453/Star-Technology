@@ -44,9 +44,37 @@ ServerEvents.recipes(event => {
 
     // Infusion
 
+    //--[1]-[2]--
+    //[3]-[0]-[4]
+    //--[5]-[6]--
+
+    event.recipes.gtceu.draco_infusion(id('draco_stem_cells'))
+        .itemInputs('minecraft:popped_chorus_fruit', '2x gtceu:stem_cells', '2x gtceu:stem_cells', '2x gtceu:stem_cells', 
+            '2x gtceu:stem_cells', '2x gtceu:stem_cells', '2x gtceu:stem_cells')
+        .inputFluids('gtceu:dragon_breath 1200')
+        .itemOutputs('12x kubejs:draconic_stem_cells')
+        .duration(320)
+        .EUt(GTValues.VHA[GTValues.UV]);
+
+    event.recipes.gtceu.draco_infusion(id('draco_brain_matter_cells'))
+        .itemInputs('2x kubejs:draconic_stem_cells', '2x kubejs:draconic_stem_cells', '2x kubejs:draconic_stem_cells', '1x #gtceu:circuits/luv',
+            '2x kubejs:draconic_stem_cells', '1x #gtceu:circuits/luv', '1x #gtceu:circuits/luv')
+        .inputFluids('gtceu:sterilized_growth_medium 2400')
+        .itemOutputs('8x kubejs:draconic_brain_matter_cells')
+        .duration(480)
+        .EUt(GTValues.VA[GTValues.UV]);
+
+    event.recipes.gtceu.draco_infusion(id('draco_scale_cells'))
+        .itemInputs('1x kubejs:draconic_stem_cells', '1x kubejs:draconic_stem_cells', '1x gtceu:enriched_naquadah_plate', '1x gtceu:netherite_plate', 
+            '1x kubejs:draconic_stem_cells', '1x kubejs:draconic_stem_cells', '1x gtceu:naquadria_plate')
+        .inputFluids('gtceu:lepton_coalescing_superalloy 576')
+        .itemOutputs('4x kubejs:draconic_scale_cells')
+        .duration(240)
+        .EUt(GTValues.VHA[GTValues.UV]);
+
     event.recipes.gtceu.draco_infusion(id('draco_boule'))
-        .itemInputs('gtceu:neutronium_boule', '8x kubejs:draconic_stem_cells', '1x gtceu:neutronium_block', '32x gtceu:silicon_block', 
-            '32x gtceu:silicon_block', '1x gtceu:neutronium_block', '8x kubejs:draconic_stem_cells')
+        .itemInputs('gtceu:neutronium_boule', '2x kubejs:draconic_stem_cells', '1x gtceu:neutronium_block', '32x gtceu:silicon_block', 
+            '32x gtceu:silicon_block', '1x gtceu:neutronium_block', '2x kubejs:draconic_stem_cells')
         .inputFluids('gtceu:pure_dragon_breath 32000')
         .itemOutputs('kubejs:draco_boule')
         .duration(6000)
