@@ -58,4 +58,34 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:needs_iron_tool')
         .requiresTool(false)
         .textureAll('kubejs:block/casings/ultimate_multis/reinforced_brimstone_casing');
+
+    event.create('draneko_casing')
+        .displayName('Draneko Casing')
+        .hardness(5)
+        .resistance(10)
+        .material('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/ultimate_multis/draneko_casing');
+
+    event.create('abyssal_drill_1')
+        .displayName('Abyssal Drill Casing')
+        .hardness(5)
+        .resistance(10)
+        .material('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/ultimate_multis/abyssal_drill_casing');
+
+    event.create('abyssal_drill_2')
+        .displayName('Abyssal Drill Casing')
+        .hardness(5)
+        .resistance(10)
+        .material('metal')
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(false)
+        .textureAll('kubejs:block/casings/ultimate_multis/abyssal_drill_casing_2');
 });
