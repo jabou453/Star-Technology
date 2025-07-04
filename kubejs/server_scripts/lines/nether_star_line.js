@@ -1,6 +1,23 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
+    event.remove({id: 'minecraft:blaze_powder'});
+    event.remove({id: 'gtceu:shapeless/blaze_rod_to_powder'});
+    event.remove({id: 'gtceu:extractor/extract_blaze_powder'});
+    event.remove({id: 'create:crushing/blaze_rod'});
+
+    /*
+         ______   __    __   ______   _______    ______   ________   ______  
+        /      \ /  |  /  | /      \ /       \  /      \ /        | /      \ 
+        /$$$$$$  |$$ |  $$ |/$$$$$$  |$$$$$$$  |/$$$$$$  |$$$$$$$$/ /$$$$$$  |
+        $$ |  $$/ $$ |__$$ |$$ |__$$ |$$ |__$$ |$$ | _$$/ $$ |__    $$ \__$$/ 
+        $$ |      $$    $$ |$$    $$ |$$    $$< $$ |/    |$$    |   $$      \ 
+        $$ |   __ $$$$$$$$ |$$$$$$$$ |$$$$$$$  |$$ |$$$$ |$$$$$/     $$$$$$  |
+        $$ \__/  |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ \__$$ |$$ |_____ /  \__$$ |
+        $$    $$/ $$ |  $$ |$$ |  $$ |$$ |  $$ |$$    $$/ $$       |$$    $$/ 
+         $$$$$$/  $$/   $$/ $$/   $$/ $$/   $$/  $$$$$$/  $$$$$$$$/  $$$$$$/  
+                                                                            
+    */
     [
         {powder: 'blizz', item: 'cobalt_dust', fluid: 'fluorine', multiplier: 16, element: 'ice'},
         {powder: 'blitz', item: 'platinum_dust', fluid: 'deuterium', multiplier: 4, element: 'lightning'},
@@ -11,14 +28,14 @@ ServerEvents.recipes(event => {
             .inputFluids(`gtceu:${type.fluid} 1000`)
             .itemOutputs(`${type.multiplier}x thermal:${type.powder}_powder`)
             .duration(200)
-            .EUt(480*type.multiplier);
+            .EUt(480 * type.multiplier);
 
         event.recipes.gtceu.large_chemical_reactor(id(`${type.powder}_dust`))
             .itemInputs(`gtceu:${type.item}`)
             .inputFluids(`gtceu:${type.fluid} 1000`)
             .itemOutputs(`${type.multiplier}x thermal:${type.powder}_powder`)
             .duration(200)
-            .EUt(480*type.multiplier);
+            .EUt(480 * type.multiplier);
 
         event.recipes.gtceu.macerator(id(`${type.powder}_powder`))
             .itemInputs(`thermal:${type.powder}_rod`)
@@ -34,18 +51,26 @@ ServerEvents.recipes(event => {
 
         event.remove({id: `thermal:${type.powder}_powder`});
     });
-        event.remove({id: 'minecraft:blaze_powder'});
-        event.remove({id: 'gtceu:shapeless/blaze_rod_to_powder'});
-        event.remove({id: 'gtceu:extractor/extract_blaze_powder'});
-        event.remove({id: 'create:crushing/blaze_rod'});
 
-    //new stuff
+
+    /*
+         ______   __    __   ______   _______   _______    ______  
+        /      \ /  |  /  | /      \ /       \ /       \  /      \ 
+        /$$$$$$  |$$ |  $$ |/$$$$$$  |$$$$$$$  |$$$$$$$  |/$$$$$$  |
+        $$ \__$$/ $$ |__$$ |$$ |__$$ |$$ |__$$ |$$ |  $$ |$$ \__$$/ 
+        $$      \ $$    $$ |$$    $$ |$$    $$< $$ |  $$ |$$      \ 
+        $$$$$$  |$$$$$$$$ |$$$$$$$$ |$$$$$$$  |$$ |  $$ | $$$$$$  |
+        /  \__$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |__$$ |/  \__$$ |
+        $$    $$/ $$ |  $$ |$$ |  $$ |$$ |  $$ |$$    $$/ $$    $$/ 
+         $$$$$$/  $$/   $$/ $$/   $$/ $$/   $$/ $$$$$$$/   $$$$$$/  
+            
+    */
     [
         {element: 'fire', mod: 'minecraft', powder: 'blaze'},
         {element: 'ice', mod: 'thermal', powder: 'blizz'},
         {element: 'lightning', mod: 'thermal', powder: 'blitz'},
         {element: 'earth', mod: 'thermal', powder: 'basalz'}
-      ].forEach(shard => {
+    ].forEach(shard => {
         event.recipes.gtceu.extractor(id(`liquid_${shard.powder}`))
           .itemInputs(`${shard.mod}:${shard.powder}_powder`)
           .outputFluids(`gtceu:${shard.powder} 144`)
@@ -55,18 +80,33 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_shard`))
           .itemInputs('kubejs:energized_nether_star_shard')
           .inputFluids(`gtceu:${shard.powder} 720`)
-          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 8000, 500)
+          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 7500, 0)
           .duration(480)
-          .EUt(2048);
+          .EUt(GTValues.VHA[GTValues.IV]);
       
         event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_charge`))
           .itemInputs(`4x ${shard.mod}:${shard.element}_charge`)
           .inputFluids(`gtceu:${shard.powder} 720`)
-          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 5000, -1000)
+          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 2000, 0)
           .duration(480)
-          .EUt(2048);
+          .EUt(GTValues.VHA[GTValues.EV]);
+
+        event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_energized`))
+          .itemInputs('kubejs:energized_nether_star_shard')
+          .inputFluids(`gtceu:energized_${shard.powder} 720`)
+          .itemOutputs(`kubejs:${shard.element}_infused_shard`)
+          .duration(480)
+          .EUt(GTValues.VHA[GTValues.UHV]);
+
+        event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_nether_tempered`))
+          .itemInputs('kubejs:nether_tempered_shard')
+          .inputFluids(`gtceu:nether_tempered_${shard.powder} 720`)
+          .itemOutputs(`kubejs:${shard.element}_infused_shard`)
+          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 4000, 0)
+          .duration(480)
+          .EUt(GTValues.VHA[GTValues.UHV]);
       
-      });
+    });
 
     event.shaped('kubejs:star_casting_mold', [
         ' F ',
@@ -105,6 +145,12 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.polarizer(id('energized_nether_star_shard'))
         .itemInputs('mysticalagradditions:nether_star_shard')
         .itemOutputs('kubejs:energized_nether_star_shard')
+        .duration(400)
+        .EUt(2048);
+
+    event.recipes.gtceu.injection_mixer(id('energized_nether_star_shard'))
+        .itemInputs('kubejs:energized_nether_star_shard')
+        .itemOutputs('kubejs:nether_tempered_shard')
         .duration(400)
         .EUt(2048);
 
