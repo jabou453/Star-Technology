@@ -1256,6 +1256,22 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     
     compLiquid('basalz', ['1x mystery'], 0x6f190e, [no_decomp]);
 
+    compLiquid('energized_blaze', ['1x mystery'], 0xffcd1a, [no_decomp]);
+
+    compLiquid('energized_blitz', ['1x mystery'], 0xfdf5ce, [no_decomp]);
+    
+    compLiquid('energized_blizz', ['1x mystery'], 0xb7f0fa, [no_decomp]);
+    
+    compLiquid('energized_basalz', ['1x mystery'], 0x881f11, [no_decomp]);
+
+    compLiquid('nether_tempered_blaze', ['1x mystery'], 0xffd333, [no_decomp]);
+
+    compLiquid('nether_tempered_blitz', ['1x mystery'], 0xfefae7, [no_decomp]);
+    
+    compLiquid('nether_tempered_blizz', ['1x mystery'], 0xcff5fc, [no_decomp]);
+    
+    compLiquid('nether_tempered_basalz', ['1x mystery'], 0x9f2414, [no_decomp]);
+
     // Quantrum Comporessor Infusions
     quCompInfusions('intangibility_infusion', 0x00AAAA);
 
