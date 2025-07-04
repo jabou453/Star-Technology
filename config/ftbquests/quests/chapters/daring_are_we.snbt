@@ -46,7 +46,7 @@
 			y: -5.5d
 		}
 		{
-			dependencies: ["583A60E6A408D4DE"]
+			dependencies: ["7977EB28D7A1DAD8"]
 			id: "7779A7B90843FA0B"
 			tasks: [
 				{
@@ -65,19 +65,19 @@
 					type: "item"
 				}
 			]
-			x: 1.5d
-			y: -4.0d
+			x: 0.75d
+			y: -3.25d
 		}
 		{
-			dependencies: ["583A60E6A408D4DE"]
+			dependencies: ["7977EB28D7A1DAD8"]
 			id: "1A42A49F4F4E7E29"
 			tasks: [{
 				id: "64447EC73B0666D5"
 				item: "gtceu:lv_assembler"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -4.0d
+			x: 1.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["53BA24466D74ADE2"]
@@ -162,8 +162,8 @@
 				item: "gtceu:cupronickel_coil_block"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -2.5d
+			x: 0.75d
+			y: -1.75d
 		}
 		{
 			dependencies: ["267B7EA717164DBF"]
@@ -245,17 +245,6 @@
 			title: "Refined Sediments"
 			x: 4.5d
 			y: -5.5d
-		}
-		{
-			dependencies: ["70CC78611FA39F52"]
-			id: "3EDD7BFC04864B57"
-			tasks: [{
-				id: "45468260B53208E5"
-				item: "gtceu:drilling_fluid_bucket"
-				type: "item"
-			}]
-			x: 3.0d
-			y: -8.5d
 		}
 		{
 			dependencies: ["421186B63C626E49"]
@@ -367,7 +356,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: -7.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["172FD0EF95014D28"]
@@ -800,7 +789,7 @@
 				item: "gtceu:polytetrafluoroethylene_bucket"
 				type: "item"
 			}]
-			x: 9.0d
+			x: 10.5d
 			y: -2.5d
 		}
 		{
@@ -877,13 +866,14 @@
 				type: "item"
 			}]
 			x: 13.5d
-			y: -5.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
 				"2F83926420785947"
 				"5BAF15BFA908BE49"
 				"61C2ABD878B7234A"
+				"76F76B65AE97749D"
 			]
 			hide_dependency_lines: true
 			id: "77E38E5C97E1E837"
@@ -1170,15 +1160,15 @@
 				"2F83926420785947"
 				"5BAF15BFA908BE49"
 				"61C2ABD878B7234A"
+				"76F76B65AE97749D"
 			]
-			hide_dependency_lines: true
 			id: "566775668C39F2A6"
 			tasks: [{
 				id: "6B5777813B935779"
 				item: "gtceu:lpic_wafer"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 13.5d
 			y: -2.5d
 		}
 		{
@@ -1200,7 +1190,7 @@
 				item: "gtceu:hv_laser_engraver"
 				type: "item"
 			}]
-			x: 10.5d
+			x: 12.0d
 			y: -2.5d
 		}
 		{
@@ -1261,9 +1251,9 @@
 		}
 		{
 			dependencies: [
-				"3EDD7BFC04864B57"
 				"650AFC71A934DCFE"
 				"583A60E6A408D4DE"
+				"7977EB28D7A1DAD8"
 			]
 			hide_dependency_lines: true
 			id: "587900D2C442A176"
@@ -1277,9 +1267,9 @@
 		}
 		{
 			dependencies: [
-				"3EDD7BFC04864B57"
 				"650AFC71A934DCFE"
 				"6EBA0B08DA7E6709"
+				"7977EB28D7A1DAD8"
 			]
 			hide_dependency_lines: true
 			id: "7B03017F6FDFC4CE"
@@ -1293,9 +1283,9 @@
 		}
 		{
 			dependencies: [
-				"3EDD7BFC04864B57"
 				"27EDBD8DBCA325A6"
 				"650AFC71A934DCFE"
+				"7977EB28D7A1DAD8"
 			]
 			hide_dependency_lines: true
 			id: "265B6143397089C8"
@@ -1309,9 +1299,9 @@
 		}
 		{
 			dependencies: [
-				"3EDD7BFC04864B57"
 				"27EDBD8DBCA325A6"
 				"650AFC71A934DCFE"
+				"7977EB28D7A1DAD8"
 			]
 			hide_dependency_lines: true
 			id: "4E3CE3B27FA66ECA"
@@ -1325,10 +1315,10 @@
 		}
 		{
 			dependencies: [
-				"3EDD7BFC04864B57"
 				"3E1B9D415C6B5D74"
 				"650AFC71A934DCFE"
 				"4E3CE3B27FA66ECA"
+				"7977EB28D7A1DAD8"
 			]
 			hide_dependency_lines: true
 			id: "33A70C6D26E3EB04"
@@ -1349,7 +1339,7 @@
 				type: "item"
 			}]
 			x: 13.5d
-			y: -4.0d
+			y: -5.5d
 		}
 		{
 			id: "08655ED4A7CB3546"
@@ -1358,8 +1348,8 @@
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 13.5d
-			y: -2.5d
+			x: 12.0d
+			y: -5.5d
 		}
 		{
 			dependencies: ["587900D2C442A176"]
@@ -1610,23 +1600,6 @@
 			y: -14.0d
 		}
 		{
-			dependencies: [
-				"4689E943A9652DAD"
-				"021348F7E189EE14"
-			]
-			dependency_requirement: "one_completed"
-			hide_dependency_lines: true
-			hide_dependent_lines: true
-			id: "7F9B01C089ECF06F"
-			tasks: [{
-				id: "04397ADCCD7603CD"
-				title: "Titanium Line"
-				type: "checkmark"
-			}]
-			x: 16.5d
-			y: -8.5d
-		}
-		{
 			dependencies: ["61C2ABD878B7234A"]
 			id: "1A4D9BE1BFFA5096"
 			tasks: [{
@@ -1634,8 +1607,8 @@
 				item: "gtceu:graphite_dust"
 				type: "item"
 			}]
-			x: 10.5d
-			y: -5.5d
+			x: 9.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["1A4D9BE1BFFA5096"]
@@ -1646,7 +1619,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: -4.0d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -2386,10 +2359,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"7F9B01C089ECF06F"
-				"139AB773D4CE9359"
-			]
+			dependencies: ["139AB773D4CE9359"]
 			id: "3E08007B72AE9454"
 			tasks: [{
 				id: "05F5AC07B72FDBA7"
@@ -3258,6 +3228,55 @@
 			}]
 			x: 19.5d
 			y: 2.0d
+		}
+		{
+			dependencies: ["0C2BAE421CDC884A"]
+			hide_dependent_lines: true
+			id: "76F76B65AE97749D"
+			tasks: [{
+				id: "585D41CCF6494245"
+				item: "gtceu:phosphorus_wafer"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"39DFE76DCFFC3028"
+				"27E712CAC7B593B6"
+			]
+			id: "0C2BAE421CDC884A"
+			tasks: [{
+				id: "04F3D16FFE79946A"
+				item: "gtceu:phosphorus_boule"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["70CC78611FA39F52"]
+			id: "7977EB28D7A1DAD8"
+			tasks: [{
+				id: "79E7B5690B4643CD"
+				item: "gtceu:lubricant_bucket"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["583A60E6A408D4DE"]
+			hide_dependency_lines: true
+			id: "27E712CAC7B593B6"
+			tasks: [{
+				id: "0686384C88C0254B"
+				item: "gtceu:phosphorus_dust"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 5.0d
 		}
 	]
 	title: "Daring are we?"
