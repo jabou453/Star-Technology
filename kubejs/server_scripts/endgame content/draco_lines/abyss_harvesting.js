@@ -14,11 +14,35 @@ ServerEvents.recipes(event => {
 
     // Abyss Harvesting
 
-        // High Entropy Voidic Excression
+    // High Entropy Voidic Excression
+    event.recipes.gtceu.abyssal_harvester(id('high_entropy_voidic_excression'))
+        .outputFluids('gtceu:high_entropy_voidic_excression 20')
+        .addData('min_entropy', 350000)
+        .addData('max_entropy', 499999)
+        .duration(100)
+        .dimension('minecraft:the_end')
+        .EUt(GTValues.VHA[GTValues.UEV])
+        .circuit(3);
 
-        // Moderate Entropy Voidic Excression
+    // Moderate Entropy Voidic Excression
+    event.recipes.gtceu.abyssal_harvester(id('moderate_entropy_voidic_excression'))
+        .outputFluids('gtceu:moderate_entropy_voidic_excression 40')
+        .addData('min_entropy', 150000)
+        .addData('max_entropy', 349999)
+        .duration(100)
+        .dimension('minecraft:the_end')
+        .EUt(GTValues.VHA[GTValues.UEV])
+        .circuit(2);
 
-        // Low Entropy Voidic Excression
+    // Low Entropy Voidic Excression
+    event.recipes.gtceu.abyssal_harvester(id('low_entropy_voidic_excression'))
+        .outputFluids('gtceu:low_entropy_voidic_excression 80')
+        .addData('min_entropy', 10)
+        .addData('max_entropy', 149999)
+        .duration(100)
+        .dimension('minecraft:the_end')
+        .EUt(GTValues.VHA[GTValues.UEV])
+        .circuit(1);
 
     // Processing Line
 
