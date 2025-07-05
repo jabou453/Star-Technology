@@ -677,7 +677,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         //Extended Debris
         compDustLiquid('ancient_debris', ['1x mystery'], 0x603d1a, [no_decomp]);
 
-        elemIngot('ancient_netherite', 'ancient_netherite', 0x46271b, DULL, [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp,dense_plate]);
+        elemIngotFluid('ancient_netherite', 0x46271b, DULL, [12349, 'low', VA('uev'), 2400], [plates,rod,no_decomp,dense_plate]);
 
         //Atomic Nether Dust Line
         compDustIcon('atomic_nether_sludge', ['1x mystery','1x mystery','1x mystery','1x mystery'], 0x883039, RADIOACTIVE, [no_decomp]);
