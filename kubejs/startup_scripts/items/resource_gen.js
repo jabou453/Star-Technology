@@ -58,6 +58,10 @@ StartupEvents.registry('item', event => {
     event.create('impure_nether_star')
         .displayName('Impure Nether Star')
         .texture('kubejs:item/lines/netherstar/impure_nether_star');
+
+    event.create('nether_star_shard')
+        .displayName('Nether Star Shard')
+        .texture('kubejs:item/lines/netherstar/nether_star_shard');
         
     event.create('energized_nether_star_shard')
         .displayName('Energized Nether Star Shard')
