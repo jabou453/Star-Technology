@@ -137,12 +137,12 @@ ServerEvents.recipes(event => {
     
     event.recipes.gtceu.forge_hammer(id('nether_star_shard'))
         .itemInputs('minecraft:nether_star')
-        .itemOutputs('5x mysticalagradditions:nether_star_shard')
+        .itemOutputs('5x kubejs:nether_star_shard')
         .duration(300)
         .EUt(GTValues.VHA[GTValues.HV]);
 
     event.recipes.gtceu.polarizer(id('energized_nether_star_shard'))
-        .itemInputs('mysticalagradditions:nether_star_shard')
+        .itemInputs('kubejs:nether_star_shard')
         .itemOutputs('kubejs:energized_nether_star_shard')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.EV]);
