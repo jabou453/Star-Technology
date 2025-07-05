@@ -1433,8 +1433,8 @@
 			id: "11FF8831D1DE5D7B"
 			size: 1.0d
 			tasks: [{
-				id: "2B0374A44EBC8D3D"
-				item: "gtceu:tiny_titanium_trifluoride_dust"
+				id: "79966B1ECB9E4AC9"
+				item: "gtceu:small_titanium_trifluoride_dust"
 				type: "item"
 			}]
 			x: 26.5d
@@ -2006,7 +2006,9 @@
 			dependencies: [
 				"7F66E57359872C20"
 				"03B49B558B85346B"
+				"439D8AE6D3DC41AF"
 			]
+			description: ["A polymer used to coat materials making them more secure."]
 			id: "3306CAE5E57839A2"
 			rewards: [{
 				count: 3
@@ -2557,16 +2559,16 @@
 			description: [
 				"A singular &o&dNether Star&r can be broken down into 5 shards. Using this you can more cheaply loop them."
 				""
-				"With a Autoclave at &5EV&r you, on average, break even using this better method all the way to 125% of your initial shards per loop at &3UV&r."
+				"With an Autoclave at &9IV&r, you can higher chances at getting your elemental infused shards by using the nether star shards and energizing them in a Polarizer."
 				""
-				"Additionally, keep in mind that the Charge method gets progressively weaker over time, meaning sooner or later you'll want to set up looping to keep up with demand."
+				"At &4UHV&r you can guarantee infused shards by using energized elemental fluids, which you can get from fusion reactors."
 			]
-			icon: "mysticalagradditions:nether_star_shard"
+			icon: "kubejs:nether_star_shard"
 			id: "200BA54AC5EC0BF0"
 			tasks: [
 				{
 					id: "7AAA523EAB518888"
-					item: "mysticalagradditions:nether_star_shard"
+					item: "kubejs:nether_star_shard"
 					type: "item"
 				}
 				{
@@ -2575,7 +2577,7 @@
 					type: "checkmark"
 				}
 			]
-			title: "Nether Star Looping"
+			title: "Basic Nether Star Looping"
 			x: 29.0d
 			y: 13.0d
 		}
@@ -2593,45 +2595,101 @@
 		{
 			dependencies: ["13C1904CBEB09726"]
 			id: "3EF79507769EF307"
-			tasks: [{
-				id: "56C1E1C67CAEA0AC"
-				item: "kubejs:ice_infused_shard"
-				type: "item"
-			}]
-			x: 31.0d
+			tasks: [
+				{
+					id: "56C1E1C67CAEA0AC"
+					item: "kubejs:ice_infused_shard"
+					type: "item"
+				}
+				{
+					id: "1E4664ED7B95E22C"
+					item: "gtceu:blizz_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6CEC165865D5B23C"
+					item: "gtceu:energized_blizz_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 30.0d
 			y: 11.5d
 		}
 		{
 			dependencies: ["13C1904CBEB09726"]
 			id: "339979FB14B5F2ED"
-			tasks: [{
-				id: "0B45F608F5054872"
-				item: "kubejs:lightning_infused_shard"
-				type: "item"
-			}]
-			x: 32.0d
-			y: 12.3d
+			tasks: [
+				{
+					id: "0B45F608F5054872"
+					item: "kubejs:lightning_infused_shard"
+					type: "item"
+				}
+				{
+					id: "664DF3F3D2A989B5"
+					item: "gtceu:blitz_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "247F874FA90DF507"
+					item: "gtceu:energized_blitz_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 31.0d
+			y: 11.5d
 		}
 		{
 			dependencies: ["13C1904CBEB09726"]
 			id: "12A12338533AE6D8"
-			tasks: [{
-				id: "492E89E47038A634"
-				item: "kubejs:fire_infused_shard"
-				type: "item"
-			}]
-			x: 32.0d
-			y: 13.7d
+			tasks: [
+				{
+					id: "492E89E47038A634"
+					item: "kubejs:fire_infused_shard"
+					type: "item"
+				}
+				{
+					id: "6E43D7368799ECF6"
+					item: "gtceu:blaze_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1D8400CAFBE0BB97"
+					item: "gtceu:energized_blaze_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 31.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["13C1904CBEB09726"]
 			id: "36F6D5EF625D596D"
-			tasks: [{
-				id: "4A5F284138C45146"
-				item: "kubejs:earth_infused_shard"
-				type: "item"
-			}]
-			x: 31.0d
+			tasks: [
+				{
+					id: "4A5F284138C45146"
+					item: "kubejs:earth_infused_shard"
+					type: "item"
+				}
+				{
+					id: "1F7A823EC4B01C99"
+					item: "gtceu:basalz_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "741F68D0638E8FC0"
+					item: "gtceu:energized_basalz_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 30.0d
 			y: 14.5d
 		}
 		{
@@ -2757,6 +2815,82 @@
 			}]
 			x: 1.5d
 			y: 12.5d
+		}
+		{
+			dependencies: [
+				"13C1904CBEB09726"
+				"6375D265594CEE4F"
+				"059CB064A515B157"
+			]
+			id: "24CF3F64E74A027E"
+			tasks: [{
+				id: "61988A3A5F7B9253"
+				item: "kubejs:nether_tempered_shard"
+				type: "item"
+			}]
+			x: 33.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["24CF3F64E74A027E"]
+			description: ["Once you reach the Nether, you can create the most efficient Nether Star line using your &2UIV&r tier autoclave and the nether tempered elemental fluids, where, not only are you guaranteed to get infused shards, but have a chance to get extra!"]
+			icon: "minecraft:nether_star"
+			id: "2AA8CBE804E07BC7"
+			tasks: [{
+				id: "38C47CEF4F0CDF23"
+				title: "Perfect Nether Star Looping"
+				type: "checkmark"
+			}]
+			x: 34.5d
+			y: 13.0d
+		}
+		{
+			dependencies: ["24CF3F64E74A027E"]
+			id: "1C5C32E5A47F2D2D"
+			optional: true
+			tasks: [{
+				id: "134E8CC4B43A248C"
+				item: "gtceu:nether_tempered_blaze_bucket"
+				type: "item"
+			}]
+			x: 33.5d
+			y: 14.5d
+		}
+		{
+			dependencies: ["24CF3F64E74A027E"]
+			id: "5D3B5DEE3B2D30C0"
+			optional: true
+			tasks: [{
+				id: "63FEC034BE49378A"
+				item: "gtceu:nether_tempered_basalz_bucket"
+				type: "item"
+			}]
+			x: 32.5d
+			y: 14.5d
+		}
+		{
+			dependencies: ["24CF3F64E74A027E"]
+			id: "0D18B33E2C26A942"
+			optional: true
+			tasks: [{
+				id: "2C674457022C6E9A"
+				item: "gtceu:nether_tempered_blizz_bucket"
+				type: "item"
+			}]
+			x: 32.5d
+			y: 11.5d
+		}
+		{
+			dependencies: ["24CF3F64E74A027E"]
+			id: "44B18C095DB4DF17"
+			optional: true
+			tasks: [{
+				id: "79F4CDC28DCEA357"
+				item: "gtceu:nether_tempered_blitz_bucket"
+				type: "item"
+			}]
+			x: 33.5d
+			y: 11.5d
 		}
 	]
 	title: "Processing Lines (Chap 1,2,3)"

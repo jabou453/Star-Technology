@@ -282,6 +282,23 @@
 				title: "Parallelization"
 				type: "checkmark"
 			}]
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["141911C5DD68CD2A"]
+			description: [
+				"Description tbh"
+				""
+				"Eta = Eta"
+			]
+			icon: "start_core:uhv_64a_dream_link_energy_hatch"
+			id: "2F63F0E239737E38"
+			tasks: [{
+				id: "6FCD3DDD086DB963"
+				title: "Wireless Power"
+				type: "checkmark"
+			}]
 			x: 0.0d
 			y: 2.5d
 		}

@@ -3,7 +3,7 @@
 	default_quest_shape: "square"
 	filename: "power"
 	group: "28726466D987C725"
-	icon: "kubejs:mv_upgrade_kit"
+	icon: "kubejs:mv_upgraade_kit"
 	id: "10A89CD14C4DAF63"
 	order_index: 0
 	quest_links: [{
@@ -108,18 +108,6 @@
 		}
 		{
 			dependencies: ["28FB566FC1E35413"]
-			id: "7242D13C6F27BECB"
-			shape: "square"
-			tasks: [{
-				id: "5068F763D25AC096"
-				item: "thermal:refined_fuel_bucket"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 3.5d
-		}
-		{
-			dependencies: ["7242D13C6F27BECB"]
 			id: "0C81D0F1D42C092B"
 			shape: "square"
 			tasks: [{
@@ -127,7 +115,7 @@
 				item: "gtceu:diesel_bucket"
 				type: "item"
 			}]
-			x: -10.0d
+			x: -9.0d
 			y: 3.5d
 		}
 		{
@@ -140,7 +128,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 4.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["7E508B071C59EB73"]
@@ -152,7 +140,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 5.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["285392E7B24481C3"]
@@ -164,7 +152,7 @@
 				type: "item"
 			}]
 			x: -10.0d
-			y: 6.5d
+			y: 5.5d
 		}
 		{
 			dependencies: [
@@ -464,14 +452,13 @@
 			id: "08F1DEFEB060C74C"
 			shape: "square"
 			tasks: [{
-				id: "47B43BAD0AA3B791"
+				id: "2EDDF4BFBC3DA665"
 				item: {
 					Count: 1
-					id: "kubejs:lv_arc_kit"
+					id: "kubejs:lv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.95f
-							DynamoPower: 0.5f
+							DynamoEnergy: 1.1f
 							Type: "Dynamo"
 						}
 					}
@@ -489,14 +476,13 @@
 			id: "238AD90B9828A7B0"
 			shape: "square"
 			tasks: [{
-				id: "1784B159D603DC45"
+				id: "730671D296A9FDA4"
 				item: {
 					Count: 1
-					id: "kubejs:mv_arc_kit"
+					id: "kubejs:mv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.9f
-							DynamoPower: 0.75f
+							DynamoEnergy: 1.32f
 							Type: "Dynamo"
 						}
 					}
@@ -514,14 +500,13 @@
 			id: "612BB2D1A5C10C7B"
 			shape: "square"
 			tasks: [{
-				id: "2B79348BC44F6C9C"
+				id: "2BC9405104D50BCC"
 				item: {
 					Count: 1
-					id: "kubejs:hv_arc_kit"
+					id: "kubejs:hv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.8f
-							DynamoPower: 1.0f
+							DynamoEnergy: 1.58f
 							Type: "Dynamo"
 						}
 					}
@@ -539,14 +524,13 @@
 			id: "7F229469E1A4C2EF"
 			shape: "square"
 			tasks: [{
-				id: "6B0FEFA3DD061DBB"
+				id: "3384B6C45D3ECCBF"
 				item: {
 					Count: 1
-					id: "kubejs:ev_arc_kit"
+					id: "kubejs:ev_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.75f
-							DynamoPower: 2.0f
+							DynamoEnergy: 1.9f
 							Type: "Dynamo"
 						}
 					}
@@ -564,13 +548,14 @@
 			id: "7B16D5BEC4CDB611"
 			shape: "square"
 			tasks: [{
-				id: "1693CBDB66379472"
+				id: "26DC377D99850D15"
 				item: {
 					Count: 1
-					id: "kubejs:lv_mci_kit"
+					id: "kubejs:lv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.1f
+							DynamoEnergy: 0.67f
+							DynamoPower: 0.5f
 							Type: "Dynamo"
 						}
 					}
@@ -588,13 +573,14 @@
 			id: "1B43A54DA21C5F87"
 			shape: "square"
 			tasks: [{
-				id: "2DDD24ABA6AD377A"
+				id: "42E9EE4954EA6DE4"
 				item: {
 					Count: 1
-					id: "kubejs:mv_mci_kit"
+					id: "kubejs:mv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.25f
+							DynamoEnergy: 0.5f
+							DynamoPower: 1.0f
 							Type: "Dynamo"
 						}
 					}
@@ -612,13 +598,14 @@
 			id: "206E8AD2E23335B9"
 			shape: "square"
 			tasks: [{
-				id: "1465BABECD269969"
+				id: "77B89D61B3CCF7CD"
 				item: {
 					Count: 1
-					id: "kubejs:hv_mci_kit"
+					id: "kubejs:hv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.5f
+							DynamoEnergy: 0.33f
+							DynamoPower: 2.0f
 							Type: "Dynamo"
 						}
 					}
@@ -636,13 +623,14 @@
 			id: "0C6AB44DAB2C8C91"
 			shape: "square"
 			tasks: [{
-				id: "0DA081A760A80400"
+				id: "5D08C2E00A2D8FCC"
 				item: {
 					Count: 1
-					id: "kubejs:ev_mci_kit"
+					id: "kubejs:ev_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 2.0f
+							DynamoEnergy: 0.25f
+							DynamoPower: 3.0f
 							Type: "Dynamo"
 						}
 					}
@@ -876,7 +864,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["1B32FFCDA1C87B90"]
+			dependencies: ["51639FA6915BC51A"]
 			id: "3DB836585182F614"
 			tasks: [{
 				id: "5AFD383C58F00AFC"
@@ -884,13 +872,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -7.0d
+			y: -6.0d
 		}
 		{
-			dependencies: [
-				"3DB836585182F614"
-				"1B32FFCDA1C87B90"
-			]
+			dependencies: ["3DB836585182F614"]
 			id: "120C7AB980EAE90D"
 			tasks: [{
 				id: "587F1FE713F04F02"
@@ -898,13 +883,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -6.0d
+			y: -5.0d
 		}
 		{
-			dependencies: [
-				"120C7AB980EAE90D"
-				"7AAF2D8BC72919DB"
-			]
+			dependencies: ["120C7AB980EAE90D"]
 			id: "6E149057874AC992"
 			tasks: [{
 				id: "264FDE7BA1BFD770"
@@ -912,13 +894,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -5.0d
+			y: -4.0d
 		}
 		{
-			dependencies: [
-				"6E149057874AC992"
-				"4F2692F874F68EF8"
-			]
+			dependencies: ["6E149057874AC992"]
 			id: "5B70B50435FD572D"
 			tasks: [{
 				id: "60393B8F173667FF"
@@ -926,13 +905,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -4.0d
+			y: -3.0d
 		}
 		{
-			dependencies: [
-				"5B70B50435FD572D"
-				"121EFB24BE239D59"
-			]
+			dependencies: ["5B70B50435FD572D"]
 			id: "6F4474291CE8042C"
 			tasks: [{
 				id: "33CB0C708F1ACCC9"
@@ -940,13 +916,10 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -3.0d
+			y: -2.0d
 		}
 		{
-			dependencies: [
-				"6F4474291CE8042C"
-				"51F889E1432E4DAD"
-			]
+			dependencies: ["6F4474291CE8042C"]
 			id: "21C399BC8BE2785F"
 			tasks: [{
 				id: "6B0B411795F0AB60"
@@ -954,7 +927,7 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: -2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["3DB836585182F614"]
@@ -965,7 +938,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -7.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["120C7AB980EAE90D"]
@@ -976,7 +949,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -6.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["6E149057874AC992"]
@@ -987,7 +960,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -5.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["5B70B50435FD572D"]
@@ -998,7 +971,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -4.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["6F4474291CE8042C"]
@@ -1009,7 +982,7 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -3.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["21C399BC8BE2785F"]
@@ -1020,11 +993,11 @@
 				type: "item"
 			}]
 			x: -9.5d
-			y: -2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
-				"2C72517EAF0E4F9E"
+				"6F408C9FD7D65DF4"
 				"7AAF2D8BC72919DB"
 			]
 			id: "0C98CEC5242B2FB0"
@@ -1038,8 +1011,8 @@
 		}
 		{
 			dependencies: [
-				"590C298B843E22D5"
-				"7AAF2D8BC72919DB"
+				"2C72517EAF0E4F9E"
+				"4F2692F874F68EF8"
 			]
 			id: "4A2B54786509F5E4"
 			tasks: [{
@@ -1052,8 +1025,8 @@
 		}
 		{
 			dependencies: [
-				"0035C9FAB741E166"
-				"4F2692F874F68EF8"
+				"590C298B843E22D5"
+				"121EFB24BE239D59"
 			]
 			id: "4DA961ED5AF34D63"
 			tasks: [{
@@ -1066,8 +1039,8 @@
 		}
 		{
 			dependencies: [
-				"620F96D00BB9BFD0"
-				"4F2692F874F68EF8"
+				"0035C9FAB741E166"
+				"51F889E1432E4DAD"
 			]
 			id: "7E26E2727F86A2CE"
 			tasks: [{
@@ -1080,8 +1053,8 @@
 		}
 		{
 			dependencies: [
-				"18F6E5836D82D628"
-				"5D107FD21879F54B"
+				"620F96D00BB9BFD0"
+				"0055CE82469F239C"
 			]
 			id: "470AEDAED3B9A2AA"
 			tasks: [{
@@ -1094,7 +1067,7 @@
 		}
 		{
 			dependencies: [
-				"72DDEB53C9BDDBFC"
+				"18F6E5836D82D628"
 				"5D107FD21879F54B"
 			]
 			id: "723224D36C88ACA9"
@@ -1591,8 +1564,8 @@
 		}
 		{
 			dependencies: [
-				"723224D36C88ACA9"
-				"21B905AA3AE6059F"
+				"72DDEB53C9BDDBFC"
+				"007D5B58CBF1BBE2"
 			]
 			description: ["The last 2 Solar Panels are merely compressed variants of the previous ones, to allow for more compact solar setups"]
 			id: "2D9EFD27A3C32062"
@@ -1606,32 +1579,18 @@
 		}
 		{
 			dependencies: [
-				"2D9EFD27A3C32062"
-				"21B905AA3AE6059F"
-			]
-			id: "1F83DC0B3C633298"
-			tasks: [{
-				id: "7222356ABCE66FCC"
-				item: "solarflux:sp_8"
-				type: "item"
-			}]
-			x: -9.5d
-			y: -1.0d
-		}
-		{
-			dependencies: [
 				"50DED4576C89E893"
 				"38C4FC58A4482F83"
 			]
 			id: "3A485956C34C8840"
 			tasks: [{
-				id: "23098FEE229E0194"
+				id: "43336F4858ECFE9C"
 				item: {
 					Count: 1
-					id: "kubejs:mv_upgrade_kit"
+					id: "kubejs:mv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 16.0f
+							BaseMod: 12.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1649,13 +1608,13 @@
 			]
 			id: "50DED4576C89E893"
 			tasks: [{
-				id: "0B56EB7746082D00"
+				id: "0FFFC4310BE7E52C"
 				item: {
 					Count: 1
-					id: "kubejs:lv_upgrade_kit"
+					id: "kubejs:lv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 4.0f
+							BaseMod: 6.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1673,13 +1632,13 @@
 			]
 			id: "3FE17E376E30FFE4"
 			tasks: [{
-				id: "5F12A9B7928071B1"
+				id: "41E49D5E9F070FF8"
 				item: {
 					Count: 1
-					id: "kubejs:hv_upgrade_kit"
+					id: "kubejs:hv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 64.0f
+							BaseMod: 24.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1697,13 +1656,13 @@
 			]
 			id: "40F4E7B58257EF09"
 			tasks: [{
-				id: "702CE165410C9FCC"
+				id: "5E662ABFA472940F"
 				item: {
 					Count: 1
-					id: "kubejs:ev_upgrade_kit"
+					id: "kubejs:ev_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 256.0f
+							BaseMod: 48.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1716,7 +1675,7 @@
 		{
 			dependencies: ["7DDFBCDFC3F09A6B"]
 			description: [
-				"Each tier of rotor holder up on top of its inherent 10% efficiency bonus ([1-.1] or .9 or 90% fuel consumption), each tier up doubles consumption and power giving you a 2x energy output for 1.8x more fuel. It is always worth it if you can supply enough fuel."
+				"Each tier of rotor holder up on top of its inherent &b10% efficiency bonus&r &7([1-.1] or .9 or 90% fuel consumption)&r, each tier up doubles consumption and power giving you a &62x energy&r output for 1.8x more fuel. It is always worth it if you can supply enough fuel."
 				""
 				"In other words it doubles parallels and give efficiency."
 			]
@@ -1743,7 +1702,7 @@
 			]
 			id: "754D5D2F2D109193"
 			tasks: [{
-				id: "42CCF2CFC2C51426"
+				id: "318A4B800B95E110"
 				item: {
 					Count: 1
 					id: "itemfilters:or"
@@ -1779,6 +1738,10 @@
 							{
 								Count: 1b
 								id: "gtceu:uhv_rotor_holder"
+							}
+							{
+								Count: 1b
+								id: "gtceu:uev_rotor_holder"
 							}
 						]
 					}
@@ -2162,6 +2125,7 @@
 				""
 				"{image:komarumod:textures/painting/komaru_god.png width:100 height:100 align:center}"
 			]
+			hide_dependent_lines: true
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -2223,17 +2187,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["53770EB175F44961"]
-			id: "3BD8E184D172519C"
-			tasks: [{
-				id: "686A5DFDFB3E8114"
-				item: "systeams:steamiestest_ball"
-				type: "item"
-			}]
-			x: -10.5d
-			y: 1.0d
-		}
-		{
 			hide_dependent_lines: true
 			icon: {
 				Count: 1
@@ -2256,7 +2209,7 @@
 				"7DDFBCDFC3F09A6B"
 				"121EFB24BE239D59"
 			]
-			description: ["Parallels can make it scale just a little."]
+			description: ["Parallels can make it scale just a \"little\"."]
 			id: "29A144BD0E7C524F"
 			tasks: [{
 				id: "0D35589F9644A1F9"
@@ -2276,6 +2229,114 @@
 			}]
 			x: -8.5d
 			y: 6.0d
+		}
+		{
+			dependencies: [
+				"2FCCE10E5C3E858D"
+				"21B905AA3AE6059F"
+				"5BA69EDC3C223B2C"
+				"4F3EE28B3F38FC85"
+			]
+			id: "64162DB23206AD7A"
+			tasks: [{
+				id: "56273B4421B2772D"
+				item: "start_core:dream_link_node"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"09FB26E3AADE4FAD"
+				"6FB365E6C91B482E"
+				"694E1F6458D5F72F"
+				"24E2CB89693EDEA3"
+			]
+			id: "60523CDE5E5695DB"
+			tasks: [{
+				id: "1B37F38662D1FC93"
+				item: "start_core:daydream_spire"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"64162DB23206AD7A"
+				"3F34F4AC99C45E6F"
+				"7AC55BA8BDD0F3D2"
+				"5944C4DE27F98FF3"
+			]
+			id: "09FB26E3AADE4FAD"
+			tasks: [{
+				id: "26068CED640F31E9"
+				item: "start_core:oneiric_relay"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"60523CDE5E5695DB"
+				"611614FF7006D32B"
+			]
+			id: "6AE6DD48D6ED455D"
+			tasks: [{
+				id: "6FC1B8EF87485258"
+				item: "start_core:beacon_of_lucidity"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"6AE6DD48D6ED455D"
+				"611614FF7006D32B"
+			]
+			id: "23BDEA7B6A537297"
+			tasks: [{
+				id: "505882F029B90FAC"
+				item: "start_core:paragon_of_the_veil"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"7AAF2D8BC72919DB"
+				"51639FA6915BC51A"
+			]
+			id: "6F408C9FD7D65DF4"
+			tasks: [{
+				id: "56D5298101B5D5DE"
+				item: "solarflux:mirror"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -7.0d
+		}
+		{
+			description: ["While expensive to make and not your best source it is free energy from the &e&lSUN&r."]
+			icon: {
+				Count: 1
+				id: "ftbquests:custom_icon"
+				tag: {
+					Icon: "gtceu:item/solar_panel"
+				}
+			}
+			id: "51639FA6915BC51A"
+			tasks: [{
+				id: "2880D8142FDC174B"
+				title: "What is Solar?"
+				type: "checkmark"
+			}]
+			x: -8.5d
+			y: -7.0d
 		}
 	]
 	title: "Power"

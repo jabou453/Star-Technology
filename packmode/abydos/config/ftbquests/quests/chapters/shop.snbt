@@ -1342,44 +1342,53 @@
 			y: -4.0d
 		}
 		{
-			icon: "effortlessbuilding:elastic_hand"
+			can_repeat: true
+			icon: "travelanchors:travel_staff"
 			id: "2DFC6496C56829BF"
 			rewards: [
 				{
-					id: "7AD97E2524BA3372"
-					item: "effortlessbuilding:reach_upgrade1"
+					id: "4A08C28830A77C91"
+					item: {
+						Count: 1
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "travelanchors:range"
+								lvl: 3
+							}]
+						}
+					}
 					type: "item"
 				}
 				{
-					id: "26E0D47E6EF04777"
-					item: "effortlessbuilding:reach_upgrade2"
+					id: "06A81955F03EE4C5"
+					item: "travelanchors:travel_anchor"
 					type: "item"
 				}
 				{
-					id: "58B827491331327F"
-					item: "effortlessbuilding:reach_upgrade3"
-					type: "item"
-				}
-				{
-					id: "0EAC387AD48FD4EC"
-					item: "effortlessbuilding:muscles"
-					type: "item"
-				}
-				{
-					id: "03C021308CBA9294"
-					item: "effortlessbuilding:elastic_hand"
+					id: "588A5043CB619D20"
+					item: {
+						Count: 1
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "travelanchors:teleportation"
+								lvl: 1s
+							}]
+						}
+					}
 					type: "item"
 				}
 			]
 			shape: "rsquare"
 			tasks: [{
 				consume_items: true
-				count: 20L
+				count: 16L
 				id: "4EEE370B1BC4B3FE"
-				item: { Count: 2, id: "kubejs:coin" }
+				item: "kubejs:coin"
 				type: "item"
 			}]
-			title: "Effortless Building Pack"
+			title: "Teleportation+"
 			x: 3.5d
 			y: -5.5d
 		}
@@ -1504,6 +1513,40 @@
 			title: "Enable the Weather Cycle"
 			x: 4.5d
 			y: 3.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["262BD3D9D1DF7F13"]
+			hide_until_deps_complete: true
+			icon: "minecraft:dragon_breath"
+			id: "7A188FDFA4C591D7"
+			rewards: [{
+				count: 128
+				id: "476116DFED4CC404"
+				item: "minecraft:dragon_breath"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 1.15d
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "64DCEB931D509752"
+					item: "kubejs:coin"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "7FCC562221676BFD"
+					item: "minecraft:dragon_breath"
+					type: "item"
+				}
+			]
+			title: "Dragon Breath"
+			x: 0.0d
+			y: 4.0249999999999995d
 		}
 	]
 	title: "Shop"
