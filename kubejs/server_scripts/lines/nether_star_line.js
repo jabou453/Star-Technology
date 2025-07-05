@@ -103,7 +103,7 @@ ServerEvents.recipes(event => {
           .itemOutputs(`kubejs:${shard.element}_infused_shard`)
           .chancedOutput(`kubejs:${shard.element}_infused_shard`, 4000, 0)
           .duration(480)
-          .EUt(GTValues.VHA[GTValues.UHV]);
+          .EUt(GTValues.VHA[GTValues.UIV]);
       
     });
 
