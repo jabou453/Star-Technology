@@ -149,7 +149,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.injection_mixer(id('nether_tempered_nether_star_shard'))
         .itemInputs('kubejs:energized_nether_star_shard')
-        .inputFluids('gtceu:magmada_alloy 18', 'gtceu:utopian_akreyrium 50')
+        .inputFluids('gtceu:magmada_alloy 1', 'gtceu:utopian_akreyrium 15')
         .itemOutputs('kubejs:nether_tempered_shard')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UHV]);

@@ -256,9 +256,9 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembly_line(id('sterile_cleaning_maintenance_hatch'))
         .itemInputs(
-            '1x gtceu:uiv_machine_hull', '2x gtceu:uiv_robot_arm', '1x gtceu:uiv_emitter', '3x #gtceu:circuits/uiv', 
-            '2x gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_large_fluid_pipe', '1x gtceu:abyssal_alloy_rotor', 
-            '4x gtceu:blacklight', '4x gtceu:polonium_bismide_single_cable'
+            '1x gtceu:uev_machine_hull', '2x gtceu:uev_robot_arm', '1x gtceu:uev_emitter', '3x #gtceu:circuits/uev', 
+            '2x gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_large_fluid_pipe', '1x gtceu:magmada_alloy_rotor', 
+            '4x gtceu:blacklight', '4x gtceu:cerium_tritelluride_single_cable'
         )
         .inputFluids(
             'gtceu:indium_tin_lead_cadmium_soldering_alloy 2304',

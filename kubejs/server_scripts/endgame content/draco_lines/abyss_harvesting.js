@@ -3,6 +3,20 @@ ServerEvents.recipes(event => {
 
     // Abyss Harvester Controller + Misc
 
+    event.recipes.gtceu.assembler(id('mythrolic_drilling_casing'))
+        .itemInputs('gtceu:nyanium_frame', 'gtceu:uhv_emitter', '6x gtceu:double_mythrolic_alloy_plate', '4x gtceu:mythrolic_alloy_gear')
+        .itemOutputs('2x kubejs:abyssal_drill_1')
+        .duration(250)
+        .EUt(GTValues.VHA[GTValues.UEV])
+        .circuit(6);
+
+    event.recipes.gtceu.assembler(id('starium_drilling_casing'))
+        .itemInputs('gtceu:nyanium_frame', 'gtceu:uhv_sensor', '6x gtceu:double_starium_alloy_plate', '4x gtceu:starium_alloy_gear')
+        .itemOutputs('2x kubejs:abyssal_drill_2')
+        .duration(250)
+        .EUt(GTValues.VHA[GTValues.UEV])
+        .circuit(6);
+
         // === //
 
     event.recipes.gtceu.assembler(id('voidic_reinforced_mesh'))

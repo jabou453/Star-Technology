@@ -89,4 +89,11 @@ StartupEvents.registry('item', event => {
         .displayName('Voidic Reinforced Mesh')
         .texture('kubejs:item/voidic_reinforced_mesh');
 
+    // Gravi star continuations
+    event.create('helish_star')
+        .displayName('Helish Star');
+    
+    event.create('dragon_eye')
+        .displayName('Dragon Eye');
+
 });
