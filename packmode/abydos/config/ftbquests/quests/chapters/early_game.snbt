@@ -11,7 +11,11 @@
 	quests: [
 		{
 			dependencies: ["16A9D8E864A18B9E"]
-			description: ["The start of any skyblock pack. Who wood have guessed."]
+			description: [
+				"The start of any skyblock pack. Who wood have guessed."
+				""
+				"If this were a skyblock that is......"
+			]
 			id: "5B3D8132C90D790B"
 			rewards: [{
 				count: 2
@@ -181,7 +185,7 @@
 		}
 		{
 			dependencies: ["16A9D8E864A18B9E"]
-			description: ["By sneaking and right-clicking Grass (the dirt one), you can get pebbles for basic stone types."]
+			description: ["Sand, Stone, and maybe a lone village Good Luck"]
 			icon: "minecraft:cobblestone"
 			id: "07CBF849162D7BDF"
 			rewards: [{
@@ -191,20 +195,12 @@
 				type: "item"
 			}]
 			size: 1.0d
-			tasks: [
-				{
-					count: 4L
-					id: "18540F033A0DC299"
-					item: { Count: 4, id: "exnihilosequentia:stone_pebble" }
-					type: "item"
-				}
-				{
+			tasks: [{
 					id: "00FD763580EAA374"
 					item: "minecraft:cobblestone"
 					type: "item"
-				}
-			]
-			title: "Touching Grass"
+			}]
+			title: "No Touching Grass"
 			x: -4.5d
 			y: -4.0d
 		}
