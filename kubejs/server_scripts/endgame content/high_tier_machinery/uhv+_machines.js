@@ -13,6 +13,8 @@ ServerEvents.recipes(event => {
     event.remove({input: /gtceu:opv.*/})
     event.remove({not: {output: 'gtceu:max_battery'},output: /gtceu:max.*/})
     event.remove({not: {input: 'gtceu:max_battery'},input: /gtceu:max.*/})
+    
+if (global.packmode !== 'hard'){(() => { // Packmode Opener
 
 const input = [
     {tier:'uhv',tier1under:'uv',main:'neutronium',cable:'europium',wire:'zirconium_selenide_diiodide',glass:'fusion_glass',plastic:'polyether_ether_ketone',cable1up:'cerium_tritelluride',mag:'pure_netherite',pipe:'neutronium',buzz:'neutronium',elctrlyzWire:'iron_selenide_over_strontium_titanium_oxide',chip:'gtceu:uhpic',math:'1'},
@@ -305,5 +307,7 @@ input.forEach(i=>{
             .duration(320)
             .EUt(GTValues.VA[GTValues.UHV]*t.pwr)    
     });
+
+})()} // Packmode Closer
 
 });

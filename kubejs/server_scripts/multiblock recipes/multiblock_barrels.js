@@ -150,8 +150,8 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.industrial_barrel_magmatic(id('lava'))
         .itemInputs('#forge:cobblestone')
-        .outputFluids('minecraft:lava 500')
-        .duration(100)
+        .outputFluids('minecraft:lava 10000')
+        .duration(1600)
         .EUt(GTValues.VHA[GTValues.LV]);
 
     const IndBar_Pebbles = (type, circuitType, aqueous, fluid_quantity) => {

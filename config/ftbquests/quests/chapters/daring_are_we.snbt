@@ -80,7 +80,10 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["53BA24466D74ADE2"]
+			dependencies: [
+				"53BA24466D74ADE2"
+				"48ECF7E173796889"
+			]
 			id: "16ED2B1E235E2B57"
 			tasks: [{
 				id: "3166F98475FCE9E8"
@@ -209,7 +212,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: -1.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -262,6 +265,7 @@
 				"0582D0B8CFDDAE38"
 				"4FEE1AD94323BE6B"
 			]
+			hide_dependent_lines: true
 			id: "3DCEFC726A1157B1"
 			tasks: [{
 				id: "499031D774F67667"
@@ -356,7 +360,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: -4.0d
+			y: -5.5d
 		}
 		{
 			dependencies: ["172FD0EF95014D28"]
@@ -378,42 +382,45 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 2.0d
+			y: 0.5d
 		}
 		{
-			dependencies: ["6EBA0B08DA7E6709"]
+			dependencies: [
+				"6EBA0B08DA7E6709"
+				"3DCEFC726A1157B1"
+			]
 			id: "064133271B63F34C"
 			tasks: [{
 				id: "66980A1819F330D1"
 				item: "gtceu:mv_assembler"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 4.5d
 			y: 3.5d
 		}
 		{
-			dependencies: ["3DCEFC726A1157B1"]
+			dependencies: [
+				"2B1B84BFE7CD7AF4"
+				"56A008A527F29B81"
+			]
 			id: "5D0F60CFECDD2C99"
 			tasks: [{
 				id: "2DA1E50EF242D0BB"
 				item: "gtceu:component_chamber"
 				type: "item"
 			}]
-			x: -1.5d
+			x: 1.5d
 			y: 3.5d
 		}
 		{
-			dependencies: [
-				"5D0F60CFECDD2C99"
-				"2B1B84BFE7CD7AF4"
-			]
+			dependencies: ["5D0F60CFECDD2C99"]
 			id: "6EBA0B08DA7E6709"
 			tasks: [{
 				id: "5257EC57889558E3"
 				item: "gtceu:mv_electric_motor"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 3.0d
 			y: 3.5d
 		}
 		{
@@ -429,8 +436,8 @@
 				item: "gtceu:mv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 3.5d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -443,7 +450,7 @@
 				item: "gtceu:magnalium_ingot"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 0.0d
 			y: 2.0d
 		}
 		{
@@ -466,12 +473,12 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: -5.5d
+			y: -7.0d
 		}
 		{
 			dependencies: [
-				"12F7764A6E3A7F85"
 				"1858D10674FB73EA"
+				"0FBAB25F82CE854D"
 			]
 			id: "6FB75394849ECE08"
 			tasks: [{
@@ -507,7 +514,7 @@
 				item: "gtceu:ulpic_wafer"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.5d
 			y: 2.0d
 		}
 		{
@@ -555,6 +562,7 @@
 				"3DD86BE7B081C146"
 				"291B70F529285F79"
 				"1CB7E62759C69289"
+				"1B1D258E686DB33C"
 			]
 			id: "2BFCA6F4E0AE951C"
 			tasks: [{
@@ -569,16 +577,23 @@
 			dependencies: ["583A60E6A408D4DE"]
 			hide_dependency_lines: true
 			id: "0AD09A2E99F22EEA"
-			tasks: [{
-				id: "07F82EB0AB568897"
-				item: "gtceu:magnesium_dust"
-				type: "item"
-			}]
-			x: 0.0d
+			tasks: [
+				{
+					id: "07F82EB0AB568897"
+					item: "gtceu:magnesium_dust"
+					type: "item"
+				}
+				{
+					id: "0ACE0B34678BAF62"
+					item: "gtceu:magnesia_dust"
+					type: "item"
+				}
+			]
+			x: -1.5d
 			y: 2.0d
 		}
 		{
-			dependencies: ["1B1D258E686DB33C"]
+			dependencies: ["6EBA0B08DA7E6709"]
 			hide_dependency_lines: true
 			id: "44E2B7729CFD62CF"
 			tasks: [{
@@ -586,7 +601,7 @@
 				item: "gtceu:pyrolyse_oven"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 6.0d
 			y: -7.0d
 		}
 		{
@@ -597,11 +612,14 @@
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 5.0d
+			x: 3.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["6EBA0B08DA7E6709"]
+			dependencies: [
+				"6EBA0B08DA7E6709"
+				"3DCEFC726A1157B1"
+			]
 			hide_dependent_lines: true
 			id: "106B9FF2B76972D8"
 			tasks: [{
@@ -609,8 +627,8 @@
 				item: "gtceu:mv_laser_engraver"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 5.0d
+			x: 1.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -624,18 +642,7 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 0.5d
-		}
-		{
-			dependencies: ["0FBAB25F82CE854D"]
-			id: "12F7764A6E3A7F85"
-			tasks: [{
-				id: "320FA04690E2B1D7"
-				title: "Boule Refinement"
-				type: "checkmark"
-			}]
-			x: 4.5d
-			y: 2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["1B1D258E686DB33C"]
@@ -909,7 +916,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: -5.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["27EDBD8DBCA325A6"]
@@ -1062,7 +1069,10 @@
 			y: -10.5d
 		}
 		{
-			dependencies: ["627ADC0A663F28B5"]
+			dependencies: [
+				"627ADC0A663F28B5"
+				"3DCEFC726A1157B1"
+			]
 			id: "1858D10674FB73EA"
 			tasks: [{
 				id: "40F05935C8887C28"
@@ -1227,7 +1237,11 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["6905835A6D5D910C"]
+			dependencies: [
+				"6905835A6D5D910C"
+				"064133271B63F34C"
+			]
+			hide_dependency_lines: true
 			id: "369245AC0231F541"
 			tasks: [{
 				id: "0032B13A4F5C32C5"
@@ -1246,7 +1260,7 @@
 				item: "gtceu:sodium_bisulfate_dust"
 				type: "item"
 			}]
-			x: 9.0d
+			x: 7.5d
 			y: -5.5d
 		}
 		{
@@ -3238,7 +3252,7 @@
 				item: "gtceu:phosphorus_wafer"
 				type: "item"
 			}]
-			x: 10.5d
+			x: 9.0d
 			y: 5.0d
 		}
 		{
@@ -3252,7 +3266,7 @@
 				item: "gtceu:phosphorus_boule"
 				type: "item"
 			}]
-			x: 9.0d
+			x: 7.5d
 			y: 5.0d
 		}
 		{
@@ -3270,12 +3284,52 @@
 			dependencies: ["583A60E6A408D4DE"]
 			hide_dependency_lines: true
 			id: "27E712CAC7B593B6"
+			tasks: [
+				{
+					id: "0686384C88C0254B"
+					item: "gtceu:phosphorus_dust"
+					type: "item"
+				}
+				{
+					id: "5D887B214140D1B7"
+					item: "gtceu:phosphorus_pentoxide_dust"
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"7F59B5C67371ECA3"
+				"27E712CAC7B593B6"
+			]
+			id: "56A008A527F29B81"
 			tasks: [{
-				id: "0686384C88C0254B"
-				item: "gtceu:phosphorus_dust"
+				id: "45F5B4B28CBCECF6"
+				item: "gtceu:manganese_phosphide_ingot"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["583A60E6A408D4DE"]
+			hide_dependency_lines: true
+			id: "7F59B5C67371ECA3"
+			tasks: [
+				{
+					id: "6C18D5511DAEAA43"
+					item: "gtceu:manganese_dust"
+					type: "item"
+				}
+				{
+					id: "69AFBE4BC7CF3141"
+					item: "gtceu:pyrolusite_dust"
+					type: "item"
+				}
+			]
+			x: 0.0d
 			y: 5.0d
 		}
 	]

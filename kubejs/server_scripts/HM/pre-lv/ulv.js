@@ -109,34 +109,6 @@ ServerEvents.recipes(event => {
     UlvMachine('machine_casing',['gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate']);
     UlvMachine('machine_hull',['gtceu:red_alloy_single_cable','gtceu:wrought_iron_plate','gtceu:red_alloy_single_cable','gtceu:wrought_iron_plate','gtceu:ulv_machine_casing','gtceu:wrought_iron_plate','gtceu:red_alloy_single_cable','gtceu:wrought_iron_plate','gtceu:red_alloy_single_cable']);
 
-    event.recipes.gtceu.assembler(id('ulv_machine_casing'))
-      .itemInputs('8x gtceu:wrought_iron_plate')
-      .itemOutputs('gtceu:ulv_machine_casing')
-      .circuit(8)
-      .duration(100)
-      .EUt(2);
-
-    event.recipes.gtceu.assembler(id('lv_machine_casing'))
-      .itemInputs('8x gtceu:steel_plate')
-      .itemOutputs('gtceu:lv_machine_casing')
-      .circuit(8)
-      .duration(100)
-      .EUt(8);
-
-    event.recipes.gtceu.assembler(id('ulv_machine_hull'))
-      .itemInputs('gtceu:ulv_machine_casing','4x gtceu:red_alloy_single_cable')
-      .inputFluids('gtceu:glue 576')
-      .itemOutputs('gtceu:ulv_machine_hull')
-      .duration(100)
-      .EUt(2);
-
-    event.recipes.gtceu.assembler(id('lv_machine_hull'))
-      .itemInputs('gtceu:lv_machine_casing','4x gtceu:tin_single_cable')
-      .inputFluids('gtceu:glue 576')
-      .itemOutputs('gtceu:lv_machine_hull')
-      .duration(100)
-      .EUt(8);
-
     let cable = 'gtceu:red_alloy_single_wire'
     event.recipes.create.sequenced_assembly([
         Item.of(`gtceu:red_alloy_single_cable`),

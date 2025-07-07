@@ -53,4 +53,9 @@ ServerEvents.recipes(event => {
         .duration(3650)
         .EUt(30);
 
+	event.replaceInput({ id: 'gtceu:mixer/rose_gold' },
+        'gtceu:copper_dust',
+        'gtceu:annealed_copper_dust'
+    );
+
 });

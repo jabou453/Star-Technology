@@ -7,6 +7,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /^gtceu:.*gearbox/ });
     event.remove({ output: /^gtceu:.*pipe_casing/ });
     event.remove({ output: /^gtceu:.*engine_intake_casing/ });
+    event.remove({ output: /start_core:enriched_naquadah.*/ });
 
     const SpecialCasing = (material, tier,f,p,g,e) => {
     let type = (material == 'tungsten_steel') ? 'tungstensteel' : material ;
@@ -123,5 +124,48 @@ ServerEvents.recipes(event => {
 
     // Standard Casing
 
+    const Hulls = (tier,material,wire,bindant,scaler) => {
+        let FluidQuant = (bindant === 'glue') ? 576 : 288 ;
+
+        event.recipes.gtceu.assembler(id(`${tier}_machine_casing`))
+            .itemInputs(`8x gtceu:${material}_plate`)
+            .itemOutputs(`gtceu:${tier}_machine_casing`)
+            .circuit(8)
+            .duration(100)
+            .EUt(2 * (4 ** scaler));
+
+        event.recipes.gtceu.assembler(id(`${tier}_machine_hull`))
+            .itemInputs(`gtceu:${tier}_machine_casing`,`4x gtceu:${wire}_single_cable`)
+            .inputFluids(`gtceu:${bindant} ${FluidQuant}`)
+            .itemOutputs(`gtceu:${tier}_machine_hull`)
+            .duration(100)
+            .EUt(2 * (4 ** scaler));
+
+    };
+
+    Hulls('ulv','wrought_iron','red_alloy','glue',0);
+    Hulls('lv','steel','tin','glue',1);
+    Hulls('mv','aluminium','copper','polyethylene',2);
+    Hulls('hv','stainless_steel','gold','polyethylene',3);
+    Hulls('ev','titanium','aluminium','polytetrafluoroethylene',4);
+    Hulls('iv','tungsten_steel','platinum','polytetrafluoroethylene',5);
+    Hulls('luv','rhodium_plated_palladium','niobium_titanium','polybenzimidazole',6);
+    Hulls('zpm','naquadah_alloy','vanadium_gallium','polybenzimidazole',7);
+    Hulls('uv','darmstadium','yttrium_barium_cuprate','polyether_ether_ketone',8);
+    // Hulls('uhv','neutronium','europium','polyether_ether_ketone',9);
+    // Hulls('uev','mythrolic_alloy','cerium_tritelluride','poly_34_ethylenedioxythiophene_polystyrene_sulfate',10);
+    // Hulls('uiv','chaotixic_alloy','polonium_bismide','poly_34_ethylenedioxythiophene_polystyrene_sulfate',11);
+
+    // Hermetic Casings
+
+    // Standard Casings
+
+    // Doubled Casings
+
+    // Complex Casings
+
+    // Cleanrooms Casings
+
+    // Assembly Line Casings
 
 });

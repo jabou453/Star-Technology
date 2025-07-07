@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
         .chancedOutput('3x kubejs:spessartine_geode', 3000, 0)
         .chancedOutput('2x kubejs:ruby_geode', 3500, 0)
         .chancedOutput('2x kubejs:diamond_geode', 1500, 0)
-        .duration(1500)
+        .duration(900)
         .EUt(GTValues.VHA[GTValues.MV]);
 
     // HV
@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
         .chancedOutput('3x kubejs:monazite_geode', 4000, 0)
         .chancedOutput('3x kubejs:topaz_geode', 3500, 0)
         .chancedOutput('3x kubejs:blue_topaz_geode', 3500, 0)
-        .duration(1500)
+        .duration(600)
         .EUt(GTValues.VHA[GTValues.HV]);
 
     // Certus Quartz Geode

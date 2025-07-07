@@ -50,6 +50,15 @@ ServerEvents.recipes(event => {
     // UHV,UEV,UIV adds Component Parts & Component Part Assembly (still made in CAL)
     // UXV,OPV,MAX .... Dont Worry About It
 
+    event.recipes.gtceu.advanced_machine_facility(id(`component_chamber`))
+        .itemInputs('gtceu:lv_assembler', '4x gtceu:lv_robot_arm', '2x gtceu:lv_conveyor_module', '3x gtceu:lv_electric_pump',
+            '8x gtceu:fine_aluminium_wire','4x gtceu:magnalium_gear','6x #gtceu:circuits/mv','2x gtceu:lv_field_generator',
+            '2x gtceu:long_magnalium_rod','6x gtceu:copper_double_cable')
+        .inputFluids('gtceu:soldering_alloy 864', 'gtceu:polyethylene 576', 'gtceu:rubber 432')
+        .itemOutputs(`gtceu:component_chamber`)
+        .duration(1200)
+        .EUt(120);
+
     let HM_Components = (tier,tierPrior,magnet,material,cable,rubber,wire,superconductor,fieldCore,subFieldCore,subFieldSupport,Pipe,Rotor,eut) => {
         if( tier == 'lv' ){
             let AssemblerComponentType = (type,inputs) => {
