@@ -27,7 +27,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('             AAA  ','             CCC  ','             CCC  ','              C   ','                  ','                  ','                  ','                  ','                  ')
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .where('C', Predicates.blocks('kubejs:enriched_naquadah_machine_casing'))
-            .where('G', Predicates.blocks('gtceu:fusion_glass') //All Hatches have a max
+            .where('G', Predicates.blocks('gtceu:fusion_glass')
                 .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1))

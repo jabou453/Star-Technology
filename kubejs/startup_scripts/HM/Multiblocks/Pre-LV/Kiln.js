@@ -1,6 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 	event.create('kiln')
-		.category('kiln')
+		.category('primitive')
 		.setMaxIOSize(2, 1, 0, 0)
 		.setSound(GTSoundEntries.FURNACE);
 });

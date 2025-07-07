@@ -1,9 +1,8 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('gate_assembly')
-        .category('gate_assembly')
+        .category('gate_construction')
         .setEUIO('in')
-        .setMaxIOSize(6, 1, 3, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_FUSION , FillDirection.LEFT_TO_RIGHT)
+        .setMaxIOSize(24, 1, 3, 0)
         .setSound(GTSoundEntries.ASSEMBLER);
 });
 

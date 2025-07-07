@@ -121,4 +121,47 @@ ServerEvents.recipes(event => {
             .circuit(3);
     });
 
+        event.recipes.gtceu.crop_greenhouse(id(`chorus_fruit_harvest_no_fertilizer`))
+            .notConsumable(`8x minecraft:chorus_flower`)
+            .inputFluids('gtceu:ender_air 250')
+            .itemOutputs(`16x minecraft:chorus_fruit`)
+            .chancedOutput(`8x minecraft:chorus_flower`, 5000, 0)
+            .duration(600)
+            .dimension('minecraft:the_end')
+            .EUt(global.vha['hv'])
+            .circuit(0);
+
+        event.recipes.gtceu.crop_greenhouse(id(`chorus_fruit_harvest_bone_meal`))
+            .notConsumable(`8x minecraft:chorus_flower`)
+            .chancedInput('minecraft:bone_meal', 7500, -500)
+            .inputFluids('gtceu:ender_air 250')
+            .itemOutputs(`32x minecraft:chorus_fruit`)
+            .chancedOutput(`16x minecraft:chorus_flower`, 5000, 0)
+            .duration(600)
+            .dimension('minecraft:the_end')
+            .EUt(global.vha['hv'])
+            .circuit(1);
+
+        event.recipes.gtceu.crop_greenhouse(id(`chorus_fruit_harvest_compost`))
+            .notConsumable(`8x minecraft:chorus_flower`)
+            .chancedInput('thermal:compost', 7500, -500)
+            .inputFluids('gtceu:ender_air 250')
+            .itemOutputs(`48x minecraft:chorus_fruit`)
+            .chancedOutput(`24x minecraft:chorus_flower`, 5000, 0)
+            .duration(600)
+            .dimension('minecraft:the_end')
+            .EUt(global.vha['hv'])
+            .circuit(2);
+
+        event.recipes.gtceu.crop_greenhouse(id(`chorus_fruit_harvest_fertilizer`))
+            .notConsumable(`8x minecraft:chorus_flower`)
+            .chancedInput('gtceu:fertilizer', 7500, -500)
+            .inputFluids('gtceu:ender_air 250')
+            .itemOutputs(`64x minecraft:chorus_fruit`)
+            .chancedOutput(`32x minecraft:chorus_flower`, 5000, 0)
+            .duration(600)
+            .dimension('minecraft:the_end')
+            .EUt(global.vha['hv'])
+            .circuit(3);
+
 });

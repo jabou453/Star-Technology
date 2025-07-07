@@ -2,7 +2,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     // Large Rock Crusher Recipe Type
     event.create('large_rock_crusher')
-        .category('large_rock_crusher')
+        .category('resource_production')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 2, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_HAMMER , FillDirection.LEFT_TO_RIGHT)

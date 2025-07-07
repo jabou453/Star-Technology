@@ -15,5 +15,33 @@ StartupEvents.registry('item', event => {
         .displayName('Multiblock Upgrade Kit')
         .texture('kubejs:item/kits/upgrade_kit')
         .tooltip('§7Used to upgrade some HV machines into multiblocks capable of §6Perfect Overclock');
+        
+    event.create('draconic_stem_cells')
+        .displayName('Draconic Stem Cells')
+        .texture('kubejs:item/draconic/draconic_stem_cells');
+
+    event.create('lactating_draconic_cells')
+        .displayName('Lactating Draconic Cells')
+        .texture('kubejs:item/draconic/lactating_draconic_cells');
+
+    event.create('draconic_brain_matter_cells')
+        .displayName('Draconic Brain Matter Cells')
+        .texture('kubejs:item/draconic/draconic_brain_matter_cells');
+
+    event.create('draconic_scale_cells')
+        .displayName('Draconic Scale Cells')
+        .texture('kubejs:item/draconic/draconic_scale_cells');
+
+    // Gravi star continuations
+    event.create('helish_star')
+        .displayName('Helish Star')
+        .tooltip('§7A Nether Star Returned Home')
+        .texture('kubejs:item/helish_star');
+
+    event.create('dragonic_eye')
+        .displayName('§5Dragonic§r Eye')
+        .tooltip('§7Can It See the Future?')
+        .texture('kubejs:item/dragon_eye');
+
 
 });

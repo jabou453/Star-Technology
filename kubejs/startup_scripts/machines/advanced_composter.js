@@ -1,6 +1,6 @@
 global.recipe_types(event => {
     event.create('composting')
-        .category('composting')
+        .category('primitive')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 0, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

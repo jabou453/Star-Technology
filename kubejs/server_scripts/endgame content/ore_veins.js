@@ -169,4 +169,58 @@ GTCEuServerEvents.oreVeins(event => {
     //         )
     //     )
     // });
+
+    event.add('start:brimstone_patch', vein => {
+        vein.weight(100)
+        vein.clusterSize(20)
+        vein.density(0.15)
+        vein.discardChanceOnAirExposure(0)
+
+        vein.layer('netherrack')
+        vein.dimensions("minecraft:the_nether")
+
+        vein.heightRangeUniform(10, 120)
+
+        vein.layeredVeinGenerator(generator => generator
+            .buildLayerPattern(pattern => pattern
+                .layer(l => l.weight(3).block(() => Block.getBlock('kubejs:brimstone')).size(16, 32))
+                .layer(l => l.weight(2).mat(GTMaterials.get('plutonium')).size(2, 3))
+                .layer(l => l.weight(1).mat(GTMaterials.get('thorium')).size(1, 3))
+            )
+        )
+
+        vein.surfaceIndicatorGenerator(indicator => indicator
+            .surfaceRock(GTMaterials.get('plutonium'))
+            .placement('above')
+            .density(0.4)
+            .radius(5)
+        )
+    });
+
+    event.add('start:cryostone_patch', vein => {
+        vein.weight(100)
+        vein.clusterSize(20)
+        vein.density(0.15)
+        vein.discardChanceOnAirExposure(0)
+
+        vein.layer('netherrack')
+        vein.dimensions("minecraft:the_nether")
+
+        vein.heightRangeUniform(10, 120)
+
+        vein.layeredVeinGenerator(generator => generator
+            .buildLayerPattern(pattern => pattern
+                .layer(l => l.weight(3).block(() => Block.getBlock('kubejs:cryostone')).size(16, 32))
+                .layer(l => l.weight(2).mat(GTMaterials.get('cobaltite')).size(2, 3))
+                .layer(l => l.weight(1).mat(GTMaterials.get('electrotine')).size(1, 3))
+            )
+        )
+
+        vein.surfaceIndicatorGenerator(indicator => indicator
+            .surfaceRock(GTMaterials.get('cobaltite'))
+            .placement('above')
+            .density(0.4)
+            .radius(5)
+        )
+    });
 });

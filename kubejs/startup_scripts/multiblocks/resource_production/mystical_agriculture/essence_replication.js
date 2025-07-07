@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('essence_replication')
-        .category('essence_replication')
+        .category('mystical')
         .setEUIO('in')
         .setMaxIOSize(1, 1, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR , FillDirection.LEFT_TO_RIGHT)

@@ -39,14 +39,14 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.electromagnetic_separator(id(`solar_generator_${type}_decomp`))
             .itemInputs(`solarflux:sp_${type}`)
-            .itemOutputs(`gtceu:${material}_frame`, `solarflux:${cell}`, `kubejs:${tier}_universal_circuit`)
+            .itemOutputs(`solarflux:${cell}`)
             .duration(200)
             .EUt(30 * (4 ** (type - 1)));
 
         if (type !== 1) {
         let prior = (type == 2) ? 'mirror' : `photovoltaic_cell_${type - 2}` ;
         event.recipes.gtceu.circuit_assembler(id(`photovoltaic_cell_${type - 1}`))
-            .itemInputs(`solarflux:${prior}`, `kubejs:${chip}_chip`, `2x #gtceu:circuits/${tier}`, `kubejs:${core}_energy_core`, `6x gtceu:fine_${wire}_wire`)
+            .itemInputs(`solarflux:${prior}`, `kubejs:${chip}_chip`, `1x #gtceu:circuits/${tier}`, `kubejs:${core}_energy_core`, `6x gtceu:fine_${wire}_wire`)
             .inputFluids(`gtceu:soldering_alloy ${72 * type}`)
             .itemOutputs(`solarflux:photovoltaic_cell_${type - 1}`)
             .duration(400)
@@ -65,7 +65,7 @@ ServerEvents.recipes(event => {
     // T8 Solar Decomp (so it has some use in Eta [aka can be decomped])
         event.recipes.gtceu.electromagnetic_separator(id(`solar_generator_8_decomp`))
             .itemInputs(`solarflux:sp_8`)
-            .itemOutputs(`solarflux:photovoltaic_cell_6`, `kubejs:uv_universal_circuit`, `2x gtceu:darmstadtium_plate`)
+            .itemOutputs(`4x solarflux:photovoltaic_cell_6`)
             .duration(200)
             .EUt(30 * (4 ** 7));
 

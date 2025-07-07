@@ -123,7 +123,10 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["1F5CCE8CFD02903A"]
+			dependencies: [
+				"1F5CCE8CFD02903A"
+				"397C622B06B1165A"
+			]
 			description: ["A faster and more advanced version of the Primitive Ore Factory, capable of handling higher tier ores."]
 			id: "0E88CB5E68212006"
 			rewards: [{
@@ -546,7 +549,7 @@
 				"4B51B15B49620F57"
 			]
 			description: [
-				"Used to upgrade all Thermal machine stats by 4x."
+				"Used to upgrade all Thermal machine stats by 6x."
 				""
 				"Very usefull to use on:"
 				"- Dynamo's"
@@ -562,13 +565,13 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "49CE7C3C268CD584"
+				id: "2E17F557A322B711"
 				item: {
 					Count: 1
-					id: "kubejs:lv_upgrade_kit"
+					id: "kubejs:lv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 4.0f
+							BaseMod: 6.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1210,7 +1213,7 @@
 		}
 		{
 			dependencies: ["7EC83EEF3F7A89B8"]
-			description: ["4x as efficient as the LV one."]
+			description: ["2x as efficient as the LV one."]
 			id: "38C4FC58A4482F83"
 			rewards: [{
 				id: "23701926BCA340FC"
@@ -1218,13 +1221,13 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "400416FA464177FB"
+				id: "75813F1318A38663"
 				item: {
 					Count: 1
-					id: "kubejs:mv_upgrade_kit"
+					id: "kubejs:mv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 16.0f
+							BaseMod: 12.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1415,28 +1418,7 @@
 		}
 		{
 			dependencies: ["50EA5165AF923EB4"]
-			description: ["Power Hatch for your ME network."]
-			id: "0A98FE21C12F1199"
-			rewards: [{
-				count: 2
-				id: "5342304D15756502"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "gear"
-			size: 1.5d
-			tasks: [{
-				id: "0E687BD5E4F49922"
-				item: "ae2:energy_acceptor"
-				type: "item"
-			}]
-			x: 8.0d
-			y: -7.0d
-		}
-		{
-			dependencies: ["1F5CCE8CFD02903A"]
 			description: ["Use these to press plates into printed circuits."]
-			hide_dependency_lines: true
 			id: "4CCB2727C13AEBDD"
 			rewards: [{
 				id: "4F8FC78D0F3D8220"
@@ -1466,8 +1448,8 @@
 				}
 			]
 			title: "Inscriber Presses"
-			x: 14.0d
-			y: -5.5d
+			x: 10.5d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -1475,12 +1457,7 @@
 				"4ED724D5B94CFA3A"
 				"6896F9AF41EE8571"
 			]
-			description: [
-				"You are gonna need a lot of these."
-				""
-				"PS: The linked machine is an AMAZING way to do these fast/in bulk."
-				"{ \"text\": \"Multi Smelter\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"649596731FFA9C9A\" } }"
-			]
+			description: ["You are gonna need a lot of these, though they get more efficient the better wafers you have."]
 			id: "16A71D038D996289"
 			rewards: [{
 				count: 2
@@ -1698,11 +1675,8 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"16A71D038D996289"
-				"0A98FE21C12F1199"
-			]
-			description: ["{ \"text\": \"Applied Energistics\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"369E90E2807E6776\" } }"]
+			dependencies: ["16A71D038D996289"]
+			description: ["{ \"text\": \"Applied Energistics\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"16D74E923B76E266\" } }"]
 			icon: "ae2:fluix_glass_cable"
 			id: "352E17B4D7719638"
 			tasks: [{
@@ -1710,8 +1684,8 @@
 				title: "Go Check out Applied Energistic"
 				type: "checkmark"
 			}]
-			x: 10.0d
-			y: -7.0d
+			x: 14.0d
+			y: -5.5d
 		}
 		{
 			dependencies: ["76B701A5EF4C1EF1"]
@@ -1932,7 +1906,8 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["550DB81B8DC91730"]
+			dependencies: ["12C9427A04A2F550"]
+			hide_dependency_lines: true
 			id: "50EA5165AF923EB4"
 			rewards: [{
 				id: "5F58FB860D0AEFC4"
@@ -1944,7 +1919,7 @@
 				item: "ae2:sky_dust"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 7.5d
 			y: -7.0d
 		}
 		{

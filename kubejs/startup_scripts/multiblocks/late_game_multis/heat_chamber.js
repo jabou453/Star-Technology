@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('heat_chamber')
-        .category('heat_chamber')
+        .category('highly_advanced')
         .setEUIO('in')
         .setMaxIOSize(4, 4, 4, 4)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)

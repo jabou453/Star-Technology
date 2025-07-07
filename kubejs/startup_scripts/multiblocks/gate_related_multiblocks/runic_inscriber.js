@@ -1,7 +1,7 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('runic_inscribe_manipulate')
-        .category('runic_inscribe_manipulate')
+        .category('gate_construction')
         .setEUIO('in')
         .setMaxIOSize(3, 1, 3, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_CIRCUIT , FillDirection.LEFT_TO_RIGHT)

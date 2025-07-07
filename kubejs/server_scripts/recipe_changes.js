@@ -431,6 +431,32 @@ ServerEvents.recipes(event => {
         E: 'gtceu:energium_dust'
     }).id('start:shaped/neodymium_magnet');
 
+    //Added Tools
+
+        //Mallet + Plunger
+        [
+        'perfluoroelastomer_rubber' 
+        ].forEach(material => {
+            event.shaped(Item.of(`gtceu:${material}_mallet`), [
+                'II ',
+                'IIS',
+                'II '
+            ], {
+                I: `gtceu:${material}_ingot`,
+                S: 'minecraft:stick'
+            }).id(`start:shaped/${material}_mallet`);
+            event.shaped(Item.of(`gtceu:${material}_plunger`), [
+                'WPP',
+                ' SP',
+                'S F'
+            ], {
+                W: '#forge:tools/wire_cutters',
+                F: '#forge:tools/files',
+                P: `gtceu:${material}_plate`,
+                S: `#forge:rods`
+            });
+        });
+
     //plates
     [
         {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
@@ -477,7 +503,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('9x gtceu:duralumin_dust')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.HV])
-        .circuit(2);
+        .circuit(4);
 
     event.recipes.gtceu.mixer(id('beryllium_aluminium_alloy'))
         .itemInputs('7x gtceu:beryllium_dust', '1x gtceu:aluminium_dust')
@@ -584,6 +610,15 @@ ServerEvents.recipes(event => {
         .duration(400)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.V[GTValues.UHV]);
+
+    event.recipes.gtceu.assembler(id('redstone_variadic_interface'))
+        .itemInputs('gtceu:luv_machine_hull', '2x gtceu:hpic_chip', 'gtceu:redstone_plate', 'gtceu:advanced_item_detector_cover',
+            'gtceu:advanced_fluid_detector_cover', 'gtceu:advanced_energy_detector_cover')
+        .itemOutputs('start_core:redstone_variadic_interface')
+        .inputFluids('gtceu:soldering_alloy 288')
+        .duration(600)
+        .circuit(4)
+        .EUt(GTValues.V[GTValues.EV]);
 
     event.remove({id: 'gtceu:macerator/macerate_naquadah_refined_ore_to_dust'});
     event.recipes.gtceu.macerator(id('macerate_refined_naquadah_ore_to_dust'))
