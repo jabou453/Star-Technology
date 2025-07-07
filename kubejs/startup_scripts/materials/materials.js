@@ -436,7 +436,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     elemIngot('magnetic_zapolgium', 'zapolgium', 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
-    elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3250], []);
+    elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3250], [fine_wire]);
 
     elemIngotFluid('rhexis', 0x330000, DULL, [15499, 'highest', VA('uiv'), 3450], []);
 
@@ -444,7 +444,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     elemIngotFluid('mythril', 0x006666, METALLIC, [11299, 'highest', VA('uhv'), 2400], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
 
-    elemIngotFluid('adamantine', 0xe99700, METALLIC, [13299, 'highest', VA('uev'), 3000], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
+    elemIngotFluid('adamantine', 0xe99700, METALLIC, [13299, 'highest', VA('uev'), 3000], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, fine_wire]);
 
     elemIngotFluid('estalt', 0xff5050, DULL, [12299, 'highest', VA('uhv'), 2600], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
 
@@ -1342,7 +1342,23 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquidTemp('voidic_waste_residue', 10000, '1x mystery', 0x6B4A2F, [no_decomp]);
 
+    //Infernal Concentrates
+
+    compLiquidTemp('crude_infernal_concentrate', 40000, '1x mystery', 0x6e1a00, [no_decomp]);
+
+    compLiquidTemp('infernal_concentrate', 45000, '1x mystery', 0xb02e00, [no_decomp]);
+
+    compLiquidTemp('superheated_infernal_concentrate', 50000, '1x mystery', 0xff6b00, [no_decomp]); 
+
+    compLiquidTemp('sub_stellar_infernal_concentrate', 75000, '1x mystery', 0xfefbc6, [no_decomp]); 
+
+    compLiquidTemp('super_stellar_infernal_concentrate', 100000, '1x mystery', 0xf4faff, [no_decomp]); 
+
+    compLiquidTemp('hyper_stellar_infernal_concentrate', 125000, '1x mystery', 0x9cd7ff, [no_decomp]);
+
     //UEV Materials
+    event.create('warped').dust().color(0x4FBB85).flags([no_smelt]);
+
     compLiquid('nether_star_concentrate', ['1x mystery'], 0xeeeeee, [no_decomp]);
 
     compIngotLiquidSeccolor('aurourium', ['1x mystery'], 0x5d44de, 0xde44ce, SHINY, [], [no_decomp, fine_wire, no_smelt]);

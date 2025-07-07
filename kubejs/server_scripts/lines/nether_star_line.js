@@ -41,28 +41,27 @@ ServerEvents.recipes(event => {
     });
 
     [
-        { element: 'blaze', plasma: 'helium' },
-        { element: 'blizz', plasma: 'argon' },
-        { element: 'blitz', plasma: 'nitrogen' },
-        { element: 'basalz', plasma: 'oxygen' },
+        { element: 'blaze', mod: 'minecraft' },
+        { element: 'blizz', mod: 'thermal' },
+        { element: 'blitz', mod: 'thermal' },
+        { element: 'basalz', mod: 'thermal' },
     ].forEach(elFluid => {
-        const {element, plasma} = elFluid;
+        const {element, mod} = elFluid;
 
-        event.recipes.gtceu.fusion_reactor(id(`energized_${element}`))
-            .inputFluids(`gtceu:${element} 144`, `gtceu:${plasma}_plasma 144`)
+        event.recipes.gtceu.heat_chamber(id(`energized_${element}`))
+            .itemInputs(`2x ${mod}:${element}_powder`)
+            .inputFluids(`gtceu:${element} 144`)
             .outputFluids(`gtceu:energized_${element} 144`)
-            .duration(2880)
-            .EUt(GTValues.VHA[GTValues.IV])
-            .fusionStartEU(180000000);
+            .duration(200)
+            .EUt(GTValues.VHA[GTValues.UV]);
 
         event.recipes.gtceu.fusion_reactor(id(`nether_tempered_${element}`))
-            .inputFluids(`gtceu:energized_${element} 144`, `gtceu:ancient_netherite 72`)
+            .inputFluids(`gtceu:energized_${element} 144`, `gtceu:ancient_netherite 36`)
             .outputFluids(`gtceu:nether_tempered_${element} 144`)
-            .duration(2880)
-            .EUt(GTValues.VHA[GTValues.UV])
+            .duration(2400)
+            .EUt(GTValues.VHA[GTValues.ZPM])
             .fusionStartEU(800000000);
     });
-
      
     [
         {element: 'fire', mod: 'minecraft', powder: 'blaze'},
@@ -79,30 +78,31 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_shard`))
           .itemInputs('kubejs:energized_nether_star_shard')
           .inputFluids(`gtceu:${shard.powder} 720`)
-          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 7500, 0)
+          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 9000, 0)
           .duration(480)
           .EUt(GTValues.VHA[GTValues.IV]);
       
         event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_charge`))
           .itemInputs(`4x ${shard.mod}:${shard.element}_charge`)
           .inputFluids(`gtceu:${shard.powder} 720`)
-          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 2000, 0)
+          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 3000, 0)
           .duration(480)
           .EUt(GTValues.VHA[GTValues.EV]);
 
         event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_energized`))
           .itemInputs('kubejs:energized_nether_star_shard')
-          .inputFluids(`gtceu:energized_${shard.powder} 720`)
+          .inputFluids(`gtceu:energized_${shard.powder} 432`)
           .itemOutputs(`kubejs:${shard.element}_infused_shard`)
-          .duration(480)
+          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 1500, 0)
+          .duration(240)
           .EUt(GTValues.VHA[GTValues.UHV]);
 
         event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_nether_tempered`))
           .itemInputs('kubejs:nether_tempered_shard')
-          .inputFluids(`gtceu:nether_tempered_${shard.powder} 720`)
+          .inputFluids(`gtceu:nether_tempered_${shard.powder} 216`)
           .itemOutputs(`kubejs:${shard.element}_infused_shard`)
-          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 4000, 0)
-          .duration(480)
+          .chancedOutput(`kubejs:${shard.element}_infused_shard`, 8000, 0)
+          .duration(120)
           .EUt(GTValues.VHA[GTValues.UIV]);
       
     });
@@ -148,10 +148,11 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.EV]);
 
     event.recipes.gtceu.injection_mixer(id('nether_tempered_nether_star_shard'))
-        .itemInputs('kubejs:energized_nether_star_shard')
-        .inputFluids('gtceu:magmada_alloy 1', 'gtceu:utopian_akreyrium 15')
-        .itemOutputs('kubejs:nether_tempered_shard')
-        .duration(400)
+        .itemInputs('64x kubejs:energized_nether_star_shard')
+        .inputFluids('gtceu:magmada_alloy 16', 'gtceu:utopian_akreyrium 50')
+        .itemOutputs('64x kubejs:nether_tempered_shard')
+        .duration(1200)
+        .dimension('minecraft:the_nether')
         .EUt(GTValues.VHA[GTValues.UHV]);
 
 });

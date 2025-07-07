@@ -70,7 +70,7 @@ StartupEvents.registry('block', event => {
         .textureAll('kubejs:block/casings/ultimate_multis/draneko_casing');
 
     event.create('abyssal_drill_1')
-        .displayName('Abyssal Drill Casing')
+        .displayName('Mythrolic Drill Casing')
         .hardness(5)
         .resistance(10)
         .material('metal')
@@ -80,7 +80,7 @@ StartupEvents.registry('block', event => {
         .textureAll('kubejs:block/casings/ultimate_multis/abyssal_drill_casing');
 
     event.create('abyssal_drill_2')
-        .displayName('Abyssal Drill Casing')
+        .displayName('Starium Drill Casing')
         .hardness(5)
         .resistance(10)
         .material('metal')

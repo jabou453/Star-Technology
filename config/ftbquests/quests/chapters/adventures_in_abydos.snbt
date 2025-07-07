@@ -723,126 +723,38 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			tasks: [{
-				id: "0AF4E3E277B5B04F"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						display: {
-							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
-						}
-						items: [
-							{
-								Count: 1b
-								id: "start_core:bacteria_methane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_octane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butadiene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_benzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_toluene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetone"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetic_acid"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methyl_acetate"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_creosote"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_phenol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_dimethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_naphthalene"
-								tag: { }
-							}
-						]
-					}
+			tasks: [
+				{
+					id: "21B1C33C08178D65"
+					item: "start_core:bacteria_fermentibacter_solvatis"
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "6F2EB0EEC6256F1C"
+					item: "start_core:bacteria_xylotoxibacter_aromatica"
+					type: "item"
+				}
+				{
+					id: "674EE248B4B9A218"
+					item: "start_core:bacteria_petrospirillum_solvans"
+					type: "item"
+				}
+				{
+					id: "5ECE2F30A417B923"
+					item: "start_core:bacteria_octanivorax_sorbitolens"
+					type: "item"
+				}
+				{
+					id: "71CAFC4BC40B1A39"
+					item: "start_core:bacteria_bituminimonas_combustilis"
+					type: "item"
+				}
+				{
+					id: "6FCAD2C5B48E566B"
+					item: "start_core:bacteria_carbanogasibacter_volatilis"
+					type: "item"
+				}
+			]
 			title: "Bacterial Colonies"
 			x: 1.5d
 			y: -5.0d
@@ -2000,139 +1912,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["7F72F9E28713D965"]
-			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
-			id: "7D29B653F8C14ABC"
-			rewards: [{
-				id: "5B3778E2E7B9B0E4"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "3B32A5E4F0DFED06"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						display: {
-							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
-						}
-						items: [
-							{
-								Count: 1b
-								id: "start_core:bacteria_methane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_octane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butadiene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_benzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_toluene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetone"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetic_acid"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methyl_acetate"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_creosote"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_phenol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_dimethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_naphthalene"
-								tag: { }
-							}
-						]
-					}
-				}
-				type: "item"
-			}]
-			title: "Bacterial Colonies"
-			x: 1.5d
-			y: -5.0d
-		}
-		{
 			dependencies: [
 				"5E7153B7A10FC241"
 				"59B0F5DB2C1E96DC"
@@ -2157,139 +1936,6 @@
 			}]
 			x: 11.0d
 			y: -6.0d
-		}
-		{
-			dependencies: ["7F72F9E28713D965"]
-			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
-			id: "56A015318588C9F4"
-			rewards: [{
-				id: "4697E0C4626AEE1A"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "67A611680844E291"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						display: {
-							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
-						}
-						items: [
-							{
-								Count: 1b
-								id: "start_core:bacteria_methane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_octane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butadiene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_benzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_toluene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetone"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetic_acid"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methyl_acetate"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_creosote"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_phenol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_dimethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_naphthalene"
-								tag: { }
-							}
-						]
-					}
-				}
-				type: "item"
-			}]
-			title: "Bacterial Colonies"
-			x: 1.5d
-			y: -5.0d
 		}
 		{
 			dependencies: [

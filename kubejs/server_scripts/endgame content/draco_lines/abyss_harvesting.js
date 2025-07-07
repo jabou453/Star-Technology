@@ -3,15 +3,39 @@ ServerEvents.recipes(event => {
 
     // Abyss Harvester Controller + Misc
 
-    event.recipes.gtceu.assembler(id('mythrolic_drilling_casing'))
-        .itemInputs('gtceu:nyanium_frame', 'gtceu:uhv_emitter', '6x gtceu:double_mythrolic_alloy_plate', '4x gtceu:mythrolic_alloy_gear')
+    event.recipes.gtceu.assembly_line(id('abyssal_harvester'))
+        .itemInputs(
+            'kubejs:draneko_casing','12x gtceu:uev_field_generator','2x gtceu:uev_emitter','2x gtceu:uev_sensor','8x gtceu:uev_electric_pump',
+            '64x kubejs:uepic_chip','64x kubejs:uepic_chip','48x kubejs:uepic_chip','64x gtceu:void_foil','64x gtceu:void_foil'
+        )
+        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 57600','gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 21600','gtceu:dragon_breath 500')
+        .itemOutputs('start_core:abyssal_harvester')
+        .duration(2400)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:uev_gas_collector'))
+                .EUt(GTValues.VA[GTValues.UEV])
+                .CWUt(216)
+            )
+        .EUt(GTValues.VA[GTValues.UIV]);
+
+    event.recipes.gtceu.draco_infusion(id('draneko_casing'))
+        .itemInputs('gtceu:nyanium_frame', '2x gtceu:double_isovol_plate', 'gtceu:double_nyanium_plate', '2x kubejs:draconic_scale_cells', 
+            '2x kubejs:draconic_scale_cells', 'gtceu:double_nyanium_plate', '2x gtceu:double_isovol_plate')
+        .inputFluids('gtceu:dragon_breath 4000')
+        .itemOutputs('2x kubejs:draneko_casing')
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.assembler(id('mythrolic_drill_casing'))
+        .itemInputs('gtceu:nyanium_frame', 'gtceu:uhv_emitter', '6x gtceu:double_mythrolic_alloy_plate', '4x gtceu:mythrolic_alloy_gear', '2x gtceu:small_mythrolic_alloy_gear')
         .itemOutputs('2x kubejs:abyssal_drill_1')
         .duration(250)
         .EUt(GTValues.VHA[GTValues.UEV])
         .circuit(6);
 
-    event.recipes.gtceu.assembler(id('starium_drilling_casing'))
-        .itemInputs('gtceu:nyanium_frame', 'gtceu:uhv_sensor', '6x gtceu:double_starium_alloy_plate', '4x gtceu:starium_alloy_gear')
+    event.recipes.gtceu.assembler(id('starium_drill_casing'))
+        .itemInputs('gtceu:nyanium_frame', 'gtceu:uhv_sensor', '6x gtceu:double_starium_alloy_plate', '4x gtceu:starium_alloy_gear', '2x gtceu:small_starium_alloy_gear')
         .itemOutputs('2x kubejs:abyssal_drill_2')
         .duration(250)
         .EUt(GTValues.VHA[GTValues.UEV])
@@ -35,6 +59,7 @@ ServerEvents.recipes(event => {
         .addData('max_entropy', 499999)
         .duration(100)
         .dimension('minecraft:the_end')
+        // .cleanroom(CleanroomType.STERILE_CLEANROOM) // cant have dim + cleanroom fixed in 7.0.0
         .EUt(GTValues.VHA[GTValues.UEV])
         .circuit(3);
 
@@ -45,6 +70,7 @@ ServerEvents.recipes(event => {
         .addData('max_entropy', 349999)
         .duration(100)
         .dimension('minecraft:the_end')
+        // .cleanroom(CleanroomType.STERILE_CLEANROOM) // cant have dim + cleanroom fixed in 7.0.0
         .EUt(GTValues.VHA[GTValues.UEV])
         .circuit(2);
 
@@ -55,6 +81,7 @@ ServerEvents.recipes(event => {
         .addData('max_entropy', 149999)
         .duration(100)
         .dimension('minecraft:the_end')
+        // .cleanroom(CleanroomType.STERILE_CLEANROOM) // cant have dim + cleanroom fixed in 7.0.0
         .EUt(GTValues.VHA[GTValues.UEV])
         .circuit(1);
 
@@ -68,9 +95,9 @@ ServerEvents.recipes(event => {
             .duration(quantityBuckets * 6)
             .EUt(GTValues.VHA[GTValues.UIV]);
     };
-    EntropyVoid('high',200,['gtceu:excited_void_entangled_quantum_slurry 1000','gtceu:moderate_entropy_voidic_excression 25000']);
-    EntropyVoid('moderate',150,['gtceu:active_void_entangled_quantum_slurry 1000','gtceu:low_entropy_voidic_excression 25000']);
-    EntropyVoid('low',100,['gtceu:dormant_void_entangled_quantum_slurry 1000']);
+    EntropyVoid('high',100,['gtceu:excited_void_entangled_quantum_slurry 12000']);
+    EntropyVoid('moderate',100,['gtceu:active_void_entangled_quantum_slurry 12000']);
+    EntropyVoid('low',100,['gtceu:dormant_void_entangled_quantum_slurry 12000']);
 
     const QuantumDecomp = (slurryType, state1, state2) => {
         event.recipes.gtceu.manifold_centrifuge(id(`${slurryType}_void_entangled_quantum_slurry`))

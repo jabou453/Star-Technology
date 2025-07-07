@@ -47,6 +47,7 @@ StartupEvents.registry('item', event => {
         const { type, color } = shard;
         event.create(`${type.toLowerCase()}_infused_shard`)
             .displayName(`§${color}${type.replace(/_/, ' ')}§r Infused Shard`)
+            .tooltip(`§${color}?§e✧§${color}?`)
             .texture(`kubejs:item/lines/netherstar/${type.toLowerCase()}_infused_shard`)
             .glow(true);
         });
@@ -57,19 +58,23 @@ StartupEvents.registry('item', event => {
     
     event.create('impure_nether_star')
         .displayName('Impure Nether Star')
+        .tooltip('§e✧-')
         .texture('kubejs:item/lines/netherstar/impure_nether_star');
 
     event.create('nether_star_shard')
         .displayName('Nether Star Shard')
+        .tooltip('§e✧')
         .texture('kubejs:item/lines/netherstar/nether_star_shard');
         
     event.create('energized_nether_star_shard')
         .displayName('Energized Nether Star Shard')
+        .tooltip('§e✧+')
         .texture('kubejs:item/lines/netherstar/energized_nether_star_shard')
         .glow(true);
 
     event.create('nether_tempered_shard')
         .displayName('Nether Tempered Star Shard')
+        .tooltip('§e✧++')
         .texture('kubejs:item/lines/netherstar/nether_tempered_shard')
         .glow(true);
     
@@ -88,12 +93,5 @@ StartupEvents.registry('item', event => {
     event.create('voidic_reinforced_mesh')
         .displayName('Voidic Reinforced Mesh')
         .texture('kubejs:item/voidic_reinforced_mesh');
-
-    // Gravi star continuations
-    event.create('helish_star')
-        .displayName('Helish Star');
-    
-    event.create('dragon_eye')
-        .displayName('Dragon Eye');
 
 });

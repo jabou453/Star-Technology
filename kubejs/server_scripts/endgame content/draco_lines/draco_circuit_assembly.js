@@ -18,9 +18,8 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembly_line(id('draco_circuit_assembler'))
         .itemInputs(
-            'gtceu:void_frame','6x kubejs:draco_ware_casing','6x kubejs:uev_computational_matrix','4x gtceu:uev_sensor',
-            '4x gtceu:uev_robot_arm','4x gtceu:uev_robot_arm','2x gtceu:uev_conveyor_module','2x gtceu:uev_conveyor_module',
-            '32x gtceu:fine_seaborgium_palladium_enriched_estalt_flerovium_alloy_wire','8x gtceu:calamatium_screw'
+            'gtceu:void_frame','6x kubejs:draco_ware_casing','6x kubejs:uev_computational_matrix','4x gtceu:uev_sensor','8x gtceu:uev_robot_arm',
+            '4x gtceu:uev_conveyor_module', '32x gtceu:fine_seaborgium_palladium_enriched_estalt_flerovium_alloy_wire','8x gtceu:calamatium_screw'
         )
         .inputFluids(
             `${Solder} 125000`,

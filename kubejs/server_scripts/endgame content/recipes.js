@@ -191,13 +191,13 @@ ServerEvents.recipes(event => {
         .EUt(16);
 
     event.recipes.gtceu.compressor(id('reinforced_brimstone_casing'))
-        .itemInputs('64x kubejs:brimstone')
+        .itemInputs('16x kubejs:brimstone')
         .itemOutputs('kubejs:reinforced_brimstone_casing')
         .duration(320)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.compressor(id('reinforced_cryostone_casing'))
-        .itemInputs('64x kubejs:cryostone')
+        .itemInputs('16x kubejs:cryostone')
         .itemOutputs('kubejs:reinforced_cryostone_casing')
         .duration(320)
         .EUt(GTValues.VHA[GTValues.UHV]);
@@ -273,7 +273,29 @@ ServerEvents.recipes(event => {
                 .CWUt(192)
             )
         .EUt(GTValues.VHA[GTValues.UIV]);
-    
+
+    event.remove({output: 'minecraft:end_crystal'});
+    event.remove({input: 'minecraft:end_crystal'});
+    event.shaped('minecraft:end_crystal', [
+        'GGG',
+        'GEG',
+        'PCP'
+    ], {
+        G: 'gtceu:fusion_glass',
+        E: 'gtceu:quantum_eye',
+        P: 'gtceu:double_void_plate',
+        C: 'kubejs:helish_star'
+    }).id('start:shaped/end_crystal');
+
+    event.recipes.gtceu.fermenter(id('dragon_cell_growth'))
+        .chancedInput('kubejs:draconic_stem_cells', 8000, 0)
+        .inputFluids('gtceu:sterilized_growth_medium 50000', 'gtceu:radon 75000', 'gtceu:ender_air 500000')
+        .itemOutputs('kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:dragon_breath 100')
+        .duration(2400)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+        .EUt(GTValues.VHA[GTValues.UIV]);
+
     //UHV,UEV,UIV Rotor Holder
 
     event.shaped(Item.of('gtceu:uhv_rotor_holder'), [

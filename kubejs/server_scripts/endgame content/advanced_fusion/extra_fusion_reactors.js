@@ -33,12 +33,17 @@ ServerEvents.recipes(event => {
 
     //Casings/Coil
     
-    event.recipes.gtceu.assembler(id('superconducting_coil_uhv')) //UHV tier superconducting coil
-        .itemInputs('4x gtceu:ruthenium_trinium_americium_neutronate_double_wire', '4x gtceu:niobium_titanium_foil')
-        .inputFluids('gtceu:trinium 576')
-        .itemOutputs('gtceu:superconducting_coil')
-        .duration(100)
-        .EUt(GTValues.VA[GTValues.UHV]);
+    const betterSuperconductingCoil = (tier,SuperCond,quant) => {
+        event.recipes.gtceu.assembler(id(`superconducting_coil_${tier}`))
+            .itemInputs(`8x gtceu:${SuperCond}_double_wire`, '8x gtceu:niobium_titanium_foil')
+            .inputFluids('gtceu:trinium 1152')
+            .itemOutputs(`${2 * quant}x gtceu:superconducting_coil`)
+            .duration(100)
+            .EUt(GTValues.VA[GTValues.UV] * (4 ** quant));
+    };
+    betterSuperconductingCoil('uhv','ruthenium_trinium_americium_neutronate',1);
+    betterSuperconductingCoil('uev','seaborgium_palladium_enriched_estalt_flerovium_alloy',2);
+    betterSuperconductingCoil('uiv','rhenium_super_composite_alloy',3);
 
     event.recipes.gtceu.assembler(id('auxiliary_boosted_fusion_casing_mk1'))
         .itemInputs('gtceu:uhv_machine_casing', 'start_core:auxiliary_fusion_coil_mk1', '2x kubejs:uhv_voltage_coil', 'gtceu:uv_field_generator', '6x gtceu:zircalloy_4_plate')
@@ -57,9 +62,9 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM);
 
     event.recipes.gtceu.assembler(id('auxiliary_fusion_coil_mk1'))
-        .itemInputs('2x gtceu:superconducting_coil', '3x gtceu:zpm_field_generator', '2x gtceu:zpm_electric_pump', '3x gtceu:neutron_reflector', '6x #gtceu:circuits/uv', '6x gtceu:zapolgium_small_fluid_pipe', '6x gtceu:zircalloy_4_plate')
-        .inputFluids('gtceu:zirconium_selenide_diiodide 864')
-        .itemOutputs('2x start_core:auxiliary_fusion_coil_mk1')
+        .itemInputs('3x gtceu:superconducting_coil', '4x gtceu:zpm_field_generator', '2x gtceu:zpm_electric_pump', '4x gtceu:neutron_reflector', '8x #gtceu:circuits/uv', '8x gtceu:zapolgium_small_fluid_pipe', '8x gtceu:zircalloy_4_plate')
+        .inputFluids('gtceu:zirconium_selenide_diiodide 1152')
+        .itemOutputs('3x start_core:auxiliary_fusion_coil_mk1')
         .duration(200)
         .EUt(GTValues.VHA[GTValues.UHV])
         .cleanroom(CleanroomType.CLEANROOM);
@@ -70,5 +75,5 @@ ServerEvents.recipes(event => {
         .itemOutputs('start_core:advanced_fusion_coil')
         .duration(200)
         .EUt(GTValues.VHA[GTValues.UEV])
-        .cleanroom(CleanroomType.CLEANROOM);
+        .cleanroom(CleanroomType.STERILE_CLEANROOM);
 });

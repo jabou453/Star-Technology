@@ -75,8 +75,8 @@
 				item: "gtceu:debris_rich_nether_magma_bucket"
 				type: "item"
 			}]
-			x: -13.5d
-			y: -2.0d
+			x: -14.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["7451A2DF93606CDC"]
@@ -86,8 +86,8 @@
 				item: "gtceu:debris_bucket"
 				type: "item"
 			}]
-			x: -12.5d
-			y: -1.0d
+			x: -14.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["7451A2DF93606CDC"]
@@ -97,8 +97,8 @@
 				item: "gtceu:ancient_debris_bucket"
 				type: "item"
 			}]
-			x: -13.5d
-			y: -3.5d
+			x: -14.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["7929201A23B936BA"]
@@ -108,8 +108,8 @@
 				item: "gtceu:debris_dust"
 				type: "item"
 			}]
-			x: -11.0d
-			y: -1.0d
+			x: -14.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["4D2B3401F3AA75FC"]
@@ -119,8 +119,8 @@
 				item: "minecraft:ancient_debris"
 				type: "item"
 			}]
-			x: -13.5d
-			y: -5.0d
+			x: -14.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["3E6F078877DBD0FA"]
@@ -130,19 +130,20 @@
 				item: "gtceu:ancient_debris_dust"
 				type: "item"
 			}]
-			x: -12.0d
-			y: -5.0d
+			x: -12.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["273E965C174936E0"]
+			hide_dependent_lines: true
 			id: "07A6B3DF67E267A0"
 			tasks: [{
 				id: "79B4338B34520EFA"
 				item: "gtceu:ancient_netherite_ingot"
 				type: "item"
 			}]
-			x: -10.5d
-			y: -5.0d
+			x: -11.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["07A6B3DF67E267A0"]
@@ -152,8 +153,8 @@
 				item: "kubejs:ancient_netherite_reinforced_mesh"
 				type: "item"
 			}]
-			x: -9.5d
-			y: -4.0d
+			x: -10.25d
+			y: -1.25d
 		}
 		{
 			dependencies: [
@@ -732,7 +733,7 @@
 				title: "Nether Drilling"
 				type: "checkmark"
 			}]
-			x: -11.75d
+			x: -12.0d
 			y: -3.0d
 		}
 		{
@@ -2723,8 +2724,8 @@
 				type: "item"
 			}]
 			title: "PEDOT:PSS"
-			x: 2.0d
-			y: 9.0d
+			x: 6.5d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -2737,8 +2738,8 @@
 				item: "gtceu:polysorbate_20_bucket"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 11.0d
+			x: 9.5d
+			y: 11.5d
 		}
 		{
 			dependencies: ["688977CED4B771BA"]
@@ -2748,8 +2749,8 @@
 				item: "gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_paste_dust"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 9.0d
+			x: 3.5d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -2763,8 +2764,8 @@
 				item: "gtceu:sorbitan_monoester_bucket"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 13.0d
+			x: 12.0d
+			y: 12.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2774,8 +2775,8 @@
 				item: "gtceu:ethylene_glycol_bucket"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 11.5d
+			x: 9.5d
+			y: 10.0d
 		}
 		{
 			dependencies: ["1F25423C8624C180"]
@@ -2785,8 +2786,8 @@
 				item: "gtceu:sorbitan_bucket"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 14.5d
+			x: 12.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["305974D431F17AF0"]
@@ -2796,8 +2797,8 @@
 				item: "gtceu:sorbitol_bucket"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 16.0d
+			x: 12.0d
+			y: 15.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2807,8 +2808,8 @@
 				item: "gtceu:seed_oil_bucket"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 13.5d
+			x: 12.0d
+			y: 11.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2818,8 +2819,8 @@
 				item: "gtceu:sulfuric_acid_bucket"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 13.5d
+			x: 13.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -2832,8 +2833,8 @@
 				item: "gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_solution_bucket"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 12.0d
+			x: 3.5d
+			y: 13.5d
 		}
 		{
 			dependencies: [
@@ -2849,8 +2850,8 @@
 				item: "gtceu:poly_34_ethylenedioxythiophene_bucket"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 10.0d
+			x: 0.5d
+			y: 13.5d
 		}
 		{
 			dependencies: [
@@ -2865,8 +2866,8 @@
 				item: "gtceu:polystyrene_sulfate_bucket"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 14.0d
+			x: 6.5d
+			y: 13.5d
 		}
 		{
 			dependencies: ["4185711C0E24AA7F"]
@@ -2876,8 +2877,8 @@
 				item: "gtceu:ethylene_glycol_bucket"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 10.0d
+			x: 1.5d
+			y: 14.5d
 		}
 		{
 			dependencies: [
@@ -2890,8 +2891,8 @@
 				item: "gtceu:ferric_nitrate_dust"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 8.5d
+			x: 0.5d
+			y: 12.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2901,8 +2902,8 @@
 				item: "gtceu:nitric_acid_bucket"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 7.5d
+			x: 1.0d
+			y: 11.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2912,8 +2913,8 @@
 				item: "gtceu:iron_dust"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 7.5d
+			x: 0.0d
+			y: 11.0d
 		}
 		{
 			dependencies: [
@@ -2931,8 +2932,8 @@
 				item: "gtceu:34_ethylenedioxythiophene_bucket"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 10.0d
+			x: -3.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["6535CEFABDCDB31E"]
@@ -2942,8 +2943,8 @@
 				item: "gtceu:diluted_sulfuric_acid_bucket"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 12.5d
+			x: 13.0d
+			y: 13.0d
 		}
 		{
 			dependencies: ["4185711C0E24AA7F"]
@@ -2953,8 +2954,8 @@
 				item: "gtceu:diluted_sulfuric_acid_bucket"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 9.0d
+			x: 1.5d
+			y: 12.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2964,8 +2965,8 @@
 				item: "gtceu:ethanol_bucket"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 9.0d
+			x: -0.5d
+			y: 12.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2975,8 +2976,8 @@
 				item: "minecraft:sugar"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 11.5d
+			x: 0.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -2986,8 +2987,8 @@
 				item: "gtceu:sulfur_trioxide_bucket"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 11.0d
+			x: -0.5d
+			y: 14.5d
 		}
 		{
 			dependencies: ["0D3A7FC3C497A5DD"]
@@ -2997,8 +2998,8 @@
 				item: "gtceu:potassium_bromide_dust"
 				type: "item"
 			}]
-			x: -5.5d
-			y: 9.0d
+			x: -2.0d
+			y: 12.5d
 		}
 		{
 			dependencies: ["0D3A7FC3C497A5DD"]
@@ -3008,8 +3009,8 @@
 				item: "gtceu:sodium_nitrite_dust"
 				type: "item"
 			}]
-			x: -5.5d
-			y: 11.0d
+			x: -2.0d
+			y: 14.5d
 		}
 		{
 			dependencies: [
@@ -3022,8 +3023,8 @@
 				item: "gtceu:thiophene_dust"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 8.0d
+			x: -5.5d
+			y: 11.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3033,8 +3034,8 @@
 				item: "gtceu:potassium_carbonate_dust"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 8.5d
+			x: -3.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3044,8 +3045,8 @@
 				item: "gtceu:sodium_hydroxide_dust"
 				type: "item"
 			}]
-			x: -7.5d
-			y: 12.0d
+			x: -4.0d
+			y: 15.5d
 		}
 		{
 			dependencies: [
@@ -3058,8 +3059,8 @@
 				item: "gtceu:12_dibromoethane_bucket"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 10.0d
+			x: -4.5d
+			y: 13.5d
 		}
 		{
 			dependencies: [
@@ -3072,8 +3073,8 @@
 				item: "gtceu:dimethylformamide_bucket"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 12.0d
+			x: -5.5d
+			y: 15.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3083,8 +3084,8 @@
 				item: "gtceu:carbon_monoxide_bucket"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 11.5d
+			x: -3.0d
+			y: 15.0d
 		}
 		{
 			dependencies: ["14B54D8FCC66C23D"]
@@ -3094,8 +3095,8 @@
 				item: "gtceu:sulfuric_acid_bucket"
 				type: "item"
 			}]
-			x: -7.5d
-			y: 8.0d
+			x: -4.0d
+			y: 11.5d
 		}
 		{
 			dependencies: ["14B54D8FCC66C23D"]
@@ -3105,8 +3106,8 @@
 				item: "gtceu:pyrophosphoric_acid_bucket"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 7.0d
+			x: -4.5d
+			y: 10.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3116,8 +3117,8 @@
 				item: "gtceu:phosphoric_acid_bucket"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 6.5d
+			x: -5.5d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -3130,8 +3131,8 @@
 				item: "gtceu:14_butanediol_bucket"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 7.0d
+			x: -6.5d
+			y: 10.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3141,8 +3142,8 @@
 				item: "gtceu:bromine_bucket"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 9.5d
+			x: -5.5d
+			y: 13.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3152,8 +3153,8 @@
 				item: "gtceu:ethylene_bucket"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 10.5d
+			x: -5.5d
+			y: 14.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3163,8 +3164,8 @@
 				item: "gtceu:dimethylamine_bucket"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 11.5d
+			x: -6.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3174,8 +3175,8 @@
 				item: "gtceu:formic_acid_bucket"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 12.5d
+			x: -6.5d
+			y: 16.0d
 		}
 		{
 			dependencies: ["46FA26DD7A09CDCE"]
@@ -3185,8 +3186,8 @@
 				item: "gtceu:ethenone_bucket"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 15.0d
+			x: 7.5d
+			y: 14.5d
 		}
 		{
 			dependencies: ["46FA26DD7A09CDCE"]
@@ -3196,8 +3197,8 @@
 				item: "gtceu:sodium_bicarbonate_dust"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 14.0d
+			x: 6.5d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -3210,8 +3211,8 @@
 				item: "gtceu:benzoyl_peroxide_dust"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 14.0d
+			x: 8.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3221,8 +3222,8 @@
 				item: "gtceu:sodium_bisulfate_dust"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 13.0d
+			x: 7.5d
+			y: 12.5d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3232,8 +3233,8 @@
 				item: "gtceu:styrene_bucket"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 15.0d
+			x: 5.5d
+			y: 14.5d
 		}
 		{
 			dependencies: [
@@ -3246,8 +3247,8 @@
 				item: "gtceu:chlorosulfonic_acid_bucket"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 15.5d
+			x: 6.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3257,8 +3258,8 @@
 				item: "gtceu:benzoyl_chloride_bucket"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 13.5d
+			x: 9.0d
+			y: 13.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3268,8 +3269,8 @@
 				item: "gtceu:calcium_hydroxide_dust"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 14.5d
+			x: 9.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3279,8 +3280,8 @@
 				item: "gtceu:hydrogen_chloride_bucket"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 16.5d
+			x: 6.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
@@ -3290,27 +3291,24 @@
 				item: "gtceu:sulfur_trioxide_bucket"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 16.5d
+			x: 7.0d
+			y: 16.0d
 		}
 		{
-			dependencies: [
-				"35D3561C76338E25"
-				"4B109E84470D2549"
-			]
+			dependencies: ["0A1A8258657B67B5"]
 			id: "53A2FF89C0F89921"
 			tasks: [{
 				id: "74BB8D94F9C05537"
 				item: "start_core:flamewake_solvent_bucket"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 12.0d
+			x: -13.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
-				"31E7FE4E816A71CF"
-				"3596B7A01B5A2972"
+				"1AB8A88BA38BC989"
+				"2E34F23A42004285"
 			]
 			id: "75C33909E2CD5EC0"
 			tasks: [{
@@ -3318,98 +3316,8 @@
 				item: "start_core:emberheart_nectar_bucket"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 12.0d
-		}
-		{
-			dependencies: [
-				"75C33909E2CD5EC0"
-				"0A2485513EE939AE"
-				"67C9D32CB509441E"
-			]
-			id: "4C773DDE876192B5"
-			tasks: [{
-				id: "5D473395D331925E"
-				item: "start_core:igniferous_elixir_bucket"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 12.0d
-		}
-		{
-			dependencies: [
-				"4C773DDE876192B5"
-				"48F36A3DE988B233"
-			]
-			id: "694454E74A037992"
-			tasks: [{
-				id: "6ACB3796A0A5C7D7"
-				item: "start_core:blazing_phlogiston_bucket"
-				type: "item"
-			}]
-			x: 13.5d
-			y: 12.0d
-		}
-		{
-			id: "35D3561C76338E25"
-			tasks: [{
-				id: "6D6FCD339C588E53"
-				item: "gtceu:utopian_akreyrium_bucket"
-				type: "item"
-			}]
-			x: 6.0d
-			y: 12.0d
-		}
-		{
-			id: "0A2485513EE939AE"
-			tasks: [{
-				id: "75700C5FF295B123"
-				item: "sgjourney:pegasus_stargate"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 13.5d
-		}
-		{
-			id: "31E7FE4E816A71CF"
-			tasks: [{
-				id: "3A5CB99E473EE85F"
-				item: "minecraft:end_stone"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 13.5d
-		}
-		{
-			id: "4B109E84470D2549"
-			tasks: [{
-				id: "240EEDB6C428F338"
-				item: "minecraft:netherrack"
-				type: "item"
-			}]
-			x: 8.5d
-			y: 13.5d
-		}
-		{
-			id: "48F36A3DE988B233"
-			tasks: [{
-				id: "5AE6F2B8D9BDD893"
-				item: "minecraft:deepslate"
-				type: "item"
-			}]
-			x: 13.5d
-			y: 10.5d
-		}
-		{
-			id: "67C9D32CB509441E"
-			tasks: [{
-				amount: 1000L
-				fluid: "minecraft:water"
-				id: "46E829742B78CCAE"
-				type: "fluid"
-			}]
-			x: 12.0d
-			y: 10.5d
+			x: -13.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["18FD654260DFF1D6"]
@@ -3437,10 +3345,7 @@
 			y: 12.0d
 		}
 		{
-			dependencies: [
-				"768BD48ECF6EAC97"
-				"1D3052F94EE128F4"
-			]
+			dependencies: ["1D3052F94EE128F4"]
 			id: "6EB25AE9FB659E25"
 			tasks: [{
 				id: "5FF253822262A5DD"
@@ -3451,10 +3356,7 @@
 			y: 13.5d
 		}
 		{
-			dependencies: [
-				"6EB25AE9FB659E25"
-				"1D3052F94EE128F4"
-			]
+			dependencies: ["1D3052F94EE128F4"]
 			id: "756FE02C55B34F6E"
 			tasks: [{
 				id: "36B9C00695357E8E"
@@ -3751,16 +3653,6 @@
 			y: 14.5d
 		}
 		{
-			dependencies: ["53A2FF89C0F89921"]
-			id: "3596B7A01B5A2972"
-			tasks: [{
-				id: "13CE5DDD1319BD8C"
-				type: "checkmark"
-			}]
-			x: 9.5d
-			y: 12.0d
-		}
-		{
 			dependencies: ["2F6115002741F26F"]
 			id: "7E15AE62D31F95DD"
 			tasks: [{
@@ -3818,14 +3710,106 @@
 		{
 			dependencies: ["59015C06412CC8D3"]
 			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "0D3E6EDB52510D76"
 			tasks: [{
 				id: "58C695E6E2803C31"
 				item: "kubejs:voidic_reinforced_mesh"
 				type: "item"
 			}]
-			x: 19.0d
-			y: 16.5d
+			x: 18.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"4247187736CE6FCF"
+				"59015C06412CC8D3"
+			]
+			id: "208FDFFCCA373C1F"
+			tasks: [{
+				id: "30B4DDEFACBFAC11"
+				item: "gtceu:infernal_concentrate_bucket"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["3EA66E80E1F54265"]
+			id: "4247187736CE6FCF"
+			tasks: [{
+				id: "3C856A2068B9FC3D"
+				item: "gtceu:crude_infernal_concentrate_bucket"
+				type: "item"
+			}]
+			x: -12.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["208FDFFCCA373C1F"]
+			id: "0A1A8258657B67B5"
+			tasks: [{
+				id: "3D79CE79AC49D113"
+				item: "gtceu:superheated_infernal_concentrate_bucket"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0A1A8258657B67B5"]
+			id: "1AB8A88BA38BC989"
+			tasks: [{
+				id: "2D3D98216F7E6402"
+				item: "gtceu:sub_stellar_infernal_concentrate_bucket"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1AB8A88BA38BC989"]
+			id: "4692000C0C708F4B"
+			tasks: [{
+				id: "33F08C3BD19B18A1"
+				item: "gtceu:super_stellar_infernal_concentrate_bucket"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["4692000C0C708F4B"]
+			id: "21C55F3D9C0FC93A"
+			tasks: [{
+				id: "1F1B404851AC7223"
+				item: "start_core:igniferous_elixir_bucket"
+				type: "item"
+			}]
+			x: -13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1334D1E06C371200"]
+			id: "29B530ECF5513147"
+			tasks: [{
+				id: "4921C927C17B3543"
+				item: "start_core:blazing_phlogiston_bucket"
+				type: "item"
+			}]
+			x: -13.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4692000C0C708F4B"]
+			id: "1334D1E06C371200"
+			tasks: [{
+				id: "22BAF41B7933B574"
+				item: "gtceu:hyper_stellar_infernal_concentrate_bucket"
+				type: "item"
+			}]
+			x: -12.0d
+			y: 6.5d
 		}
 	]
 	title: "Processing Lines (Chap 7..)"
