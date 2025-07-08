@@ -280,6 +280,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('rhodium_plated_palladium', frame);
     matmod('darmstadtium', frame);
     matmod('ruthenium_trinium_americium_neutronate', fine_wire);
+    matmod('gold', gear);
+    matmod('electrum', gear);
+    matmod('blue_alloy', gear);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
@@ -483,9 +486,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     conductorSuper('melodium', ['2x uranium_triplatinum', '14x electrum', '3x amethyst', '4x darmstadtium', '7x europium'], 0xd9b3ff, [10000, 'higher', VA('uv'), 3000], [V('uv'), 128, 0, true], [2000, 550, 3, 64000]);
 
-    conductorSuper('stellarium', ['12x neutronium', '4x melodium', '1x samarium_iron_arsenic_oxide'], 0xccffff, [10799, 'highest', VA('uhv'), 4000], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
+    conductorSuper('stellarium', ['12x neutronium', '4x melodium', '1x samarium_iron_arsenic_oxide'], 0xccffff, [10799, 'highest', VA('uhv'), 3500], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
 
-    conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 5000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
+    conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 4000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
 
     // Nuclear Reactor Materials
     compIngot('austenitic_stainless_steel_304', ['35x steel', '10x chromium', '4x nickel', '1x manganese', '1x silicon'], 0x800040, METALLIC, [3500, 'low', VA('ev'), 1500], [plates, rod, frame]);
