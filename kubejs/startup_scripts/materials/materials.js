@@ -251,7 +251,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     element('oganesson', 'gas');
 
     // Plasmas
-
+    
     // This material is meant to place a ? symbol in a material's chemical formula
     event.create('mystery')
         .element(GTElements.get('mystery'));
@@ -295,7 +295,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     blast('seaborgium', 13300, 'higher', VA('uev'), 1500);
     blast('flerovium', 12200, 'higher', VA('uhv'), 1200);
 
-    // Fluid pipes
+    // Fluid Pipes
     GTMaterials.NaquadahEnriched.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(8000, 500, true, true, true, false));
 
     // Materials from elements
@@ -436,6 +436,14 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     const quCompInfusions = (name, color) => {
         event.create(name).fluid().color(color);
     }
+
+    const compPlasma = (name, temp, elements, color, flags) => {
+        event.create(name).liquid(new GTFluidBuilder().temperature(temp)).plasma().components(elements).color(color).flags(flags);
+    }
+
+    compPlasma('americium_plas',1449,'americium',0x287869,no_decomp);
+
+    compPlasma('tin_plas',505,'tin',0xfafeff,no_decomp);
 
     elemIngot('magnetic_zapolgium', 'zapolgium', 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
