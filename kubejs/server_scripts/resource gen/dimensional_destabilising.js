@@ -14,7 +14,7 @@ ServerEvents.recipes(event => {
         .EUt(512);
 
     event.recipes.gtceu.dimensional_destabiliser(id('naquadah_mining'))
-        .itemInputs('mysticalagradditions:nether_star_shard')
+        .itemInputs('kubejs:nether_star_shard')
         .inputFluids('gtceu:pcb_coolant 8000')
         .itemOutputs('64x gtceu:raw_naquadah')
         .chancedOutput('gtceu:tiny_nether_star_dust', 8000, 0)

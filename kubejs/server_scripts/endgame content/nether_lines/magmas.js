@@ -69,9 +69,9 @@ ServerEvents.recipes(event => {
     //Debris Magma
     event.recipes.gtceu.centrifuge(id('debris_rich_nether_magma_deconstruction'))
         .inputFluids('gtceu:debris_rich_nether_magma 250000')
-        .outputFluids('minecraft:lava 200000')
-        .outputFluids('gtceu:debris 49000')
-        .outputFluids('gtceu:ancient_debris 1000')
+        .outputFluids('minecraft:lava 100000')
+        .outputFluids('gtceu:debris 125000')
+        .outputFluids('gtceu:ancient_debris 25000')
         .duration(3600)
         .EUt(GTValues.VA[GTValues.UHV]);
 

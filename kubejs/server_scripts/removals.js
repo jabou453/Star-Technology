@@ -73,8 +73,6 @@ ServerEvents.recipes(event => {
     event.remove({ mod: 'mysticalagriculture'});
     event.remove({ mod: 'mysticalagradditions'});
     event.remove({ mod: 'mysticaladaptations'});
-    event.remove({ mod: 'mobilebeacon'});
-    event.remove({ mod: 'extendedcrafting'});
     event.remove({ mod: 'sgjourney'});
     event.remove({ mod: 'jetboots'});
 

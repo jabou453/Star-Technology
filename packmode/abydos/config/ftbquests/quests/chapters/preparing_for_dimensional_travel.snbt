@@ -103,7 +103,8 @@
 		{
 			dependencies: [
 				"5BDA17962F4630EB"
-				"1A4583EB1A3D538F"
+				"31EADD276ECB7B25"
+				"444598F0FA4D23BC"
 			]
 			description: [
 				"The heart of every &4UHV&r machine"
@@ -333,15 +334,17 @@
 				item: "gtceu:large_rotor_machine"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: -3.5d
 		}
 		{
 			dependencies: [
 				"027C5CE3CFCB5649"
 				"4DE40B37D609B921"
+				"7FB86A5B9F6F6F35"
+				"7FFCAD92772A175F"
 			]
-			description: ["Currently unusable because it isn't done quite yet."]
+			description: ["Untempered and Unstable. Soon it will be ready to do something unimaginable."]
 			id: "5E9936C099FF589C"
 			rewards: [{
 				id: "05AE9E61C946D871"
@@ -358,7 +361,7 @@
 		}
 		{
 			dependencies: ["2F87FC1D5BB43220"]
-			description: ["Liquid Echo's from sources unknown."]
+			description: ["Liquid Echoes from sources unknown."]
 			icon: {
 				Count: 1
 				id: "gtceu:echo_r_bucket"
@@ -464,7 +467,7 @@
 		}
 		{
 			dependencies: ["75F0388FAB52E0B3"]
-			description: ["A casing to pay homage to an early contributer of the pack, keeping it going."]
+			description: ["A casing to pay homage to an early contributor of the pack, keeping it going."]
 			id: "10D78E10735CD210"
 			rewards: [{
 				id: "3A14DEA6D1AA0502"
@@ -485,6 +488,7 @@
 				"7FFCAD92772A175F"
 			]
 			description: ["A colorfull multiblock that can inscribe ancient runes upon dense and strong materials."]
+			hide_dependency_lines: false
 			id: "6D169C5E35C9EF6C"
 			rewards: [{
 				count: 2
@@ -499,12 +503,12 @@
 				item: "gtceu:runic_circuitry_assembling_station"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 7.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["52B553FDB34B1475"]
-			description: ["The secondary &3UV&r superconductor, can hold 256 amps in a 1x cable."]
+			description: ["The secondary &3UV&r superconductor, can hold 128 amps in a 1x cable."]
 			id: "622066696CCF9754"
 			rewards: [{
 				id: "17C57D476BB71F90"
@@ -568,7 +572,7 @@
 		}
 		{
 			dependencies: ["253AECE450920D99"]
-			description: ["&4UHV&r superconductor, can hold 512 amps in a 1x cable."]
+			description: ["&4UHV&r superconductor, can hold 192 amps in a 1x cable."]
 			id: "55102B0E5D0238E1"
 			rewards: [{
 				id: "664E3AF7B9872F12"
@@ -623,7 +627,7 @@
 				"7FFCAD92772A175F"
 				"3792C5D89B1301A0"
 			]
-			description: ["A powerfull and large multiblock that can assemble parts of a Stargate."]
+			description: ["A powerful and large multiblock that can assemble parts of a Stargate."]
 			id: "1004D6D7636E0321"
 			rewards: [{
 				count: 2
@@ -645,8 +649,9 @@
 			dependencies: [
 				"6D169C5E35C9EF6C"
 				"1102670352911334"
+				"6D573ACD05D0EF96"
 			]
-			description: ["Try a variety of singularities so that you don't drain yourself of 1 material"]
+			description: ["Try a variety of singularities so that you don't drain yourself of one material."]
 			id: "0508AE03C730BE6C"
 			rewards: [{
 				id: "2B9821F0ED86771C"
@@ -683,13 +688,13 @@
 				item: "gtceu:super_pressure_heat_chamber"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: -3.5d
 		}
 		{
 			dependencies: ["5BDA17962F4630EB"]
-			description: ["A Quantum Star that has been arificially made more dense, to the point it will exert it's own gravitational force."]
-			hide_dependency_lines: true
+			description: ["A Quantum Star that has been artificially made more dense, to the point it starts exerting its own gravitational force."]
+			hide_dependent_lines: true
 			id: "7FFCAD92772A175F"
 			rewards: [{
 				id: "41645C4A24DF3CD2"
@@ -701,8 +706,8 @@
 				item: "gtceu:gravi_star"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -3.5d
+			x: -4.0d
+			y: 0.5d
 		}
 		{
 			dependencies: [
@@ -780,7 +785,7 @@
 		}
 		{
 			dependencies: ["56D5872D2C33A9CC"]
-			description: ["The path to the sands of Abydos, inscriped on a piece of whispering gemstone."]
+			description: ["The path to the sands of Abydos, inscribed on a piece of whispering gemstone."]
 			id: "66D2FB63E81E03AB"
 			rewards: [{
 				id: "37AFE192D0BE0925"
@@ -798,7 +803,7 @@
 		}
 		{
 			dependencies: ["7A38469EAAABEAAE"]
-			description: ["A machine that sends signals into deep space in the hopes to enscribe the location of found dimensions and cosmic bodies onto coordinate crystals."]
+			description: ["A machine that sends signals into deep space in the hopes of inscribing the location of found dimensions and cosmic bodies onto coordinate crystals."]
 			id: "56D5872D2C33A9CC"
 			rewards: [{
 				count: 2
@@ -814,11 +819,11 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 4.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["2F87FC1D5BB43220"]
-			description: ["A blank slate, that with carefull processing and some luck could be inscribed with coordinates to different realms."]
+			description: ["A blank slate, that with careful processing and some luck could be inscribed with coordinates to different realms."]
 			hide_dependency_lines: true
 			id: "7A38469EAAABEAAE"
 			rewards: [{
@@ -833,7 +838,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 6.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["707C2E9BA62A60C5"]
@@ -856,6 +861,7 @@
 		{
 			dependencies: ["3ECCE739DE8F5F2C"]
 			description: ["A parallel EBF. Nothing needs to be said, just get it right now."]
+			icon: "minecraft:cooked_chicken"
 			id: "2EE4C6540FE3D4CF"
 			optional: true
 			rewards: [{
@@ -875,6 +881,7 @@
 		{
 			dependencies: ["3ECCE739DE8F5F2C"]
 			description: ["A parallel freezer. Very much necessary to keep up with the RHF on the left."]
+			icon: "minecraft:ice"
 			id: "17C47EC4E8337D7B"
 			optional: true
 			rewards: [{
@@ -896,7 +903,7 @@
 				"2EDE996312B1C69E"
 				"5FB0649F878A32D5"
 			]
-			description: ["Visits the sands that hide the remnants of an ancient race of beings, long since gone."]
+			description: ["Visit the sands that hide the remnants of an ancient race of beings, long since gone."]
 			icon: "minecraft:sand"
 			id: "1FB502D770A4A59B"
 			rewards: [{
@@ -942,7 +949,7 @@
 				"0508AE03C730BE6C"
 				"1004D6D7636E0321"
 			]
-			description: ["An extremely dense and resistant block, that can resistant the force of rifts in space."]
+			description: ["An extremely dense and resistant block, that can resist the force of rifts in space."]
 			id: "70D35B4C1D6A143D"
 			rewards: [{
 				id: "3B90C26F72F5A63B"
@@ -964,7 +971,7 @@
 				"70D35B4C1D6A143D"
 				"1E47910C2F2112E1"
 			]
-			description: ["A sturdy frame for Chevrons, allowing them to be used in powerfull machines."]
+			description: ["A sturdy frame for Chevrons, allowing them to be used in powerful machines."]
 			id: "433E2BCC63E779AF"
 			rewards: [{
 				id: "3D4753FAE4D98706"
@@ -986,7 +993,7 @@
 				"70D35B4C1D6A143D"
 				"43B5477B959B2736"
 			]
-			description: ["A computer integrate into a Ring Block that can communicate with Chevrons to achieve a miracle."]
+			description: ["A computer integrated into a Ring Block that can communicate with Chevrons to achieve a miracle."]
 			id: "5C7A92625D07C55D"
 			rewards: [{
 				id: "398ACC54F4F42715"
@@ -1063,7 +1070,7 @@
 		}
 		{
 			dependencies: ["3FC351F05F2AC743"]
-			description: ["A colorfull multiblock used for precise laser cutting to make some incredibly exotic materials."]
+			description: ["A colorful multiblock used for precise laser cutting to make some incredibly exotic materials."]
 			id: "1C81273869C0EC9F"
 			rewards: [{
 				id: "32925D70150DF477"
@@ -1101,7 +1108,7 @@
 				}
 				type: "item"
 			}]
-			x: -4.0d
+			x: -2.0d
 			y: -3.5d
 		}
 		{
@@ -1176,8 +1183,11 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["630F50E03EC3D144"]
-			description: ["Pure points of &o&lIMMENSE&r mass with which you can write runes that can perform near magic tasks."]
+			dependencies: [
+				"630F50E03EC3D144"
+				"7FFCAD92772A175F"
+			]
+			description: ["Gravi-Stars &l&oCollapsed&r upon themselves enabling cross-dimensional travel."]
 			id: "1102670352911334"
 			rewards: [{
 				id: "256ED95E87DEA426"
@@ -1186,134 +1196,39 @@
 			}]
 			tasks: [
 				{
-					id: "02E1F6A2DCF9CD07"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:gold"
-						}
-					}
-					optional_task: true
+					id: "6049FCC3C141FBB1"
+					item: "kubejs:singularity_nebular"
 					type: "item"
 				}
 				{
-					id: "6D6D20417495FCED"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:nickel"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "6D1422700BCD5EDF"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:lead"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "0210836066D09A35"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:iron"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "1733575CA240FE1A"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:copper"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "087315C6FEF9218E"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:platinum"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "7AE4D886A5F2911A"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:tin"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "6F69E130B21AC5EC"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:aluminium"
-						}
-					}
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "477D63A1113A02D8"
-					item: {
-						Count: 1
-						id: "extendedcrafting:singularity"
-						tag: {
-							Id: "extendedcrafting:silver"
-						}
-					}
-					optional_task: true
+					id: "0F833F29C57E60EC"
+					item: "kubejs:singularity_zenith"
 					type: "item"
 				}
 			]
 			title: "Singularities"
-			x: 7.0d
-			y: -0.5d
+			x: 4.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["52B553FDB34B1475"]
-			description: ["A machine with the ability to compress enormous amounts of raw elements into a single point."]
+			description: ["This multiblock performs two major functions: compressing materials into super dense infusions and colapsing gravi-stars into singularities."]
 			id: "630F50E03EC3D144"
 			rewards: [{
+				count: 2
 				id: "3264040D4AF02053"
 				item: "kubejs:coin"
 				type: "item"
 			}]
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
 				id: "216373443959C451"
 				item: "gtceu:large_quantum_compressor"
 				type: "item"
 			}]
 			x: 7.0d
-			y: 2.5d
+			y: 0.5d
 		}
 		{
 			id: "18A35D008CA73084"
@@ -1335,7 +1250,7 @@
 		}
 		{
 			dependencies: ["2EDE996312B1C69E"]
-			description: ["Right Click the bottom part of the stargate (works for any) with a mallet to reset it's power NBT data to fix the issue. Make sure to let it charge up for a bit before you go dialing."]
+			description: ["Right-click the bottom part of the stargate (works for any) with a mallet to reset its power NBT data to fix the issue. Make sure to let it charge up for a bit before you go dialing."]
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -1376,6 +1291,36 @@
 			}]
 			title: "&o&9Absorbing Hidden Knowledge"
 			x: 10.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"11D51899B980082B"
+				"60ECE277341A9408"
+			]
+			description: ["Even stronger and more condensed &o&dNether Stars&r even more capable of manipulating the fabric of space."]
+			hide_dependency_lines: true
+			icon: "gtceu:nether_star_concentrate_bucket"
+			id: "7FB86A5B9F6F6F35"
+			rewards: [{
+				id: "3E5689E13AD8D5CF"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "63AF5ACFB599117E"
+					item: "gtceu:nether_star_concentrate_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "63AB3A6BB237EC9F"
+					type: "checkmark"
+				}
+			]
+			title: "Nether Star Concentrate"
+			x: -4.0d
 			y: -3.5d
 		}
 	]

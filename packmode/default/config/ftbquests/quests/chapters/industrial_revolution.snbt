@@ -549,7 +549,7 @@
 				"4B51B15B49620F57"
 			]
 			description: [
-				"Used to upgrade all Thermal machine stats by 4x."
+				"Used to upgrade all Thermal machine stats by 6x."
 				""
 				"Very usefull to use on:"
 				"- Dynamo's"
@@ -565,13 +565,13 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "49CE7C3C268CD584"
+				id: "2E17F557A322B711"
 				item: {
 					Count: 1
-					id: "kubejs:lv_upgrade_kit"
+					id: "kubejs:lv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 4.0f
+							BaseMod: 6.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1213,7 +1213,7 @@
 		}
 		{
 			dependencies: ["7EC83EEF3F7A89B8"]
-			description: ["4x as efficient as the LV one."]
+			description: ["2x as efficient as the LV one."]
 			id: "38C4FC58A4482F83"
 			rewards: [{
 				id: "23701926BCA340FC"
@@ -1221,13 +1221,13 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "400416FA464177FB"
+				id: "75813F1318A38663"
 				item: {
 					Count: 1
-					id: "kubejs:mv_upgrade_kit"
+					id: "kubejs:mv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 16.0f
+							BaseMod: 12.0f
 							Type: "Upgrade"
 						}
 					}

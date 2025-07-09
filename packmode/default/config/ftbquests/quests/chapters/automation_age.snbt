@@ -530,7 +530,7 @@
 		}
 		{
 			dependencies: ["1B697A89954BA5FE"]
-			description: ["Will increase the power of anything thermal by 64x."]
+			description: ["Will increase the power of anything thermal by 24x."]
 			id: "759FF87FC22D814D"
 			rewards: [{
 				id: "76A50DFAE09F8998"
@@ -539,13 +539,13 @@
 			}]
 			size: 1.0d
 			tasks: [{
-				id: "0482AB16D0A2ECAC"
+				id: "224E2F4895E0D2A3"
 				item: {
 					Count: 1
-					id: "kubejs:hv_upgrade_kit"
+					id: "kubejs:hv_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 64.0f
+							BaseMod: 24.0f
 							Type: "Upgrade"
 						}
 					}
@@ -868,7 +868,7 @@
 				"5BA3F17E1C7BE599"
 				"6060E79B2D08912D"
 			]
-			description: ["Will increase the power of anything thermal by 256x. This is the final Upgrade Kit you can make for them."]
+			description: ["Will increase the power of anything thermal by 48x. This is the final Upgrade Kit you can make for them."]
 			id: "60EB030A899ADE28"
 			rewards: [{
 				id: "510254539341E7E3"
@@ -877,13 +877,13 @@
 			}]
 			size: 1.0d
 			tasks: [{
-				id: "697234FAEC3D54FE"
+				id: "5082FC3378A0E539"
 				item: {
 					Count: 1
-					id: "kubejs:ev_upgrade_kit"
+					id: "kubejs:ev_upgraade_kit"
 					tag: {
 						AugmentData: {
-							BaseMod: 256.0f
+							BaseMod: 48.0f
 							Type: "Upgrade"
 						}
 					}
@@ -1733,28 +1733,6 @@
 			}]
 			x: 1.5d
 			y: -6.0d
-		}
-		{
-			dependencies: ["059FD3E475A05070"]
-			description: [
-				"Used to store patterns for the Assembly Line."
-				""
-				"{ \"text\": \"Used Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"0094C2E72105E8CA\" } }"
-			]
-			id: "507FE905D3BB8B3D"
-			rewards: [{
-				id: "542233E8F0EBA3E3"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "16B08A1A4A0D9778"
-				item: "gtceu:data_orb"
-				type: "item"
-			}]
-			x: 0.5d
-			y: -7.0d
 		}
 		{
 			dependencies: ["0514DE717001A062"]
