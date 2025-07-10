@@ -1,3 +1,5 @@
+// priority: 1000000
+
 //Core Mod Loader
 
     //Absolute Parallel Hatch Loader
