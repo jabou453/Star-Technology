@@ -1,3 +1,5 @@
+// priority: 100000
+
 // === Object Loader ===
     const JSONObject = Java.loadClass('com.google.gson.JsonObject')
 
