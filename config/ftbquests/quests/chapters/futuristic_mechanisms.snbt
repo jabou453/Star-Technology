@@ -611,6 +611,7 @@
 			dependencies: [
 				"127464E65103D2B0"
 				"19BBC64C57C460E6"
+				"507FE905D3BB8B3D"
 			]
 			description: [
 				"This multiblock provides computation to the research station. By playing around with components, you can generate enough computation to research things."
@@ -1963,6 +1964,31 @@
 			}]
 			x: 2.0d
 			y: -3.0d
+		}
+		{
+			dependencies: [
+				"059FD3E475A05070"
+				"0AFCD9322EF93D5D"
+			]
+			description: [
+				"Used to store patterns for the Assembly Line."
+				""
+				"{ \"text\": \"Used Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"0094C2E72105E8CA\" } }"
+			]
+			id: "507FE905D3BB8B3D"
+			rewards: [{
+				id: "542233E8F0EBA3E3"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			size: 1.0d
+			tasks: [{
+				id: "16B08A1A4A0D9778"
+				item: "gtceu:data_orb"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -6.0d
 		}
 	]
 	title: "Futuristic Mechanisms"

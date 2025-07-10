@@ -209,8 +209,8 @@
 		{
 			id: "54316E61B087A5B2"
 			linked_quest: "0FBB34B21DA41C5D"
-			x: -13.0d
-			y: -24.5d
+			x: -11.5d
+			y: -27.5d
 		}
 		{
 			id: "09F13FAB5E31E5A6"
@@ -221,7 +221,7 @@
 		{
 			id: "1D9B1F10D853D607"
 			linked_quest: "14417CCE1E25C9C6"
-			x: -15.0d
+			x: -13.0d
 			y: -22.5d
 		}
 		{
@@ -233,7 +233,7 @@
 		{
 			id: "08B738B0A46F9692"
 			linked_quest: "3477B2FEEF0DF44C"
-			x: -16.5d
+			x: -15.0d
 			y: -22.5d
 		}
 		{
@@ -263,19 +263,19 @@
 		{
 			id: "3B7B8853F2299D4D"
 			linked_quest: "60ECE277341A9408"
-			x: -14.5d
+			x: -13.0d
 			y: -29.5d
 		}
 		{
 			id: "336508F193ECD87F"
 			linked_quest: "59711F987DE95924"
-			x: -14.5d
+			x: -13.0d
 			y: -31.0d
 		}
 		{
 			id: "3C58025F18501529"
 			linked_quest: "027C5CE3CFCB5649"
-			x: -13.0d
+			x: -11.5d
 			y: -29.5d
 		}
 		{
@@ -343,6 +343,18 @@
 			linked_quest: "67ABB3BF6D0C183B"
 			x: -18.0d
 			y: -29.5d
+		}
+		{
+			id: "07BCC67693FA7435"
+			linked_quest: "3DBCF29F5183C6C5"
+			x: -16.5d
+			y: -22.5d
+		}
+		{
+			id: "4F283D94CC28DDB7"
+			linked_quest: "13118B7518370623"
+			x: -16.5d
+			y: -24.5d
 		}
 	]
 	quests: [
@@ -803,7 +815,7 @@
 				item: "gtceu:large_quantum_compressor"
 				type: "item"
 			}]
-			x: -13.0d
+			x: -14.5d
 			y: -31.0d
 		}
 		{
@@ -814,8 +826,8 @@
 				item: "gtceu:mega_vacuum_freezer"
 				type: "item"
 			}]
-			x: -11.5d
-			y: -16.0d
+			x: -16.5d
+			y: -29.5d
 		}
 		{
 			dependencies: ["2F4B998D20856E2B"]
@@ -826,7 +838,7 @@
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
-			x: -12.0d
+			x: -11.5d
 			y: -22.5d
 		}
 		{
@@ -1289,8 +1301,8 @@
 				item: "gtceu:cobbleworks"
 				type: "item"
 			}]
-			x: -13.5d
-			y: -22.5d
+			x: 4.5d
+			y: -15.5d
 		}
 		{
 			dependencies: ["1F5CCE8CFD02903A"]
@@ -1300,11 +1312,11 @@
 				item: "gtceu:electric_blast_furnace"
 				type: "item"
 			}]
-			x: -16.5d
+			x: -13.0d
 			y: -24.5d
 		}
 		{
-			dependencies: ["7723F15BCF70097D"]
+			dependencies: ["649596731FFA9C9A"]
 			id: "4FFAD4C64372BE75"
 			tasks: [{
 				id: "25EF04496122399B"
@@ -1459,8 +1471,8 @@
 				}
 				type: "item"
 			}]
-			x: -16.5d
-			y: -29.5d
+			x: 6.0d
+			y: -17.5d
 		}
 		{
 			dependencies: ["1A8F645AC1B30411"]
@@ -1534,8 +1546,8 @@
 				item: "gtceu:assembly_line"
 				type: "item"
 			}]
-			x: -11.5d
-			y: -27.5d
+			x: -14.5d
+			y: -29.5d
 		}
 		{
 			dependencies: ["707C2E9BA62A60C5"]

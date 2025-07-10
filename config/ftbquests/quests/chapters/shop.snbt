@@ -1516,6 +1516,7 @@
 		}
 		{
 			can_repeat: true
+			dependencies: ["262BD3D9D1DF7F13"]
 			hide_until_deps_complete: true
 			icon: "minecraft:dragon_breath"
 			id: "7A188FDFA4C591D7"

@@ -10,7 +10,7 @@ ServerEvents.recipes(event => {
             '1x gtceu:seaborgium_cerium_tricarbon_tetrakis_orthosilicate_linked_dipolonium_diplatinum_tris_pyrophosphate_dust',
             '2x gtceu:hafnium_thorium_iron_magnesium_disilicate_monosulfate_bonded_iron_2_barium_diastatide_trisulfate_dust')
         .duration(480)
-        .EUt(GTValues.VA[GTValues.UEV]);
+        .EUt(GTValues.VHA[GTValues.UEV]);
 
     //Og Lines
     event.recipes.gtceu.electrolyzer(id('caesium_oganesson_hexanitrate_tetrafluorouranate_decomp'))

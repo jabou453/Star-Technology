@@ -12,7 +12,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('stirling_generator', 'generator')
     .tiers(GTValues.ULV)
-    
     .definition((tier, builder) =>{
     builder
         .recipeType('stirling_generator')

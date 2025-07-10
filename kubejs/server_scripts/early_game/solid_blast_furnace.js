@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
         R: 'gtceu:steel_rod',
         S: 'gtceu:steel_screw',
         P: 'gtceu:steel_plate',
-        B: 'gtceu:solid_machine_casing',
+        B: 'kubejs:high_steam_machine_casing',
         F: '#forge:tools/screwdrivers'
     }).id('start:shaped/solid_blast_furnace');
 

@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:enriched_estaltadyne_mixture 1000')
         .outputFluids('gtceu:enriched_adamantamite_mixture 1000')
         .duration(300)
-        .EUt(GTValues.VA[GTValues.UEV]);
+        .EUt(GTValues.VHA[GTValues.UEV]);
 
     event.replaceInput({id: 'gtceu:electric_blast_furnace/blast_enriched_estalt_gas'},
         Fluid.of('gtceu:krypton 10'),

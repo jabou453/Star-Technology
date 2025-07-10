@@ -45,6 +45,22 @@ ServerEvents.recipes(event => {
             .duration(46000)
             .EUt(GTValues.VHA[GTValues.UV]);
 
+    event.recipes.gtceu.assembly_line(id('super_compact_heat_chamber'))
+        .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uhv', 'gtceu:double_stellarium_plate', 
+                'gtceu:double_titanium_tungsten_carbide_plate', 'gtceu:uhv_field_generator', '64x gtceu:uhpic_chip', 
+                '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip',
+                '64x gtceu:uhpic_chip', '32x gtceu:uhpic_chip', '48x gtceu:runicallium_single_wire')
+        .inputFluids('gtceu:hsse 6912', 'gtceu:tritanium 1728')
+        .itemOutputs('gtceu:super_compact_heat_chamber')
+        .stationResearch(
+        researchRecipeBuilder => researchRecipeBuilder
+            .researchStack(Item.of('gtceu:super_pressure_heat_chamber'))
+            .EUt(GTValues.VHA[GTValues.UHV])
+            .CWUt(160)
+        )
+        .duration(56000)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
     event.recipes.gtceu.assembly_line(id('large_rotor_machine'))
         .itemInputs('gtceu:shellite_frame', '4x #gtceu:circuits/luv', 'gtceu:double_vanadium_gallium_plate', 
                 'gtceu:double_red_steel_plate', 'gtceu:luv_field_generator', '2x gtceu:luv_electric_motor', '64x gtceu:uhpic_chip', 
@@ -263,8 +279,6 @@ ServerEvents.recipes(event => {
         )
         .duration(12000)
         .EUt(GTValues.VHA[GTValues.UV]);
-
-    
     
     event.recipes.gtceu.super_pressure_heat_chamber(id('stargate_rod'))
         .itemInputs('kubejs:crude_stargate_rod')
@@ -294,7 +308,7 @@ ServerEvents.recipes(event => {
         .duration(1600)
         .EUt(eu);
     };
-    CrudeRod('crude', 'gtceu:gravi_star', '8x gtceu:nether_star_foil', '16x gtceu:neutronium_foil', '24x gtceu:weapon_grade_naquadah_foil', 'gtceu:nether_star_concentrate 1440', GTValues.VHA[GTValues.LuV]);
+    CrudeRod('crude', 'gtceu:gravi_star', '8x gtceu:nether_star_foil', '12x gtceu:neutronium_foil', '24x gtceu:weapon_grade_naquadah_foil', 'gtceu:nether_star_concentrate 1440', GTValues.VHA[GTValues.LuV]);
     CrudeRod('untreated_infernal', 'kubejs:inferno_fragment', '12x gtceu:netherite_foil', '16x gtceu:void_foil', '12x kubejs:stargate_rod', 'gtceu:blaze 14400', GTValues.VHA[GTValues.UV]);
     CrudeRod('untreated_abyssal', 'kubejs:abyss_fragment', '12x gtceu:echo_shard_foil', '16x gtceu:void_foil', '12x kubejs:stargate_rod', 'thermal:ender 14400', GTValues.VHA[GTValues.UV]);  
 
@@ -381,7 +395,7 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VA[GTValues.UEV]);
 
         event.recipes.gtceu.assembly_line(id('empty_coordinate_core'))
-            .itemInputs('gtceu:ancient_runicalium_frame','64x kubejs:uhv_high_strength_panel','64x kubejs:uhv_high_strength_panel','48x gtceu:uhv_field_generator', '32x kubejs:uhv_catalyst_core', '32x kubejs:uhv_catalyst_core','16x gtceu:uhv_sensor','16x gtceu:uhv_emitter')
+            .itemInputs('gtceu:ancient_runicalium_frame','32x kubejs:uhv_high_strength_panel','32x kubejs:uhv_high_strength_panel','32x kubejs:uhv_high_strength_panel','48x gtceu:uhv_field_generator','16x gtceu:uhv_sensor','16x gtceu:uhv_emitter')
             .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 120000','gtceu:utopian_akreyrium 75000','gtceu:neutronium 18000')
             .itemOutputs('kubejs:empty_coordinate_core')
             .duration(24000)
@@ -482,6 +496,38 @@ ServerEvents.recipes(event => {
             //[--][22][23][00][01][02][--]
         }
         GateCraft('ancient', 'gtceu:naquadria 16', 'gtceu:liquid_nether_air 50', 'gtceu:liquid_ender_air 50', GTValues.VA[GTValues.UEV],'milky_way');
+
+        // Maxwell Line
+        event.remove({ mod: 'placeablemaxwell' });
+        const Gato = (type, rod1, rod2, dye1, dye2) => {
+            let B = '8x kubejs:runic_energized_transportation_plating';
+            let C = '8x kubejs:runic_energized_pathway_plating';
+            let R = `1x kubejs:${rod1}_stargate_rod`;
+            let D = `1x kubejs:${rod2}_stargate_rod`;
+            let F = '2x gtceu:uiv_field_generator';
+            let A = '2x gtceu:uiv_robot_arm';
+            let H = '64x #forge:cooked_fishes'
+        event.recipes.gtceu.gate_assembly(id(`${type}`))
+            .itemInputs(B,R,A,H,F,D,C,D,F,H,A,R,B,R,A,H,F,D,C,D,F,H,A,R)
+            .inputFluids('gtceu:nyanium 72000', `gtceu:${dye1}_dye 1000000`, `gtceu:${dye2}_dye 200000`)
+            .itemOutputs(`placeablemaxwell:${type}`)
+            .duration(32000)
+            .EUt(GTValues.VA[GTValues.UIV]);
+        };
+        Gato('mars', 'abyssal', 'abyssal', 'light_gray', 'gray');
+        Gato('valenok', 'abyssal', 'infernal', 'white', 'orange');
+        Gato('vasilisa', 'infernal', 'infernal', 'gray', 'white');
+        {
+            let M = 'placeablemaxwell:mars'
+            let V = 'placeablemaxwell:valenok'
+            let S = 'placeablemaxwell:vasilisa'
+        event.recipes.gtceu.gate_assembly(id(`maxwell`))
+            .itemInputs(S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M)
+            .inputFluids('gtceu:nyanium 144000', `gtceu:black_dye 2500000`, `gtceu:abyssal_alloy 72000`)
+            .itemOutputs(`placeablemaxwell:maxwell`)
+            .duration(64000)
+            .EUt(GTValues.VA[GTValues.UXV]);
+        };
 
 });
 

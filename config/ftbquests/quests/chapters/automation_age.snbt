@@ -1735,28 +1735,6 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["059FD3E475A05070"]
-			description: [
-				"Used to store patterns for the Assembly Line."
-				""
-				"{ \"text\": \"Used Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"0094C2E72105E8CA\" } }"
-			]
-			id: "507FE905D3BB8B3D"
-			rewards: [{
-				id: "542233E8F0EBA3E3"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "16B08A1A4A0D9778"
-				item: "gtceu:data_orb"
-				type: "item"
-			}]
-			x: 0.5d
-			y: -7.0d
-		}
-		{
 			dependencies: ["0514DE717001A062"]
 			id: "497833345EB46A47"
 			rewards: [{

@@ -86,6 +86,14 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
+    event.recipes.gtceu.large_chemical_reactor(id('tungsten_disulfide'))
+        .itemInputs('4x gtceu:tungsten_trioxide_dust')
+        .inputFluids('gtceu:hydrogen_sulfide 3000')
+        .itemOutputs('3x gtceu:tungsten_disulfide_dust')
+        .outputFluids('minecraft:water 3000')
+        .duration(480)
+        .EUt(GTValues.VHA[GTValues.ZPM]);
+
     event.recipes.gtceu.polarizer(id('magnetic_zapolgium'))
         .itemInputs('gtceu:zapolgium_ingot')
         .itemOutputs('gtceu:magnetic_zapolgium_ingot')
@@ -112,6 +120,41 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt((GTValues.VHA[GTValues.UEV]));
 
+    event.recipes.gtceu.advanced_chemistry(id('platinum_yttrium_composite'))
+        .itemInputs('4x gtceu:uranium_triplatinum_dust', '26x gtceu:yttrium_barium_cuprate_dust', '12x gtceu:carbon_dust')
+        .itemOutputs('22x gtceu:platinum_yttrium_composite_dust', '3x gtceu:uranite_dust')
+        .outputFluids('gtceu:carbon_dioxide 6000')
+        .duration(152 * 22)
+        .EUt(GTValues.VA[GTValues.UHV]);
+
+    event.recipes.gtceu.advanced_chemistry(id('polonium_iridide_acid'))
+        .itemInputs('3x gtceu:iridium_iv_oxide_dust', '2x gtceu:polonium_dust')
+        .inputFluids('gtceu:phosphoric_acid 1000')
+        .outputFluids('gtceu:polonium_iridide_acid 1000', 'gtceu:oxygen 2000')
+        .duration(1523)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('polonium_flux'))
+        .itemInputs('22x gtceu:platinum_yttrium_composite_dust')
+        .inputFluids('gtceu:polonium_iridide_acid 2000', 'gtceu:hydrogen 10000')
+        .itemOutputs('30x gtceu:polonium_flux_dust')
+        .outputFluids('minecraft:water 8000')
+        .duration(840)
+        .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.mixer(id('hafnide_ito_ceramic'))
+        .itemInputs('14x gtceu:hafnide_ceramic_base_dust', '7x gtceu:indium_tin_oxide_dust')
+        .itemOutputs('21x gtceu:hafnide_ito_ceramic_dust')
+        .duration(1056)
+        .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('indium_tin_oxide'))
+        .itemInputs('2x gtceu:indium_dust', '2x gtceu:tin_dust')
+        .inputFluids('gtceu:oxygen 3000')
+        .itemOutputs('7x gtceu:indium_tin_oxide_dust')
+        .duration(462)
+        .EUt(GTValues.VA[GTValues.UHV]);
+
     event.recipes.gtceu.assembler(id('zalloy_coil'))
         .itemInputs('8x gtceu:zalloy_double_wire', '8x gtceu:neutronium_foil')
         .inputFluids('gtceu:tritanium 144')
@@ -121,10 +164,17 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('magmada_alloy_coil'))
         .itemInputs('8x gtceu:magmada_alloy_double_wire', '8x gtceu:pure_netherite_foil')
-        .inputFluids('gtceu:zalloy 144')
+        .inputFluids('gtceu:adamantine 144')
         .itemOutputs('kubejs:magmada_alloy_coil_block')
         .duration(1100)
         .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.assembler(id('abyssal_coil'))
+        .itemInputs('8x gtceu:abyssal_alloy_double_wire', '8x gtceu:nyanium_foil')
+        .inputFluids('gtceu:void 144')
+        .itemOutputs('kubejs:abyssal_alloy_coil_block')
+        .duration(1200)
+        .EUt(GTValues.VHA[GTValues.UIV]);
 
     event.recipes.gtceu.assembler(id('extreme_temperature_smelting_casing'))
         .itemInputs('4x gtceu:calamatium_plate', '2x gtceu:astatium_bioselex_carbonite_plate', 'gtceu:enriched_estalt_frame')
@@ -141,13 +191,13 @@ ServerEvents.recipes(event => {
         .EUt(16);
 
     event.recipes.gtceu.compressor(id('reinforced_brimstone_casing'))
-        .itemInputs('64x kubejs:brimstone')
+        .itemInputs('16x kubejs:brimstone')
         .itemOutputs('kubejs:reinforced_brimstone_casing')
         .duration(320)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.compressor(id('reinforced_cryostone_casing'))
-        .itemInputs('64x kubejs:cryostone')
+        .itemInputs('16x kubejs:cryostone')
         .itemOutputs('kubejs:reinforced_cryostone_casing')
         .duration(320)
         .EUt(GTValues.VHA[GTValues.UHV]);
@@ -203,8 +253,50 @@ ServerEvents.recipes(event => {
         .itemOutputs('11x gtceu:bismuth_iridate_dust')
         .duration(412)
         .EUt(GTValues.VA[GTValues.ZPM]);
-    
-    //UHV,UEV Rotor Holder
+
+    event.recipes.gtceu.assembly_line(id('sterile_cleaning_maintenance_hatch'))
+        .itemInputs(
+            '1x gtceu:uev_machine_hull', '2x gtceu:uev_robot_arm', '1x gtceu:uev_emitter', '3x #gtceu:circuits/uev', 
+            '2x gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_large_fluid_pipe', '1x gtceu:magmada_alloy_rotor', 
+            '4x gtceu:blacklight', '4x gtceu:cerium_tritelluride_single_cable'
+        )
+        .inputFluids(
+            'gtceu:indium_tin_lead_cadmium_soldering_alloy 2304',
+            'gtceu:perfluoroelastomer_rubber 1152'
+        )
+        .itemOutputs('start_core:sterile_cleaning_maintenance_hatch')
+        .duration(200)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:cleaning_maintenance_hatch'))
+                .EUt(GTValues.VHA[GTValues.UEV])
+                .CWUt(192)
+            )
+        .EUt(GTValues.VHA[GTValues.UIV]);
+
+    event.remove({output: 'minecraft:end_crystal'});
+    event.remove({input: 'minecraft:end_crystal'});
+    event.shaped('minecraft:end_crystal', [
+        'GGG',
+        'GEG',
+        'PCP'
+    ], {
+        G: 'gtceu:fusion_glass',
+        E: 'gtceu:quantum_eye',
+        P: 'gtceu:double_void_plate',
+        C: 'kubejs:helish_star'
+    }).id('start:shaped/end_crystal');
+
+    event.recipes.gtceu.fermenter(id('dragon_cell_growth'))
+        .chancedInput('kubejs:draconic_stem_cells', 8000, 0)
+        .inputFluids('gtceu:sterilized_growth_medium 50000', 'gtceu:radon 75000', 'gtceu:ender_air 500000')
+        .itemOutputs('kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:dragon_breath 100')
+        .duration(2400)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+        .EUt(GTValues.VHA[GTValues.UIV]);
+
+    //UHV,UEV,UIV Rotor Holder
 
     event.shaped(Item.of('gtceu:uhv_rotor_holder'), [
             'NZN',
@@ -225,5 +317,15 @@ ServerEvents.recipes(event => {
         Z: 'gtceu:starium_alloy_gear',
         C: 'gtceu:uev_machine_hull'
     }).id('start:shaped/uev_rotor_holder');
+
+    event.shaped(Item.of('gtceu:uiv_rotor_holder'), [
+        'NZN',
+        'ZCZ',
+        'NZN'
+    ], {
+        N: 'gtceu:small_chaotixic_alloy_gear',
+        Z: 'gtceu:ohmderblux_alloy_gear',
+        C: 'gtceu:uiv_machine_hull'
+    }).id('start:shaped/uiv_rotor_holder');
 
 });

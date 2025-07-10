@@ -40,6 +40,27 @@ ServerEvents.recipes(event => {
         .EUt(66666)
         .fusionStartEU(720000000);
 
+    event.recipes.gtceu.fusion_reactor(id('voidic_plasma'))
+        .inputFluids('gtceu:thorium 4608', 'gtceu:void 2304')
+        .outputFluids('gtceu:voidic_plasma 1152')
+        .duration(2500)
+        .EUt(350000)
+        .fusionStartEU(1040000000);
+
+    event.recipes.gtceu.fusion_reactor(id('preon_plasma'))
+        .inputFluids('gtceu:utopian_akreyrium 1500', 'gtceu:radon 2000')
+        .outputFluids('gtceu:preon_plasma 1000')
+        .duration(742)
+        .EUt(586000)
+        .fusionStartEU(1160000000);
+
+    event.recipes.gtceu.fusion_reactor(id('paradox_plasma'))
+        .inputFluids('gtceu:chaos_centric_void 1000', 'gtceu:order_centric_void 1000')
+        .outputFluids('gtceu:paradox_plasma 1000')
+        .duration(646)
+        .EUt(260000)
+        .fusionStartEU(900000000);
+
     event.recipes.gtceu.fusion_reactor(id('aurourium'))
         .inputFluids('gtceu:nether_star_concentrate 576', 'gtceu:seaborgium 576')
         .outputFluids('gtceu:aurourium 288')

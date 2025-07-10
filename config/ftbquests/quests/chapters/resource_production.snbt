@@ -2416,7 +2416,9 @@
 			dependencies: [
 				"2068B9072855036B"
 				"30AB8331D0B80859"
+				"2FF64174BEF10D64"
 			]
+			description: ["{ \"text\": \"Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"3EA66E80E1F54265\" } }"]
 			id: "4D7583FF99404C6D"
 			tasks: [{
 				id: "7BDD424C5B7480B1"
@@ -2425,17 +2427,6 @@
 			title: "Processing Lines (Chap 7+)"
 			x: 6.0d
 			y: 8.0d
-		}
-		{
-			dependencies: ["4E6158880F47AACC"]
-			id: "0F7686E05F9324B9"
-			tasks: [{
-				id: "1ACD2A302E279921"
-				item: "minecraft:lava_bucket"
-				type: "item"
-			}]
-			x: 6.0d
-			y: 6.5d
 		}
 		{
 			dependencies: ["5F9FBAC1FB36B1D3"]
@@ -2469,6 +2460,17 @@
 			}]
 			x: -4.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["4E6158880F47AACC"]
+			id: "2FF64174BEF10D64"
+			tasks: [{
+				id: "207D7D3B5D1FB4FE"
+				title: "Crude Infernal Concentrate"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: 6.5d
 		}
 	]
 	title: "Resource Production"
