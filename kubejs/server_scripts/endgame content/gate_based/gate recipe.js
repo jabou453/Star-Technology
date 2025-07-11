@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uhv', 'gtceu:double_stellarium_plate', 
                 'gtceu:double_titanium_tungsten_carbide_plate', 'gtceu:uhv_field_generator', '64x gtceu:uhpic_chip', 
                 '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip',
-                '64x gtceu:uhpic_chip', '32x gtceu:uhpic_chip', '48x gtceu:runicallium_single_wire')
+                '64x gtceu:uhpic_chip', '32x gtceu:uhpic_chip', '48x gtceu:runicalium_single_wire')
         .inputFluids('gtceu:hsse 6912', 'gtceu:tritanium 1728')
         .itemOutputs('gtceu:super_compact_heat_chamber')
         .stationResearch(
