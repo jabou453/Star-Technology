@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'gtceu:centrifuge/ash_separation' });
     event.recipes.gtceu.centrifuge(id('ash_separation'))
         .itemInputs('gtceu:ash_dust')
-        .chancedOutput('gtceu:quickline_dust',4500,0)
+        .chancedOutput('gtceu:quicklime_dust',4500,0)
         .chancedOutput('gtceu:potash_dust',1800,0)
         .chancedOutput('gtceu:phosphorus_pentoxide_dust',850,0)
         .chancedOutput('gtceu:magnesia_dust',700,0)

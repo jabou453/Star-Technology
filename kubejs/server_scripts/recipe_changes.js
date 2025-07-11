@@ -432,6 +432,42 @@ ServerEvents.recipes(event => {
         E: 'gtceu:energium_dust'
     }).id('start:shaped/neodymium_magnet');
 
+    //plates
+    [
+        {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
+        {mod: 'minecraft', metals: ['iron', 'gold', 'copper']}
+    ].forEach(type => {
+        type.metals.forEach(foo => {
+            event.recipes.create.pressing(`gtceu:${foo}_plate`,`${type.mod}:${foo}_ingot`).id(`start:pressing/${foo}_plate`);
+        });
+    });
+
+    event.shaped(Item.of('16x minecraft:stick'), [
+        'L',
+        'L'
+    ], {
+        L: '#minecraft:logs'
+    }).id('start:shaped/bulk_stick');
+
+    event.shaped(Item.of('4x minecraft:chest'), [
+        'LLL',
+        'L L',
+        'LLL'
+    ], {
+        L: '#minecraft:logs'
+    }).id('start:shaped/bulk_chest');
+
+    event.shaped('gtceu:ulv_fluid_input', [
+        'G',
+        'C',
+        'B'
+    ], {
+        G: 'minecraft:glass',
+        C: 'gtceu:bronze_machine_casing',
+        B: 'minecraft:bucket'
+    });
+    
+    })()}
     //Added Tools
 
         //Mallet + Plunger
@@ -458,34 +494,6 @@ ServerEvents.recipes(event => {
             });
         });
 
-    //plates
-    [
-        {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
-        {mod: 'minecraft', metals: ['iron', 'gold', 'copper']}
-    ].forEach(type => {
-        type.metals.forEach(foo => {
-            event.recipes.create.pressing(`gtceu:${foo}_plate`,`${type.mod}:${foo}_ingot`).id(`start:pressing/${foo}_plate`);
-        });
-    });
-
-    event.shaped(Item.of('16x minecraft:stick'), [
-        'L',
-        'L'
-    ], {
-        L: '#minecraft:logs'
-    }).id('start:shaped/bulk_stick');
-
-    event.shaped(Item.of('4x minecraft:chest'), [
-        'LLL',
-        'L L',
-        'LLL'
-    ], {
-        L: '#minecraft:logs'
-    }).id('start:shaped/bulk_chest');
-    
-    })()
-    }
-    
     [1,2,4].forEach(size => {
         event.remove({id: `functionalstorage:oak_drawer_alternate_x${size}`});
     });
@@ -561,6 +569,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.HV])
         .circuit(4);
 
+    if (global.packmode !== 'hard'){(() => {
     event.recipes.gtceu.assembler(id('multiblock_upgrade_kit'))
         .itemInputs('thermal:lumium_glass', '#gtceu:circuits/ev', '2x gtceu:double_signalum_plate', '12x gtceu:cobalt_foil')
         .itemOutputs('kubejs:multiblock_upgrade_kit')
@@ -573,6 +582,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.item_application(`gtceu:t_large_${machine}`, [`gtceu:hv_${machine}`, 'kubejs:multiblock_upgrade_kit']).id(`start:item_application/large_${machine}`);
     });
     event.recipes.create.item_application('gtceu:large_rock_crusher', ['gtceu:hv_rock_crusher', 'kubejs:multiblock_upgrade_kit']).id('start:item_application/large_rock_crusher');
+    })()}
 
     // Mycelium Leather
     event.recipes.create.pressing('kubejs:compressed_mycelium', 'kubejs:mycelium_growth').id('start:pressing/compressed_mycelium');

@@ -1058,6 +1058,7 @@
 		}
 		{
 			dependencies: ["2CE500506AE84E1A"]
+			hide_dependent_lines: true
 			id: "67D37BA6B5424768"
 			tasks: [
 				{
@@ -1201,7 +1202,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["280AD7F16F6654B4"]
+			dependencies: ["67D37BA6B5424768"]
 			hide_dependent_lines: true
 			id: "6BDAD6B19DE942D8"
 			tasks: [{
@@ -1294,8 +1295,8 @@
 		}
 		{
 			dependencies: [
-				"280AD7F16F6654B4"
 				"1B660E1DA8714AC5"
+				"67D37BA6B5424768"
 			]
 			description: [
 				"Rods now Too!"
@@ -1428,7 +1429,7 @@
 		{
 			dependencies: [
 				"0E8EDAF4C5B68057"
-				"280AD7F16F6654B4"
+				"67D37BA6B5424768"
 			]
 			id: "4F13AF131EC84DAA"
 			tasks: [{
@@ -2258,8 +2259,8 @@
 				type: "item"
 			}]
 			title: "Tom's Storage"
-			x: 17.0d
-			y: 4.5d
+			x: 15.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -2292,7 +2293,10 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["301FF7F900A30DC7"]
+			dependencies: [
+				"301FF7F900A30DC7"
+				"4D8EFEA7036CD327"
+			]
 			id: "12CC4B7507E55BEC"
 			shape: "rsquare"
 			tasks: [{
@@ -2301,7 +2305,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 3.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["6974D4ADDEA9535F"]
@@ -2510,7 +2514,7 @@
 				}
 				{
 					id: "752F4C4F70DBB591"
-					item: "gtceu:hp_steam_blast_furnace"
+					item: "gtceu:hp_steam_blaster"
 					optional_task: true
 					type: "item"
 				}
@@ -2831,14 +2835,15 @@
 		}
 		{
 			dependencies: ["4D8EFEA7036CD327"]
+			hide_dependency_lines: true
 			id: "034AF491BE41733E"
 			tasks: [{
 				id: "70855194851E994A"
 				item: "gtceu:ulv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 6.0d
+			x: 17.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -3517,7 +3522,11 @@
 			y: 8.25d
 		}
 		{
-			dependencies: ["301FF7F900A30DC7"]
+			dependencies: [
+				"4D8EFEA7036CD327"
+				"301FF7F900A30DC7"
+			]
+			hide_dependency_lines: true
 			id: "40BF0F45351CAEF3"
 			tasks: [{
 				id: "223266B2D3BFBC27"
@@ -3828,7 +3837,7 @@
 				item: "gtceu:industrial_pump"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 14.0d
 			y: 3.0d
 		}
 		{

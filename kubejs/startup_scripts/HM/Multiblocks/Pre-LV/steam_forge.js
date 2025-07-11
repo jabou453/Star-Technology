@@ -25,6 +25,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where(' ', Predicates.blocks('minecraft:air'))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
 			.build())
-		.workableCasingRenderer('kubejs:block/hm/high_steam_machine_casing', 'gtceu:block/machines/gt_blaster', false)
+		.workableCasingRenderer('kubejs:block/hm/high_steam_machine_casing', 'gtceu:block/machines/blasting', false)
 		
 });

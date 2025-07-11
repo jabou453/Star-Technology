@@ -65,7 +65,6 @@ ServerEvents.recipes(event => {
         .duration(duration)
         .EUt(EUt);
     };
-    PartsAssemblerFluids('2x thermal:redstone_servo','redstone_servo',['4x create:electron_tube', '2x gtceu:steel_plate', '2x gtceu:red_alloy_bolt'],'gtceu:tin 72',400,6)
     PartsAssemblerFluids('2x thermal:redstone_servo', 'redstone_servo',['4x create:electron_tube', '2x gtceu:steel_plate', '2x gtceu:red_alloy_bolt'],'gtceu:tin 72', 400, 6);
     PartsAssemblerFluids('3x create:electron_tube', 'electron_tube',['gtceu:glass_tube', 'create:polished_rose_quartz', 'gtceu:red_alloy_bolt', 'gtceu:steel_ring'],'gtceu:tin 72', 400, 4);
     PartsAssemblerFluids('2x gtceu:resistor', 'resistor_coke',['4x minecraft:paper', 'gtceu:coke_dust', '4x gtceu:fine_copper_wire'],'gtceu:glue 100', 400, 7);

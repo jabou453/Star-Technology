@@ -165,8 +165,8 @@
 				item: "gtceu:cupronickel_coil_block"
 				type: "item"
 			}]
-			x: 0.75d
-			y: -1.75d
+			x: 0.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["267B7EA717164DBF"]
@@ -348,8 +348,8 @@
 				item: "gtceu:arsenic_dust"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -2.5d
+			x: 1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["583A60E6A408D4DE"]
@@ -873,7 +873,7 @@
 				type: "item"
 			}]
 			x: 13.5d
-			y: -4.0d
+			y: -5.5d
 		}
 		{
 			dependencies: [
@@ -889,7 +889,7 @@
 				item: "gtceu:cpu_wafer"
 				type: "item"
 			}]
-			x: 15.0d
+			x: 13.5d
 			y: -7.0d
 		}
 		{
@@ -1353,7 +1353,7 @@
 				type: "item"
 			}]
 			x: 13.5d
-			y: -5.5d
+			y: -4.0d
 		}
 		{
 			id: "08655ED4A7CB3546"
@@ -1362,8 +1362,8 @@
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 12.0d
-			y: -5.5d
+			x: 14.25d
+			y: -3.25d
 		}
 		{
 			dependencies: ["587900D2C442A176"]
@@ -1705,8 +1705,8 @@
 				item: "gtceu:vacuum_freezer"
 				type: "item"
 			}]
-			x: 16.5d
-			y: -2.5d
+			x: 15.0d
+			y: 0.5d
 		}
 		{
 			dependencies: [
@@ -2357,7 +2357,7 @@
 				item: "gtceu:micro_processor_mainframe"
 				type: "item"
 			}]
-			x: 22.5d
+			x: 21.0d
 			y: 0.5d
 		}
 		{
@@ -2370,7 +2370,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: 0.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["139AB773D4CE9359"]
@@ -2416,7 +2416,7 @@
 				item: "gtceu:ev_assembler"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 16.5d
 			y: -2.5d
 		}
 		{
@@ -2450,8 +2450,8 @@
 				item: "gtceu:alloy_blast_smelter"
 				type: "item"
 			}]
-			x: 18.0d
-			y: -5.5d
+			x: 19.5d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -2476,7 +2476,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 0.5d
+			y: -1.0d
 		}
 		{
 			id: "5C7837EA5F6A4A61"
@@ -3169,7 +3169,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: -1.0d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -3183,7 +3183,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: -2.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["01FAE2A934DD4AB7"]
@@ -3193,7 +3193,7 @@
 				item: "gtceu:radon_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 19.5d
 			y: -4.0d
 		}
 		{
@@ -3207,7 +3207,7 @@
 				item: "gtceu:nuclear_reactor"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 18.0d
 			y: -5.5d
 		}
 		{
@@ -3218,7 +3218,7 @@
 				item: "gtceu:plutonium_dust"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 19.5d
 			y: -5.5d
 		}
 		{
@@ -3241,7 +3241,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 2.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["0C2BAE421CDC884A"]
@@ -3331,6 +3331,102 @@
 			]
 			x: 0.0d
 			y: 5.0d
+		}
+		{
+			dependencies: [
+				"4100D427DE10E511"
+				"45D5A3F101F80944"
+			]
+			id: "0FB7A667E1EE0BF4"
+			tasks: [{
+				id: "4071B286E957DE2C"
+				item: "kubejs:multiblock_upgrade_kit"
+				type: "item"
+			}]
+			x: 18.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"322ED6002645BD9B"
+				"2F83926420785947"
+				"77E38E5C97E1E837"
+			]
+			id: "1988B2548A1347A5"
+			tasks: [{
+				id: "32A51BB418F62FB1"
+				item: {
+					Count: 1
+					id: "gtceu:data_stick"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 12.0d
+			y: -5.5d
+		}
+		{
+			dependencies: [
+				"76F76B65AE97749D"
+				"5BAF15BFA908BE49"
+			]
+			hide_dependency_lines: true
+			id: "322ED6002645BD9B"
+			tasks: [{
+				id: "38B12A2E8240EC8A"
+				item: "gtceu:nand_memory_wafer"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["3EAD2733D8EB1C09"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "45D5A3F101F80944"
+			tasks: [{
+				id: "2F894376AD8512C7"
+				item: "gtceu:enderium_ingot"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["1B21C9503537F3E8"]
+			hide_dependency_lines: true
+			id: "7EB48CD35681D14F"
+			tasks: [{
+				id: "705278BD2E9E94EF"
+				item: "gtceu:lumium_ingot"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["39DFE76DCFFC3028"]
+			hide_dependency_lines: true
+			id: "72BB3E5FB763C43A"
+			tasks: [{
+				id: "5AF1DCEC6A1507E7"
+				item: "gtceu:signalum_ingot"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["1310FDCA32DF3A78"]
+			id: "590AF46C9E85AACD"
+			tasks: [{
+				id: "13EC5FF904AFC124"
+				item: "gtceu:soul_infused_ingot"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -8.5d
 		}
 	]
 	title: "Daring are we?"

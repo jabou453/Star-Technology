@@ -177,7 +177,7 @@ StartupEvents.registry('block', event => {
 	});
 
 	event.create('high_steam_machine_casing')
-		.displayName('High Steam Machine Casing')
+		.displayName('Sturdy Steam Machine Casing')
 		.hardness(5)
 		.resistance(1)
 		.soundType('stone')
