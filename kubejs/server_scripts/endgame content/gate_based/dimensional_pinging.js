@@ -143,6 +143,7 @@ const crystalfeed = (realmId, realm, stage, message) => {
 }
 
 crystalfeed('sgjourney', 'abydos', 'one', 'sandy dunes and a lost world buried beneath sand and dust');
+crystalfeed('minecraft', 'the_nether', 'two', 'the infernal hells of the Nether');
 
 const crystalfeedTroll = (realm,special) => {
     ItemEvents.rightClicked(`kubejs:${realm}_coordinate_crystal`, event => {
@@ -164,5 +165,5 @@ const crystalfeedTroll = (realm,special) => {
     });
 }
 
-crystalfeedTroll('nether', '§4Infernal Hells§r are');
+// crystalfeedTroll('nether', '§4Infernal Hells§r are');
 crystalfeedTroll('end', '§5Echoing Abyss§r is');
