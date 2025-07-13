@@ -1119,7 +1119,13 @@
 				"63E36421AE07BC42"
 				"5DADD2204991B4D5"
 			]
-			description: ["The gateway to the cold and lifeless abyss, and the burning fires of hell."]
+			description: [
+				"The gateway to the cold and lifeless abyss, and the burning fires of hell."
+				""
+				""
+				""
+				"&oJust a recommendation, but don't take any valuable items with you the first time."
+			]
 			icon: {
 				Count: 1
 				id: "sgjourney:milky_way_stargate"
@@ -2169,6 +2175,17 @@
 			title: "Ruined Component Parts"
 			x: -2.5d
 			y: -3.0d
+		}
+		{
+			dependencies: ["493DD013C818BB7B"]
+			id: "7FBEF894C1FC4CCF"
+			tasks: [{
+				id: "2F6D4D1A7DD0D090"
+				title: "Abydos Talisman"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: -2.5d
 		}
 	]
 	title: "Adventures in Abydos"

@@ -1459,11 +1459,19 @@
 			icon: "gtceu:cryptand_li_bucket"
 			id: "5CD6970DA4F94C3B"
 			shape: "hexagon"
-			tasks: [{
-				id: "5BCF019BE4A97B03"
-				title: "2.2.2-Cryptand (Li)"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "5BCF019BE4A97B03"
+					title: "2.2.2-Cryptand (Li)"
+					type: "checkmark"
+				}
+				{
+					id: "09974D6A08E189CD"
+					item: "gtceu:cryptand_li_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: -9.0d
 			y: -3.0d
 		}
@@ -1475,11 +1483,19 @@
 			icon: "gtceu:cryptand_na_bucket"
 			id: "4DD1697CC78CC83C"
 			shape: "hexagon"
-			tasks: [{
-				id: "6583FF1119FE6457"
-				title: "2.2.2-Cryptand (Na)"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "6583FF1119FE6457"
+					title: "2.2.2-Cryptand (Na)"
+					type: "checkmark"
+				}
+				{
+					id: "5FC85D92F340D88F"
+					item: "gtceu:cryptand_na_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: -9.0d
 			y: -5.0d
 		}
@@ -1491,11 +1507,19 @@
 			icon: "gtceu:cryptand_k_bucket"
 			id: "182B1B1A1DFEF069"
 			shape: "hexagon"
-			tasks: [{
-				id: "0597F4E0A3FECE31"
-				title: "2.2.2-Cryptand (K)"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0597F4E0A3FECE31"
+					title: "2.2.2-Cryptand (K)"
+					type: "checkmark"
+				}
+				{
+					id: "0A67BECCA0DE42C0"
+					item: "gtceu:cryptand_k_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: -9.0d
 			y: -4.0d
 		}
