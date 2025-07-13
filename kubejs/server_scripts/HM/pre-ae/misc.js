@@ -58,4 +58,26 @@ ServerEvents.recipes(event => {
         'gtceu:annealed_copper_dust'
     );
 
+	event.recipes.gtceu.macerator(id('soul_sand_dust'))
+        .itemInputs('minecraft:soul_sand')
+        .itemOutputs('thermal_extra:soul_sand_dust')
+        .duration(40)
+        .EUt(16);
+    event.recipes.gtceu.mixer(id('soul_infused_dust'))
+        .itemInputs('gtceu:invar_dust', '2x thermal_extra:soul_sand_dust')
+        .itemOutputs('3x gtceu:soul_infused_dust')
+        .duration(300)
+        .EUt(16);
+    event.recipes.gtceu.mixer(id('signalum_dust'))
+        .itemInputs('gtceu:silver_dust', '3x gtceu:copper_dust', '4x minecraft:redstone')
+        .itemOutputs('8x gtceu:signalum_dust')
+        .duration(800)
+        .EUt(64)
+        .circuit(3);
+    event.recipes.gtceu.mixer(id('lumium_dust'))
+        .itemInputs('gtceu:silver_dust', '3x gtceu:tin_dust', '2x minecraft:glowstone_dust')
+        .itemOutputs('6x gtceu:lumium_dust')
+        .duration(600)
+        .EUt(256);
+
 });

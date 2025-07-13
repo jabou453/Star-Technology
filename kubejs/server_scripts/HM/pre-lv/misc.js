@@ -175,11 +175,11 @@ ServerEvents.recipes(event => {
 
 	event.remove({ output: 'laserio:logic_chip_raw' });
 	event.remove({ output: 'laserio:logic_chip' });
-	event.recipes.gtceu.circuit_assembler(id('logic_chip_raw'))
-		.itemInputs('#gtceu:circuits/lv', '8x exnihilosequentia:porcelain_clay')
+	event.recipes.gtceu.circuit_facility(id('logic_chip_raw'))
+		.itemInputs('#gtceu:circuits/lv', '8x exnihilosequentia:porcelain_clay', 'gtceu:small_redstone_dust')
 		.itemOutputs('laserio:logic_chip_raw')
 		.duration(320)
-		.EUt(7);
+		.EUt(24);
 
 	event.recipes.gtceu.electric_blast_furnace(id('logic_chip'))
         .itemInputs('laserio:logic_chip_raw')

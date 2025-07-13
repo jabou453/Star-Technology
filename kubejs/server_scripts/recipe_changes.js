@@ -126,9 +126,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:rubber 576')
         .duration(240)
         .EUt(8);
-    })()
-    }
-
+   
     event.recipes.gtceu.extractor(id('nether_agglomeration'))
         .itemInputs('gtceu:netherrack_dust')
         .itemOutputs('mysticalagriculture:nether_agglomeratio')
@@ -170,7 +168,8 @@ ServerEvents.recipes(event => {
         .duration(2400)
         .EUt(20)
         .circuit(0);
-
+    })()
+    }
     event.recipes.gtceu.mixer(id('naquadic_netherite'))
         .itemInputs('3x gtceu:naquadah_dust', '5x gtceu:pure_netherite_dust', '2x gtceu:caesium_dust', '5x gtceu:cerium_dust')
         .inputFluids('gtceu:fluorine 12000', 'gtceu:oxygen 32000')

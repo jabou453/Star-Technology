@@ -348,8 +348,8 @@
 				item: "gtceu:arsenic_dust"
 				type: "item"
 			}]
-			x: 1.0d
-			y: -1.0d
+			x: -0.75d
+			y: -0.25d
 		}
 		{
 			dependencies: ["583A60E6A408D4DE"]
@@ -495,11 +495,18 @@
 				"106B9FF2B76972D8"
 			]
 			id: "291B70F529285F79"
-			tasks: [{
-				id: "72AFE55A1F9E75A0"
-				item: "gtceu:ram_wafer"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "72AFE55A1F9E75A0"
+					item: "gtceu:ram_wafer"
+					type: "item"
+				}
+				{
+					id: "57CA0F93E3C2621C"
+					item: "gtceu:ram_chip"
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: 0.5d
 		}
@@ -509,11 +516,18 @@
 				"106B9FF2B76972D8"
 			]
 			id: "338C1E98C9760E8D"
-			tasks: [{
-				id: "0B2136ED4054561C"
-				item: "gtceu:ulpic_wafer"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0B2136ED4054561C"
+					item: "gtceu:ulpic_wafer"
+					type: "item"
+				}
+				{
+					id: "43FEE342C209606F"
+					item: "gtceu:ulpic_chip"
+					type: "item"
+				}
+			]
 			x: 4.5d
 			y: 2.0d
 		}
@@ -523,11 +537,18 @@
 				"106B9FF2B76972D8"
 			]
 			id: "420EA1E2CFE6810E"
-			tasks: [{
-				id: "4B940359EF8FC8A7"
-				item: "gtceu:ilc_wafer"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4B940359EF8FC8A7"
+					item: "gtceu:ilc_wafer"
+					type: "item"
+				}
+				{
+					id: "36E1B4E589784855"
+					item: "gtceu:ilc_chip"
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: -1.0d
 		}
@@ -803,6 +824,9 @@
 			dependencies: [
 				"7C3BF47FE14C6FD1"
 				"77E38E5C97E1E837"
+				"09031874B8F11A07"
+				"1CC1FB1662BEA694"
+				"7F6E39547E6ACCCE"
 			]
 			id: "6CFFFAB1E5A5E91F"
 			tasks: [{
@@ -825,7 +849,10 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["191EAA4D1E8298AF"]
+			dependencies: [
+				"191EAA4D1E8298AF"
+				"238E7B29604D78EA"
+			]
 			id: "2CE0741A5547BB26"
 			tasks: [{
 				id: "76698B547F5793C1"
@@ -839,6 +866,8 @@
 			dependencies: [
 				"2CE0741A5547BB26"
 				"6DF3E711645B1249"
+				"00D9F4D9700828D0"
+				"5F79DF9B93065ACB"
 			]
 			id: "190D8CE085E5AD3E"
 			tasks: [{
@@ -862,10 +891,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: [
-				"2F83926420785947"
-				"0E8979E7B66B64F6"
-			]
+			dependencies: ["0E8979E7B66B64F6"]
 			id: "7C3BF47FE14C6FD1"
 			tasks: [{
 				id: "37CFFFBF84830663"
@@ -884,11 +910,18 @@
 			]
 			hide_dependency_lines: true
 			id: "77E38E5C97E1E837"
-			tasks: [{
-				id: "0EE4F37FD7F592E6"
-				item: "gtceu:cpu_wafer"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0EE4F37FD7F592E6"
+					item: "gtceu:cpu_wafer"
+					type: "item"
+				}
+				{
+					id: "7945EADE2B29657F"
+					item: "gtceu:cpu_chip"
+					type: "item"
+				}
+			]
 			x: 13.5d
 			y: -7.0d
 		}
@@ -1170,14 +1203,20 @@
 				"2F83926420785947"
 				"5BAF15BFA908BE49"
 				"61C2ABD878B7234A"
-				"76F76B65AE97749D"
 			]
 			id: "566775668C39F2A6"
-			tasks: [{
-				id: "6B5777813B935779"
-				item: "gtceu:lpic_wafer"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "6B5777813B935779"
+					item: "gtceu:lpic_wafer"
+					type: "item"
+				}
+				{
+					id: "6ED90D932333A8BE"
+					item: "gtceu:lpic_chip"
+					type: "item"
+				}
+			]
 			x: 13.5d
 			y: -2.5d
 		}
@@ -1345,25 +1384,30 @@
 			y: -12.0d
 		}
 		{
-			dependencies: ["08655ED4A7CB3546"]
+			dependencies: [
+				"08655ED4A7CB3546"
+				"2F83926420785947"
+			]
 			id: "0E8979E7B66B64F6"
 			tasks: [{
 				id: "5D20006360FA7D38"
 				item: "gtceu:plastic_printed_circuit_board"
 				type: "item"
 			}]
-			x: 13.5d
-			y: -4.0d
+			x: 12.0d
+			y: -5.5d
 		}
 		{
+			dependencies: ["2D82190AA51292B8"]
+			hide_dependency_lines: true
 			id: "08655ED4A7CB3546"
 			tasks: [{
 				id: "1CF1872292C0AE5A"
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 14.25d
-			y: -3.25d
+			x: 10.5d
+			y: -5.5d
 		}
 		{
 			dependencies: ["587900D2C442A176"]
@@ -1492,6 +1536,7 @@
 		}
 		{
 			dependencies: ["4E78E87D7DFE1C3E"]
+			hide_dependent_lines: true
 			id: "3B92C39BF0951B84"
 			tasks: [{
 				id: "1183D53798FF47EC"
@@ -1622,10 +1667,10 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: -4.0d
+			y: -5.5d
 		}
 		{
-			dependencies: ["1A4D9BE1BFFA5096"]
+			dependencies: ["48DFEEAF767DA04B"]
 			id: "01A79F99CA850A67"
 			tasks: [{
 				id: "1D2129197C3A2E30"
@@ -2380,7 +2425,7 @@
 				item: "gtceu:titanium_ingot"
 				type: "item"
 			}]
-			x: 16.5d
+			x: 18.0d
 			y: -5.5d
 		}
 		{
@@ -2402,7 +2447,7 @@
 				item: "gtceu:ev_machine_hull"
 				type: "item"
 			}]
-			x: 16.5d
+			x: 18.0d
 			y: -4.0d
 		}
 		{
@@ -2416,7 +2461,7 @@
 				item: "gtceu:ev_assembler"
 				type: "item"
 			}]
-			x: 16.5d
+			x: 18.0d
 			y: -2.5d
 		}
 		{
@@ -2464,7 +2509,7 @@
 				item: "gtceu:rtm_alloy_coil_block"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 19.5d
 			y: -4.0d
 		}
 		{
@@ -3163,11 +3208,18 @@
 		{
 			dependencies: ["05A414360ED152CF"]
 			id: "12BFA13A58EB3C0F"
-			tasks: [{
-				id: "1AB395908393C8B7"
-				item: "gtceu:mpic_chip"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "70391CC74B909EEE"
+					item: "gtceu:mpic_wafer"
+					type: "item"
+				}
+				{
+					id: "511CDC0E30A0C14A"
+					item: "gtceu:mpic_chip"
+					type: "item"
+				}
+			]
 			x: 21.0d
 			y: -2.5d
 		}
@@ -3182,7 +3234,7 @@
 				item: "gtceu:ev_laser_engraver"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 22.5d
 			y: -4.0d
 		}
 		{
@@ -3193,7 +3245,7 @@
 				item: "gtceu:radon_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 21.0d
 			y: -4.0d
 		}
 		{
@@ -3207,7 +3259,7 @@
 				item: "gtceu:nuclear_reactor"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 19.5d
 			y: -5.5d
 		}
 		{
@@ -3218,7 +3270,7 @@
 				item: "gtceu:plutonium_dust"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 21.0d
 			y: -5.5d
 		}
 		{
@@ -3245,7 +3297,6 @@
 		}
 		{
 			dependencies: ["0C2BAE421CDC884A"]
-			hide_dependent_lines: true
 			id: "76F76B65AE97749D"
 			tasks: [{
 				id: "585D41CCF6494245"
@@ -3343,14 +3394,14 @@
 				item: "kubejs:multiblock_upgrade_kit"
 				type: "item"
 			}]
-			x: 18.0d
-			y: -2.5d
+			x: 16.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
 				"322ED6002645BD9B"
-				"2F83926420785947"
 				"77E38E5C97E1E837"
+				"0E8979E7B66B64F6"
 			]
 			id: "1988B2548A1347A5"
 			tasks: [{
@@ -3363,7 +3414,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: -5.5d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -3372,12 +3423,19 @@
 			]
 			hide_dependency_lines: true
 			id: "322ED6002645BD9B"
-			tasks: [{
-				id: "38B12A2E8240EC8A"
-				item: "gtceu:nand_memory_wafer"
-				type: "item"
-			}]
-			x: 12.0d
+			tasks: [
+				{
+					id: "38B12A2E8240EC8A"
+					item: "gtceu:nand_memory_wafer"
+					type: "item"
+				}
+				{
+					id: "43050406397E2F62"
+					item: "gtceu:nand_memory_chip"
+					type: "item"
+				}
+			]
+			x: 10.5d
 			y: -7.0d
 		}
 		{
@@ -3427,6 +3485,93 @@
 			}]
 			x: 3.0d
 			y: -8.5d
+		}
+		{
+			dependencies: ["1A4D9BE1BFFA5096"]
+			id: "48DFEEAF767DA04B"
+			tasks: [{
+				id: "7BDE7346EF767538"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						display: {
+							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"Arc Furnace\"}"
+						}
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:lv_arc_furnace"
+							}
+							{
+								Count: 1b
+								id: "gtceu:mv_arc_furnace"
+							}
+						]
+					}
+				}
+				type: "item"
+			}]
+			x: 9.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"3B92C39BF0951B84"
+				"2F83926420785947"
+			]
+			id: "26F70330D0D64890"
+			tasks: [
+				{
+					id: "238E7B29604D78EA"
+					item: "gtceu:smd_inductor"
+					type: "item"
+				}
+				{
+					id: "00D9F4D9700828D0"
+					item: "gtceu:smd_diode"
+					type: "item"
+				}
+				{
+					id: "1CC1FB1662BEA694"
+					item: "gtceu:smd_capacitor"
+					type: "item"
+				}
+				{
+					id: "7F6E39547E6ACCCE"
+					item: "gtceu:smd_transistor"
+					type: "item"
+				}
+				{
+					id: "09031874B8F11A07"
+					item: "gtceu:smd_resistor"
+					type: "item"
+				}
+			]
+			x: 13.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"76F76B65AE97749D"
+				"5BAF15BFA908BE49"
+			]
+			hide_dependency_lines: true
+			id: "5F79DF9B93065ACB"
+			tasks: [
+				{
+					id: "379AED93BFE359CB"
+					item: "gtceu:nor_memory_wafer"
+					type: "item"
+				}
+				{
+					id: "06220DDF380F1F55"
+					item: "gtceu:nor_memory_chip"
+					type: "item"
+				}
+			]
+			x: 16.5d
+			y: -2.5d
 		}
 	]
 	title: "Daring are we?"

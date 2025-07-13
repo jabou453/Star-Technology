@@ -7,6 +7,7 @@ ServerEvents.tags('block', event => {
 		event.add('minecraft:needs_iron_tool', `minecraft:${log}_wood`);
 		event.add('minecraft:needs_iron_tool', `minecraft:${log}_log`);
 	});
+	event.remove('create_new_age:magnets/strength_4', 'minecraft:respawn_anchor');
 });
 
 ServerEvents.tags('item', event => {

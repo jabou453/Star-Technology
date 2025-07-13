@@ -43,8 +43,8 @@ ServerEvents.recipes(event => {
             .duration(200)
             .EUt(30 * (4 ** (type - 1)));
 
-        if (type !== 1) {
-        let prior = (type == 2) ? 'mirror' : `photovoltaic_cell_${type - 2}` ;
+        if (tier !== 'mv') {
+        let prior = (tier == 'hv') ? 'mirror' : `photovoltaic_cell_${type - 2}` ;
         event.recipes.gtceu.circuit_assembler(id(`photovoltaic_cell_${type - 1}`))
             .itemInputs(`solarflux:${prior}`, `kubejs:${chip}_chip`, `1x #gtceu:circuits/${tier}`, `kubejs:${core}_energy_core`, `6x gtceu:fine_${wire}_wire`)
             .inputFluids(`gtceu:soldering_alloy ${72 * type}`)
