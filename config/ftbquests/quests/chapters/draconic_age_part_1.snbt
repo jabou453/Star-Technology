@@ -37,6 +37,7 @@
 	quests: [
 		{
 			dependencies: ["1E3EF64C0A4EE438"]
+			description: ["Venture through the Ancient Stargate to discover the burning Nether."]
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -57,6 +58,11 @@
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
+			description: [
+				"A mystical artifact. To find, locate shrines inside the nether."
+				""
+				"<add image here, it is in kubejs/assets/kubejs/quests>"
+			]
 			id: "71145B6D6BA8016A"
 			tasks: [{
 				id: "208B4A54456B3399"
@@ -68,6 +74,7 @@
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
+			description: ["These stones are found in veins across the nether. Their mystical properties are needed to advance in casing technology."]
 			id: "709EF5314988C381"
 			tasks: [
 				{
@@ -90,6 +97,7 @@
 				"709EF5314988C381"
 				"0032335FFAE6E012"
 			]
+			description: ["A new fridge, for cooling down your ingots at higher speeds than ever."]
 			id: "665FC02BC2BC414F"
 			shape: "gear"
 			size: 1.5d
@@ -109,6 +117,7 @@
 				"295442FA6CE0BA13"
 				"53A2FF89C0F89921"
 			]
+			description: ["A towering furnace, needing both fuel and power, to heat up materials to Mega-kelvins."]
 			id: "1EB60E6DE2086158"
 			shape: "gear"
 			size: 1.5d
@@ -125,6 +134,7 @@
 				"1EB60E6DE2086158"
 				"70EEDB38B78F5C7F"
 			]
+			description: ["A new set of Alloys, forged from the flames of hell, ready for some industrial purposes."]
 			id: "059CB064A515B157"
 			tasks: [
 				{
@@ -152,16 +162,24 @@
 				"665FC02BC2BC414F"
 				"295442FA6CE0BA13"
 			]
+			description: ["Your new freezer will need better coolants, that surpass Helium in efficiency."]
+			icon: "gtceu:bec_og_bucket"
 			id: "70EEDB38B78F5C7F"
 			tasks: [
 				{
-					id: "35B242E33E98B4B7"
-					item: "gtceu:bec_og_bucket"
+					id: "0877A1E179C61B35"
+					type: "checkmark"
+				}
+				{
+					id: "3AFCC266D8F55884"
+					item: "gtceu:superstate_helium_3_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
-					id: "05D34BDDBD6A9D56"
-					item: "gtceu:superstate_helium_3_bucket"
+					id: "55FDAFBD77037DD1"
+					item: "gtceu:bec_og_bucket"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -174,6 +192,7 @@
 				"059CB064A515B157"
 				"215A1E80621E2880"
 			]
+			description: ["A new tier of coils, harnessing the heat of the Nether in order to liquify even the strongest of materials."]
 			id: "310FC3F86513555F"
 			shape: "gear"
 			size: 1.5d
@@ -271,13 +290,22 @@
 		}
 		{
 			dependencies: ["6C8C6EA426060065"]
+			description: ["A new plasma, burning as hot as the Nether it originates from."]
+			icon: "gtceu:magmatic_plasma_bucket"
 			id: "215A1E80621E2880"
 			shape: "circle"
-			tasks: [{
-				id: "2EAC214860C4256F"
-				item: "gtceu:magmatic_plasma_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "13271D35858C6726"
+					type: "checkmark"
+				}
+				{
+					id: "217417D24B5F8D16"
+					item: "gtceu:magmatic_plasma_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: -3.0d
 			y: -5.0d
 		}
@@ -481,6 +509,7 @@
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
+			description: ["Deep in the crust of the nether lay great veins of Hellish Magma's, containing riches beyond ones wildest dreams."]
 			icon: "gtceu:highly_unstable_nether_magma_bucket"
 			id: "1AEBAE3050B72906"
 			tasks: [
@@ -507,6 +536,7 @@
 		}
 		{
 			dependencies: ["1AEBAE3050B72906"]
+			description: ["Rare and expensive metals produced by processing the Hellish Magma's."]
 			id: "0032335FFAE6E012"
 			tasks: [
 				{
@@ -546,6 +576,10 @@
 		}
 		{
 			dependencies: ["1AEBAE3050B72906"]
+			description: [
+				"A material that requires large processing lines. Check out "
+				"{ \"text\": \"Processing Lines (7+)\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"587F453EE1BAFB79\" } }"
+			]
 			hide_dependent_lines: true
 			id: "295442FA6CE0BA13"
 			tasks: [{
@@ -645,6 +679,7 @@
 				"5944C4DE27F98FF3"
 				"310FC3F86513555F"
 			]
+			description: ["The fourth tier of fusion reactors, reaching over 1 Billion Kelvin."]
 			hide_dependent_lines: true
 			id: "2E34F23A42004285"
 			tasks: [{
@@ -692,6 +727,7 @@
 		}
 		{
 			dependencies: ["310FC3F86513555F"]
+			description: ["A Sterile Maintenance Hatch, that will allow Sterile recipes to be run outside of a cleanroom."]
 			hide_dependent_lines: true
 			id: "032E72446266F7D4"
 			tasks: [{
@@ -773,11 +809,18 @@
 			dependencies: ["09B55AFE7C06EC82"]
 			id: "3AE729D3F47E9A2B"
 			subtitle: "No linger stinky"
-			tasks: [{
-				id: "0CF6EA4214D2778A"
-				item: "gtceu:pure_dragon_breath_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "15CB4AC6660452D4"
+					type: "checkmark"
+				}
+				{
+					id: "28FA8CA23E8E5436"
+					item: "gtceu:pure_dragon_breath_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -900,6 +943,7 @@
 		}
 		{
 			dependencies: ["310FC3F86513555F"]
+			description: ["A parallel Multi Smelter, just in case it wasn't fast enough already."]
 			id: "5FEC7470D01CEBDD"
 			shape: "gear"
 			size: 1.5d

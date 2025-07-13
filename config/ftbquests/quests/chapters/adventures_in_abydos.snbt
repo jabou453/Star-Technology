@@ -2118,6 +2118,11 @@
 		}
 		{
 			dependencies: ["3479CEBD73550718"]
+			description: [
+				"Ruined Component Parts can be found as loot in various structures in Abydos."
+				""
+				"By finding these ancient parts of technology and researching them, you can discover how to advance into &4UHV&r technology."
+			]
 			id: "077F46BD75F325FD"
 			tasks: [
 				{
