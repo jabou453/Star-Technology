@@ -289,9 +289,22 @@
 		{
 			dependencies: ["141911C5DD68CD2A"]
 			description: [
-				"Description tbh"
+				"Dreamlinks are a form of wireless power unique to StarT"
 				""
-				"Eta = Eta"
+				"The only form of power Dreamlinks accept are lasers. To produce these, use an active transformer."
+				""
+				"To transfer power, you need Dream-link Nodes. These provide a kind of reception, that dream link hatches/covers accept."
+				""
+				"By putting your Node and Hatch on the same network, they will share power, just like Flux Networks."
+				""
+				"Each new tier of node has better range than the previous one."
+				""
+				"The ranges are:"
+				"- Dream-link Node: 24 Blocks"
+				"- Oneiric Relay: 48 Blocks"
+				"- Daydream Spire: 96 Blocks"
+				"- Beacon of Lucidity: Unlimited Range"
+				"- Paragon of the Veil: Unlimited Range and Cross-Dimensional"
 			]
 			icon: "start_core:uhv_64a_dream_link_energy_hatch"
 			id: "2F63F0E239737E38"

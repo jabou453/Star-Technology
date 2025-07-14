@@ -1223,32 +1223,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: [
-				"5E7153B7A10FC241"
-				"6180202612DCDBF4"
-			]
-			icon: "minecraft:end_stone"
-			id: "4238E903C674B284"
-			optional: true
-			rewards: [{
-				id: "6BE5069F47361652"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.0d
-			subtitle: "Not Yet Accessible"
-			tasks: [{
-				dimension: "minecraft:the_end"
-				icon: "minecraft:end_stone"
-				id: "4FEE3F71D119AD26"
-				type: "dimension"
-			}]
-			title: "To The End"
-			x: 12.0d
-			y: -6.0d
-		}
-		{
 			dependencies: ["47DF7968E9B98C65"]
 			description: ["Mutate and Breed Bacteria to fit your needs and help you gather all the hydrocarbons you could need."]
 			icon: "gtceu:ethylbenzene_bucket"
@@ -1916,58 +1890,6 @@
 			}]
 			x: 2.5d
 			y: 4.0d
-		}
-		{
-			dependencies: [
-				"5E7153B7A10FC241"
-				"59B0F5DB2C1E96DC"
-			]
-			icon: "minecraft:netherrack"
-			id: "1E3EF64C0A4EE438"
-			optional: true
-			rewards: [{
-				id: "5440DF6C322F753F"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.0d
-			subtitle: "Not Yet Accessible"
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				icon: "minecraft:netherrack"
-				id: "537A1229A7EED7D1"
-				title: "To The Nether"
-				type: "dimension"
-			}]
-			x: 11.0d
-			y: -6.0d
-		}
-		{
-			dependencies: [
-				"5E7153B7A10FC241"
-				"59B0F5DB2C1E96DC"
-			]
-			icon: "minecraft:netherrack"
-			id: "0B00FD5F7735E3E0"
-			optional: true
-			rewards: [{
-				id: "4D0262DA27C9357F"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.0d
-			subtitle: "Not Yet Accessible"
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				icon: "minecraft:netherrack"
-				id: "3D62E0DEA1D5CAC6"
-				title: "To The Nether"
-				type: "dimension"
-			}]
-			x: 11.0d
-			y: -6.0d
 		}
 		{
 			dependencies: ["630F50E03EC3D144"]

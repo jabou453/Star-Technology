@@ -36,7 +36,10 @@
 	]
 	quests: [
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
+			dependencies: [
+				"5E7153B7A10FC241"
+				"59B0F5DB2C1E96DC"
+			]
 			description: [
 				"Venture through the Ancient Stargate to discover the burning Nether."
 				""
@@ -53,9 +56,11 @@
 			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
-				id: "0CC375D9EC5EB6D5"
-				title: "Burning Hells Await"
-				type: "checkmark"
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:netherrack"
+				id: "59EB1DD611632624"
+				title: "The Burning Hells await"
+				type: "dimension"
 			}]
 			x: -8.0d
 			y: -4.0d
@@ -65,7 +70,7 @@
 			description: [
 				"A mystical artifact. To find, locate shrines inside the nether."
 				""
-				"<add image here, it is in kubejs/assets/kubejs/quests>"
+				"{image:kubejs:textures/quests/husk_structure.png width:360 height:180 align:center fit:true}"
 			]
 			id: "71145B6D6BA8016A"
 			tasks: [{
@@ -261,8 +266,8 @@
 		}
 		{
 			dependencies: [
+				"5E7153B7A10FC241"
 				"6180202612DCDBF4"
-				"4238E903C674B284"
 			]
 			description: [
 				"Venture through the Ancient Stargate to discover the hollow End."
@@ -280,9 +285,11 @@
 			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
-				id: "64F5F2C7D749F456"
-				title: "The Draconic Abyss"
-				type: "checkmark"
+				dimension: "minecraft:the_end"
+				icon: "minecraft:end_stone"
+				id: "4DEF021D751349A6"
+				title: "The Draconic Abyss awaits"
+				type: "dimension"
 			}]
 			x: -8.0d
 			y: 4.0d
@@ -324,7 +331,7 @@
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
-			description: ["The abyss of the End holds pure levels of Entropy. Using this machine, can you harvest the entropy, and channel it towards technological advancement."]
+			description: ["The abyss of the End holds pure levels of Entropy. Using this machine, you can harvest different Entropy states of Voidic Excression, and channel those towards technological advancement."]
 			id: "18FD654260DFF1D6"
 			tasks: [{
 				id: "1DBA5C2531A8F6B4"
@@ -398,7 +405,7 @@
 				"5080743917931298"
 				"2F6115002741F26F"
 			]
-			description: ["Entropy-rich Alloys that harness the power of the End, controlling the flow of energy."]
+			description: ["Alloys that harness the power of the End, controlling the flow of energy."]
 			id: "7EB9C44EE7515882"
 			tasks: [
 				{
@@ -444,7 +451,7 @@
 				"7EB9C44EE7515882"
 				"75C33909E2CD5EC0"
 			]
-			description: ["These are extremely entropy charged alloys, that pave the way to &2UIV&r"]
+			description: ["These are extremely charged abyssal alloys, that pave the way to &2UIV&r"]
 			id: "097D8B4DF03A8617"
 			tasks: [
 				{

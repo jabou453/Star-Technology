@@ -360,7 +360,6 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:oxygen_bucket"
 			id: "3CC01E512CFFCA7D"
 			tasks: [
@@ -434,7 +433,6 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "3FD49B315EE98945"
 			tasks: [
@@ -497,7 +495,6 @@
 			y: -7.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "42B1DD1F79E4D8DD"
 			tasks: [{
 				id: "636576DB938794BC"
@@ -596,7 +593,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "0D3597B22F911A09"
 			tasks: [{
 				id: "476A2B133C88B321"
@@ -640,7 +636,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "689E963E5F637FAD"
 			tasks: [{
 				id: "7F620A4BAD195B77"
@@ -677,7 +672,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "7A23DEA23577657A"
 			tasks: [
@@ -715,7 +709,6 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:iron_ii_chloride_bucket"
 			id: "181B1275C964F1ED"
 			tasks: [
@@ -734,7 +727,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:oxygen_bucket"
 			id: "74C79D9E30739DC4"
 			tasks: [
@@ -753,7 +745,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "5B6EE61361A05508"
 			tasks: [{
 				id: "4E4E771ABC384809"
@@ -825,7 +816,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:nitric_acid_bucket"
 			id: "145B0DD7EC071D0B"
 			tasks: [
@@ -863,7 +853,6 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "442D763AF26EF699"
 			tasks: [{
 				id: "7005343470EB80CC"
@@ -923,7 +912,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "minecraft:netherrack"
 			id: "3EA66E80E1F54265"
 			shape: "circle"
@@ -1020,7 +1008,6 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:perchloric_acid_bucket"
 			id: "32DBE743F25436AC"
 			tasks: [
@@ -1061,7 +1048,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "2659596D6ACD018A"
 			tasks: [{
 				id: "6C9A6B1546654656"
@@ -1094,7 +1080,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "7509E1B75AD32CD0"
 			tasks: [{
 				id: "088D579D9388AE5D"
@@ -1202,7 +1187,6 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "7E5F047E322740F5"
 			tasks: [{
 				id: "7AA65FB3EDE49372"
@@ -1420,7 +1404,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "7783C80B1CDE776A"
 			tasks: [{
 				id: "269651437C97E650"
@@ -1472,7 +1455,6 @@
 			y: 5.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "28CD7D9C410DBA44"
 			tasks: [{
 				id: "3C81E3F24AFA7FB2"
@@ -1498,7 +1480,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:oxygen_bucket"
 			id: "0DFE4E3C4242E44C"
 			tasks: [
@@ -1542,7 +1523,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrofluoric_acid_bucket"
 			id: "6C5288C7AF770B80"
 			tasks: [
@@ -1586,7 +1566,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "126FDFA1134321CC"
 			tasks: [{
 				id: "13D64A1FD7CC23E2"
@@ -1654,7 +1633,6 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:fluoroantimonic_acid_bucket"
 			id: "426CF59C9CF52E99"
 			tasks: [
@@ -2060,7 +2038,6 @@
 			y: -6.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "2E2090C9313F8193"
 			tasks: [{
 				id: "1714E816275F59B0"
@@ -2107,7 +2084,6 @@
 			y: -6.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrogen_bucket"
 			id: "585828F1FD6ACADF"
 			tasks: [
@@ -2314,7 +2290,6 @@
 			y: 8.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:sulfuric_acid_bucket"
 			id: "04F127E5D42D74FF"
 			tasks: [
@@ -2423,7 +2398,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:sulfuric_acid_bucket"
 			id: "7E82F90A09FFDCD4"
 			tasks: [
@@ -2475,7 +2449,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "602201333E3C0A36"
 			tasks: [{
 				id: "247B19E6BC2E01A2"
@@ -2571,7 +2544,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "7405DB736A12A52C"
 			tasks: [{
 				id: "79B508E51A13A469"
@@ -2596,7 +2568,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "204D80C723A1084C"
 			tasks: [
@@ -2659,7 +2630,6 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrogen_bucket"
 			id: "2E7AAF45F5ECC113"
 			tasks: [
@@ -2705,7 +2675,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "27B8069B6301B3B7"
 			tasks: [
@@ -2749,7 +2718,6 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "465B18502B671A6A"
 			tasks: [
@@ -2844,7 +2812,6 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:carbon_monoxide_bucket"
 			id: "0CAA5D36AA189797"
 			tasks: [
@@ -2863,7 +2830,6 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "31961DC2B9349B48"
 			tasks: [{
 				id: "68DF861E7E9EE26D"
@@ -2912,7 +2878,6 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "3960BC820E5B62BC"
 			tasks: [{
 				id: "2430A4A50D864C4A"
@@ -2959,7 +2924,6 @@
 			y: 5.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrochloric_acid_bucket"
 			id: "7CB76E36A523AD5B"
 			tasks: [
@@ -3036,7 +3000,6 @@
 			y: 5.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "166EE7BB3EB48192"
 			tasks: [{
 				id: "3B3AF7D5D8D51312"
@@ -3072,7 +3035,6 @@
 			y: 5.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "598FF956B1C76F21"
 			tasks: [{
 				id: "0FFA31FBB50703DC"
@@ -3165,7 +3127,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "62099AFBD02D558A"
 			tasks: [{
 				id: "2FBAE6E7421973E0"
@@ -3190,7 +3151,6 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:nitrogen_dioxide_bucket"
 			id: "5B4B5952E5171808"
 			tasks: [
@@ -3255,7 +3215,6 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrofluoric_acid_bucket"
 			id: "5893EBB42AA52BC1"
 			tasks: [
@@ -3308,7 +3267,6 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "6DDA7E241DDE6A91"
 			tasks: [{
 				id: "3E46CF6544C4E3A3"
@@ -3319,7 +3277,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:bromine_bucket"
 			id: "0369BA079922E315"
 			tasks: [
@@ -3338,7 +3295,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:fluorine_bucket"
 			id: "481B6F3CF0170917"
 			tasks: [
@@ -3357,7 +3313,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "1BEE0053B443D65C"
 			tasks: [{
 				id: "00B056AAE7CA39B9"
@@ -3464,7 +3419,6 @@
 			y: 12.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:ethylene_glycol_bucket"
 			id: "74B8AA9E737343E3"
 			tasks: [
@@ -3521,7 +3475,6 @@
 			y: 15.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:seed_oil_bucket"
 			id: "6644545E82F9BFB0"
 			tasks: [
@@ -3540,7 +3493,6 @@
 			y: 11.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:sulfuric_acid_bucket"
 			id: "69B8EF342BA15269"
 			tasks: [
@@ -3663,7 +3615,6 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:nitric_acid_bucket"
 			id: "051E6DA0D543A58C"
 			tasks: [
@@ -3682,7 +3633,6 @@
 			y: 11.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "51C11DED5562F3B1"
 			tasks: [{
 				id: "36953F7AD3F6D494"
@@ -3758,7 +3708,6 @@
 			y: 12.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:ethanol_bucket"
 			id: "713EE2D7574D9473"
 			tasks: [
@@ -3777,7 +3726,6 @@
 			y: 12.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "3C05B71CFD8AC41A"
 			tasks: [{
 				id: "24C215BE51467A56"
@@ -3788,7 +3736,6 @@
 			y: 15.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:sulfur_trioxide_bucket"
 			id: "40F3F2553DEACECC"
 			tasks: [
@@ -3843,7 +3790,6 @@
 			y: 11.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "192A52EDB919A08A"
 			tasks: [{
 				id: "5BF6872B5BB7C8BE"
@@ -3854,7 +3800,6 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "6130E48A306EF009"
 			tasks: [{
 				id: "6E13C9FCBDB93512"
@@ -3909,7 +3854,6 @@
 			y: 15.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:carbon_monoxide_bucket"
 			id: "79461F8EDAE4C34E"
 			tasks: [
@@ -3966,7 +3910,6 @@
 			y: 10.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:phosphoric_acid_bucket"
 			id: "70CC0AACE1B75966"
 			tasks: [
@@ -3985,10 +3928,7 @@
 			y: 10.0d
 		}
 		{
-			dependencies: [
-				"441B116F6D8FDC08"
-				"1E3EF64C0A4EE438"
-			]
+			dependencies: ["441B116F6D8FDC08"]
 			icon: "gtceu:14_butanediol_bucket"
 			id: "0D3918A88A1291AF"
 			tasks: [
@@ -4007,7 +3947,6 @@
 			y: 10.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:bromine_bucket"
 			id: "60241DC3DA088331"
 			tasks: [
@@ -4026,7 +3965,6 @@
 			y: 13.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:ethylene_bucket"
 			id: "06427C8A1CA70F2E"
 			tasks: [
@@ -4045,7 +3983,6 @@
 			y: 14.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:dimethylamine_bucket"
 			id: "070904889C20A5FD"
 			tasks: [
@@ -4064,7 +4001,6 @@
 			y: 15.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:formic_acid_bucket"
 			id: "1DF68580F9E765D8"
 			tasks: [
@@ -4127,7 +4063,6 @@
 			y: 13.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "7E35AD240B83B0FA"
 			tasks: [{
 				id: "12397E8A049D1B4D"
@@ -4138,7 +4073,6 @@
 			y: 12.5d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:styrene_bucket"
 			id: "2D8603D1EB3099A5"
 			tasks: [
@@ -4179,7 +4113,6 @@
 			y: 15.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:benzoyl_chloride_bucket"
 			id: "42A52C68EF9C8F05"
 			tasks: [
@@ -4198,7 +4131,6 @@
 			y: 13.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			id: "0743ACC2DC774C7E"
 			tasks: [{
 				id: "1D3F8BCAB722E6BA"
@@ -4209,7 +4141,6 @@
 			y: 14.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:hydrogen_chloride_bucket"
 			id: "1E9691AB96D72E15"
 			tasks: [
@@ -4228,7 +4159,6 @@
 			y: 16.0d
 		}
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
 			icon: "gtceu:sulfur_trioxide_bucket"
 			id: "28F87B092B2F9C81"
 			tasks: [
