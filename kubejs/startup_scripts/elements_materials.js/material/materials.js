@@ -183,6 +183,8 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.Netherite.addFlags(rod, foil);
     GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
     GTMaterials.get('netherite_hexammine_sulfate').setFormula('[*Nr*(NH3)6]SO4');
+    GTMaterials.get('glowstone').setFormula('(Si(FeS2)5(CrAl2O3)Hg3)Au');
+    GTMaterials.get('ohmderblux_alloy').setFormula('Cx5(Fe16TiAlNi4Co2)2Zr4(Si(FeS2)5(CrAl2O3)Hg3)Au)9(Co5Cr2NiMo)3');
     GTMaterials.get('netherite').setFormula('Nr');
     GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
     GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
@@ -267,7 +269,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('naquadah', dense_plate);
     matmod('enriched_naquadah', [dense_plate, rotor, gear, small_gear, frame, long_rod]);
     matmod('naquadria', dense_plate);
-    matmod('neutronium', [foil, small_gear,rotor]);
+    matmod('neutronium', [foil, small_gear,rotor, dense_plate]);
     matmod('europium', small_spring);
     matmod('zirconium', fine_wire);
     matmod('hafnium', fine_wire);
@@ -279,8 +281,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('echo_shard', [lens, foil]);
     matmod('copper', gear);
     matmod('vanadium_gallium', fine_wire);
-    matmod('rhodium_plated_palladium', frame);
-    matmod('darmstadtium', frame);
+    matmod('titanium', foil);
+    matmod('rhodium_plated_palladium', frame, foil);
+    matmod('darmstadtium', frame, foil);
     matmod('ruthenium_trinium_americium_neutronate', fine_wire);
 
     // Blast Properties of periodic table metals

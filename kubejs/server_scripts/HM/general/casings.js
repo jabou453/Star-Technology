@@ -125,7 +125,7 @@ ServerEvents.recipes(event => {
     // Standard Casing
 
     const Hulls = (tier,material,wire,bindant,scaler) => {
-        let FluidQuant = (bindant === 'glue') ? 576 : 288 ;
+        let FluidQuant = (tier === 'lv') ? 576 : 288 ;
 
         event.recipes.gtceu.assembler(id(`${tier}_machine_casing`))
             .itemInputs(`8x gtceu:${material}_plate`)
@@ -157,6 +157,22 @@ ServerEvents.recipes(event => {
     // Hulls('uiv','chaotixic_alloy','polonium_bismide','poly_34_ethylenedioxythiophene_polystyrene_sulfate',11);
 
     // Hermetic Casings
+    const HermeticCasings = (tier,material,pipe,scaler) => {
+        event.recipes.gtceu.assembler(id(`${tier}_hermetic_casing`))
+            .itemInputs(`gtceu:${material}_frame`,`gtceu:${pipe}_large_fluid_pipe`,`2x gtceu:${tier}_electric_pump`,`12x gtceu:${material}_foil`, `2x gtceu:double_${material}_plate`)
+            .itemOutputs(`gtceu:${tier}_hermetic_casing`)
+            .duration(200)
+            .EUt(7.5 * (4 ** scaler));
+    };
+    HermeticCasings('lv','steel','steel',1);
+    HermeticCasings('mv','aluminium','polyethylene',2);
+    HermeticCasings('hv','stainless_steel','polytetrafluoroethylene',3);
+    HermeticCasings('ev','titanium','titanium',4);
+    HermeticCasings('iv','tungsten_steel','niobium_titanium',5);
+    HermeticCasings('luv','rhodium_plated_palladium','iridium',6);
+    HermeticCasings('zpm','naquadah_alloy','europium',7);
+    HermeticCasings('uv','darmstadtium','enriched_naquadah',8);
+    HermeticCasings('uhv','neutronium','neutronium',9);
 
     // Standard Casings
 

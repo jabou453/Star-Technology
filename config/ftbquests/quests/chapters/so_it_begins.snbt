@@ -3855,6 +3855,28 @@
 			x: 17.0d
 			y: 1.5d
 		}
+		{
+			dependencies: [
+				"4D8EFEA7036CD327"
+				"624C1E0FD86FD884"
+			]
+			hide_dependency_lines: true
+			id: "211F6EBC60E94401"
+			tasks: [
+				{
+					id: "5988534B71441D6F"
+					item: "gtceu:tantalum_capacitor"
+					type: "item"
+				}
+				{
+					id: "472E257F03A641B4"
+					item: "gtceu:ulv_battery_buffer_4x"
+					type: "item"
+				}
+			]
+			x: 12.5d
+			y: -1.5d
+		}
 	]
 	title: "So It Begins"
 }

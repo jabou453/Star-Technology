@@ -108,7 +108,7 @@ ServerEvents.recipes(event => {
     UlvMachine('transformer_16a',['','gtceu:red_alloy_hex_cable','gtceu:red_alloy_hex_cable','gtceu:tin_hex_cable','gtceu:ulv_machine_hull','#gtceu:circuits/ulv','','gtceu:red_alloy_hex_cable','gtceu:red_alloy_hex_cable']);
     UlvMachine('machine_casing',['gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate','gtceu:wrought_iron_plate']);
     UlvMachine('machine_hull',['gtceu:red_alloy_single_cable','gtceu:wrought_iron_plate','gtceu:red_alloy_single_cable','gtceu:wrought_iron_plate','gtceu:ulv_machine_casing','gtceu:wrought_iron_plate','gtceu:red_alloy_single_cable','gtceu:wrought_iron_plate','gtceu:red_alloy_single_cable']);
-
+    
     let cable = 'gtceu:red_alloy_single_wire'
     event.recipes.create.sequenced_assembly([
         Item.of(`gtceu:red_alloy_single_cable`),
@@ -230,6 +230,15 @@ ServerEvents.recipes(event => {
       C: 'gtceu:coke_dust'
     }).id('start:mechanical_crafter/resistor');
 
+    ['input','output'].forEach(hatchType => {
+      let SpringCable = (hatchType == 'input') ? 'single_cable' : 'spring' ;
+      event.recipes.gtceu.assembler(id(`ulv_energy_${hatchType}_hatch`))
+        .itemInputs('gtceu:ulv_machine_hull', '1x #gtceu:circuits/ulv', `4x gtceu:red_alloy_${SpringCable}`, 'gtceu:ulv_voltage_coil')
+        .itemOutputs(`gtceu:ulv_energy_${hatchType}_hatch`)
+        .duration(300)
+        .EUt(7);
+    });
+
     //ulv removals
     ['charger_4x','battery_buffer_4x','battery_buffer_8x','battery_buffer_16x','transformer_1a','transformer_2a',
       'transformer_4a','transformer_16a','machine_casing','machine_hull'].forEach(UlvRemove=>{
@@ -239,8 +248,7 @@ ServerEvents.recipes(event => {
     ['lv_machine_hull','lv_machine_casing','tantalum_capacitor'].forEach(OtherRemove=>{
       event.remove({output: `gtceu:${OtherRemove}`});
     });
-    event.remove({id: /^gtceu:shaped\/energy_hatch/});
-    event.remove({id: /^gtceu:shaped\/dynamo_hatch/});
-    // event.remove({output: /^gtceu:lv_.*/});
-
+    event.remove({output: 'gtceu:ulv_energy_input_hatch'});
+    event.remove({output: 'gtceu:ulv_energy_output_hatch'});
+    
 });

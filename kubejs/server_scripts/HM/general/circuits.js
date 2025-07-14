@@ -5,6 +5,7 @@ ServerEvents.recipes(event => {
 
     // Removals
 
+    event.remove({ output: 'gtceu:data_stick', type: 'gtceu:circuit_assembler' });
     event.remove({ output: /^gtceu:.*electronic_circuit/ });
     event.remove({ output: /^gtceu:.*integrated_circuit/ });
     event.remove({ output: 'gtceu:nand_chip' });
@@ -55,8 +56,8 @@ ServerEvents.recipes(event => {
     };
     // Misc
     CircuitFacilityRecipeCleanroom('1x gtceu:data_stick', 'data_stick', 
-        ['gtceu:plastic_printed_circuit_board', '#gtceu:circuits/mv', '2x gtceu:cpu_chip', '32x gtceu:nand_memory_chip', 
-            '4x gtceu:ram_chip', '16x gtceu:fine_annealed_copper_wire', '6x gtceu:polyethylene_plate', 
+        ['gtceu:plastic_printed_circuit_board', '#gtceu:circuits/mv', '2x gtceu:cpu_chip', '6x gtceu:polyethylene_plate', 
+            '32x gtceu:nand_memory_chip', '4x gtceu:ram_chip', '16x gtceu:fine_annealed_copper_wire', 
             '4x gtceu:silicone_rubber_foil'], ['gtceu:soldering_alloy 216'], 800, 480);
 
     // Electronic Circuits Line

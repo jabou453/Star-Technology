@@ -36,8 +36,8 @@ ServerEvents.recipes(event => {
             event.remove({ output: `gtceu:${tier}_${machine}` });
             if (machine = 'energy_input_hatch' || 'energy_output_hatch') {
             if (tier !== 'lv' || 'mv' || 'hv'){
-    //             event.remove({ output: `gtceu:${tier}_${machine}_4a` });
-    //             event.remove({ output: `gtceu:${tier}_${machine}_16a` });
+                event.remove({ output: `gtceu:${tier}_${machine}_4a` });
+                event.remove({ output: `gtceu:${tier}_${machine}_16a` });
             } if (tier == 'uv' || 'zpm' ){
             let priorTier = ( tier == 'uv') ? 'zpm' : 'luv' ;
                 event.remove({ id: `gtceu:research_station/1_x_gtceu_${priorTier}_${machine}` });
@@ -53,31 +53,28 @@ ServerEvents.recipes(event => {
             });
             });
         }}
-    //     [1,2,4,16].forEach(transformerAmps => {
-    //         event.remove({ output: `gtceu:${tier}_transformer_${transformerAmps}a` });
-    //     });
+        [1,2,4,16].forEach(transformerAmps => {
+            event.remove({ output: `gtceu:${tier}_transformer_${transformerAmps}a` });
+        });
         [4,8,16].forEach(bufferSize => {
             event.remove({ output: `gtceu:${tier}_battery_buffer_${bufferSize}x` });
         });
         if (tier == 'lv' || 'mv' || 'hv' || 'ev'){
-            // event.remove({ output: `gtceu:${tier}_super_chest` });
-            // event.remove({ output: `gtceu:${tier}_super_tank` });
+            event.remove({ output: `gtceu:${tier}_super_chest` });
+            event.remove({ output: `gtceu:${tier}_super_tank` });
         } if (tier !== 'lv' || 'mv' || 'hv' || 'ev'){
-            // event.remove({ output: `gtceu:${tier}_quantum_chest` });
-            // event.remove({ output: `gtceu:${tier}_quantum_tank` });
+            event.remove({ output: `gtceu:${tier}_quantum_chest` });
+            event.remove({ output: `gtceu:${tier}_quantum_tank` });
             event.remove({ output: `gtceu:${tier}_parallel_hatch` }); // wont get recipes in Eta
         }
     });
         event.remove({ id: `gtceu:scanner/1_x_gtceu_iv_energy_input_hatch` });
 
-    // event.remove({ output: `gtceu:hv_item_passthrough_hatch` }); // wont get recipe
-    // event.remove({ output: `gtceu:hv_fluid_passthrough_hatch` }); // wont get recipe
-    event.remove({ id: `gtceu:assembler/me_stocking_input_hatch` });
-    event.remove({ id: `gtceu:assembler/me_stocking_input_bus` });
+    event.remove({ output: `gtceu:hv_item_passthrough_hatch` }); // wont get recipe
+    event.remove({ output: `gtceu:hv_fluid_passthrough_hatch` }); // wont get recipe
+    event.remove({ id: `gtceu:assembler/me_stocking_import_hatch` });
+    event.remove({ id: `gtceu:assembler/me_stocking_import_bus` });
     // ME Pattern Buffer blanket diabled and ME I/O is in AE-Machinery as a Packmode determinate
-
-
-        // gt_machines gcym_machines research_based (69/80)
 
     event.recipes.gtceu.assembler(id(`machine_facility`))
         .itemInputs('gtceu:ulv_assembler','6x kubejs:ulv_robot_arm','4x #gtceu:circuits/lv',
@@ -89,7 +86,7 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt(8);
 
-    const TierMaterials = (tier,wire,cable,rubber,Head,ewire,material,magnetic,Glass,Buzzsaw,pipe,rotor,storageI,storageF,eu,lubricant,solder) => {
+    const TierMaterials = (tier,wire,cable,cable1up,chip,rubber,Head,ewire,material,magnetic,Glass,Buzzsaw,pipe,rotor,storageI,storageF,eu,lubricant,solder) => {
 
         const Circuit = `#gtceu:circuits/${tier}` ;
         const Arm = `gtceu:${tier}_robot_arm` ; 
@@ -184,18 +181,127 @@ ServerEvents.recipes(event => {
     if (tier !== 'zpm' || 'uv') {
     AllTierMachine('me_assembler', [Hull, '2x '+Arm, '2x '+Circuit, Emitter, Conveyor, Motor, '3x '+Cable1x], [Solder+' 144']);
     }
+    const Transformers = (amps,cableSize) => {
+    if (chip !== null){
+    AllTierMachine(`transformer_${amps}a`, [Hull, `4x gtceu:${cable}_${cableSize}_cable`, `1x gtceu:${cable1up}_${cableSize}_cable`, Circuit, `4x ${chip}`], [Solder+` ${144 * amps}`]);
+    } else {
+    AllTierMachine(`transformer_${amps}a`, [Hull, `4x gtceu:${cable}_${cableSize}_cable`, `1x gtceu:${cable1up}_${cableSize}_cable`, Circuit], [Solder+` ${144 * amps}`]);
+    }};
+    Transformers(1,'single');
+    Transformers(2,'double');
+    Transformers(4,'quadruple');
+    Transformers(16,'hex');
 
-    //Assmebler 
-    // 'energy_input_hatch', 
-    // 'energy_output_hatch', 
-    // transformers
-
+    //Assembler
+    ['input','output'].forEach(hatchType => {
+    const SpringCable = (hatchType == 'input') ? 'single_cable' : 'spring' ;
+    if (tier === 'lv'){
+    event.recipes.gtceu.assembler(id(`${tier}_energy_${hatchType}_hatch`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `1x #gtceu:circuits/${tier}`, `4x gtceu:${cable}_${SpringCable}`, `1x gtceu:${tier}_voltage_coil`)
+        .inputFluids(`gtceu:sodium_potassium 1000`)
+        .itemOutputs(`gtceu:${tier}_energy_${hatchType}_hatch`)
+        .duration(300)
+        .EUt(eu);
+    } else if (tier === 'mv'){
+    event.recipes.gtceu.assembler(id(`${tier}_energy_${hatchType}_hatch`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `1x #gtceu:circuits/${tier}`, `4x gtceu:${cable}_${SpringCable}`, `4x ${chip}`, `1x gtceu:${tier}_voltage_coil`)
+        .inputFluids(`gtceu:sodium_potassium 2500`)
+        .itemOutputs(`gtceu:${tier}_energy_${hatchType}_hatch`)
+        .duration(300)
+        .EUt(eu);
+    } else if (tier === 'hv'){
+    event.recipes.gtceu.assembler(id(`${tier}_energy_${hatchType}_hatch`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `2x #gtceu:circuits/${tier}`, `4x gtceu:${cable}_${SpringCable}`, `4x ${chip}`, `1x gtceu:${tier}_voltage_coil`)
+        .inputFluids(`gtceu:sodium_potassium 5000`)
+        .itemOutputs(`gtceu:${tier}_energy_${hatchType}_hatch`)
+        .duration(300)
+        .EUt(eu)
+        .cleanroom(CleanroomType.CLEANROOM);
+    } else if (tier === 'ev'){
+    event.recipes.gtceu.assembler(id(`${tier}_energy_${hatchType}_hatch`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `2x #gtceu:circuits/${tier}`, `4x gtceu:${cable}_${SpringCable}`, `4x ${chip}`, `1x gtceu:${tier}_voltage_coil`)
+        .inputFluids(`gtceu:sodium_potassium 10000`)
+        .itemOutputs(`gtceu:${tier}_energy_${hatchType}_hatch`)
+        .duration(300)
+        .EUt(eu)
+        .cleanroom(CleanroomType.CLEANROOM);
+    event.recipes.gtceu.assembler(id(`${tier}_energy_${hatchType}_hatch_4a`))
+        .itemInputs(`gtceu:${tier}_energy_${hatchType}_hatch`, `gtceu:${tier}_transformer_1a`, `2x #gtceu:circuits/ev`, `6x gtceu:${cable}_${SpringCable}`, `6x ${chip}`, `2x gtceu:${tier}_voltage_coil`)
+        .inputFluids(`gtceu:sodium_potassium 2000`)
+        .itemOutputs(`gtceu:${tier}_energy_${hatchType}_hatch_4a`)
+        .duration(400)
+        .EUt(eu)
+        .cleanroom(CleanroomType.CLEANROOM);
+    event.recipes.gtceu.assembler(id(`${tier}_energy_${hatchType}_hatch_16a`))
+        .itemInputs(`gtceu:${tier}_energy_${hatchType}_hatch_4a`, `gtceu:${tier}_transformer_4a`, `2x #gtceu:circuits/iv`, `12x gtceu:${cable}_${SpringCable}`, `12x ${chip}`, `4x gtceu:${tier}_voltage_coil`)
+        .inputFluids(`gtceu:sodium_potassium 4000`)
+        .itemOutputs(`gtceu:${tier}_energy_${hatchType}_hatch_16a`)
+        .duration(800)
+        .EUt(eu)
+        .cleanroom(CleanroomType.CLEANROOM);
     }
+    // IV+ Energy Hatches to be in MAL same with 4a and 16a vars
+    });
 
-    TierMaterials('lv','copper','tin','rubber','minecraft:diamond','gold','steel','steel','#forge:glass','gtceu:cobalt_brass_buzz_saw_blade','bronze','tin','wood_crate','wood_drum',30,'lubricant','soldering_alloy');
-    TierMaterials('mv','cupronickel','copper','rubber','minecraft:diamond','electrum','aluminium','steel','gtceu:tempered_glass','gtceu:vanadium_steel_buzz_saw_blade','steel','steel','bronze_crate','bronze_drum',120,'lubricant','soldering_alloy');
-    TierMaterials('hv','kanthal','gold','silicone_rubber','gtceu:diamond_grinding_head','blue_alloy','stainless_steel','neodymium','gtceu:tempered_glass','gtceu:red_steel_buzz_saw_blade','stainless_steel','black_steel','steel_crate','steel_drum',480,'lubricant','soldering_alloy');
-    TierMaterials('ev','nichrome','aluminium','silicone_rubber','gtceu:diamond_grinding_head','platinum','titanium','neodymium','gtceu:tempered_glass','ultimet_buzz_saw_blade','titanium','hsla_steel','aluminium_crate','aluminium_drum',1920,'lubricant','soldering_alloy');
+    };
+    TierMaterials('lv','copper','tin','copper',null,'rubber','minecraft:diamond','gold','steel','steel','#forge:glass','gtceu:cobalt_brass_buzz_saw_blade','bronze','tin','wood_crate','wood_drum',30,'lubricant','soldering_alloy');
+    TierMaterials('mv','cupronickel','copper','gold','gtceu:ulpic_chip','rubber','minecraft:diamond','electrum','aluminium','steel','gtceu:tempered_glass','gtceu:vanadium_steel_buzz_saw_blade','steel','steel','bronze_crate','bronze_drum',120,'lubricant','soldering_alloy');
+    TierMaterials('hv','kanthal','gold','aluminium','gtceu:lpic_chip','silicone_rubber','gtceu:diamond_grinding_head','blue_alloy','stainless_steel','neodymium','gtceu:tempered_glass','gtceu:red_steel_buzz_saw_blade','stainless_steel','black_steel','steel_crate','steel_drum',480,'lubricant','soldering_alloy');
+    TierMaterials('ev','nichrome','aluminium','platinum','gtceu:mpic_chip','silicone_rubber','gtceu:diamond_grinding_head','platinum','titanium','neodymium','gtceu:tempered_glass','gtceu:red_steel_buzz_saw_blade','titanium','hsla_steel','aluminium_crate','aluminium_drum',1920,'lubricant','soldering_alloy');
+
+    // ME IO
+    ['hatch','bus'].forEach(meHatchType => {
+        const HatchParts = (meHatchType == 'bus') ? 'conveyor_module' : 'electric_pump' ; 
+    ['input','output'].forEach(IOtype => {
+        let HatchCircuit = (IOtype == 'input') ? 1 : 2 ;
+        event.recipes.gtceu.assembler(id(`me_${IOtype}_${meHatchType}`))
+            .itemInputs(`gtceu:ev_${IOtype}_${meHatchType}`, `expatternprovider:oversize_interface`, '2x #gtceu:circuits/ev', `2x gtceu:ev_${HatchParts}`, '4x #ae2:glass_cable')
+            .inputFluids('gtceu:polytetrafluoroethylene 432')
+            .itemOutputs(`gtceu:me_${IOtype}_${meHatchType}`)
+            .circuit(HatchCircuit)
+            .duration(500)
+            .EUt(1920);
+    });
+    });
+
+    const Converter = (tier, superconductor, tierScaler, polymer) => {
+        const polymerScaler = (polymer == 'glue') ? 144 : 72 ;
+    event.recipes.gtceu.simple_machine_facility(id(`${tier}_1a_energy_converter`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `4x gtceu:${superconductor}_single_wire`, `2x #gtceu:circuits/${tier}`, `2x gtceu:fine_${superconductor}_wire`)
+        .inputFluids(`gtceu:${polymer} ${1 * polymerScaler}`)
+        .itemOutputs(`gtceu:${tier}_1a_energy_converter`)
+        .duration(200)
+        .EUt(3.75 * (4 ** tierScaler));
+    event.recipes.gtceu.simple_machine_facility(id(`${tier}_4a_energy_converter`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `4x gtceu:${superconductor}_quadruple_wire`, `2x #gtceu:circuits/${tier}`, `8x gtceu:fine_${superconductor}_wire`)
+        .inputFluids(`gtceu:${polymer} ${4 * polymerScaler}`)
+        .itemOutputs(`gtceu:${tier}_4a_energy_converter`)
+        .duration(200)
+        .EUt(3.75 * (4 ** tierScaler));
+    event.recipes.gtceu.simple_machine_facility(id(`${tier}_8a_energy_converter`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `4x gtceu:${superconductor}_octal_wire`, `2x #gtceu:circuits/${tier}`, `16x gtceu:fine_${superconductor}_wire`)
+        .inputFluids(`gtceu:${polymer} ${8 * polymerScaler}`)
+        .itemOutputs(`gtceu:${tier}_8a_energy_converter`)
+        .duration(200)
+        .EUt(3.75 * (4 ** tierScaler));
+    event.recipes.gtceu.simple_machine_facility(id(`${tier}_16a_energy_converter`))
+        .itemInputs(`gtceu:${tier}_machine_hull`, `4x gtceu:${superconductor}_hex_wire`, `2x #gtceu:circuits/${tier}`, `32x gtceu:fine_${superconductor}_wire`)
+        .inputFluids(`gtceu:${polymer} ${16 * polymerScaler}`)
+        .itemOutputs(`gtceu:${tier}_16a_energy_converter`)
+        .duration(200)
+        .EUt(3.75 * (4 ** tierScaler));
+    };   
+    Converter('lv', 'soul_infused', 1, 'glue');
+    Converter('mv', 'signalum', 2, 'polyethylene');
+    Converter('hv', 'lumium', 3, 'polyethylene');
+    Converter('ev', 'enderium', 4, 'polytetrafluoroethylene');
+    // Converter('iv', 'shellite', 5, 'polytetrafluoroethylene');
+    // Converter('luv', 'twinite', 6, 'polybenzamidazole');
+    // Converter('zpm', 'dragonsteel', 7, 'polybenzamidazole');
+    // Converter('uv', 'prismalium', 8, 'polyether_ether_ketone');
+    // Converter('uhv', 'stellarium', 9, 'polyether_ether_ketone');
+    // Converter('uev', 'ancient_runicalium', 10, 'poly_34_ethylenedioxythiophene_polystyrene_sulfate');
+    // Will add 64a converters in Theta
 
     // Base Machines (assemblyLine,mk1,mk2,mk3,transformer,substation,fluidDrills,largeMiners,bedrockMiners all Theta+)
     [
@@ -267,51 +373,51 @@ ServerEvents.recipes(event => {
             .EUt(ScannerDuration);
     };
 
-    'electric_blast_furnace',
-    'large_chemical_reactor',
-    'implosion_compressor',
-    'pyrolyse_oven',
-    'multi_smelter',
-    'cracker',
-    'distillation_tower',
-    'vacuum_freezer',
-    // 'assembly_line',
-    // 'luv_fusion_reactor',
-    // 'zpm_fusion_reactor',
-    // 'uv_fusion_reactor',
-    // 'mv_fluid_drilling_rig',
-    // 'hv_fluid_drilling_rig',
-    // 'ev_fluid_drilling_rig',
-    // 'ev_large_miner',
-    // 'iv_large_miner',
-    // 'luv_large_miner',
-    'cleanroom',
-    'filter_casing',
-    // 'sterilizing_filter_casing',
-    'large_combustion_engine',
-    'extreme_combustion_engine',
-    'steam_large_turbine',
-    'gas_large_turbine',
-    'plasma_large_turbine',
-    // 'active_transformer',
-    // 'power_substation',
-    // 'mv_bedrock_ore_miner',
-    // 'hv_bedrock_ore_miner',
-    // 'ev_bedrock_ore_miner'
+    // 'electric_blast_furnace',
+    // 'large_chemical_reactor',
+    // 'implosion_compressor',
+    // 'pyrolyse_oven',
+    // 'multi_smelter',
+    // 'cracker',
+    // 'distillation_tower',
+    // 'vacuum_freezer',
+    // // 'assembly_line',
+    // // 'luv_fusion_reactor',
+    // // 'zpm_fusion_reactor',
+    // // 'uv_fusion_reactor',
+    // // 'mv_fluid_drilling_rig',
+    // // 'hv_fluid_drilling_rig',
+    // // 'ev_fluid_drilling_rig',
+    // // 'ev_large_miner',
+    // // 'iv_large_miner',
+    // // 'luv_large_miner',
+    // 'cleanroom',
+    // 'filter_casing',
+    // // 'sterilizing_filter_casing',
+    // 'large_combustion_engine',
+    // 'extreme_combustion_engine',
+    // 'steam_large_turbine',
+    // 'gas_large_turbine',
+    // 'plasma_large_turbine',
+    // // 'active_transformer',
+    // // 'power_substation',
+    // // 'mv_bedrock_ore_miner',
+    // // 'hv_bedrock_ore_miner',
+    // // 'ev_bedrock_ore_miner'
     
-    'void_extractor',
-    'greenhouse', 
-    'industrial_barrel', 
-    'mechanical_sieve', 
-    'rock_fltrator', 
-    'electric_ore_factory', 
-    'ore_processing_plant',
-    MachineAssemblyScanner('nuclear_reactor',['gtceu:ev_assembler'],['gtceu:soldering_alloy 864', 'gtceu:polyethylene 576', 'gtceu:rubber 432'],1920,1200,'gtceu:ev_fluid_heater',2400,480);
-    // dimensional_destabilizer, 
-    // rock_sifter, 
-    // large_sieve, 
-    // void_excavator, 
-    // cobbleworks
+    // 'void_extractor',
+    // 'greenhouse', 
+    // 'industrial_barrel', 
+    // 'mechanical_sieve', 
+    // 'rock_fltrator', 
+    // 'electric_ore_factory', 
+    // 'ore_processing_plant',
+    // MachineAssemblyScanner('nuclear_reactor',['gtceu:ev_assembler'],['gtceu:soldering_alloy 864', 'gtceu:polyethylene 576', 'gtceu:rubber 432'],1920,1200,'gtceu:ev_fluid_heater',2400,480);
+    // // dimensional_destabilizer, 
+    // // rock_sifter, 
+    // // large_sieve, 
+    // // void_excavator, 
+    // // cobbleworks
 
     event.recipes.gtceu.assembler(id('multiblock_upgrade_kit'))
         .itemInputs('1x thermal:enderium_glass', '2x #gtceu:circuits/ev', '1x gtceu:rtm_alloy_single_cable', 'gtceu:double_blue_steel_plate', 'gtceu:double_red_steel_plate')

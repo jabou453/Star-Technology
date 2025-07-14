@@ -231,6 +231,13 @@ ServerEvents.recipes(event => {
         .duration(80)
         .EUt(GTValues.VHA[GTValues.LV]);
 
+    event.recipes.gtceu.industrial_barrel_aqueous(id('sea_water'))
+        .notConsumable('minecraft:sand')
+        .inputFluids('minecraft:water 1000')
+        .outputFluids('exnihilosequentia:sea_water 1000')
+        .duration(80)
+        .EUt(GTValues.VHA[GTValues.LV]);
+
     event.recipes.gtceu.industrial_barrel_aqueous(id('slimeshroom_dupe'))
         .notConsumable('thermal:slime_mushroom_spores')
         .inputFluids('exnihilosequentia:witch_water 100')
