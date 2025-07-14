@@ -59,22 +59,22 @@ StartupEvents.registry('item', event => {
     // End
     event.create('end_helmet', 'helmet')
         .tier('end')
-        .displayName('Vac-locked Space Suit Helmet')
+        .displayName('Hellforged Helmet')
         .texture('kubejs:item/dimensional/end_helmet')
 
     event.create('end_chestplate', 'chestplate')
         .tier('end')
-        .displayName('Vac-locked Space Suit Chestplate')
+        .displayName('Hellforged Chestplate')
         .texture('kubejs:item/dimensional/end_chestplate')
 
     event.create('end_leggings', 'leggings')
         .tier('end')
-        .displayName('Vac-locked Space Suit Leggings')
+        .displayName('Hellforged Leggings')
         .texture('kubejs:item/dimensional/end_leggings')
 
     event.create('end_boots', 'boots')
         .tier('end')
-        .displayName('Vac-locked Space Suit Boots')
+        .displayName('Hellforged Boots')
         .texture('kubejs:item/dimensional/end_boots')
 
     event.create('end_talisman')
