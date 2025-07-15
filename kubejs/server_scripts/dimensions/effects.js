@@ -13,7 +13,8 @@ PlayerEvents.tick(event => {
         }
 
         if (player.age % 100 === 0) {
-            player.potionEffects.add('minecraft:hunger', 5, 0, false, false)
+            player.potionEffects.add('minecraft:hunger', 100, 2, false, false)
+            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 2 gtceu:heat`);
         }
 
         if (global.packmode !== 'abydos'){
