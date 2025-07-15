@@ -1700,6 +1700,7 @@
 				"2C354B0735DF8023"
 				"5FCA8ED151CEB5C1"
 			]
+			description: ["Scans indicate that the Nether is an inhospitable dimension due to intensive radioactive decay. This armor will help mitigate the effects. The Nether inhabitants might be hiding a &ltalisman&r capable of nullifying the effects of radiation..."]
 			hide_dependent_lines: true
 			id: "59B0F5DB2C1E96DC"
 			tasks: [

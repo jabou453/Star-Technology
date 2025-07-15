@@ -258,11 +258,6 @@
 			id: "6180202612DCDBF4"
 			tasks: [
 				{
-					id: "1CE9707FDB45EED7"
-					title: "Hellforged Armor"
-					type: "checkmark"
-				}
-				{
 					id: "7AAEF6C77BE5E1AA"
 					item: {
 						Count: 1
