@@ -38,6 +38,7 @@ ServerEvents.recipes(event => {
     ['helmet', 'chestplate', 'leggings', 'boots'].forEach(part => {
 
         const nether_piece = `kubejs:nether_${part}`;
+        const end_piece = `kubejs:end_${part}`;
         const hazmat = `gtceu:hazmat_${(part === 'chestplate') ? 'chestpiece' : (part === 'helmet') ? 'headpiece': part}`;
         const jaffa = Item.of(`sgjourney:naquadah_${part}`);
 
@@ -61,6 +62,27 @@ ServerEvents.recipes(event => {
                 )
             .duration(2400)
             .EUt(GTValues.VHA[GTValues.UEV]);
+
+        event.recipes.gtceu.assembly_line(id(`end_${part}`))
+            .itemInputs(
+                nether_piece, 
+                '64x gtceu:starium_alloy_foil', 
+                '64x kubejs:naquadic_netherite_fibers', 
+                '4x #gtceu:circuits/uiv',
+                '2x gtceu:uev_field_generator', 
+                '16x kubejs:runic_stabilization_plating', 
+                '64x gtceu:fine_aurourium_wire'
+            )
+            .inputFluids('gtceu:isovol 1440', 'gtceu:indium_tin_lead_cadmium_soldering_alloy 2880', 'gtceu:utopian_akreyrium 2400')
+            .itemOutputs(end_piece)
+            .stationResearch(
+                researchRecipeBuilder => researchRecipeBuilder
+                    .researchStack(nether_piece)
+                    .EUt(GTValues.VHA[GTValues.UHV])
+                    .CWUt(160)
+                )
+            .duration(2400)
+            .EUt(GTValues.VHA[GTValues.UIV]);
 
     });
 });

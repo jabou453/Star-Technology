@@ -256,11 +256,57 @@
 			dependencies: ["310FC3F86513555F"]
 			hide_dependent_lines: true
 			id: "6180202612DCDBF4"
-			tasks: [{
-				id: "1CE9707FDB45EED7"
-				title: "Hellforged Armor"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "1CE9707FDB45EED7"
+					title: "Hellforged Armor"
+					type: "checkmark"
+				}
+				{
+					id: "7AAEF6C77BE5E1AA"
+					item: {
+						Count: 1
+						id: "kubejs:end_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4B2D443D049D9918"
+					item: {
+						Count: 1
+						id: "kubejs:end_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "74B262B91E7D28A0"
+					item: {
+						Count: 1
+						id: "kubejs:end_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1E621AD4868EBFC9"
+					item: {
+						Count: 1
+						id: "kubejs:end_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			x: -2.0d
 			y: -6.0d
 		}
