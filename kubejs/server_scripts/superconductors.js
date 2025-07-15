@@ -1,6 +1,7 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
+    if (global.packmode !== 'hard'){(() => { 
     event.recipes.gtceu.macerator(id('soul_sand_dust'))
         .itemInputs('minecraft:soul_sand')
         .itemOutputs('thermal_extra:soul_sand_dust')
@@ -89,5 +90,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('17x gtceu:stellarium_dust')
         .duration(1200)
         .EUt(456000);
-   
+    })()}
+
 });

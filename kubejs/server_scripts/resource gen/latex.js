@@ -44,14 +44,13 @@ ServerEvents.recipes(event => {
 		B: 'minecraft:bricks',
 		T: 'thermal:redstone_servo'
 	}).id('start:shaped/latex_plantation');
-    })()
-    }
+  
 
     //Usage
-    event.recipes.gtceu.latex_plantation(id(`latex`))
+  event.recipes.gtceu.latex_plantation(id(`latex`))
 		.notConsumable('gtceu:wood_screw')
 		.outputFluids(`thermal:latex 100`)
-		.duration(160);
+		.duration(400);
     const latexType = [{ fuel: 'minecraft:bone_meal', circ: '1' }, { fuel: 'thermal:compost', circ: '2' }, { fuel: 'gtceu:fertilizer', circ: '3' }]
 	latexType.forEach(latex => {
 		event.recipes.gtceu.latex_plantation(id(`latex_${latex.circ}`))
@@ -59,7 +58,9 @@ ServerEvents.recipes(event => {
 			.notConsumable('gtceu:iron_screw')
 			.circuit(latex.circ)
 			.outputFluids(`thermal:latex ${100 + 50 * latex.circ}`)
-			.duration(160);
+			.duration(400);
 	});
-	
+	  })()
+    }
+
 });

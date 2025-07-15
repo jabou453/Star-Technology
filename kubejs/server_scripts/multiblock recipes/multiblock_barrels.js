@@ -133,8 +133,7 @@ ServerEvents.recipes(event => {
 
     // === INDUSTRIAL BARREL ===
 
-    if (global.packmode !== 'hard'){
-        (() => {   
+    if (global.packmode !== 'hard'){(() => {   
     event.shaped(Item.of('gtceu:industrial_barrel'), [
         'LSL',
         'PEP', 
@@ -147,13 +146,12 @@ ServerEvents.recipes(event => {
         C: '#gtceu:circuits/hv',
         H: 'gtceu:hv_machine_hull'
     }).id('start:shaped/industrial_barrel');
-    })()
-    }
+    })()};
 
     event.recipes.gtceu.industrial_barrel_magmatic(id('lava'))
         .itemInputs('#forge:cobblestone')
-        .outputFluids('minecraft:lava 500')
-        .duration(100)
+        .outputFluids('minecraft:lava 10000')
+        .duration(1600)
         .EUt(GTValues.VHA[GTValues.LV]);
 
     const IndBar_Pebbles = (type, circuitType, aqueous, fluid_quantity) => {
@@ -161,9 +159,9 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.industrial_barrel_magmatic(id(`${type}_pebbles`))
             .notConsumableFluid(`minecraft:lava ${fluid_quantity}`)
             .notConsumableFluid(`${aqueous} ${fluid_quantity}`)
-            .itemOutputs(`exnihilosequentia:${type}_pebble`)
+            .itemOutputs(`64x exnihilosequentia:${type}_pebble`)
             .circuit(circuitType)
-            .duration(1)
+            .duration(1 * 64)
             .EUt(GTValues.VHA[GTValues.LV]);
 
     }
@@ -230,6 +228,13 @@ ServerEvents.recipes(event => {
         .notConsumable('exnihilosequentia:mycelium_spores')
         .inputFluids('minecraft:water 1000')
         .outputFluids('exnihilosequentia:witch_water 1000')
+        .duration(80)
+        .EUt(GTValues.VHA[GTValues.LV]);
+
+    event.recipes.gtceu.industrial_barrel_aqueous(id('sea_water'))
+        .notConsumable('minecraft:sand')
+        .inputFluids('minecraft:water 1000')
+        .outputFluids('exnihilosequentia:sea_water 1000')
         .duration(80)
         .EUt(GTValues.VHA[GTValues.LV]);
 

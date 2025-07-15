@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('manifold_centrifuge')
         .category('ultimate')
         .setEUIO('in')
-        .setMaxIOSize(1, 3, 1, 3)
+        .setMaxIOSize(3, 3, 3, 3)
         .setSound(GTSoundEntries.CENTRIFUGE)
         .setProgressBar(GuiTextures.PROGRESS_BAR_EXTRACT, FillDirection.LEFT_TO_RIGHT);
 

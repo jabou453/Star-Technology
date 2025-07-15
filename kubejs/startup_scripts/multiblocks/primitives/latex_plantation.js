@@ -36,15 +36,16 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 				size: [166, 100],
 				background: GuiTextures.PRIMITIVE_BACKGROUND,
 				progress: {
-					pos: [77, 38],
+					pos: [82, 38],
 					size: [20, 18],
 					texture: GuiTextures.PRIMITIVE_BLAST_FURNACE_PROGRESS_BAR
 				},
 				inputs: [
-					{ type: 'item', index: 0, pos: [52, 38], texture: GuiTextures.PRIMITIVE_SLOT }
+					{ type: 'item', index: 1, pos: [52, 38], texture: GuiTextures.PRIMITIVE_SLOT },
+                    { type: 'item', index: 0, pos: [34, 38], texture: GuiTextures.PRIMITIVE_SLOT }
 				],
 				outputs: [
-					{ type: 'fluid', index: 0, pos: [104, 38], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'fluid', index: 0, pos: [114, 38], texture: GuiTextures.PRIMITIVE_SLOT }
 				]
 			})
 		);

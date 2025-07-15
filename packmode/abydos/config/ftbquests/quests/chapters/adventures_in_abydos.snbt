@@ -36,7 +36,6 @@
 	]
 	quests: [
 		{
-			dependencies: ["1FB502D770A4A59B"]
 			description: ["I hope the sand doesn't get in your machines."]
 			icon: {
 				Count: 1
@@ -675,7 +674,10 @@
 		}
 		{
 			dependencies: ["493DD013C818BB7B"]
-			description: ["Go Explore the Scattered Temples of Abydos to find the things you are searching for."]
+			description: [
+				"Go Explore the Scattered Temples of Abydos to find the things you are searching for."
+				"You might even find a &ltalisman&r powerful enough to stop the sands of Abydos from eroding you..."
+			]
 			id: "3479CEBD73550718"
 			rewards: [{
 				id: "7FC500BE090ABC2E"
@@ -723,126 +725,38 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			tasks: [{
-				id: "0AF4E3E277B5B04F"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						display: {
-							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
-						}
-						items: [
-							{
-								Count: 1b
-								id: "start_core:bacteria_methane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_octane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butadiene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_benzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_toluene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetone"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetic_acid"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methyl_acetate"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_creosote"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_phenol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_dimethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_naphthalene"
-								tag: { }
-							}
-						]
-					}
+			tasks: [
+				{
+					id: "21B1C33C08178D65"
+					item: "start_core:bacteria_fermentibacter_solvatis"
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "6F2EB0EEC6256F1C"
+					item: "start_core:bacteria_xylotoxibacter_aromatica"
+					type: "item"
+				}
+				{
+					id: "674EE248B4B9A218"
+					item: "start_core:bacteria_petrospirillum_solvans"
+					type: "item"
+				}
+				{
+					id: "5ECE2F30A417B923"
+					item: "start_core:bacteria_octanivorax_sorbitolens"
+					type: "item"
+				}
+				{
+					id: "71CAFC4BC40B1A39"
+					item: "start_core:bacteria_bituminimonas_combustilis"
+					type: "item"
+				}
+				{
+					id: "6FCAD2C5B48E566B"
+					item: "start_core:bacteria_carbanogasibacter_volatilis"
+					type: "item"
+				}
+			]
 			title: "Bacterial Colonies"
 			x: 1.5d
 			y: -5.0d
@@ -1207,7 +1121,13 @@
 				"63E36421AE07BC42"
 				"5DADD2204991B4D5"
 			]
-			description: ["The gateway to the cold and lifeless abyss, and the burning fires of hell."]
+			description: [
+				"The gateway to the cold and lifeless abyss, and the burning fires of hell."
+				""
+				""
+				""
+				"&oJust a recommendation, but don't take any valuable items with you the first time."
+			]
 			icon: {
 				Count: 1
 				id: "sgjourney:milky_way_stargate"
@@ -1303,32 +1223,6 @@
 			title: "The Ancient Gate"
 			x: 11.5d
 			y: -3.5d
-		}
-		{
-			dependencies: [
-				"5E7153B7A10FC241"
-				"6180202612DCDBF4"
-			]
-			icon: "minecraft:end_stone"
-			id: "4238E903C674B284"
-			optional: true
-			rewards: [{
-				id: "6BE5069F47361652"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.0d
-			subtitle: "Not Yet Accessible"
-			tasks: [{
-				dimension: "minecraft:the_end"
-				icon: "minecraft:end_stone"
-				id: "4FEE3F71D119AD26"
-				type: "dimension"
-			}]
-			title: "To The End"
-			x: 12.0d
-			y: -6.0d
 		}
 		{
 			dependencies: ["47DF7968E9B98C65"]
@@ -1805,13 +1699,56 @@
 				"2C354B0735DF8023"
 				"5FCA8ED151CEB5C1"
 			]
+			description: ["Scans indicate that the Nether is an inhospitable dimension due to intensive radioactive decay. This armor will help mitigate the effects. The Nether inhabitants might be hiding a &ltalisman&r capable of nullifying the effects of radiation..."]
 			hide_dependent_lines: true
 			id: "59B0F5DB2C1E96DC"
-			tasks: [{
-				id: "2D2E589ECC7EB601"
-				title: "Rune Infused Armor"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "47AC263851C1195F"
+					item: {
+						Count: 1
+						id: "kubejs:nether_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4A5EC35DCBB8DE99"
+					item: {
+						Count: 1
+						id: "kubejs:nether_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "657FD2D02E00407E"
+					item: {
+						Count: 1
+						id: "kubejs:nether_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "06A018D90CEC2D3E"
+					item: {
+						Count: 1
+						id: "kubejs:nether_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Runic Infused Hazmat Armor"
 			x: 6.5d
 			y: -4.0d
 		}
@@ -2000,324 +1937,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["7F72F9E28713D965"]
-			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
-			id: "7D29B653F8C14ABC"
-			rewards: [{
-				id: "5B3778E2E7B9B0E4"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "3B32A5E4F0DFED06"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						display: {
-							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
-						}
-						items: [
-							{
-								Count: 1b
-								id: "start_core:bacteria_methane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_octane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butadiene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_benzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_toluene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetone"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetic_acid"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methyl_acetate"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_creosote"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_phenol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_dimethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_naphthalene"
-								tag: { }
-							}
-						]
-					}
-				}
-				type: "item"
-			}]
-			title: "Bacterial Colonies"
-			x: 1.5d
-			y: -5.0d
-		}
-		{
-			dependencies: [
-				"5E7153B7A10FC241"
-				"59B0F5DB2C1E96DC"
-			]
-			icon: "minecraft:netherrack"
-			id: "1E3EF64C0A4EE438"
-			optional: true
-			rewards: [{
-				id: "5440DF6C322F753F"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.0d
-			subtitle: "Not Yet Accessible"
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				icon: "minecraft:netherrack"
-				id: "537A1229A7EED7D1"
-				title: "To The Nether"
-				type: "dimension"
-			}]
-			x: 11.0d
-			y: -6.0d
-		}
-		{
-			dependencies: ["7F72F9E28713D965"]
-			description: ["Awoken Bacteria. These have all kinds of types, and seem to produce some familiar liquids."]
-			id: "56A015318588C9F4"
-			rewards: [{
-				id: "4697E0C4626AEE1A"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "67A611680844E291"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						display: {
-							Name: "{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"#FFFFFF\",\"text\":\"HydroCarbon Bacterias\"}"
-						}
-						items: [
-							{
-								Count: 1b
-								id: "start_core:bacteria_methane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_octane"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_propene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_butadiene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_benzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_toluene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetone"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_acetic_acid"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_methyl_acetate"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethanol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_creosote"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_phenol"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_dimethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_ethylbenzene"
-								tag: { }
-							}
-							{
-								Count: 1b
-								id: "start_core:bacteria_naphthalene"
-								tag: { }
-							}
-						]
-					}
-				}
-				type: "item"
-			}]
-			title: "Bacterial Colonies"
-			x: 1.5d
-			y: -5.0d
-		}
-		{
-			dependencies: [
-				"5E7153B7A10FC241"
-				"59B0F5DB2C1E96DC"
-			]
-			icon: "minecraft:netherrack"
-			id: "0B00FD5F7735E3E0"
-			optional: true
-			rewards: [{
-				id: "4D0262DA27C9357F"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "octagon"
-			size: 1.0d
-			subtitle: "Not Yet Accessible"
-			tasks: [{
-				dimension: "minecraft:the_nether"
-				icon: "minecraft:netherrack"
-				id: "3D62E0DEA1D5CAC6"
-				title: "To The Nether"
-				type: "dimension"
-			}]
-			x: 11.0d
-			y: -6.0d
-		}
-		{
 			dependencies: ["630F50E03EC3D144"]
 			description: ["Gravi-Stars &o&lCollapsed&r with even greater intensity."]
 			id: "4D5EEE7D7EC1FAFA"
@@ -2472,6 +2091,11 @@
 		}
 		{
 			dependencies: ["3479CEBD73550718"]
+			description: [
+				"Ruined Component Parts can be found as loot in various structures in Abydos."
+				""
+				"By finding these ancient parts of technology and researching them, you can discover how to advance into &4UHV&r technology."
+			]
 			id: "077F46BD75F325FD"
 			tasks: [
 				{
@@ -2518,6 +2142,18 @@
 			title: "Ruined Component Parts"
 			x: -2.5d
 			y: -3.0d
+		}
+		{
+			dependencies: ["493DD013C818BB7B"]
+			description: ["A way to bypass the needs ah armor, a blessing of sorts."]
+			id: "7FBEF894C1FC4CCF"
+			tasks: [{
+				id: "16690ECAFD8AF4A4"
+				item: "kubejs:abydos_talisman"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.5d
 		}
 	]
 	title: "Adventures in Abydos"

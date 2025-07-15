@@ -28,4 +28,9 @@ ItemEvents.tooltip(event => {
         text.add(1, Text.of('§7Macerators only produce byproducts shown in JEI at HV or higher'));
     });
 
+    event.addAdvanced('gtceu:ulv_fluid_input', (item, advanced, text) => {
+        text.add(1, Text.of('Fluid Input for Primitive Multiblocks'))
+        text.add(2, Text.of('§9Fluid Capacity:§r 2,000 mB'));
+    });
+
 });

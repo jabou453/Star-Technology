@@ -32,13 +32,13 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.centrifuge(id('titanite_proc_2'))
         .inputFluids('gtceu:titanite_slurry 1000')
-        .itemOutputs('gtceu:calcium_perchlorate_dust')
+        .itemOutputs('11x gtceu:calcium_perchlorate_dust')
         .outputFluids('gtceu:titanite_slurry_residue 1000', 'gtceu:silica_gel 1000', 'minecraft:water 1000')
         .duration(360)
         .EUt(28000);
 
     event.recipes.gtceu.chemical_reactor(id('calcium_perchlorate_to_perchloric_acid'))
-        .itemInputs('gtceu:calcium_perchlorate_dust')
+        .itemInputs('11x gtceu:calcium_perchlorate_dust')
         .inputFluids('gtceu:sulfuric_acid 1000')
         .itemOutputs('6x gtceu:calcium_sulfate_dust')
         .outputFluids('gtceu:perchloric_acid 2000')
@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
         .EUt(496);
 
     event.recipes.gtceu.large_chemical_reactor(id('calcium_perchlorate_to_perchloric_acid'))
-        .itemInputs('gtceu:calcium_perchlorate_dust')
+        .itemInputs('11x gtceu:calcium_perchlorate_dust')
         .inputFluids('gtceu:sulfuric_acid 1000')
         .itemOutputs('6x gtceu:calcium_sulfate_dust')
         .outputFluids('gtceu:perchloric_acid 2000')

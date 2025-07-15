@@ -23,7 +23,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('#FFF#', '#FCF#', '#FFF#', '##F##', '#####', '#####', '#####')
             .where('C', Predicates.controller(Predicates.blocks(definition.get())))
         .where('F', Predicates.blocks('kubejs:high_steam_machine_casing').setMinGlobalLimited(40)
-            .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1).setMaxGlobalLimited(2)) // Needs to be Core: Steam Fluid Input to not steam conflict
+            .or(Predicates.blocks('gtceu:ulv_fluid_input').setPreviewCount(1).setMaxGlobalLimited(2)) // Needs to be Core: Steam Fluid Input to not steam conflict
             .or(Predicates.abilities(PartAbility.STEAM_IMPORT_ITEMS).setPreviewCount(1).setMaxGlobalLimited(2))
             .or(Predicates.abilities(PartAbility.STEAM).setExactLimit(1))
             .or(Predicates.abilities(PartAbility.STEAM_EXPORT_ITEMS).setPreviewCount(1).setMaxGlobalLimited(2)))

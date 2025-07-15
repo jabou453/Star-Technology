@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.centrifuge(id('hyper_enriched_estaltadyne_slurry_mixture_decomposition'))
         .inputFluids('gtceu:hyper_enriched_estaltadyne_slurry_mixture 1000')
-        .itemOutputs('1x gtceu:calcium_perchlorate_dust')
+        .itemOutputs('11x gtceu:calcium_perchlorate_dust')
         .outputFluids('gtceu:hyper_enriched_estaltadyne_slurry_residue 1000')
         .duration(280)
         .EUt(GTValues.VH[GTValues.UHV]);

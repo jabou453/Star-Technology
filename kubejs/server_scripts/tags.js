@@ -144,5 +144,8 @@ ServerEvents.tags('block', event => {
 ServerEvents.tags('fluid', event => {
 
 	event.remove('create:bottomless/allow', 'minecraft:lava');
+    ['shellite','twinite','dragonsteel'].forEach(thermalExtraSC => {
+	event.remove(`forge:molten_${thermalExtraSC}`, `thermal_extra:${thermalExtraSC}`);
+    });
 
 });

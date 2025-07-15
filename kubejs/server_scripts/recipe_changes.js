@@ -39,20 +39,10 @@ ServerEvents.recipes(event => {
         'farmersdelight:onion',
         '#forge:crops/onion'
     );
-
-    event.replaceInput({ id: 'thermal:tools/satchel'},
-        '#thermal:rockwool',
-        '#minecraft:wool'
-    );
-
+    
     event.replaceInput({ input: 'farmersdelight:onion'},
         'farmersdelight:onion',
         '#forge:crops/onion'
-    );
-
-    event.replaceInput({ id: 'thermal:tools/satchel'},
-        '#thermal:rockwool',
-        '#minecraft:wool'
     );
 
     ['tiled','framed','horizontal_framed','vertical_framed'].forEach(type => {
@@ -106,6 +96,17 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:rubber 576')
         .duration(240)
         .EUt(8);
+
+    event.replaceInput({ id: 'thermal:tools/satchel'},
+        '#thermal:rockwool',
+        '#minecraft:wool'
+    );
+
+    event.replaceInput({ id: 'thermal:tools/satchel'},
+        '#thermal:rockwool',
+        '#minecraft:wool'
+    );
+
     })()
     }    
 
@@ -125,9 +126,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:rubber 576')
         .duration(240)
         .EUt(8);
-    })()
-    }
-
+   
     event.recipes.gtceu.extractor(id('nether_agglomeration'))
         .itemInputs('gtceu:netherrack_dust')
         .itemOutputs('mysticalagriculture:nether_agglomeratio')
@@ -169,7 +168,8 @@ ServerEvents.recipes(event => {
         .duration(2400)
         .EUt(20)
         .circuit(0);
-
+    })()
+    }
     event.recipes.gtceu.mixer(id('naquadic_netherite'))
         .itemInputs('3x gtceu:naquadah_dust', '5x gtceu:pure_netherite_dust', '2x gtceu:caesium_dust', '5x gtceu:cerium_dust')
         .inputFluids('gtceu:fluorine 12000', 'gtceu:oxygen 32000')
@@ -431,6 +431,42 @@ ServerEvents.recipes(event => {
         E: 'gtceu:energium_dust'
     }).id('start:shaped/neodymium_magnet');
 
+    //plates
+    [
+        {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
+        {mod: 'minecraft', metals: ['iron', 'gold', 'copper']}
+    ].forEach(type => {
+        type.metals.forEach(foo => {
+            event.recipes.create.pressing(`gtceu:${foo}_plate`,`${type.mod}:${foo}_ingot`).id(`start:pressing/${foo}_plate`);
+        });
+    });
+
+    event.shaped(Item.of('16x minecraft:stick'), [
+        'L',
+        'L'
+    ], {
+        L: '#minecraft:logs'
+    }).id('start:shaped/bulk_stick');
+
+    event.shaped(Item.of('4x minecraft:chest'), [
+        'LLL',
+        'L L',
+        'LLL'
+    ], {
+        L: '#minecraft:logs'
+    }).id('start:shaped/bulk_chest');
+
+    event.shaped('gtceu:ulv_fluid_input', [
+        'G',
+        'C',
+        'B'
+    ], {
+        G: 'minecraft:glass',
+        C: 'gtceu:bronze_machine_casing',
+        B: 'minecraft:bucket'
+    });
+    
+    })()}
     //Added Tools
 
         //Mallet + Plunger
@@ -457,34 +493,6 @@ ServerEvents.recipes(event => {
             });
         });
 
-    //plates
-    [
-        {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
-        {mod: 'minecraft', metals: ['iron', 'gold', 'copper']}
-    ].forEach(type => {
-        type.metals.forEach(foo => {
-            event.recipes.create.pressing(`gtceu:${foo}_plate`,`${type.mod}:${foo}_ingot`).id(`start:pressing/${foo}_plate`);
-        });
-    });
-
-    event.shaped(Item.of('16x minecraft:stick'), [
-        'L',
-        'L'
-    ], {
-        L: '#minecraft:logs'
-    }).id('start:shaped/bulk_stick');
-
-    event.shaped(Item.of('4x minecraft:chest'), [
-        'LLL',
-        'L L',
-        'LLL'
-    ], {
-        L: '#minecraft:logs'
-    }).id('start:shaped/bulk_chest');
-    
-    })()
-    }
-    
     [1,2,4].forEach(size => {
         event.remove({id: `functionalstorage:oak_drawer_alternate_x${size}`});
     });
@@ -560,6 +568,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.HV])
         .circuit(4);
 
+    if (global.packmode !== 'hard'){(() => {
     event.recipes.gtceu.assembler(id('multiblock_upgrade_kit'))
         .itemInputs('thermal:lumium_glass', '#gtceu:circuits/ev', '2x gtceu:double_signalum_plate', '12x gtceu:cobalt_foil')
         .itemOutputs('kubejs:multiblock_upgrade_kit')
@@ -572,6 +581,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.item_application(`gtceu:t_large_${machine}`, [`gtceu:hv_${machine}`, 'kubejs:multiblock_upgrade_kit']).id(`start:item_application/large_${machine}`);
     });
     event.recipes.create.item_application('gtceu:large_rock_crusher', ['gtceu:hv_rock_crusher', 'kubejs:multiblock_upgrade_kit']).id('start:item_application/large_rock_crusher');
+    })()}
 
     // Mycelium Leather
     event.recipes.create.pressing('kubejs:compressed_mycelium', 'kubejs:mycelium_growth').id('start:pressing/compressed_mycelium');
@@ -580,27 +590,33 @@ ServerEvents.recipes(event => {
 
     // Warping recipes
     [{input: 'architects_palette:abyssaline_lamp', output: 'architects_palette:hadaline_lamp'},
-        {input: 'architects_palette:abyssaline_pillar', output: 'architects_palette:hadaline_pillar'},
-        {input: 'architects_palette:abyssaline_bricks', output: 'architects_palette:hadaline_bricks'},
-        {input: 'architects_palette:chiseled_abyssaline_bricks', output: 'architects_palette:chiseled_hadaline_bricks'},
-        {input: 'architects_palette:sunstone', output: 'architects_palette:moonstone'},
-        {input: 'gtceu:steel_ingot', output: 'architects_palette:unobtanium'},
-        {input: 'minecraft:granite', output: 'architects_palette:onyx'},
-        {input: '#minecraft:logs', output: 'architects_palette:twisted_log'},
-        {input: 'architects_palette:abyssaline', output: 'architects_palette:hadaline'},
-        {input: 'architects_palette:abyssaline_tiles', output: 'architects_palette:hadaline_tiles'},
-        {input: '#minecraft:planks', output: 'architects_palette:twisted_planks'},
-        {input: 'minecraft:diorite', output: 'architects_palette:nebulite'},
-        {input: 'architects_palette:rotten_flesh_block', output: 'architects_palette:entrails'},
-        {input: 'minecraft:blackstone', output: 'architects_palette:craterstone'},
-        {input: 'minecraft:andesite', output: 'architects_palette:esoterrack'},
-        {input: 'minecraft:polished_blackstone_bricks', output: 'architects_palette:moonshale_bricks'},
-        {input: 'minecraft:basalt', output: 'architects_palette:moonshale'},
-        {input: '#minecraft:saplings', output: 'architects_palette:twisted_sapling'},
-        {input: '#minecraft:leaves', output: 'architects_palette:twisted_leaves'}
+    {input: 'architects_palette:abyssaline_pillar', output: 'architects_palette:hadaline_pillar'},
+    {input: 'architects_palette:abyssaline_bricks', output: 'architects_palette:hadaline_bricks'},
+    {input: 'architects_palette:chiseled_abyssaline_bricks', output: 'architects_palette:chiseled_hadaline_bricks'},
+    {input: 'architects_palette:sunstone', output: 'architects_palette:moonstone'},
+    {input: 'gtceu:steel_ingot', output: 'architects_palette:unobtanium'},
+    {input: 'minecraft:granite', output: 'architects_palette:onyx'},
+    {input: '#minecraft:logs', output: 'architects_palette:twisted_log'},
+    {input: 'architects_palette:abyssaline', output: 'architects_palette:hadaline'},
+    {input: 'architects_palette:abyssaline_tiles', output: 'architects_palette:hadaline_tiles'},
+    {input: '#minecraft:planks', output: 'architects_palette:twisted_planks'},
+    {input: 'minecraft:diorite', output: 'architects_palette:nebulite'},
+    {input: 'architects_palette:rotten_flesh_block', output: 'architects_palette:entrails'},
+    {input: 'minecraft:polished_blackstone', output: 'architects_palette:craterstone'},
+    {input: 'minecraft:andesite', output: 'architects_palette:esoterrack'},
+    {input: 'minecraft:polished_blackstone_bricks', output: 'architects_palette:moonshale_bricks'},
+    {input: 'minecraft:basalt', output: 'architects_palette:moonshale'},
+    {input: '#minecraft:saplings', output: 'architects_palette:twisted_sapling'},
+    {input: '#minecraft:leaves', output: 'architects_palette:twisted_leaves'}
     ].forEach(prop => {
         event.recipes.create.haunting(Item.of(prop.output), Item.of(prop.input)).id(`start:haunting/${prop.output.split(':')[1]}`);
     });
+
+    event.recipes.gtceu.compressor(id('obsidian_plate'))
+        .itemInputs('gtceu:obsidian_dust')
+        .itemOutputs('gtceu:obsidian_plate')
+        .duration(1600)
+        .EUt(30);
 
     event.recipes.gtceu.circuit_assembler(id('data_dna_disk'))
         .itemInputs('kubejs:draconic_wetware_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 

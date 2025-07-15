@@ -29,7 +29,9 @@ ServerEvents.recipes(event => {
 		'create:crafting/kinetics/belt_connector',
 		'gtceu:shaped/iron_wire_single',
 		'create:splashing/soul_sand',
-		'minecraft:cookie'
+		'minecraft:cookie',
+		'create:crafting/appliances/chain_from_zinc',
+		'minecraft:target'
 	].forEach(id => event.remove({ id: id }));
 
 	[
@@ -56,11 +58,16 @@ ServerEvents.recipes(event => {
 	event.remove({ mod: 'pipez' });
 
 	event.replaceInput({ input: 'minecraft:string' }, 'minecraft:string', '#forge:string');
-})
+
+	['iron', 'gold', 'copper', 'tin', 'lead', 'platinum', 'aluminum'].forEach( ore => {
+		let GT_id = ( ore == 'aluminum') ? 'aluminium' : ore ;
+	event.replaceOutput({ output: `create:crushed_raw_${ore}` }, `create:crushed_raw_${ore}`, `gtceu:crushed_${GT_id}_ore`);
+	});
+});
 
 ServerEvents.afterRecipes(event => {
 	event.forEachRecipe([{ type: 'minecraft:smelting' }, { type: 'minecraft:blasting' }], recipe => {
 		event.remove({ id: recipe.getId() });
 		event.custom(recipe.json).id(recipe.getId() + '_manual_only');
 	});
-})
+});

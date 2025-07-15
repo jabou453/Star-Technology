@@ -1,6 +1,9 @@
 ServerEvents.recipes(event => {
     const id = global.id;
-    
+
+if (global.packmode !== 'hard'){
+      (() => {  
+
   //sifting
   event.shaped('gtceu:rock_filtrator',[
       'ABA',
@@ -207,5 +210,8 @@ ServerEvents.recipes(event => {
 //         .duration(100)
 //         .EUt(24);
 //   });
+
+})()
+}
 
 });
