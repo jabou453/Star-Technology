@@ -1,3 +1,6 @@
+if (global.packmode !== 'hard'){
+        (() => {  
+
 ServerEvents.recipes(event => {
     const id = global.id;
 
@@ -82,3 +85,6 @@ ServerEvents.recipes(event => {
     MechanicalSieving('exnihilosequentia:crushed_blackstone', ['16x gtceu:crushed_galena_ore', '16x gtceu:crushed_stibnite_ore']);
 
 });
+
+})
+}

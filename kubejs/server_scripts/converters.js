@@ -3,6 +3,8 @@ ServerEvents.recipes(event => {
 
     event.remove({ output: /gtceu:.*_energy_converter/ });
     
+    if (global.packmode !== 'hard'){
+    (() => {   
     const PRMconverterMaterials = {
         lv: 'soul_infused',
         mv: 'signalum',
@@ -56,6 +58,9 @@ ServerEvents.recipes(event => {
             .itemOutputs(Item.of(`start_core:${tier}_64a_energy_converter`))
             .duration(600)
             .EUt(1625)
+    }
+
+    })()
     }
 });
 

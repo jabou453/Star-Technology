@@ -42,14 +42,14 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 				inputs: [
 					{ type: 'item', index: 0, pos: [30, 29], texture: GuiTextures.PRIMITIVE_SLOT },
 					{ type: 'item', index: 1, pos: [48, 29], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'item', index: 2, pos: [39, 49], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 2, pos: [39, 47], texture: GuiTextures.PRIMITIVE_SLOT },
 					{ type: 'fluid', index: 0, pos: [73, 62], texture: GuiTextureGroup(GuiTextures.PRIMITIVE_SLOT, GuiTextures.PRIMITIVE_LARGE_FLUID_TANK_OVERLAY.getSubTexture(0, 0.04, 1, 0.22)) },
 				],
 				outputs: [
 					{ type: 'item', index: 0, pos: [100, 29], texture: GuiTextures.PRIMITIVE_SLOT },
 					{ type: 'item', index: 1, pos: [118, 29], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'item', index: 2, pos: [118, 49], texture: GuiTextures.PRIMITIVE_SLOT },
-					{ type: 'item', index: 3, pos: [100, 49], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 2, pos: [118, 47], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 3, pos: [100, 47], texture: GuiTextures.PRIMITIVE_SLOT },
 				]
 			})
 		);

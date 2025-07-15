@@ -12,26 +12,17 @@ ServerEvents.recipes(event => {
 	event.remove({ output: /^create_new_age.*wire/ });
 
 	const minecraft_metals = ['iron', 'copper', 'gold'];
-	const gt_metals = ['lead', 'tin', 'zinc', 'bronze', 'brass', 'nickel', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy'];
-	const all_metals = minecraft_metals.concat(gt_metals);
-
-	all_metals.forEach(metal => {
-		const mod = minecraft_metals.includes(metal) ? 'minecraft' : 'gtceu';
-
-		event.recipes.create.pressing([`4x gtceu:${metal}_plate`], `${mod}:${metal}_block`).id(`start:pressing/${metal}_plate`);
-		event.recipes.create.compacting(plate(metal), `2x ${mod}:${metal}_ingot`).id(`start:compacting/${metal}_plate`);
-
-		event.recipes.create.cutting([`2x gtceu:${metal}_rod`], plate(metal)).id(`start:cutting/${metal}_rod`);
-		event.recipes.create.pressing([`gtceu:${metal}_ring`], rod(metal)).id(`start:pressing/${metal}_ring`);
-		event.recipes.create.pressing([`gtceu:${metal}_foil`], plate(metal)).id(`start:pressing/${metal}_foil`);
-		event.recipes.create.cutting([`2x gtceu:${metal}_bolt`], rod(metal)).id(`start:cutting/${metal}_bolt`);
-		event.recipes.create.compacting([`gtceu:${metal}_screw`], `2x gtceu:${metal}_bolt`).id(`start:compacting/${metal}_screw`);
-	});
-
+	
+	const plates = ['iron', 'copper', 'gold','lead', 'tin', 'zinc', 'bronze', 'brass', 'nickel', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy', 'damascus_steel'];
+	const plates_block = ['iron', 'copper', 'lead'];
+	const rods = ['iron', 'copper', 'gold','lead', 'tin', 'zinc', 'bronze', 'brass', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy', 'damascus_steel'];
+	const rings = ['iron', 'copper', 'gold','lead', 'tin', 'zinc', 'bronze', 'brass', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel'];
+	const foils = ['iron', 'copper', 'gold','lead', 'tin', 'zinc', 'bronze', 'brass', 'nickel', 'pig_iron', 'tin_alloy', 'potin', 'cupronickel', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy'];
+	const screws_and_bolts = ['iron', 'copper', 'gold','lead', 'tin', 'bronze', 'brass', 'pig_iron', 'tin_alloy', 'potin', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy', 'damascus_steel'];
 	const long_rods = ['iron', 'copper', 'gold', 'lead', 'tin', 'bronze', 'brass', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy'];
 	const double_plates = ['iron', 'copper', 'gold', 'lead', 'tin', 'bronze', 'brass', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy'];
-	const gears = ['iron', 'lead', 'bronze', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'potin'];
-	const small_gears = ['iron', 'lead', 'bronze', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'potin'];
+	const gears = ['iron', 'lead', 'bronze', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'potin', 'damascus_steel'];
+	const small_gears = ['iron', 'lead', 'bronze', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'potin', 'damascus_steel'];
 	const rotors = ['iron', 'copper', 'lead', 'bronze', 'pig_iron', 'steel', 'cast_iron'];
 	const springs = ['iron', 'copper', 'gold', 'lead', 'tin', 'steel', 'red_alloy'];
 	const small_springs = ['iron', 'copper', 'gold', 'lead', 'tin', 'steel'];
@@ -62,6 +53,33 @@ ServerEvents.recipes(event => {
 			steps
 		).transitionalItem(inter).loops(loops).id(`start:sequenced_assembly/${output.split(':')[1]}`);
 	}
+
+	plates.forEach(metal => {
+		let mod = minecraft_metals.includes(metal) ? 'minecraft' : 'gtceu';
+		event.recipes.create.compacting(plate(metal), `2x ${mod}:${metal}_ingot`).id(`start:compacting/${metal}_plate`);
+	});
+
+	plates_block.forEach(metal => {
+		let mod = minecraft_metals.includes(metal) ? 'minecraft' : 'gtceu';
+		event.recipes.create.pressing([`4x gtceu:${metal}_plate`], `${mod}:${metal}_block`).id(`start:pressing/${metal}_plate`);
+	});
+
+	rods.forEach(metal => {
+		event.recipes.create.cutting([`2x gtceu:${metal}_rod`], plate(metal)).id(`start:cutting/${metal}_rod`);
+	});
+
+	rings.forEach(metal => {
+		event.recipes.create.pressing([`gtceu:${metal}_ring`], rod(metal)).id(`start:pressing/${metal}_ring`);
+	});
+
+	foils.forEach(metal => {
+		event.recipes.create.pressing([`gtceu:${metal}_foil`], plate(metal)).id(`start:pressing/${metal}_foil`);
+	});
+
+	screws_and_bolts.forEach(metal => {
+		event.recipes.create.cutting([`2x gtceu:${metal}_bolt`], rod(metal)).id(`start:cutting/${metal}_bolt`);
+		event.recipes.create.compacting([`gtceu:${metal}_screw`], `2x gtceu:${metal}_bolt`).id(`start:compacting/${metal}_screw`);	
+	});
 
 	long_rods.forEach(metal => seq_assembly(
 		`gtceu:long_${metal}_rod`,
@@ -364,24 +382,89 @@ ServerEvents.recipes(event => {
 	event.recipes.create.compacting(['kubejs:unfired_ball_ceramic_casting_mold', 'minecraft:bowl'], ['kubejs:unfired_raw_ceramic_casting_mold', 'minecraft:bowl']).id('start:compacting/unfired_ball_ceramic_casting_mold');
 	event.recipes.create.compacting(['kubejs:unfired_ingot_ceramic_casting_mold', 'gtceu:wood_plate'], ['kubejs:unfired_raw_ceramic_casting_mold', 'gtceu:wood_plate']).id('start:compacting/unfired_ingot_ceramic_casting_mold');
 
-	event.recipes.gtceu.auto_scavenger(id('flint'))
+	['coals','poor_coals'].forEach(fuelType => {
+		let boost = (fuelType == 'coals') ? .6 : 1;
+	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_${fuelType}`))
 		.notConsumable('minecraft:coarse_dirt')
-		.chancedOutput('kubejs:flint_shard', 9500, 0)
-		.chancedOutput('kubejs:flint_shard', 8000, 0)
-		.chancedOutput('kubejs:flint_shard', 6500, 0)
-		.duration(200);
+		.chancedInput(`#minecraft:${fuelType}`, 2500, 0)
+		.chancedOutput('1x minecraft:flint', 9500, 0)
+		.chancedOutput('1x minecraft:flint', 8000, 0)
+		.chancedOutput('1x minecraft:flint', 6500, 0)
+		.duration(480);
+	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_1_${fuelType}`))
+		.notConsumable('minecraft:coarse_dirt')
+		.chancedInput('kubejs:basic_scavenging_rod', 40, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 2500, 0)
+		.chancedOutput('4x minecraft:flint', 8000, 0)
+		.chancedOutput('4x minecraft:flint', 6400, 0)
+		.chancedOutput('4x minecraft:flint', 4800, 0)
+		.chancedOutput('4x minecraft:flint', 3200, 0)
+		.chancedOutput('4x minecraft:flint', 1600, 0)
+		.chancedOutput('2x minecraft:flint', 8000, 0)
+		.chancedOutput('2x minecraft:flint', 6400, 0)
+		.chancedOutput('2x minecraft:flint', 4800, 0)
+		.chancedOutput('2x minecraft:flint', 3200, 0)
+		.chancedOutput('2x minecraft:flint', 1600, 0)
+		.duration(600 * boost);
+	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_2_${fuelType}`))
+		.notConsumable('minecraft:coarse_dirt')
+		.chancedInput('kubejs:scavenging_rod', 20, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 2500, 0)
+		.chancedOutput('4x exnihilosequentia:stone_pebble', 5000, 0)
+		.chancedOutput('4x minecraft:flint', 9000, 0)
+		.chancedOutput('4x minecraft:flint', 8000, 0)
+		.chancedOutput('4x minecraft:flint', 7000, 0)
+		.chancedOutput('3x minecraft:flint', 6000, 0)
+		.chancedOutput('3x minecraft:flint', 5000, 0)
+		.chancedOutput('3x minecraft:flint', 4000, 0)
+		.chancedOutput('2x minecraft:flint', 3000, 0)
+		.chancedOutput('2x minecraft:flint', 2000, 0)
+		.chancedOutput('2x minecraft:flint', 1000, 0)
+		.duration(600 * boost);
+	event.recipes.gtceu.auto_scavenger(id(`grass_1_${fuelType}`))
+		.notConsumable('minecraft:grass_block')
+		.chancedInput('kubejs:basic_scavenging_rod', 60, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 4000, 0)
+		.chancedOutput('4x exnihilosequentia:stone_pebble', 400, 0)
+		.chancedOutput('4x exnihilosequentia:andesite_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:basalt_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:blackstone_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:deepslate_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:diorite_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:granite_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:tuff_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:calcite_pebble', 1200, 0)
+		.chancedOutput('4x exnihilosequentia:dripstone_pebble', 1200, 0)
+		.duration(960 * boost);
+	event.recipes.gtceu.auto_scavenger(id(`grass_2_${fuelType}`))
+		.notConsumable('minecraft:grass_block')
+		.chancedInput('kubejs:scavenging_rod', 30, 0)
+		.chancedInput(`#minecraft:${fuelType}`, 4000, 0)
+		.chancedOutput('4x exnihilosequentia:stone_pebble', 750, 0)
+		.chancedOutput('4x exnihilosequentia:andesite_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:basalt_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:blackstone_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:deepslate_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:diorite_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:granite_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:tuff_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:calcite_pebble', 1750, 0)
+		.chancedOutput('4x exnihilosequentia:dripstone_pebble', 1750, 0)
+		.duration(960 * boost);
+	});
+
+	event.shapeless(Item.of('3x kubejs:flint_shard'), ['minecraft:flint', '#forge:tools/hammers']).id('start:shapeless/flint_shard');
 
 	event.shaped('gtceu:ulv_auto_scavenger',[
-		'GRG',
-		'PCP',
-		'TET'
+		'TDT',
+		'GFG',
+		'TPT'
 	],{
 		G: 'gtceu:small_bronze_gear',
-		R: 'kubejs:scavenging_rod',
 		P: 'create:precision_mechanism',
-		C: 'create:brass_casing',
+		F: 'gtceu:brass_frame',
 		T: 'gtceu:treated_wood_plate',
-		E: 'create:electron_tube'
+		D: 'create:deployer'
 	}).id('start:shaped/ulv_auto_scavenger');
 
 	event.recipes.create.mechanical_crafting('gtceu:ulv_advanced_composter',[

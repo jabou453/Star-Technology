@@ -75,6 +75,9 @@ ServerEvents.recipes(event => {
 	});
 	event.remove({ id: 'create:compacting/blaze_cake' });
 
+	event.recipes.create.mixing(Fluid.of('thermal:redstone', 1000), [Fluid.of('minecraft:water', 1000), `10x minecraft:redstone`]).heatRequirement('superheated').id(`start:create_mixer/destabilized_redstone`);
+    event.recipes.create.filling('xycraft_world:xychorium_gem_red', [Fluid.of('thermal:redstone', 500), 'xycraft_world:xychorium_gem_light']).id('start:filling/redstone_gem');
+
 	event.shapeless(Item.of('gtceu:wood_screw'), ['#forge:tools/files', 'gtceu:wood_bolt', 'gtceu:wood_bolt']).id('start:shapeless/wood_screw');
 
 	event.recipes.gtceu.assembler(id('fluid_cell_frame'))
@@ -83,8 +86,6 @@ ServerEvents.recipes(event => {
 		.itemOutputs('thermal:fluid_cell_frame')
 		.duration(200)
 		.EUt(7);
-
-	event.remove({ id: /gtceu:shaped\/.*_drum/ });
 
 	event.remove({ id: 'minecraft:iron_trapdoor' });
 	event.shaped('minecraft:iron_trapdoor', [
@@ -130,6 +131,7 @@ ServerEvents.recipes(event => {
 	event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('kjs:smelting/slitake_manual_only').id('start:smelting/slime_ball');
 
 	event.replaceInput({ output: 'toms_storage:ts.storage_terminal' }, 'minecraft:glowstone', '#gtceu:circuits/ulv');
+	event.replaceInput({ output: 'toms_storage:ts.storage_terminal' }, '#forge:chests/wooden', 'toms_storage:ts.trim');
 	event.replaceInput({ output: 'toms_storage:ts.wireless_terminal' }, 'minecraft:glowstone', '#gtceu:circuits/ulv');
 	event.remove({ output: 'modularrouters:modular_router' });
 	event.replaceInput({ output: 'functionalstorage:configuration_tool' }, 'minecraft:emerald', '#forge:dyes/lime');
@@ -148,7 +150,7 @@ ServerEvents.recipes(event => {
 		C: 'gtceu:ulv_advanced_composter'
 	}).id('start:mechanical_crafting/device_composter');
 
-	event.recipes.create.mechanical_crafting('modularrouters:modular_router', [
+	event.recipes.create.mechanical_crafting('2x modularrouters:modular_router', [
 		'PDP',
 		'DED',
 		'PDP'
@@ -173,11 +175,12 @@ ServerEvents.recipes(event => {
 
 	event.remove({ output: 'laserio:logic_chip_raw' });
 	event.remove({ output: 'laserio:logic_chip' });
-	event.recipes.gtceu.circuit_assembler(id('logic_chip_raw'))
-		.itemInputs('#gtceu:circuits/lv', '8x exnihilosequentia:porcelain_clay')
+	event.recipes.gtceu.circuit_facility(id('logic_chip_raw'))
+		.itemInputs('#gtceu:circuits/lv', '8x exnihilosequentia:porcelain_clay', 'gtceu:small_redstone_dust')
+		.inputFluids('gtceu:tin 36')
 		.itemOutputs('laserio:logic_chip_raw')
 		.duration(320)
-		.EUt(7);
+		.EUt(24);
 
 	event.recipes.gtceu.electric_blast_furnace(id('logic_chip'))
         .itemInputs('laserio:logic_chip_raw')
@@ -269,6 +272,23 @@ ServerEvents.recipes(event => {
 		O: 'gtceu:obsidian_plate'
 	}).id('start:mechanical_crafting/advanced_collector');
 
+	event.recipes.create.mechanical_crafting('2x kubejs:meshblock', [
+		'RSR',
+		'NFN',
+		'RSR'
+	], {
+		R: 'gtceu:treated_wood_rod',
+		S: 'exnihilosequentia:string_mesh',
+		N: 'exnihilosequentia:flint_mesh',
+		F: 'gtceu:treated_wood_frame'
+	}).id('start:mechanical_crafting/meshblock');
+
+	event.recipes.gtceu.assembler(id('meshblock'))
+		.itemInputs('1x gtceu:treated_wood_frame', '2x exnihilosequentia:flint_mesh', '2x exnihilosequentia:string_mesh', '4x gtceu:treated_wood_rod')
+		.itemOutputs('2x kubejs:meshblock')
+		.duration(80)
+		.EUt(6);
+
 	let fluidPipez = 'gtceu:iron_foil'
     event.recipes.create.sequenced_assembly([
         Item.of(`3x pipez:fluid_pipe`),
@@ -287,13 +307,139 @@ ServerEvents.recipes(event => {
 		'FFF'
 	], {
 		F: 'minecraft:flint'
+	}).id('start:shaped/flint_block');
+
+	event.shaped(Item.of('toms_storage:ts.trim', 2), [
+		'CSC',
+		'SWS',
+		'CSC'
+	], {
+		C: 'createdieselgenerators:chip_wood_block',
+		W: 'gtceu:wood_crate',
+		S: '#minecraft:wooden_slabs'
+	}).id('start:shaped/trim');
+
+	event.shaped(Item.of('toms_storage:ts.open_crate'), [
+		'T',
+		'B',
+		'T'
+	], {
+		T: 'toms_storage:ts.trim',
+		B: 'minecraft:barrel'
+	}).id('start:shaped/open_crate');
+
+	event.shaped(Item.of('toms_storage:ts.inventory_proxy'), [
+		'THT',
+		'LCL',
+		'THT'
+	], {
+		T: '#minecraft:wooden_trapdoors',
+		H: 'minecraft:hopper',
+		L: 'minecraft:lapis_lazuli',
+		C: 'toms_storage:ts.open_crate'
+	}).id('start:shaped/inventory_proxy');
+
+	event.replaceInput({output: 'minecraft:fishing_rod'}, 'gtceu:iron_ring', 'gtceu:steel_ring');
+
+	event.shaped(Item.of('exnihilosequentia:iron_crook'), [
+		' FR',
+		'GDS',
+		'DGV'
+	], {
+		R: 'gtceu:iron_ring',
+		F: '#forge:tools/files',
+		G: '#forge:string',
+		D: 'gtceu:iron_rod',
+		S: 'gtceu:iron_screw',
+		V: '#forge:tools/screwdrivers'
 	});
 
-	event.replaceInput({output: 'minecraft:fishing_rod'}, 'gtceu:iron_ring', 'gtceu:steel_ring')
+	event.recipes.create.mechanical_crafting(Item.of('gtceu:steam_ore_factory'), [
+        'CIC',
+        'GOG',
+        'CIC'
+    ], {
+        O: 'gtceu:primitive_ore_factory',
+		I: 'gtceu:tin_alloy_large_fluid_pipe',
+		G: 'gtceu:potin_gear',
+		C: 'kubejs:high_steam_machine_casing'
+    }).id('start:mechanical_crafter/steam_ore_factory');
+
+	event.remove({ id: 'gtceu:shaped/shape_empty' });
+	event.shaped(Item.of('gtceu:gear_casting_mold'), [
+		'   ',
+		' PH',
+		'   '
+	], {
+		P: 'gtceu:empty_mold',
+		H: '#forge:tools/hammers'
+	}).id('start:shaped/gear_casting_mold');
+
+	event.shaped(Item.of('gtceu:small_gear_casting_mold'), [
+		'   ',
+		'   ',
+		'H P'
+	], {
+		P: 'gtceu:empty_mold',
+		H: '#forge:tools/hammers'
+	}).id('start:shaped/small_gear_casting_mold');
+
+	event.shaped(Item.of('gtceu:gear_extruder_mold'), [
+		'W  ',
+		' R ',
+		'   '
+	], {
+		R: 'gtceu:ring_extruder_mold',
+		W: '#forge:tools/wire_cutters'
+	}).id('start:shaped/gear_extruder_mold');
+
+	event.shaped(Item.of('gtceu:small_gear_extruder_mold'), [
+		' W ',
+		' R ',
+		'   '
+	], {
+		R: 'gtceu:ring_extruder_mold',
+		W: '#forge:tools/wire_cutters'
+	}).id('start:shaped/small_gear_extruder_mold');
+
+	let cell = 'gtceu:potin_small_fluid_pipe'
+	event.recipes.create.sequenced_assembly([
+		Item.of(`gtceu:fluid_cell`),
+	], `gtceu:potin_small_fluid_pipe`, [
+		event.recipes.createDeploying(cell, [cell, `gtceu:wrought_iron_ring`]),
+		event.recipes.createDeploying(cell, [cell, `#forge:glass_panes`]),
+		event.recipes.createDeploying(cell, [cell, `gtceu:wrought_iron_ring`]),
+		event.recipes.createDeploying(cell, [cell, `gtceu:rubber_ring`]),
+		event.recipes.createPressing(cell, cell)
+	]).transitionalItem(cell).loops(2).id('start:sequenced_assembly/fluid_cell');
+
+	event.shaped(Item.of('thermal:satchel'), [
+		'FWF',
+		'RCS',
+		'FWS'
+	], {
+		F: 'minecraft:leather',
+		W: '#minecraft:wool',
+		R: 'gtceu:tin_ring',
+		C: 'minecraft:chest',
+		S: '#forge:string'
+	}).id('start:shaped/satchel_leather');
+
+	event.shaped(Item.of('thermal:satchel'), [
+		'FWF',
+		'RCS',
+		'FWS'
+	], {
+		F: 'thermal:beekeeper_fabric',
+		W: '#minecraft:wool',
+		R: 'gtceu:tin_ring',
+		C: 'minecraft:chest',
+		S: '#forge:string'
+	}).id('start:shaped/satchel_fabric');
 
 	//Mass Removals
 
-	const ThermalRemoval = ['redstone_servo', 'device_tree_extractor', 'drill_head', 'fluid_cell_frame','device_rock_gen','device_water_gen'];
+	const ThermalRemoval = ['redstone_servo', 'device_tree_extractor', 'drill_head', 'fluid_cell_frame','device_rock_gen','device_water_gen','satchel'];
 	ThermalRemoval.forEach(item => {
 		event.remove({ output: `thermal:${item}` });
 	});
@@ -304,5 +450,9 @@ ServerEvents.recipes(event => {
 	const MinecraftRemoval = ['stonecutter', 'furnace', 'campfire', 'composter']
 	MinecraftRemoval.forEach(item => {
 		event.remove({ output: `minecraft:${item}` })
+	});
+	const TomsSSRemoval = ['trim','open_crate','inventory_proxy']
+	TomsSSRemoval.forEach(item => {
+		event.remove({ output: `toms_storage:ts.${item}` })
 	});
 });

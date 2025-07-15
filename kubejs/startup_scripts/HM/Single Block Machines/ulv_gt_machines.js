@@ -8,6 +8,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 	ulv_machine('mixer');
 	ulv_machine('centrifuge');
 	ulv_machine('assembler');
-	ulv_machine('circuit_assembler');
 
 });

@@ -8,8 +8,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.setSound(GTSoundEntries.FURNACE);
 
 });
-if (global.packmode !== 'hard'){
-    (() => {
+
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('bulk_ore_processing_array', 'multiblock')
@@ -47,5 +46,3 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         'kubejs:block/multiblock/primitive_blast_furnace', false);
        
 });
-})()
-} 

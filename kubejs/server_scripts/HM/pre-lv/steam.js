@@ -29,18 +29,21 @@ ServerEvents.recipes(event => {
     SteamIO('input',['gtceu:bronze_machine_casing','minecraft:chest']);
     SteamIO('output',['minecraft:chest','gtceu:bronze_machine_casing']);
 
-    const SteamCasing = (id2,type,core,plate) => {
+    const SteamCasing = (id2,type,core,mat) => {
     if(core == false)
     event.recipes.create.mechanical_crafting(Item.of(`${id2}:${type}`, 2), [
-        'PPP',
-        'P P',
-        'PPP'
+        'PSP',
+        'DFD',
+        'PSP'
     ], {
-        P: `gtceu:${plate}_plate`
+        P: `gtceu:${mat}_plate`,
+        D: `gtceu:double_${mat}_plate`,
+        S: `gtceu:${mat}_screw`,
+        F: `gtceu:${mat}_frame`
     }).id(`start:shaped/${type}`);
     if(core == false)
     event.recipes.gtceu.assembler(id(`${type}`))
-        .itemInputs(`8x gtceu:${plate}_plate`)
+        .itemInputs(`gtceu:${mat}_frame`, `4x gtceu:${mat}_plate`, `2x gtceu:double_${mat}_plate`, `2x gtceu:${mat}_screw`)
         .itemOutputs(`2x ${id2}:${type}`)
         .circuit(8)
         .duration(50)
@@ -51,13 +54,13 @@ ServerEvents.recipes(event => {
         'PCP',
         'PSP'
     ], {
-        P: `gtceu:${plate}_plate`,
+        P: `gtceu:${mat}_plate`,
         C: `${core}`,
-        S: `gtceu:${plate}_screw`
+        S: `gtceu:${mat}_screw`
     }).id(`start:mechanical_crafter/${type}`);
     if(core !== false)
     event.recipes.gtceu.assembler(id(`${type}`))
-        .itemInputs(`${core}`, `6x gtceu:${plate}_plate`, `2x gtceu:${plate}_screw`)
+        .itemInputs(`${core}`, `6x gtceu:${mat}_plate`, `2x gtceu:${mat}_screw`)
         .itemOutputs(`2x ${id2}:${type}`)
         .circuit(6)
         .duration(50)
@@ -65,9 +68,9 @@ ServerEvents.recipes(event => {
     }
     SteamCasing('gtceu','steam_machine_casing','minecraft:bricks','bronze');
     SteamCasing('kubejs','high_steam_machine_casing','gtceu:firebricks','cast_iron');
-    SteamCasing('gtceu','industrial_steam_casing',false,'double_brass');
-    SteamCasing('gtceu','bronze_machine_casing',false,'double_bronze');
-    SteamCasing('gtceu','steel_machine_casing',false,'double_cast_iron');
+    SteamCasing('gtceu','industrial_steam_casing',false,'brass');
+    SteamCasing('gtceu','bronze_machine_casing',false,'bronze');
+    SteamCasing('gtceu','steel_machine_casing',false,'cast_iron');
 
     const BrickedCasing = (block,brick) => {
         const material = (block == 'steel') ? 'cast_iron' : `${block}` ;
@@ -109,9 +112,11 @@ ServerEvents.recipes(event => {
     SteamMachine('hp_steam_compressor',['gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe','gtceu:lp_steam_compressor','gtceu:steel_brick_casing','gtceu:double_cast_iron_plate','gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe']);
     SteamMachine('lp_steam_forge_hammer',['gtceu:bronze_small_fluid_pipe','create:mechanical_press','gtceu:bronze_small_fluid_pipe','gtceu:bronze_small_fluid_pipe','gtceu:bronze_brick_casing','gtceu:bronze_small_fluid_pipe','gtceu:bronze_small_fluid_pipe','gtceu:double_bronze_plate','gtceu:bronze_small_fluid_pipe']);
     SteamMachine('hp_steam_forge_hammer',['gtceu:tin_alloy_small_fluid_pipe','gtceu:lp_steam_forge_hammer','gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe','gtceu:steel_brick_casing','gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe','gtceu:double_cast_iron_plate','gtceu:tin_alloy_small_fluid_pipe']);
+    SteamMachine('hp_steam_blaster',['gtceu:tin_alloy_small_fluid_pipe','gtceu:steel_ring','gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe','gtceu:hp_steam_furnace','gtceu:tin_alloy_small_fluid_pipe','gtceu:tin_alloy_small_fluid_pipe','gtceu:steel_plate','gtceu:tin_alloy_small_fluid_pipe']);
     SteamMachine('steam_grinder',['gtceu:steam_machine_casing','gtceu:bronze_normal_fluid_pipe','gtceu:steam_machine_casing','gtceu:potin_gear','gtceu:lp_steam_macerator','gtceu:potin_gear','gtceu:steam_machine_casing','gtceu:bronze_normal_fluid_pipe','gtceu:steam_machine_casing']);
     SteamMachine('steam_kiln',['gtceu:steam_machine_casing','gtceu:bronze_ring','gtceu:steam_machine_casing','gtceu:bronze_rod','gtceu:kiln','gtceu:bronze_rod','gtceu:steam_machine_casing','gtceu:bronze_normal_fluid_pipe','gtceu:steam_machine_casing']);
     SteamMachine('steam_oven',['gtceu:steam_machine_casing','gtceu:small_potin_gear','gtceu:steam_machine_casing','gtceu:bronze_firebox_casing','gtceu:lp_steam_furnace','gtceu:bronze_firebox_casing','gtceu:steam_machine_casing','gtceu:bronze_large_fluid_pipe','gtceu:steam_machine_casing']);
+    SteamMachine('steam_forge',['kubejs:high_steam_machine_casing','gtceu:small_wrought_iron_gear','kubejs:high_steam_machine_casing','gtceu:steel_firebox_casing','gtceu:hp_steam_blaster','gtceu:steel_firebox_casing','kubejs:high_steam_machine_casing','gtceu:tin_alloy_large_fluid_pipe','kubejs:high_steam_machine_casing']);
     SteamMachine('steam_casting_array',['gtceu:industrial_steam_casing','minecraft:glass','gtceu:industrial_steam_casing','gtceu:bronze_huge_fluid_pipe','create:basin','gtceu:bronze_huge_fluid_pipe','gtceu:industrial_steam_casing','thermal:redstone_servo','gtceu:industrial_steam_casing']);
     SteamMachine('steam_liquifier',['gtceu:industrial_steam_casing','gtceu:tempered_glass','gtceu:industrial_steam_casing','gtceu:bronze_huge_fluid_pipe','gtceu:lp_steam_extractor','gtceu:bronze_huge_fluid_pipe','gtceu:industrial_steam_casing','thermal:redstone_servo','gtceu:industrial_steam_casing']);
     // SteamMachine('steam_ore_factory',['kubejs:high_steam_machine_casing','gtceu:potin_gear','kubejs:high_steam_machine_casing','gtceu:tin_alloy_normal_fluid_pipe','gtceu:primitive_ore_factory','gtceu:tin_alloy_normal_fluid_pipe','kubejs:high_steam_machine_casing','createlowheated:basic_burner','kubejs:high_steam_machine_casing']);  //Disabled Until Core Fix
@@ -138,20 +143,5 @@ ServerEvents.recipes(event => {
         H: `gtceu:ulv_fluid_input`,
         S: `#forge:tools/screwdrivers`
     });
-
-    const PrimSifter = (input,mesh,output,scaler) => {
-    event.recipes.gtceu.primitive_sifter(id(`${output.split(':')[1]}_${mesh}`))
-        .itemInputs(`16x ${input}`)
-        .notConsumable(`exnihilosequentia:${mesh}_mesh`)
-        .itemOutputs(`${2*scaler}x ${output}`)
-        .duration(600)
-        .EUt(30);
-    }
-    PrimSifter('minecraft:sand','string','minecraft:coal',3);
-    PrimSifter('minecraft:sand','flint','minecraft:lapis_lazuli',1.5);
-    PrimSifter('minecraft:sand','iron','minecraft:diamond',.5);
-    PrimSifter('exnihilosequentia:dust','string','minecraft:quartz',3);
-    PrimSifter('exnihilosequentia:dust','flint','minecraft:amethyst_shard',1.5);
-    PrimSifter('exnihilosequentia:dust','iron','minecraft:ender_pearl',.5);
 
 });

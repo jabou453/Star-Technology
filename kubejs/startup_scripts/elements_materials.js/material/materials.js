@@ -183,6 +183,8 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.Netherite.addFlags(rod, foil);
     GTMaterials.get('netherite_trisulfate_complex').setFormula('[*Nr*(SO4)3](OH)2');
     GTMaterials.get('netherite_hexammine_sulfate').setFormula('[*Nr*(NH3)6]SO4');
+    GTMaterials.get('glowstone').setFormula('(Si(FeS2)5(CrAl2O3)Hg3)Au');
+    GTMaterials.get('ohmderblux_alloy').setFormula('Cx5(Fe16TiAlNi4Co2)2Zr4(Si(FeS2)5(CrAl2O3)Hg3)Au)9(Co5Cr2NiMo)3');
     GTMaterials.get('netherite').setFormula('Nr');
     GTMaterials.get('netherite_gold_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiAu2)2)');
     GTMaterials.get('netherite_certus_quartz_skystone_alloy').setFormula('Nr4(SkC2)2(Sk(SiO2)2)');
@@ -217,6 +219,8 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('voidic').setFormula('∅');
     GTMaterials.get('preon').setFormula('✶');
     GTMaterials.get('paradox').setFormula('☯');
+    GTMaterials.get('rare_earth').setFormula('?');
+    GTMaterials.get('platinum_group_sludge').setFormula('Pt?');
 
 });
 
@@ -263,9 +267,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('lead', gear);
     matmod('silver', gear);
     matmod('naquadah', dense_plate);
-    matmod('enriched_naquadah', [dense_plate, rotor, gear, frame, long_rod]);
+    matmod('enriched_naquadah', [dense_plate, rotor, gear, small_gear, frame, long_rod]);
     matmod('naquadria', dense_plate);
-    matmod('neutronium', [foil, small_gear,rotor]);
+    matmod('neutronium', [foil, small_gear,rotor, dense_plate]);
     matmod('europium', small_spring);
     matmod('zirconium', fine_wire);
     matmod('hafnium', fine_wire);
@@ -277,8 +281,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('echo_shard', [lens, foil]);
     matmod('copper', gear);
     matmod('vanadium_gallium', fine_wire);
-    matmod('rhodium_plated_palladium', frame);
-    matmod('darmstadtium', frame);
+    matmod('titanium', foil);
+    matmod('rhodium_plated_palladium', [frame, foil]);
+    matmod('darmstadtium', [frame, foil]);
     matmod('ruthenium_trinium_americium_neutronate', fine_wire);
     matmod('gold', gear);
     matmod('electrum', gear);
@@ -475,7 +480,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .flags(plates, rod, frame)
         .fluidPipeProperties(18000, 7200, true,true,true,true);
 
-    // Thermal Superconductors (twinite and higher rotor values by @richie3366)
+    // Thermal Superconductors
+    if (global.packmode !== 'hard'){(() => { 
     conductorSuper('soul_infused', ['1x invar', '2x mystery'], 0xcc9966, [], [V('lv'), 4, 0, true], [150, 130, 3, 37600]);
 
     conductorSuper('signalum', ['1x silver', '3x copper', '4x redstone'], 0xff3300, [1700, 'low', VA('mv'), 1200], [V('mv'), 16, 0, true], [190, 150, 3, 24000]);
@@ -496,7 +502,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     conductorSuper('stellarium', ['12x neutronium', '4x melodium', '1x samarium_iron_arsenic_oxide'], 0xccffff, [10799, 'highest', VA('uhv'), 3500], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
 
+<<<<<<< HEAD:kubejs/startup_scripts/materials/materials.js
     conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 4000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
+=======
+    conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 5000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
+    })()}
+>>>>>>> 9812f67e203181f52d98aa4a4e637c94614df914:kubejs/startup_scripts/elements_materials.js/material/materials.js
 
     // Nuclear Reactor Materials
     compIngot('austenitic_stainless_steel_304', ['35x steel', '10x chromium', '4x nickel', '1x manganese', '1x silicon'], 0x800040, METALLIC, [3500, 'low', VA('ev'), 1500], [plates, rod, frame]);
@@ -1042,7 +1053,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquid('polystyrene_sulfate', ['8x carbon', '8x hydrogen', '3x oxygen', '1x sulfur'], 0xD8C6F0, [no_decomp]); // PSS
 
-    compDust('ferric_nitrate', ['1x iron', '3x nitrate'], 0xAF5F5F, []);
+    compDust('ferric_nitrate', ['1x iron', '3x nitrate'], 0xAF5F5F, [no_decomp]);
 
     compLiquid('poly_34_ethylenedioxythiophene', ['6x carbon', '4x hydrogen', '2x oxygen', '1x sulfur'], 0x7C8FB2, [no_decomp]); //PEDOT
     
@@ -1461,7 +1472,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .fluidPipeProperties(250000, 30, true,true,true,true)
         .flags(plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, rotor, ring, foil, no_decomp, no_abs_recipe);
     
-    compIngotPlasma('ohmderblux_alloy', ['5x chalyblux', '2x maraging_steel_300', '4x zirconium', '9x lumium', '3x ultimet'], 0xD0B660, SHINY, [18590, 'highest', VA('uiv'), 3350], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
+    compIngotPlasma('ohmderblux_alloy', ['5x chalyblux', '2x maraging_steel_300', '4x zirconium', '9x glowstone', '3x ultimet'], 0xD0B660, SHINY, [18590, 'highest', VA('uiv'), 3350], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
 
     //UXV Materials
     conductor('lepton_resonant_thallium_antimonide', ['1x thallium', '1x antimony', '1x mystery'], 0x74638F, DULL, [18250, 'highest', VA('uev'), 1800], [V('uxv'), 7, 48, false], [bolt_and_screw,spring,small_spring, no_abs_recipe, no_decomp]);

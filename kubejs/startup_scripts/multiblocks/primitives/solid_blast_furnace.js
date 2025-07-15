@@ -15,7 +15,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
-    event.create('solid_blast_furnace', 'multiblock')
+    event.create('solid_blast_furnace', 'primitive')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('solid_blast_furnace')
         .appearanceBlock(() => Block.getBlock('kubejs:high_steam_machine_casing'))
@@ -31,6 +31,29 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where(' ', Predicates.any())
             .build())
         .workableCasingRenderer('kubejs:block/hm/high_steam_machine_casing',
-        'kubejs:block/multiblock/primitive_blast_furnace', false);
+        'kubejs:block/multiblock/primitive_blast_furnace', false)
+        .editableUI(
+			global.ui_builder({
+				group: 'primitive',
+				name: 'rugged_alloyer',
+				size: [166, 50],
+				background: GuiTextures.BACKGROUND,
+				progress: {
+					pos: [71, 16],
+					size: [20, 20],
+					texture: GuiTextures.PROGRESS_BAR_ARROW
+				},
+				inputs: [
+					{ type: 'item', index: 0, pos: [7, 16], texture: GuiTextures.SLOT },
+					{ type: 'item', index: 1, pos: [25, 16], texture: GuiTextures.SLOT },
+					{ type: 'item', index: 2, pos: [43, 16], texture: GuiTextures.SLOT },
+				],
+				outputs: [
+					{ type: 'item', index: 0, pos: [103, 16], texture: GuiTextures.SLOT },
+					{ type: 'item', index: 1, pos: [121, 16], texture: GuiTextures.SLOT },
+                    { type: 'item', index: 2, pos: [139, 16], texture: GuiTextures.SLOT }
+				],
+			})
+		);
 
 }); 

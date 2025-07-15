@@ -10,7 +10,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
-    event.create('large_farm', 'multiblock')
+    event.create('large_farm', 'primitive')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('large_farm')
         .appearanceBlock(GTBlocks.TREATED_WOOD_PLANK)
@@ -30,6 +30,26 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where(' ', Predicates.any())
             .build())
         .workableCasingRenderer('gtceu:block/treated_wood_planks',
-        'gtceu:block/machines/cutter', false);
+        'gtceu:block/machines/cutter', false)
+        .editableUI(
+			global.ui_builder({
+				group: 'primitive',
+				name: 'large_farm',
+				size: [126, 50],
+				background: GuiTextures.PRIMITIVE_BACKGROUND,
+				progress: {
+					pos: [40, 16],
+					size: [20, 20],
+					texture: GuiTextures.PROGRESS_BAR_ARROW
+				},
+				inputs: [
+					{ type: 'item', index: 0, pos: [12, 16], texture: GuiTextures.PRIMITIVE_SLOT },
+				],
+				outputs: [
+					{ type: 'item', index: 0, pos: [72, 16], texture: GuiTextures.PRIMITIVE_SLOT },
+					{ type: 'item', index: 1, pos: [90, 16], texture: GuiTextures.PRIMITIVE_SLOT }
+				],
+			})
+		);
 
 });

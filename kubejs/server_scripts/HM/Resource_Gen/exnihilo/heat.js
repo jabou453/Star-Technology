@@ -1,7 +1,5 @@
 // packmode: hard
 
-// DO NOT TOUCH 73 IM LOOKING AT YOU
-
 ServerEvents.recipes(event => {
 	//btw this and melting reload best by starting up again
 	event.remove({ id: /exnihilosequentia:heat.*/ })

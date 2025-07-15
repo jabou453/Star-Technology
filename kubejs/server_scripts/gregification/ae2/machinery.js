@@ -52,9 +52,11 @@ ServerEvents.recipes(event => {
         assemblerfluid_rem(`extended_${type}_part`, `expatternprovider:ex_${type}_part`,[`ae2:${type}`, '4x ae2:calculation_processor', '#gtceu:circuits/ev', '4x gtceu:certus_quartz_skystone_alloy_plate','4x gtceu:gold_skystone_alloy_plate'],'sky_steel 576', 2048);
     });
 
+    if (global.packmode !== 'hard'){(() => { // ME IO       
     ['input_bus', 'output_bus', 'input_hatch', 'output_hatch'].forEach(type => {
         assembler(`me_${type}`, `gtceu:me_${type}`, [`gtceu:ev_${type}`, '#gtceu:circuits/ev', 'ae2:fluix_smart_cable'], 8192);
     });
+    })()};
 
     assemblerspecex('tag','gtceu:item_tag_filter');
     assemblerspecex('mod','gtceu:item_filter');
@@ -305,6 +307,7 @@ ServerEvents.recipes(event => {
             E: 'gtceu:mv_emitter'
         });
 
+    if (global.packmode !== 'hard'){(() => {       
     ['lv', 'mv', 'hv', 'ev', 'iv', 'luv'].forEach(voltage => {
         let cable = (voltage) => {
             let mat;
@@ -329,7 +332,7 @@ ServerEvents.recipes(event => {
             E: `gtceu:${voltage}_machine_hull`,
             F: `gtceu:${cable(voltage)}_single_cable`,
             G: `gtceu:${voltage}_electric_motor`
-        }).id(`start:shaped/${voltage}_me_assembler`);
+        }).id(`start:shaped/${voltage}_me_assembler`);        
     });
 
     event.shaped('2x kubejs:fluix_steel_casing', [
@@ -354,6 +357,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:large_me_assembler')
         .duration(600)
         .EUt(8192);
+    })()};
 
     assembler_rem('quantum_ring', 'ae2:quantum_ring', ['gtceu:tungsten_carbide_frame', 'gtceu:ev_field_generator', 'gtceu:ev_emitter', 'gtceu:quantum_star', '6x gtceu:double_fluix_steel_plate'], 2048);
 

@@ -199,13 +199,13 @@ const plant_primitive_processing = (event, materialObj) => {
         .EUt(GTValues.VHA[GTValues.LV]);
 
     event.recipes.gtceu.bulk_ore_processing_array(id(`${materialObj.material}`))
-        .itemInputs(crushed_ore(materialObj.material, 2048))
+        .itemInputs(crushed_ore(materialObj.material, 256))
         .inputFluids(fluids.water_bulk)
-        .itemOutputs(dust(materialObj.material, 2048))
-        .itemOutputs(dust(materialObj.material, 2048))
-        .itemOutputs(dust(materialObj.material, 1480))
-        .itemOutputs(dust(materialObj.material, 1150))
-        .duration(240 * 2048 * .75)
+        .itemOutputs(dust(materialObj.material, 256))
+        .itemOutputs(dust(materialObj.material, 256))
+        .itemOutputs(dust(materialObj.secondary, 180))
+        .itemOutputs(dust(materialObj.tertiary, 144))
+        .duration(240 * 256 * .75)
         .EUt(GTValues.VHA[GTValues.LV]);
 
 };
@@ -236,14 +236,14 @@ const plant_electric_processing = (event, materialObj, tier) => {
         .EUt(voltages[tier]);
 
     event.recipes.gtceu.bulk_ore_processing_array(id(`${materialObj.material}`))
-        .itemInputs(crushed_ore(materialObj.material, 2048))
+        .itemInputs(crushed_ore(materialObj.material, 256))
         .inputFluids(fluid_bulk)
-        .itemOutputs(dust(materialObj.material, 2048))
-        .itemOutputs(dust(materialObj.material, 1650))
-        .itemOutputs(dust(materialObj.secondary, 1250))
-        .itemOutputs(dust(materialObj.tertiary, 750))
-        .itemOutputs(dust(materialObj.quaternary, 400))
-        .duration(240 * 2048 * .75)
+        .itemOutputs(dust(materialObj.material, 256))
+        .itemOutputs(dust(materialObj.material, 192))
+        .itemOutputs(dust(materialObj.secondary, 154))
+        .itemOutputs(dust(materialObj.tertiary, 90))
+        .itemOutputs(dust(materialObj.quaternary, 52))
+        .duration(240 * 256 * .75)
         .EUt(voltages[tier]);
 };
 
@@ -264,15 +264,15 @@ const plant_ore_processing = (event, materialObj) => {
         .EUt(GTValues.VA[GTValues.IV]);
 
     event.recipes.gtceu.bulk_ore_processing_array(id(`${materialObj.material}`))
-        .itemInputs(crushed_ore(materialObj.material, 2048))
+        .itemInputs(crushed_ore(materialObj.material, 256))
         .inputFluids(fluids.sodium_persulfate_5x_bulk)
-        .itemOutputs(dust(materialObj.material, 2048))
-        .itemOutputs(dust(materialObj.material, 1640))
-        .itemOutputs(dust(materialObj.secondary, 1250))
-        .itemOutputs(dust(materialObj.tertiary, 750))
-        .itemOutputs(dust(materialObj.quaternary, 400))
-        .itemOutputs(dust(materialObj.quinary, 200))
-        .duration(320 * 2048 * .5)
+        .itemOutputs(dust(materialObj.material, 256))
+        .itemOutputs(dust(materialObj.material, 216))
+        .itemOutputs(dust(materialObj.secondary, 160))
+        .itemOutputs(dust(materialObj.tertiary, 96))
+        .itemOutputs(dust(materialObj.quaternary, 54))
+        .itemOutputs(dust(materialObj.quinary, 30))
+        .duration(320 * 256 * .5)
         .EUt(GTValues.VA[GTValues.IV]);
 };
 

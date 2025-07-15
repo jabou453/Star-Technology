@@ -69,17 +69,17 @@ BlockEvents.rightClicked('minecraft:grass_block', event => {
 	}
 
 	if (item.id == 'kubejs:basic_scavenging_rod') {
-		pop_up('exnihilosequentia:stone_pebble', 0.03);
-		pop_up('exnihilosequentia:andesite_pebble', 0.09);
-		pop_up('exnihilosequentia:basalt_pebble', 0.09);
-		pop_up('exnihilosequentia:blackstone_pebble', 0.09);
-		pop_up('exnihilosequentia:deepslate_pebble', 0.09);
-		pop_up('exnihilosequentia:diorite_pebble', 0.09);
-		pop_up('exnihilosequentia:granite_pebble', 0.09);
-		pop_up('exnihilosequentia:tuff_pebble', 0.09);
-		pop_up('exnihilosequentia:calcite_pebble', 0.09);
-		pop_up('exnihilosequentia:dripstone_pebble', 0.09);
-		pop_up('minecraft:cookie', 0.008);
+		pop_up('exnihilosequentia:stone_pebble', 0.02);
+		pop_up('exnihilosequentia:andesite_pebble', 0.06);
+		pop_up('exnihilosequentia:basalt_pebble', 0.06);
+		pop_up('exnihilosequentia:blackstone_pebble', 0.06);
+		pop_up('exnihilosequentia:deepslate_pebble', 0.06);
+		pop_up('exnihilosequentia:diorite_pebble', 0.06);
+		pop_up('exnihilosequentia:granite_pebble', 0.06);
+		pop_up('exnihilosequentia:tuff_pebble', 0.06);
+		pop_up('exnihilosequentia:calcite_pebble', 0.06);
+		pop_up('exnihilosequentia:dripstone_pebble', 0.06);
+		pop_up('minecraft:cookie', 0.005);
 		player.addExhaustion(.03)
 
 		damage_tool(event);
@@ -87,17 +87,17 @@ BlockEvents.rightClicked('minecraft:grass_block', event => {
 	};
 
 	if (item.id == 'kubejs:scavenging_rod') {
-		pop_up('exnihilosequentia:stone_pebble', 0.05);
-		pop_up('exnihilosequentia:andesite_pebble', 0.15);
-		pop_up('exnihilosequentia:basalt_pebble', 0.15);
-		pop_up('exnihilosequentia:blackstone_pebble', 0.15);
-		pop_up('exnihilosequentia:deepslate_pebble', 0.15);
-		pop_up('exnihilosequentia:diorite_pebble', 0.15);
-		pop_up('exnihilosequentia:granite_pebble', 0.15);
-		pop_up('exnihilosequentia:tuff_pebble', 0.15);
-		pop_up('exnihilosequentia:calcite_pebble', 0.15);
-		pop_up('exnihilosequentia:dripstone_pebble', 0.15);
-		pop_up('minecraft:cookie', 0.01);
+		pop_up('exnihilosequentia:stone_pebble', 0.04);
+		pop_up('exnihilosequentia:andesite_pebble', 0.1);
+		pop_up('exnihilosequentia:basalt_pebble', 0.1);
+		pop_up('exnihilosequentia:blackstone_pebble', 0.1);
+		pop_up('exnihilosequentia:deepslate_pebble', 0.1);
+		pop_up('exnihilosequentia:diorite_pebble', 0.1);
+		pop_up('exnihilosequentia:granite_pebble', 0.1);
+		pop_up('exnihilosequentia:tuff_pebble', 0.1);
+		pop_up('exnihilosequentia:calcite_pebble', 0.1);
+		pop_up('exnihilosequentia:dripstone_pebble', 0.1);
+		pop_up('minecraft:cookie', 0.008);
 		player.addExhaustion(.02)
 
 		damage_tool(event);
@@ -202,7 +202,7 @@ ServerEvents.recipes(event => {
 
 	event.recipes.gtceu.stone_barrel(id('stone_pebble'))
 		.circuit(0)
-		.inputFluids('minecraft:lava 10', 'minecraft:water 990')
+		.inputFluids('minecraft:lava 10', 'minecraft:water 490')
 		.itemOutputs('4x exnihilosequentia:stone_pebble')
 		.duration(15);
 
@@ -215,17 +215,17 @@ ServerEvents.recipes(event => {
 	const primitive_processing = [
 		{ primary: 'hematite', secondary: 'magnetite', tertiary: 'nickel' },
 		{ primary: 'chalcopyrite', secondary: 'pyrite', tertiary: 'gold' },
-		{ primary: 'sphalerite', secondary: 'zinc', tertiary: 'gallium' },
+		{ primary: 'sphalerite', secondary: 'copper', tertiary: 'gallium' },
 		{ primary: 'cassiterite', secondary: 'tin', tertiary: 'bismuth' },
 		{ primary: 'galena', secondary: 'sulfur', tertiary: 'silver' },
 		{ primary: 'magnetite', secondary: 'gold', tertiary: 'iron' },
 		{ primary: 'pyrite', secondary: 'sulfur', tertiary: 'antimony' }
-	]
+	]  
 
 	primitive_processing.forEach(material => {
 		event.recipes.gtceu.primitive_ore_processing(id(`crushed_${material.primary}_ore`))
 			.itemInputs(`gtceu:crushed_${material.primary}_ore`, '2x #minecraft:coals')
-			.inputFluids('minecraft:water 1000')
+			.inputFluids('minecraft:water 500')
 			.itemOutputs(`gtceu:${material.primary}_dust`)
 			.chancedOutput(`gtceu:${material.primary}_dust`, 5000, 0)
 			.chancedOutput(`gtceu:${material.secondary}_dust`, 2500, 0)
@@ -233,14 +233,23 @@ ServerEvents.recipes(event => {
 			.duration(400);
 		event.recipes.gtceu.steam_ore_processing(id(`crushed_${material.primary}_ore`))
 			.itemInputs(`gtceu:crushed_${material.primary}_ore`)
-			.inputFluids('minecraft:water 1000')
+			.inputFluids('minecraft:water 500')
 			.itemOutputs(`gtceu:${material.primary}_dust`)
 			.chancedOutput(`gtceu:${material.primary}_dust`, 5000, 0)
 			.chancedOutput(`gtceu:${material.secondary}_dust`, 2500, 0)
 			.chancedOutput(`gtceu:${material.tertiary}_dust`, 1250, 0)
 			.duration(320)
 			.EUt(GTValues.VA[GTValues.ULV]);
-	});
+
+		// Chunk Processing
+		event.recipes.gtceu.primitive_ore_processing(id(`${material.primary}_crushed_ore_chunk`))
+			.itemInputs(`4x kubejs:${material.primary}_crushed_ore_chunk`, '2x #minecraft:coals')
+			.inputFluids('minecraft:water 500')
+			.chancedOutput(`gtceu:${material.primary}_dust`, 9000, 0)
+			.chancedOutput(`gtceu:${material.secondary}_dust`, 1500, 0)
+			.chancedOutput(`gtceu:${material.tertiary}_dust`, 750, 0)
+			.duration(480);
+	});	
 
 	event.recipes.gtceu.barrel(id('slitake'))
 		.notConsumable('thermal:slime_mushroom_spores')
@@ -264,6 +273,39 @@ ServerEvents.recipes(event => {
 		.itemInputs('4x #minecraft:leaves')
 		.itemOutputs('1x minecraft:dirt')
 		.duration(160);
+
+	event.recipes.gtceu.latex_plantation(id(`latex`))
+		.chancedInput(`minecraft:bone_meal`, 2500, 0)
+		.notConsumable('gtceu:wood_screw')
+		.outputFluids(`thermal:latex 25`)
+		.duration(400);
+    const latexType = [{ fuel: 'minecraft:bone_meal', circ: '1' }, { fuel: 'thermal:compost', circ: '2' }, { fuel: 'gtceu:fertilizer', circ: '3' }]
+	latexType.forEach(latex => {
+		event.recipes.gtceu.latex_plantation(id(`latex_${latex.circ}`))
+			.chancedInput(`${latex.fuel}`, 2500, 0)
+			.notConsumable('gtceu:iron_screw')
+			.circuit(latex.circ)
+			.outputFluids(`thermal:latex ${25 + 25 * latex.circ}`)
+			.duration(400);
+	});
+
+	[0,1,2,3,4].forEach(tier => {
+		let PumpMod = (tier == 0) ? 'kubejs' : 'gtceu' ;
+		let PumpTier = (tier == 0) ? 'ulv' : (tier == 1) ? 'lv' : (tier == 2) ? 'mv' : (tier == 3) ? 'hv' : 'ev' ;
+	event.recipes.gtceu.industrial_pump(id(`water_${tier}`))
+		.notConsumable(`${PumpMod}:${PumpTier}_electric_pump`)
+		.outputFluids(`minecraft:water ${3000 * ( 2 ** tier )}`)
+		.duration(20);
+	});
+
+	event.recipes.gtceu.assembler(id('industrial_pump'))
+		.itemInputs('1x gtceu:primitive_pump','6x gtceu:double_steel_plate','2x kubejs:ulv_electric_pump',
+			'2x #gtceu:circuits/ulv','4x gtceu:rubber_ring')
+		.circuit(3)
+		.inputFluids('gtceu:rubber 288')
+		.itemOutputs('gtceu:industrial_pump')
+		.duration(800)
+		.EUt(8);
 
 });
 
