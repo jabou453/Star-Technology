@@ -36,7 +36,6 @@
 	]
 	quests: [
 		{
-			dependencies: ["1FB502D770A4A59B"]
 			description: ["I hope the sand doesn't get in your machines."]
 			icon: {
 				Count: 1
@@ -2146,11 +2145,12 @@
 		}
 		{
 			dependencies: ["493DD013C818BB7B"]
+			description: ["A way to bypass the needs ah armor, a blessing of sorts."]
 			id: "7FBEF894C1FC4CCF"
 			tasks: [{
-				id: "2F6D4D1A7DD0D090"
-				title: "Abydos Talisman"
-				type: "checkmark"
+				id: "16690ECAFD8AF4A4"
+				item: "kubejs:abydos_talisman"
+				type: "item"
 			}]
 			x: -4.0d
 			y: -2.5d

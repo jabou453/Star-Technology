@@ -11,7 +11,7 @@
 	quests: [
 		{
 			dependencies: ["16A9D8E864A18B9E"]
-			description: ["The start of any skyblock pack. Who wood have guessed."]
+			description: ["Search for walled cities or a sapling in villages to get started here."]
 			id: "5B3D8132C90D790B"
 			rewards: [{
 				count: 2
@@ -181,7 +181,7 @@
 		}
 		{
 			dependencies: ["16A9D8E864A18B9E"]
-			description: ["By sneaking and right-clicking Grass (the dirt one), you can get pebbles for basic stone types."]
+			description: ["Mine for it the old fashioned way"]
 			icon: "minecraft:cobblestone"
 			id: "07CBF849162D7BDF"
 			rewards: [{
@@ -191,19 +191,11 @@
 				type: "item"
 			}]
 			size: 1.0d
-			tasks: [
-				{
-					count: 4L
-					id: "18540F033A0DC299"
-					item: { Count: 4, id: "exnihilosequentia:stone_pebble" }
-					type: "item"
-				}
-				{
-					id: "00FD763580EAA374"
-					item: "minecraft:cobblestone"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "00FD763580EAA374"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
 			title: "Touching Grass"
 			x: -4.5d
 			y: -4.0d
@@ -2509,6 +2501,50 @@
 			}]
 			x: 2.0d
 			y: 4.25d
+		}
+		{
+			can_repeat: true
+			icon: "chipped:desert_sand"
+			id: "3DC9F2E849D834FC"
+			optional: true
+			rewards: [
+				{
+					auto: "invisible"
+					command: "/gamestage add @p one"
+					elevate_perms: true
+					exclude_from_claim_all: true
+					icon: "kubejs:abydos_coordinate_crystal"
+					id: "06472D14D6996E33"
+					ignore_reward_blocking: true
+					silent: true
+					title: "Permission"
+					type: "command"
+				}
+				{
+					auto: "invisible"
+					command: "/execute in sgjourney:abydos run tp @p ~ 80 ~"
+					elevate_perms: true
+					exclude_from_claim_all: true
+					icon: "minecraft:dead_bush"
+					id: "4509D493488CCDB5"
+					ignore_reward_blocking: true
+					silent: true
+					title: "The Sands"
+					type: "command"
+				}
+			]
+			shape: "none"
+			size: 2.0d
+			tasks: [{
+				dimension: "minecraft:overworld"
+				disable_toast: true
+				icon: "minecraft:sand"
+				id: "6BA3609BF0D7691B"
+				title: "To the Sand"
+				type: "dimension"
+			}]
+			x: -4.0d
+			y: -6.0d
 		}
 	]
 	title: "Early Game"

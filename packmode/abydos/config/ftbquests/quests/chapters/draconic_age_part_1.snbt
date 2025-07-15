@@ -254,6 +254,7 @@
 		}
 		{
 			dependencies: ["310FC3F86513555F"]
+			description: ["Scans indicate that the End is an even more inhospitable dimension due to entropic forces. This armor will help mitigate the effects. The End inhabitants might be hiding a &ltalisman&r capable of nullifying the effects of the abyss..."]
 			hide_dependent_lines: true
 			id: "6180202612DCDBF4"
 			tasks: [
@@ -333,7 +334,7 @@
 				type: "dimension"
 			}]
 			x: -8.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
@@ -346,7 +347,7 @@
 				type: "advancement"
 			}]
 			title: "The Last Dragon Falls"
-			x: -8.0d
+			x: -6.0d
 			y: 6.0d
 		}
 		{
@@ -386,10 +387,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"50377ABD674AAC34"
-				"395C32B51E768458"
-			]
+			dependencies: ["395C32B51E768458"]
 			dependency_requirement: "one_completed"
 			description: [
 				"Draconic cells, carrying the powerful genes of the dragon race."
@@ -1101,18 +1099,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["01FBF9CDD9066AF5"]
-			description: ["The last offspring of the once mighty dragons, not yet hatched."]
-			id: "50377ABD674AAC34"
-			tasks: [{
-				id: "6281D2E4569CDD46"
-				item: "minecraft:dragon_egg"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 6.0d
-		}
-		{
 			dependencies: ["10D5DA8708208783"]
 			hide_dependent_lines: true
 			id: "3861DC9A29F4DD42"
@@ -1332,8 +1318,8 @@
 				}
 			]
 			title: "Dragon Fight Repeats"
-			x: -7.0d
-			y: 7.0d
+			x: -5.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
@@ -1347,7 +1333,7 @@
 				type: "structure"
 			}]
 			x: -8.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
@@ -1364,25 +1350,27 @@
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
+			description: ["You have been granted protection in this place allowing you to forgo armor needs"]
 			id: "7C65EDBD752F898D"
 			tasks: [{
-				id: "6747AE762AD60ABD"
-				title: "Nether Talisman"
-				type: "checkmark"
+				id: "044CF4AB2D37AD68"
+				item: "kubejs:nether_talisman"
+				type: "item"
 			}]
 			x: -8.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["28DE3D2A96C4D0C8"]
+			dependencies: ["64780055536CEEF3"]
+			description: ["You have been granted protection in this place allowing you to forgo armor needs"]
 			id: "4397DEEDB7C52BAC"
 			tasks: [{
-				id: "0413900BA28107B9"
-				title: "End Talisman"
-				type: "checkmark"
+				id: "605DEE85525818AA"
+				item: "kubejs:end_talisman"
+				type: "item"
 			}]
-			x: -10.0d
-			y: 4.0d
+			x: -8.0d
+			y: 2.0d
 		}
 	]
 	title: "Draconic Empires"
