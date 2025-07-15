@@ -849,6 +849,9 @@
     "material.gtceu.preon": "Preon",
     "material.gtceu.paradox": "Paradox",
 
+    "material.gtceu.tin_plas": "Tin",
+    "material.gtceu.americium_plas": "Americium",
+
     "gtceu.molten_destabilizing": "Molten Destabilization",
     "block.gtceu.molten_destabilizer": "Molten Destabilizer",
 

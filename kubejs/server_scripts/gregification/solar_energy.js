@@ -62,11 +62,18 @@ ServerEvents.recipes(event => {
     SolarPanel('6','naquadah_alloy','','zpm','naquadah','vanadium_gallium','elite')
     SolarPanel('7','darmstadtium','','uv','naquadah','yttrium_barium_cuprate','ultimate')
 
-    // T8 Solar Decomp (so it has some use in Eta [aka can be decomped])
+    // T8 changed to just be a scale fix
         event.recipes.gtceu.electromagnetic_separator(id(`solar_generator_8_decomp`))
             .itemInputs(`solarflux:sp_8`)
             .itemOutputs(`4x solarflux:photovoltaic_cell_6`)
             .duration(200)
+            .EUt(30 * (4 ** 7));
+
+       event.recipes.gtceu.assembler(id(`solar_generator_8`))
+            .itemInputs(`4x solarflux:sp_7`, `1x gtceu:neutronium_foil`, `2x gtceu:europium_single_cable`)
+            .inputFluids(`gtceu:indium_tin_lead_cadmium_soldering_alloy ${144 * 8}`)
+            .itemOutputs(`solarflux:sp_8`)
+            .duration(300)
             .EUt(30 * (4 ** 7));
 
 });

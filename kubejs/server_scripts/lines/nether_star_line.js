@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.fusion_reactor(id(`nether_tempered_${element}`))
             .inputFluids(`gtceu:energized_${element} 144`, `gtceu:ancient_netherite 36`)
             .outputFluids(`gtceu:nether_tempered_${element} 144`)
-            .duration(2400)
+            .duration(1200)
             .EUt(GTValues.VHA[GTValues.ZPM])
             .fusionStartEU(800000000);
     });
@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.autoclave(id(`${shard.element}_infused_shard_nether_tempered`))
           .itemInputs('kubejs:nether_tempered_shard')
-          .inputFluids(`gtceu:nether_tempered_${shard.powder} 216`)
+          .inputFluids(`gtceu:nether_tempered_${shard.powder} 108`)
           .itemOutputs(`kubejs:${shard.element}_infused_shard`)
           .chancedOutput(`kubejs:${shard.element}_infused_shard`, 8000, 0)
           .duration(120)

@@ -355,7 +355,10 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["6C8C6EA426060065"]
+			dependencies: [
+				"6C8C6EA426060065"
+				"208FDFFCCA373C1F"
+			]
 			description: ["A new plasma, burning as hot as the Nether it originates from."]
 			icon: "gtceu:magmatic_plasma_bucket"
 			id: "215A1E80621E2880"

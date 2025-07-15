@@ -140,20 +140,20 @@ ServerEvents.recipes(event => {
         });
 
         let steamToIer = new JSONObject()
-        steamToIer.add('amount', 960)
+        steamToIer.add('amount', 800)
         steamToIer.add('value', {tag:'forge:steam'})
 
     event.recipes.gtceu.fluid_heater(id(`steam_tag`))
         .inputFluids(FluidIngredientJS.of(steamToIer))
-        .outputFluids(`systeams:steamier 1200`)
-        .duration(30)
+        .outputFluids(`systeams:steamier 1000`)
+        .duration(20)
         .EUt(30);
    
     const SysteamSteams = (type, prior, scale) => {    
     event.recipes.gtceu.steam_turbine(id(`${type}`))
-        .inputFluids(`systeams:${type} ${640 - 40 * scale}`) 
-        .outputFluids(`gtceu:distilled_water ${scale + 4}`)
-        .duration(10 - scale)
+        .inputFluids(`systeams:${type} 640`) 
+        .outputFluids(`gtceu:distilled_water ${4 - scale}`)
+        .duration(10 + (2 * scale))
         .EUt(-32);
 
     event.custom({
@@ -162,7 +162,7 @@ ServerEvents.recipes(event => {
             'fluid': `systeams:${type}`,
             'amount': 1000
         },
-        'energy': 1000
+        'energy': 1000 + (200 * scale)
     });
 
     if (type !== 'steamier') {
@@ -178,9 +178,9 @@ ServerEvents.recipes(event => {
         }
         });
     event.recipes.gtceu.fluid_heater(id(`${type}`))
-        .inputFluids(`systeams:${prior} 960`)
-        .outputFluids(`systeams:${type} 1200`)
-        .duration(30)
+        .inputFluids(`systeams:${prior} 800`)
+        .outputFluids(`systeams:${type} 1000`)
+        .duration(20)
         .EUt(30);
     }}
     SysteamSteams('steamier', 'steam', 1);
@@ -213,13 +213,13 @@ ServerEvents.recipes(event => {
         .itemInputs('2x gtceu:diatron_gem')
         .notConsumable('#forge:lenses/white')
         .itemOutputs('gtceu:flawless_diatron_gem')
-        .duration(200)
+        .duration(160)
         .EUt(240);
     event.recipes.gtceu.laser_engraver(id('engrave_diatron_exquisite_gem_to_flawless_gem'))
         .itemInputs('2x gtceu:flawless_diatron_gem')
         .notConsumable('#forge:lenses/white')
         .itemOutputs('gtceu:exquisite_diatron_gem')
-        .duration(200)
+        .duration(160)
         .EUt(240);
 
     // === === ===

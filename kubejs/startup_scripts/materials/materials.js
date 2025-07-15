@@ -251,7 +251,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     element('oganesson', 'gas');
 
     // Plasmas
-
+    
     // This material is meant to place a ? symbol in a material's chemical formula
     event.create('mystery')
         .element(GTElements.get('mystery'));
@@ -280,6 +280,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('rhodium_plated_palladium', frame);
     matmod('darmstadtium', frame);
     matmod('ruthenium_trinium_americium_neutronate', fine_wire);
+    matmod('gold', gear);
+    matmod('electrum', gear);
+    matmod('blue_alloy', gear);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
@@ -292,7 +295,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     blast('seaborgium', 13300, 'higher', VA('uev'), 1500);
     blast('flerovium', 12200, 'higher', VA('uhv'), 1200);
 
-    // Fluid pipes
+    // Fluid Pipes
     GTMaterials.NaquadahEnriched.setProperty(PropertyKey.FLUID_PIPE, new FluidPipeProperties(8000, 500, true, true, true, false));
 
     // Materials from elements
@@ -434,6 +437,14 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).fluid().color(color);
     }
 
+    const compPlasma = (name, temp, elements, color, flags) => {
+        event.create(name).liquid(new GTFluidBuilder().temperature(temp)).plasma().components(elements).color(color).flags(flags);
+    }
+
+    compPlasma('americium_plas',1449,'americium',0x287869,no_decomp);
+
+    compPlasma('tin_plas',505,'tin',0xfafeff,no_decomp);
+
     elemIngot('magnetic_zapolgium', 'zapolgium', 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
     elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3250], [fine_wire]);
@@ -483,9 +494,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     conductorSuper('melodium', ['2x uranium_triplatinum', '14x electrum', '3x amethyst', '4x darmstadtium', '7x europium'], 0xd9b3ff, [10000, 'higher', VA('uv'), 3000], [V('uv'), 128, 0, true], [2000, 550, 3, 64000]);
 
-    conductorSuper('stellarium', ['12x neutronium', '4x melodium', '1x samarium_iron_arsenic_oxide'], 0xccffff, [10799, 'highest', VA('uhv'), 4000], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
+    conductorSuper('stellarium', ['12x neutronium', '4x melodium', '1x samarium_iron_arsenic_oxide'], 0xccffff, [10799, 'highest', VA('uhv'), 3500], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
 
-    conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 5000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
+    conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 4000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
 
     // Nuclear Reactor Materials
     compIngot('austenitic_stainless_steel_304', ['35x steel', '10x chromium', '4x nickel', '1x manganese', '1x silicon'], 0x800040, METALLIC, [3500, 'low', VA('ev'), 1500], [plates, rod, frame]);
