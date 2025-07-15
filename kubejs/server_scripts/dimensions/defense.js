@@ -3,10 +3,12 @@ const dimensionEffect = (dimension, armorType, talismanList, effectList) => {
         const { player } = event;
             
         const hasFullSet = checkArmor(player, armorType)
+        if (hasFullSet) return
+
+        const hasCurio = checkCurios(event, talismanList)
+        if (hasCurio) return
 
         const hasImmunity = checkImmunity(player, talismanList)
-        
-        if (hasFullSet) return
         if (hasImmunity) return
         
         if (player.level.dimension.toString() !== `${dimension}`) return
@@ -53,3 +55,14 @@ const checkImmunity = (player, list) => {
     });
     return key
 };
+
+const checkCurios = (event, curiosList) => { 
+    let curios = event.player.nbt.ForgeCaps['curios:inventory']
+    let key = false
+    curiosList.forEach(curio => {
+        if (curios.toString().contains(curio)) {
+            key = true
+        }
+    })
+    return key
+}
