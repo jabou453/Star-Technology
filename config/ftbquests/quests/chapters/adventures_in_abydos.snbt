@@ -1699,11 +1699,53 @@
 			]
 			hide_dependent_lines: true
 			id: "59B0F5DB2C1E96DC"
-			tasks: [{
-				id: "2D2E589ECC7EB601"
-				title: "Rune Infused Armor"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "47AC263851C1195F"
+					item: {
+						Count: 1
+						id: "kubejs:nether_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4A5EC35DCBB8DE99"
+					item: {
+						Count: 1
+						id: "kubejs:nether_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "657FD2D02E00407E"
+					item: {
+						Count: 1
+						id: "kubejs:nether_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "06A018D90CEC2D3E"
+					item: {
+						Count: 1
+						id: "kubejs:nether_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Runic Infused Hazmat Armor"
 			x: 6.5d
 			y: -4.0d
 		}
