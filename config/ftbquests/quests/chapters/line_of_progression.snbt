@@ -1362,6 +1362,7 @@
 		}
 		{
 			dependencies: ["2F0E0C63E0DE0F5A"]
+			description: ["A beast of a circuit."]
 			id: "73E9000BE5288623"
 			optional: true
 			subtitle: "First UIV Cicuit"

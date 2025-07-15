@@ -514,12 +514,12 @@ ServerEvents.recipes(event => {
             .duration(32000)
             .EUt(GTValues.VA[GTValues.UIV]);
         };
-        Gato('mars', 'abyssal', 'abyssal', 'light_gray', 'gray');
-        Gato('valenok', 'abyssal', 'infernal', 'white', 'orange');
+        Gato('valenok', 'abyssal', 'abyssal', 'light_gray', 'gray');
+        Gato('mars', 'abyssal', 'infernal', 'white', 'orange');
         Gato('vasilisa', 'infernal', 'infernal', 'gray', 'white');
         {
-            let M = 'placeablemaxwell:mars'
-            let V = 'placeablemaxwell:valenok'
+            let M = 'placeablemaxwell:valenok'
+            let V = 'placeablemaxwell:mars'
             let S = 'placeablemaxwell:vasilisa'
         event.recipes.gtceu.gate_assembly(id(`maxwell`))
             .itemInputs(S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M)
