@@ -675,7 +675,10 @@
 		}
 		{
 			dependencies: ["493DD013C818BB7B"]
-			description: ["Go Explore the Scattered Temples of Abydos to find the things you are searching for."]
+			description: [
+				"Go Explore the Scattered Temples of Abydos to find the things you are searching for."
+				"You might even find a &ltalisman&r powerful enough to stop the sands of Abydos from eroding you..."
+			]
 			id: "3479CEBD73550718"
 			rewards: [{
 				id: "7FC500BE090ABC2E"
