@@ -79,6 +79,11 @@ ServerEvents.recipes(event => {
         .itemOutputs('6x gtceu:lumium_dust')
         .duration(600)
         .EUt(256);
+    event.recipes.gtceu.mixer(id('enderium_dust'))
+        .itemInputs('3x gtceu:lead_dust', '1x gtceu:diamond_dust', '3x gtceu:ender_pearl_dust')
+        .itemOutputs('6x gtceu:enderium_dust')
+        .duration(1000)
+        .EUt(1024);
 
     event.recipes.gtceu.chemical_bath(id('hot_signalium_cooling_distilled_water'))
         .itemInputs('gtceu:hot_signalum_ingot')
@@ -92,4 +97,19 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:signalium_ingot')
         .duration(600)
         .EUt(120);
+
+    event.remove({id:'gtceu:laser_engraver/engrave_cpu_silicon'});
+    event.recipes.gtceu.laser_engraver(id('engrave_cpu_silicon'))
+        .itemInputs('gtceu:silicon_wafer')
+        .notConsumable('#forge:lenses/light_blue')
+        .itemOutputs('gtceu:cpu_wafer')
+        .duration(900)
+        .EUt(120)
+        .cleanroom(CleanroomType.CLEANROOM);
+
+
+    event.remove({id:'gtceu:centrifuge/endstone_separation'});
+
+    event.remove({output: 'gtceu:epoxy'}); // Temp for Eta
+
 });

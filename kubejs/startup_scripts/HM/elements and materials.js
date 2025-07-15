@@ -80,6 +80,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 	matmod('magnalium', [gear, small_gear]);
 	matmod('damascus_steel', [gear, small_gear, fine_wire, foil]);
 	matmod('blue_alloy', [fine_wire, foil]);
+	matmod('promethium', [double_plate]);
 
 	const elemDustFluid = (name, color, flags) => {
         event.create(name).dust().fluid().element(GTElements.get(name)).color(color).flags(flags);

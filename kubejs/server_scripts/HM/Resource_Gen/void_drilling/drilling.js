@@ -53,6 +53,6 @@ ServerEvents.recipes(event => {
     void_drilling('residue', 8, 'gtceu:rare_ore_residue', .75, 'gtceu:calcite_dust', GTValues.VA[GTValues.MV], 720);
     void_drilling('slurry', 12, 'gtceu:raw_ore_slurry', .75, 'gtceu:stone_dust', GTValues.VHA[GTValues.HV], 960);
     void_drilling('poor_mixture', 20, 'gtceu:impure_molten_ore_mixture', .3, 'gtceu:metal_mixture_dust', GTValues.VA[GTValues.HV], 1600);
-    void_drilling('rich_mixture', 24, 'gtceu:pure_molten_ore_mixture', .75, 'gtceu:metal_mixture_dust', GTValues.VA[GTValues.EV], 1200);
+    void_drilling('rich_mixture', 24, 'gtceu:pure_molten_ore_mixture', .75, 'gtceu:metal_mixture_dust', GTValues.VA[GTValues.UEV], 1200); //UEV as to lock progression
 
 });

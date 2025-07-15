@@ -3829,6 +3829,7 @@
 				"0A8FE243A5A8CC64"
 				"3A1AE7329B090F5C"
 				"19EFB33C0B250C49"
+				"301FF7F900A30DC7"
 			]
 			id: "649C63B39BF01323"
 			shape: "rsquare"
@@ -3876,6 +3877,17 @@
 			]
 			x: 12.5d
 			y: -1.5d
+		}
+		{
+			dependencies: ["199D5FCFC471FE62"]
+			id: "337B21F9500DD0F1"
+			tasks: [{
+				id: "063B72056EB40F7D"
+				item: "exnihilosequentia:sea_water_bucket"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.0d
 		}
 	]
 	title: "So It Begins"

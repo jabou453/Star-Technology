@@ -184,14 +184,11 @@
 			y: -5.5d
 		}
 		{
-			dependencies: ["267B7EA717164DBF"]
-			description: [
-				"Only Liquid Outputs"
-				""
-				"Sludge 1:3 => 3:3"
-				""
-				"Later line tbd"
+			dependencies: [
+				"267B7EA717164DBF"
+				"4E925FEB0FC3B57F"
 			]
+			description: [""]
 			hide_dependent_lines: true
 			id: "650AFC71A934DCFE"
 			tasks: [{
@@ -784,7 +781,10 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["7D5EA64ABB9C43AB"]
+			dependencies: [
+				"7D5EA64ABB9C43AB"
+				"77AFD64D10417A3C"
+			]
 			id: "2F83926420785947"
 			tasks: [{
 				id: "30A7E016D25FD5B2"
@@ -1183,7 +1183,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: -1.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["27EDBD8DBCA325A6"]
@@ -1194,7 +1194,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: -2.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["46EB768C8E7C4900"]
@@ -2340,8 +2340,8 @@
 				item: "gtceu:micro_processor_mainframe"
 				type: "item"
 			}]
-			x: 24.0d
-			y: -1.0d
+			x: 22.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["12BFA13A58EB3C0F"]
@@ -2352,8 +2352,8 @@
 				item: "gtceu:ev_energy_input_hatch"
 				type: "item"
 			}]
-			x: 22.5d
-			y: -1.0d
+			x: 21.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["139AB773D4CE9359"]
@@ -2363,8 +2363,8 @@
 				item: "gtceu:titanium_ingot"
 				type: "item"
 			}]
-			x: 18.0d
-			y: -5.5d
+			x: 16.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["139AB773D4CE9359"]
@@ -2417,32 +2417,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: ["73F28A134CF0C33A"]
-			id: "3EAD2733D8EB1C09"
-			tasks: [{
-				id: "23F9562B80F33E76"
-				item: "gtceu:alloy_blast_smelter"
-				type: "item"
-			}]
-			x: 19.5d
-			y: -2.5d
-		}
-		{
-			dependencies: [
-				"4100D427DE10E511"
-				"2E9EFCCA2B0C6271"
-			]
-			id: "73F28A134CF0C33A"
-			tasks: [{
-				id: "31D8F24289E48A09"
-				item: "gtceu:rtm_alloy_coil_block"
-				type: "item"
-			}]
-			x: 19.5d
-			y: -4.0d
-		}
-		{
-			dependencies: ["3E1B9D415C6B5D74"]
+			dependencies: ["21E37560CE0AB3B4"]
 			id: "115CC64AA3B2742A"
 			tasks: [{
 				id: "5E4EB5A9DDAE4807"
@@ -2450,7 +2425,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: -1.0d
+			y: 0.5d
 		}
 		{
 			dependencies: [
@@ -2947,7 +2922,7 @@
 			y: -8.0d
 		}
 		{
-			dependencies: ["05A414360ED152CF"]
+			dependencies: ["3E1B9D415C6B5D74"]
 			id: "12BFA13A58EB3C0F"
 			tasks: [
 				{
@@ -2961,55 +2936,8 @@
 					type: "item"
 				}
 			]
-			x: 21.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["649E8A6E872552A9"]
-			id: "05A414360ED152CF"
-			tasks: [{
-				id: "0DC235F1F3FA3E64"
-				item: "gtceu:ev_laser_engraver"
-				type: "item"
-			}]
-			x: 21.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["01FAE2A934DD4AB7"]
-			id: "649E8A6E872552A9"
-			tasks: [{
-				id: "376762A8C29AE40D"
-				item: "gtceu:radon_bucket"
-				type: "item"
-			}]
-			x: 21.0d
-			y: -4.0d
-		}
-		{
-			dependencies: [
-				"73F28A134CF0C33A"
-				"41041C9A2BC1822F"
-			]
-			id: "50494F5FAB112314"
-			tasks: [{
-				id: "082D4D25F6DE3CF6"
-				item: "gtceu:nuclear_reactor"
-				type: "item"
-			}]
 			x: 19.5d
-			y: -5.5d
-		}
-		{
-			dependencies: ["50494F5FAB112314"]
-			id: "01FAE2A934DD4AB7"
-			tasks: [{
-				id: "73C77C6B04448DAB"
-				item: "gtceu:plutonium_dust"
-				type: "item"
-			}]
-			x: 21.0d
-			y: -5.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["39B2E253AFB39FDC"]
@@ -3031,7 +2959,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 0.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["0C2BAE421CDC884A"]
@@ -3133,7 +3061,7 @@
 				item: "kubejs:multiblock_upgrade_kit"
 				type: "item"
 			}]
-			x: 16.5d
+			x: 19.5d
 			y: -4.0d
 		}
 		{
@@ -3180,7 +3108,7 @@
 			y: -7.0d
 		}
 		{
-			dependencies: ["3EAD2733D8EB1C09"]
+			dependencies: ["3E1B9D415C6B5D74"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "45D5A3F101F80944"
@@ -3381,8 +3309,8 @@
 				item: "gtceu:ev_energy_input_hatch_4a"
 				type: "item"
 			}]
-			x: 22.5d
-			y: -2.5d
+			x: 21.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -3395,8 +3323,19 @@
 				item: "gtceu:ev_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: 24.0d
-			y: -2.5d
+			x: 22.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3E1B9D415C6B5D74"]
+			id: "21E37560CE0AB3B4"
+			tasks: [{
+				id: "6F7C177D2EC6C83F"
+				item: "kubejs:certus_quartz_geode"
+				type: "item"
+			}]
+			x: 19.5d
+			y: -1.0d
 		}
 	]
 	title: "Daring are we?"

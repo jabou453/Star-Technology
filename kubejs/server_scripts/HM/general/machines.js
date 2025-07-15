@@ -86,7 +86,7 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .EUt(8);
 
-    const TierMaterials = (tier,wire,cable,cable1up,chip,rubber,Head,ewire,material,magnetic,Glass,Buzzsaw,pipe,rotor,storageI,storageF,eu,lubricant,solder) => {
+    const TierMaterials = (tier,wire,cable,cable1up,chip,rubber,Head,ewire,material,magnetic,Glass,Buzzsaw,pipe,rotor,storageI,storageF,eu,lubricant,solder,componentMaterial) => {
 
         const Circuit = `#gtceu:circuits/${tier}` ;
         const Arm = `gtceu:${tier}_robot_arm` ; 
@@ -107,6 +107,7 @@ ServerEvents.recipes(event => {
         const Plate = `gtceu:${material}_plate` ;
         const Rod = `gtceu:${material}_rod` ;
         const Gear = `gtceu:${material}_gear` ;
+        const SmGear = `gtceu:small_${material}_gear` ;
         const RodM = `gtceu:${magnetic}_rod` ;
         const Spring = `gtceu:${wire}_spring` ;
         const Rotor = `gtceu:${rotor}_rotor` ;
@@ -191,6 +192,9 @@ ServerEvents.recipes(event => {
     Transformers(2,'double');
     Transformers(4,'quadruple');
     Transformers(16,'hex');
+    if (tier !== 'lv' || 'mv'){
+    AllTierMachine('rotor_holder',[Hull,`4x gtceu:${componentMaterial}_gear`,'2x '+Motor,'4x '+SmGear],[Solder+' 216',Lubricant+' 5000'])
+    };
 
     //Assembler
     ['input','output'].forEach(hatchType => {
@@ -251,10 +255,10 @@ ServerEvents.recipes(event => {
     };
 
     };
-    TierMaterials('lv','copper','tin','copper',null,'rubber','minecraft:diamond','gold','steel','steel','#forge:glass','gtceu:cobalt_brass_buzz_saw_blade','bronze','tin','wood_crate','wood_drum',30,'lubricant','soldering_alloy');
-    TierMaterials('mv','cupronickel','copper','gold','gtceu:ulpic_chip','rubber','minecraft:diamond','electrum','aluminium','steel','gtceu:tempered_glass','gtceu:vanadium_steel_buzz_saw_blade','steel','steel','bronze_crate','bronze_drum',120,'lubricant','soldering_alloy');
-    TierMaterials('hv','kanthal','gold','aluminium','gtceu:lpic_chip','silicone_rubber','gtceu:diamond_grinding_head','blue_alloy','stainless_steel','neodymium','gtceu:tempered_glass','gtceu:red_steel_buzz_saw_blade','stainless_steel','black_steel','steel_crate','steel_drum',480,'lubricant','soldering_alloy');
-    TierMaterials('ev','nichrome','aluminium','platinum','gtceu:mpic_chip','silicone_rubber','gtceu:diamond_grinding_head','platinum','titanium','neodymium','gtceu:tempered_glass','gtceu:red_steel_buzz_saw_blade','titanium','hsla_steel','aluminium_crate','aluminium_drum',1920,'lubricant','soldering_alloy');
+    TierMaterials('lv','copper','tin','copper',null,'rubber','minecraft:diamond','gold','steel','steel','#forge:glass','gtceu:cobalt_brass_buzz_saw_blade','bronze','tin','wood_crate','wood_drum',30,'lubricant','soldering_alloy','damascus_steel');
+    TierMaterials('mv','cupronickel','copper','gold','gtceu:ulpic_chip','rubber','minecraft:diamond','electrum','aluminium','steel','gtceu:tempered_glass','gtceu:vanadium_steel_buzz_saw_blade','steel','steel','bronze_crate','bronze_drum',120,'lubricant','soldering_alloy','magnalium');
+    TierMaterials('hv','kanthal','gold','aluminium','gtceu:lpic_chip','silicone_rubber','gtceu:diamond_grinding_head','blue_alloy','stainless_steel','neodymium','gtceu:tempered_glass','gtceu:red_steel_buzz_saw_blade','stainless_steel','black_steel','steel_crate','steel_drum',480,'lubricant','soldering_alloy','black_steel');
+    TierMaterials('ev','nichrome','aluminium','platinum','gtceu:mpic_chip','silicone_rubber','gtceu:diamond_grinding_head','platinum','titanium','neodymium','gtceu:tempered_glass','gtceu:red_steel_buzz_saw_blade','titanium','hsla_steel','aluminium_crate','aluminium_drum',1920,'lubricant','soldering_alloy','ultimet');
 
     // ME IO
     ['hatch','bus'].forEach(meHatchType => {
@@ -310,24 +314,24 @@ ServerEvents.recipes(event => {
     // Converter('uev', 'ancient_runicalium', 10, 'poly_34_ethylenedioxythiophene_polystyrene_sulfate');
     // Will add 64a converters in Theta
 
-    // // Base Machines (assemblyLine,mk1,mk2,mk3,transformer,substation,fluidDrills,largeMiners,bedrockMiners all Theta+)
-    // [
-    //     'electric_blast_furnace','large_chemical_reactor','implosion_compressor','pyrolyse_oven','multi_smelter',
-    //     'cracker','distillation_tower','vacuum_freezer','assembly_line','luv_fusion_reactor','zpm_fusion_reactor','uv_fusion_reactor','mv_fluid_drilling_rig','hv_fluid_drilling_rig','ev_fluid_drilling_rig',
-    //     'ev_large_miner','iv_large_miner','luv_large_miner','cleanroom','filter_casing','sterilizing_filter_casing','large_combustion_engine','extreme_combustion_engine','steam_large_turbine',
-    //     'gas_large_turbine','plasma_large_turbine','active_transformer','power_substation','mv_bedrock_ore_miner','hv_bedrock_ore_miner','ev_bedrock_ore_miner'
-    // ].forEach(gtMachine => {
-    //     event.remove({output: `gtceu:${gtMachine}` });
-    // });
+    // Base Machines (assemblyLine,mk1,mk2,mk3,transformer,substation,fluidDrills,largeMiners,bedrockMiners all Theta+)
+    [
+        'electric_blast_furnace','large_chemical_reactor','implosion_compressor','pyrolyse_oven','multi_smelter',
+        'cracker','distillation_tower','vacuum_freezer','assembly_line','luv_fusion_reactor','zpm_fusion_reactor','uv_fusion_reactor','mv_fluid_drilling_rig','hv_fluid_drilling_rig','ev_fluid_drilling_rig',
+        'ev_large_miner','iv_large_miner','luv_large_miner','cleanroom','filter_casing','sterilizing_filter_casing','large_combustion_engine','extreme_combustion_engine','steam_large_turbine',
+        'gas_large_turbine','plasma_large_turbine','active_transformer','power_substation','mv_bedrock_ore_miner','hv_bedrock_ore_miner','ev_bedrock_ore_miner'
+    ].forEach(gtMachine => {
+        event.remove({output: `gtceu:${gtMachine}` });
+    });
 
-    // // GCYM (abs needs recipe in Eta rest in Theta+) (large circuit never)
-    // [
-    //     'large_maceration_tower','large_chemical_bath','large_centrifuge','large_mixer','large_electrolyzer','large_electromagnet','large_packer','large_assembler','large_circuit_assembler','large_arc_smelter',
-    //     'large_engraving_laser','large_sifting_funnel','alloy_blast_smelter','large_autoclave','large_material_press','large_brewer','large_cutter','large_distillery','large_extractor','large_extruder','large_solidifer',
-    //     'large_wiremill','mega_blast_furnace','mega_vacuum_freezer'
-    // ].forEach(gcymMachine => {
-    //     event.remove({output: `gtceu:${gcymMachine}` });
-    // });
+    // GCYM (all in Theta+) (large circuit never)
+    [
+        'large_maceration_tower','large_chemical_bath','large_centrifuge','large_mixer','large_electrolyzer','large_electromagnet','large_packer','large_assembler','large_circuit_assembler','large_arc_smelter',
+        'large_engraving_laser','large_sifting_funnel','alloy_blast_smelter','large_autoclave','large_material_press','large_brewer','large_cutter','large_distillery','large_extractor','large_extruder','large_solidifer',
+        'large_wiremill','mega_blast_furnace','mega_vacuum_freezer'
+    ].forEach(gcymMachine => {
+        event.remove({output: `gtceu:${gcymMachine}` });
+    });
 
     // Research Machines (data access needs recipe in Eta rest in Theta+)
     [
@@ -345,14 +349,6 @@ ServerEvents.recipes(event => {
     // bacterial_hydrocarbon_harvester, chemical_plant, mega_abs, super_compact_heat_chamber, component_part_assembly, heat_chamber, super_pressure_heat_chamber,
     // cryostate_quantum_chiller, exotic_gas_siphon, cyclonic_sifter, draco_circuit_assembler, draco_infusion, super_compact_heat_chamber, injection_mixer, manifold_centrifuge, bulk_ore_processing_array,
     // hellforge, molten_destabilizer, vibration_laser_engraver, hpca_nanofluidic_heat_sink_component, sterile_cleaning_maintenance_hatch, redstone_variadic_interface, wireless
-
-    // KubeJS Cubes
-    // multiblock_upgrade_kit
-    // t_large_ (bender, centrifuge, electrolyzer, extruder, forming_press, lathe, macerator, mixer, ore_washer, sifter, thermal_centrifuge, wiremill, autoclave), rock_crusher
-
-    // Resource Gen
-    // Not Eta: dimensional_destabilizer, rock_sifter, large_sieve, void_excavator, cobbleworks
-    // void_extractor, greenhouse, industrial_barrel, mechanical_sieve, rock_fltrator, electric_ore_factory, ore_processing_plant, nuclear_reactor
     
     const MachineAssembly = (type,inputs,fluids,EUt,Duration) => {
         event.recipes.gtceu.advanced_machine_facility(id(type))
@@ -398,33 +394,34 @@ ServerEvents.recipes(event => {
     // 'ev_large_miner',
     // 'iv_large_miner',
     // 'luv_large_miner',
-    'cleanroom',
-    'filter_casing',
-    // 'sterilizing_filter_casing',
-    'large_combustion_engine',
-    'extreme_combustion_engine',
-    'steam_large_turbine',
-    'gas_large_turbine',
-    'plasma_large_turbine',
+    MachineAssembly('cleanroom',['4x gtceu:filter_casing','6x gtceu:steel_plate','6x #gtceu:circuits/hv','12x gtceu:item_filter','4x gtceu:hv_electric_motor','2x gtceu:black_steel_rotor','gtceu:long_stainless_steel_rod','6x gtceu:gold_double_cable'],['gtceu:soldering_alloy 1152','gtceu:construction_foam 25000'], 480, 2400);
+    MachineAssemblyScanner('large_combustion_engine',['gtceu:titanium_frame','2x gtceu:ev_electric_piston','6x gtceu:double_stainless_steel_plate','4x #gtceu:circuits/ev','4x gtceu:hsla_steel_rotor','6x gtceu:ev_electric_motor','4x gtceu:small_titanium_gear','12x gtceu:aluminium_single_cable'],['gtceu:soldering_alloy 1152','gtceu:silicone_rubber 432'],1920,1500,'gtceu:hv_combustion',480,1200);
+    // 'extreme_qcombustion_engine',
+    MachineAssemblyScanner('steam_large_turbine',['gtceu:stainless_steel_frame','2x gtceu:hv_electric_pump','6x gtceu:double_magnalium_plate','4x #gtceu:circuits/hv','4x gtceu:black_steel_rotor','6x gtceu:hv_electric_motor','4x gtceu:small_damascus_steel_gear','12x gtceu:gold_single_cable'],['gtceu:soldering_alloy 1152','gtceu:silicone_rubber 432'],480,960,'gtceu:hv_steam_turbine',120,1200);
+    MachineAssemblyScanner('gas_large_turbine',['gtceu:titanium_frame','2x gtceu:ev_electric_pump','6x gtceu:double_stainless_steel_plate','4x #gtceu:circuits/ev','4x gtceu:hsla_steel_rotor','6x gtceu:ev_electric_motor','4x gtceu:small_titanium_gear','12x gtceu:aluminium_single_cable'],['gtceu:soldering_alloy 1152','gtceu:silicone_rubber 432'],1920,1800,'gtceu:hv_gas_turbine',480,1200);
+    // 'plasma_large_turbine',
     // 'active_transformer',
     // 'power_substation',
     // 'mv_bedrock_ore_miner',
     // 'hv_bedrock_ore_miner',
     // 'ev_bedrock_ore_miner'
     
-    'void_extractor',
-    'greenhouse', 
-    'industrial_barrel', 
-    'mechanical_sieve', 
-    'rock_fltrator', 
-    'electric_ore_factory', 
-    'ore_processing_plant',
-    MachineAssemblyScanner('nuclear_reactor',['gtceu:ev_assembler'],['gtceu:soldering_alloy 864', 'gtceu:polyethylene 576', 'gtceu:rubber 432'],1920,1200,'gtceu:ev_fluid_heater',2400,480);
+    MachineAssembly('void_extractor',['gtceu:lv_gas_collector','4x gtceu:damascus_steel_gear','4x gtceu:lv_electric_pump','3x gtceu:lv_robot_arm','6x #gtceu:circuits/lv','2x gtceu:lv_emitter','2x gtceu:lv_sensor','6x gtceu:tin_single_cable'],['gtceu:soldering_alloy 864','gtceu:rubber 288'],120,900);
+    MachineAssembly('greenhouse',['gtceu:large_farm','4x gtceu:mv_conveyor_module','4x #gtceu:circuits/mv','8x gtceu:fertilizer','2x gtceu:dense_steel_plate','4x gtceu:mv_electric_motor','2x gtceu:cobalt_brass_buzz_saw_blade','6x gtceu:copper_single_cable'],['gtceu:soldering_alloy 2160', 'gtceu:polyethylene 432'],120,1200);
+    MachineAssemblyScanner('industrial_barrel',['gtceu:stainless_steel_frame','gtceu:large_stone_barrel','gtceu:large_barrel','12x gtceu:kanthal_spring','4x gtceu:hv_conveyor_module','8x gtceu:hv_electric_pump','4x #gtceu:circuits/hv','8x gtceu:gold_single_cable'],['gtceu:soldering_alloy 1152','gtceu:polytetrafluoroethylene 432','gtceu:silicone_rubber 288'],480,3600,'gtceu:laminated_glass',480,1200); 
+    MachineAssembly('mechanical_sieve',['gtceu:lv_machine_hull','6x #gtceu:circuits/lv','2x exnihilosequentia:iron_mesh','6x gtceu:lv_electric_motor','4x gtceu:lv_electric_piston','4x gtceu:damascus_steel_gear','2x gtceu:small_steel_gear','4x gtceu:tin_single_cable'],['gtceu:soldering_alloy 432','gtceu:lubricant 2500'],480,1440);
+    MachineAssembly('electric_sifter',['gtceu:high_pressure_steam_sifter','6x #gtceu:circuits/lv','2x exnihilosequentia:iron_mesh','6x gtceu:lv_electric_motor','4x gtceu:lv_electric_piston','4x gtceu:damascus_steel_gear','2x gtceu:small_steel_gear','4x gtceu:tin_single_cable'],['gtceu:soldering_alloy 432','gtceu:lubricant 2500'],120,1440);
+    MachineAssembly('rock_filtrator',['gtceu:lv_rock_crusher','6x gtceu:lv_electric_piston','6x gtceu:glass_vial','gtceu:lv_electric_pump','4x #gtceu:circuits/lv','2x gtceu:lv_electric_motor','4x gtceu:small_damascus_steel_gear','6x gtceu:tin_single_cable'],['gtceu:soldering_alloy 864','gtceu:lubricant 2500','gtceu:rubber 288'],120,900); 
+    // 'electric_ore_factory', 
+    // 'ore_processing_plant',
+    // MachineAssemblyScanner('nuclear_reactor',['gtceu:ev_assembler'],['gtceu:soldering_alloy 864', 'gtceu:polyethylene 576', 'gtceu:rubber 432'],1920,1200,'gtceu:ev_fluid_heater',2400,480);
     // dimensional_destabilizer, 
     // rock_sifter, 
     // large_sieve, 
     // void_excavator, 
-    // cobbleworks
+    // cobbleworks,
+
+    // 'alloy_blast_smelter',
 
     event.recipes.gtceu.assembler(id('multiblock_upgrade_kit'))
         .itemInputs('1x thermal:enderium_glass', '2x #gtceu:circuits/ev', '1x gtceu:rtm_alloy_single_cable', 'gtceu:double_blue_steel_plate', 'gtceu:double_red_steel_plate')

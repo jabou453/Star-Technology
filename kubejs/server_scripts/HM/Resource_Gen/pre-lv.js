@@ -298,6 +298,15 @@ ServerEvents.recipes(event => {
 		.duration(20);
 	});
 
+	event.recipes.gtceu.assembler(id('industrial_pump'))
+		.itemInputs('1x gtceu:primitive_pump','6x gtceu:double_steel_plate','2x kubejs:ulv_electric_pump',
+			'2x #gtceu:circuits/ulv','4x gtceu:rubber_ring')
+		.circuit(3)
+		.inputFluids('gtceu:rubber 288')
+		.itemOutputs('gtceu:industrial_pump')
+		.duration(800)
+		.EUt(8);
+
 });
 
 // Jungle Wood Stripping (Bark + Resin)

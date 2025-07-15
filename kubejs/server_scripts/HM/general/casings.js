@@ -176,12 +176,43 @@ ServerEvents.recipes(event => {
 
     // Standard Casings
 
+    event.recipes.gtceu.assembler(id('wood_casing'))
+        .itemInputs('gtceu:treated_wood_frame','6x gtceu:treated_wood_plate','4x gtceu:brass_screw')
+        .inputFluids('gtceu:rubber 144')
+        .itemOutputs('2x kubejs:wood_casing')
+        .duration(100)
+        .EUt(30);
+
     // Doubled Casings
 
     // Complex Casings
 
     // Cleanrooms Casings
+    event.remove({output:'gtceu:plascrete'});
+    event.remove({output:'gtceu:cleanroom_glass'});
+    const CleanroomCasing = (type,inputs) => {
+        event.recipes.gtceu.assembler(id(type))
+            .itemInputs('gtceu:steel_frame',inputs,'12x gtceu:polytetrafluoroethylene_foil')
+            .inputFluids('gtceu:construction_foam 2000')
+            .circuit(5)
+            .itemOutputs(`2x gtceu:${type}`)
+            .duration(200)
+            .EUt(120);
+    };
+    CleanroomCasing('plascrete','6x gtceu:stone_plate')
+    CleanroomCasing('cleanroom_glass','6x gtceu:glass_plate')
+
+    event.recipes.gtceu.assembler(id('filter_casing'))
+        .itemInputs('gtceu:plascrete', '2x gtceu:mv_electric_motor', 'gtceu:steel_rotor',
+            '12x gtceu:steel_rod', '2x gtceu:copper_single_cable')
+        .inputFluids('gtceu:soldering_alloy 216')
+        .itemOutputs('gtceu:filter_casing')
+        .duration(400)
+        .EUt(480);
+        
+    // 'sterile_filter'
 
     // Assembly Line Casings
+
 
 });
