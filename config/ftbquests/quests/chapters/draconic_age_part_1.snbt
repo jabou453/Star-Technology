@@ -36,7 +36,15 @@
 	]
 	quests: [
 		{
-			dependencies: ["1E3EF64C0A4EE438"]
+			dependencies: [
+				"5E7153B7A10FC241"
+				"59B0F5DB2C1E96DC"
+			]
+			description: [
+				"Venture through the Ancient Stargate to discover the burning Nether."
+				""
+				"Keep in mind that the Nether is a hostile environment, that might require some protective armor."
+			]
 			icon: {
 				Count: 1
 				id: "ftbquests:custom_icon"
@@ -48,15 +56,22 @@
 			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
-				id: "0CC375D9EC5EB6D5"
-				title: "Burning Hells Await"
-				type: "checkmark"
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:netherrack"
+				id: "59EB1DD611632624"
+				title: "The Burning Hells await"
+				type: "dimension"
 			}]
 			x: -8.0d
 			y: -4.0d
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
+			description: [
+				"A mystical artifact. To find, locate shrines inside the nether."
+				""
+				"{image:kubejs:textures/quests/husk_structure.png width:360 height:180 align:center fit:true}"
+			]
 			id: "71145B6D6BA8016A"
 			tasks: [{
 				id: "208B4A54456B3399"
@@ -68,6 +83,7 @@
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
+			description: ["These stones are found in veins across the nether. Their mystical properties are needed to advance in casing technology."]
 			id: "709EF5314988C381"
 			tasks: [
 				{
@@ -90,6 +106,7 @@
 				"709EF5314988C381"
 				"0032335FFAE6E012"
 			]
+			description: ["A new fridge, for cooling down your ingots at higher speeds than ever."]
 			id: "665FC02BC2BC414F"
 			shape: "gear"
 			size: 1.5d
@@ -109,6 +126,7 @@
 				"295442FA6CE0BA13"
 				"53A2FF89C0F89921"
 			]
+			description: ["A towering furnace, needing both fuel and power, to heat up materials to Mega-kelvins."]
 			id: "1EB60E6DE2086158"
 			shape: "gear"
 			size: 1.5d
@@ -125,6 +143,7 @@
 				"1EB60E6DE2086158"
 				"70EEDB38B78F5C7F"
 			]
+			description: ["A new set of Alloys, forged from the flames of hell, ready for some industrial purposes."]
 			id: "059CB064A515B157"
 			tasks: [
 				{
@@ -152,16 +171,24 @@
 				"665FC02BC2BC414F"
 				"295442FA6CE0BA13"
 			]
+			description: ["Your new freezer will need better coolants, that surpass Helium in efficiency."]
+			icon: "gtceu:bec_og_bucket"
 			id: "70EEDB38B78F5C7F"
 			tasks: [
 				{
-					id: "35B242E33E98B4B7"
-					item: "gtceu:bec_og_bucket"
+					id: "0877A1E179C61B35"
+					type: "checkmark"
+				}
+				{
+					id: "3AFCC266D8F55884"
+					item: "gtceu:superstate_helium_3_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
-					id: "05D34BDDBD6A9D56"
-					item: "gtceu:superstate_helium_3_bucket"
+					id: "55FDAFBD77037DD1"
+					item: "gtceu:bec_og_bucket"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -174,6 +201,7 @@
 				"059CB064A515B157"
 				"215A1E80621E2880"
 			]
+			description: ["A new tier of coils, harnessing the heat of the Nether in order to liquify even the strongest of materials."]
 			id: "310FC3F86513555F"
 			shape: "gear"
 			size: 1.5d
@@ -190,6 +218,7 @@
 				"498E36C4683EAA6C"
 				"218CABD676F3B732"
 			]
+			description: ["&aUEV&r power for all your machines."]
 			id: "799F6F79B9FF86DF"
 			tasks: [{
 				id: "2202E2A517EE8E9D"
@@ -201,6 +230,7 @@
 		}
 		{
 			dependencies: ["799F6F79B9FF86DF"]
+			description: ["&2UIV&r recipe speeds."]
 			id: "538113DD6E1EA84D"
 			tasks: [{
 				id: "4F7E740E785857CF"
@@ -212,6 +242,7 @@
 		}
 		{
 			dependencies: ["538113DD6E1EA84D"]
+			description: ["&eUXV&r recipe speeds."]
 			id: "11971C9E5BF28E5C"
 			tasks: [{
 				id: "318605B6320145B8"
@@ -281,8 +312,13 @@
 		}
 		{
 			dependencies: [
+				"5E7153B7A10FC241"
 				"6180202612DCDBF4"
-				"4238E903C674B284"
+			]
+			description: [
+				"Venture through the Ancient Stargate to discover the hollow End."
+				""
+				"Keep in mind that the End is an extremely dangerous environment, that will require some strong armor."
 			]
 			icon: {
 				Count: 1
@@ -295,15 +331,18 @@
 			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
-				id: "64F5F2C7D749F456"
-				title: "The Draconic Abyss"
-				type: "checkmark"
+				dimension: "minecraft:the_end"
+				icon: "minecraft:end_stone"
+				id: "4DEF021D751349A6"
+				title: "The Draconic Abyss awaits"
+				type: "dimension"
 			}]
 			x: -8.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
+			description: ["Vanquish the Ender Dragon, and free the End of the final dragon."]
 			id: "01FBF9CDD9066AF5"
 			tasks: [{
 				advancement: "minecraft:end/kill_dragon"
@@ -317,18 +356,28 @@
 		}
 		{
 			dependencies: ["6C8C6EA426060065"]
+			description: ["A new plasma, burning as hot as the Nether it originates from."]
+			icon: "gtceu:magmatic_plasma_bucket"
 			id: "215A1E80621E2880"
 			shape: "circle"
-			tasks: [{
-				id: "2EAC214860C4256F"
-				item: "gtceu:magmatic_plasma_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "13271D35858C6726"
+					type: "checkmark"
+				}
+				{
+					id: "217417D24B5F8D16"
+					item: "gtceu:magmatic_plasma_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: -3.0d
 			y: -5.0d
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
+			description: ["The abyss of the End holds pure levels of Entropy. Using this machine, you can harvest different Entropy states of Voidic Excression, and channel those towards technological advancement."]
 			id: "18FD654260DFF1D6"
 			tasks: [{
 				id: "1DBA5C2531A8F6B4"
@@ -344,6 +393,10 @@
 				"395C32B51E768458"
 			]
 			dependency_requirement: "one_completed"
+			description: [
+				"Draconic cells, carrying the powerful genes of the dragon race."
+				"Channel their power into computing for new circuit technology."
+			]
 			id: "0168A45EB73911AC"
 			tasks: [
 				{
@@ -367,6 +420,7 @@
 		}
 		{
 			dependencies: ["059CB064A515B157"]
+			description: ["The heart of every &aUEV&r machine"]
 			id: "498E36C4683EAA6C"
 			tasks: [{
 				id: "22C7613F90482189"
@@ -381,6 +435,7 @@
 				"1C9396E2587051F7"
 				"0168A45EB73911AC"
 			]
+			description: ["A processing unit combining Wetware technology with Draconic Brain Matter Cells to achieve breakthroughs in computing."]
 			id: "1AF4BF803FEF14FE"
 			tasks: [{
 				id: "54CFEDC276799BE3"
@@ -396,6 +451,7 @@
 				"5080743917931298"
 				"2F6115002741F26F"
 			]
+			description: ["Alloys that harness the power of the End, controlling the flow of energy."]
 			id: "7EB9C44EE7515882"
 			tasks: [
 				{
@@ -424,6 +480,7 @@
 				"64780055536CEEF3"
 				"1D94473AA9436C60"
 			]
+			description: ["A mystical infusion array that allows you to harness the powers of the end."]
 			id: "395C32B51E768458"
 			shape: "gear"
 			size: 1.5d
@@ -440,6 +497,7 @@
 				"7EB9C44EE7515882"
 				"75C33909E2CD5EC0"
 			]
+			description: ["These are extremely charged abyssal alloys, that pave the way to &2UIV&r"]
 			id: "097D8B4DF03A8617"
 			tasks: [
 				{
@@ -467,6 +525,7 @@
 		}
 		{
 			dependencies: ["097D8B4DF03A8617"]
+			description: ["The last tier of coils, brimming with Entropy, to fulfill all your smelting needs."]
 			id: "2DACE6EF41A118D9"
 			shape: "gear"
 			size: 1.5d
@@ -480,6 +539,7 @@
 		}
 		{
 			dependencies: ["097D8B4DF03A8617"]
+			description: ["The heart of every &2UIV&r machine"]
 			id: "3F9D1B0CED0D4133"
 			tasks: [{
 				id: "6B6A684DAA6ACD8E"
@@ -491,6 +551,7 @@
 		}
 		{
 			dependencies: ["3F9D1B0CED0D4133"]
+			description: ["&2UIV&r power for all your machines."]
 			id: "45E628CF1DA8D380"
 			tasks: [{
 				id: "02B9EE14E608F77D"
@@ -502,6 +563,7 @@
 		}
 		{
 			dependencies: ["45E628CF1DA8D380"]
+			description: ["&eUXV&r recipe speeds."]
 			id: "69493DCA3D764771"
 			tasks: [{
 				id: "6B0F5BE1F0BE7E1B"
@@ -516,6 +578,7 @@
 				"69493DCA3D764771"
 				"3861DC9A29F4DD42"
 			]
+			description: ["&9&lOpV&r recipe speeds"]
 			id: "54944370404CEA94"
 			tasks: [{
 				id: "672EC9D38A3D8F66"
@@ -527,6 +590,7 @@
 		}
 		{
 			dependencies: ["4DF07CB3D60C901C"]
+			description: ["Deep in the crust of the nether lay great veins of Hellish Magma's, containing riches beyond ones wildest dreams."]
 			icon: "gtceu:highly_unstable_nether_magma_bucket"
 			id: "1AEBAE3050B72906"
 			tasks: [
@@ -553,6 +617,7 @@
 		}
 		{
 			dependencies: ["1AEBAE3050B72906"]
+			description: ["Rare and expensive metals produced by processing the Hellish Magma's."]
 			id: "0032335FFAE6E012"
 			tasks: [
 				{
@@ -592,6 +657,10 @@
 		}
 		{
 			dependencies: ["1AEBAE3050B72906"]
+			description: [
+				"A material that requires large processing lines. Check out "
+				"{ \"text\": \"Processing Lines (7+)\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"587F453EE1BAFB79\" } }"
+			]
 			hide_dependent_lines: true
 			id: "295442FA6CE0BA13"
 			tasks: [{
@@ -604,6 +673,7 @@
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
+			description: ["A new type of circuit assembler, that can not only produce better circuits, but also produce large amounts of basic circuits."]
 			id: "1772F46C9EAF6FB7"
 			tasks: [{
 				id: "4AAC7E72D6B3BBFC"
@@ -632,6 +702,7 @@
 				"1772F46C9EAF6FB7"
 			]
 			id: "169C2E9DA1CF8F53"
+			subtitle: "Fourth and Last ZPM Circuit"
 			tasks: [{
 				id: "34FC1D181B3F8239"
 				item: "kubejs:draconic_wetware_microchip_processor"
@@ -643,6 +714,7 @@
 		{
 			dependencies: ["169C2E9DA1CF8F53"]
 			id: "26FDB9612063F49D"
+			subtitle: "Third and Last UV Circuit"
 			tasks: [{
 				id: "608B93EA8632BE4E"
 				item: "kubejs:draconic_wetware_processor"
@@ -654,6 +726,7 @@
 		{
 			dependencies: ["26FDB9612063F49D"]
 			id: "66D49CB8D8819E3F"
+			subtitle: "Second UHV Circuit"
 			tasks: [{
 				id: "1D0AA38E67A6E6D1"
 				item: "kubejs:draconic_wetware_processor_assembly"
@@ -665,6 +738,7 @@
 		{
 			dependencies: ["66D49CB8D8819E3F"]
 			id: "6F3DF16481990D99"
+			subtitle: "Second UEV Circuit"
 			tasks: [{
 				id: "5ECC7A631E155695"
 				item: "kubejs:draconic_wetware_processor_computer"
@@ -675,9 +749,11 @@
 		}
 		{
 			dependencies: ["6F3DF16481990D99"]
+			description: ["A beast of a circuit."]
 			id: "5944C4DE27F98FF3"
 			shape: "gear"
 			size: 1.5d
+			subtitle: "First UIV Cicuit"
 			tasks: [{
 				id: "6EF791353FFC298F"
 				item: "kubejs:draconic_wetware_processor_mainframe"
@@ -691,6 +767,7 @@
 				"5944C4DE27F98FF3"
 				"310FC3F86513555F"
 			]
+			description: ["The fourth tier of fusion reactors, reaching over 1 Billion Kelvin."]
 			hide_dependent_lines: true
 			id: "2E34F23A42004285"
 			tasks: [{
@@ -738,6 +815,7 @@
 		}
 		{
 			dependencies: ["310FC3F86513555F"]
+			description: ["A Sterile Maintenance Hatch, that will allow Sterile recipes to be run outside of a cleanroom."]
 			hide_dependent_lines: true
 			id: "032E72446266F7D4"
 			tasks: [{
@@ -819,11 +897,18 @@
 			dependencies: ["09B55AFE7C06EC82"]
 			id: "3AE729D3F47E9A2B"
 			subtitle: "No linger stinky"
-			tasks: [{
-				id: "0CF6EA4214D2778A"
-				item: "gtceu:pure_dragon_breath_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "15CB4AC6660452D4"
+					type: "checkmark"
+				}
+				{
+					id: "28FA8CA23E8E5436"
+					item: "gtceu:pure_dragon_breath_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -935,6 +1020,7 @@
 				"295442FA6CE0BA13"
 				"6C8C6EA426060065"
 			]
+			description: ["A strong material needed for upgrading your infrastructure to &2UIV&r."]
 			id: "218CABD676F3B732"
 			tasks: [{
 				id: "0C141AF8C5ACBF6D"
@@ -946,6 +1032,7 @@
 		}
 		{
 			dependencies: ["310FC3F86513555F"]
+			description: ["A parallel Multi Smelter, just in case it wasn't fast enough already."]
 			id: "5FEC7470D01CEBDD"
 			shape: "gear"
 			size: 1.5d
@@ -960,6 +1047,7 @@
 		{
 			dependencies: ["5944C4DE27F98FF3"]
 			id: "0ECE55AB7BBDAAA4"
+			subtitle: "The &aUEV&r Parallel Hatches"
 			tasks: [
 				{
 					id: "1BD274EF66F992D9"
@@ -992,6 +1080,7 @@
 		}
 		{
 			dependencies: ["218CABD676F3B732"]
+			description: ["A special material that holds mystical properties."]
 			id: "1D94473AA9436C60"
 			tasks: [{
 				id: "65EAAA869AFF0F87"
@@ -1003,6 +1092,7 @@
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
+			description: ["Pick up some dragons breath during the fight."]
 			id: "262BD3D9D1DF7F13"
 			tasks: [{
 				id: "1F896C346CD4D346"
@@ -1014,6 +1104,7 @@
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
+			description: ["The last offspring of the once mighty dragons, not yet hatched."]
 			id: "50377ABD674AAC34"
 			tasks: [{
 				id: "6281D2E4569CDD46"
@@ -1053,9 +1144,98 @@
 				"53E595EAB1C90884"
 				"61C534992FB17066"
 			]
+			description: [
+				"Having witnessed the creation of Maxwell, you have been blessed by it's enlightenment. You have reached the end of your journey for now, and as with the knowledge bestowed upon you, you hear it's voice, telling you to move forward, and embrace an even larger challenge."
+				""
+				""
+				"If you enjoyed StarT, and want more &msuffering&r enjoyment, don't fret. For your cravings we have developed StarT Hardmode."
+				""
+				""
+				"To switch to HM, simply open up your instance folder, and run one of the packmode picker files."
+				""
+				"We recommend you do this in a different instance to avoid accidently breaking a world when joining with the wrong packmode on."
+				"{@pagebreak}"
+				"&lGot you&r"
+				""
+				"We’re no strangers to love,"
+				"You know the rules and so do I."
+				"A full commitment’s what I’m thinking of,"
+				"You wouldnt get this from any other guy."
+				""
+				"I just wanna tell you how I’m feeling,"
+				"Gotta make you understand…"
+				""
+				"Never gonna give you up,"
+				"Never gonna let you down,"
+				"Never gonna run around and desert you."
+				"Never gonna make you cry,"
+				"Never gonna say goodbye,"
+				"Never gonna tell a lie and hurt you."
+				""
+				"We’ve known each other for so long"
+				"Your heart’s been aching"
+				"But you’re too shy to say it."
+				"Inside we both know what’s been going on,"
+				"We know the game and we’re gonna play it."
+				""
+				"Annnnnd if you ask me how I’m feeling,"
+				"Don’t tell me you’re too blind to see…"
+				""
+				"Never gonna give you up,"
+				"Never gonna let you down,"
+				"Never gonna run around and desert you."
+				"Never gonna make you cry,"
+				"Never gonna say goodbye,"
+				"Never gonna tell a lie and hurt you."
+				""
+				"Never gonna give you up,"
+				"Never gonna let you down,"
+				"Never gonna run around and desert you."
+				"Never gonna make you cry,"
+				"Never gonna say goodbye,"
+				"Never gonna tell a lie and hurt you."
+				""
+				"Give you up. give you up."
+				"Give you up, give you up."
+				"Never gonna give"
+				"Never gonna give, give you up."
+				"Never gonna give"
+				"Never gonna give, give you up."
+				""
+				"We’ve known each other for so long"
+				"Your heart’s been aching"
+				"But you’re too shy to say it."
+				"Inside we both know what’s been going on,"
+				"We know the game and we’re gonna play it."
+				""
+				"I just wanna tell you how I’m feeling,"
+				"Gotta make you understand…"
+				""
+				"Never gonna give you up,"
+				"Never gonna let you down,"
+				"Never gonna run around and desert you."
+				"Never gonna make you cry,"
+				"Never gonna say goodbye,"
+				"Never gonna tell a lie and hurt you."
+				""
+				"Never gonna give you up,"
+				"Never gonna let you down,"
+				"Never gonna run around and desert you."
+				"Never gonna make you cry,"
+				"Never gonna say goodbye,"
+				"Never gonna tell a lie and hurt you."
+				""
+				"Never gonna give you up,"
+				"Never gonna let you down,"
+				"Never gonna run around and desert you."
+				"Never gonna make you cry,"
+				"Never gonna say goodbye,"
+				"Never gonna tell a lie and hurt you."
+			]
 			id: "3BB8848F84026B45"
 			shape: "gear"
 			size: 2.0d
+			subtitle: "Cat"
 			tasks: [{
 				id: "184862475E5F6DB3"
 				item: "placeablemaxwell:maxwell"
@@ -1067,9 +1247,11 @@
 		{
 			dependencies: ["3BB8848F84026B45"]
 			description: [
-				"Thank you for playing through this pack to its current state, a lot of time has been put in so that it was a unique and enjoyable experience. You are invited to come show off your accomplishment on our discord where we would love to hear what you thought about the pack."
+				"Thank you for playing through this pack to its current state. A lot of time has been put in so that it was a unique and enjoyable experience. You are invited to come show off your accomplishment on our discord where we would love to hear what you thoughts about the pack."
 				""
 				"Know why there is content that exist past this point it is in development and will be available in the next major release &l&9Theta&r&r"
+				""
+				"The content past this point is still in development, and will be available in the next major release, &l&9Theta&r&r."
 				""
 				""
 				"-&oStarT Dev Team&r"
@@ -1089,9 +1271,11 @@
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
+			description: ["A legendary feline, as energized as the flames from inferno."]
 			id: "0B475E2385B478C0"
 			shape: "pentagon"
 			size: 1.25d
+			subtitle: "Cat"
 			tasks: [{
 				id: "29314FA6BB5D9A2A"
 				item: "placeablemaxwell:vasilisa"
@@ -1102,32 +1286,38 @@
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
+			description: ["A legendary feline, as eternal as the endless abyss."]
 			id: "53E595EAB1C90884"
 			shape: "pentagon"
 			size: 1.25d
+			subtitle: "Cat"
 			tasks: [{
 				id: "1738781A05EE828F"
 				item: "placeablemaxwell:valenok"
 				type: "item"
 			}]
 			x: 2.0d
-			y: 4.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
+			dependency_requirement: "one_started"
+			description: ["A legendary feline, combining the heat and cold from two dimensions."]
 			id: "61C534992FB17066"
 			shape: "pentagon"
 			size: 1.25d
+			subtitle: "Cat"
 			tasks: [{
 				id: "4646C0AA2053021D"
 				item: "placeablemaxwell:mars"
 				type: "item"
 			}]
 			x: 2.0d
-			y: 5.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
+			description: ["Need some more breath? Respawn the dragon."]
 			id: "7EACF5C37C73E6B9"
 			tasks: [
 				{
@@ -1149,6 +1339,7 @@
 		}
 		{
 			dependencies: ["28DE3D2A96C4D0C8"]
+			description: ["Find an end city, and loot it."]
 			id: "64780055536CEEF3"
 			tasks: [{
 				icon: "minecraft:purpur_pillar"
@@ -1162,6 +1353,7 @@
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
+			description: ["Now that you have Draconic Cells, you can start looping dragon's breath."]
 			icon: "minecraft:dragon_breath"
 			id: "46DD931FCA5AF574"
 			tasks: [{
@@ -1171,6 +1363,28 @@
 			}]
 			x: -3.0d
 			y: 3.0d
+		}
+		{
+			dependencies: ["4DF07CB3D60C901C"]
+			id: "7C65EDBD752F898D"
+			tasks: [{
+				id: "6747AE762AD60ABD"
+				title: "Nether Talisman"
+				type: "checkmark"
+			}]
+			x: -8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["28DE3D2A96C4D0C8"]
+			id: "4397DEEDB7C52BAC"
+			tasks: [{
+				id: "0413900BA28107B9"
+				title: "End Talisman"
+				type: "checkmark"
+			}]
+			x: -10.0d
+			y: 4.0d
 		}
 	]
 	title: "Draconic Empires"
