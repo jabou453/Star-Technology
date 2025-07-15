@@ -30,6 +30,10 @@ ServerEvents.tags('item', event => {
     event.add('gtceu:coal_dusts', 'gtceu:coal_dust');
     event.add('gtceu:coal_blocks', 'minecraft:coal_block');
     event.add('gtceu:coal_blocks', 'gtceu:charcoal_block');
+    
+    event.add('curios:charm', 'kubejs:abydos_talisman');
+    event.add('curios:head', 'kubejs:nether_talisman');
+    event.add('curios:back', 'kubejs:end_talisman');
 
 });
 

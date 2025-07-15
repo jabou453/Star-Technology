@@ -4,7 +4,7 @@ ServerEvents.recipes(event => {
     // Hell Forge Machine
     event.recipes.gtceu.assembly_line(id('heart_of_the_flame'))
         .itemInputs(
-            'kubejs:husk_of_the_flame', '2x kubejs:hell_core', '6x gtceu:dense_ancient_netherite_plate', '24x gtceu:pure_netherite_screw'
+            'kubejs:husk_brick', '2x kubejs:hell_core', '6x gtceu:dense_ancient_netherite_plate', '24x gtceu:pure_netherite_screw'
         )
         .inputFluids(
             'start_core:flamewake_solvent 500000'
@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
         .duration(6000)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of('kubejs:extreme_temperature_smelting_casing'))
+                .researchStack(Item.of('kubejs:husk_of_the_flame'))
                 .EUt(GTValues.VHA[GTValues.UHV])
                 .CWUt(192)
             )
