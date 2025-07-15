@@ -775,6 +775,9 @@ ServerEvents.recipes(event => {
         .blastFurnaceTemp(3000)
         .EUt(GTValues.VH[GTValues.EV])
         .circuit(24);
+
+    // REMOVING LARGE BOILERS BECAUSE ALL OUR FOOD KEEPS BLOWING UP
+    event.remove({ id: /gtceu:.*_large_boiler/});
 });
 
 if (global.packmode == 'default'){ //To easy in HM (has its own thing) and for Abydos makes player switch it upa bit
