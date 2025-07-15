@@ -599,7 +599,7 @@
     "material.gtceu.blitz": "Liquid Blitz",
     "material.gtceu.blizz": "Liquid Blizz",
     "material.gtceu.basalz": "Liquid Basalz",
-    "material.gtceu.energized_blaze": "Energized Liquid Basalz",
+    "material.gtceu.energized_blaze": "Energized Liquid Blaze",
     "material.gtceu.energized_blitz": "Energized Liquid Blitz",
     "material.gtceu.energized_blizz": "Energized Liquid Blizz",
     "material.gtceu.energized_basalz": "Energized Liquid Basalz",
@@ -891,7 +891,7 @@
 
 
     "block.gtceu.super_compact_heat_chamber": "Super-Compact Heat Chamber",
-    "block.gtceu.super_compact_heat_chamber.tooltip.0": "§7A compacted and upgraded heat chamber capable of purifying materials and catalysing reactions at an enhanced rate through it's ultra-dense thermal reactor design.",
+    "block.gtceu.super_compact_heat_chamber.tooltip.0": "§7A compacted and upgraded heat chamber capable of purifying materials and catalysing reactions at an enhanced rate through its ultra-dense thermal reactor design.",
     "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches and has §6Perfect Overclock",
 
     "block.gtceu.kiln": "Kiln",
@@ -931,6 +931,11 @@
     "material.gtceu.certus_quartz_skystone_alloy": "Certus Quartz Skystone Alloy",
     "material.gtceu.fluix_steel": "Fluix Steel", 
     "material.gtceu.netherite_gold_skystone_alloy": "Netherite-Gold Skystone Alloy",
-    "material.gtceu.netherite_certus_quartz_skystone_alloy": "Netherite-Certus Quartz Skystone Alloy"
+    "material.gtceu.netherite_certus_quartz_skystone_alloy": "Netherite-Certus Quartz Skystone Alloy",
+
+    "block.gtceu.bronze_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
+    "block.gtceu.steel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
+    "block.gtceu.titanium_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
+    "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG"
 
 }

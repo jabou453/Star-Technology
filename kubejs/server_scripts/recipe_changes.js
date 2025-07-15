@@ -758,6 +758,26 @@ ServerEvents.recipes(event => {
     reachUpgrade('2','minecraft:glowstone_dust','minecraft:orange_dye',`effortlessbuilding:reach_upgrade1`);
     reachUpgrade('3','minecraft:amethyst_shard','minecraft:purple_dye',`effortlessbuilding:reach_upgrade2`);
 
+
+    event.recipes.gtceu.alloy_blast_smelter(id('indium_tin_lead_cadmium_soldering_alloy_no_gas'))
+        .itemInputs('14x gtceu:indium_dust', '3x gtceu:tin_dust', '2x gtceu:lead_dust', '1x gtceu:cadmium_dust')
+        .outputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 2880')
+        .duration(280)
+        .blastFurnaceTemp(3000)
+        .EUt(GTValues.VH[GTValues.EV])
+        .circuit(14);
+
+    event.recipes.gtceu.alloy_blast_smelter(id('indium_tin_lead_cadmium_soldering_alloy'))
+        .itemInputs('14x gtceu:indium_dust', '3x gtceu:tin_dust', '2x gtceu:lead_dust', '1x gtceu:cadmium_dust')
+        .inputFluids('gtceu:nitrogen 2000')
+        .outputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 2880')
+        .duration(280)
+        .blastFurnaceTemp(3000)
+        .EUt(GTValues.VH[GTValues.EV])
+        .circuit(24);
+
+    // REMOVING LARGE BOILERS BECAUSE ALL OUR FOOD KEEPS BLOWING UP
+    event.remove({ id: /gtceu:.*_large_boiler/});
 });
 
 if (global.packmode == 'default'){ //To easy in HM (has its own thing) and for Abydos makes player switch it upa bit
