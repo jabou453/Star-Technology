@@ -1,0 +1,77 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "and_the_abyss_stares_back"
+	group: "5829B93DCAFAD4B8"
+	hide_quest_until_deps_visible: true
+	icon: "kubejs:void_core"
+	id: "3BEAE98C63E92A77"
+	order_index: 4
+	quest_links: [{
+		id: "4C9316A39BD1338B"
+		linked_quest: "3A4CF2BAB8E0B002"
+		x: -1.0d
+		y: 0.0d
+	}]
+	quests: [
+		{
+			dependencies: [
+				"3A4CF2BAB8E0B002"
+				"724D0E3166AF722A"
+			]
+			id: "29258617F557DA45"
+			tasks: [{
+				id: "34A124DBDA009781"
+				item: {
+					Count: 1
+					id: "sgjourney:milky_way_stargate"
+					tag: {
+						BlockEntityTag: {
+							generation_step: 2b
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"29258617F557DA45"
+				"7E2799439913C003"
+			]
+			id: "411638A2D1B1083C"
+			tasks: [{
+				id: "1C33789E55712622"
+				title: "DSG?"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			hide_text_until_complete: true
+			id: "724D0E3166AF722A"
+			tasks: [{
+				id: "03719CF9CD5B428E"
+				title: "Kappa"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["724D0E3166AF722A"]
+			id: "7E2799439913C003"
+			tasks: [{
+				id: "11B3F5C23C8E22AC"
+				title: "Kappa or Lambda"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+	]
+	title: "And the Abyss Stares Back"
+}
