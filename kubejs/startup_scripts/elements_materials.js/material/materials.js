@@ -282,8 +282,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('copper', gear);
     matmod('vanadium_gallium', fine_wire);
     matmod('titanium', foil);
-    matmod('rhodium_plated_palladium', frame, foil);
-    matmod('darmstadtium', frame, foil);
+    matmod('rhodium_plated_palladium', [frame, foil]);
+    matmod('darmstadtium', [frame, foil]);
     matmod('ruthenium_trinium_americium_neutronate', fine_wire);
 
     // Blast Properties of periodic table metals

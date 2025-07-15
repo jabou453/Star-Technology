@@ -177,6 +177,7 @@ ServerEvents.recipes(event => {
 	event.remove({ output: 'laserio:logic_chip' });
 	event.recipes.gtceu.circuit_facility(id('logic_chip_raw'))
 		.itemInputs('#gtceu:circuits/lv', '8x exnihilosequentia:porcelain_clay', 'gtceu:small_redstone_dust')
+		.inputFluids('gtceu:tin 36')
 		.itemOutputs('laserio:logic_chip_raw')
 		.duration(320)
 		.EUt(24);

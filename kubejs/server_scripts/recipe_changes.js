@@ -612,6 +612,12 @@ ServerEvents.recipes(event => {
         event.recipes.create.haunting(Item.of(prop.output), Item.of(prop.input)).id(`start:haunting/${prop.output.split(':')[1]}`);
     });
 
+    event.recipes.gtceu.compressor(id('obsidian_plate'))
+        .itemInputs('gtceu:obsidian_dust')
+        .itemOutputs('gtceu:obsidian_plate')
+        .duration(1600)
+        .EUt(30);
+
     event.recipes.gtceu.circuit_assembler(id('data_dna_disk'))
         .itemInputs('kubejs:draconic_wetware_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 
             '16x kubejs:3d_nor_chip','16x kubejs:3d_nand_chip','32x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire')

@@ -95,7 +95,7 @@ ServerEvents.recipes(event => {
             '4x gtceu:copper_bolt'
         ], ['gtceu:soldering_alloy 144', 'gtceu:polyethylene 36'],
         300, 120);
-    CircuitFacilityRecipeCleanroom('3x gtceu:micro_processor', 'mv_micro_circuit',
+    CircuitFacilityRecipeCleanroom('2x gtceu:micro_processor', 'mv_micro_circuit',
         ['gtceu:plastic_printed_circuit_board', '2x gtceu:microchip_processor', '2x gtceu:cpu_chip', '3x gtceu:smd_resistor',
             '3x gtceu:smd_capacitor', '3x gtceu:smd_transistor', '2x gtceu:polyethylene_plate', '8x gtceu:fine_gold_wire',
             '4x gtceu:silicone_rubber_foil', '6x gtceu:rose_gold_bolt'
