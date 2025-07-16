@@ -1,3 +1,4 @@
+// priority: 100
 // Ignore this
 const $IngotProperty = global.IngotProperty;
 const $DustProperty = global.DustProperty;
@@ -502,12 +503,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     conductorSuper('stellarium', ['12x neutronium', '4x melodium', '1x samarium_iron_arsenic_oxide'], 0xccffff, [10799, 'highest', VA('uhv'), 3500], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
 
-<<<<<<< HEAD:kubejs/startup_scripts/materials/materials.js
-    conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 4000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
-=======
     conductorSuper('ancient_runicalium', ['5x zapolgium', '18x stellarium', '8x zirconium'], 0xFAB922, [11749, 'highest', VA('uev'), 5000], [V('uev'), 256, 0, true], [6400, 720, 3, 128000]);
     })()}
->>>>>>> 9812f67e203181f52d98aa4a4e637c94614df914:kubejs/startup_scripts/elements_materials.js/material/materials.js
 
     // Nuclear Reactor Materials
     compIngot('austenitic_stainless_steel_304', ['35x steel', '10x chromium', '4x nickel', '1x manganese', '1x silicon'], 0x800040, METALLIC, [3500, 'low', VA('ev'), 1500], [plates, rod, frame]);
