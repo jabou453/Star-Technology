@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.assembly_line(id('component_part_assembly'))
         .itemInputs('gtceu:uv_assembler','8x gtceu:uv_robot_arm','8x gtceu:uv_conveyor_module',
             '8x gtceu:uv_electric_pump', '4x #gtceu:circuits/uhv', '6x #gtceu:circuits/uv', '8x #gtceu:circuits/zpm')
-        .inputFluids('gtceu:soldering_alloy 12528', 'gtceu:lubricant 750')
+        .inputFluids('gtceu:soldering_alloy 12528', 'gtceu:lubricant 2500')
         .itemOutputs('gtceu:component_part_assembly')
         .duration(1800)
         .stationResearch(
@@ -31,15 +31,11 @@ ServerEvents.recipes(event => {
             )
         .EUt(GTValues.VHA[GTValues.UHV]);
 
-    let researchBaseID = `gtceu_advanced_smd_${type}`;
-    let researchRecipeID = `1_x_gtceu_advanced_smd_${nameType}`;
-    let researchNBT = `1x_${researchBaseID}`;
     let dataItem = (cwu > 0 && cwu < 32) ? 'gtceu:data_orb' : (cwu < 160) ? 'gtceu:data_module' : 'start_core:data_dna_disk';
-    let recipeType = 'gtceu:component_part_assembly';    
-    event.recipes.gtceu.research_station(researchRecipeID)
+    event.recipes.gtceu.research_station(`1_x_gtceu_advanced_smd_${nameType}`)
         .itemInputs(dataItem)
         .itemInputs(`gtceu:advanced_smd_${type}`)
-        .itemOutputs(Item.of(`${dataItem}`, `{assembly_line_research:{research_id:"${researchNBT}",research_type:"${recipeType}"}}`))
+        .itemOutputs(Item.of(`${dataItem}`, `{assembly_line_research:{research_id:"1x_gtceu_advanced_smd_${type}",research_type:"gtceu:component_part_assembly"}}`))
         .CWUt(cwu)
         .totalCWU(cwu * 120 * 20)
         .EUt(GTValues.VHA[GTValues.UHV] / 4);
@@ -56,8 +52,7 @@ ServerEvents.recipes(event => {
         const materialList = (Tier,Tier1,Tier2,Primary,Support,Material,RubberR,RubberF,Plastic,Lubricant,WireTypeComputational,WireTypeMechanical,CableType,GlassType,CatalystType,PrimaryMagnet,SecondaryMagnet,Fluid,VoltageCoil,eut,Scaler,Coolant,SuperConductor,cwu) => {
     
     // === Component Parts ===
-        const componentParts = (type,inputs,fluids,duration) => {
-        let specifiedType = (Tier === 'uhv' && type === 'voltage_coil') ? 'gtceu:uv' : (Tier === 'uhv' ) ? `kubejs:ruined` : `kubejs:${Tier1}`;
+        const componentParts = (type,inputs,fluids,duration,researched) => {
         event.recipes.gtceu.component_part_assembly(id(`${Tier}_${type}`))
             .itemInputs(inputs)
             .inputFluids(fluids)
@@ -65,53 +60,53 @@ ServerEvents.recipes(event => {
             .duration(duration)
             .stationResearch(
                 researchRecipeBuilder => researchRecipeBuilder
-                    .researchStack(Item.of(`${specifiedType}_${type}`))
+                    .researchStack(Item.of(researched))
                     .EUt(eut / 4)
                     .CWUt(cwu)
                 )
             .EUt(eut);
 
-        let researchBaseID = `${specifiedType.replace(':','_')}_${type}`;
-        let researchRecipeID = `1_x_${researchBaseID}`;
-        let researchNBT = `1x_${researchBaseID}`;
         let dataItem = (cwu > 0 && cwu < 32) ? 'gtceu:data_orb' : (cwu < 160) ? 'gtceu:data_module' : 'start_core:data_dna_disk';
-        let recipeType = 'gtceu:component_part_assembly';    
-        event.recipes.gtceu.research_station(researchRecipeID)
+        event.recipes.gtceu.research_station(`1_x_${researched.replace(':','_')}`)
             .itemInputs(dataItem)
-            .itemInputs(`${specifiedType}_${type}`)
-            .itemOutputs(Item.of(`${dataItem}`, `{assembly_line_research:{research_id:"${researchNBT}",research_type:"${recipeType}"}}`))
+            .itemInputs(researched)
+            .itemOutputs(Item.of(`${dataItem}`, `{assembly_line_research:{research_id:"1x_${researched.replace(':','_')}",research_type:"gtceu:component_part_assembly"}}`))
             .CWUt(cwu)
             .totalCWU(cwu * (Scaler * 30 + 120) * 20)
             .EUt(eut / 4);
         }
 
+        {
+            let CoilMod = (Tier == 'uhv') ? 'gtceu' : 'kubejs' ;
         componentParts('voltage_coil', [`gtceu:${Material}_tiny_fluid_pipe`, `gtceu:long_magnetic_${PrimaryMagnet}_rod`, `32x gtceu:fine_${VoltageCoil}_wire`],
-            [`gtceu:${Coolant} 1000`], 200);
-        
+            [`gtceu:${Coolant} 1000`], 200, `${CoilMod}:${Tier1}_voltage_coil`);
+        };
+        {
+            let PriorTier = (Tier == 'uhv') ? 'ruined' : Tier1 ;
         componentParts('computational_matrix', [`gtceu:${Primary}_frame`, `1x #gtceu:circuits/${Tier}`, `2x #gtceu:circuits/${Tier1}`, `3x #gtceu:circuits/${Tier2}`, `4x gtceu:fine_${WireTypeComputational}_wire`, `${2*(2**Scaler)}x kubejs:qram_chip`],
-            [`gtceu:sterilized_growth_medium ${250+Scaler*250}`, `gtceu:indium_tin_lead_cadmium_soldering_alloy ${72+Scaler*72}`], 400);
+            [`gtceu:sterilized_growth_medium ${250+Scaler*250}`, `gtceu:indium_tin_lead_cadmium_soldering_alloy ${72+Scaler*72}`], 400, `kubejs:${PriorTier}_computational_matrix`);
         
         componentParts('transmission_assembly', [`gtceu:${Primary}_frame`, `gtceu:${Tier1}_electric_motor`, `2x gtceu:${Primary}_rod`, `2x gtceu:${Primary}_ring`, `8x gtceu:${Primary}_round`, `64x gtceu:fine_${WireTypeMechanical}_wire`],
-            [`gtceu:${Lubricant} ${250+Scaler*250}`], 320);
+            [`gtceu:${Lubricant} ${250+Scaler*250}`], 320, `kubejs:${PriorTier}_transmission_assembly`);
         
         componentParts('precision_drive_mechanism', [`gtceu:${Primary}_frame`, `gtceu:${Tier1}_electric_motor`, `#gtceu:circuits/${Tier1}`, `gtceu:${Support}_gear`, `gtceu:small_${Primary}_gear`, `8x gtceu:${Primary}_round`],
-            [`gtceu:${Lubricant} ${250+Scaler*250}`, `gtceu:${RubberF} 1728`], 480);
+            [`gtceu:${Lubricant} ${250+Scaler*250}`, `gtceu:${RubberF} 1728`], 480, `kubejs:${PriorTier}_precision_drive_mechanism`);
         
         componentParts('microfluidic_flow_valve', [`gtceu:${Tier1}_fluid_regulator`, `gtceu:${Material}_small_fluid_pipe`, `2x gtceu:${Primary}_plate`, `6x gtceu:${Primary}_round`, `4x gtceu:${RubberR}_ring`, `6x gtceu:${Primary}_ring`],
-            [`gtceu:${Plastic} ${396+Scaler*36}`], 320);
+            [`gtceu:${Plastic} ${396+Scaler*36}`], 320, `kubejs:${PriorTier}_microfluidic_flow_valve`);
         
         componentParts('super_magnetic_core', [`gtceu:long_magnetic_${PrimaryMagnet}_rod`, `2x gtceu:magnetic_${SecondaryMagnet}_rod`, `3x gtceu:${Primary}_rod`, `24x gtceu:fine_${WireTypeMechanical}_wire`, `2x gtceu:${Tier1}_tiny_fluid_pipe`],
-            [`gtceu:${Coolant} 2500`], 300);
+            [`gtceu:${Coolant} 2500`], 300, `kubejs:${PriorTier}_super_magnetic_core`);
         
         componentParts('catalyst_core', [`4x gtceu:long_${Primary}_rod`, `${GlassType}`, `${CatalystType}`, `32x gtceu:fine_${SuperConductor}_wire`, `gtceu:${Tier1}_emitter`, `4x gtceu:${Support}_ring`],
-            [`gtceu:${Fluid} 576`], 480);
+            [`gtceu:${Fluid} 576`], 480, `kubejs:${PriorTier}_catalyst_core`);
         
-        componentParts('high_strength_panel', [`2x gtceu:double_${Primary}_plate`, `#gtceu:circuits/${Tier}`, `8x gtceu:${Support}_screw`],
-            [`gtceu:${Material} 576`, `gtceu:${Plastic} ${396+Scaler*36}`], 200);
+        componentParts('high_strength_panel', [`2x gtceu:double_${Primary}_plate`, `#gtceu:circuits/${Tier1}`, `8x gtceu:${Support}_screw`],
+            [`gtceu:${Material} 576`, `gtceu:${Plastic} ${396+Scaler*36}`], 200, `kubejs:${PriorTier}_high_strength_panel`);
     
         componentParts('micropower_router', [`gtceu:${CableType}_double_cable`, `4x gtceu:${CableType}_single_cable`, `4x gtceu:${Primary}_plate`, `32x gtceu:fine_${WireTypeComputational}_wire`],
-            [`gtceu:${RubberF} 720`], 240);
-
+            [`gtceu:${RubberF} 720`], 240, `kubejs:${PriorTier}_micropower_router`);
+        };
     // === Components ===
         const components = (type,inputs,fluids,duration) => {
         event.recipes.gtceu.assembly_line(id(`${Tier}_${type}`))
