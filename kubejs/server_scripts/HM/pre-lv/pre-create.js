@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
 		S: '#forge:string',
 		F: 'kubejs:flint_shard',
 		T: '#forge:rods/wood',
-		Q: 'gtceu:quartzite_gem'
+		Q: 'minecraft:quartz'
 	}).id('start:shaped/flisnt_file');
 
 	event.shapeless(Item.of('gtceu:long_wood_rod'), [

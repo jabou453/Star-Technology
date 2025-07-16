@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:sub_stellar_infernal_concentrate 500')
         .duration(950)
         .EUt(1023041)
-        .fusionStartEU(1200000);  
+        .fusionStartEU(1200000000);  
         
     // Super Stellar Recipe
 

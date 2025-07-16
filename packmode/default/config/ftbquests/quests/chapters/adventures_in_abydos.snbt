@@ -689,7 +689,7 @@
 				icon: "sgjourney:golden_idol"
 				id: "53D64E8D434ECA9C"
 				structure: "sgjourney:goauld_temple/desert_pyramid/desert_pyramid"
-				title: "Ancient Structures"
+				title: "Scattered Temples"
 				type: "structure"
 			}]
 			x: -0.5d
@@ -1699,10 +1699,16 @@
 			dependencies: [
 				"2C354B0735DF8023"
 				"5FCA8ED151CEB5C1"
+				"2F26A144D29B00A5"
 			]
 			description: ["Scans indicate that the Nether is an inhospitable dimension due to intensive radioactive decay. This armor will help mitigate the effects. The Nether inhabitants might be hiding a &ltalisman&r capable of nullifying the effects of radiation..."]
 			hide_dependent_lines: true
 			id: "59B0F5DB2C1E96DC"
+			rewards: [{
+				id: "25BD037BA00CCCA2"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "47AC263851C1195F"
@@ -2091,7 +2097,7 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["3479CEBD73550718"]
+			dependencies: ["652809D17FCE8B11"]
 			description: [
 				"Ruined Component Parts can be found as loot in various structures in Abydos."
 				""
@@ -2141,20 +2147,94 @@
 				}
 			]
 			title: "Ruined Component Parts"
-			x: -2.5d
-			y: -3.0d
+			x: -3.5d
+			y: -4.0d
 		}
 		{
-			dependencies: ["493DD013C818BB7B"]
-			description: ["A way to bypass the needs ah armor, a blessing of sorts."]
+			dependencies: ["652809D17FCE8B11"]
+			description: ["A way to bypass the needs of armor, a blessing of sorts."]
 			id: "7FBEF894C1FC4CCF"
 			tasks: [{
 				id: "16690ECAFD8AF4A4"
 				item: "kubejs:abydos_talisman"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -2.5d
+			x: -1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["493DD013C818BB7B"]
+			icon: "sgjourney:sandstone_cartouche"
+			id: "652809D17FCE8B11"
+			rewards: [{
+				id: "52951CF3514E9D61"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				icon: "sgjourney:sandstone_cartouche"
+				id: "7B142445383BC74F"
+				structure: "common_stargates:cartouche/sandstone_cartouche_monument"
+				title: "Buried Tombs"
+				type: "structure"
+			}]
+			x: -2.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3479CEBD73550718"]
+			description: ["Not much use on their own but they may hold the secret to stronger things"]
+			hide_dependency_lines: true
+			id: "2F26A144D29B00A5"
+			tasks: [
+				{
+					id: "1E0E6D339410596C"
+					item: {
+						Count: 1
+						id: "sgjourney:naquadah_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0585B52B8C27EA33"
+					item: {
+						Count: 1
+						id: "sgjourney:naquadah_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0D22886AF823322F"
+					item: {
+						Count: 1
+						id: "sgjourney:naquadah_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "68DFC87C1F7DF206"
+					item: {
+						Count: 1
+						id: "sgjourney:naquadah_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Ancient Armors"
+			x: 6.5d
+			y: -6.0d
 		}
 	]
 	title: "Adventures in Abydos"
