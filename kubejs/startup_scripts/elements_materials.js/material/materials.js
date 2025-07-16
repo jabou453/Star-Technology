@@ -1,3 +1,4 @@
+// priority: 100
 // Ignore this
 const $IngotProperty = global.IngotProperty;
 const $DustProperty = global.DustProperty;
