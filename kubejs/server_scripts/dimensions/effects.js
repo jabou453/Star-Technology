@@ -14,7 +14,7 @@ PlayerEvents.tick(event => {
 
         if (player.age % 100 === 0) {
             player.potionEffects.add('minecraft:hunger', 100, 2, false, false)
-            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 2 gtceu:heat`);
+            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 2 kubejs:heat_exhaustion`);
         }
 
         if (global.packmode !== 'abydos'){

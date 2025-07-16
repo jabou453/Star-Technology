@@ -1,5 +1,5 @@
 {
     "exhaustion": 0.5,
     "message_id": "abyssal_pull",
-    "scaling": "always"
+    "scaling": "never"
 }
