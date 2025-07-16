@@ -1,6 +1,8 @@
 const dimensionEffect = (dimension, armorType, talismanList, effectList) => {
     PlayerEvents.tick(event => {
         const { player } = event;
+        
+        if (player.level.dimension.toString() !== `${dimension}`) return
             
         const hasFullSet = checkArmor(player, armorType)
         if (hasFullSet) return
@@ -10,8 +12,11 @@ const dimensionEffect = (dimension, armorType, talismanList, effectList) => {
 
         const hasImmunity = checkImmunity(player, talismanList)
         if (hasImmunity) return
-        
-        if (player.level.dimension.toString() !== `${dimension}`) return
+
+        if (dimension != 'sgjourney:abydos' && player.headArmorItem.id == 'gtceu:quarktech_helmet') {
+            event.server.runCommandSilent(`clear ${player.username} gtceu:quarktech_helmet`)
+            player.tell('Your QuarkTech armor suit could not resist the intense environment of this dimension and broke.')
+        }
 
         if (player.age % 200 === 0) {
             effectList.forEach(effect => {

@@ -133,7 +133,7 @@ const crystalfeed = (realmId, realm, stage, message) => {
             event.server.runCommandSilent(`execute at ${event.player.username} run playsound minecraft:block.enchantment_table.use player ${event.player.username} ~ ~ ~`);
             event.server.scheduleInTicks(15, ctx => {
                 event.player.tell(`As you consume the echoes of the coordinate crystal, you hear voices whispering, and strange numbers appear before your eyes, along with visions of ${message}.`);
-                event.server.runCommand(`execute as ${event.player.username} run sgjourney stargateNetwork address ${realmId}:${realm == 'nether' ? 'the_nether' : realm}`);
+                event.server.runCommand(`execute as ${event.player.username} run sgjourney stargateNetwork address ${realmId}:${realmId == 'minecraft' ? `the_${realm}` : realm}`);
                 event.server.runCommandSilent(`execute as ${event.player.username} run gamestage add ${event.player.username} ${stage}`);
                 event.server.runCommandSilent(`give ${event.player.username} kubejs:coordinate_crystal`)
                 event.server.runCommandSilent(`execute at ${event.player.username} run playsound sgjourney:milky_way_chevron_encode player ${event.player.username} ~ ~ ~`);
