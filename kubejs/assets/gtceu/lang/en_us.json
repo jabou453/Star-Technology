@@ -1019,6 +1019,15 @@
     "block.gtceu.machine_facility": "Machine Facility",
     "gtceu.machine_facility": "Machine Facility",
     "block.gtceu.electric_sifter": "Electric Sifter",
-    "gtceu.electric_sifter": "Electric Sifter"
+    "gtceu.electric_sifter": "Electric Sifter",
+
+    "gtceu.jei.bedrock_fluid.brackish_water": "Brackish Water Vein",
+    "gtceu.jei.bedrock_fluid.debris_rich_nether_magma_deposit": "Debris-Rich Nether Magma Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_titanite_rich_magma_deposit": "Abydos Titanite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.gritty_akreyrium": "Gritty Akreyrium Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_zapolite_rich_magma_deposit": "Abydos Zapolite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.highly_unstable_nether_magma_deposit": "Highly Unstable Nether Magma Deposit",
+    "gtceu.jei.bedrock_fluid.crude_infernal_concentrate": "Crude Infernal Concentrate Deposit",
+    "gtceu.jei.bendrock_fluid.lava_dense": "Lava Deposit"
 
 }
