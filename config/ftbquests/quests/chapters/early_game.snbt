@@ -1323,6 +1323,8 @@
 				"Needing lots of crops quickly? Then this multiblock has your back!"
 				""
 				"You might get some good use out of this when making Bio Diesel."
+				""
+				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
 			]
 			icon: "gtceu:large_farm"
 			id: "14417CCE1E25C9C6"
@@ -1338,55 +1340,15 @@
 					type: "item"
 				}
 				{
-					count: 13L
+					count: 15L
 					id: "0FA11746F773152C"
-					item: { Count: 13, id: "gtceu:treated_wood_planks" }
+					item: "gtceu:treated_wood_planks"
 					type: "item"
 				}
 				{
 					count: 20L
 					id: "0349E8D36AD8E429"
 					item: { Count: 20, id: "gtceu:treated_wood_frame" }
-					type: "item"
-				}
-				{
-					id: "0203D3913E3CB6FE"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_input_bus"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_input_bus"
-								}
-							]
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "69B99D4FB6466C3E"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_output_bus"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_output_bus"
-								}
-							]
-						}
-					}
 					type: "item"
 				}
 			]
@@ -1396,7 +1358,10 @@
 		}
 		{
 			dependencies: ["07C5B4C5EE2F948D"]
-			description: ["A larger barrel means faster recipes! Maybe this will help with that slime addiction..."]
+			description: [
+				"A larger barrel means faster recipes! Maybe this will help with that slime addiction..."
+				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+			]
 			icon: "gtceu:large_barrel"
 			id: "27E9698231A04022"
 			rewards: [{
@@ -1411,95 +1376,15 @@
 					type: "item"
 				}
 				{
-					count: 19L
+					count: 23L
 					id: "1248E27FC34B9569"
-					item: { Count: 19, id: "gtceu:treated_wood_planks" }
+					item: "gtceu:treated_wood_planks"
 					type: "item"
 				}
 				{
 					count: 9L
 					id: "6A4A8998BA8996F7"
 					item: "gtceu:pump_deck"
-					type: "item"
-				}
-				{
-					id: "07D53A42D6D57B05"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_input_bus"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_input_bus"
-								}
-							]
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "5E8BEDA53BBB3FFB"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_output_bus"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_output_bus"
-								}
-							]
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "501B3821C9B11CC9"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_input_hatch"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_input_hatch"
-								}
-							]
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "4792018444E4C8E5"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_output_hatch"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_output_hatch"
-								}
-							]
-						}
-					}
 					type: "item"
 				}
 			]
@@ -1509,7 +1394,10 @@
 		}
 		{
 			dependencies: ["07C5B4C5EE2F948D"]
-			description: ["Automatic pebbles and lava? Sounds like a good use of your time to make a few of these."]
+			description: [
+				"Automatic pebbles and lava? Sounds like a good use of your time to make a few of these."
+				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+			]
 			icon: "gtceu:large_stone_barrel"
 			id: "3477B2FEEF0DF44C"
 			rewards: [{
@@ -1524,95 +1412,15 @@
 					type: "item"
 				}
 				{
-					count: 19L
+					count: 23L
 					id: "5226068ABBB10637"
-					item: { Count: 19, id: "minecraft:stone" }
+					item: "minecraft:stone"
 					type: "item"
 				}
 				{
 					count: 9L
 					id: "462896992207F077"
 					item: { Count: 9, id: "minecraft:stone_bricks" }
-					type: "item"
-				}
-				{
-					id: "48DE370DD9A94B1B"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_input_bus"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_input_bus"
-								}
-							]
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "1CD75DBFAF31A537"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_output_bus"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_output_bus"
-								}
-							]
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "486CCEEE687B3FC9"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_input_hatch"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_input_hatch"
-								}
-							]
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "4DF9E66FAC09E77A"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:ulv_output_hatch"
-								}
-								{
-									Count: 1b
-									id: "gtceu:lv_output_hatch"
-								}
-							]
-						}
-					}
 					type: "item"
 				}
 			]

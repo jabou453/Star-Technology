@@ -14,7 +14,7 @@ PlayerEvents.tick(event => {
 
         if (player.age % 100 === 0) {
             player.potionEffects.add('minecraft:hunger', 100, 2, false, false)
-            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 2 gtceu:heat`);
+            event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 2 kubejs:heat_exhaustion`);
         }
 
         if (global.packmode !== 'abydos'){
@@ -38,8 +38,14 @@ PlayerEvents.tick(event => {
             })
         }
         
-        if (player.age % 100 === 0) {
+        if (player.age % 40 === 0) {
+            if (player.getHealth() <= 2) {
+                event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 100 kubejs:radiation`);
+                // player.tell('big damage')
+                return
+            }
             event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 4 kubejs:radiation`);
+                // player.tell(`small damage hp:${player.getHealth()}`)
         }
         
         if (player.age % 200 === 0) {
@@ -69,6 +75,7 @@ PlayerEvents.tick(event => {
             
             if (Math.random() > 0.95) {
                 event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 100 kubejs:abyssal_pull`);
+                // player.tell('void dmg applied')
             }
         }
     }

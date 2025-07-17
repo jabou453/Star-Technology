@@ -507,6 +507,12 @@
 		{
 			dependencies: ["3E60DA2BD370E162"]
 			id: "51E820417679F770"
+			rewards: [{
+				count: 5
+				id: "63D41148EF68BD99"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -901,6 +907,12 @@
 		{
 			dependencies: ["1C705D1B2ABEAC71"]
 			id: "22EAAB51EF78C74E"
+			rewards: [{
+				count: 5
+				id: "5E7381AA447FD172"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -985,7 +997,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["319B52CFFFD95612"]
+			dependencies: ["68865F1DDBFFFACE"]
 			hide_dependency_lines: true
 			id: "7741F8F88B2AE826"
 			tasks: [{
@@ -1292,6 +1304,12 @@
 		{
 			dependencies: ["1009C2A64244C8CA"]
 			id: "071470432C9751A2"
+			rewards: [{
+				count: 5
+				id: "7D4D61C57A8377E2"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -1608,6 +1626,12 @@
 		{
 			dependencies: ["0CB1ED3221C82E8F"]
 			id: "62D6B2F28CC983AE"
+			rewards: [{
+				count: 5
+				id: "101E2806F30FD068"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -1894,6 +1918,12 @@
 		{
 			dependencies: ["45A7CB586A63E2D8"]
 			id: "07D2D9B98248BC00"
+			rewards: [{
+				count: 3
+				id: "4FDE57E199A02E84"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -1907,6 +1937,12 @@
 		{
 			dependencies: ["74A13511E58B0CA3"]
 			id: "77933460B50A2CAF"
+			rewards: [{
+				count: 3
+				id: "5D60769E37CC5EB7"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -2137,6 +2173,12 @@
 		{
 			dependencies: ["7CC060CF914B6D2D"]
 			id: "05C5FB1348ADFB71"
+			rewards: [{
+				count: 3
+				id: "04C976257F106B54"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -2321,6 +2363,12 @@
 		{
 			dependencies: ["14F32357697CD438"]
 			id: "126DB96C50CC815F"
+			rewards: [{
+				count: 3
+				id: "033934AB7AC35F61"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -2664,6 +2712,12 @@
 		{
 			dependencies: ["3C7E223BC46DD434"]
 			id: "22A4164AD4303C20"
+			rewards: [{
+				count: 3
+				id: "504B21F174267AB5"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -2867,6 +2921,12 @@
 		{
 			dependencies: ["6290F2A582039B7F"]
 			id: "319B52CFFFD95612"
+			rewards: [{
+				count: 3
+				id: "7BE35DFEDE7D8DF5"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -3072,6 +3132,12 @@
 		{
 			dependencies: ["68ECE77B31058268"]
 			id: "5129D7CBEB845398"
+			rewards: [{
+				count: 3
+				id: "2611EC9043F4FE2B"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -3171,6 +3237,12 @@
 		{
 			dependencies: ["05D86EF996691BA4"]
 			id: "3D4DCC8FD9A1EA3A"
+			rewards: [{
+				count: 3
+				id: "60BE8B3D74DF7934"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -3351,6 +3423,12 @@
 				"7791705FF3192010"
 			]
 			id: "1B6159E114BA50ED"
+			rewards: [{
+				count: 4
+				id: "6D5CA66172A91554"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -4659,6 +4737,12 @@
 		{
 			dependencies: ["039F71CBD3C8F048"]
 			id: "2A9BD9AA525AD57F"
+			rewards: [{
+				count: 3
+				id: "7AFECD3A6839CA14"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -4672,6 +4756,12 @@
 		{
 			dependencies: ["7E15AE62D31F95DD"]
 			id: "18BF8EC78B930433"
+			rewards: [{
+				count: 3
+				id: "7BB4ECD968130DA7"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -4685,6 +4775,12 @@
 		{
 			dependencies: ["47986C646C594852"]
 			id: "3DF1E6EADE4D3EA0"
+			rewards: [{
+				count: 3
+				id: "4E0F2D0C3F6B03A7"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -4698,6 +4794,12 @@
 		{
 			dependencies: ["35BC1333425C61AD"]
 			id: "0E75A2FC17ED0C28"
+			rewards: [{
+				count: 2
+				id: "606333D4A322A62D"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "3836AA1BA9B0BF7F"

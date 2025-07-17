@@ -1,6 +1,4 @@
 if (global.packmode !== 'hard'){
-    (() => {  
-
 ServerEvents.recipes(event => {
     const id = global.id;
 
@@ -33,6 +31,4 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.HV]);
 
 });
-
-})
 }

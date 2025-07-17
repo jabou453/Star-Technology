@@ -1,7 +1,6 @@
 // packmode: hard
 
 ServerEvents.tags('item', event => {
-
 	[
 		'tin',
 		'zinc',

@@ -76,7 +76,7 @@
     "block.gtceu.bulk_ore_processing_array": "Bulk Processing Array",
     "gtceu.bulk_ore_processing_array": "Bulk Ore Processing",
     "block.gtceu.bulk_ore_processing_array.tooltip.0": "§7The §4ULTIMATE§7 tier of ore processing machine that far exceeds the throughput capacity of all previous tiers.",
-    "block.gtceu.bulk_ore_processing_array.tooltip.1": "§7§oIt's like having 2048 Ore Processing Plants but better...",
+    "block.gtceu.bulk_ore_processing_array.tooltip.1": "§7§oIt's like having 256 Ore Processing Plants but better...",
     "block.gtceu.bulk_ore_processing_array.tooltip.2": "Can use §3Parallel§r hatches",
     
     "block.gtceu.industrial_barrel": "Industrial Barrel",
@@ -922,6 +922,13 @@
     "gtceu.auto_scavenger": "Auto Scavenger",
     "gtceu.industrial_pump" : "Industrial Pump",
     "block.gtceu.industrial_pump" : "Industrial Pump",
+    "block.gtceu.component_chamber": "Component Chamber",
+    "gtceu.component_chamber": "Component Chamber",
+    "block.gtceu.machine_facility": "Machine Facility",
+    "gtceu.machine_facility": "Machine Facility",
+    "block.gtceu.electric_sifter": "Electric Sifter",
+    "gtceu.electric_sifter": "Electric Sifter",
+    "gtceu.gt_blasting": "Blasting",
 
     "material.gtceu.metallic_ore_sludge": "Metallic Ore Sludge",
     "material.gtceu.raw_ore_concentrate": "Raw Ore Concentrate",
@@ -981,7 +988,7 @@
     "material.gtceu.rhodium_iii_hydroxide": "Rhodium(III) Hydroxide",
     "material.gtceu.rhodium_iii_oxide": "Rhodium(III) Oxide",
     "material.gtceu.ruthenium_complex": "Ruthenium Complex",
-    "material.gtceu.ruthenium_hydroxide": "Ruthenium Hydroxide",
+    "material.gtceu.impure_ruthenium": "Impure Ruthenium",
     "material.gtceu.rarest_metal_slurry": "Rarest Metal Slurry",
     "material.gtceu.sodium_osmate": "Sodium Osmate",
     "material.gtceu.osmium_iv_hydroxide": "Osmium(IV) Hydroxide",
@@ -992,7 +999,12 @@
     "material.gtceu.iridium_oxide": "Iridium Oxide",
 
     "gtceu.me_assembler": "ME Assembler",
-    "block.gtceu.me_assembler": "ME Assembler",
+    "block.gtceu.lv_me_assembler": "Basic ME Assembler",
+    "block.gtceu.mv_me_assembler": "§bAdvanced ME Assembler I",
+    "block.gtceu.hv_me_assembler": "§6Advanced ME Assembler II",
+    "block.gtceu.ev_me_assembler": "§5Advanced ME Assembler III",
+    "block.gtceu.iv_me_assembler": "§9Elite ME Assembler",
+    "block.gtceu.luv_me_assembler": "§dElite ME Assembler II",
 
     "block.gtceu.large_me_assembler": "Large ME Assembler",
 
@@ -1007,6 +1019,15 @@
     "block.gtceu.bronze_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.steel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.titanium_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
-    "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG"
+    "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
+
+    "gtceu.jei.bedrock_fluid.brackish_water": "Brackish Water Vein",
+    "gtceu.jei.bedrock_fluid.debris_rich_nether_magma_deposit": "Debris-Rich Nether Magma Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_titanite_rich_magma_deposit": "Abydos Titanite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.gritty_akreyrium": "Gritty Akreyrium Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_zapolite_rich_magma_deposit": "Abydos Zapolite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.highly_unstable_nether_magma_deposit": "Highly Unstable Nether Magma Deposit",
+    "gtceu.jei.bedrock_fluid.crude_infernal_concentrate": "Crude Infernal Concentrate Deposit",
+    "gtceu.jei.bendrock_fluid.lava_dense": "Lava Deposit"
 
 }

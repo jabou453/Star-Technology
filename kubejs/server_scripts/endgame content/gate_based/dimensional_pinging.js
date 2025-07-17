@@ -43,8 +43,7 @@ ServerEvents.recipes(event => {
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
             .inputFluids('gtceu:naquadria 9072')
             .chancedOutput('kubejs:abydos_coordinate_crystal', 500, 0)
-            .totalCWU(300 * 20 * 128)
-            .CWUt(128)
+            .duration(150 * 20)
             .EUt(GTValues.VA[GTValues.UV])
             .dimension('minecraft:overworld'); 
         })()
@@ -56,8 +55,7 @@ ServerEvents.recipes(event => {
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
             .inputFluids('gtceu:naquadria 9072')
             .chancedOutput('kubejs:abydos_coordinate_crystal', 9900, 0)
-            .totalCWU(128 * 20 * 20)
-            .CWUt(128)
+            .duration(10 * 20)   
             .EUt(GTValues.VA[GTValues.UV])
             .dimension('sgjourney:abydos');
         })()
@@ -67,8 +65,7 @@ ServerEvents.recipes(event => {
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:netherrack', 'gtceu:uhv_sensor')
         .inputFluids('minecraft:lava 5000')
         .chancedOutput('kubejs:nether_coordinate_crystal', 500, 0)
-        .totalCWU(300 * 20 * 160)
-        .CWUt(160)
+        .duration(150 * 20)
         .EUt(GTValues.VHA[GTValues.UHV])
         .dimension('sgjourney:abydos');
 
@@ -76,8 +73,7 @@ ServerEvents.recipes(event => {
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:end_stone', 'gtceu:uhv_sensor')
         .inputFluids('gtceu:echo_r 5000')
         .chancedOutput('kubejs:end_coordinate_crystal', 500, 0)
-        .totalCWU(300 * 20 * 192)
-        .CWUt(192)
+        .duration(150 * 20)
         .EUt(GTValues.VA[GTValues.UHV])
         .dimension('sgjourney:abydos');
 
@@ -133,7 +129,7 @@ const crystalfeed = (realmId, realm, stage, message) => {
             event.server.runCommandSilent(`execute at ${event.player.username} run playsound minecraft:block.enchantment_table.use player ${event.player.username} ~ ~ ~`);
             event.server.scheduleInTicks(15, ctx => {
                 event.player.tell(`As you consume the echoes of the coordinate crystal, you hear voices whispering, and strange numbers appear before your eyes, along with visions of ${message}.`);
-                event.server.runCommand(`execute as ${event.player.username} run sgjourney stargateNetwork address ${realmId}:${realm == 'nether' ? 'the_nether' : realm}`);
+                event.server.runCommand(`execute as ${event.player.username} run sgjourney stargateNetwork address ${realmId}:${realmId == 'minecraft' ? `the_${realm}` : realm}`);
                 event.server.runCommandSilent(`execute as ${event.player.username} run gamestage add ${event.player.username} ${stage}`);
                 event.server.runCommandSilent(`give ${event.player.username} kubejs:coordinate_crystal`)
                 event.server.runCommandSilent(`execute at ${event.player.username} run playsound sgjourney:milky_way_chevron_encode player ${event.player.username} ~ ~ ~`);

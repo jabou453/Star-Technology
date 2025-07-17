@@ -885,6 +885,7 @@
 			dependencies: [
 				"190D8CE085E5AD3E"
 				"1988B2548A1347A5"
+				"417AE96C4FEF22D1"
 			]
 			id: "191A22BA3CF7BE9E"
 			tasks: [{
@@ -892,7 +893,6 @@
 				item: "gtceu:large_chemical_reactor"
 				type: "item"
 			}]
-			title: "LCR, LCH, LCC"
 			x: 16.5d
 			y: -1.0d
 		}
@@ -2344,7 +2344,10 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["12BFA13A58EB3C0F"]
+			dependencies: [
+				"12BFA13A58EB3C0F"
+				"417AE96C4FEF22D1"
+			]
 			id: "13010769EA5F7334"
 			shape: "gear"
 			tasks: [{
@@ -2424,16 +2427,14 @@
 				item: "ae2:fluix_crystal"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 21.0d
 			y: 0.5d
 		}
 		{
 			dependencies: [
 				"0E57EB306B7D79F1"
-				"3913A86435C34887"
 				"665B43B46B871A6F"
 			]
-			dependency_requirement: "one_completed"
 			id: "4EFD65100E759225"
 			tasks: [{
 				id: "7B08FA5085ED591C"
@@ -2471,7 +2472,9 @@
 			dependencies: [
 				"34AFDC1D56996C72"
 				"489834595D5DD863"
+				"3913A86435C34887"
 			]
+			dependency_requirement: "one_completed"
 			id: "0E57EB306B7D79F1"
 			tasks: [{
 				id: "699B3000A869CB64"
@@ -2509,7 +2512,6 @@
 		{
 			dependencies: ["4EFD65100E759225"]
 			id: "0308CDAA7294B023"
-			subtitle: "Fluid"
 			tasks: [{
 				id: "7E91A35C00DADCCB"
 				item: "gtceu:platinum_group_leach_liquor_bucket"
@@ -2597,31 +2599,31 @@
 			y: -10.5d
 		}
 		{
-			dependencies: ["70FDC4FA8110635E"]
+			dependencies: ["1618BF3DC9304762"]
+			hide_dependent_lines: true
 			id: "417AE96C4FEF22D1"
 			tasks: [{
 				id: "144F1AB178E8BB6B"
 				item: "gtceu:platinum_dust"
 				type: "item"
 			}]
-			x: 24.5d
+			x: 25.5d
 			y: -11.5d
 		}
 		{
-			dependencies: ["1E857534AEFD7F1D"]
+			dependencies: ["2DAA9398EB488181"]
 			id: "59CEE20FA21FDB91"
 			tasks: [{
 				id: "361ACD8B7B1C2AE8"
 				item: "gtceu:palladium_dust"
 				type: "item"
 			}]
-			x: 24.5d
+			x: 25.5d
 			y: -10.5d
 		}
 		{
 			dependencies: ["4EFD65100E759225"]
 			id: "51AF1DCC7C48C889"
-			subtitle: "Fluid"
 			tasks: [{
 				id: "759EC6DAD506BCD2"
 				item: "gtceu:platinum_group_acid_residue_bucket"
@@ -2642,7 +2644,7 @@
 			y: -9.5d
 		}
 		{
-			dependencies: ["4EA4892B586DB7B2"]
+			dependencies: ["469197EAE924047D"]
 			id: "00A819C9FFB1B19F"
 			tasks: [{
 				id: "356D87E06069DC78"
@@ -2752,17 +2754,6 @@
 			y: -8.5d
 		}
 		{
-			dependencies: ["06FE5CC049F24DA0"]
-			id: "4EA4892B586DB7B2"
-			tasks: [{
-				id: "5B0D0A3628E4957A"
-				item: "gtceu:ruthenium_hydroxide_dust"
-				type: "item"
-			}]
-			x: 25.5d
-			y: -8.5d
-		}
-		{
 			dependencies: ["00A819C9FFB1B19F"]
 			hide_dependent_lines: true
 			id: "2E9EFCCA2B0C6271"
@@ -2777,7 +2768,7 @@
 		{
 			dependencies: ["716115AAAEC87FE5"]
 			id: "74C8D00FA9E1E20C"
-			subtitle: "Fluid"
+			subtitle: "Remainder of Platline Locked for Eta"
 			tasks: [{
 				id: "1DFCD2C2B41ADCEA"
 				item: "gtceu:rarest_metal_slurry_bucket"
@@ -2878,8 +2869,8 @@
 			dependencies: ["51AF1DCC7C48C889"]
 			id: "68A33C97CB4A7C81"
 			tasks: [{
-				id: "60953F7870B39450"
-				item: "gtceu:mixed_inert_metal_ash_dust"
+				id: "129E0EFA146CC191"
+				item: "gtceu:small_mixed_inert_metal_ash_dust"
 				type: "item"
 			}]
 			x: 21.5d
@@ -2912,6 +2903,7 @@
 				"51AF1DCC7C48C889"
 				"716115AAAEC87FE5"
 			]
+			dependency_requirement: "one_completed"
 			id: "2988694A7ED43D0D"
 			tasks: [{
 				id: "58450BDC1220449F"
@@ -2958,8 +2950,8 @@
 				item: "ae2:fluix_glass_cable"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 2.0d
+			x: 22.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["0C2BAE421CDC884A"]
@@ -3108,7 +3100,7 @@
 			y: -7.0d
 		}
 		{
-			dependencies: ["3E1B9D415C6B5D74"]
+			dependencies: ["42A38244390A854C"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "45D5A3F101F80944"
@@ -3270,6 +3262,7 @@
 				"590AF46C9E85AACD"
 			]
 			dependency_requirement: "one_completed"
+			description: ["SC Tubrine Rotors are Extremely Powerful"]
 			hide_dependency_lines: true
 			icon: {
 				Count: 1
@@ -3335,7 +3328,54 @@
 				type: "item"
 			}]
 			x: 19.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"3E1B9D415C6B5D74"
+				"2E9EFCCA2B0C6271"
+			]
+			id: "42A38244390A854C"
+			tasks: [{
+				id: "0B8B1D1565213667"
+				item: "gtceu:rtm_alloy_coil_block"
+				type: "item"
+			}]
+			x: 19.5d
 			y: -1.0d
+		}
+		{
+			dependencies: ["06FE5CC049F24DA0"]
+			id: "469197EAE924047D"
+			tasks: [{
+				id: "0FF22E5017C91EB8"
+				item: "gtceu:impure_ruthenium_dust"
+				type: "item"
+			}]
+			x: 25.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["70FDC4FA8110635E"]
+			id: "1618BF3DC9304762"
+			tasks: [{
+				id: "7D4405819D1766C5"
+				item: "gtceu:platinum_raw_dust"
+				type: "item"
+			}]
+			x: 24.5d
+			y: -11.5d
+		}
+		{
+			dependencies: ["1E857534AEFD7F1D"]
+			id: "2DAA9398EB488181"
+			tasks: [{
+				id: "57CDCC6C93331B9E"
+				item: "gtceu:palladium_raw_dust"
+				type: "item"
+			}]
+			x: 24.5d
+			y: -10.5d
 		}
 	]
 	title: "Daring are we?"

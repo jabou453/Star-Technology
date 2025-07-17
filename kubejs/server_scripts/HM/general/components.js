@@ -21,8 +21,7 @@ ServerEvents.recipes(event => {
 
     event.remove({ output: /gtceu:.*voltage_coil/ });
 
-    const VoltageCoil = (type,magnet,wire,tier) => {
-        let power = (tier = 0) ? 7 : 30 * ( 4 ** ( tier - 1 ) ) ;
+    const VoltageCoil = (type,magnet,wire,power) => {
         
         event.recipes.gtceu.assembler(id(`${type}_voltage_coil`))
             .itemInputs(`gtceu:magnetic_${magnet}_rod`, `16x gtceu:fine_${wire}_wire`)
@@ -30,11 +29,11 @@ ServerEvents.recipes(event => {
             .duration(320)
             .EUt(power);
     }
-    VoltageCoil('ulv','iron','lead',0);
-    VoltageCoil('lv','steel','damascus_steel',1);
-    VoltageCoil('mv','steel','aluminium',2);
-    VoltageCoil('hv','neodymium','black_steel',3);
-    VoltageCoil('ev','neodymium','platinum',4);
+    VoltageCoil('ulv','iron','lead',7);
+    VoltageCoil('lv','steel','damascus_steel',30);
+    VoltageCoil('mv','steel','aluminium',120);
+    VoltageCoil('hv','neodymium','black_steel',480);
+    VoltageCoil('ev','neodymium','platinum',1920);
 
     // Will Require CAL
     // VoltageCoil('iv','samarium','iridium',0,false);

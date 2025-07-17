@@ -23,7 +23,7 @@ ServerEvents.recipes(event => {
 	const double_plates = ['iron', 'copper', 'gold', 'lead', 'tin', 'bronze', 'brass', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'red_alloy'];
 	const gears = ['iron', 'lead', 'bronze', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'potin', 'damascus_steel'];
 	const small_gears = ['iron', 'lead', 'bronze', 'pig_iron', 'wrought_iron', 'cast_iron', 'steel', 'potin', 'damascus_steel'];
-	const rotors = ['iron', 'copper', 'lead', 'bronze', 'pig_iron', 'steel', 'cast_iron'];
+	const rotors = ['iron', 'copper', 'lead', 'bronze', 'pig_iron', 'steel', 'cast_iron','tin_alloy'];
 	const springs = ['iron', 'copper', 'gold', 'lead', 'tin', 'steel', 'red_alloy'];
 	const small_springs = ['iron', 'copper', 'gold', 'lead', 'tin', 'steel'];
 	const wires = ['iron', 'copper', 'gold', 'lead', 'tin', 'steel', 'red_alloy'];
@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
 
 	plates_block.forEach(metal => {
 		let mod = minecraft_metals.includes(metal) ? 'minecraft' : 'gtceu';
-		event.recipes.create.pressing([`4x gtceu:${metal}_plate`], `${mod}:${metal}_block`).id(`start:pressing/${metal}_plate`);
+		event.shaped(`1x gtceu:${metal}_plate`, [' I ','HI ',' I '], {I: `${mod}:${metal}_ingot`, H: '#forge:tools/hammers'}).id(`start:shaped/${metal}_plate`);
 	});
 
 	rods.forEach(metal => {
