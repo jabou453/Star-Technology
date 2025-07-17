@@ -1007,6 +1007,13 @@
     "block.gtceu.bronze_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.steel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.titanium_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
-    "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG"
+    "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
+
+    "block.gtceu.component_chamber": "Component Chamber",
+    "gtceu.component_chamber": "Component Chamber",
+    "block.gtceu.machine_facility": "Machine Facility",
+    "gtceu.machine_facility": "Machine Facility",
+    "block.gtceu.electric_sifter": "Electric Sifter",
+    "gtceu.electric_sifter": "Electric Sifter"
 
 }
