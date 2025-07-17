@@ -43,8 +43,7 @@ ServerEvents.recipes(event => {
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
             .inputFluids('gtceu:naquadria 9072')
             .chancedOutput('kubejs:abydos_coordinate_crystal', 500, 0)
-            .totalCWU(300 * 20 * 128)
-            .CWUt(128)
+            .duration(150 * 20)
             .EUt(GTValues.VA[GTValues.UV])
             .dimension('minecraft:overworld'); 
         })()
@@ -56,8 +55,7 @@ ServerEvents.recipes(event => {
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
             .inputFluids('gtceu:naquadria 9072')
             .chancedOutput('kubejs:abydos_coordinate_crystal', 9900, 0)
-            .totalCWU(128 * 20 * 20)
-            .CWUt(128)
+            .duration(10 * 20)   
             .EUt(GTValues.VA[GTValues.UV])
             .dimension('sgjourney:abydos');
         })()
@@ -67,8 +65,7 @@ ServerEvents.recipes(event => {
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:netherrack', 'gtceu:uhv_sensor')
         .inputFluids('minecraft:lava 5000')
         .chancedOutput('kubejs:nether_coordinate_crystal', 500, 0)
-        .totalCWU(300 * 20 * 160)
-        .CWUt(160)
+        .duration(150 * 20)
         .EUt(GTValues.VHA[GTValues.UHV])
         .dimension('sgjourney:abydos');
 
@@ -76,8 +73,7 @@ ServerEvents.recipes(event => {
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:end_stone', 'gtceu:uhv_sensor')
         .inputFluids('gtceu:echo_r 5000')
         .chancedOutput('kubejs:end_coordinate_crystal', 500, 0)
-        .totalCWU(300 * 20 * 192)
-        .CWUt(192)
+        .duration(150 * 20)
         .EUt(GTValues.VA[GTValues.UHV])
         .dimension('sgjourney:abydos');
 

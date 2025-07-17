@@ -34,14 +34,22 @@ ServerEvents.recipes(event => {
     Tiers.forEach( tier => {
     MachineTypes.forEach( machine => {
             event.remove({ output: `gtceu:${tier}_${machine}` });
-            if (machine = 'energy_input_hatch' || 'energy_output_hatch') {
+            if (machine == 'energy_input_hatch' ) {
             if (tier !== 'lv' || 'mv' || 'hv'){
                 event.remove({ output: `gtceu:${tier}_${machine}_4a` });
                 event.remove({ output: `gtceu:${tier}_${machine}_16a` });
             } if (tier == 'uv' || 'zpm' ){
             let priorTier = ( tier == 'uv') ? 'zpm' : 'luv' ;
                 event.remove({ id: `gtceu:research_station/1_x_gtceu_${priorTier}_${machine}` });
-            }}
+            }};
+            if (machine == 'energy_output_hatch' ) {
+            if (tier !== 'lv' || 'mv' || 'hv'){
+                event.remove({ output: `gtceu:${tier}_${machine}_4a` });
+                event.remove({ output: `gtceu:${tier}_${machine}_16a` });
+            } if (tier == 'uv' || 'zpm' ){
+            let priorTier = ( tier == 'uv') ? 'zpm' : 'luv' ;
+                event.remove({ id: `gtceu:research_station/1_x_gtceu_${priorTier}_${machine}` });
+            }};
     });
         if (tier !== 'lv' || 'mv' || 'hv'){
             event.remove({ output: `gtceu:${tier}_substation_input_hatch_64a` }); // wont get recipes in Eta

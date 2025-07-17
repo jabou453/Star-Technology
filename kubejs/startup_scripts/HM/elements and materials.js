@@ -199,15 +199,15 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 	compDust('platinum_group_leach_residue', '1x mystery', 0x444444, no_decomp);
 	compDust('platinum_chloride', ['1x platinum', '6x chlorine'], 0xB4C6CF, no_decomp);
 	compDust('palladium_chloride', ['1x palladium', '4x chlorine'], 0xC8A9AD, no_decomp);
-	compGem('platinum_salt', ['2x nitrogen', '8x oxygen', '1x platinum', '6x chlorine'], 0xE3E3CD, RUBY, no_decomp);
-	compGem('palladium_salt', ['2x nitrogen', '8x oxygen','1x palladium', '4x chlorine'], 0xD6B3BB, RUBY, no_decomp);
+	compGem('platinum_salt', ['4x nitrogen', '12x hydrogen', '1x platinum', '6x chlorine'], 0xE3E3CD, RUBY, no_decomp);
+	compGem('palladium_salt', ['5x nitrogen', '15x hydrogen','1x palladium', '4x chlorine'], 0xD6B3BB, RUBY, no_decomp);
 	compDust('mixed_inert_metal_ash', ['1x rhodium', '1x ruthenium', '1x mystery'], 0x9982A2, no_decomp);
-	compLiquid('ruthenium_sulfate', ['1x ruthenium', '3x sulfate'], 0x5CB8F6, no_decomp);
+	compLiquid('ruthenium_sulfate', ['1x ruthenium', '6x sulfate'], 0x5CB8F6, no_decomp);
 	compLiquid('inert_metal_sulfate_solution', ['1x rhodium_sulfate', '1x ruthenium_sulfate'], 0xA985BF, no_decomp);
 	compDust('rhodium_iii_hydroxide', ['1x rhodium', '3x hydroxide'], 0xD174B6, no_decomp);
 	compDust('rhodium_iii_oxide', ['2x rhodium', '3x oxygen'], 0xCE498F, no_decomp);
 	compDust('ruthenium_complex', ['1x ruthenium', '6x ammonia'], 0x88D2FC, no_decomp);
-	compDust('ruthenium_hydroxide', ['1x ruthenium', '3x hydroxide'], 0x63C0F4, no_decomp);
+	compDust('impure_ruthenium', ['1x ruthenium','1x mystery'], 0x63C0F4, no_decomp);
 	compLiquid('rarest_metal_slurry', ['1x iridium', '1x osmium', '1x mystery'], 0x3A78B0, no_decomp);
     event.create('sodium_osmate').gem().fluid().components(['2x sodium', '1x osmium', '4x oxygen']).color(0x4F70D9).iconSet(GEM_HORIZONTAL).flags(no_decomp);
 	compDust('osmium_iv_hydroxide', ['1x osmium', '4x hydroxide'], 0x4866C9, no_decomp);
@@ -222,8 +222,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 GTCEuStartupEvents.materialModification(event => {
 
     GTMaterials.get('yttrium_carbonate').setFormula('Y2(CO3)3');
-    GTMaterials.get('platinum_salt').setFormula('(NH4)2PtCl6');
-    GTMaterials.get('palladium_salt').setFormula('(NH4)2PdCl4');
+    GTMaterials.get('platinum_salt').setFormula('(NH3)4PtCl6');
+    GTMaterials.get('palladium_salt').setFormula('(NH3)5PdCl4');
 	GTMaterials.get('iridium_rich_residue').setFormula('Ir?Oₓ');
 
 });
