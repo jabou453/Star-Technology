@@ -571,7 +571,16 @@
 				"64780055536CEEF3"
 				"1D94473AA9436C60"
 			]
-			description: ["A mystical infusion array that allows you to harness the powers of the end."]
+			description: [
+				"A mystical infusion array that allows you to harness the powers of the end."
+				""
+				"This multiblock requires the inputs to be placed in the correct order."
+				"{image:kubejs:textures/quests/infusion_recipe.png width:120 height:80 align:center}"
+				"{@pagebreak}"
+				"On the structure, the inputs are mapped according to the following images:"
+				"{image:kubejs:textures/quests/infusion_top.png width:350 height:150 align:center}"
+				"{image:kubejs:textures/quests/infusion_bottom.png width:200 height:100 align:center}"
+			]
 			id: "395C32B51E768458"
 			rewards: [{
 				count: 2
