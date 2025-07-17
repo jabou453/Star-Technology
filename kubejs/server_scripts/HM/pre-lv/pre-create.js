@@ -280,7 +280,8 @@ ServerEvents.recipes(event => {
 		})
 
 		event.remove({ id: `create:cutting/${log}_log` });
-		event.recipes.create.cutting([`minecraft:stripped_${log}_log`, 'farmersdelight:tree_bark'], `minecraft:${log}_log`).id(`start:cutting/stripped_${log}_log`);
+		const log_type = (log == 'bamboo') ? 'block' : ((log == 'crimson' || log == 'warped') ? 'stem' : 'log');
+		event.recipes.create.cutting([`minecraft:stripped_${log}_${log_type}`, 'farmersdelight:tree_bark'], `minecraft:${log}_log`).id(`start:cutting/stripped_${log}_log`);
 
 		if (log == 'bamboo') return;
 
