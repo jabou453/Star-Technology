@@ -922,6 +922,13 @@
     "gtceu.auto_scavenger": "Auto Scavenger",
     "gtceu.industrial_pump" : "Industrial Pump",
     "block.gtceu.industrial_pump" : "Industrial Pump",
+    "block.gtceu.component_chamber": "Component Chamber",
+    "gtceu.component_chamber": "Component Chamber",
+    "block.gtceu.machine_facility": "Machine Facility",
+    "gtceu.machine_facility": "Machine Facility",
+    "block.gtceu.electric_sifter": "Electric Sifter",
+    "gtceu.electric_sifter": "Electric Sifter",
+    "gtceu.gt_blasting": "Blasting",
 
     "material.gtceu.metallic_ore_sludge": "Metallic Ore Sludge",
     "material.gtceu.raw_ore_concentrate": "Raw Ore Concentrate",
@@ -1013,13 +1020,6 @@
     "block.gtceu.steel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.titanium_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
-
-    "block.gtceu.component_chamber": "Component Chamber",
-    "gtceu.component_chamber": "Component Chamber",
-    "block.gtceu.machine_facility": "Machine Facility",
-    "gtceu.machine_facility": "Machine Facility",
-    "block.gtceu.electric_sifter": "Electric Sifter",
-    "gtceu.electric_sifter": "Electric Sifter",
 
     "gtceu.jei.bedrock_fluid.brackish_water": "Brackish Water Vein",
     "gtceu.jei.bedrock_fluid.debris_rich_nether_magma_deposit": "Debris-Rich Nether Magma Deposit",
