@@ -992,7 +992,12 @@
     "material.gtceu.iridium_oxide": "Iridium Oxide",
 
     "gtceu.me_assembler": "ME Assembler",
-    "block.gtceu.me_assembler": "ME Assembler",
+    "block.gtceu.lv_me_assembler": "Basic ME Assembler",
+    "block.gtceu.mv_me_assembler": "§bAdvanced ME Assembler I",
+    "block.gtceu.hv_me_assembler": "§6Advanced ME Assembler II",
+    "block.gtceu.ev_me_assembler": "§5Advanced ME Assembler III",
+    "block.gtceu.iv_me_assembler": "§9Elite ME Assembler",
+    "block.gtceu.luv_me_assembler": "§dElite ME Assembler II",
 
     "block.gtceu.large_me_assembler": "Large ME Assembler",
 
@@ -1007,6 +1012,22 @@
     "block.gtceu.bronze_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.steel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
     "block.gtceu.titanium_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
-    "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG"
+    "block.gtceu.tungstensteel_large_boiler.tooltip.4": "DISABLED DUE TO BUG",
+
+    "block.gtceu.component_chamber": "Component Chamber",
+    "gtceu.component_chamber": "Component Chamber",
+    "block.gtceu.machine_facility": "Machine Facility",
+    "gtceu.machine_facility": "Machine Facility",
+    "block.gtceu.electric_sifter": "Electric Sifter",
+    "gtceu.electric_sifter": "Electric Sifter",
+
+    "gtceu.jei.bedrock_fluid.brackish_water": "Brackish Water Vein",
+    "gtceu.jei.bedrock_fluid.debris_rich_nether_magma_deposit": "Debris-Rich Nether Magma Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_titanite_rich_magma_deposit": "Abydos Titanite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.gritty_akreyrium": "Gritty Akreyrium Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_zapolite_rich_magma_deposit": "Abydos Zapolite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.highly_unstable_nether_magma_deposit": "Highly Unstable Nether Magma Deposit",
+    "gtceu.jei.bedrock_fluid.crude_infernal_concentrate": "Crude Infernal Concentrate Deposit",
+    "gtceu.jei.bendrock_fluid.lava_dense": "Lava Deposit"
 
 }
