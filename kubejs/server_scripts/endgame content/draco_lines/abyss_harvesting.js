@@ -122,7 +122,7 @@ ServerEvents.recipes(event => {
     VoidState('gamma', 570); // Gamma Last 57 Days
     VoidState('delta', 660); // Delta Last 66 Days
     VoidState('epsilon', 890); // Epsilon Last 89 Days
-    VoidState('zeta', 10000); // Zeta will Last 10000 Days /j
+    VoidState('zeta', 850); // Zeta Last 85 Days
 
     event.recipes.gtceu.injection_mixer(id('order_centric_void'))
         .inputFluids('gtceu:alpha_state_void_residue 1000','gtceu:beta_state_void_residue 1000','gtceu:gamma_state_void_residue 1000')
