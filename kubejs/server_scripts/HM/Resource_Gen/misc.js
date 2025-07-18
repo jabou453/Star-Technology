@@ -29,5 +29,8 @@ ServerEvents.recipes(event => {
         .EUt(30);
 
     event.remove({ type: 'gtceu:electric_blast_furnace' , output: 'gtceu:aluminium_nugget' });
-    
+
+    event.remove({ type: 'gtceu:distillation_tower' , output: 'gtceu:lubricant' })
+    event.remove({ type: 'gtceu:distillery' , output: 'gtceu:lubricant' })
+
 });

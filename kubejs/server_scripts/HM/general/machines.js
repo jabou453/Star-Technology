@@ -151,7 +151,7 @@ ServerEvents.recipes(event => {
     AllTierMachine('compressor', [Hull, '2x '+Plate, '2x '+Piston, '2x '+Circuit, '2x '+Cable1x], [Solder+' 72', Lubricant+' 500']);
     AllTierMachine('cutter', [Hull, Glass, Conveyor, Buzzsaw, '2x '+Circuit, Motor, '2x '+Cable1x], [Solder+' 72', Lubricant+' 500']);
     AllTierMachine('distillery', [Hull, '2x '+Glass, '2x '+Pump, '2x '+Circuit, Spring, Cable1x], [Solder+' 72', RubberF+' 288']);
-    AllTierMachine('electrolyzer', [Hull, Motor, '2x '+EWire1x, Glass, '2x '+Circuit, '2x '+Cable1x], [Solder+' 144']);
+    AllTierMachine('electrolyzer', [Hull, Motor, '4x '+EWire1x, Glass, '2x '+Circuit, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('electromagnetic_separator', [Hull, '2x '+Wire2x, Conveyor, Circuit, '2x '+RodM, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('extractor', [Hull, '2x '+Glass, Piston, Pump, '2x '+Circuit, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('extruder', [Hull, '4x '+Wire4x, Piston, '2x '+Circuit, PipeNormal], [Solder+' 144']);
@@ -417,7 +417,7 @@ ServerEvents.recipes(event => {
     MachineAssembly('void_extractor',['gtceu:lv_gas_collector','4x gtceu:damascus_steel_gear','4x gtceu:lv_electric_pump','3x gtceu:lv_robot_arm','6x #gtceu:circuits/lv','2x gtceu:lv_emitter','2x gtceu:lv_sensor','6x gtceu:tin_single_cable'],['gtceu:soldering_alloy 864','gtceu:rubber 288'],120,900);
     MachineAssembly('greenhouse',['gtceu:large_farm','4x gtceu:mv_conveyor_module','4x #gtceu:circuits/mv','8x gtceu:fertilizer','2x gtceu:dense_steel_plate','4x gtceu:mv_electric_motor','2x gtceu:cobalt_brass_buzz_saw_blade','6x gtceu:copper_single_cable'],['gtceu:soldering_alloy 2160', 'gtceu:polyethylene 432'],120,1200);
     MachineAssemblyScanner('industrial_barrel',['gtceu:stainless_steel_frame','gtceu:large_stone_barrel','gtceu:large_barrel','12x gtceu:kanthal_spring','4x gtceu:hv_conveyor_module','8x gtceu:hv_electric_pump','4x #gtceu:circuits/hv','8x gtceu:gold_single_cable'],['gtceu:soldering_alloy 1152','gtceu:polytetrafluoroethylene 432','gtceu:silicone_rubber 288'],480,3600,'gtceu:laminated_glass',480,1200); 
-    MachineAssembly('mechanical_sieve',['gtceu:lv_machine_hull','6x #gtceu:circuits/lv','2x exnihilosequentia:iron_mesh','6x gtceu:lv_electric_motor','4x gtceu:lv_electric_piston','4x gtceu:damascus_steel_gear','2x gtceu:small_steel_gear','4x gtceu:tin_single_cable'],['gtceu:soldering_alloy 432','gtceu:lubricant 2500'],480,1440);
+    MachineAssembly('mechanical_sieve',['gtceu:lv_machine_hull','6x #gtceu:circuits/lv','2x exnihilosequentia:iron_mesh','6x gtceu:lv_electric_motor','4x gtceu:lv_electric_piston','4x gtceu:damascus_steel_gear','2x gtceu:small_steel_gear','4x gtceu:tin_single_cable'],['gtceu:soldering_alloy 432','gtceu:lubricant 2500'],120,1440);
     MachineAssembly('electric_sifter',['gtceu:high_pressure_steam_sifter','6x #gtceu:circuits/lv','2x exnihilosequentia:iron_mesh','6x gtceu:lv_electric_motor','4x gtceu:lv_electric_piston','4x gtceu:damascus_steel_gear','2x gtceu:small_steel_gear','4x gtceu:tin_single_cable'],['gtceu:soldering_alloy 432','gtceu:lubricant 2500'],120,1440);
     MachineAssembly('rock_filtrator',['gtceu:lv_rock_crusher','6x gtceu:lv_electric_piston','6x gtceu:glass_vial','gtceu:lv_electric_pump','4x #gtceu:circuits/lv','2x gtceu:lv_electric_motor','4x gtceu:small_damascus_steel_gear','6x gtceu:tin_single_cable'],['gtceu:soldering_alloy 864','gtceu:lubricant 2500','gtceu:rubber 288'],120,900); 
     // 'electric_ore_factory', 
