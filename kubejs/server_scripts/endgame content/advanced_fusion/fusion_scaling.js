@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
     Fusion('indium',576,'silver',576,'lithium',576,24576,7.2,280);
     Fusion('duranium',144,'gallium',144,'radon',1000,16384,28.8,140);
     Fusion('oxygen_plasma',1000,'carbon',144,'helium_3',1000,4096,12.8,180);
-    Fusion('iron_plasma',144,'silicon',144,'magnesium',144,7680,14.4,360);
+    Fusion('iron_plasma',144,'silicon',144,'magnesium',144,7680,10.8,360);
     Fusion('americium',144,'lutetium',144,'chromium',144,49152,14.4,200);
     Fusion('plutonium_241',144,'krypton',1000,'cerium',144,49152,57.6,240);
     Fusion('neutronium',144,'americium',576,'naquadria',576,98304,45,600);
@@ -73,14 +73,14 @@ ServerEvents.recipes(event => {
             .EUt(-2048);
     };
 
-    PlasmaTurbine('nickel',160,false); // 144mb / 1.8s, 144recipes, 27648 turbineTicks, 15360 turbineTicks/s (in a UV Fusion Reactor)
-    PlasmaTurbine('iron',150,false); // 144mb / 1.8s, 144recipes, 16128 turbineTicks, 8960 turbineTicks/s
-    PlasmaTurbine('oxygen',60,true); // 1000mb / 1.6s, 200recipes, 9600 turbineTicks, 6000 turbineTicks/s
-    PlasmaTurbine('nitrogen',60,true); // 1000mb / 1.8s, 200recipes, 12800 turbineTicks, 7111 turbineTicks/s
-    PlasmaTurbine('argon',80,true); // 1000mb / 1.8s, 200recipes, 19200 turbineTicks, 5333 turbineTicks/s
-    PlasmaTurbine('helium',24,true); // 1000mb / .9s, 200recipes, 8000 turbineTicks, 8889 turbineTicks/s
+    PlasmaTurbine('nickel',192,false); // 144mb / 1.8s, 144recipes, 27648 turbineTicks, 15360 turbineTicks/s (in a UV Fusion Reactor)
+    PlasmaTurbine('iron',144,false); // 144mb / 1.8s, 144recipes, 16128 turbineTicks, 8960 turbineTicks/s
+    PlasmaTurbine('oxygen',72,true); // 1000mb / 1.6s, 200recipes, 9600 turbineTicks, 6000 turbineTicks/s
+    PlasmaTurbine('nitrogen',72,true); // 1000mb / 1.8s, 200recipes, 12800 turbineTicks, 7111 turbineTicks/s
+    PlasmaTurbine('argon',96,true); // 1000mb / 1.8s, 200recipes, 19200 turbineTicks, 5333 turbineTicks/s
+    PlasmaTurbine('helium',30,true); // 1000mb / .9s, 200recipes, 8000 turbineTicks, 8889 turbineTicks/s
     PlasmaTurbineTemp('americium',540,false); // 144mb / 7.8s, 144recipes, 46080 turbineTicks, 5908 turbineTicks/s
-    PlasmaTurbineTemp('tin',112,false); // 144mb / 1.8s, 144recipes, 18432 turbineTicks, 2560 turbineTicks/s
+    PlasmaTurbineTemp('tin',128,false); // 144mb / 1.8s, 144recipes, 18432 turbineTicks, 2560 turbineTicks/s
     PlasmaTurbineUnique('magmatic','infernal_concentrate',1440,false); // 144mb / 13.2s (iron plas time added), 144recipes, 57600 turbineTicks, 4364 turbineTicks/s
 
     // Helium < Nitrogen ~= Oxygen < Argon ~= Tin < Iron =< Nickel < Americium < Magmatic

@@ -29,8 +29,18 @@ ServerEvents.recipes(event => {
         .EUt(30);
 
     event.remove({ type: 'gtceu:electric_blast_furnace' , output: 'gtceu:aluminium_nugget' });
+    ['distillation_tower/distill_fish_oil','distillation_tower/distill_seed_oil','distillation_tower/distill_creosote',
+        'distillery/distill_fish_oil_to_lubricant','distillery/distill_seed_oil_to_lubricant','distillery/distill_creosote_to_lubricant'
+    ].forEach(gtID => {
+    event.remove({ id: `gtceu:${gtID}` });
+    });
+    ['minecraft:diorite','gtceu:alloy_smelter/diorite','minecraft:granite','gtceu:alloy_smelter/granite',
+        'minecraft:andesite','gtceu:alloy_smelter/andesite'].forEach( stoneID => {
+    event.remove({ id: stoneID });
+    });
 
-    event.remove({ type: 'gtceu:distillation_tower' , output: 'gtceu:lubricant' })
-    event.remove({ type: 'gtceu:distillery' , output: 'gtceu:lubricant' })
+    ['diorite','andesite','granite'].forEach(stoneType => {
+	event.recipes.create.mixing(`1x minecraft:${stoneType}`, [`exnihilosequentia:crushed_${stoneType}`, 'gtceu:stone_dust']).heatRequirement('superheated').id(`start:create_mixer/${stoneType}`);
+    });
 
 });
