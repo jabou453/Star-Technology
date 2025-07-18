@@ -110,6 +110,9 @@ ServerEvents.recipes(event => {
 
     event.remove({id:'gtceu:centrifuge/endstone_separation'});
 
+    event.remove({ id: 'gtceu:mixer/magnalium' });
+    event.remove({ id: 'gtceu:alloy_smelter/magnesium_dust_and_aluminium_dust_into_magnalium' });
+
     event.remove({output: 'gtceu:epoxy'}); // Temp for Eta
 
 });

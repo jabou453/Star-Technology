@@ -2,6 +2,8 @@ PlayerEvents.tick(event => {
     const { player } = event;
 
     // Sand Erosion
+    if (global.packmode !== 'abydos'){
+        (() => {
     if (player.hasEffect('kubejs:sand_erosion')) {
         
         let effects = ['minecraft:slowness'];
@@ -26,6 +28,8 @@ PlayerEvents.tick(event => {
         }
 
     }
+    })()
+    }   
 
     // Radiation Poisoning
     if (player.hasEffect('kubejs:radiation_poisoning')) {
