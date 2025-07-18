@@ -95,7 +95,7 @@ ServerEvents.recipes(event => {
         componentParts('microfluidic_flow_valve', [`gtceu:${Tier1}_fluid_regulator`, `gtceu:${Material}_small_fluid_pipe`, `2x gtceu:${Primary}_plate`, `6x gtceu:${Primary}_round`, `4x gtceu:${RubberR}_ring`, `6x gtceu:${Primary}_ring`],
             [`gtceu:${Plastic} ${396+Scaler*36}`], 320, `kubejs:${PriorTier}_microfluidic_flow_valve`);
         
-        componentParts('super_magnetic_core', [`gtceu:long_magnetic_${PrimaryMagnet}_rod`, `2x gtceu:magnetic_${SecondaryMagnet}_rod`, `3x gtceu:${Primary}_rod`, `24x gtceu:fine_${WireTypeMechanical}_wire`, `2x gtceu:${Tier1}_tiny_fluid_pipe`],
+        componentParts('super_magnetic_core', [`gtceu:long_magnetic_${PrimaryMagnet}_rod`, `2x gtceu:magnetic_${SecondaryMagnet}_rod`, `3x gtceu:${Primary}_rod`, `24x gtceu:fine_${WireTypeMechanical}_wire`, `2x gtceu:${Material}_tiny_fluid_pipe`],
             [`gtceu:${Coolant} 2500`], 300, `kubejs:${PriorTier}_super_magnetic_core`);
         
         componentParts('catalyst_core', [`4x gtceu:long_${Primary}_rod`, `${GlassType}`, `${CatalystType}`, `32x gtceu:fine_${SuperConductor}_wire`, `gtceu:${Tier1}_emitter`, `4x gtceu:${Support}_ring`],

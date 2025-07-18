@@ -1007,6 +1007,8 @@
     "block.gtceu.luv_me_assembler": "§dElite ME Assembler II",
 
     "block.gtceu.large_me_assembler": "Large ME Assembler",
+    "block.gtceu.large_me_assembler.tooltip.0": "A large version of the ME Assembler able to scale your needs even higher",
+    "block.gtceu.large_me_assembler.tooltip.1": "Can use §3Parallel§r hatches",
 
     "material.gtceu.skystone": "Skystone",
     "material.gtceu.gold_skystone_alloy": "Gold Skystone Alloy",
