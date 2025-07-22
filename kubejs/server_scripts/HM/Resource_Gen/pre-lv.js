@@ -204,7 +204,7 @@ ServerEvents.recipes(event => {
 		.circuit(0)
 		.inputFluids('minecraft:lava 10', 'minecraft:water 490')
 		.itemOutputs('4x exnihilosequentia:stone_pebble')
-		.duration(15);
+		.duration(10);
 
 	event.recipes.gtceu.stone_barrel(id('obsidian'))
 		.circuit(10)

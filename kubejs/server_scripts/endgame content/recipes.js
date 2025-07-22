@@ -67,21 +67,21 @@ ServerEvents.recipes(event => {
         .EUt(240000);
 
     event.recipes.gtceu.large_chemical_reactor(id('iron_titanium_oxide'))
-        .itemInputs('15x gtceu:ferrosilite_dust', '6x gtceu:titanium_oxide_dust')
-        .itemOutputs('gtceu:iron_titanium_oxide_dust', '9x gtceu:silicon_dioxide_dust')
-        .duration(4800)
+        .itemInputs('5x gtceu:ferrosilite_dust', '2x gtceu:titanium_oxide_dust')
+        .itemOutputs('4x gtceu:iron_titanium_oxide_dust', '3x gtceu:silicon_dioxide_dust')
+        .duration(960)
         .EUt(GTValues.VA[GTValues.LuV]);
 
     event.recipes.gtceu.mixer(id('astatine_bis_tritelluride_cobo_selenium'))
         .itemInputs('gtceu:astatine_dust', 'gtceu:bismuth_tritelluride_dust', '4x gtceu:cobalt_dust', 'gtceu:selenium_dust')
-        .itemOutputs('gtceu:astatine_bis_tritelluride_cobo_selenium_dust')
+        .itemOutputs('7x gtceu:astatine_bis_tritelluride_cobo_selenium_dust')
         .duration(360)
         .circuit(3)
         .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.mixer(id('astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide_dust'))
         .itemInputs('gtceu:astatine_bis_tritelluride_cobo_selenium_dust', 'gtceu:iron_titanium_oxide_dust')
-        .itemOutputs('gtceu:astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide_dust')
+        .itemOutputs('2x gtceu:astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide_dust')
         .duration(480)
         .circuit(1)
         .EUt(GTValues.VHA[GTValues.UHV]);
@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
         .itemInputs('3x gtceu:iridium_iv_oxide_dust', '2x gtceu:polonium_dust')
         .inputFluids('gtceu:phosphoric_acid 1000')
         .outputFluids('gtceu:polonium_iridide_acid 1000', 'gtceu:oxygen 2000')
-        .duration(1523)
+        .duration(1123)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('polonium_flux'))

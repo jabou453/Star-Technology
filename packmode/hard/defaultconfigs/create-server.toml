@@ -24,7 +24,7 @@
 	allowBrewingInMixer = false
 	#.
 	#Allow any shapeless crafting recipes to be processed by a Mechanical Mixer + Basin.
-	allowShapelessInMixer = true
+	allowShapelessInMixer = false
 	#.
 	#Allow any single-ingredient 2x2 or 3x3 crafting recipes to be processed by a Mechanical Press + Basin.
 	allowShapedSquareInPress = true
@@ -40,13 +40,13 @@
 	allowStonecuttingOnSaw = false
 	#.
 	#Allow any Druidcraft woodcutter recipes to be processed by a Mechanical Saw.
-	allowWoodcuttingOnSaw = true
+	allowWoodcuttingOnSaw = false
 	#.
 	#Allow Spouts to interact with Casting Tables and Basins from Tinkers' Construct.
-	allowCastingBySpout = true
+	allowCastingBySpout = false
 	#.
 	#Display vanilla Log-stripping interactions in JEI.
-	displayLogStrippingRecipes = true
+	displayLogStrippingRecipes = false
 	#.
 	#The amount of Light sources destroyed before Chromatic Compound turns into Refined Radiance.
 	#Range: > 1
