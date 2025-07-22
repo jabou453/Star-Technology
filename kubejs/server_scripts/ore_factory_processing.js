@@ -104,10 +104,10 @@ const fluids = {
     distilled_water: 'gtceu:distilled_water 100',
     sodium_persulfate: 'gtceu:sodium_persulfate 100',
     sodium_persulfate_5x: 'gtceu:sodium_persulfate 500',
-    water_bulk: 'minecraft:water 204800',
-    distilled_bulk: 'gtceu:distilled_water 204800',
-    sodium_persulfate_bulk: 'gtceu:sodium_persulfate 204800',
-    sodium_persulfate_5x_bulk: 'gtceu:sodium_persulfate 1024000'
+    water_bulk: 'minecraft:water 25600',
+    distilled_bulk: 'gtceu:distilled_water 25600',
+    sodium_persulfate_bulk: 'gtceu:sodium_persulfate 25600',
+    sodium_persulfate_5x_bulk: 'gtceu:sodium_persulfate 128000'
 };
 
 /*
