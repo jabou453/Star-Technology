@@ -203,10 +203,10 @@ ServerEvents.recipes(event => {
     CleanroomCasing('cleanroom_glass','6x gtceu:glass_plate')
 
     event.recipes.gtceu.assembler(id('filter_casing'))
-        .itemInputs('gtceu:plascrete', '2x gtceu:mv_electric_motor', 'gtceu:steel_rotor',
+        .itemInputs('2x gtceu:plascrete', '2x gtceu:mv_electric_motor', 'gtceu:steel_rotor',
             '12x gtceu:steel_rod', '2x gtceu:copper_single_cable')
         .inputFluids('gtceu:soldering_alloy 216')
-        .itemOutputs('gtceu:filter_casing')
+        .itemOutputs('2x gtceu:filter_casing')
         .duration(400)
         .EUt(480);
         

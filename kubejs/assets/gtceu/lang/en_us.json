@@ -42,6 +42,7 @@
     "block.gtceu.chemical_plant.tooltip.2": "Can use §3Parallel§r hatches",
 
     "block.gtceu.component_part_assembly.tooltip.0": "§7An assembler that can micro craft some incredibly complex components that are too detailed for a normal assembler.",
+    "block.gtceu.component_part_assembly.tooltip.1": "Has §cSubtick Parallels§r and §9Assembly Line Logic",
 
     "block.gtceu.exotic_gas_siphon.tooltip.0": "§f§lGas Collector",
     "block.gtceu.exotic_gas_siphon.tooltip.1": "§7Utilising precision filtration and molecular isolation technologies, it efficiently separates exotic compounds from ambient environments, ensuring high-purity yields for any applications.",
@@ -447,6 +448,11 @@
     "gtceu.solid_blast_furnace": "Solid Blast Furnace",
 
     "gtceu.jei.ore_vein.zapolite_vein": "Abydos Zapolite Vein",
+    "gtceu.jei.ore_vein.lautarite_vein": "Abydos Lautarite Vein",
+    "gtceu.jei.ore_vein.clausthalite_vein": "Abydos Clausthalite Vein",
+    "gtceu.jei.ore_vein.brimstone_patch": "Nether Brimstone Patch",
+    "gtceu.jei.ore_vein.berzelianite_vein": "Abydos Berzelianite Vein",
+    "gtceu.jei.ore_vein.cryostone_patch": "Nether Cryostone Patch",
     "material.gtceu.gritty_akreyrium": "Gritty Akreyrium",
     "material.gtceu.lepton_sparse_akreyrium": "Lepton-Sparse Akreyrium",
     "material.gtceu.lepton_flux_akreyrium": "Lepton-Flux Akreyrium",
@@ -860,7 +866,7 @@
     "gtceu.draco_circuit_assembler": "Draconic Circuit Assembler",
     "block.gtceu.draco_circuit_assembler": "Draconic Circuit Assembler",
     "block.gtceu.draco_circuit_assembler.tooltip.0": "§7A circuit fabrication nexus weaving more advanced processors. It assembles high-tier circuits while mass-assembling lesser circuits with extreme precision.",
-    "block.gtceu.draco_circuit_assembler.tooltip.1": "Can use §3Parallel§r hatches",
+    "block.gtceu.draco_circuit_assembler.tooltip.1": "Has §cSubtick Parallels§r and §9Assembly Line Logic§r. Can use §3Parallel§r hatches",
 
     "gtceu.quantum_cooling": "Quantum Cooling",
     "gtceu.bulk_vacuum_cooling": "Bulk Vacuum Cooling",
@@ -924,7 +930,8 @@
     "block.gtceu.component_chamber": "Component Chamber",
     "gtceu.component_chamber": "Component Chamber",
     "block.gtceu.machine_facility": "Machine Facility",
-    "gtceu.machine_facility": "Machine Facility",
+    "gtceu.simple_machine_facility": "Simple Machine Facility",
+    "gtceu.advanced_machine_facility": "Advanced Machine Facility",
     "block.gtceu.electric_sifter": "Electric Sifter",
     "gtceu.electric_sifter": "Electric Sifter",
     "gtceu.gt_blasting": "Blasting",
@@ -1006,6 +1013,8 @@
     "block.gtceu.luv_me_assembler": "§dElite ME Assembler II",
 
     "block.gtceu.large_me_assembler": "Large ME Assembler",
+    "block.gtceu.large_me_assembler.tooltip.0": "A large version of the ME Assembler able to scale your needs even higher",
+    "block.gtceu.large_me_assembler.tooltip.1": "Can use §3Parallel§r hatches",
 
     "material.gtceu.skystone": "Skystone",
     "material.gtceu.gold_skystone_alloy": "Gold Skystone Alloy",

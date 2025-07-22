@@ -27,6 +27,12 @@ ServerEvents.recipes(event => {
     })()
     }
 
+    // Temp for Eta
+    event.recipes.gtceu.macerator(id('shard_recycle'))
+        .itemInputs('mysticalagradditions:nether_star_shard')
+        .itemOutputs('gtceu:small_nether_star_dust')
+        .duration(20)
+        .EUt(8);
 
     event.replaceInput({id: 'create:crafting/kinetics/goggles'}, '#forge:plates/gold', 'gtceu:copper_plate');
 

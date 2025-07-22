@@ -19,8 +19,8 @@ ServerEvents.recipes(event => {
     });
     event.remove({ input: 'gtceu:platinum_salt_gem' });
     event.remove({ input: 'gtceu:palladium_salt_gem' });
-    event.remove({ input: 'gtceu:exquisite_platinum_salt_gem' });
-    event.remove({ input: 'gtceu:exquisite_palladium_salt_gem' });
+    // event.remove({ input: 'gtceu:exquisite_platinum_salt_gem' });
+    // event.remove({ input: 'gtceu:exquisite_palladium_salt_gem' });
     event.remove({ output: 'gtceu:exquisite_platinum_salt_gem' });
     event.remove({ output: 'gtceu:exquisite_palladium_salt_gem' });
     event.remove({ output: 'gtceu:platinum_salt_gem' , type: 'gtceu:implosion_compressor' });

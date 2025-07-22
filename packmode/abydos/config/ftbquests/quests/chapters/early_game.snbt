@@ -2261,7 +2261,7 @@
 		}
 		{
 			dependencies: ["6B059D530FCE7428"]
-			description: ["While consuming more steam their than earlier counter-parts (if at all), they are able to run multiple of the same recipe at once with no extra cost or time making it a great feature for bulk processing early on."]
+			description: ["While consuming more steam than their earlier counter-parts (if at all), they are able to run multiple of the same recipe at once with no extra cost or time making it a great feature for bulk processing early on."]
 			icon: "minecraft:book"
 			id: "27F5DD0860E43CFF"
 			tasks: [{

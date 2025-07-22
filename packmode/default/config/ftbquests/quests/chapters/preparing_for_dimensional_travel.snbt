@@ -861,7 +861,6 @@
 		{
 			dependencies: ["3ECCE739DE8F5F2C"]
 			description: ["A parallel EBF. Nothing needs to be said, just get it right now."]
-			icon: "minecraft:cooked_chicken"
 			id: "2EE4C6540FE3D4CF"
 			optional: true
 			rewards: [{
@@ -881,7 +880,6 @@
 		{
 			dependencies: ["3ECCE739DE8F5F2C"]
 			description: ["A parallel freezer. Very much necessary to keep up with the RHF on the left."]
-			icon: "minecraft:ice"
 			id: "17C47EC4E8337D7B"
 			optional: true
 			rewards: [{
