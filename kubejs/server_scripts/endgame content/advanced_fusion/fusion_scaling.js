@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
     Fusion('paradox_plasma',144,'chaos_centric_void',500,'order_centric_void',500,294912,16.2,900);
     Fusion('magmatic_plasma',144,'infernal_concentrate',500,'iron_plasma',288,66666,19.2,720);
     Fusion('voidic_plasma',144,'echo_r',576,'void',144,344064,27,1040);
-    Fusion('preon_plasma',144,'utopian_akreyrium',1000,'dragon_breath',50,688128,19.2,1160);
+    Fusion('preon_plasma',216,'utopian_akreyrium',1000,'dragon_breath',50,688128,19.2,1160);
 
     // Plasma Turbine
     event.remove({type: 'gtceu:plasma_generator'});

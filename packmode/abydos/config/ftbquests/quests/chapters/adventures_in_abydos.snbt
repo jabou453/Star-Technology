@@ -2173,7 +2173,7 @@
 			tasks: [{
 				icon: "sgjourney:sandstone_cartouche"
 				id: "7B142445383BC74F"
-				structure: "common_stargates:cartouche/abydos_cartouche"
+				structure: "sgjourney:cartouche/abydos_cartouche"
 				title: "Buried Tombs"
 				type: "structure"
 			}]

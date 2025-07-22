@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
     WirelessTiers('uv', 'gtceu:uhpic_chip', 'yttrium_barium_cuprate', 'darmstadtium', GTValues.VHA[GTValues.UV], 96, .5);
     WirelessTiers('uhv', 'gtceu:uhpic_chip', 'europium', 'neutronium', GTValues.VHA[GTValues.UHV], 144, 2);
     WirelessTiers('uev', 'kubejs:uepic_chip', 'cerium_tritelluride', 'mythrolic_alloy', GTValues.VHA[GTValues.UEV], 192, 3);
-    // WirelessTiers('uiv', 'kubejs:uipic_chip', 'polonium_bismide', 'tbd', GTValues.VHA[GTValues.UIV], 240, 4);
+    WirelessTiers('uiv', 'kubejs:uepic_chip', 'polonium_bismide', 'chaotixic_alloy', GTValues.VHA[GTValues.UIV], 240, 4);
     // UXV Tier
     // OpV Tier
     // MAX Tier
