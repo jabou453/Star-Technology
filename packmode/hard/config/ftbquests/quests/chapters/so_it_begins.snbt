@@ -2050,6 +2050,9 @@
 				"6C4B325AEF8A5B7D"
 				"477E9725E09A6093"
 			]
+			description: [
+				"Click the top with a &cFire Starter&r to ignite this initially"
+			]
 			hide_dependent_lines: true
 			id: "5819AF3E6CCDB826"
 			tasks: [{
