@@ -244,6 +244,9 @@ ServerEvents.recipes(event => {
 			.duration(200 * burn);
 		});
 
+	event.recipes.create.cutting(`2x gtceu:treated_wood_slab`,`gtceu:treated_wood_planks`).id(`start:cutting/treated_slab`);
+	event.recipes.create.cutting(`gtceu:treated_wood_rod`,`gtceu:treated_wood_slab`).id(`start:cutting/treated_stick`);
+
 	[
 		'oak',
 		'spruce',
@@ -281,7 +284,10 @@ ServerEvents.recipes(event => {
 
 		event.remove({ id: `create:cutting/${log}_log` });
 		const log_type = (log == 'bamboo') ? 'block' : ((log == 'crimson' || log == 'warped') ? 'stem' : 'log');
-		event.recipes.create.cutting([`minecraft:stripped_${log}_${log_type}`, 'farmersdelight:tree_bark'], `minecraft:${log}_log`).id(`start:cutting/stripped_${log}_log`);
+		event.recipes.create.cutting([`minecraft:stripped_${log}_${log_type}`, 'farmersdelight:tree_bark'], `minecraft:${log}_log`).id(`start:cutting/stripped_${log}_${log_type}`);
+		event.recipes.create.cutting(`4x minecraft:${log}_planks`,`minecraft:stripped_${log}_${log_type}`).id(`start:cutting/${log}_plank`);
+		event.recipes.create.cutting(`2x minecraft:${log}_slab`,`minecraft:${log}_planks`).id(`start:cutting/${log}_slab`);
+		event.recipes.create.cutting(`minecraft:stick`,`minecraft:${log}_slab`).id(`start:cutting/stick_${log}`);
 
 		if (log == 'bamboo') return;
 

@@ -307,8 +307,7 @@ ServerEvents.recipes(event => {
         E: 'gtceu:electrum_plate'
     }).id('start:shaped/energy_cell_frame');
 
-    if (global.packmode !== 'hard'){
-        (() => {   
+    if (global.packmode !== 'hard'){(() => {   
     
     event.shaped(Item.of('thermal:fluid_cell_frame'), [
         'BTB',
@@ -319,8 +318,10 @@ ServerEvents.recipes(event => {
         T: 'gtceu:tin_plate',
         G: '#forge:glass'
     }).id('start:shaped/fluid_cell_frame');
-    })()
-    }
+
+    event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('start:smelting/slitake');
+    
+    })()}
 
     event.shaped(Item.of('thermal:machine_frame'), [
         'SSS',
@@ -358,7 +359,5 @@ ServerEvents.recipes(event => {
         .itemOutputs('systeams:steam_dynamo')
         .duration(320)
         .EUt(112);
-
-    event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('kjs:smelting/slitake');
 
 });

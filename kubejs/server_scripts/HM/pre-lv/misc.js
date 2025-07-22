@@ -127,7 +127,7 @@ ServerEvents.recipes(event => {
 		T: 'thermal:redstone_servo'
 	}).id('start:mechanical_crafting/latex_plantation');
 
-	event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('kjs:smelting/slitake_manual_only').id('start:smelting/slime_ball');
+	event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('start:smelting/slime_ball');
 
 	event.replaceInput({ output: 'toms_storage:ts.storage_terminal' }, 'minecraft:glowstone', '#gtceu:circuits/ulv');
 	event.replaceInput({ output: 'toms_storage:ts.storage_terminal' }, '#forge:chests/wooden', 'toms_storage:ts.trim');

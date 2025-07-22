@@ -63,6 +63,9 @@ ServerEvents.recipes(event => {
 		let GT_id = ( ore == 'aluminum') ? 'aluminium' : ore ;
 	event.replaceOutput({ output: `create:crushed_raw_${ore}` }, `create:crushed_raw_${ore}`, `gtceu:crushed_${GT_id}_ore`);
 	});
+
+	event.remove({ type: 'create:cutting' });
+
 });
 
 ServerEvents.afterRecipes(event => {

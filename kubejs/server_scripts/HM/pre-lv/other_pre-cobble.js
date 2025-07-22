@@ -479,6 +479,6 @@ ServerEvents.recipes(event => {
 		S: 'thermal:redstone_servo'
 	}).id('start:mechanical_crafting/ulv_advanced_composter');
 
-	event.recipes.create.mixing('8x minecraft:tuff', ['8x minecraft:gravel', Fluid.of('minecraft:lava', 100)]).heatRequirement('superheated').id('start:create_mixer/tuff');
+	event.recipes.create.mixing('8x minecraft:tuff', ['8x minecraft:gravel', Fluid.of('minecraft:lava', 10)]).heatRequirement('superheated').id('start:create_mixer/tuff');
 
 });
