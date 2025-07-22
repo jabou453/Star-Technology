@@ -34,13 +34,13 @@ ServerEvents.recipes(event => {
             .inputFluids('gtceu:soldering_alloy 144')
             .itemOutputs(`ae2:${type}_storage_cell_${tier}k`)
             .duration(400)
-            .EUt(128*tier);
+            .EUt(128);
 
         event.recipes.gtceu.canner(id(`${type}_storage_cell_${tier}k`))
             .itemInputs(`ae2:${type}_cell_housing`, `ae2:cell_component_${tier}k`)
             .itemOutputs(`ae2:${type}_storage_cell_${tier}k`)
             .duration(400)
-            .EUt(128*tier);
+            .EUt(128);
             
         event.recipes.gtceu.packer(id(`${type}_cell_${tier}k_uncrafting`))
             .itemInputs(`ae2:${type}_storage_cell_${tier}k`)
@@ -160,13 +160,13 @@ ServerEvents.recipes(event => {
             .inputFluids('gtceu:soldering_alloy 144')
             .itemOutputs(`ae2:spatial_storage_cell_${tier}`)
             .duration(400)
-            .EUt(128*tier);
+            .EUt(128);
 
         event.recipes.gtceu.canner(id(`spatial_storage_cell_${tier}`))
             .itemInputs('ae2:item_cell_housing', `ae2:spatial_cell_component_${tier}`)
             .itemOutputs(`ae2:spatial_storage_cell_${tier}`)
             .duration(400)
-            .EUt(128*tier);
+            .EUt(128);
             
         event.recipes.gtceu.packer(id(`spatial_cell_${tier}_uncrafting`))
             .itemInputs(`ae2:spatial_storage_cell_${tier}`)
