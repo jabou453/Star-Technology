@@ -246,6 +246,7 @@ ServerEvents.recipes(event => {
 
 	event.recipes.create.cutting(`2x gtceu:treated_wood_slab`,`gtceu:treated_wood_planks`).id(`start:cutting/treated_slab`);
 	event.recipes.create.cutting(`gtceu:treated_wood_rod`,`gtceu:treated_wood_slab`).id(`start:cutting/treated_stick`);
+	event.recipes.create.cutting(`3x create:shaft`,`create:andesite_alloy`).id(`start:cutting/shaft`);
 
 	[
 		'oak',

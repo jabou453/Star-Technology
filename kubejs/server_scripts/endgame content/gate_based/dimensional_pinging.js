@@ -26,7 +26,7 @@ ServerEvents.recipes(event => {
             'gtceu:echo_r 11520'
         )
         .itemOutputs('gtceu:dimensional_finder')
-        .duration(36000)
+        .duration(3600)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('kubejs:coordinate_crystal'))
@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
         (() => { 
         event.recipes.gtceu.dimensional_finder(id('abydos_coordinate_crystal'))
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
-            .inputFluids('gtceu:naquadria 9072')
+            .inputFluids('gtceu:naquadria 7200')
             .chancedOutput('kubejs:abydos_coordinate_crystal', 500, 0)
             .duration(150 * 20)
             .EUt(GTValues.VA[GTValues.UV])
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
         (() => {
         event.recipes.gtceu.dimensional_finder(id('abydos_coordinate_crystal'))
             .itemInputs('kubejs:coordinate_crystal', 'minecraft:sand', 'gtceu:uv_sensor')
-            .inputFluids('gtceu:naquadria 9072')
+            .inputFluids('gtceu:naquadria 7200')
             .chancedOutput('kubejs:abydos_coordinate_crystal', 9900, 0)
             .duration(10 * 20)   
             .EUt(GTValues.VA[GTValues.UV])

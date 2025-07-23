@@ -91,10 +91,10 @@ ServerEvents.recipes(event => {
         const { singularity, plate, plating, tier, duration_multiplier } = foo;
 
         for (let i = 1; i <= 4; i++) {
-            // Each option adds 25 seconds
-            let duration = 4000 * duration_multiplier + (i - 1) * 500;
+            // Each option adds 10 seconds scaled by their duration multiplier. This makes "longer" runes feel more impactful and shorter ones less painful, hence scaling difficultly
+            let duration = duration_multiplier * ( 4000 + (i - 1) * 200 );
             // Each option adds 20% more energy consumption
-            let eut = GTValues.VHA[GTValues.LuV + Math.floor(tier)] + i * 0.5 * GTValues.VHA[GTValues.LuV + Math.floor(tier)];
+            let eut = GTValues.V[GTValues.LuV + Math.floor(tier)] * .55 /*+ i * 0.5 * GTValues.VHA[GTValues.LuV + Math.floor(tier)]*/; //Changed for no free Para, but no EU scaling makes easier to OC for reduction
             // Each option decreases the chance of consuming the singularity by 25%
             let chance = 10000 - (i - 1) * 2500;
             // Each option increases the infusion consumption by 1 mB
@@ -107,7 +107,7 @@ ServerEvents.recipes(event => {
                 .inputFluids(`gtceu:runic_convergence_infusion ${consumption}`)
                 .perTick(false)
                 .itemOutputs(`kubejs:${plating}`)
-                .blastFurnaceTemp(10500 + (tier >= 2.5) ? 1000 : 0)
+                // .blastFurnaceTemp(10500 + (tier >= 2.5) ? 1000 : 0)  // Has no Use
                 .duration(duration)
                 .EUt(eut)
                 .circuit(i);
@@ -125,7 +125,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('runic_tablet'))
         .itemInputs('kubejs:runic_tablet_1','kubejs:runic_tablet_2','kubejs:runic_tablet_3','kubejs:runic_tablet_4','kubejs:runic_tablet_5','kubejs:runic_tablet_6')
-        .inputFluids('gtceu:naquadria 11520')
+        .inputFluids('gtceu:naquadria 21600')
         .itemOutputs('kubejs:runic_tablet_complete')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UHV])
@@ -134,7 +134,8 @@ ServerEvents.recipes(event => {
     for (let i = 1; i <= 6; i++) {
         let o = (i === 6) ? 1 : i + 1;
     event.recipes.gtceu.scanner(`runic_tablet_${i}_to_${o}`)
-        .itemInputs(`gtceu:ancient_runicalium_foil`,`2x kubejs:runic_tablet_${i}`)
+        .itemInputs(`16x gtceu:ancient_runicalium_foil`,`1x kubejs:runic_tablet_${i}`) //Gives more control over tablet type (reduced exploration rng)
+        .inputFluids('gtceu:naquadria 1080')        
         .itemOutputs(`kubejs:runic_tablet_${o}`)
         .duration(600)
         .EUt(GTValues.VHA[GTValues.UV]);

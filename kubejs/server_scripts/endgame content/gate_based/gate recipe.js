@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
                 .EUt(GTValues.VHA[GTValues.UV])
                 .CWUt(48)
             )
-        .duration(36000)
+        .duration(2400)
         .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.assembly_line(id('super_heat_chamber'))
@@ -42,14 +42,14 @@ ServerEvents.recipes(event => {
                 .EUt(GTValues.VHA[GTValues.UV])
                 .CWUt(64)
             )
-            .duration(46000)
+            .duration(3200)
             .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.assembly_line(id('super_compact_heat_chamber'))
         .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uhv', 'gtceu:double_stellarium_plate', 
                 'gtceu:double_titanium_tungsten_carbide_plate', 'gtceu:uhv_field_generator', '64x gtceu:uhpic_chip', 
                 '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip',
-                '64x gtceu:uhpic_chip', '32x gtceu:uhpic_chip', '48x gtceu:runicalium_single_wire')
+                '32x gtceu:uhpic_chip', '48x gtceu:ancient_runicalium_single_wire')
         .inputFluids('gtceu:hsse 6912', 'gtceu:tritanium 1728')
         .itemOutputs('gtceu:super_compact_heat_chamber')
         .stationResearch(
@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UHV])
             .CWUt(160)
         )
-        .duration(56000)
+        .duration(4800)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.assembly_line(id('large_rotor_machine'))
@@ -73,7 +73,7 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UV])
             .CWUt(64)
         )
-        .duration(12000)
+        .duration(3000)
         .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.assembly_line(id('runic_engraver'))
@@ -88,7 +88,7 @@ ServerEvents.recipes(event => {
                 .EUt(GTValues.VHA[GTValues.UV])
                 .CWUt(128)
             )
-            .duration(82000)
+            .duration(6000)
             .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.assembly_line(id('quantum_compressor'))
@@ -98,7 +98,13 @@ ServerEvents.recipes(event => {
                     '64x gtceu:uhpic_chip', '32x gtceu:uhpic_chip', '48x gtceu:tritanium_screw')
             .inputFluids('gtceu:hsse 5184', 'gtceu:hssg 5184', 'gtceu:hsss 5184')
             .itemOutputs('gtceu:large_quantum_compressor')
-            .duration(42000)
+            .stationResearch(
+                researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:uv_compressor'))
+                .EUt(GTValues.VHA[GTValues.UV])
+                .CWUt(128)
+            )
+            .duration(2400)
             .EUt(GTValues.VHA[GTValues.UV]);
     
     event.recipes.gtceu.assembly_line(id('stargate_component_assembly'))
@@ -108,14 +114,14 @@ ServerEvents.recipes(event => {
                     '56x gtceu:stellarium_screw', '32x gtceu:melodium_single_wire')
             .inputFluids('gtceu:prismalium 36864', 'gtceu:pcb_coolant 64000', 'gtceu:osmiridium 73728')
             .itemOutputs('gtceu:stargate_component_assembly')
-            .duration(128000)
+            .duration(6400)
             .stationResearch(
         researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('kubejs:stargate_rod'))
                 .EUt(GTValues.VHA[GTValues.UV])
                 .CWUt(144)
             )
-            .EUt(GTValues.VHA[GTValues.UV]);
+            .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.assembly_line(id('gate_assembly'))
             .itemInputs('gtceu:ancient_runicalium_frame', '32x #gtceu:circuits/uhv', '8x gtceu:uhv_field_generator', '8x kubejs:uhv_catalyst_core', 
@@ -124,14 +130,14 @@ ServerEvents.recipes(event => {
                     '56x gtceu:ancient_runicalium_screw', '32x gtceu:stellarium_single_wire')
             .inputFluids('gtceu:stellarium 36864', 'gtceu:akreyrium_pcb_graphite_nanoparticle_coolant 64000', 'gtceu:tritanium 73728')
             .itemOutputs('gtceu:gate_assembly')
-            .duration(128000)
+            .duration(9600)
             .stationResearch(
         researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('gtceu:stargate_component_assembly'))
                 .EUt(GTValues.VHA[GTValues.UHV])
                 .CWUt(144)
             )
-            .EUt(GTValues.VHA[GTValues.UHV]);
+            .EUt(GTValues.VHA[GTValues.UEV]);
                 
     event.recipes.gtceu.assembly_line(id('drackion_runic_laser_gen'))
             .itemInputs('gtceu:exquisite_runic_laser_source_base_gem', '2x gtceu:uv_field_generator', '4x gtceu:uv_sensor', '4x gtceu:uv_emitter', 
@@ -146,7 +152,7 @@ ServerEvents.recipes(event => {
                     .EUt(GTValues.VHA[GTValues.UV])
                     .CWUt(128)
             )
-            .duration(64000)
+            .duration(24000)
             .EUt(GTValues.VHA[GTValues.ZPM]);
 
     event.recipes.gtceu.assembler(id('laser_casing'))
