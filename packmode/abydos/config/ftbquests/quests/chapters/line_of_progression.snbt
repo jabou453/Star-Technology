@@ -221,8 +221,8 @@
 		{
 			id: "1D9B1F10D853D607"
 			linked_quest: "14417CCE1E25C9C6"
-			x: -13.0d
-			y: -22.5d
+			x: -18.0d
+			y: -21.0d
 		}
 		{
 			id: "5906FFC09AD776DA"
@@ -240,25 +240,25 @@
 			id: "29C41C8067A33A92"
 			linked_quest: "22BC7BDE5E132A30"
 			x: -18.0d
-			y: -21.0d
+			y: -18.0d
 		}
 		{
 			id: "5D754D0F151C19E0"
 			linked_quest: "6AC8588F6172617D"
 			x: -18.0d
-			y: -15.5d
+			y: -14.0d
 		}
 		{
 			id: "0E8B8DC038F36861"
 			linked_quest: "63A83F8EC256BE94"
 			x: -18.0d
-			y: -14.0d
+			y: -15.0d
 		}
 		{
 			id: "1DD2FE27D7803ABB"
 			linked_quest: "1820787D031EAB15"
 			x: -11.5d
-			y: -17.5d
+			y: -16.0d
 		}
 		{
 			id: "3B7B8853F2299D4D"
@@ -269,8 +269,8 @@
 		{
 			id: "336508F193ECD87F"
 			linked_quest: "59711F987DE95924"
-			x: -13.0d
-			y: -31.0d
+			x: -14.5d
+			y: -29.5d
 		}
 		{
 			id: "3C58025F18501529"
@@ -281,14 +281,14 @@
 		{
 			id: "257E0109D4E6C15D"
 			linked_quest: "6D169C5E35C9EF6C"
-			x: -14.5d
-			y: -32.5d
+			x: -13.0d
+			y: -31.0d
 		}
 		{
 			id: "6C146A3CFDB256A1"
 			linked_quest: "1004D6D7636E0321"
 			x: -11.5d
-			y: -32.5d
+			y: -31.0d
 		}
 		{
 			id: "387162CF368FDBCD"
@@ -306,7 +306,7 @@
 			id: "50E9A2BECB7A50FB"
 			linked_quest: "64F0BB858EEB7913"
 			x: -11.5d
-			y: -31.0d
+			y: -32.5d
 		}
 		{
 			id: "223347A561E2437A"
@@ -317,8 +317,8 @@
 		{
 			id: "66DBD9AF4CDBC12F"
 			linked_quest: "2EE4C6540FE3D4CF"
-			x: -16.5d
-			y: -31.0d
+			x: -13.0d
+			y: -22.5d
 		}
 		{
 			id: "17589AD800EE0BFB"
@@ -335,8 +335,8 @@
 		{
 			id: "278B867C320470BF"
 			linked_quest: "6356F875511B2610"
-			x: 6.0d
-			y: -15.5d
+			x: 7.5d
+			y: -14.0d
 		}
 		{
 			id: "0AC6062ECBE46015"
@@ -356,30 +356,14 @@
 			x: -16.5d
 			y: -24.5d
 		}
+		{
+			id: "3550D612E8D3318D"
+			linked_quest: "665FC02BC2BC414F"
+			x: -11.5d
+			y: -21.5d
+		}
 	]
 	quests: [
-		{
-			dependencies: ["22BC7BDE5E132A30"]
-			id: "6D775A2A1E350BC6"
-			tasks: [{
-				id: "75026AAB9D9D3C23"
-				item: "gtceu:hv_fluid_drilling_rig"
-				type: "item"
-			}]
-			x: -18.0d
-			y: -19.5d
-		}
-		{
-			dependencies: ["6D775A2A1E350BC6"]
-			id: "0ED5E8AC0475F563"
-			tasks: [{
-				id: "366F75A06808A17C"
-				item: "gtceu:ev_fluid_drilling_rig"
-				type: "item"
-			}]
-			x: -18.0d
-			y: -18.0d
-		}
 		{
 			dependencies: ["170C262792DA7123"]
 			disable_toast: true
@@ -428,7 +412,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -32.5d
+			y: -30.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -439,7 +423,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -32.5d
+			y: -30.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -450,7 +434,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -29.5d
+			y: -27.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -461,7 +445,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -29.5d
+			y: -27.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -472,7 +456,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -26.5d
+			y: -24.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -483,7 +467,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -26.5d
+			y: -24.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -494,7 +478,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -23.5d
+			y: -21.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -505,7 +489,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -23.5d
+			y: -21.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -516,7 +500,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -20.5d
+			y: -18.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -527,7 +511,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -20.5d
+			y: -18.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -538,7 +522,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -17.5d
+			y: -15.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -549,7 +533,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -19.0d
+			y: -17.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -560,7 +544,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -22.0d
+			y: -20.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -571,7 +555,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -22.0d
+			y: -20.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -582,7 +566,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -19.0d
+			y: -17.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -593,7 +577,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -28.0d
+			y: -26.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -604,7 +588,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -25.0d
+			y: -23.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -615,7 +599,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -25.0d
+			y: -23.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -626,7 +610,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -31.0d
+			y: -29.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -637,7 +621,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -31.0d
+			y: -29.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -648,7 +632,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: -28.0d
+			y: -26.0d
 		}
 		{
 			dependencies: ["0E88CB5E68212006"]
@@ -802,7 +786,7 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -19.0d
+			y: -17.5d
 		}
 		{
 			dependencies: [
@@ -826,8 +810,8 @@
 				item: "gtceu:mega_vacuum_freezer"
 				type: "item"
 			}]
-			x: -16.5d
-			y: -29.5d
+			x: -11.5d
+			y: -23.0d
 		}
 		{
 			dependencies: ["2F4B998D20856E2B"]
@@ -838,8 +822,8 @@
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
-			x: -11.5d
-			y: -22.5d
+			x: -18.0d
+			y: -19.5d
 		}
 		{
 			dependencies: ["4B51B15B49620F57"]
@@ -1301,8 +1285,8 @@
 				item: "gtceu:cobbleworks"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -15.5d
+			x: -18.0d
+			y: -16.5d
 		}
 		{
 			dependencies: ["1F5CCE8CFD02903A"]
@@ -1313,7 +1297,7 @@
 				type: "item"
 			}]
 			x: -13.0d
-			y: -24.5d
+			y: -24.0d
 		}
 		{
 			dependencies: ["649596731FFA9C9A"]
@@ -1397,7 +1381,7 @@
 		}
 		{
 			dependencies: ["1C9396E2587051F7"]
-			description: ["These are currently not craftable but will be soon......"]
+			description: [""]
 			id: "4DF812EEFB4FD1C3"
 			optional: true
 			subtitle: "Fourth and Last ZPM Circuit"
@@ -1458,7 +1442,7 @@
 				type: "item"
 			}]
 			x: -11.5d
-			y: -20.5d
+			y: -19.0d
 		}
 		{
 			dependencies: ["3E1CA9FFB9953F42"]
@@ -1473,7 +1457,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -17.5d
+			y: -15.5d
 		}
 		{
 			dependencies: ["1A8F645AC1B30411"]
@@ -1548,7 +1532,7 @@
 				type: "item"
 			}]
 			x: -14.5d
-			y: -29.5d
+			y: -32.5d
 		}
 		{
 			dependencies: ["707C2E9BA62A60C5"]
@@ -1585,6 +1569,50 @@
 			}]
 			x: -5.0d
 			y: -30.5d
+		}
+		{
+			dependencies: ["6C8C6EA426060065"]
+			id: "4EB51296C24A7AEB"
+			tasks: [{
+				id: "6808DD2FC6753A87"
+				item: "start_core:uev_fusion_reactor"
+				type: "item"
+			}]
+			x: -16.5d
+			y: -31.0d
+		}
+		{
+			dependencies: ["26172AE6B7457FF3"]
+			id: "2F433D6475315B10"
+			tasks: [{
+				id: "1C467DA0649A64D1"
+				item: "kubejs:magmada_alloy_coil_block"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -32.5d
+		}
+		{
+			dependencies: ["2F433D6475315B10"]
+			id: "21A2A4E7121B56DC"
+			tasks: [{
+				id: "4728FB2F32BFDD15"
+				item: "kubejs:abyssal_alloy_coil_block"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -32.5d
+		}
+		{
+			dependencies: ["59711F987DE95924"]
+			id: "3976CCA42F853819"
+			tasks: [{
+				id: "215C9C0F2D0A719F"
+				item: "gtceu:super_compact_heat_chamber"
+				type: "item"
+			}]
+			x: -16.0d
+			y: -29.5d
 		}
 	]
 	title: "Line Of Progression"

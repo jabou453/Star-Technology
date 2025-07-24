@@ -175,7 +175,7 @@ ServerEvents.recipes(event => {
     AllTierMachine('rock_crusher', [Hull, Piston, Motor, Head, '3x '+Glass, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('fisher', [Hull, '2x '+Piston, '3x '+Motor, '2x '+Circuit, Pump, '32x #forge:string'], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('charger_4x', [Hull, '4x '+PWire4x, Chest, Circuit, '2x '+Cable1x], [Solder+' 144']);
-    AllTierMachine('muffler_hatch', [Hull, Motor, Rotor, Cable1x], [Solder+' 144']);
+    AllTierMachine('muffler_hatch', [Hull, Motor, Rotor, '2x '+Cable1x,  `gtceu:${rotor}_rod`,  `gtceu:${rotor}_ring`], [Solder+' 144']);
     if (tier === 'lv' || 'mv' || 'hv' || 'ev') {
     AllTierMachine('item_collector', [Hull, '3x '+Rotor, '2x '+Motor, '2x '+Circuit, Cable1x], [Solder+' 144']);
     if (tier !== 'ev') {

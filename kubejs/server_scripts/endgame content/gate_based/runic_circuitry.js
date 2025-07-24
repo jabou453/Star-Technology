@@ -91,8 +91,8 @@ ServerEvents.recipes(event => {
         const { singularity, plate, plating, tier, duration_multiplier } = foo;
 
         for (let i = 1; i <= 4; i++) {
-            // Each option adds 10 seconds scaled by their duration multiplier. This makes "longer" runes feel more impactful and shorter ones less painful, hence scaling difficultly
-            let duration = duration_multiplier * ( 4000 + (i - 1) * 200 );
+            // Each option adds 25 seconds
+            let duration = 4000 * duration_multiplier + (i - 1) * 500;
             // Each option adds 20% more energy consumption
             let eut = GTValues.V[GTValues.LuV + Math.floor(tier)] * .55 /*+ i * 0.5 * GTValues.VHA[GTValues.LuV + Math.floor(tier)]*/; //Changed for no free Para, but no EU scaling makes easier to OC for reduction
             // Each option decreases the chance of consuming the singularity by 25%

@@ -106,6 +106,15 @@ ServerEvents.recipes(event => {
 
     event.remove({mod: 'systeams'});
        
+    event.custom({ // So prior worlds dont crash
+        'type': 'systeams:steam',
+        'ingredient': {
+            'fluid': 'systeams:steamietest',
+            'amount': 1000
+        },
+        'energy': 1000
+    });
+
     event.custom({
         'type': 'systeams:steam',
         'ingredient': {
