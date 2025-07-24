@@ -118,6 +118,7 @@ ServerEvents.recipes(event => {
         const SmGear = `gtceu:small_${material}_gear` ;
         const RodM = `gtceu:${magnetic}_rod` ;
         const Spring = `gtceu:${wire}_spring` ;
+        const SmSpring = `gtceu:small_${wire}_spring` ;
         const Rotor = `gtceu:${rotor}_rotor` ;
         const PipeNormal = `gtceu:${pipe}_normal_fluid_pipe`
         const Chest = `gtceu:${storageI}` ;
@@ -137,49 +138,49 @@ ServerEvents.recipes(event => {
 
     }; 
 
-    AllTierMachine('electric_furnace', [Hull, '2x '+Circuit, '4x '+Wire2x, '2x '+Cable1x], [Solder+' 144']);
-    AllTierMachine('alloy_smelter', [Hull, '2x '+Circuit, '4x '+Wire4x, '2x '+Cable1x], [Solder+' 144']);
+    AllTierMachine('electric_furnace', [Hull, '2x '+Circuit, '4x '+Wire2x, '2x '+Cable1x, 'minecraft:furnace'], [Solder+' 144']);
+    AllTierMachine('alloy_smelter', [Hull, '2x '+Circuit, '4x '+Wire4x, '2x '+Cable1x, 'minecraft:blast_furnace'], [Solder+' 144']);
     AllTierMachine('arc_furnace', [Hull, '2x '+Circuit, 'gtceu:graphite_dust', '3x '+Plate, '2x '+Cable4x], [Solder+' 144']);
     AllTierMachine('assembler', [Hull, '2x '+Arm, '2x '+Conveyor, '2x '+Circuit, '2x '+Cable1x], [Solder+' 72', Lubricant+' 500']);
     AllTierMachine('autoclave', [Hull, '4x '+Plate, Glass, '2x '+Circuit, Pump], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('bender', [Hull, '2x '+Piston, Plate, '2x '+Circuit, '2x '+Motor, Cable1x], [Solder+' 72', Lubricant+' 500']);
-    AllTierMachine('brewery', [Hull, '2x '+Glass, '2x '+Circuit, Pump, Spring, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
-    AllTierMachine('canner', [Hull, '3x '+Glass, '2x '+Circuit, Pump, '2x '+Cable1x], [Solder+' 144']);
-    AllTierMachine('centrifuge', [Hull, '4x '+Circuit, '2x '+Motor, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
+    AllTierMachine('brewery', [Hull, '2x '+Glass, '2x '+Circuit, Pump, '2x '+SmSpring, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
+    AllTierMachine('canner', [Hull, '3x '+Glass, '2x '+Circuit, Pump, '2x '+Cable1x, Tank], [Solder+' 144']);
+    AllTierMachine('centrifuge', [Hull, '4x '+Circuit, '2x '+Motor, '2x '+Cable1x, `gtceu:long_${material}_rod`], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('chemical_bath', [Hull, '2x '+Glass, '2x '+Conveyor, '2x '+Circuit, Pump, Cable1x], [Solder+' 72', RubberF+' 288']);
-    AllTierMachine('chemical_reactor', [Hull, '2x '+Glass, '2x '+Circuit, Rotor, Motor, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
-    AllTierMachine('compressor', [Hull, '2x '+Plate, '2x '+Piston, '2x '+Circuit, '2x '+Cable1x], [Solder+' 72', Lubricant+' 500']);
+    AllTierMachine('chemical_reactor', [Hull, '2x '+Glass, '2x '+Circuit, Rotor, Motor, '2x '+Cable1x, `gtceu:${rotor}_plate`], [Solder+' 72', RubberF+' 288']);
+    AllTierMachine('compressor', [Hull, '2x '+Plate, '2x '+Piston, '2x '+Circuit, '2x '+Cable4x], [Solder+' 72', Lubricant+' 500']);
     AllTierMachine('cutter', [Hull, Glass, Conveyor, Buzzsaw, '2x '+Circuit, Motor, '2x '+Cable1x], [Solder+' 72', Lubricant+' 500']);
     AllTierMachine('distillery', [Hull, '2x '+Glass, '2x '+Pump, '2x '+Circuit, Spring, Cable1x], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('electrolyzer', [Hull, Motor, '4x '+EWire1x, Glass, '2x '+Circuit, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('electromagnetic_separator', [Hull, '2x '+Wire2x, Conveyor, Circuit, '2x '+RodM, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('extractor', [Hull, '2x '+Glass, Piston, Pump, '2x '+Circuit, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('extruder', [Hull, '4x '+Wire4x, Piston, '2x '+Circuit, PipeNormal], [Solder+' 144']);
-    AllTierMachine('fermenter', [Hull, '2x '+Glass, Circuit, Pump, '4x '+Cable1x], [Solder+' 72', RubberF+' 288']);
+    AllTierMachine('fermenter', [Hull, '2x '+Glass, Circuit, Pump, '4x '+Cable1x, `gtceu:${rotor}_ring`], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('fluid_heater', [Hull, '2x '+Pump, '2x '+Wire4x, Glass, Circuit, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('fluid_solidifier', [Hull, '2x '+Pump, Glass, '2x '+Circuit, Chest, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('forge_hammer', [Hull, '2x '+Piston, '2x '+Circuit, 'minecraft:anvil', '3x '+Cable1x], [Solder+' 144']);
-    AllTierMachine('forming_press', [Hull, '2x '+Piston, '2x '+Circuit, '4x '+Cable1x], [Solder+' 144']);
+    AllTierMachine('forming_press', [Hull, '2x '+Piston, '2x '+Circuit, '4x '+Cable4x, `gtceu:${material}_ring`], [Solder+' 144']);
     AllTierMachine('lathe', [Hull, '2x '+Circuit, Motor, Head, Piston, '2x '+Cable1x], [Solder+' 72', Lubricant+' 500']);
     AllTierMachine('scanner', [Hull, '4x '+Circuit, Emitter, Sensor, '2x '+Cable1x], [Solder+' 144']);
-    AllTierMachine('mixer', [Hull, '4x '+Glass, Rotor, Motor, '2x '+Circuit], [Solder+' 72', RubberF+' 288']);
-    AllTierMachine('ore_washer', [Hull, '2x '+Rotor, Glass, '2x '+Circuit, Motor, '2x '+Cable1x], [Solder+' 72', RubberF+' 288']);
+    AllTierMachine('mixer', [Hull, '4x '+Glass, Rotor, Motor, '2x '+Circuit, `2x gtceu:${rotor}_rod`], [Solder+' 72', RubberF+' 288']);
+    AllTierMachine('ore_washer', [Hull, '2x '+Rotor, Glass, '2x '+Circuit, Motor, '2x '+Cable1x, 'minecraft:bucket'], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('packer', [Hull, '2x '+Chest, Arm, Conveyor, '2x '+Circuit, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('polarizer', [Hull, '4x '+PWire2x, '2x '+RodM, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('laser_engraver', [Hull, '2x '+Piston, Emitter, 'gtceu:glass_lens', '3x '+Circuit, '2x '+Cable1x], [Solder+' 144', 'gtceu:distilled_water 1000']);
     AllTierMachine('sifter', [Hull, '2x '+Piston, '2x '+'gtceu:item_filter', '2x '+Circuit, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('thermal_centrifuge', [Hull, '2x '+Motor, '2x '+Circuit, '2x '+Wire4x, '2x '+Cable1x], [Solder+' 144']);
-    AllTierMachine('wiremill', [Hull, '4x '+Motor, '2x '+Circuit, '2x '+Cable1x], [Solder+' 72', Lubricant+' 500']);
-    AllTierMachine('macerator', [Hull, Piston, Motor, Head, Gear, '2x '+Circuit, '2x '+Cable1x], [Solder+' 144']);
+    AllTierMachine('wiremill', [Hull, '4x '+Motor, '2x '+Circuit, '2x '+Cable1x, '2x '+Rod], [Solder+' 72', Lubricant+' 500']);
+    AllTierMachine('macerator', [Hull, Piston, Motor, Head, Gear, '2x '+Circuit], [Solder+' 144']);
     AllTierMachine('gas_collector', [Hull, '4x '+Rod, '2x '+Pump, 'gtceu:fluid_filter', Circuit], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('rock_crusher', [Hull, Piston, Motor, Head, '3x '+Glass, '2x '+Cable1x], [Solder+' 144']);
     AllTierMachine('fisher', [Hull, '2x '+Piston, '3x '+Motor, '2x '+Circuit, Pump, '32x #forge:string'], [Solder+' 72', RubberF+' 288']);
     AllTierMachine('charger_4x', [Hull, '4x '+PWire4x, Chest, Circuit, '2x '+Cable1x], [Solder+' 144']);
-    AllTierMachine('muffler_hatch', [Hull, Motor, Rotor, '2x '+Cable1x,  `gtceu:${rotor}_rod`,  `gtceu:${rotor}_ring`], [Solder+' 144']);
+    AllTierMachine('muffler_hatch', [Hull, Motor, Rotor, '2x '+Cable1x, `gtceu:${rotor}_rod`, `gtceu:${rotor}_ring`], [Solder+' 144']);
     if (tier === 'lv' || 'mv' || 'hv' || 'ev') {
-    AllTierMachine('item_collector', [Hull, '3x '+Rotor, '2x '+Motor, '2x '+Circuit, Cable1x], [Solder+' 144']);
+    AllTierMachine('item_collector', [Hull, '3x '+Rotor, Chest, '2x '+Motor, '2x '+Circuit, Cable1x], [Solder+' 144']);
     if (tier !== 'ev') {
-    AllTierMachine('buffer', [Hull, Pump, Circuit, Conveyor], [Solder+' 144']);
+    AllTierMachine('buffer', [Hull, Pump, Circuit, Conveyor, Tank, Chest], [Solder+' 144']);
     AllTierMachine('combustion', [Hull, '2x '+Piston, '2x '+Motor, '2x '+Gear, Circuit, Cable1x], [Solder+' 144']);
     AllTierMachine('steam_turbine', [Hull, '2x '+PipeNormal, '2x '+Rotor, '2x '+Motor, Circuit, Cable1x], [Solder+' 144']);
     AllTierMachine('gas_turbine', [Hull, '2x '+Rotor, '2x '+Motor, Circuit, Pump, '2x '+Cable1x], [Solder+' 144']);
@@ -384,7 +385,7 @@ ServerEvents.recipes(event => {
             .EUt(ScannerEUt);
     };
 
-    MachineAssembly('electric_blast_furnace', ['gtceu:invar_frame', '3x gtceu:reinforced_blast_furnace', '2x gtceu:lv_emitter', '6x #gtceu:circuits/mv', '2x gtceu:lv_fluid_regulator', '12x gtceu:double_invar_plate', '4x gtceu:lv_electric_motor', '6x gtceu:tin_quadruple_cable'], ['gtceu:soldering_alloy 1152'], 120, 1500);
+    MachineAssembly('electric_blast_furnace', ['gtceu:invar_frame', '3x gtceu:reinforced_blast_furnace', '2x gtceu:lv_emitter', '6x #gtceu:circuits/mv', '2x gtceu:lv_fluid_regulator', '18x gtceu:invar_plate', '4x gtceu:lv_electric_motor', '6x gtceu:tin_quadruple_cable'], ['gtceu:soldering_alloy 1152'], 120, 1500);
     MachineAssemblyScanner('large_chemical_reactor',['gtceu:polytetrafluoroethylene_frame','4x gtceu:hv_electric_pump','2x gtceu:polytetrafluoroethylene_nonuple_fluid_pipe','2x gtceu:black_steel_rotor','6x gtceu:dense_steel_plate','6x #gtceu:circuits/ev','2x gtceu:small_platinum_spring','12x gtceu:gold_single_cable'],['gtceu:polytetrafluoroethylene 1152','gtceu:silicone_rubber 720'],480,3600,'gtceu:hv_chemical_reactor',480,2400);
     MachineAssemblyScanner('implosion_compressor',['gtceu:steel_frame','6x gtceu:dense_obsidian_plate','2x gtceu:hv_electric_piston','4x #gtceu:circuits/hv','2x gtceu:black_steel_gear','6x gtceu:steel_foil','3x gtceu:small_black_steel_gear','8x gtceu:gold_double_cable'],['gtceu:soldering_alloy 1008','gtceu:polyethylene 432'],480,1200,'gtceu:industrial_tnt',120,1200);
     MachineAssembly('pyrolyse_oven',['gtceu:wrought_iron_frame', 'gtceu:aluminium_nonuple_fluid_pipe','6x gtceu:double_wrought_iron_plate','2x gtceu:cupronickel_coil_block','4x gtceu:mv_electric_piston','4x #gtceu:circuits/mv','2x gtceu:mv_electric_pump','4x gtceu:annealed_copper_double_cable'], ['gtceu:soldering_alloy 864','gtceu:polyethylene 720'],120,1800);
