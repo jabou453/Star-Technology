@@ -4,7 +4,7 @@
 <p style="text-align: center;">Minimum RAM: 4GB | Recommended: 6GB+</p>
 <h1 style="text-align: center;">What is Star Technology?</h1>
 
-Star Technology is one of the first **GregTech CEu Modern** modpacks for **Minecraft 1.19.2**, now fully updated to **1.20.1**! While still under development, the pack is fully playable **up to Ancient Stargate(_end of UHV, start of UEV_)**, with **Post-UHV content actively being worked on!**
+Star Technology is one of the first **GregTech CEu Modern** modpacks for **Minecraft 1.19.2**, now fully updated to **1.20.1**! While still under development, the pack is fully playable **up to Maxwell(_mid UIV_)**, with **Post-UHV content actively being worked on!**
 
 This is **not** a beginner-friendly modpack, but we are constantly improving accessibility to make it more approachable for new players.
 
