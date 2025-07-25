@@ -609,7 +609,7 @@ ServerEvents.recipes(event => {
 		S: 'create:shaft',
 		C: 'create:andesite_casing',
 		G: 'create:cogwheel',
-		P: 'minecraft:sticky_piston',
+		P: 'minecraft:piston',
 		R: 'gtceu:sticky_resin'
 	}).id('start:mechanical_crafting/gantry_carriage');
 
