@@ -401,14 +401,13 @@ ServerEvents.recipes(event => {
 		W: '#forge:tools/wire_cutters'
 	}).id('start:shaped/small_gear_extruder_mold');
 
-	let cell = 'gtceu:potin_small_fluid_pipe'
+	let cell = 'gtceu:wrought_iron_ring'
 	event.recipes.create.sequenced_assembly([
 		Item.of(`gtceu:fluid_cell`),
-	], `gtceu:potin_small_fluid_pipe`, [
-		event.recipes.createDeploying(cell, [cell, `gtceu:wrought_iron_ring`]),
+	], `gtceu:wrought_iron_ring`, [
+		event.recipes.createDeploying(cell, [cell, `gtceu:rubber_ring`]),
 		event.recipes.createDeploying(cell, [cell, `#forge:glass_panes`]),
 		event.recipes.createDeploying(cell, [cell, `gtceu:wrought_iron_ring`]),
-		event.recipes.createDeploying(cell, [cell, `gtceu:rubber_ring`]),
 		event.recipes.createPressing(cell, cell)
 	]).transitionalItem(cell).loops(2).id('start:sequenced_assembly/fluid_cell');
 

@@ -43,7 +43,7 @@ ServerEvents.recipes(event => {
 		I: 'gtceu:copper_normal_fluid_pipe'
 	}).id('start:shaped/spout');
 
-	event.shapeless('create:shaft', ['#forge:tools/files', '2x create:andesite_alloy']).id('start:shapeless/shaft');
+	event.shapeless('2x create:shaft', ['#forge:tools/files', '3x create:andesite_alloy']).id('start:shapeless/shaft');
 
 	event.recipes.shaped(Item.of('create:encased_chain_drive', 2), [
 		'SN ',
@@ -602,13 +602,15 @@ ServerEvents.recipes(event => {
 	]).id('start:shapeless/clockwork_bearing');
 
 	event.recipes.create.mechanical_crafting('create:gantry_carriage', [
+		' R ',
 		'SPS',
 		'GCG'
 	], {
 		S: 'create:shaft',
 		C: 'create:andesite_casing',
 		G: 'create:cogwheel',
-		P: 'minecraft:sticky_piston'
+		P: 'minecraft:piston',
+		R: 'gtceu:sticky_resin'
 	}).id('start:mechanical_crafting/gantry_carriage');
 
 	event.recipes.create.mechanical_crafting('create:rotation_speed_controller', [

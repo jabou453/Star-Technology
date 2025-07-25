@@ -2568,7 +2568,7 @@
 			tasks: [
 				{
 					id: "7AAA523EAB518888"
-					item: "mysticalagradditions:nether_star_shard"
+					item: "kubejs:nether_star_shard"
 					type: "item"
 				}
 				{

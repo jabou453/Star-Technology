@@ -190,8 +190,6 @@
 			dependencies: ["73931EAA3EC5C9A9"]
 			description: [
 				"A multiblock that has two uses, either smelting normal items or creating alloys at an extreme rate."
-				""
-				"This is very useful when making printed circuits."
 			]
 			id: "649596731FFA9C9A"
 			rewards: [{
