@@ -651,7 +651,7 @@
 				item: "kubejs:abyssal_alloy_coil_block"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: 4.0d
 		}
 		{
@@ -861,7 +861,7 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			subtitle: "Third and Last UV Circuit"
+			subtitle: "Fourth and Last UV Circuit"
 			tasks: [{
 				id: "608B93EA8632BE4E"
 				item: "kubejs:draconic_wetware_processor"
@@ -878,7 +878,7 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			subtitle: "Second UHV Circuit"
+			subtitle: "Third UHV Circuit"
 			tasks: [{
 				id: "1D0AA38E67A6E6D1"
 				item: "kubejs:draconic_wetware_processor_assembly"
@@ -926,10 +926,7 @@
 			y: -4.0d
 		}
 		{
-			dependencies: [
-				"5944C4DE27F98FF3"
-				"310FC3F86513555F"
-			]
+			dependencies: ["5944C4DE27F98FF3"]
 			description: ["The fourth tier of fusion reactors, reaching over 1 Billion Kelvin."]
 			hide_dependent_lines: true
 			id: "2E34F23A42004285"
@@ -954,8 +951,8 @@
 				item: "kubejs:draco_boule"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: 8.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["06EC98F6E6AFC2AF"]
@@ -967,8 +964,8 @@
 				item: "kubejs:draco_wafer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.0d
+			x: 10.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["0DF30CDA8DE68E0C"]
@@ -978,8 +975,8 @@
 				item: "kubejs:draco_advanced_soc_wafer"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 0.0d
+			x: 10.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -1003,12 +1000,8 @@
 			y: -3.0d
 		}
 		{
-			dependencies: [
-				"2DACE6EF41A118D9"
-				"7C06C42F133DD3F5"
-			]
+			dependencies: ["2DACE6EF41A118D9"]
 			description: ["Not added till Theta"]
-			hide_until_deps_complete: true
 			id: "09B55AFE7C06EC82"
 			tasks: [{
 				id: "3C1633006F6ECB70"
@@ -1019,45 +1012,33 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["09B55AFE7C06EC82"]
+			dependencies: ["1799430093ABCC64"]
 			id: "41B4DE81AFC054B9"
 			tasks: [{
 				id: "06B8EC7B4599E429"
 				title: "Dragon Breeding Array"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 2.0d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
 			id: "37F9C85CFCFFDA5F"
+			subtitle: "DuraniumSilverOxygenNitrogen (DrAgON)"
 			tasks: [{
 				id: "54F9F9AC4FCB27C0"
-				title: "Pure Dracoyallium"
+				title: "Draconyallium"
 				type: "checkmark"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: -2.0d
 		}
 		{
 			dependencies: [
-				"37F9C85CFCFFDA5F"
-				"5944C4DE27F98FF3"
+				"3B1453C435E3950B"
 				"694E1F6458D5F72F"
 			]
-			hide_until_deps_complete: true
-			id: "24E2CB89693EDEA3"
-			tasks: [{
-				id: "1DA3A7C22624348C"
-				title: "Awakened Draconic Neuroloom"
-				type: "checkmark"
-			}]
-			x: 4.0d
-			y: -4.0d
-		}
-		{
-			dependencies: ["24E2CB89693EDEA3"]
 			id: "38C2E3061C764F05"
 			shape: "gear"
 			size: 1.5d
@@ -1070,9 +1051,8 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["09B55AFE7C06EC82"]
+			dependencies: ["41B4DE81AFC054B9"]
 			id: "3AE729D3F47E9A2B"
-			subtitle: "No linger stinky"
 			tasks: [
 				{
 					id: "15CB4AC6660452D4"
@@ -1085,11 +1065,12 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 0.0d
+			x: 6.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
+			hide_dependent_lines: true
 			id: "694E1F6458D5F72F"
 			tasks: [
 				{
@@ -1103,25 +1084,17 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: -2.0d
+			x: 5.0d
+			y: -3.0d
 		}
 		{
-			dependencies: ["24E2CB89693EDEA3"]
+			dependencies: ["3B1453C435E3950B"]
 			id: "7FABD2E818B70D35"
-			tasks: [
-				{
-					id: "1A9F5B4EAFB66C03"
-					item: "start_core:uiv_parallel_hatch"
-					type: "item"
-				}
-				{
-					id: "3D4851F9B51362B4"
-					item: "start_core:uiv_absolute_parallel_hatch"
-					type: "item"
-				}
-			]
-			title: "Hyper Parallel Hatches"
+			tasks: [{
+				id: "1A9F5B4EAFB66C03"
+				item: "start_core:uiv_parallel_hatch"
+				type: "item"
+			}]
 			x: 4.0d
 			y: -6.0d
 		}
@@ -1135,15 +1108,11 @@
 				title: "Target Breeding Dragons"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 2.0d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"2DACE6EF41A118D9"
-				"7C06C42F133DD3F5"
-			]
-			hide_until_deps_complete: true
+			dependencies: ["2DACE6EF41A118D9"]
 			id: "10D5DA8708208783"
 			tasks: [{
 				id: "4F21CDEF48DEB549"
@@ -1155,19 +1124,15 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"2DACE6EF41A118D9"
-				"7C06C42F133DD3F5"
-			]
-			hide_until_deps_complete: true
+			dependencies: ["2DACE6EF41A118D9"]
 			id: "2594F1414C9BEC4F"
 			tasks: [{
 				id: "4133AF79C6DF333A"
 				title: "Better Infra...."
 				type: "checkmark"
 			}]
-			x: 3.0d
-			y: 3.0d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			id: "51FAA26B6A537091"
@@ -1177,7 +1142,7 @@
 				id: "19E2EB40AB845664"
 				type: "checkmark"
 			}]
-			x: -0.5d
+			x: 4.0d
 			y: 1.0d
 		}
 		{
@@ -1317,18 +1282,6 @@
 			y: 3.0d
 		}
 		{
-			hide_dependent_lines: true
-			id: "7C06C42F133DD3F5"
-			invisible: true
-			tasks: [{
-				id: "3AF8457A654CA81B"
-				title: "Theta"
-				type: "checkmark"
-			}]
-			x: 6.0d
-			y: -2.0d
-		}
-		{
 			dependencies: [
 				"0B475E2385B478C0"
 				"53E595EAB1C90884"
@@ -1437,8 +1390,8 @@
 				item: "placeablemaxwell:maxwell"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.0d
+			x: 6.375d
+			y: 6.5d
 		}
 		{
 			dependencies: ["3BB8848F84026B45"]
@@ -1462,12 +1415,13 @@
 				type: "checkmark"
 			}]
 			title: "You have completed the &5&lEta&r Version of &6Star Technology&r"
-			x: 6.5d
-			y: 4.0d
+			x: 8.875d
+			y: 6.5d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			description: ["A legendary feline, as energized as the flames from inferno."]
+			hide_dependency_lines: true
 			id: "0B475E2385B478C0"
 			rewards: [{
 				id: "3D283BCABFD3EC0D"
@@ -1482,12 +1436,13 @@
 				item: "placeablemaxwell:vasilisa"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 2.5d
+			x: 4.375d
+			y: 5.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			description: ["A legendary feline, as eternal as the endless abyss."]
+			hide_dependency_lines: true
 			id: "53E595EAB1C90884"
 			rewards: [{
 				id: "0F5997E6894F3C34"
@@ -1502,13 +1457,14 @@
 				item: "placeablemaxwell:valenok"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 5.5d
+			x: 4.375d
+			y: 8.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			dependency_requirement: "one_started"
 			description: ["A legendary feline, combining the heat and cold from two dimensions."]
+			hide_dependency_lines: true
 			id: "61C534992FB17066"
 			rewards: [{
 				id: "4A0ACD1848950C86"
@@ -1523,8 +1479,8 @@
 				item: "placeablemaxwell:mars"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 4.0d
+			x: 4.375d
+			y: 6.5d
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
@@ -1617,7 +1573,10 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["24E2CB89693EDEA3"]
+			dependencies: [
+				"3B1453C435E3950B"
+				"694E1F6458D5F72F"
+			]
 			id: "46127DF821C7C175"
 			tasks: [{
 				id: "765DD1CACEFD3F85"
@@ -1626,6 +1585,71 @@
 			}]
 			x: 5.0d
 			y: -5.0d
+		}
+		{
+			dependencies: ["16FDCABFC80579D5"]
+			id: "3B1453C435E3950B"
+			subtitle: "First UXV Circuit"
+			tasks: [{
+				id: "6046733B28E6F322"
+				item: "kubejs:awakened_draconic_wetware_processor_mainframe"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["3AE6E85C2FC76DE9"]
+			id: "16FDCABFC80579D5"
+			subtitle: "Second UIV Circuit"
+			tasks: [{
+				id: "0E34320F90BA0A53"
+				item: "kubejs:awakened_draconic_wetware_processor_computer"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"66D49CB8D8819E3F"
+				"37F9C85CFCFFDA5F"
+				"1799430093ABCC64"
+			]
+			id: "3AE6E85C2FC76DE9"
+			subtitle: "Third UEV Circuit"
+			tasks: [{
+				id: "29F972DC18F645E4"
+				item: "kubejs:awakened_draconic_wetware_processor_assembly"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09B55AFE7C06EC82"]
+			id: "1799430093ABCC64"
+			tasks: [{
+				id: "2077144366C46AF8"
+				title: "Draconic Enrichment Serum"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7FABD2E818B70D35"
+				"694E1F6458D5F72F"
+			]
+			id: "4D556DE76399E083"
+			tasks: [{
+				id: "2388751B6210D3C4"
+				item: "start_core:uiv_absolute_parallel_hatch"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -6.0d
 		}
 	]
 	title: "Draconic Empires"

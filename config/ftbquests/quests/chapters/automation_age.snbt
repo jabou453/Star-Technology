@@ -188,9 +188,7 @@
 		}
 		{
 			dependencies: ["73931EAA3EC5C9A9"]
-			description: [
-				"A multiblock that has two uses, either smelting normal items or creating alloys at an extreme rate."
-			]
+			description: ["A multiblock that has two uses, either smelting normal items or creating alloys at an extreme rate."]
 			id: "649596731FFA9C9A"
 			rewards: [{
 				id: "1CC5497D89B6D364"
