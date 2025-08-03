@@ -102,27 +102,27 @@ StartupEvents.registry('item', event => {
     // Draco-QMDs
     event.create('draconic_qmd_transistor')
         .displayName('Draconic QMD Transistor')
-        .tooltip('§7Draco-Quantum Electronic Circuit')
+        .tooltip('§7Draco-Quantum Electronic Component')
         .texture('kubejs:item/circuits/draconic_qmd_transistor');
 
     event.create('draconic_qmd_resistor')
         .displayName('Draconic QMD Resistor')
-        .tooltip('§7Draco-Quantum Electronic Circuit')
+        .tooltip('§7Draco-Quantum Electronic Component')
         .texture('kubejs:item/circuits/draconic_qmd_resistor');   
 
     event.create('draconic_qmd_capacitor')
         .displayName('Draconic QMD Capacitor')
-        .tooltip('§7Draco-Quantum Electronic Circuit')
+        .tooltip('§7Draco-Quantum Electronic Component')
         .texture('kubejs:item/circuits/draconic_qmd_capacitor');   
 
     event.create('draconic_qmd_diode')
         .displayName('Draconic QMD Diode')
-        .tooltip('§7Draco-Quantum Electronic Circuit')
+        .tooltip('§7Draco-Quantum Electronic Component')
         .texture('kubejs:item/circuits/draconic_qmd_diode');
 
     event.create('draconic_qmd_inductor')
         .displayName('Draconic QMD Inductor')
-        .tooltip('§7Draco-Quantum Electronic Circuit')
+        .tooltip('§7Draco-Quantum Electronic Component')
         .texture('kubejs:item/circuits/draconic_qmd_inductor');
 
     

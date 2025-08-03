@@ -272,7 +272,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('enriched_naquadah', [dense_plate, rotor, gear, small_gear, frame, long_rod]);
     matmod('naquadria', dense_plate);
     matmod('neutronium', [foil, small_gear,rotor, dense_plate]);
-    matmod('europium', small_spring);
+    matmod('europium', [small_spring,bolt_and_screw]);
     matmod('zirconium', fine_wire);
     matmod('hafnium', fine_wire);
     matmod('rhenium', fine_wire);
@@ -536,7 +536,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngotLiquid('weapon_grade_naquadah', ['7x naquadria', '2x pure_netherite', '5x neutronium', '16x fluorine'], 0xccff33, DULL, [10500, 'highest', VHA('uv'), 2700], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
 
-    compGem('runic_laser_source_base', ['2x naquadic_netherite', '10x tritanium', '2x trinium'], 0x00ff00, OPAL, []);
+    compGem('runic_laser_source_base', ['2x naquadic_netherite', '10x tritanium', '5x trinium'], 0x00ff00, OPAL, []);
 
     // Crown Ethers
     compLiquid('sulfur_dichloride', ['1x sulfur', '2x chlorine'], 0xcc0000, []);
@@ -618,7 +618,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngot('raw_void', ['1x echo_r', '1x neutronium'], 0x006666, DULL, [], [no_decomp]);
 
-    compIngotLiquid('void', ['1x echo_r', '1x neutronium'], 0x001a1a, DULL, [10000, 'highest', VA('uiv'), 8000], [rod, foil, plates, long_rod, frame, no_decomp, no_abs_recipe]);
+    compIngotLiquid('void', ['1x echo_r', '1x neutronium'], 0x001a1a, DULL, [10000, 'highest', VA('uiv'), 8000], [rod, foil, plates, long_rod, frame, no_decomp, no_abs_recipe,bolt_and_screw]);
     
     //Extended Sculk
     compDustIcon('ionized_sculk', [], 0x061A0D, RADIOACTIVE, [no_decomp]);

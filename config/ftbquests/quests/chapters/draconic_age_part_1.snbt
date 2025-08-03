@@ -1016,7 +1016,7 @@
 			id: "41B4DE81AFC054B9"
 			tasks: [{
 				id: "06B8EC7B4599E429"
-				title: "Dragon Breeding Array"
+				title: "Draconic Nursery"
 				type: "checkmark"
 			}]
 			x: 2.0d
@@ -1078,7 +1078,7 @@
 				}
 			]
 			x: 1.0d
-			y: 0.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["3B1453C435E3950B"]
@@ -1097,7 +1097,7 @@
 			id: "17BDBDAE35BD49ED"
 			tasks: [{
 				id: "1F13D3464D748364"
-				title: "Target Breeding Dragons"
+				title: "Draconic Scale Infusion"
 				type: "checkmark"
 			}]
 			x: 1.0d
@@ -1555,7 +1555,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["16FDCABFC80579D5"]
