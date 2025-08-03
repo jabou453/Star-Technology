@@ -18,7 +18,7 @@
 		{
 			id: "220DBF269EDBAC7A"
 			linked_quest: "22B85F7F13C66730"
-			x: -6.5d
+			x: -2.5d
 			y: 3.0d
 		}
 	]
@@ -740,7 +740,11 @@
 		}
 		{
 			dependencies: ["30C974448C57F0EC"]
-			description: ["The &2UEV&r superconductor, can hold 256 amps in a 1x wire"]
+			description: [
+				"The &2UEV&r superconductor, can hold 256 amps in a 1x wire."
+				""
+				"This is the &l&nFINAL&r superconductor of this type."
+			]
 			id: "1C0B16612DBBE8CA"
 			rewards: [{
 				id: "7EE50E0E44FBAE00"
@@ -989,8 +993,8 @@
 				item: "kubejs:nether_coordinate_crystal"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 7.0d
+			x: 4.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2D064F759D13FE4B"]
@@ -1006,8 +1010,8 @@
 				item: "kubejs:end_coordinate_crystal"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 3.0d
+			x: 2.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -1176,7 +1180,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["1C9396E2587051F7"]
+			dependencies: ["5022ABEA367576E7"]
 			description: ["This data disk can store so much data that you could put all human DNA in it."]
 			id: "43DAD4B63603BFC3"
 			rewards: [{
@@ -1195,37 +1199,6 @@
 			}]
 			x: 3.5d
 			y: 5.0d
-		}
-		{
-			dependencies: [
-				"78777C3EE2DA5D0F"
-				"2D064F759D13FE4B"
-			]
-			description: ["The start of your wildest dreams, a dragon based circuit board."]
-			id: "1C9396E2587051F7"
-			rewards: [{
-				id: "170A7AD04A8BFCA6"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [
-				{
-					id: "3DA83C02A0B67056"
-					item: "kubejs:draconic_wetware_printed_circuit_board"
-					type: "item"
-				}
-				{
-					id: "149D5BC68EC06EBB"
-					item: {
-						Count: 1
-						id: "kubejs:draconic_wetware_circuit_board"
-						tag: { }
-					}
-					type: "item"
-				}
-			]
-			x: 3.5d
-			y: 7.0d
 		}
 		{
 			dependencies: ["6110BA7B3E84F06F"]
@@ -1489,7 +1462,7 @@
 				type: "checkmark"
 			}]
 			x: 1.0d
-			y: 1.0d
+			y: 0.5d
 		}
 		{
 			dependencies: [
@@ -1572,8 +1545,8 @@
 				title: "Cheaper Gasses"
 				type: "checkmark"
 			}]
-			x: -8.5d
-			y: 5.0d
+			x: -6.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -1808,7 +1781,7 @@
 				item: "gtceu:bulk_ore_processing_array"
 				type: "item"
 			}]
-			x: -2.5d
+			x: 1.5d
 			y: 3.0d
 		}
 		{
@@ -2156,11 +2129,9 @@
 		}
 		{
 			dependencies: [
-				"1F79E45EF7810DFF"
-				"6D573ACD05D0EF96"
-				"30C974448C57F0EC"
+				"5022ABEA367576E7"
+				"5DC3B85B63641F6C"
 			]
-			hide_dependency_lines: true
 			id: "4F994F04EF1710B9"
 			subtitle: "Third UV Circuit"
 			tasks: [{
@@ -2183,6 +2154,24 @@
 			}]
 			x: -10.5d
 			y: 1.0d
+		}
+		{
+			dependencies: ["0508AE03C730BE6C"]
+			id: "5022ABEA367576E7"
+			tasks: [
+				{
+					id: "507020635FBF83C5"
+					item: "kubejs:runic_convergence_circuit_board"
+					type: "item"
+				}
+				{
+					id: "305E4313D43D9B0D"
+					item: "kubejs:runic_convergence_printed_circuit_board"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 7.0d
 		}
 	]
 	title: "Adventures in Abydos"

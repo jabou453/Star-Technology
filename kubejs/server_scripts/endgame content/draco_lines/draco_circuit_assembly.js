@@ -55,7 +55,13 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
-    
+    event.recipes.gtceu.circuit_assembler(id('awakened_draconic_wetware_circuit_board'))
+        .itemInputs('64x kubejs:draconic_wetware_circuit_board', 'kubejs:blank_injection_catalyst', 'gtceu:uev_electric_pump', 'gtceu:uev_sensor', '8x kubejs:draconic_brain_matter_cells', '16x gtceu:draconyallium_foil')
+        .inputFluids('gtceu:draconic_enrichment_serum 8000')
+        .itemOutputs('64x kubejs:awakened_draconic_wetware_circuit_board')
+        .duration(1200)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM) //Change to Abyssal
+        .EUt(GTValues.VHA[GTValues.UEV]);    
 
     const DracoCircuitAssembler = (type,output,ItemIn,FluidIn,Dur,eu,researchItem,cwu) => {
         

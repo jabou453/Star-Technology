@@ -625,8 +625,8 @@ ServerEvents.recipes(event => {
         .EUt(30);
 
     event.recipes.gtceu.circuit_assembler(id('data_dna_disk'))
-        .itemInputs('kubejs:draconic_wetware_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 
-            '16x kubejs:3d_nor_chip','16x kubejs:3d_nand_chip','32x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire')
+        .itemInputs('kubejs:runic_convergence_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 
+            '16x kubejs:3d_nor_chip','16x kubejs:3d_nand_chip','32x gtceu:fine_europium_wire')
         .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 144')
         .itemOutputs('start_core:data_dna_disk')
         .duration(400)

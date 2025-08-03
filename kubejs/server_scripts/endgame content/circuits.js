@@ -52,6 +52,15 @@ ServerEvents.recipes(event => {
         )
         .EUt(GTValues.VHA[GTValues.UEV]);
 
+    event.recipes.gtceu.runic_circuitry_assembling_station(id('runic_convergence_circuit_board'))
+        .itemInputs(`128x gtceu:wetware_circuit_board`,'6x #gtceu:circuits/luv','kubejs:runic_engraved_plating')
+        .perTick(true)
+        .inputFluids(`gtceu:runic_convergence_infusion 5`)
+        .perTick(false)
+        .itemOutputs(`128x kubejs:runic_convergence_circuit_board`)
+        .duration(1800)
+        .EUt(GTValues.VA[GTValues.UHV]);
+
     event.recipes.gtceu.chemical_reactor(id('uepic_wafer'))
         .itemInputs('gtceu:uhpic_wafer','4x gtceu:silicon_carbide_over_bismuth_tritelluride_dust')
         .inputFluids('gtceu:neutronium 576')

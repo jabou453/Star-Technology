@@ -1,6 +1,15 @@
 
 StartupEvents.registry('item', event => {
 
+    // Runic Parts
+    event.create('runic_convergence_circuit_board')
+        .displayName('Runic Convergence Circuit Board')
+        .texture('kubejs:item/circuits/runic_convergence_circuit_board');
+
+    event.create('runic_convergence_printed_circuit_board')
+        .displayName('Runic Convergence Printed Circuit Board')
+        .texture('kubejs:item/circuits/runic_convergence_printed_circuit_board');
+    
     // Runic-Wetwares
     event.create('runic_wetware_processor_assembly')
         .displayName('Runic Wetware Processor Assembly')
@@ -56,6 +65,15 @@ StartupEvents.registry('item', event => {
         .displayName('Draconic Wetware Processor Mainframe')
         .tooltip('§5Dr. Conic approved UIV Circuit')
         .texture('kubejs:item/circuits/draconic_wetware_processor_mainframe');
+
+    // Awakened Draconic Parts
+    event.create('awakened_draconic_wetware_circuit_board')
+        .displayName('Awakened Draconic Wetware Circuit Board')
+        .texture('kubejs:item/circuits/awakened_draconic_wetware_circuit_board');
+
+    event.create('awakened_draconic_wetware_printed_circuit_board')
+        .displayName('Awakened Draconic Wetware Printed Circuit Board')
+        .texture('kubejs:item/circuits/awakened_draconic_wetware_printed_circuit_board');
 
     // Awakened-Draconic-Wetwares
     event.create('awakened_draconic_wetware_processor_assembly')

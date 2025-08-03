@@ -708,7 +708,7 @@
 		{
 			dependencies: [
 				"69493DCA3D764771"
-				"3861DC9A29F4DD42"
+				"31F87896FF834E63"
 			]
 			description: ["&9&lOpV&r recipe speeds"]
 			id: "54944370404CEA94"
@@ -951,7 +951,7 @@
 				item: "kubejs:draco_boule"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -964,7 +964,7 @@
 				item: "kubejs:draco_wafer"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 4.0d
 			y: -2.0d
 		}
 		{
@@ -975,7 +975,7 @@
 				item: "kubejs:draco_advanced_soc_wafer"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 4.0d
 			y: -4.0d
 		}
 		{
@@ -1008,8 +1008,8 @@
 				title: "Abyssal Room"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: 2.0d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1799430093ABCC64"]
@@ -1019,20 +1019,19 @@
 				title: "Dragon Breeding Array"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 0.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
 			id: "37F9C85CFCFFDA5F"
-			subtitle: "DuraniumSilverOxygenNitrogen (DrAgON)"
 			tasks: [{
-				id: "54F9F9AC4FCB27C0"
-				title: "Draconyallium"
-				type: "checkmark"
+				id: "5B990AC9E758FE37"
+				item: "gtceu:draconyallium_ingot"
+				type: "item"
 			}]
 			x: 4.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1047,26 +1046,20 @@
 				title: "Aux2"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: -4.0d
+			x: 8.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["41B4DE81AFC054B9"]
 			id: "3AE729D3F47E9A2B"
-			tasks: [
-				{
-					id: "15CB4AC6660452D4"
-					type: "checkmark"
-				}
-				{
-					id: "28FA8CA23E8E5436"
-					item: "gtceu:pure_dragon_breath_bucket"
-					optional_task: true
-					type: "item"
-				}
-			]
-			x: 6.0d
-			y: -2.0d
+			tasks: [{
+				id: "28FA8CA23E8E5436"
+				item: "gtceu:pure_dragon_breath_bucket"
+				optional_task: true
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
@@ -1084,8 +1077,8 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: -3.0d
+			x: 1.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["3B1453C435E3950B"]
@@ -1095,12 +1088,11 @@
 				item: "start_core:uiv_parallel_hatch"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: -6.0d
 		}
 		{
 			dependencies: ["41B4DE81AFC054B9"]
-			description: ["Is this what the milkies are used for?"]
 			icon: "minecraft:dragon_egg"
 			id: "17BDBDAE35BD49ED"
 			tasks: [{
@@ -1108,11 +1100,12 @@
 				title: "Target Breeding Dragons"
 				type: "checkmark"
 			}]
-			x: 8.0d
-			y: 0.0d
+			x: 1.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
+			hide_until_deps_complete: true
 			id: "10D5DA8708208783"
 			tasks: [{
 				id: "4F21CDEF48DEB549"
@@ -1122,17 +1115,6 @@
 			title: "Gate 3 Line"
 			x: 16.0d
 			y: 4.0d
-		}
-		{
-			dependencies: ["2DACE6EF41A118D9"]
-			id: "2594F1414C9BEC4F"
-			tasks: [{
-				id: "4133AF79C6DF333A"
-				title: "Better Infra...."
-				type: "checkmark"
-			}]
-			x: 2.0d
-			y: 6.0d
 		}
 		{
 			id: "51FAA26B6A537091"
@@ -1147,14 +1129,15 @@
 		}
 		{
 			dependencies: ["38C2E3061C764F05"]
+			hide_until_deps_complete: true
 			id: "3BF75D255438C1F0"
 			tasks: [{
 				id: "7B1D7302F29EF060"
 				title: "Exotic Matters"
 				type: "checkmark"
 			}]
-			x: 8.0d
-			y: -4.0d
+			x: 10.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -1270,18 +1253,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["10D5DA8708208783"]
-			hide_dependent_lines: true
-			id: "3861DC9A29F4DD42"
-			tasks: [{
-				id: "3E5D4978743C585A"
-				title: "Quark Infusion"
-				type: "checkmark"
-			}]
-			x: 15.0d
-			y: 3.0d
-		}
-		{
 			dependencies: [
 				"0B475E2385B478C0"
 				"53E595EAB1C90884"
@@ -1390,8 +1361,8 @@
 				item: "placeablemaxwell:maxwell"
 				type: "item"
 			}]
-			x: 6.375d
-			y: 6.5d
+			x: 10.125d
+			y: -2.25d
 		}
 		{
 			dependencies: ["3BB8848F84026B45"]
@@ -1415,8 +1386,8 @@
 				type: "checkmark"
 			}]
 			title: "You have completed the &5&lEta&r Version of &6Star Technology&r"
-			x: 8.875d
-			y: 6.5d
+			x: 12.625d
+			y: -2.25d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
@@ -1436,8 +1407,8 @@
 				item: "placeablemaxwell:vasilisa"
 				type: "item"
 			}]
-			x: 4.375d
-			y: 5.0d
+			x: 8.125d
+			y: -3.75d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
@@ -1457,8 +1428,8 @@
 				item: "placeablemaxwell:valenok"
 				type: "item"
 			}]
-			x: 4.375d
-			y: 8.0d
+			x: 8.125d
+			y: -0.75d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
@@ -1479,8 +1450,8 @@
 				item: "placeablemaxwell:mars"
 				type: "item"
 			}]
-			x: 4.375d
-			y: 6.5d
+			x: 8.125d
+			y: -2.25d
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
@@ -1584,7 +1555,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: -5.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["16FDCABFC80579D5"]
@@ -1595,7 +1566,7 @@
 				item: "kubejs:awakened_draconic_wetware_processor_mainframe"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: -4.0d
 		}
 		{
@@ -1607,14 +1578,14 @@
 				item: "kubejs:awakened_draconic_wetware_processor_computer"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 6.0d
 			y: -2.0d
 		}
 		{
 			dependencies: [
-				"66D49CB8D8819E3F"
+				"6D6C79E7CBBCC893"
 				"37F9C85CFCFFDA5F"
-				"1799430093ABCC64"
+				"31F87896FF834E63"
 			]
 			id: "3AE6E85C2FC76DE9"
 			subtitle: "Third UEV Circuit"
@@ -1623,19 +1594,19 @@
 				item: "kubejs:awakened_draconic_wetware_processor_assembly"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 6.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["09B55AFE7C06EC82"]
 			id: "1799430093ABCC64"
 			tasks: [{
-				id: "2077144366C46AF8"
-				title: "Draconic Enrichment Serum"
-				type: "checkmark"
+				id: "27F3A14B2F6C836C"
+				item: "gtceu:draconic_enrichment_serum_bucket"
+				type: "item"
 			}]
 			x: 4.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -1648,8 +1619,94 @@
 				item: "start_core:uiv_absolute_parallel_hatch"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: -6.0d
+		}
+		{
+			dependencies: ["2DACE6EF41A118D9"]
+			hide_until_deps_complete: true
+			id: "4BB7E6D5CE28D90D"
+			tasks: [{
+				id: "6AC3E506DE19AAFF"
+				title: "Chem Plant 2"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2DACE6EF41A118D9"]
+			hide_until_deps_complete: true
+			id: "1DC40C42DF1AFCC4"
+			tasks: [{
+				id: "70B6C065BA6E04DF"
+				title: "BPA Core"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"78777C3EE2DA5D0F"
+				"2D064F759D13FE4B"
+			]
+			description: ["The start of your wildest dreams, a dragon based circuit board."]
+			id: "1C9396E2587051F7"
+			rewards: [{
+				id: "170A7AD04A8BFCA6"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [
+				{
+					id: "3DA83C02A0B67056"
+					item: "kubejs:draconic_wetware_printed_circuit_board"
+					type: "item"
+				}
+				{
+					id: "149D5BC68EC06EBB"
+					item: {
+						Count: 1
+						id: "kubejs:draconic_wetware_circuit_board"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1799430093ABCC64"]
+			id: "6D6C79E7CBBCC893"
+			tasks: [
+				{
+					id: "156168FA92AD01CA"
+					item: "kubejs:awakened_draconic_wetware_circuit_board"
+					type: "item"
+				}
+				{
+					id: "757107D4DA51C043"
+					item: "kubejs:awakened_draconic_wetware_printed_circuit_board"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4BB7E6D5CE28D90D"]
+			hide_dependent_lines: true
+			id: "31F87896FF834E63"
+			tasks: [{
+				id: "7A07DB21A52F7219"
+				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
 		}
 	]
 	title: "Draconic Empires"
