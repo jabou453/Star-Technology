@@ -618,6 +618,14 @@ ServerEvents.recipes(event => {
         event.recipes.create.haunting(Item.of(prop.output), Item.of(prop.input)).id(`start:haunting/${prop.output.split(':')[1]}`);
     });
 
+    event.remove({id: 'gtceu:electrolyzer/decomposition_electrolyzing_sodalite'}); //Moves to LV but at same total EU cost
+    event.recipes.gtceu.electrolyzer(id('sodalite_decomposition'))
+        .itemInputs('11x gtceu:sodalite_dust')
+        .itemOutputs('3x gtceu:aluminium_dust','3x gtceu:silicon_dust','4x gtceu:sodium_dust')
+        .outputFluids('gtceu:chlorine 1000')
+        .duration(13.2 * 20 * 2)
+        .EUt(30);
+
     event.recipes.gtceu.compressor(id('obsidian_plate'))
         .itemInputs('gtceu:obsidian_dust')
         .itemOutputs('gtceu:obsidian_plate')
@@ -625,8 +633,8 @@ ServerEvents.recipes(event => {
         .EUt(30);
 
     event.recipes.gtceu.circuit_assembler(id('data_dna_disk'))
-        .itemInputs('kubejs:draconic_wetware_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 
-            '16x kubejs:3d_nor_chip','16x kubejs:3d_nand_chip','32x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire')
+        .itemInputs('kubejs:runic_convergence_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 
+            '16x kubejs:3d_nor_chip','16x kubejs:3d_nand_chip','32x gtceu:fine_europium_wire')
         .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 144')
         .itemOutputs('start_core:data_dna_disk')
         .duration(400)

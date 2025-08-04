@@ -222,6 +222,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('paradox').setFormula('☯');
     GTMaterials.get('rare_earth').setFormula('?');
     GTMaterials.get('platinum_group_sludge').setFormula('Pt?');
+    GTMaterials.get('draconyallium').setFormula('*🜍*Dr68Ag20O94N76*🜍*');
 
 });
 
@@ -271,7 +272,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('enriched_naquadah', [dense_plate, rotor, gear, small_gear, frame, long_rod]);
     matmod('naquadria', dense_plate);
     matmod('neutronium', [foil, small_gear,rotor, dense_plate]);
-    matmod('europium', small_spring);
+    matmod('europium', [small_spring,bolt_and_screw]);
     matmod('zirconium', fine_wire);
     matmod('hafnium', fine_wire);
     matmod('rhenium', fine_wire);
@@ -535,7 +536,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngotLiquid('weapon_grade_naquadah', ['7x naquadria', '2x pure_netherite', '5x neutronium', '16x fluorine'], 0xccff33, DULL, [10500, 'highest', VHA('uv'), 2700], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
 
-    compGem('runic_laser_source_base', ['2x naquadic_netherite', '10x tritanium', '2x trinium'], 0x00ff00, OPAL, []);
+    compGem('runic_laser_source_base', ['2x naquadic_netherite', '10x tritanium', '5x trinium'], 0x00ff00, OPAL, []);
 
     // Crown Ethers
     compLiquid('sulfur_dichloride', ['1x sulfur', '2x chlorine'], 0xcc0000, []);
@@ -617,7 +618,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compIngot('raw_void', ['1x echo_r', '1x neutronium'], 0x006666, DULL, [], [no_decomp]);
 
-    compIngotLiquid('void', ['1x echo_r', '1x neutronium'], 0x001a1a, DULL, [10000, 'highest', VA('uiv'), 8000], [rod, foil, plates, long_rod, frame, no_decomp, no_abs_recipe]);
+    compIngotLiquid('void', ['1x echo_r', '1x neutronium'], 0x001a1a, DULL, [10000, 'highest', VA('uiv'), 8000], [rod, foil, plates, long_rod, frame, no_decomp, no_abs_recipe,bolt_and_screw]);
     
     //Extended Sculk
     compDustIcon('ionized_sculk', [], 0x061A0D, RADIOACTIVE, [no_decomp]);
@@ -1428,7 +1429,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //UIV Materials
     compDustLiquid('tungsten_disulfide', ['1x tungsten', '2x sulfur'], 0x928897, [no_decomp]);
 
-    conductor('polonium_bismide', ['1x polonium', '1x bismuth'], 0x016038, DULL, [14400, 'highest', VA('uev'), 1800], [V('uiv'), 5, 24, false], [bolt_and_screw,spring,small_spring]);
+    conductor('polonium_bismide', ['1x polonium', '1x bismuth'], 0x016038, DULL, [14400, 'highest', VA('uev'), 1800], [V('uiv'), 5, 24, false], [fine_wire, bolt_and_screw,spring,small_spring]);
 
     compIngot('diamane', ['1x carbon'], 0x62777A, [], [4000, 'low', VA('lv'), 1], [no_decomp]);
 
@@ -1471,8 +1472,21 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     
     compIngotPlasma('ohmderblux_alloy', ['5x chalyblux', '2x maraging_steel_300', '4x zirconium', '9x glowstone', '3x ultimet'], 0xD0B660, SHINY, [18590, 'highest', VA('uiv'), 3350], [plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, no_abs_recipe]);
 
+    event.create('draconic_enrichment_serum').fluid().color(0xAC97C5);
+
+    event.create('draconyallium')
+        .components('68x duranium', '20x silver', '94x oxygen', '76x nitrogen')
+        .ingot()
+        .fluid()
+        .plasma()
+        .color(0x5E0B75)
+        .secondaryColor(0x7817EC)
+        .blastTemp(18880, 'highest', VA('uxv'), 3600)
+        .iconSet(SHINY)
+        .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, no_decomp, no_abs_recipe);   
+
     //UXV Materials
-    conductor('lepton_resonant_thallium_antimonide', ['1x thallium', '1x antimony', '1x mystery'], 0x74638F, DULL, [18250, 'highest', VA('uev'), 1800], [V('uxv'), 7, 48, false], [bolt_and_screw,spring,small_spring, no_abs_recipe, no_decomp]);
+    conductor('lepton_resonant_thallium_antimonide', ['1x thallium', '1x antimony', '1x mystery'], 0x74638F, DULL, [18250, 'highest', VA('uev'), 1800], [V('uxv'), 7, 48, false], [bolt_and_screw,spring,small_spring, no_abs_recipe, no_decomp, fine_wire]);
 
     //Plasmas
     event.create('magmatic')

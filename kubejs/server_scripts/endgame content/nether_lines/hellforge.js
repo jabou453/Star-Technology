@@ -97,6 +97,7 @@ ServerEvents.recipes(event => {
     HellForgeMat('abyssal_alloy', 14, ['gtceu:xeproda 720', 'gtceu:blue_alloy 432', 'gtceu:void 576', 'gtceu:flerovium 144', 'gtceu:zapolgium 144'], 'voidic', 1576, GTValues.VA[GTValues.UIV], 38.5);
     HellForgeMat('chaotixic_alloy', 24, ['gtceu:rhexis 864', 'gtceu:stellite_100 288', 'gtceu:hafnium 144', 'gtceu:electrum 1728', 'gtceu:vanadium_steel 432'], 'paradox', 1234, GTValues.VA[GTValues.UIV], 43.7);
     HellForgeMat('ohmderblux_alloy', 23, ['gtceu:chalyblux 720', 'gtceu:maraging_steel_300 288', 'gtceu:zirconium 576', 'gtceu:glowstone 1296', 'gtceu:ultimet 432'], 'paradox', 1151, GTValues.VA[GTValues.UIV], 46.9);
+    HellForgeMat('draconyallium', 258, ['gtceu:duranium 9792', 'gtceu:silver 2880', 'gtceu:oxygen_plasma 94000', 'gtceu:nitrogen_plasma 76000', 'gtceu:pure_dragon_breath 25800'], 'voidic', 1258, GTValues.VHA[GTValues.UXV], 15.8);
 
     // Heating Fluids
     event.recipes.gtceu.cyclonic_sifter(id('infernal_concentrate_refinement'))
@@ -113,9 +114,9 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.UEV]);
 
     event.recipes.gtceu.fusion_reactor(id('sub_stellar_infernal_concentrate'))
-        .inputFluids('gtceu:superheated_infernal_concentrate 800', 'gtceu:stellarium 216')
-        .outputFluids('gtceu:sub_stellar_infernal_concentrate 500')
-        .duration(950)
+        .inputFluids('gtceu:superheated_infernal_concentrate 1500', 'gtceu:stellarium 18')
+        .outputFluids('gtceu:sub_stellar_infernal_concentrate 1000')
+        .duration(640)
         .EUt(1023041)
         .fusionStartEU(1200000000);  
         
@@ -127,8 +128,8 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.super_pressure_heat_chamber(id(type))
             .inputFluids(`gtceu:${origin} 50000`)
             .outputFluids(`start_core:${type} 5000`)
-            .duration(1000)
-            .EUt(GTValues.VA[GTValues.UHV] * ( 4 ** scaler ));   
+            .duration(1500)
+            .EUt(GTValues.VA[GTValues.UV] * ( 4 ** scaler ));   
     };
     HellforgeHeater('flamewake_solvent','superheated_infernal_concentrate',1)
     HellforgeHeater('emberheart_nectar','sub_stellar_infernal_concentrate',2)
