@@ -618,6 +618,14 @@ ServerEvents.recipes(event => {
         event.recipes.create.haunting(Item.of(prop.output), Item.of(prop.input)).id(`start:haunting/${prop.output.split(':')[1]}`);
     });
 
+    event.remove({id: 'gtceu:electrolyzer/decomposition_electrolyzing_sodalite'}); //Moves to LV but at same total EU cost
+    event.recipes.gtceu.electrolyzer(id('sodalite_decomposition'))
+        .itemInputs('11x gtceu:sodalite_dust')
+        .itemOutputs('3x gtceu:aluminium_dust','3x gtceu:silicon_dust','4x gtceu:sodium_dust')
+        .outputFluids('gtceu:chlorine 1000')
+        .duration(13.2 * 20 * 2)
+        .EUt(30);
+
     event.recipes.gtceu.compressor(id('obsidian_plate'))
         .itemInputs('gtceu:obsidian_dust')
         .itemOutputs('gtceu:obsidian_plate')
