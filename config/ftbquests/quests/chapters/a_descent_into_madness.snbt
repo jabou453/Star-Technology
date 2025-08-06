@@ -1155,7 +1155,7 @@
 			dependencies: ["2CE500506AE84E1A"]
 			id: "1472BFF306FEA342"
 			shape: "gear"
-			size: 2.0d
+			size: 1.0d
 			tasks: [{
 				id: "7525762D9BF50AB0"
 				item: "create:andesite_alloy"

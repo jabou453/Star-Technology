@@ -10,9 +10,8 @@
 		id: "5AAADDE502063B33"
 		linked_quest: "1472BFF306FEA342"
 		shape: "circle"
-		size: 1.25d
-		x: -13.5d
-		y: -5.5d
+		x: -12.0d
+		y: -10.5d
 	}]
 	quests: [
 		{
@@ -51,8 +50,8 @@
 				item: "create:andesite_casing"
 				type: "item"
 			}]
-			x: -11.5d
-			y: -5.5d
+			x: -12.0d
+			y: -9.0d
 		}
 		{
 			dependencies: ["1B660E1DA8714AC5"]
@@ -145,11 +144,7 @@
 				"1B660E1DA8714AC5"
 				"67D37BA6B5424768"
 			]
-			description: [
-				"Rods now Too!"
-				""
-				"Uses Iron Buzzsaw"
-			]
+			description: [""]
 			hide_dependent_lines: true
 			id: "6C4B325AEF8A5B7D"
 			tasks: [{
@@ -157,8 +152,8 @@
 				item: "create:mechanical_saw"
 				type: "item"
 			}]
-			x: -13.5d
-			y: -3.5d
+			x: -14.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -256,7 +251,7 @@
 			}]
 			title: "First SU"
 			x: -13.5d
-			y: -7.5d
+			y: -10.0d
 		}
 		{
 			dependencies: [
@@ -286,8 +281,8 @@
 				}
 			]
 			title: "Better SU Generation"
-			x: -11.5d
-			y: -7.5d
+			x: -9.5d
+			y: -9.5d
 		}
 		{
 			dependencies: [
@@ -352,7 +347,7 @@
 			dependencies: ["65DA1BDA4D9A9B56"]
 			id: "684AACAB2A933227"
 			shape: "gear"
-			size: 1.25d
+			size: 1.0d
 			tasks: [{
 				id: "501C893C1492CD26"
 				item: "minecraft:lava_bucket"
@@ -533,10 +528,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"6C4B325AEF8A5B7D"
-				"477E9725E09A6093"
-			]
+			dependencies: ["6C4B325AEF8A5B7D"]
 			description: ["Click the top with a &cFire Starter&r to ignite this initially"]
 			id: "5819AF3E6CCDB826"
 			tasks: [{
@@ -754,8 +746,8 @@
 				item: "gtceu:matches"
 				type: "item"
 			}]
-			x: -11.5d
-			y: -4.5d
+			x: -20.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["6C4B325AEF8A5B7D"]
@@ -771,8 +763,8 @@
 				}
 				type: "item"
 			}]
-			x: -15.5d
-			y: 0.5d
+			x: -14.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["68A24B2BB277BA45"]
@@ -791,8 +783,8 @@
 				}
 				type: "item"
 			}]
-			x: -15.5d
-			y: -1.5d
+			x: -14.5d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -851,7 +843,7 @@
 			]
 			id: "50F2743FA699173A"
 			shape: "gear"
-			size: 2.0d
+			size: 1.0d
 			tasks: [{
 				id: "72C63392D81ADC2F"
 				item: "gtceu:bronze_brick_casing"
@@ -931,7 +923,7 @@
 			dependencies: ["5880CFBC8A0DC3C4"]
 			id: "37993D821DB1DC7F"
 			shape: "gear"
-			size: 1.25d
+			size: 1.0d
 			tasks: [{
 				id: "10794213067A93D4"
 				item: "minecraft:cobblestone"
@@ -1025,7 +1017,7 @@
 				type: "item"
 			}]
 			shape: "gear"
-			size: 1.25d
+			size: 1.0d
 			subtitle: "If you're playing this you'll need to do this often"
 			tasks: [{
 				id: "013F63B1644A8FC0"
@@ -1055,8 +1047,8 @@
 				title: "Any #forge:tools/wire_cutters"
 				type: "item"
 			}]
-			x: -15.5d
-			y: 2.5d
+			x: -18.0d
+			y: -11.0d
 		}
 		{
 			dependencies: [
@@ -1079,8 +1071,8 @@
 				title: "Any #forge:tools/mortars"
 				type: "item"
 			}]
-			x: -15.5d
-			y: -7.5d
+			x: -21.0d
+			y: -8.0d
 		}
 		{
 			dependencies: ["67D37BA6B5424768"]
@@ -1098,8 +1090,8 @@
 				title: "Any #forge:tools/wrenches"
 				type: "item"
 			}]
-			x: -15.5d
-			y: -5.5d
+			x: -21.0d
+			y: -10.0d
 		}
 		{
 			dependencies: ["6C4B325AEF8A5B7D"]
@@ -1117,14 +1109,14 @@
 				title: "Any #forge:tools/screwdrivers"
 				type: "item"
 			}]
-			x: -15.5d
-			y: -3.5d
+			x: -20.0d
+			y: -11.0d
 		}
 		{
 			dependencies: ["1AD7CB6C61196D5C"]
 			id: "4CAFA9D7AA135E15"
 			shape: "gear"
-			size: 1.25d
+			size: 1.0d
 			subtitle: "Finally"
 			tasks: [{
 				id: "28E7ED6421178491"
@@ -1308,8 +1300,8 @@
 				item: "vintage:curving_press"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 1.5d
+			x: -15.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["684FAA520167CC51"]
@@ -1370,6 +1362,33 @@
 			}]
 			x: -8.5d
 			y: -0.5d
+		}
+		{
+			id: "29104F937F2DFDC4"
+			tasks: [{
+				id: "3D4E6D0665695545"
+				title: "Tools"
+				type: "checkmark"
+			}]
+			x: -19.0d
+			y: -9.0d
+		}
+		{
+			id: "6C9677A308B65EF9"
+			tasks: [{
+				id: "1D430FC900CF10A9"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "forge:tools/hammers"
+					}
+				}
+				title: "Any #forge:tools/hammers"
+				type: "item"
+			}]
+			x: -17.0d
+			y: -10.0d
 		}
 	]
 	title: "Contraptions of Sorrow"
