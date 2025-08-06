@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:superheated_infernal_concentrate 1500', 'gtceu:stellarium 18')
         .outputFluids('gtceu:sub_stellar_infernal_concentrate 1000')
         .duration(640)
-        .EUt(1023041)
+        .EUt(255987)
         .fusionStartEU(1200000000);  
         
     // Super Stellar Recipe
