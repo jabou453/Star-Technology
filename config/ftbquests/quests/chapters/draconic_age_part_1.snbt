@@ -1000,7 +1000,10 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["2DACE6EF41A118D9"]
+			dependencies: [
+				"6A82CC9F01960097"
+				"2DACE6EF41A118D9"
+			]
 			description: ["Not added till Theta"]
 			id: "09B55AFE7C06EC82"
 			tasks: [{
@@ -1012,26 +1015,27 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["1799430093ABCC64"]
+			dependencies: ["09B55AFE7C06EC82"]
 			id: "41B4DE81AFC054B9"
 			tasks: [{
 				id: "06B8EC7B4599E429"
 				title: "Draconic Nursery"
 				type: "checkmark"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["3AE729D3F47E9A2B"]
+			dependencies: ["45E628CF1DA8D380"]
+			hide_dependent_lines: true
 			id: "37F9C85CFCFFDA5F"
 			tasks: [{
 				id: "5B990AC9E758FE37"
 				item: "gtceu:draconyallium_ingot"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: -5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -1078,7 +1082,7 @@
 				}
 			]
 			x: 1.0d
-			y: -1.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["3B1453C435E3950B"]
@@ -1100,8 +1104,8 @@
 				title: "Draconic Scale Infusion"
 				type: "checkmark"
 			}]
-			x: 1.0d
-			y: 3.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
@@ -1584,7 +1588,6 @@
 		{
 			dependencies: [
 				"6D6C79E7CBBCC893"
-				"37F9C85CFCFFDA5F"
 				"31F87896FF834E63"
 			]
 			id: "3AE6E85C2FC76DE9"
@@ -1605,8 +1608,8 @@
 				item: "gtceu:draconic_enrichment_serum_bucket"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 2.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -1679,7 +1682,10 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["1799430093ABCC64"]
+			dependencies: [
+				"1799430093ABCC64"
+				"37F9C85CFCFFDA5F"
+			]
 			id: "6D6C79E7CBBCC893"
 			tasks: [
 				{
@@ -1705,8 +1711,22 @@
 				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 6.0d
+			x: 5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"37F9C85CFCFFDA5F"
+				"3D239E0F7B45AE92"
+			]
+			id: "6A82CC9F01960097"
+			tasks: [{
+				id: "1CCB67E6F9C54E7E"
+				item: "gtceu:draco_abyssal_ingot"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
 		}
 	]
 	title: "Draconic Empires"
