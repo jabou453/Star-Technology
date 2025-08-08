@@ -652,7 +652,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["097D8B4DF03A8617"]
@@ -1003,6 +1003,7 @@
 			dependencies: [
 				"6A82CC9F01960097"
 				"2DACE6EF41A118D9"
+				"31F87896FF834E63"
 			]
 			description: ["Not added till Theta"]
 			id: "09B55AFE7C06EC82"
@@ -1081,8 +1082,8 @@
 					type: "item"
 				}
 			]
-			x: 1.0d
-			y: 1.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["3B1453C435E3950B"]
@@ -1586,10 +1587,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"6D6C79E7CBBCC893"
-				"31F87896FF834E63"
-			]
+			dependencies: ["6D6C79E7CBBCC893"]
 			id: "3AE6E85C2FC76DE9"
 			subtitle: "Third UEV Circuit"
 			tasks: [{
@@ -1634,8 +1632,8 @@
 				title: "Chem Plant 2"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 6.0d
+			x: 0.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
@@ -1646,8 +1644,8 @@
 				title: "BPA Core"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: 6.0d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -1682,10 +1680,7 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"1799430093ABCC64"
-				"37F9C85CFCFFDA5F"
-			]
+			dependencies: ["1799430093ABCC64"]
 			id: "6D6C79E7CBBCC893"
 			tasks: [
 				{
@@ -1711,8 +1706,8 @@
 				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 5.0d
+			x: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -1726,7 +1721,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 4.0d
 		}
 	]
 	title: "Draconic Empires"
