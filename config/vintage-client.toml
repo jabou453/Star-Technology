@@ -14,19 +14,19 @@
 	[client.hideItems]
 		#.
 		#Hides all Springs from creative tab & JEI (you still can craft it)
-		hideSprings = false
+		hideSprings = true
 		#.
 		#Hides all Small Springs from creative tab & JEI (you still can craft it)
-		hideSmallSprings = false
+		hideSmallSprings = true
 		#.
 		#Hides all Rods from creative tab & JEI (you still can craft it)
-		hideRods = false
+		hideRods = true
 		#.
 		#Hides all Sheets from creative tab & JEI (you still can craft it)
-		hideSheets = false
+		hideSheets = true
 		#.
 		#Hides all Wires from creative tab & JEI (you still can craft it)
-		hideWires = false
+		hideWires = true
 
 	#.
 	#Position of Create: Vintage Improvements config button in the main menu & pause menu
@@ -35,7 +35,7 @@
 		#Choose the menu row that the Vintage Improvements config button appears on in the main menu
 		#Set to 0 to disable the button altogether
 		#Range: 0 ~ 4
-		mainMenuConfigButtonRow = 1
+		mainMenuConfigButtonRow = 0
 		#.
 		#Offset the Vintage Improvements config button in the main menu by this many pixels on the X axis
 		#The sign (-/+) of this value determines what side of the row the button appears on (left/right)
@@ -45,7 +45,7 @@
 		#Choose the menu row that the Vintage Improvements config button appears on in the in-game menu
 		#Set to 0 to disable the button altogether
 		#Range: 0 ~ 5
-		ingameMenuConfigButtonRow = 2
+		ingameMenuConfigButtonRow = 0
 		#.
 		#Offset the Vintage Improvements config button in the in-game menu by this many pixels on the X axis
 		#The sign (-/+) of this value determines what side of the row the button appears on (left/right)
