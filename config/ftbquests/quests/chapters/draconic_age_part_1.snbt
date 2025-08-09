@@ -1124,18 +1124,6 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["38C2E3061C764F05"]
-			hide_until_deps_complete: true
-			id: "3BF75D255438C1F0"
-			tasks: [{
-				id: "7B1D7302F29EF060"
-				title: "Exotic Matters"
-				type: "checkmark"
-			}]
-			x: 10.0d
-			y: -6.0d
-		}
-		{
 			dependencies: [
 				"6C8C6EA426060065"
 				"22A4164AD4303C20"
@@ -1253,6 +1241,7 @@
 				"0B475E2385B478C0"
 				"53E595EAB1C90884"
 				"61C534992FB17066"
+				"2F62965D05463E44"
 			]
 			description: [
 				"Having witnessed the creation of Maxwell, you have been blessed by it's enlightenment. You have reached the end of your journey for now, and as with the knowledge bestowed upon you, you hear it's voice, telling you to move forward, and embrace an even larger challenge."
@@ -1357,7 +1346,7 @@
 				item: "placeablemaxwell:maxwell"
 				type: "item"
 			}]
-			x: 10.125d
+			x: 10.0d
 			y: -2.25d
 		}
 		{
@@ -1382,7 +1371,7 @@
 				type: "checkmark"
 			}]
 			title: "You have completed the &5&lEta&r Version of &6Star Technology&r"
-			x: 12.625d
+			x: 12.5d
 			y: -2.25d
 		}
 		{
@@ -1403,7 +1392,7 @@
 				item: "placeablemaxwell:vasilisa"
 				type: "item"
 			}]
-			x: 8.125d
+			x: 8.0d
 			y: -3.75d
 		}
 		{
@@ -1424,7 +1413,7 @@
 				item: "placeablemaxwell:valenok"
 				type: "item"
 			}]
-			x: 8.125d
+			x: 8.0d
 			y: -0.75d
 		}
 		{
@@ -1446,7 +1435,7 @@
 				item: "placeablemaxwell:mars"
 				type: "item"
 			}]
-			x: 8.125d
+			x: 8.0d
 			y: -2.25d
 		}
 		{
@@ -1750,6 +1739,17 @@
 			}]
 			x: 1.0d
 			y: 7.0d
+		}
+		{
+			dependencies: ["38C2E3061C764F05"]
+			id: "2F62965D05463E44"
+			tasks: [{
+				id: "54498D9DE0F0A01A"
+				title: "Maxwellium"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: -6.0d
 		}
 	]
 	title: "Draconic Empires"
