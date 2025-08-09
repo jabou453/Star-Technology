@@ -900,7 +900,7 @@
 
     "block.gtceu.super_compact_heat_chamber": "Super-Compact Heat Chamber",
     "block.gtceu.super_compact_heat_chamber.tooltip.0": "§7A compacted and upgraded heat chamber capable of purifying materials and catalysing reactions at an enhanced rate through its ultra-dense thermal reactor design.",
-    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches and has §6Perfect Overclock",
+    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches, has §6Perfect Overclock§r, and has §cSubtick Parallels§r",
 
     "block.gtceu.kiln": "Kiln",
     "gtceu.kiln": "Kiln",
