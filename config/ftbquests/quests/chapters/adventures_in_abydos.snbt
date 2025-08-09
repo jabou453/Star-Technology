@@ -735,7 +735,7 @@
 				item: "gtceu:ancient_runicalium_ingot"
 				type: "item"
 			}]
-			x: -8.5d
+			x: -10.5d
 			y: 3.0d
 		}
 		{
@@ -757,7 +757,7 @@
 				type: "item"
 			}]
 			x: -10.5d
-			y: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1180,7 +1180,10 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["5022ABEA367576E7"]
+			dependencies: [
+				"5022ABEA367576E7"
+				"3DF4C45A9424D4D1"
+			]
 			description: ["This data disk can store so much data that you could put all human DNA in it."]
 			id: "43DAD4B63603BFC3"
 			rewards: [{
@@ -1201,7 +1204,12 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["6110BA7B3E84F06F"]
+			dependencies: [
+				"6110BA7B3E84F06F"
+				"06BE744AEAA6C217"
+				"3ECCE739DE8F5F2C"
+				"28F271D7C356B626"
+			]
 			description: ["The new tier of coils in Abydos, so get ready to replace your old ones."]
 			id: "4D04123F036F181E"
 			rewards: [{
@@ -1545,8 +1553,8 @@
 				title: "Cheaper Gasses"
 				type: "checkmark"
 			}]
-			x: -6.5d
-			y: 3.0d
+			x: -8.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1769,6 +1777,7 @@
 			dependencies: [
 				"07AD6651D0B40E22"
 				"0DA1386616FF7222"
+				"76AF284A57D528F2"
 			]
 			description: [
 				"Have you ever wanted to process millions of items at once? "
@@ -2175,6 +2184,30 @@
 			]
 			x: 3.5d
 			y: 7.0d
+		}
+		{
+			dependencies: ["5BDA17962F4630EB"]
+			id: "06BE744AEAA6C217"
+			shape: "circle"
+			tasks: [{
+				id: "65ADF26AC53A059B"
+				item: "gtceu:neutronium_silicon_carbide_ingot"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["678B90BF2ACE2BBA"]
+			id: "28F271D7C356B626"
+			shape: "circle"
+			tasks: [{
+				id: "76AF284A57D528F2"
+				item: "gtceu:astrenalloy_nx_ingot"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 3.0d
 		}
 	]
 	title: "Adventures in Abydos"
