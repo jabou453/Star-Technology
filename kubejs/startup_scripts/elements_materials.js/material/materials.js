@@ -289,6 +289,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('gold', gear);
     matmod('electrum', gear);
     matmod('blue_alloy', gear);
+    matmod('cupronickel', small_spring);
+    matmod('kanthal', small_spring);
+    matmod('nichrome', small_spring);
 
     // Blast Properties of periodic table metals
     const blast = global.blastProperty;
