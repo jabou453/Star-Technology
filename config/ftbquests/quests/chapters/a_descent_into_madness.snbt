@@ -16,6 +16,7 @@
 			]
 			icon: "minecraft:coarse_dirt"
 			id: "11792AD3856CC11A"
+			size: 1.25d
 			tasks: [{
 				icon: "minecraft:coarse_dirt"
 				id: "3573B9BF6334141B"
@@ -26,8 +27,8 @@
 				type: "observation"
 			}]
 			title: "So.... You have chosen death"
-			x: -12.0d
-			y: -7.5d
+			x: -11.5d
+			y: -10.0d
 		}
 		{
 			dependencies: ["11792AD3856CC11A"]
@@ -61,8 +62,8 @@
 				type: "observation"
 			}]
 			title: "Dead Bush [&l&4READ QUEST&r]"
-			x: -10.0d
-			y: -7.5d
+			x: -9.5d
+			y: -9.0d
 		}
 		{
 			dependencies: [
@@ -90,12 +91,13 @@
 				}
 				type: "item"
 			}]
-			x: -10.0d
-			y: -5.5d
+			x: -13.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["1EA467441DE65C0D"]
 			description: ["Strip Straw with a knife and you have \"string\""]
+			hide_dependent_lines: true
 			id: "34FB1FD1C7726DE6"
 			tasks: [{
 				id: "3EA81EC7D2D518A1"
@@ -103,8 +105,8 @@
 				type: "item"
 			}]
 			title: "Plant Fiber"
-			x: -10.0d
-			y: -1.5d
+			x: -13.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["11792AD3856CC11A"]
@@ -122,8 +124,8 @@
 					type: "item"
 				}
 			]
-			x: -12.0d
-			y: -5.5d
+			x: -13.5d
+			y: -9.0d
 		}
 		{
 			dependencies: ["66B461268D304ADD"]
@@ -134,8 +136,8 @@
 				item: "minecraft:stick"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -7.5d
+			x: -11.5d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -165,8 +167,8 @@
 				}
 				type: "item"
 			}]
-			x: -8.0d
-			y: -1.5d
+			x: -7.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["469CAF0D80978B00"]
@@ -177,8 +179,8 @@
 				item: "minecraft:stripped_jungle_log"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -1.5d
+			x: -5.5d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -200,13 +202,12 @@
 				type: "item"
 			}]
 			title: "Man's First Hydration"
-			x: -4.0d
-			y: -1.5d
+			x: -3.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["469CAF0D80978B00"]
 			description: ["I guess we will be stripping a LOT of logs"]
-			hide_dependent_lines: true
 			id: "2938B6A5159F3BE8"
 			tasks: [
 				{
@@ -221,8 +222,8 @@
 				}
 			]
 			title: "Bark 'n Sap"
-			x: -7.0d
-			y: -2.5d
+			x: -5.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["5A3FCB5053FCD9C7"]
@@ -232,8 +233,8 @@
 				item: "minecraft:bowl"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -0.5d
+			x: -3.5d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -261,8 +262,8 @@
 				}
 				type: "item"
 			}]
-			x: -8.0d
-			y: 0.5d
+			x: -7.5d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -275,8 +276,8 @@
 				item: "minecraft:jungle_planks"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 0.5d
+			x: -5.5d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -289,8 +290,8 @@
 				item: "kubejs:water_bowl"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -2.5d
+			x: -1.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["1810B4921EB6640E"]
@@ -304,8 +305,8 @@
 				type: "item"
 			}]
 			title: "INFINITE WOOD"
-			x: -3.0d
-			y: -4.5d
+			x: 0.5d
+			y: -8.0d
 		}
 		{
 			dependencies: ["525886980CC24650"]
@@ -316,20 +317,19 @@
 				item: "farmersdelight:straw"
 				type: "item"
 			}]
-			x: -10.0d
-			y: -3.5d
+			x: -13.5d
+			y: -5.0d
 		}
 		{
 			dependencies: ["1EA467441DE65C0D"]
-			hide_dependent_lines: true
 			id: "54CFAAE3EA5F56D0"
 			tasks: [{
 				id: "52653090E4BAA766"
 				item: "farmersdelight:canvas"
 				type: "item"
 			}]
-			x: -12.0d
-			y: -3.5d
+			x: -11.5d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -358,26 +358,13 @@
 				to_observe: "minecraft:crafting_table"
 				type: "observation"
 			}]
-			x: -8.0d
-			y: -3.5d
-		}
-		{
-			dependencies: ["44E7C69C6BC48296"]
-			hide_dependency_lines: true
-			id: "67BFD51F78F7621B"
-			tasks: [{
-				id: "2ACE0E73B46D4879"
-				item: "minecraft:coarse_dirt"
-				type: "item"
-			}]
-			x: -12.0d
-			y: -1.5d
+			x: -9.5d
+			y: -5.0d
 		}
 		{
 			dependencies: [
-				"54CFAAE3EA5F56D0"
-				"34FB1FD1C7726DE6"
 				"70E29549D5B3A31D"
+				"13F8BDB87F975319"
 			]
 			id: "0A4DFA22DC756FA7"
 			tasks: [{
@@ -385,22 +372,19 @@
 				item: "exnihilosequentia:string_mesh"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 0.5d
+			x: -11.5d
+			y: -4.0d
 		}
 		{
-			dependencies: [
-				"67BFD51F78F7621B"
-				"0A4DFA22DC756FA7"
-			]
+			dependencies: ["0A4DFA22DC756FA7"]
 			id: "1E9A3E0369CE7901"
 			tasks: [{
 				id: "028AEF0426599234"
 				item: "exnihilosequentia:jungle_sieve"
 				type: "item"
 			}]
-			x: -12.0d
-			y: 0.5d
+			x: -11.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["1E9A3E0369CE7901"]
@@ -415,8 +399,8 @@
 				type: "item"
 			}]
 			title: "INFINITE DIRT"
-			x: -14.0d
-			y: 0.5d
+			x: -13.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["1E9A3E0369CE7901"]
@@ -427,8 +411,8 @@
 				type: "item"
 			}]
 			title: "Stones"
-			x: -12.0d
-			y: 2.5d
+			x: -9.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["24B0865E6FC3EA96"]
@@ -438,8 +422,8 @@
 				item: "minecraft:cobblestone"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 2.5d
+			x: -5.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["184FE341A3AD7B1E"]
@@ -465,8 +449,8 @@
 				}
 				type: "item"
 			}]
-			x: -12.0d
-			y: 4.5d
+			x: -11.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["345B75BF519B7702"]
@@ -476,8 +460,8 @@
 				item: "exnihilosequentia:dust"
 				type: "item"
 			}]
-			x: -11.0d
-			y: 6.0d
+			x: -11.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["2938B6A5159F3BE8"]
@@ -494,8 +478,8 @@
 				match_nbt: true
 				type: "item"
 			}]
-			x: -5.0d
-			y: 1.5d
+			x: -3.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["5A3FCB5053FCD9C7"]
@@ -506,15 +490,14 @@
 				item: "gtceu:brick_wooden_form"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -0.5d
+			x: 0.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
 				"218CF08B9647CA00"
 				"6A62DF26FC748F1A"
 			]
-			hide_dependent_lines: true
 			icon: {
 				Count: 1
 				id: "woodenbucket:wooden_bucket"
@@ -543,8 +526,8 @@
 				match_nbt: true
 				type: "item"
 			}]
-			x: -4.0d
-			y: 0.5d
+			x: -1.5d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -564,8 +547,8 @@
 				type: "observation"
 			}]
 			title: "Clay"
-			x: -5.0d
-			y: -4.5d
+			x: -1.5d
+			y: -9.0d
 		}
 		{
 			dependencies: ["1810B4921EB6640E"]
@@ -578,8 +561,8 @@
 				type: "item"
 			}]
 			title: "Mud"
-			x: -3.0d
-			y: -2.5d
+			x: 0.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["0EF265815EB8F86F"]
@@ -589,13 +572,13 @@
 				item: "minecraft:packed_mud"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -3.5d
+			x: 2.5d
+			y: -5.0d
 		}
 		{
 			dependencies: [
 				"08B170E72119FDD4"
-				"1ABF4784F033D41A"
+				"1EE07BE5F12EBCDB"
 			]
 			dependency_requirement: "one_completed"
 			hide_dependent_lines: true
@@ -605,8 +588,8 @@
 				item: "minecraft:clay_ball"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -6.5d
+			x: -3.5d
+			y: -10.0d
 		}
 		{
 			dependencies: ["341E2546D0BD5FAE"]
@@ -616,8 +599,8 @@
 				item: "kubejs:packed_mud_ball"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -2.0d
+			x: 2.5d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -630,8 +613,8 @@
 				item: "kubejs:mud_brick"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -0.5d
+			x: 0.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["0FB21B977F0C0843"]
@@ -700,14 +683,14 @@
 				}
 			]
 			title: "Ore Chunks"
-			x: -4.0d
-			y: 4.5d
+			x: -3.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"1ABF4784F033D41A"
 				"4C8102F3CE4F6612"
-				"54AAB5395E468898"
+				"01588348D06FBFF0"
 			]
 			description: ["Consider using a Mortar on the Pebbles..."]
 			icon: {
@@ -746,8 +729,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 0.5d
-			y: 4.5d
+			x: 2.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -770,13 +753,15 @@
 				silent: true
 				type: "command"
 			}]
+			shape: "gear"
+			size: 1.25d
 			tasks: [{
 				id: "1365D05A7F5E99A7"
 				item: "minecraft:furnace"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 2.5d
+			x: -3.5d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -825,7 +810,7 @@
 			]
 			title: "Metal Nuggets"
 			x: -1.5d
-			y: 4.5d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -849,7 +834,7 @@
 				}
 			]
 			x: 0.5d
-			y: 2.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["5D9CA9E8B676679A"]
@@ -868,8 +853,8 @@
 				}
 			]
 			title: "Uncommon Minerals"
-			x: -13.0d
-			y: 6.0d
+			x: -9.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -883,7 +868,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["13F8BDB87F975319"]
@@ -931,8 +916,8 @@
 				}
 			]
 			title: "Easier Saplings"
-			x: -7.0d
-			y: -4.5d
+			x: -9.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["1A34B55754A8965F"]
@@ -954,8 +939,8 @@
 				}
 				type: "item"
 			}]
-			x: 0.5d
-			y: 0.5d
+			x: 2.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["396FCF5D31059F6B"]
@@ -967,8 +952,8 @@
 				type: "item"
 			}]
 			title: "Nom Nom"
-			x: -7.0d
-			y: -6.5d
+			x: -7.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["6AEAD96B7394C208"]
@@ -1011,8 +996,8 @@
 				}
 			]
 			title: "Metal Rich Stones"
-			x: -6.0d
-			y: 4.5d
+			x: -3.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["19A933EA1C10EED4"]
@@ -1055,8 +1040,8 @@
 				}
 			]
 			title: "Many Stones"
-			x: -8.0d
-			y: 4.5d
+			x: -5.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1069,8 +1054,8 @@
 				item: "minecraft:gravel"
 				type: "item"
 			}]
-			x: -10.0d
-			y: 4.5d
+			x: -7.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["19A933EA1C10EED4"]
@@ -1080,8 +1065,8 @@
 				item: "minecraft:sand"
 				type: "item"
 			}]
-			x: -9.0d
-			y: 6.0d
+			x: -9.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["345B75BF519B7702"]
@@ -1099,8 +1084,8 @@
 				}
 			]
 			title: "Even More Stones"
-			x: -7.0d
-			y: 6.0d
+			x: -7.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["34F1552CD16AC064"]
@@ -1118,8 +1103,8 @@
 				}
 			]
 			title: "Sediment Rich Stones"
-			x: -5.0d
-			y: 6.0d
+			x: -5.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["70B01D7A03E73691"]
@@ -1148,22 +1133,22 @@
 				}
 			]
 			title: "Sediments"
-			x: -3.0d
-			y: 6.0d
+			x: -3.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["2CE500506AE84E1A"]
 			id: "1472BFF306FEA342"
 			shape: "gear"
-			size: 1.0d
+			size: 1.5d
 			tasks: [{
 				id: "7525762D9BF50AB0"
 				item: "create:andesite_alloy"
 				type: "item"
 			}]
 			title: "Ultra Primitive Alloy"
-			x: 5.0d
-			y: 2.5d
+			x: 0.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -1177,13 +1162,12 @@
 				item: "gtceu:rugged_alloyer"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 2.5d
+			x: 0.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["2CE500506AE84E1A"]
 			description: ["By using 2 Chunks and a Nugget you can make ingots resulting in 4 nuggets per chunk rather than 2. A whole &l&n2x&r efficiency."]
-			hide_dependent_lines: true
 			id: "67D37BA6B5424768"
 			tasks: [
 				{
@@ -1217,8 +1201,8 @@
 				}
 			]
 			title: "Easier Ingots"
-			x: 3.5d
-			y: 1.0d
+			x: -1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -1231,8 +1215,8 @@
 				title: "Pointy Stick"
 				type: "checkmark"
 			}]
-			x: -8.0d
-			y: -5.5d
+			x: -9.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["3DCE9199510A9223"]
@@ -1251,7 +1235,7 @@
 				type: "item"
 			}]
 			x: -1.5d
-			y: 6.0d
+			y: 1.0d
 		}
 	]
 	title: "A Descent into Madness"
