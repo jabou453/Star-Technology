@@ -16,7 +16,8 @@
 			]
 			icon: "minecraft:coarse_dirt"
 			id: "11792AD3856CC11A"
-			size: 1.25d
+			shape: "pentagon"
+			size: 1.5d
 			tasks: [{
 				icon: "minecraft:coarse_dirt"
 				id: "3573B9BF6334141B"
