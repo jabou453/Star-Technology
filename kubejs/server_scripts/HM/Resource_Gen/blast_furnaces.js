@@ -63,8 +63,19 @@ ServerEvents.recipes(event => {
 		F: 'minecraft:blast_furnace'
 	}).id('start:shaped/primitive_blast_furnace');
 
+    event.recipes.create.mechanical_crafting('gtceu:steeled_blast_furnace', [
+		'WPW',
+		'GFG',
+		'WPW'
+	], {
+		G: 'gtceu:small_cast_iron_gear',
+		W: 'gtceu:wrought_iron_plate',
+		P: 'gtceu:potin_screw',
+		F: 'gtceu:primitive_blast_furnace'
+	}).id('start:shaped/steeled_blast_furnace');
+
     event.recipes.gtceu.assembler(id('reinforced_blast_furnace'))
-        .itemInputs('gtceu:primitive_blast_furnace', '4x dustrial_decor:cinder_bricks', '6x gtceu:double_wrought_iron_plate', 
+        .itemInputs('gtceu:steeled_blast_furnace', '4x dustrial_decor:cinder_bricks', '6x gtceu:double_wrought_iron_plate', 
             '2x gtceu:cast_iron_gear', 'createlowheated:basic_burner', '8x gtceu:wrought_iron_screw')
         .inputFluids('gtceu:concrete 3000')
         .itemOutputs('gtceu:reinforced_blast_furnace')

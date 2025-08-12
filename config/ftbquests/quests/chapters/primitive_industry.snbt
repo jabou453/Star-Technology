@@ -32,7 +32,7 @@
 			hide_dependent_lines: true
 			id: "3A3BD0ECA7FC8D38"
 			shape: "gear"
-			size: 1.0d
+			size: 1.25d
 			tasks: [{
 				id: "3BB9AE5BC028985A"
 				item: "gtceu:wrought_iron_ingot"
@@ -93,6 +93,7 @@
 			]
 			id: "2A7C8C43D6D58B93"
 			shape: "gear"
+			size: 1.25d
 			tasks: [{
 				id: "5E9ECA9852DFB036"
 				item: "gtceu:primitive_blast_furnace"
@@ -120,7 +121,7 @@
 			hide_dependent_lines: true
 			id: "301FF7F900A30DC7"
 			shape: "gear"
-			size: 1.0d
+			size: 1.5d
 			tasks: [{
 				id: "1F3A1E1E31137FF3"
 				item: "gtceu:steel_ingot"
@@ -160,6 +161,7 @@
 			dependencies: [
 				"4D8EFEA7036CD327"
 				"08085ED3830FD51A"
+				"61140FF544151BF8"
 			]
 			id: "6974D4ADDEA9535F"
 			tasks: [{
@@ -374,8 +376,8 @@
 				item: "gtceu:steam_grinder"
 				type: "item"
 			}]
-			x: -8.5d
-			y: 0.0d
+			x: -10.5d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -389,7 +391,7 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["684FAA520167CC51"]
@@ -763,6 +765,8 @@
 				"51B433A0377CCC0A"
 			]
 			id: "0E113E08C05B0914"
+			shape: "gear"
+			size: 1.25d
 			tasks: [{
 				id: "3B2609053CCD0541"
 				item: "gtceu:circuit_manufacturing_facility"
@@ -779,7 +783,7 @@
 			]
 			id: "53BA24466D74ADE2"
 			shape: "gear"
-			size: 1.0d
+			size: 1.5d
 			tasks: [{
 				id: "35CB1AF9DEB0200D"
 				item: "gtceu:basic_electronic_circuit"
@@ -1391,7 +1395,7 @@
 				type: "item"
 			}]
 			x: -0.5d
-			y: -5.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["684FAA520167CC51"]
@@ -1404,6 +1408,21 @@
 			}]
 			x: -2.5d
 			y: 9.0d
+		}
+		{
+			dependencies: [
+				"410385DA7FBBD2FA"
+				"3A3BD0ECA7FC8D38"
+				"3149BE5A8D986443"
+			]
+			id: "61140FF544151BF8"
+			tasks: [{
+				id: "547E7975CC842752"
+				item: "gtceu:steeled_blast_furnace"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 2.0d
 		}
 	]
 	title: "Primitive Industry"
