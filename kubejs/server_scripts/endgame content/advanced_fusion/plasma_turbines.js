@@ -18,7 +18,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.HV]);
 
     event.recipes.gtceu.assembler(id('ev_rotor_holder'))
-        .itemInputs('gtceu:ev_machine_hull','4x gtceu:red_steel_gear','4x gtceu:small_titanium_gear','gtceu:titanium_ring')
+        .itemInputs('gtceu:ev_machine_hull','4x gtceu:ultimet_gear','4x gtceu:small_titanium_gear','gtceu:titanium_ring')
         .inputFluids('gtceu:polyethylene 288')
         .itemOutputs('gtceu:ev_rotor_holder')
         .circuit(3)

@@ -140,4 +140,12 @@ ServerEvents.recipes(event => {
 
     // Bromine Skip to be done when line is redone
 
+    event.recipes.gtceu.chemical_skip(id('mutagen_skip'))
+        .itemInputs('64x gtceu:bio_chaff','64x gtceu:bio_chaff','64x gtceu:bio_chaff','24x gtceu:bio_chaff','5x gtceu:naquadria_dust')
+        .inputFluids('gtceu:distilled_water 77250')
+        .outputFluids('gtceu:mutagen 9000')
+        .duration(1512)
+        .EUt(GTValues.VA[GTValues.UEV])
+        .cleanroom(CleanroomType.STERILE_CLEANROOM);
+
 });

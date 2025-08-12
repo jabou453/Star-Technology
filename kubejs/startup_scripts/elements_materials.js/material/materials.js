@@ -224,6 +224,8 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('platinum_group_sludge').setFormula('Pt?');
     GTMaterials.get('draconyallium').setFormula('🜍Dr68Ag20O94N76🜍');
     GTMaterials.get('draco_abyssal').setFormula('🜍∅🜍');
+    GTMaterials.get('silver_sulfate').setFormula('Ag2(SO4)');
+    GTMaterials.get('chromium_sulfate').setFormula('Cr2(SO4)3');
 
 });
 
@@ -977,13 +979,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('cerium_4_sulfate', ['1x cerium', '2x sulfate'], 0x828685, [no_decomp]);
 
-    compDust('chromium_sulfate', ['2x chromium', '3x sulfate'], 0xEEE9DB, []);
+    compDust('chromium_sulfate', ['2x chromium', '3x sulfur', '12x oxygen'], 0xEEE9DB, []);
 
     compDust('cerium_dioxide', ['1x cerium', '2x oxygen'], 0xB9CFDB, []);
 
     compDust('seaborgium_trisulfate', ['1x seaborgium', '3x sulfate'], 0x8AA89B, [no_decomp]);
 
-    compDust('seaborgium_trioxide', ['1x seaborgium', '3x oxygen'], 0x4B827B, []);
+    compDust('seaborgium_trioxide', ['1x seaborgium', '3x oxygen'], 0x4B827B, [no_decomp]);
 
     compDust('sodium_seaborgate', ['2x sodium', '1x seaborgium', '4x oxygen'], 0x298B80, [no_decomp]);
 
@@ -1001,7 +1003,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('flerovium_hexadecafluoride_di_sulfur_trioxide', ['1x flerovium', '2x sulfur_trioxide', '16x fluorine'], 0x36413F, [no_decomp]);
 
-    compDust('silver_sulfate', ['2x silver', '1x sulfate'], 0xD4CF91, []);
+    compDust('silver_sulfate', ['2x silver', '1x sulfur', '4x oxygen'], 0xD4CF91, []);
 
     compDust('flerovium_hexadecafluoride', ['1x flerovium', '16x fluorine'], 0x5A6759, [no_decomp]);
 

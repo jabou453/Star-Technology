@@ -78,7 +78,6 @@
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
 				"4E761937069F4A8D"
-				"59FFBCD3B0573126"
 			]
 			description: ["A mechanism that can create rotation with large amounts of force."]
 			id: "06F8BF8FB54B3BEE"
@@ -145,7 +144,6 @@
 				"182D948925141764"
 				"73D0DC357821B395"
 				"0D4EFA300817A74D"
-				"59FFBCD3B0573126"
 			]
 			description: ["A magnetic field controller."]
 			id: "6D7188F8CA92DAAF"
@@ -1208,7 +1206,7 @@
 				"6110BA7B3E84F06F"
 				"06BE744AEAA6C217"
 				"3ECCE739DE8F5F2C"
-				"28F271D7C356B626"
+				"3C99D83398AFC31C"
 			]
 			description: ["The new tier of coils in Abydos, so get ready to replace your old ones."]
 			id: "4D04123F036F181E"
@@ -1777,7 +1775,6 @@
 			dependencies: [
 				"07AD6651D0B40E22"
 				"0DA1386616FF7222"
-				"76AF284A57D528F2"
 			]
 			description: [
 				"Have you ever wanted to process millions of items at once? "
@@ -2155,19 +2152,6 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["4D04123F036F181E"]
-			description: ["A neutron blocker refined from Titanite-Magma"]
-			hide_dependent_lines: true
-			id: "59FFBCD3B0573126"
-			tasks: [{
-				id: "21C2A85603842776"
-				item: "gtceu:zirconium_ingot"
-				type: "item"
-			}]
-			x: -10.5d
-			y: 1.0d
-		}
-		{
 			dependencies: ["0508AE03C730BE6C"]
 			id: "5022ABEA367576E7"
 			tasks: [
@@ -2198,12 +2182,16 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["678B90BF2ACE2BBA"]
-			id: "28F271D7C356B626"
-			shape: "circle"
+			dependencies: ["1BE69DB2DFDC35C8"]
+			description: [
+				"A super strong neutron absorber."
+				""
+				"&7&oRemember that EBFs gain heat for every tier above &bMV&7 meaning Tritanium Coils can handle it [&c11400K&7 at UV]."
+			]
+			id: "3C99D83398AFC31C"
 			tasks: [{
-				id: "76AF284A57D528F2"
-				item: "gtceu:astrenalloy_nx_ingot"
+				id: "463AE4AD2822A9C5"
+				item: "gtceu:zirconium_ingot"
 				type: "item"
 			}]
 			x: -6.5d
