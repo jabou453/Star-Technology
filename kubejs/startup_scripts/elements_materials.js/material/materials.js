@@ -226,6 +226,14 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('draco_abyssal').setFormula('🜍∅🜍');
     GTMaterials.get('silver_sulfate').setFormula('Ag2(SO4)');
     GTMaterials.get('chromium_sulfate').setFormula('Cr2(SO4)3');
+    GTMaterials.get('sparse_electron_akreyrium').setFormula('Ak(?e?)?');
+    GTMaterials.get('dense_electron_akreyrium').setFormula('Ak(e)?');
+    GTMaterials.get('sparse_muon_akreyrium').setFormula('Ak(?μ?)?');
+    GTMaterials.get('dense_muon_akreyrium').setFormula('Ak(μ)?');
+    GTMaterials.get('sparse_tau_akreyrium').setFormula('Ak(?τ?)?');
+    GTMaterials.get('dense_tau_akreyrium').setFormula('Ak(τ)?');
+    GTMaterials.get('lepton_sparse_akreyrium').setFormula('Ak(?ℓ?)?');
+    GTMaterials.get('lepton_dense_akreyrium').setFormula('Ak(ℓ)?');
 
 });
 
@@ -1217,7 +1225,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquidStill('sparse_electron_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
 
-    compLiquidStill('dense_electron_akreyrium', ['1x utopian_akreyrium', '1x mystery', 'alternating_phase_electron_infusion_flux'], [no_decomp]);
+    compLiquidStill('dense_electron_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
 
     // Resource Gen
     compLiquid('brackish_water', ['1x water', '1x mystery'], 0x459ea4, [no_decomp]);
@@ -1520,6 +1528,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .rotorStats(72000, 108, 2, 96000); //11.25x (10x * 12.5%) power output of Runicalium but only .15x the efficiency (10% * 1.5x), nets 1.6875x stronger than runicallium and does "blitz" outputs
 
     //UXV Materials
+    compDust('thallium_antimonide',['1x thallium','1x antimony'],0xADC5E3,[])
+    
+    compLiquidStill('lepton_dense_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
+
     conductor('lepton_resonant_thallium_antimonide', ['1x thallium', '1x antimony', '1x mystery'], 0x74638F, DULL, [18250, 'highest', VA('uev'), 1800], [V('uxv'), 7, 48, false], [bolt_and_screw,spring,small_spring, no_abs_recipe, no_decomp, fine_wire]);
 
     //Plasmas

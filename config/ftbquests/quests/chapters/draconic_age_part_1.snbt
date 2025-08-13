@@ -713,7 +713,7 @@
 		{
 			dependencies: [
 				"69493DCA3D764771"
-				"31F87896FF834E63"
+				"7A07DB21A52F7219"
 			]
 			description: ["&9&lOpV&r recipe speeds"]
 			id: "54944370404CEA94"
@@ -994,7 +994,6 @@
 		{
 			dependencies: [
 				"6A82CC9F01960097"
-				"2DACE6EF41A118D9"
 				"31F87896FF834E63"
 			]
 			description: ["Not added till Theta"]
@@ -1005,7 +1004,7 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["09B55AFE7C06EC82"]
@@ -1015,8 +1014,8 @@
 				title: "Draconic Nursery"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: 2.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["45E628CF1DA8D380"]
@@ -1096,8 +1095,8 @@
 				title: "Draconic Scale Infusion"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: 5.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
@@ -1606,18 +1605,6 @@
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			hide_until_deps_complete: true
-			id: "4BB7E6D5CE28D90D"
-			tasks: [{
-				id: "6AC3E506DE19AAFF"
-				title: "Chem Plant 2"
-				type: "checkmark"
-			}]
-			x: 4.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["2DACE6EF41A118D9"]
-			hide_until_deps_complete: true
 			id: "1DC40C42DF1AFCC4"
 			tasks: [{
 				id: "70B6C065BA6E04DF"
@@ -1625,7 +1612,7 @@
 				type: "checkmark"
 			}]
 			x: 4.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1678,16 +1665,18 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["4BB7E6D5CE28D90D"]
-			hide_dependent_lines: true
+			dependencies: [
+				"2DACE6EF41A118D9"
+				"3FBD3851CCB3F14E"
+			]
 			id: "31F87896FF834E63"
 			tasks: [{
 				id: "7A07DB21A52F7219"
 				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 8.0d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
