@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
         .chancedOutput('2x minecraft:raw_gold', 4000, 750)
         .chancedOutput('3x gtceu:raw_sodalite', 4000, 1000)
         .chancedOutput('3x gtceu:raw_pentlandite', 3000, 500)
-        .chancedOutput('4x gtceu:raw_realgar', 4000, 800)
+        .chancedOutput('1x gtceu:raw_realgar', 6000, 1200)
         .chancedOutput('2x gtceu:raw_silver', 3500, 750)
         .outputFluids('gtceu:rare_ore_residue 400', 'gtceu:raw_ore_slurry 600')
         .duration(640)

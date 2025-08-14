@@ -135,7 +135,7 @@ global.world_layers = (func) => {
     controller.add('world_gen_layer', func);
 }
 
-global.p_world_layers = (func, priority) => {
+global.world_layers = (func, priority) => {
     controller.add('world_gen_layer', func, priority);
 }
 
@@ -143,7 +143,7 @@ global.elements = (func) => {
     controller.add('element', func);
 }
 
-global.p_elements = (func, priority) => {
+global.elements = (func, priority) => {
     controller.add('elements', func, priority);
 }
 
@@ -151,7 +151,7 @@ global.materials = (func) => {
     controller.add('material', func);
 }
 
-global.p_materials = (func, priority) => {
+global.materials = (func, priority) => {
     controller.add('material', func, priority);
 }
 
@@ -159,7 +159,7 @@ global.items = (func) => {
     controller.add('item', func);
 }
 
-global.p_items = (func, priority) => {
+global.items = (func, priority) => {
     controller.add('item', func, priority);
 }
 
@@ -167,7 +167,7 @@ global.blocks = (func) => {
     controller.add('block', func);
 }
 
-global.p_blocks = (func, priority) => {
+global.blocks = (func, priority) => {
     controller.add('block', func, priority);
 }
 
@@ -175,7 +175,7 @@ global.recipe_types = (func) => {
     controller.add('recipe_type', func);
 }
 
-global.p_recipe_types = (func, priority) => {
+global.recipe_types = (func, priority) => {
     controller.add('recipe_type', func, priority);
 }
 
@@ -183,7 +183,7 @@ global.machines = (func) => {
     controller.add('machine', func);
 }
 
-global.p_machines = (func, priority) => {
+global.machines = (func, priority) => {
     controller.add('machine', func, priority);
 }
 

@@ -155,27 +155,6 @@ ServerEvents.recipes(event => {
         .duration(462)
         .EUt(GTValues.VA[GTValues.UHV]);
 
-    event.recipes.gtceu.assembler(id('zalloy_coil'))
-        .itemInputs('8x gtceu:zalloy_double_wire', '8x gtceu:neutronium_foil')
-        .inputFluids('gtceu:tritanium 144')
-        .itemOutputs('kubejs:zalloy_coil_block')
-        .duration(1000)
-        .EUt(GTValues.VHA[GTValues.UHV]);
-
-    event.recipes.gtceu.assembler(id('magmada_alloy_coil'))
-        .itemInputs('8x gtceu:magmada_alloy_double_wire', '8x gtceu:pure_netherite_foil')
-        .inputFluids('gtceu:adamantine 144')
-        .itemOutputs('kubejs:magmada_alloy_coil_block')
-        .duration(1100)
-        .EUt(GTValues.VHA[GTValues.UEV]);
-
-    event.recipes.gtceu.assembler(id('abyssal_coil'))
-        .itemInputs('8x gtceu:abyssal_alloy_double_wire', '8x gtceu:nyanium_foil')
-        .inputFluids('gtceu:void 144')
-        .itemOutputs('kubejs:abyssal_alloy_coil_block')
-        .duration(1200)
-        .EUt(GTValues.VHA[GTValues.UIV]);
-
     event.recipes.gtceu.assembler(id('extreme_temperature_smelting_casing'))
         .itemInputs('4x gtceu:calamatium_plate', '2x gtceu:astatium_bioselex_carbonite_plate', 'gtceu:enriched_estalt_frame')
         .itemOutputs('2x kubejs:extreme_temperature_smelting_casing')
@@ -287,6 +266,7 @@ ServerEvents.recipes(event => {
         C: 'kubejs:helish_star'
     }).id('start:shaped/end_crystal');
 
+    // Temp Breath Gen
     event.recipes.gtceu.fermenter(id('dragon_cell_growth'))
         .chancedInput('kubejs:draconic_stem_cells', 8000, 0)
         .inputFluids('gtceu:sterilized_growth_medium 50000', 'gtceu:radon 75000', 'gtceu:ender_air 500000')
@@ -296,36 +276,33 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UIV]);
 
-    //UHV,UEV,UIV Rotor Holder
+    // Lepton TlSb
+    event.recipes.gtceu.mixer(id('thallium_antimonide'))
+        .itemInputs('gtceu:thallium_dust','gtceu:antimony_dust')
+        .itemOutputs('2x gtceu:thallium_antimonide_dust')
+        .duration(160)
+        .EUt(GTValues.VHA[GTValues.UV] * 3);
 
-    event.shaped(Item.of('gtceu:uhv_rotor_holder'), [
-            'NZN',
-            'ZCZ',
-            'NZN'
-        ], {
-            N: 'gtceu:small_neutronium_gear',
-            Z: 'gtceu:zalloy_gear',
-            C: 'gtceu:uhv_machine_hull'
-    }).id('start:shaped/uhv_rotor_holder');
+    event.recipes.gtceu.quantum_compressor_infusion(id('lepton_akreyrium_catalyst'))
+        .itemInputs('kubejs:crystalline_akreyrium')
+        .inputFluids('gtceu:dense_electron_akreyrium 100','gtceu:dense_muon_akreyrium 200','gtceu:dense_tau_akreyrium 200')
+        .itemOutputs('kubejs:leptonic_akreyrium_catalyst')
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
-    event.shaped(Item.of('gtceu:uev_rotor_holder'), [
-        'NZN',
-        'ZCZ',
-        'NZN'
-    ], {
-        N: 'gtceu:small_mythrolic_alloy_gear',
-        Z: 'gtceu:starium_alloy_gear',
-        C: 'gtceu:uev_machine_hull'
-    }).id('start:shaped/uev_rotor_holder');
+    event.recipes.gtceu.injection_mixer(id('lepton_dense_akreyrium'))
+        .itemInputs('kubejs:leptonic_akreyrium_catalyst')
+        .inputFluids('gtceu:lepton_flux_akreyrium 500')
+        .outputFluids('gtceu:lepton_dense_akreyrium 1000')
+        .duration(240)
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
-    event.shaped(Item.of('gtceu:uiv_rotor_holder'), [
-        'NZN',
-        'ZCZ',
-        'NZN'
-    ], {
-        N: 'gtceu:small_chaotixic_alloy_gear',
-        Z: 'gtceu:ohmderblux_alloy_gear',
-        C: 'gtceu:uiv_machine_hull'
-    }).id('start:shaped/uiv_rotor_holder');
+    event.recipes.gtceu.folding_akreyrium_stabiliser(id('lepton_resonant_thallium_antimonide'))
+        .itemInputs('gtceu:gray_glass_lens','gtceu:thallium_antimonide_dust')
+        .inputFluids('gtceu:lepton_dense_akreyrium 1000')
+        .itemOutputs('gtceu:gray_glass_lens','gtceu:lepton_resonant_thallium_antimonide_dust')
+        .outputFluids('gtceu:utopian_akreyrium 750','gtceu:lepton_coalescing_superalloy 416')
+        .duration(240)
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
 });

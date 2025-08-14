@@ -16,22 +16,10 @@
 			y: -1.0d
 		}
 		{
-			id: "723E27B22576F175"
-			linked_quest: "1BE69DB2DFDC35C8"
-			x: -6.5d
-			y: 1.0d
-		}
-		{
-			id: "6E603BBF32247A87"
-			linked_quest: "0C19C040CA121E3B"
-			x: -2.5d
-			y: 3.0d
-		}
-		{
 			id: "220DBF269EDBAC7A"
 			linked_quest: "22B85F7F13C66730"
 			x: -2.5d
-			y: 5.0d
+			y: 3.0d
 		}
 	]
 	quests: [
@@ -64,10 +52,11 @@
 		}
 		{
 			dependencies: [
-				"512757BEBFD1F584"
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
 				"588B98BE82BB689C"
+				"3DF4C45A9424D4D1"
+				"490C3ED5E2E7C000"
 			]
 			description: ["A small computer that can regulate mechanisms."]
 			id: "4DD3C38FCD8D704D"
@@ -87,7 +76,6 @@
 		{
 			dependencies: [
 				"6110BA7B3E84F06F"
-				"0254109773A2D93C"
 				"73D0DC357821B395"
 				"4E761937069F4A8D"
 			]
@@ -109,9 +97,10 @@
 		{
 			dependencies: [
 				"6110BA7B3E84F06F"
-				"0254109773A2D93C"
 				"73D0DC357821B395"
 				"5C92E3705080A08C"
+				"120E7C97781B59E9"
+				"19834448E1EA758C"
 			]
 			description: ["A mechanism that can do precise movements with directives."]
 			id: "0A321FE2FB18EA8B"
@@ -152,7 +141,6 @@
 		{
 			dependencies: [
 				"6110BA7B3E84F06F"
-				"3A52F8061046CB05"
 				"182D948925141764"
 				"73D0DC357821B395"
 				"0D4EFA300817A74D"
@@ -177,6 +165,7 @@
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
 				"00B6B1AFD9AB29C3"
+				"120E7C97781B59E9"
 			]
 			description: ["A sturdy core that can precisely regulate it's inner working environment."]
 			id: "77E6700262CDB4E0"
@@ -196,9 +185,9 @@
 		{
 			dependencies: [
 				"6110BA7B3E84F06F"
-				"0254109773A2D93C"
 				"73D0DC357821B395"
 				"1D259520871C3A28"
+				"120E7C97781B59E9"
 			]
 			description: ["A sturdy plating that can resist wear and tear from high stress machinery."]
 			id: "433B94A266536D86"
@@ -217,11 +206,11 @@
 		}
 		{
 			dependencies: [
-				"512757BEBFD1F584"
-				"3A52F8061046CB05"
 				"6110BA7B3E84F06F"
 				"73D0DC357821B395"
 				"05B9D0B5977E3F05"
+				"490C3ED5E2E7C000"
+				"7F8ADE8B1AFE2807"
 			]
 			description: ["A controller that can precisely regulate energy transfer."]
 			id: "7BBEB3C2DADBAD8B"
@@ -254,41 +243,6 @@
 			}]
 			x: -8.5d
 			y: -1.0d
-		}
-		{
-			dependencies: ["5BD0047E69D79476"]
-			description: ["An element used for alloys that can make excellent mechanical parts."]
-			id: "6A21CA0E47D6FA6F"
-			rewards: [{
-				id: "29BC3C059823221C"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "41E3026A1176D949"
-				item: "gtceu:selenium_dust"
-				type: "item"
-			}]
-			x: -6.5d
-			y: 3.0d
-		}
-		{
-			dependencies: ["1BE69DB2DFDC35C8"]
-			description: ["An alloy used for sturdy mechanical components."]
-			hide_dependent_lines: true
-			id: "0254109773A2D93C"
-			rewards: [{
-				id: "399D7E65927EE9EC"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "21035C272117A4E9"
-				item: "gtceu:zircalloy_4_ingot"
-				type: "item"
-			}]
-			x: -7.5d
-			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -440,65 +394,6 @@
 		}
 		{
 			dependencies: [
-				"6A21CA0E47D6FA6F"
-				"14F1B40FACDDE02C"
-			]
-			description: ["An alloy that is extremely proficient in guiding electromagnetic fields."]
-			hide_dependent_lines: true
-			id: "3A52F8061046CB05"
-			rewards: [{
-				id: "2F92790DB15B5596"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "5333CB0CB7DA8B27"
-				item: "gtceu:iron_selenide_over_strontium_titanium_oxide_ingot"
-				type: "item"
-			}]
-			x: -6.5d
-			y: 5.0d
-		}
-		{
-			dependencies: ["5BD0047E69D79476"]
-			description: ["A remnant of nuclear decay, possibly telling a story of what happened to this world."]
-			id: "14F1B40FACDDE02C"
-			rewards: [{
-				id: "7F4F27A1BE0CC9B6"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "335BFB2F8F708709"
-				item: "gtceu:strontium_dust"
-				type: "item"
-			}]
-			x: -4.5d
-			y: 3.0d
-		}
-		{
-			dependencies: [
-				"6A21CA0E47D6FA6F"
-				"1BE69DB2DFDC35C8"
-			]
-			description: ["A new alloy that can control the flow of electricity with extreme precision."]
-			hide_dependent_lines: true
-			id: "512757BEBFD1F584"
-			rewards: [{
-				id: "154DCB5EAB9436A1"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "1307F84E9F43FCDC"
-				item: "gtceu:zirconium_selenide_diiodide_ingot"
-				type: "item"
-			}]
-			x: -8.5d
-			y: 3.0d
-		}
-		{
-			dependencies: [
 				"179A15014A5716B5"
 				"7AC55BA8BDD0F3D2"
 			]
@@ -518,7 +413,7 @@
 				type: "item"
 			}]
 			title: "1st &4&oUltimate&r Multiblock"
-			x: -0.5d
+			x: -4.5d
 			y: 3.0d
 		}
 		{
@@ -535,8 +430,8 @@
 				item: "gtceu:folding_akreyrium_stabiliser"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 3.0d
+			x: -2.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["07AD6651D0B40E22"]
@@ -562,14 +457,11 @@
 				}
 			]
 			title: "More &4&oUltimate&r Multiblocks"
-			x: 1.5d
+			x: -0.5d
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"5368269646BC0F27"
-				"283F10E58CA1FCEB"
-			]
+			dependencies: ["5368269646BC0F27"]
 			description: ["A weird fluid, that has some interesting properties making it necessary for more advanced machines."]
 			icon: {
 				Count: 1
@@ -598,7 +490,7 @@
 				}
 			]
 			title: "Utopian Akreyrium"
-			x: 3.5d
+			x: -0.5d
 			y: 3.0d
 		}
 		{
@@ -841,12 +733,16 @@
 				item: "gtceu:ancient_runicalium_ingot"
 				type: "item"
 			}]
-			x: -8.5d
-			y: 1.0d
+			x: -10.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["30C974448C57F0EC"]
-			description: ["The &2UEV&r superconductor, can hold 256 amps in a 1x wire"]
+			description: [
+				"The &2UEV&r superconductor, can hold 256 amps in a 1x wire."
+				""
+				"This is the &l&nFINAL&r superconductor of this type."
+			]
 			id: "1C0B16612DBBE8CA"
 			rewards: [{
 				id: "7EE50E0E44FBAE00"
@@ -859,13 +755,13 @@
 				type: "item"
 			}]
 			x: -10.5d
-			y: 3.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
 				"7AC55BA8BDD0F3D2"
-				"4F3EE28B3F38FC85"
 				"5B91E94506FB37D6"
+				"25583D0BF59E1BC8"
 			]
 			description: [
 				"A Fusion Reactor that can do parallels. Long gone are the days of excessive Fusion spam, now all you need to do is figure out how to efficiently wallshare these."
@@ -890,8 +786,8 @@
 				}
 				type: "item"
 			}]
-			x: 1.5d
-			y: 5.0d
+			x: -4.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["7AC55BA8BDD0F3D2"]
@@ -907,8 +803,8 @@
 				item: "gtceu:exotic_gas_siphon"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 7.0d
+			x: -6.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3540AE6C940F985B"]
@@ -927,8 +823,8 @@
 				item: "kubejs:ancient_stargate_computer_core"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 1.0d
+			x: 7.5d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -957,7 +853,7 @@
 				}
 				type: "item"
 			}]
-			x: 11.5d
+			x: 9.5d
 			y: -1.0d
 		}
 		{
@@ -989,7 +885,7 @@
 				type: "item"
 			}]
 			x: 9.5d
-			y: -1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -1014,8 +910,8 @@
 				}
 				type: "item"
 			}]
-			x: 13.5d
-			y: -1.0d
+			x: 9.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["442233119AED645F"]
@@ -1034,8 +930,8 @@
 				item: "kubejs:ancient_chevron_disk"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 2.0d
+			x: 9.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["379D69A44FC5B2F2"]
@@ -1058,7 +954,7 @@
 				}
 				type: "item"
 			}]
-			x: 9.5d
+			x: 11.5d
 			y: -5.0d
 		}
 		{
@@ -1078,7 +974,7 @@
 				item: "kubejs:draconic_coordinate_core"
 				type: "item"
 			}]
-			x: 9.5d
+			x: 7.5d
 			y: 1.0d
 		}
 		{
@@ -1095,8 +991,8 @@
 				item: "kubejs:nether_coordinate_crystal"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 4.0d
+			x: 4.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2D064F759D13FE4B"]
@@ -1112,8 +1008,8 @@
 				item: "kubejs:end_coordinate_crystal"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 2.0d
+			x: 2.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -1223,7 +1119,7 @@
 			]
 			title: "The Ancient Gate"
 			x: 11.5d
-			y: -3.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["47DF7968E9B98C65"]
@@ -1257,7 +1153,7 @@
 				item: "kubejs:void_core"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 5.5d
 			y: 1.0d
 		}
 		{
@@ -1278,11 +1174,14 @@
 				item: "kubejs:hell_core"
 				type: "item"
 			}]
-			x: 9.5d
+			x: 7.5d
 			y: 3.0d
 		}
 		{
-			dependencies: ["1C9396E2587051F7"]
+			dependencies: [
+				"5022ABEA367576E7"
+				"3DF4C45A9424D4D1"
+			]
 			description: ["This data disk can store so much data that you could put all human DNA in it."]
 			id: "43DAD4B63603BFC3"
 			rewards: [{
@@ -1299,42 +1198,16 @@
 				}
 				type: "item"
 			}]
-			x: 5.5d
+			x: 3.5d
 			y: 5.0d
 		}
 		{
 			dependencies: [
-				"78777C3EE2DA5D0F"
-				"2D064F759D13FE4B"
+				"6110BA7B3E84F06F"
+				"06BE744AEAA6C217"
+				"3ECCE739DE8F5F2C"
+				"3C99D83398AFC31C"
 			]
-			description: ["The start of your wildest dreams, a dragon based circuit board."]
-			id: "1C9396E2587051F7"
-			rewards: [{
-				id: "170A7AD04A8BFCA6"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [
-				{
-					id: "3DA83C02A0B67056"
-					item: "kubejs:draconic_wetware_printed_circuit_board"
-					type: "item"
-				}
-				{
-					id: "149D5BC68EC06EBB"
-					item: {
-						Count: 1
-						id: "kubejs:draconic_wetware_circuit_board"
-						tag: { }
-					}
-					type: "item"
-				}
-			]
-			x: 7.5d
-			y: 7.0d
-		}
-		{
-			dependencies: ["6110BA7B3E84F06F"]
 			description: ["The new tier of coils in Abydos, so get ready to replace your old ones."]
 			id: "4D04123F036F181E"
 			rewards: [{
@@ -1350,7 +1223,7 @@
 				item: "kubejs:zalloy_coil_block"
 				type: "item"
 			}]
-			x: -10.5d
+			x: -8.5d
 			y: 1.0d
 		}
 		{
@@ -1378,11 +1251,14 @@
 				}
 			]
 			title: "UEPIC Chips"
-			x: -0.5d
+			x: -4.5d
 			y: 5.0d
 		}
 		{
-			dependencies: ["2C354B0735DF8023"]
+			dependencies: [
+				"2C354B0735DF8023"
+				"3C3E585C933C9515"
+			]
 			description: ["Runes engraved on blocks to allow for them to exert power on placed blocks."]
 			id: "379D69A44FC5B2F2"
 			rewards: [{
@@ -1501,14 +1377,13 @@
 				}
 			]
 			title: "Advanced Engraved Runes"
-			x: 9.5d
-			y: -3.0d
+			x: 6.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
 				"1E47910C2F2112E1"
 				"3212A3351DAD4492"
-				"4F3EE28B3F38FC85"
 			]
 			description: ["An array of Chevrons that can store more complex data."]
 			hide_dependency_lines: true
@@ -1527,8 +1402,8 @@
 				}
 				type: "item"
 			}]
-			x: 13.5d
-			y: 4.0d
+			x: 9.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["493DD013C818BB7B"]
@@ -1561,7 +1436,7 @@
 				}
 			]
 			title: "Gritty Akreyrium"
-			x: -0.5d
+			x: -2.5d
 			y: 1.0d
 		}
 		{
@@ -1580,8 +1455,8 @@
 				type: "item"
 			}]
 			title: "Better Research Heat Sink"
-			x: 3.5d
-			y: 1.0d
+			x: -1.5d
+			y: 2.0d
 		}
 		{
 			id: "39E723ECCBEE0A0A"
@@ -1618,25 +1493,9 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["43DAD4B63603BFC3"]
-			description: ["This is most definitly looking at you."]
-			id: "4F3EE28B3F38FC85"
-			rewards: [{
-				id: "7B18F86418699D3C"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			tasks: [{
-				id: "182B26D1D8FAF134"
-				item: "kubejs:wetware_based_runic_neuroloom"
-				type: "item"
-			}]
-			x: 3.5d
-			y: 5.0d
-		}
-		{
-			dependencies: ["4F3EE28B3F38FC85"]
+			dependencies: ["25583D0BF59E1BC8"]
 			description: ["Ok now these rates are getting insane"]
+			hide_dependency_lines: true
 			id: "320ADA7E07856560"
 			rewards: [{
 				id: "1D899BA83FEBF385"
@@ -1649,7 +1508,7 @@
 				item: "start_core:uhv_parallel_hatch"
 				type: "item"
 			}]
-			x: 1.5d
+			x: -8.5d
 			y: 7.0d
 		}
 		{
@@ -1674,7 +1533,7 @@
 				item: "start_core:uhv_absolute_parallel_hatch"
 				type: "item"
 			}]
-			x: -0.5d
+			x: -6.5d
 			y: 7.0d
 		}
 		{
@@ -1692,8 +1551,8 @@
 				title: "Cheaper Gasses"
 				type: "checkmark"
 			}]
-			x: -4.5d
-			y: 7.0d
+			x: -8.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1757,7 +1616,7 @@
 			]
 			title: "Runic Infused Hazmat Armor"
 			x: 6.5d
-			y: -4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -1773,7 +1632,7 @@
 				type: "checkmark"
 			}]
 			x: -4.5d
-			y: 1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -1789,21 +1648,8 @@
 				item: "gtceu:molten_destabilizer"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 1.0d
-		}
-		{
-			dependencies: ["5BD0047E69D79476"]
-			description: ["Obtained from Crooksite, and holding &lIMMENSE&r importance when it comes to &o&nAkreyrium&r"]
-			hide_dependent_lines: true
-			id: "283F10E58CA1FCEB"
-			tasks: [{
-				id: "51B87E27D55B5966"
-				item: "gtceu:thallium_dust"
-				type: "item"
-			}]
 			x: -4.5d
-			y: -1.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1825,8 +1671,8 @@
 				item: "kubejs:abyss_fragment"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 1.0d
+			x: 3.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -1848,7 +1694,7 @@
 				item: "kubejs:inferno_fragment"
 				type: "item"
 			}]
-			x: 9.5d
+			x: 5.5d
 			y: 5.0d
 		}
 		{
@@ -1857,13 +1703,14 @@
 				"43DAD4B63603BFC3"
 			]
 			description: ["Used to contain powers just within comprehention."]
+			hide_dependency_lines: true
 			id: "4A0AD203617FEF0E"
 			tasks: [{
 				id: "510926669DC47CEC"
 				item: "kubejs:empty_coordinate_core"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 5.5d
 			y: 3.0d
 		}
 		{
@@ -1880,8 +1727,8 @@
 				item: "kubejs:abyssal_stargate_rod"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -1.0d
+			x: 3.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["5829828FB6290587"]
@@ -1897,8 +1744,8 @@
 				item: "kubejs:infernal_stargate_rod"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 3.0d
+			x: 7.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["63AD0F905F2A262B"]
@@ -1909,8 +1756,8 @@
 				item: "kubejs:untreated_abyssal_stargate_rod"
 				type: "item"
 			}]
-			x: 5.5d
-			y: -1.0d
+			x: 1.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["5BA6FB8F852C2629"]
@@ -1921,8 +1768,8 @@
 				item: "kubejs:untreated_infernal_stargate_rod"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 5.0d
+			x: 7.5d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -1940,8 +1787,8 @@
 				item: "gtceu:bulk_ore_processing_array"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 4.0d
+			x: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["630F50E03EC3D144"]
@@ -1975,8 +1822,8 @@
 		}
 		{
 			dependencies: [
-				"4F3EE28B3F38FC85"
 				"2D064F759D13FE4B"
+				"25583D0BF59E1BC8"
 			]
 			description: [
 				"Have you ever thought that wires were a little... excessive. Well now they arent needed."
@@ -1997,8 +1844,8 @@
 				item: "start_core:dream_link_node"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 7.0d
+			x: -0.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["141911C5DD68CD2A"]
@@ -2093,8 +1940,8 @@
 				}
 			]
 			title: "Wireless Covers and Hatches"
-			x: 5.5d
-			y: 7.0d
+			x: 1.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["652809D17FCE8B11"]
@@ -2233,8 +2080,122 @@
 				}
 			]
 			title: "Ancient Armors"
-			x: 6.5d
-			y: -6.0d
+			x: 5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5BD0047E69D79476"]
+			description: ["Amalgamations of the various byproducts you get from Magma Processing"]
+			hide_dependent_lines: true
+			id: "3BFB8DA58BED12D1"
+			tasks: [
+				{
+					id: "120E7C97781B59E9"
+					item: "gtceu:zircalloy_4_ingot"
+					type: "item"
+				}
+				{
+					id: "490C3ED5E2E7C000"
+					item: "gtceu:iron_selenide_over_strontium_titanium_oxide_ingot"
+					type: "item"
+				}
+				{
+					id: "7F8ADE8B1AFE2807"
+					item: "gtceu:zirconium_selenide_diiodide_ingot"
+					type: "item"
+				}
+			]
+			title: "Abydos Alloys"
+			x: -6.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"67E52B5738FC7398"
+				"5A91EE93457C617E"
+			]
+			id: "25583D0BF59E1BC8"
+			subtitle: "First UEV Circuit"
+			tasks: [{
+				id: "0F71C952D6EC490A"
+				item: "kubejs:runic_wetware_processor_mainframe"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["4F994F04EF1710B9"]
+			id: "67E52B5738FC7398"
+			subtitle: "Second UHV Circuit"
+			tasks: [{
+				id: "0AB6135CF248B2E9"
+				item: "kubejs:runic_wetware_processor_computer"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"5022ABEA367576E7"
+				"5DC3B85B63641F6C"
+			]
+			id: "4F994F04EF1710B9"
+			subtitle: "Third UV Circuit"
+			tasks: [{
+				id: "6D1079B819FF51A6"
+				item: "kubejs:runic_wetware_processor_assembly"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0508AE03C730BE6C"]
+			id: "5022ABEA367576E7"
+			tasks: [
+				{
+					id: "507020635FBF83C5"
+					item: "kubejs:runic_convergence_circuit_board"
+					type: "item"
+				}
+				{
+					id: "305E4313D43D9B0D"
+					item: "kubejs:runic_convergence_printed_circuit_board"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["5BDA17962F4630EB"]
+			id: "06BE744AEAA6C217"
+			shape: "circle"
+			tasks: [{
+				id: "65ADF26AC53A059B"
+				item: "gtceu:neutronium_silicon_carbide_ingot"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1BE69DB2DFDC35C8"]
+			description: [
+				"A super strong neutron absorber."
+				""
+				"&7&oRemember that EBFs gain heat for every tier above &bMV&7 meaning Tritanium Coils can handle it [&c11400K&7 at UV]."
+			]
+			id: "3C99D83398AFC31C"
+			tasks: [{
+				id: "463AE4AD2822A9C5"
+				item: "gtceu:zirconium_ingot"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 3.0d
 		}
 	]
 	title: "Adventures in Abydos"

@@ -110,7 +110,7 @@ ServerEvents.recipes(event => {
         .dimension('minecraft:cavum_tenebrae');*/
 
     const CrystalDuping = (type,eutScale) => {
-        event.recipes.gtceu.scanner(id(`${type}_crystal_duping`))
+        event.recipes.gtceu.scanner(`${type}_crystal_duping`)
         .itemInputs('kubejs:coordinate_crystal',`kubejs:${type}_coordinate_crystal`)
         .itemOutputs(`2x kubejs:${type}_coordinate_crystal`)
         .duration(6000)
@@ -128,7 +128,7 @@ const crystalfeed = (realmId, realm, stage, message) => {
             event.item.count--
             event.server.runCommandSilent(`execute at ${event.player.username} run playsound minecraft:block.enchantment_table.use player ${event.player.username} ~ ~ ~`);
             event.server.scheduleInTicks(15, ctx => {
-                event.player.tell(Text.translate(message));
+                event.player.tell(`As you consume the echoes of the coordinate crystal, you hear voices whispering, and strange numbers appear before your eyes, along with visions of ${message}.`);
                 event.server.runCommand(`execute as ${event.player.username} run sgjourney stargateNetwork address ${realmId}:${realmId == 'minecraft' ? `the_${realm}` : realm}`);
                 event.server.runCommandSilent(`execute as ${event.player.username} run gamestage add ${event.player.username} ${stage}`);
                 event.server.runCommandSilent(`give ${event.player.username} kubejs:coordinate_crystal`)
@@ -138,9 +138,9 @@ const crystalfeed = (realmId, realm, stage, message) => {
     });
 }
 
-crystalfeed('sgjourney', 'abydos', 'one', 'effects.crystals.success.abydos');
-crystalfeed('minecraft', 'nether', 'two', 'effects.crystals.success.nether');
-crystalfeed('minecraft', 'end', 'three', 'effects.crystals.success.end');
+crystalfeed('sgjourney', 'abydos', 'one', 'sandy dunes and a lost world buried beneath sand and dust');
+crystalfeed('minecraft', 'nether', 'two', 'a hellish landscape of fire and destruction');
+crystalfeed('minecraft', 'end', 'three', 'a looming abyss, darker than any night');
 
 const crystalfeedTroll = (realm,special) => {
     ItemEvents.rightClicked(`kubejs:${realm}_coordinate_crystal`, event => {
@@ -148,19 +148,19 @@ const crystalfeedTroll = (realm,special) => {
             event.item.count--
             event.server.runCommandSilent(`give ${event.player.username} kubejs:coordinate_crystal`)
             event.server.runCommandSilent(`execute at ${event.player.username} run playsound sgjourney:universe_dial_fail player ${event.player.username} ~ ~ ~`);
-            event.player.tell(Text.translate('effects.crystals.failure.start'));
+            event.player.tell(`§kMaker of Gates§r is not yet pleased with you.... Patience`);
             event.server.scheduleInTicks(20, ctx => {
-            event.player.tell(Text.translate(special));
+            event.player.tell(`The ${special} not ready for you`);
             event.server.scheduleInTicks(50, ctx => {
                 event.player.potionEffects.add('minecraft:nausea', 1200, 1);
                 event.player.potionEffects.add('minecraft:mining_fatigue', 1200, 1);
                 event.server.runCommandSilent(`execute at ${event.player.username} run playsound sgjourney:milky_way_dial_fail player ${event.player.username} ~ ~ ~`);
-                event.player.tell(Text.translate('effects.crystals.failure.end'));
+                event.player.tell(`Your Mind Clouds With Confusion`);
             })
             })
         }
     });
 }
 
-// crystalfeedTroll('nether', 'effects.crystals.failure.nether');
-// crystalfeedTroll('end', 'effects.crystals.failure.end');
+// crystalfeedTroll('nether', '§4Infernal Hells§r are');
+// crystalfeedTroll('end', '§5Echoing Abyss§r is');
