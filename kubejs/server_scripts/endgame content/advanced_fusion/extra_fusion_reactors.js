@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.assembler(id(`superconducting_coil_${tier}`))
             .itemInputs(`8x gtceu:${SuperCond}_double_wire`, '8x gtceu:niobium_titanium_foil')
             .inputFluids('gtceu:trinium 1152')
-            .itemOutputs(`${2 ** quant}x gtceu:superconducting_coil`)
+            .itemOutputs(`${2 * quant}x gtceu:superconducting_coil`)
             .duration(100)
             .EUt(GTValues.VA[GTValues.UV] * (4 ** quant));
     };

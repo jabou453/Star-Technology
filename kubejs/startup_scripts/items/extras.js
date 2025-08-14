@@ -20,9 +20,9 @@ StartupEvents.registry('item', event => {
         .displayName('Draconic Stem Cells')
         .texture('kubejs:item/draconic/draconic_stem_cells');
 
-    event.create('secreting_draconic_cells')
-        .displayName('Secreting Draconic Cells')
-        .texture('kubejs:item/draconic/secreting_draconic_cells');
+    event.create('lactating_draconic_cells')
+        .displayName('Lactating Draconic Cells')
+        .texture('kubejs:item/draconic/lactating_draconic_cells');
 
     event.create('draconic_brain_matter_cells')
         .displayName('Draconic Brain Matter Cells')

@@ -16,6 +16,12 @@
 			y: -5.0d
 		}
 		{
+			id: "41C7252EA0A52349"
+			linked_quest: "4FF433145C67693F"
+			x: -1.5d
+			y: -5.0d
+		}
+		{
 			id: "723EBAAA2CB2DA89"
 			linked_quest: "3306CAE5E57839A2"
 			x: -12.5d
@@ -182,7 +188,9 @@
 		}
 		{
 			dependencies: ["73931EAA3EC5C9A9"]
-			description: ["A multiblock that has two uses, either smelting normal items or creating alloys at an extreme rate."]
+			description: [
+				"A multiblock that has two uses, either smelting normal items or creating alloys at an extreme rate."
+			]
 			id: "649596731FFA9C9A"
 			rewards: [{
 				id: "1CC5497D89B6D364"
@@ -808,10 +816,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: [
-				"32B878D63A6AB6D3"
-				"5B575348D2A871BB"
-			]
+			dependencies: ["32B878D63A6AB6D3"]
 			description: [
 				"3rd tier of coils for your EBF to allow you to increase the heat even more. Will start making hot ingots more often."
 				""
@@ -2477,44 +2482,6 @@
 			}]
 			x: -8.5d
 			y: 0.0d
-		}
-		{
-			dependencies: ["261174370DC87FCB"]
-			description: ["Carbon and a Plastic. Each Plastic gives twice as much Fibers as the previous one."]
-			id: "4FF433145C67693F"
-			optional: true
-			rewards: [{
-				id: "046C4EC8F24182DD"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "641801B89910C82D"
-				item: "gtceu:carbon_fibers"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -5.0d
-		}
-		{
-			dependencies: ["550DB81B8DC91730"]
-			description: ["Just some Glass and Boron, quite cheap."]
-			id: "5B575348D2A871BB"
-			optional: true
-			rewards: [{
-				id: "70A331233F13EF2E"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "6A926D7036D5AF12"
-				item: "gtceu:borosilicate_glass_ingot"
-				type: "item"
-			}]
-			x: 2.5d
-			y: -3.0d
 		}
 	]
 	title: "Automation Age"

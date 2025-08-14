@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:argon 2000')
         .itemOutputs('1x gtceu:hot_ancient_netherite_ingot')
         .blastFurnaceTemp(13300)
-        .duration(2500)
+        .duration(3000)
         .EUt(GTValues.VHA[GTValues.UHV]*2/3);
 
     event.recipes.gtceu.macerator(id('ancient_debris_dust'))

@@ -572,7 +572,7 @@
 				item: "gtceu:rock_sifter"
 				type: "item"
 			}]
-			x: -3.5d
+			x: -3.0d
 			y: 2.5d
 		}
 		{
@@ -605,8 +605,8 @@
 				item: "kubejs:ruby_geode"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -1.0d
+			x: -6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["14AB8F4BE7C1F8E3"]
@@ -617,7 +617,7 @@
 				type: "item"
 			}]
 			x: -6.5d
-			y: 0.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["14AB8F4BE7C1F8E3"]
@@ -627,8 +627,8 @@
 				item: "kubejs:quartzite_geode"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 2.0d
+			x: -6.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["14AB8F4BE7C1F8E3"]
@@ -660,8 +660,8 @@
 				item: "kubejs:certus_quartz_geode"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 2.0d
+			x: -5.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["14AB8F4BE7C1F8E3"]
@@ -1420,8 +1420,8 @@
 				item: "gtceu:crushed_certus_quartz_ore"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 3.0d
+			x: -5.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["37B2D734AAEC98E8"]
@@ -1454,7 +1454,7 @@
 				type: "item"
 			}]
 			x: -7.5d
-			y: 0.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["3D51D9EE77B68083"]
@@ -1464,8 +1464,8 @@
 				item: "gtceu:crushed_quartzite_ore"
 				type: "item"
 			}]
-			x: -7.0d
-			y: 3.0d
+			x: -7.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["12A3AD9F42C2FB2F"]
@@ -1486,8 +1486,8 @@
 				item: "gtceu:crushed_ruby_ore"
 				type: "item"
 			}]
-			x: -7.5d
-			y: -1.5d
+			x: -7.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["729800025EA0DE0F"]
@@ -2471,28 +2471,6 @@
 			}]
 			x: 6.0d
 			y: 6.5d
-		}
-		{
-			dependencies: ["14AB8F4BE7C1F8E3"]
-			id: "04D70EC1234B9058"
-			tasks: [{
-				id: "241CB9FB552C51C2"
-				item: "kubejs:realgar_geode"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["04D70EC1234B9058"]
-			id: "44DCB040B50448F9"
-			tasks: [{
-				id: "6A708CE55B8022FE"
-				item: "gtceu:crushed_realgar_ore"
-				type: "item"
-			}]
-			x: -5.5d
-			y: 3.5d
 		}
 	]
 	title: "Resource Production"

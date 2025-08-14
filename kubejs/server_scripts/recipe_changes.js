@@ -587,159 +587,7 @@ ServerEvents.recipes(event => {
         event.recipes.create.item_application(`gtceu:t_large_${machine}`, [`gtceu:hv_${machine}`, 'kubejs:multiblock_upgrade_kit']).id(`start:item_application/large_${machine}`);
     });
     event.recipes.create.item_application('gtceu:large_rock_crusher', ['gtceu:hv_rock_crusher', 'kubejs:multiblock_upgrade_kit']).id('start:item_application/large_rock_crusher');
-    
-    // Coil Changes
-
-    event.remove({output: /gtceu:.*coil_block/})
-
-    // Cupronickel / Kanthal no Changes
-
-    event.recipes.gtceu.assembler(id('cupronickel_coil_block'))
-        .itemInputs('8x gtceu:cupronickel_double_wire','8x gtceu:bronze_foil')
-        .inputFluids('gtceu:tin_alloy 144')
-        .itemOutputs('gtceu:cupronickel_coil_block')
-        .duration(200)
-        .EUt(30);
-
-    event.recipes.gtceu.assembler(id('kanthal_coil_block'))
-        .itemInputs('8x gtceu:kanthal_double_wire','8x gtceu:aluminium_foil')
-        .inputFluids('gtceu:copper 144')
-        .itemOutputs('gtceu:kanthal_coil_block')
-        .duration(300)
-        .EUt(120);
-
-    // Nichrome, RTM, HSS-G
-
-    event.recipes.gtceu.assembler(id('nichrome_coil_block'))
-        .itemInputs('8x gtceu:nichrome_double_wire','8x gtceu:stainless_steel_foil','4x gtceu:borosilicate_glas_foil')
-        .inputFluids('gtceu:aluminium 144')
-        .itemOutputs('gtceu:nichrome_coil_block')
-        .duration(400)
-        .EUt(480);
-
-    event.recipes.gtceu.assembler(id('rtm_alloy_coil_block'))
-        .itemInputs('8x gtceu:rtm_alloy_double_wire','8x gtceu:vanadium_steel_foil','8x gtceu:borosilicate_glas_foil')
-        .inputFluids('gtceu:nichrome 144')
-        .itemOutputs('gtceu:rtm_alloy_coil_block')
-        .duration(500)
-        .EUt(1920);
-    
-    event.recipes.gtceu.assembler(id('hssg_coil_block'))
-        .itemInputs('8x gtceu:hssg_double_wire','8x gtceu:tungsten_carbide_foil','16x gtceu:borosilicate_glas_foil')
-        .inputFluids('gtceu:tungsten 144')
-        .itemOutputs('gtceu:hssg_coil_block')
-        .duration(600)
-        .EUt(7680);
-
-    // Naquadah, Trinium, Tritanium
-
-    event.recipes.gtceu.assembler(id('naquadah_coil_block'))
-        .itemInputs('gtceu:hssg_frame','8x gtceu:naquadah_double_wire','8x gtceu:osmium_foil','8x gtceu:niobium_nitride_foil')
-        .inputFluids('gtceu:tungsten_steel 144')
-        .itemOutputs('gtceu:naquadah_coil_block')
-        .duration(700)
-        .EUt(30720);
-
-    event.recipes.gtceu.assembler(id('trinium_coil_block'))
-        .itemInputs('gtceu:hsse_frame','8x gtceu:trinium_double_wire','8x gtceu:enriched_naquadah_foil','16x gtceu:niobium_nitride_foil')
-        .inputFluids('gtceu:naquadah 144')
-        .itemOutputs('gtceu:trinium_coil_block')
-        .duration(800)
-        .EUt(122880);
-
-    event.recipes.gtceu.assembler(id('tritanium_coil_block'))
-        .itemInputs('gtceu:trinaquadalloy_frame','8x gtceu:tritanium_double_wire','8x gtceu:naquadria_foil','32x gtceu:niobium_nitride_foil')
-        .inputFluids('gtceu:trinium 144')
-        .itemOutputs('gtceu:tritanium_coil_block')
-        .duration(900)
-        .EUt(491520);
-
-    // Zalloy, Magmada, Abyssal
-
-    event.recipes.gtceu.assembler(id('zalloy_coil_block'))
-        .itemInputs('gtceu:neutronium_frame','8x gtceu:zalloy_double_wire','8x gtceu:zirconium_foil',
-            '32x gtceu:fine_ruthenium_trinium_americium_neutronate_wire','16x gtceu:neutronium_silicon_carbide_foil')
-        .inputFluids('gtceu:tritanium 144')
-        .itemOutputs('kubejs:zalloy_coil_block')
-        .duration(1000)
-        .EUt(1966080);
-
-    event.recipes.gtceu.assembler(id('magmada_alloy_coil_block'))
-        .itemInputs('gtceu:ancient_netherite_frame','8x gtceu:magmada_alloy_double_wire','8x gtceu:pure_netherite_foil',
-            '32x gtceu:fine_seaborgium_palladium_enriched_estalt_flerovium_alloy_wire','32x gtceu:neutronium_silicon_carbide_foil')
-        .inputFluids('gtceu:adamantine 144')
-        .itemOutputs('kubejs:magmada_alloy_coil_block')
-        .duration(1100)
-        .EUt(7864320);
-
-    event.recipes.gtceu.assembler(id('abyssal_alloy_coil_block'))
-        .itemInputs('gtceu:draconyallium_frame','8x gtceu:abyssal_alloy_double_wire','8x gtceu:nyanium_foil',
-            '32x gtceu:fine_rhenium_super_composite_alloy_wire','64x gtceu:neutronium_silicon_carbide_foil')
-        .inputFluids('gtceu:void 144')
-        .itemOutputs('kubejs:abyssal_alloy_coil_block')
-        .duration(1200)
-        .EUt(31457280);
-
-    // Bulk Blast Chiller and RHF Adjustments
-    event.remove({output:'gtceu:mega_vacuum_freezer'});
-    event.remove({output:'gtceu:mega_blast_furnace'});
-
-    event.recipes.gtceu.assembly_line(id('mega_vacuum_freezer'))
-        .itemInputs('gtceu:aluminium_frame','2x #gtceu:circuits/uv','4x gtceu:dense_rhodium_plated_palladium_plate','2x gtceu:zpm_field_generator',
-            '4x gtceu:niobium_titanium_normal_fluid_pipe','32x gtceu:fine_europium_wire','6x gtceu:hsse_screw')
-        .inputFluids('gtceu:soldering_alloy 1152')
-        .itemOutputs('gtceu:mega_vacuum_freezer')
-        .stationResearch(
-        researchRecipeBuilder => researchRecipeBuilder
-            .researchStack(Item.of('gtceu:vacuum_freezer'))
-            .EUt(GTValues.VHA[GTValues.ZPM])
-            .CWUt(32)
-        )
-        .duration(400)
-        .EUt(GTValues.VHA[GTValues.UV]);
-
-    event.recipes.gtceu.assembly_line(id('mega_blast_furnace'))
-        .itemInputs('gtceu:tungsten_carbide_frame','2x #gtceu:circuits/uhv','4x gtceu:dense_naquadah_alloy_plate','2x gtceu:uv_field_generator',
-            '4x gtceu:naquadah_spring','32x gtceu:fine_americium_wire','6x gtceu:hsss_screw')
-        .inputFluids('gtceu:soldering_alloy 1152')
-        .itemOutputs('gtceu:mega_blast_furnace')
-        .stationResearch(
-        researchRecipeBuilder => researchRecipeBuilder
-            .researchStack(Item.of('gtceu:electric_blast_furnace'))
-            .EUt(GTValues.VHA[GTValues.UV])
-            .CWUt(96)
-        )
-        .duration(400)
-        .EUt(GTValues.VHA[GTValues.UHV]);
-
     })()}
-
-    //B(SiO)7 Foil
-    event.recipes.gtceu.bender(id('borosilicate_glas_foil'))
-        .itemInputs('gtceu:borosilicate_glass_ingot')
-        .itemOutputs('4x gtceu:borosilicate_glas_foil')
-        .circuit(10)
-        .duration(32)
-        .EUt(30);
-
-    // NtSiC line
-    event.remove({output: 'gtceu:hot_neutronium_silicon_carbide_ingot'});
-
-    event.recipes.gtceu.mixer(id('neutronium_silicon_carbide_dust'))
-        .itemInputs('2x gtceu:neutronium_dust','7x gtceu:silicon_carbide_dust','3x gtceu:niobium_nitride_dust','3x gtceu:graphene_dust')
-        .itemOutputs('15x gtceu:neutronium_silicon_carbide_dust')
-        .duration(465)
-        .circuit(2)
-        .EUt(GTValues.VHA[GTValues.ZPM]);
-
-    event.recipes.gtceu.heat_chamber(id('hot_neutronium_silicon_carbide'))
-        .itemInputs('gtceu:neutronium_silicon_carbide_dust')
-        .inputFluids('gtceu:polyether_ether_ketone 36')
-        .itemOutputs('gtceu:hot_neutronium_silicon_carbide_ingot')
-        .duration(200)
-        .EUt(GTValues.VA[GTValues.ZPM]);
-
-    
 
     // Mycelium Leather
     event.recipes.create.pressing('kubejs:compressed_mycelium', 'kubejs:mycelium_growth').id('start:pressing/compressed_mycelium');
@@ -770,14 +618,6 @@ ServerEvents.recipes(event => {
         event.recipes.create.haunting(Item.of(prop.output), Item.of(prop.input)).id(`start:haunting/${prop.output.split(':')[1]}`);
     });
 
-    event.remove({id: 'gtceu:electrolyzer/decomposition_electrolyzing_sodalite'}); //Moves to LV but at same total EU cost
-    event.recipes.gtceu.electrolyzer(id('sodalite_decomposition'))
-        .itemInputs('11x gtceu:sodalite_dust')
-        .itemOutputs('3x gtceu:aluminium_dust','3x gtceu:silicon_dust','4x gtceu:sodium_dust')
-        .outputFluids('gtceu:chlorine 1000')
-        .duration(13.2 * 20 * 2)
-        .EUt(30);
-
     event.recipes.gtceu.compressor(id('obsidian_plate'))
         .itemInputs('gtceu:obsidian_dust')
         .itemOutputs('gtceu:obsidian_plate')
@@ -785,8 +625,8 @@ ServerEvents.recipes(event => {
         .EUt(30);
 
     event.recipes.gtceu.circuit_assembler(id('data_dna_disk'))
-        .itemInputs('kubejs:runic_convergence_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 
-            '16x kubejs:3d_nor_chip','16x kubejs:3d_nand_chip','32x gtceu:fine_europium_wire')
+        .itemInputs('kubejs:draconic_wetware_printed_circuit_board','2x #gtceu:circuits/uhv','24x kubejs:qram_chip', 
+            '16x kubejs:3d_nor_chip','16x kubejs:3d_nand_chip','32x gtceu:fine_iron_selenide_over_strontium_titanium_oxide_wire')
         .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 144')
         .itemOutputs('start_core:data_dna_disk')
         .duration(400)

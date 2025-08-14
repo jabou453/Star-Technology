@@ -12,26 +12,26 @@
 		{
 			id: "5CAD94E1138B5355"
 			linked_quest: "53A2FF89C0F89921"
-			x: -5.0d
-			y: -3.0d
+			x: -3.0d
+			y: -1.0d
 		}
 		{
 			id: "52EF57467B80EB54"
 			linked_quest: "75C33909E2CD5EC0"
-			x: -3.0d
-			y: 7.0d
+			x: -1.0d
+			y: 5.0d
 		}
 		{
 			id: "6EBA3C9601A8DDCC"
 			linked_quest: "5080743917931298"
-			x: -8.0d
-			y: 8.0d
+			x: -3.0d
+			y: 7.0d
 		}
 		{
 			id: "02B087F0A2892890"
 			linked_quest: "2F6115002741F26F"
-			x: -7.0d
-			y: 7.0d
+			x: -3.0d
+			y: 5.0d
 		}
 	]
 	quests: [
@@ -115,7 +115,7 @@
 			]
 			title: "Hellstones"
 			x: -6.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -138,7 +138,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: -6.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -147,7 +147,6 @@
 				"0032335FFAE6E012"
 				"53A2FF89C0F89921"
 				"3D4DCC8FD9A1EA3A"
-				"4777033988C9F512"
 			]
 			description: ["A towering furnace, needing both fuel and power, to heat up materials to Mega-kelvins."]
 			id: "1EB60E6DE2086158"
@@ -164,8 +163,8 @@
 				item: "start_core:hellforge"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -4.0d
+			x: -4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -197,8 +196,8 @@
 				}
 			]
 			title: "UEV Alloys"
-			x: -4.0d
-			y: -4.0d
+			x: -2.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -232,13 +231,13 @@
 				}
 			]
 			title: "Advanced Cooling Materials"
-			x: -2.0d
-			y: -6.0d
+			x: -3.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
+				"059CB064A515B157"
 				"215A1E80621E2880"
-				"5224152A7D22A0B5"
 			]
 			description: ["A new tier of coils, harnessing the heat of the Nether in order to liquify even the strongest of materials."]
 			id: "310FC3F86513555F"
@@ -270,7 +269,7 @@
 				item: "gtceu:uev_energy_input_hatch"
 				type: "item"
 			}]
-			x: -2.0d
+			x: -4.0d
 			y: 0.0d
 		}
 		{
@@ -287,7 +286,7 @@
 				item: "gtceu:uev_energy_input_hatch_4a"
 				type: "item"
 			}]
-			x: -4.0d
+			x: -6.0d
 			y: 0.0d
 		}
 		{
@@ -304,7 +303,7 @@
 				item: "gtceu:uev_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -8.0d
 			y: 0.0d
 		}
 		{
@@ -363,8 +362,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: -4.0d
+			x: -2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -441,9 +440,8 @@
 					type: "item"
 				}
 			]
-			title: "Magmatic Plasma"
 			x: -3.0d
-			y: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
@@ -510,8 +508,8 @@
 				item: "gtceu:uev_machine_hull"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -2.0d
+			x: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -564,8 +562,8 @@
 				}
 			]
 			title: "Voidic Metals"
-			x: -6.0d
-			y: 8.0d
+			x: -2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -633,14 +631,11 @@
 				}
 			]
 			title: "UIV Alloys"
-			x: -4.0d
-			y: 8.0d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
-			dependencies: [
-				"33FBF8561A3D901D"
-				"37F9C85CFCFFDA5F"
-			]
+			dependencies: ["097D8B4DF03A8617"]
 			description: ["The last tier of coils, brimming with Entropy, to fulfill all your smelting needs."]
 			id: "2DACE6EF41A118D9"
 			rewards: [{
@@ -656,8 +651,8 @@
 				item: "kubejs:abyssal_alloy_coil_block"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 6.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["097D8B4DF03A8617"]
@@ -690,7 +685,7 @@
 				item: "gtceu:uiv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -4.0d
 			y: 8.0d
 		}
 		{
@@ -707,13 +702,13 @@
 				item: "gtceu:uiv_energy_input_hatch_4a"
 				type: "item"
 			}]
-			x: 2.0d
+			x: -6.0d
 			y: 8.0d
 		}
 		{
 			dependencies: [
 				"69493DCA3D764771"
-				"7A07DB21A52F7219"
+				"3861DC9A29F4DD42"
 			]
 			description: ["&9&lOpV&r recipe speeds"]
 			id: "54944370404CEA94"
@@ -727,7 +722,7 @@
 				item: "gtceu:uiv_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: 4.0d
+			x: -8.0d
 			y: 8.0d
 		}
 		{
@@ -759,8 +754,8 @@
 					type: "item"
 				}
 			]
-			x: -8.0d
-			y: -2.0d
+			x: -6.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["1AEBAE3050B72906"]
@@ -805,8 +800,8 @@
 				}
 			]
 			title: "Mystical Metals"
-			x: -8.0d
-			y: 0.0d
+			x: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["0168A45EB73911AC"]
@@ -824,6 +819,19 @@
 			}]
 			x: -4.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["1772F46C9EAF6FB7"]
+			description: ["Get Universal Circuits in Mass"]
+			icon: "kubejs:luv_universal_circuit"
+			id: "324630FF56F505DA"
+			tasks: [{
+				id: "1E5FDD16FC5DDAA3"
+				title: "Circuit Packs"
+				type: "checkmark"
+			}]
+			x: -3.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -853,7 +861,7 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			subtitle: "Fourth and Last UV Circuit"
+			subtitle: "Third and Last UV Circuit"
 			tasks: [{
 				id: "608B93EA8632BE4E"
 				item: "kubejs:draconic_wetware_processor"
@@ -870,7 +878,7 @@
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			subtitle: "Third UHV Circuit"
+			subtitle: "Second UHV Circuit"
 			tasks: [{
 				id: "1D0AA38E67A6E6D1"
 				item: "kubejs:draconic_wetware_processor_assembly"
@@ -918,7 +926,10 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["5944C4DE27F98FF3"]
+			dependencies: [
+				"5944C4DE27F98FF3"
+				"310FC3F86513555F"
+			]
 			description: ["The fourth tier of fusion reactors, reaching over 1 Billion Kelvin."]
 			hide_dependent_lines: true
 			id: "2E34F23A42004285"
@@ -932,8 +943,8 @@
 				item: "start_core:uev_fusion_reactor"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -6.0d
+			x: 0.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
@@ -943,8 +954,8 @@
 				item: "kubejs:draco_boule"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -2.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["06EC98F6E6AFC2AF"]
@@ -956,8 +967,8 @@
 				item: "kubejs:draco_wafer"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -2.0d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0DF30CDA8DE68E0C"]
@@ -967,8 +978,8 @@
 				item: "kubejs:draco_advanced_soc_wafer"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -4.0d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -993,10 +1004,11 @@
 		}
 		{
 			dependencies: [
-				"6A82CC9F01960097"
-				"31F87896FF834E63"
+				"2DACE6EF41A118D9"
+				"7C06C42F133DD3F5"
 			]
 			description: ["Not added till Theta"]
+			hide_until_deps_complete: true
 			id: "09B55AFE7C06EC82"
 			tasks: [{
 				id: "3C1633006F6ECB70"
@@ -1011,28 +1023,41 @@
 			id: "41B4DE81AFC054B9"
 			tasks: [{
 				id: "06B8EC7B4599E429"
-				title: "Draconic Nursery"
+				title: "Dragon Breeding Array"
 				type: "checkmark"
 			}]
 			x: 4.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["45E628CF1DA8D380"]
+			dependencies: ["3AE729D3F47E9A2B"]
 			id: "37F9C85CFCFFDA5F"
 			tasks: [{
-				id: "5B990AC9E758FE37"
-				item: "gtceu:draconyallium_ingot"
-				type: "item"
+				id: "54F9F9AC4FCB27C0"
+				title: "Pure Dracoyallium"
+				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 2.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
-				"3B1453C435E3950B"
+				"37F9C85CFCFFDA5F"
+				"5944C4DE27F98FF3"
 				"694E1F6458D5F72F"
 			]
+			hide_until_deps_complete: true
+			id: "24E2CB89693EDEA3"
+			tasks: [{
+				id: "1DA3A7C22624348C"
+				title: "Awakened Draconic Neuroloom"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["24E2CB89693EDEA3"]
 			id: "38C2E3061C764F05"
 			shape: "gear"
 			size: 1.5d
@@ -1041,24 +1066,30 @@
 				title: "Aux2"
 				type: "checkmark"
 			}]
-			x: 8.0d
-			y: -6.0d
+			x: 6.0d
+			y: -4.0d
 		}
 		{
-			dependencies: ["41B4DE81AFC054B9"]
+			dependencies: ["09B55AFE7C06EC82"]
 			id: "3AE729D3F47E9A2B"
-			tasks: [{
-				id: "28FA8CA23E8E5436"
-				item: "gtceu:pure_dragon_breath_bucket"
-				optional_task: true
-				type: "item"
-			}]
+			subtitle: "No linger stinky"
+			tasks: [
+				{
+					id: "15CB4AC6660452D4"
+					type: "checkmark"
+				}
+				{
+					id: "28FA8CA23E8E5436"
+					item: "gtceu:pure_dragon_breath_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
-			hide_dependent_lines: true
 			id: "694E1F6458D5F72F"
 			tasks: [
 				{
@@ -1072,34 +1103,46 @@
 					type: "item"
 				}
 			]
-			x: 1.0d
-			y: 1.0d
+			x: 4.0d
+			y: -2.0d
 		}
 		{
-			dependencies: ["3B1453C435E3950B"]
+			dependencies: ["24E2CB89693EDEA3"]
 			id: "7FABD2E818B70D35"
-			tasks: [{
-				id: "1A9F5B4EAFB66C03"
-				item: "start_core:uiv_parallel_hatch"
-				type: "item"
-			}]
-			x: 6.0d
+			tasks: [
+				{
+					id: "1A9F5B4EAFB66C03"
+					item: "start_core:uiv_parallel_hatch"
+					type: "item"
+				}
+				{
+					id: "3D4851F9B51362B4"
+					item: "start_core:uiv_absolute_parallel_hatch"
+					type: "item"
+				}
+			]
+			title: "Hyper Parallel Hatches"
+			x: 4.0d
 			y: -6.0d
 		}
 		{
 			dependencies: ["41B4DE81AFC054B9"]
+			description: ["Is this what the milkies are used for?"]
 			icon: "minecraft:dragon_egg"
 			id: "17BDBDAE35BD49ED"
 			tasks: [{
 				id: "1F13D3464D748364"
-				title: "Draconic Scale Infusion"
+				title: "Target Breeding Dragons"
 				type: "checkmark"
 			}]
-			x: 5.0d
-			y: -1.0d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["2DACE6EF41A118D9"]
+			dependencies: [
+				"2DACE6EF41A118D9"
+				"7C06C42F133DD3F5"
+			]
 			hide_until_deps_complete: true
 			id: "10D5DA8708208783"
 			tasks: [{
@@ -1112,6 +1155,21 @@
 			y: 4.0d
 		}
 		{
+			dependencies: [
+				"2DACE6EF41A118D9"
+				"7C06C42F133DD3F5"
+			]
+			hide_until_deps_complete: true
+			id: "2594F1414C9BEC4F"
+			tasks: [{
+				id: "4133AF79C6DF333A"
+				title: "Better Infra...."
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
 			id: "51FAA26B6A537091"
 			invisible: true
 			optional: true
@@ -1119,8 +1177,19 @@
 				id: "19E2EB40AB845664"
 				type: "checkmark"
 			}]
-			x: 4.0d
+			x: -0.5d
 			y: 1.0d
+		}
+		{
+			dependencies: ["38C2E3061C764F05"]
+			id: "3BF75D255438C1F0"
+			tasks: [{
+				id: "7B1D7302F29EF060"
+				title: "Exotic Matters"
+				type: "checkmark"
+			}]
+			x: 8.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -1139,7 +1208,7 @@
 				item: "gtceu:aurourium_ingot"
 				type: "item"
 			}]
-			x: -3.0d
+			x: -5.0d
 			y: 1.0d
 		}
 		{
@@ -1184,8 +1253,8 @@
 				}
 			]
 			title: "Mega Parallel Hatches"
-			x: 3.0d
-			y: -3.0d
+			x: 2.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["10D5DA8708208783"]
@@ -1215,7 +1284,7 @@
 				item: "gtceu:nyanium_ingot"
 				type: "item"
 			}]
-			x: -5.0d
+			x: -7.0d
 			y: 1.0d
 		}
 		{
@@ -1236,11 +1305,34 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["10D5DA8708208783"]
+			hide_dependent_lines: true
+			id: "3861DC9A29F4DD42"
+			tasks: [{
+				id: "3E5D4978743C585A"
+				title: "Quark Infusion"
+				type: "checkmark"
+			}]
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			hide_dependent_lines: true
+			id: "7C06C42F133DD3F5"
+			invisible: true
+			tasks: [{
+				id: "3AF8457A654CA81B"
+				title: "Theta"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
 			dependencies: [
 				"0B475E2385B478C0"
 				"53E595EAB1C90884"
 				"61C534992FB17066"
-				"2F62965D05463E44"
 			]
 			description: [
 				"Having witnessed the creation of Maxwell, you have been blessed by it's enlightenment. You have reached the end of your journey for now, and as with the knowledge bestowed upon you, you hear it's voice, telling you to move forward, and embrace an even larger challenge."
@@ -1345,8 +1437,8 @@
 				item: "placeablemaxwell:maxwell"
 				type: "item"
 			}]
-			x: 10.0d
-			y: -2.25d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["3BB8848F84026B45"]
@@ -1370,13 +1462,12 @@
 				type: "checkmark"
 			}]
 			title: "You have completed the &5&lEta&r Version of &6Star Technology&r"
-			x: 12.5d
-			y: -2.25d
+			x: 6.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			description: ["A legendary feline, as energized as the flames from inferno."]
-			hide_dependency_lines: true
 			id: "0B475E2385B478C0"
 			rewards: [{
 				id: "3D283BCABFD3EC0D"
@@ -1391,13 +1482,12 @@
 				item: "placeablemaxwell:vasilisa"
 				type: "item"
 			}]
-			x: 8.0d
-			y: -3.75d
+			x: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			description: ["A legendary feline, as eternal as the endless abyss."]
-			hide_dependency_lines: true
 			id: "53E595EAB1C90884"
 			rewards: [{
 				id: "0F5997E6894F3C34"
@@ -1412,14 +1502,13 @@
 				item: "placeablemaxwell:valenok"
 				type: "item"
 			}]
-			x: 8.0d
-			y: -0.75d
+			x: 2.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			dependency_requirement: "one_started"
 			description: ["A legendary feline, combining the heat and cold from two dimensions."]
-			hide_dependency_lines: true
 			id: "61C534992FB17066"
 			rewards: [{
 				id: "4A0ACD1848950C86"
@@ -1434,8 +1523,8 @@
 				item: "placeablemaxwell:mars"
 				type: "item"
 			}]
-			x: 8.0d
-			y: -2.25d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["01FBF9CDD9066AF5"]
@@ -1496,7 +1585,7 @@
 				type: "item"
 			}]
 			x: -8.0d
-			y: -6.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["64780055536CEEF3"]
@@ -1528,10 +1617,7 @@
 			y: -5.0d
 		}
 		{
-			dependencies: [
-				"3B1453C435E3950B"
-				"694E1F6458D5F72F"
-			]
+			dependencies: ["24E2CB89693EDEA3"]
 			id: "46127DF821C7C175"
 			tasks: [{
 				id: "765DD1CACEFD3F85"
@@ -1540,205 +1626,6 @@
 			}]
 			x: 5.0d
 			y: -5.0d
-		}
-		{
-			dependencies: ["16FDCABFC80579D5"]
-			id: "3B1453C435E3950B"
-			subtitle: "First UXV Circuit"
-			tasks: [{
-				id: "6046733B28E6F322"
-				item: "kubejs:awakened_draconic_wetware_processor_mainframe"
-				type: "item"
-			}]
-			x: 6.0d
-			y: -4.0d
-		}
-		{
-			dependencies: ["3AE6E85C2FC76DE9"]
-			id: "16FDCABFC80579D5"
-			subtitle: "Second UIV Circuit"
-			tasks: [{
-				id: "0E34320F90BA0A53"
-				item: "kubejs:awakened_draconic_wetware_processor_computer"
-				type: "item"
-			}]
-			x: 6.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["6D6C79E7CBBCC893"]
-			id: "3AE6E85C2FC76DE9"
-			subtitle: "Third UEV Circuit"
-			tasks: [{
-				id: "29F972DC18F645E4"
-				item: "kubejs:awakened_draconic_wetware_processor_assembly"
-				type: "item"
-			}]
-			x: 6.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["09B55AFE7C06EC82"]
-			id: "1799430093ABCC64"
-			tasks: [{
-				id: "27F3A14B2F6C836C"
-				item: "gtceu:draconic_enrichment_serum_bucket"
-				type: "item"
-			}]
-			x: 4.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"7FABD2E818B70D35"
-				"694E1F6458D5F72F"
-			]
-			id: "4D556DE76399E083"
-			tasks: [{
-				id: "2388751B6210D3C4"
-				item: "start_core:uiv_absolute_parallel_hatch"
-				type: "item"
-			}]
-			x: 4.0d
-			y: -6.0d
-		}
-		{
-			dependencies: ["2DACE6EF41A118D9"]
-			hide_until_deps_complete: true
-			id: "1DC40C42DF1AFCC4"
-			tasks: [{
-				id: "70B6C065BA6E04DF"
-				title: "BPA Core"
-				type: "checkmark"
-			}]
-			x: 4.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"78777C3EE2DA5D0F"
-				"2D064F759D13FE4B"
-			]
-			description: ["The start of your wildest dreams, a dragon based circuit board."]
-			id: "1C9396E2587051F7"
-			rewards: [{
-				id: "170A7AD04A8BFCA6"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			shape: "circle"
-			tasks: [
-				{
-					id: "3DA83C02A0B67056"
-					item: "kubejs:draconic_wetware_printed_circuit_board"
-					type: "item"
-				}
-				{
-					id: "149D5BC68EC06EBB"
-					item: {
-						Count: 1
-						id: "kubejs:draconic_wetware_circuit_board"
-						tag: { }
-					}
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["1799430093ABCC64"]
-			id: "6D6C79E7CBBCC893"
-			tasks: [
-				{
-					id: "156168FA92AD01CA"
-					item: "kubejs:awakened_draconic_wetware_circuit_board"
-					type: "item"
-				}
-				{
-					id: "757107D4DA51C043"
-					item: "kubejs:awakened_draconic_wetware_printed_circuit_board"
-					type: "item"
-				}
-			]
-			x: 6.0d
-			y: 2.0d
-		}
-		{
-			dependencies: [
-				"2DACE6EF41A118D9"
-				"3FBD3851CCB3F14E"
-			]
-			id: "31F87896FF834E63"
-			tasks: [{
-				id: "7A07DB21A52F7219"
-				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
-				type: "item"
-			}]
-			x: 2.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"37F9C85CFCFFDA5F"
-				"3D239E0F7B45AE92"
-			]
-			id: "6A82CC9F01960097"
-			tasks: [{
-				id: "1CCB67E6F9C54E7E"
-				item: "gtceu:draco_abyssal_ingot"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"799F6F79B9FF86DF"
-				"4777033988C9F512"
-			]
-			id: "5224152A7D22A0B5"
-			tasks: [{
-				id: "0CFF3A0497A28ED0"
-				item: "gtceu:seaborgium_palladium_enriched_estalt_flerovium_alloy_ingot"
-				type: "item"
-			}]
-			x: -2.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["1AEBAE3050B72906"]
-			hide_dependent_lines: true
-			id: "4777033988C9F512"
-			tasks: [{
-				id: "29B2DE66B7C609EE"
-				title: "Heavy Atomic Substances"
-				type: "checkmark"
-			}]
-			x: -7.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["45E628CF1DA8D380"]
-			id: "33FBF8561A3D901D"
-			tasks: [{
-				id: "119F275BA875EA8D"
-				item: "gtceu:rhenium_super_composite_alloy_ingot"
-				type: "item"
-			}]
-			x: 1.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["38C2E3061C764F05"]
-			id: "2F62965D05463E44"
-			tasks: [{
-				id: "54498D9DE0F0A01A"
-				title: "Maxwellium"
-				type: "checkmark"
-			}]
-			x: 10.0d
-			y: -6.0d
 		}
 	]
 	title: "Draconic Empires"

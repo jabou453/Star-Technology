@@ -6,7 +6,7 @@
       1,
       { "index": 2, "time": 30 },
 	  3,
-      { "index": 4, "time": 30 },
+      { "index": 4, "time": 40 },
 	  3,
       { "index": 2, "time": 20 },
       1,
@@ -16,7 +16,7 @@
 	  7,
       { "index": 8, "time": 30 },
 	  7,
-      { "index": 6, "time": 20 },
+      { "index": 6, "time": 30 },
       5
     ]
   }

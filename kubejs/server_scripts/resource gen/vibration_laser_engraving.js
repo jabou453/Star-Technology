@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:neon 120')
         .itemOutputs('gtceu:tiny_purified_naquadah_dust')
         .blastFurnaceTemp(10000)
-        .duration(480)
+        .duration(640)
         .EUt(16384);
 
     event.recipes.gtceu.vibration_laser_engraver(id('echo_shard'))
@@ -15,14 +15,14 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:lubricant 1000', 'gtceu:pcb_coolant 16000')
         .itemOutputs('minecraft:echo_shard')
         .outputFluids('gtceu:hot_pcb_coolant 19200')
-        .duration(6400)
+        .duration(8000)
         .EUt(65536);
 
     event.recipes.gtceu.assembly_line(id('vibration_laser_engraver'))
         .itemInputs('gtceu:uv_laser_engraver','6x gtceu:uv_electric_piston','4x gtceu:uv_emitter','4x gtceu:uv_emitter','4x gtceu:uv_field_generator', '64x gtceu:fine_trinaquadalloy_wire','64x gtceu:fine_trinaquadalloy_wire', '6x #gtceu:circuits/uv')
         .inputFluids('gtceu:naquadria 13248', 'gtceu:trinaquadalloy 9936'   )
         .itemOutputs('gtceu:vibration_laser_engraver')
-        .duration(960)
+        .duration(4800)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('gtceu:uv_laser_engraver'))

@@ -2,8 +2,6 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    // Machine
-
     event.recipes.gtceu.assembly_line(id('chemical_plant_controller'))
         .itemInputs('gtceu:zpm_machine_hull', '4x gtceu:zpm_electric_motor', 'gtceu:naquadah_alloy_rotor', '2x gtceu:niobium_titanium_large_fluid_pipe', '4x #gtceu:circuits/uv')
         .inputFluids('gtceu:soldering_alloy 1872', 'gtceu:naquadria 288')
@@ -23,8 +21,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('kubejs:peek_casing')
         .duration(600)
         .EUt(GTValues.VA[GTValues.LuV]);
-
-    // Skips
 
     event.recipes.gtceu.chemical_skip(id('fluoroantimonic_acid'))
         .itemInputs('gtceu:antimony_dust')
@@ -77,11 +73,11 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
     event.recipes.gtceu.chemical_skip(id('uranite_line'))
-        .itemInputs('20x gtceu:uraninite_dust')
+        .itemInputs('30x gtceu:uraninite_dust')
         .inputFluids('gtceu:hydrofluoric_acid 40000')
         .itemOutputs('9x gtceu:uranium_dust', 'gtceu:uranium_235_dust')
-        .outputFluids('gtceu:fluorine 40000', 'gtceu:hydrogen 40000', 'gtceu:oxygen 10000')
-        .duration(800)
+        .outputFluids('gtceu:fluorine 40000', 'gtceu:hydrogen 40000', 'gtceu:oxygen 20000')
+        .duration(480)
         .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.recipes.gtceu.chemical_skip(id('sodium_persulfate'))
@@ -103,49 +99,6 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:benzene 2000','gtceu:toluene 1000','gtceu:propene 1000','gtceu:oxygen 2000')
         .outputFluids('gtceu:polyether_ether_ketone 4896','gtceu:acetone 1000','gtceu:hydrogen 4000')
         .duration(64)
-        .circuit(5)
         .EUt(GTValues.VA[GTValues.UEV] * .3);
-
-    event.recipes.gtceu.chemical_skip(id('14_butanediol_skip'))
-        .notConsumable('gtceu:palladium_on_carbon_dust')
-        .inputFluids('gtceu:benzene 1500','gtceu:oxygen 6000','gtceu:hydrogen 18000')
-        .outputFluids('gtceu:14_butanediol 3000','gtceu:methanol 3000')
-        .duration(250)
-        .circuit(8)
-        .EUt(GTValues.VHA[GTValues.UHV]);
-
-    event.recipes.gtceu.chemical_skip(id('benzophenone_3344_tetracarboxylic_dianhydridenediol_skip'))
-        .inputFluids('gtceu:toluene 1000','gtceu:benzene 1375','gtceu:oxygen 9875','gtceu:acetic_acid 1000','gtceu:chlorine 3000')
-        .itemOutputs('30x gtceu:benzophenone_3344_tetracarboxylic_dianhydride_dust')
-        .outputFluids('gtceu:hydrogen_chloride 3000','gtceu:carbon_dioxide 250','minecraft:water 4125','gtceu:hydrogen 3000')
-        .duration(320)
-        .circuit(6)
-        .EUt(GTValues.VHA[GTValues.UV]);
-
-    event.recipes.gtceu.chemical_skip(id('tungstate_line'))
-        .itemInputs('1x gtceu:tungstate_dust')
-        .inputFluids('gtceu:hydrochloric_acid 2000')
-        .itemOutputs('1x gtceu:tungsten_trioxide_dust','1x gtceu:lithium_dust')
-        .outputFluids('gtceu:chlorine 2000','gtceu:hydrogen 2000')
-        .duration(480)
-        .EUt(GTValues.VHA[GTValues.ZPM]);
-
-    event.recipes.gtceu.chemical_skip(id('scheelite_line'))
-        .itemInputs('1x gtceu:scheelite_dust')
-        .inputFluids('gtceu:hydrochloric_acid 2000')
-        .itemOutputs('1x gtceu:tungsten_trioxide_dust','1x gtceu:calcium_dust')
-        .outputFluids('gtceu:chlorine 2000','gtceu:hydrogen 2000')
-        .duration(480)
-        .EUt(GTValues.VHA[GTValues.ZPM]);
-
-    // Bromine Skip to be done when line is redone
-
-    event.recipes.gtceu.chemical_skip(id('mutagen_skip'))
-        .itemInputs('64x gtceu:bio_chaff','64x gtceu:bio_chaff','64x gtceu:bio_chaff','24x gtceu:bio_chaff','5x gtceu:naquadria_dust')
-        .inputFluids('gtceu:distilled_water 77250')
-        .outputFluids('gtceu:mutagen 9000')
-        .duration(1512)
-        .EUt(GTValues.VA[GTValues.UEV])
-        .cleanroom(CleanroomType.STERILE_CLEANROOM);
 
 });

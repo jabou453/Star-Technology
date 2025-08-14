@@ -47,8 +47,9 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembly_line(id('super_compact_heat_chamber'))
         .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uhv', 'gtceu:double_stellarium_plate', 
-                'gtceu:double_ancient_netherite_plate', 'gtceu:uhv_field_generator', '64x kubejs:uepic_chip', 
-                '32x kubejs:uepic_chip', '48x gtceu:ancient_runicalium_single_wire')
+                'gtceu:double_titanium_tungsten_carbide_plate', 'gtceu:uhv_field_generator', '64x gtceu:uhpic_chip', 
+                '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip',
+                '32x gtceu:uhpic_chip', '48x gtceu:ancient_runicalium_single_wire')
         .inputFluids('gtceu:hsse 6912', 'gtceu:tritanium 1728')
         .itemOutputs('gtceu:super_compact_heat_chamber')
         .stationResearch(
@@ -173,14 +174,14 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.extractor(id('echo_fluid'))
         .itemInputs('minecraft:echo_shard')
         .outputFluids('gtceu:echo_r 144')
-        .duration(5000)
+        .duration(8000)
         .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.recipes.gtceu.fluid_solidifier(id('raw_void_ingot'))
         .itemInputs('gtceu:neutronium_ingot')
         .inputFluids('gtceu:echo_r 144')
         .itemOutputs('gtceu:raw_void_ingot')
-        .duration(4000)
+        .duration(6000)
         .EUt(GTValues.VHA[GTValues.LuV]);
 
     event.remove({output: 'gtceu:hot_void_ingot'});
@@ -189,7 +190,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:raw_void_ingot')
         .itemOutputs('gtceu:hot_void_ingot')
         .blastFurnaceTemp(10799)
-        .duration(6000)
+        .duration(12000)
         .EUt(GTValues.VHA[GTValues.LuV]);
 
     //Material Adjustments
