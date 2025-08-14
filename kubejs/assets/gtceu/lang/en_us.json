@@ -681,12 +681,7 @@
     "material.gtceu.superstate_helium_3": "Superstate Helium 3",
     "material.gtceu.astatine_bis_tritelluride_cobo_selenium": "Astatine Bis-Tritelluride Cobo-Selenium",
     "material.gtceu.iron_titanium_oxide": "Iron Titanium Oxide",
-
-    "block.gtceu.ulv_advanced_composter": "Advanced Composter",
     "gtceu.composting": "Composting",
-    "block.gtceu.ulv_casket": "Fermenting Casket",
-    "gtceu.fermenting": "Fermenting",
-    
     "material.gtceu.warped": "Warped",
 
     "block.gtceu.classic_stargate_display": "Classic Stargate Shape Helper",
@@ -854,13 +849,6 @@
     "material.gtceu.chaotixic_alloy": "Chaotixic Alloy",
     "material.gtceu.ohmderblux_alloy": "Ohmderblux Alloy",
     "material.gtceu.lepton_resonant_thallium_antimonide": "Lepton-Resonant Thallium Antimonide",
-    "material.gtceu.draco_abyssal": "Primordial Shadowyrm",
-    "material.gtceu.draconyallium": "Draconyallium",
-    "material.gtceu.draconic_enrichment_serum": "Draconic Enrichment Serum",
-    "material.gtceu.lepton_dense_akreyrium": "Lepton Dense Akreyrium",
-    "material.gtceu.thallium_antimonide": "Thallium Antimonide",
-    "material.gtceu.neutronium_silicon_carbide": "Neutronium-Silicon Carbide",
-    "material.gtceu.borosilicate_glas": "Borosilicate Glass",
 
     "material.gtceu.voidic": "Voidic",
     "material.gtceu.preon": "Preon",
@@ -909,7 +897,7 @@
 
     "block.gtceu.super_compact_heat_chamber": "Super-Compact Heat Chamber",
     "block.gtceu.super_compact_heat_chamber.tooltip.0": "§7A compacted and upgraded heat chamber capable of purifying materials and catalysing reactions at an enhanced rate through its ultra-dense thermal reactor design.",
-    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches, has §6Perfect Overclock§r, and has §cSubtick Parallels§r",
+    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches and has §6Perfect Overclock",
 
     "block.gtceu.kiln": "Kiln",
     "gtceu.kiln": "Kiln",

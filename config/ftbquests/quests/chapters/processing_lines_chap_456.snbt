@@ -1279,7 +1279,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.0d
+			x: 17.5d
 			y: 5.5d
 		}
 		{
@@ -2020,7 +2020,7 @@
 			]
 			title: "Tellurides"
 			x: 16.0d
-			y: 1.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["26A84315291888C8"]
@@ -2032,7 +2032,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: 1.25d
+			y: 1.75d
 		}
 		{
 			dependencies: [
@@ -2043,6 +2043,11 @@
 			icon: "gtceu:tiemannite_dust"
 			id: "465533FFE22523F8"
 			tasks: [
+				{
+					id: "7BDF77CC8A675E38"
+					item: "gtceu:crookesite_dust"
+					type: "item"
+				}
 				{
 					id: "63C471FFE5ECDBC2"
 					item: "gtceu:clausthalite_dust"
@@ -2058,14 +2063,10 @@
 			]
 			title: "Selenides"
 			x: 16.0d
-			y: 3.5d
+			y: 3.25d
 		}
 		{
-			dependencies: [
-				"465533FFE22523F8"
-				"10FF0043448ED24F"
-			]
-			dependency_requirement: "one_completed"
+			dependencies: ["465533FFE22523F8"]
 			id: "4C34343E64A8511C"
 			shape: "gear"
 			tasks: [{
@@ -2074,7 +2075,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: 3.75d
+			y: 3.25d
 		}
 		{
 			dependencies: [
@@ -2097,7 +2098,7 @@
 				}
 			]
 			x: 17.0d
-			y: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["4BA35C4DAC5BC054"]
@@ -2109,7 +2110,7 @@
 				type: "item"
 			}]
 			x: 19.0d
-			y: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["54DA03D41AF36EF2"]
@@ -2160,7 +2161,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["266F486F2425C35E"]
+			dependencies: ["7BDF77CC8A675E38"]
 			id: "735064FE12880E7E"
 			tasks: [{
 				id: "1B81FA7A2C015F46"
@@ -2650,7 +2651,7 @@
 			y: 16.0d
 		}
 		{
-			dependencies: ["266F486F2425C35E"]
+			dependencies: ["7BDF77CC8A675E38"]
 			id: "5873CED1371E7A3E"
 			tasks: [{
 				id: "39546D32E8F56651"
@@ -3467,39 +3468,6 @@
 			]
 			x: 5.0d
 			y: 8.0d
-		}
-		{
-			dependencies: ["33995F23F01ADF83"]
-			icon: "gtceu:crookesite_dust"
-			id: "5CC733B0DA775351"
-			tasks: [
-				{
-					id: "10FF0043448ED24F"
-					item: "gtceu:crookesite_dust"
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "14C67B0C1CFB0D0B"
-					type: "checkmark"
-				}
-			]
-			title: "Crookesite"
-			x: 17.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["5CC733B0DA775351"]
-			hide_dependent_lines: true
-			id: "266F486F2425C35E"
-			shape: "gear"
-			tasks: [{
-				id: "672ABF2CBA04AEEE"
-				item: "gtceu:thallium_dust"
-				type: "item"
-			}]
-			x: 19.0d
-			y: 3.0d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"

@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
     ** Ingot mode:
     ** 1 Ingot = 1 mB infusion of specific type
     ** Block mode:
-    ** 1 Block = 6 mB inusion of speicific type + 3 mB of secondary infusion type //changed to 8,4 to reduce bloat of cost, time adjusted consequently
+    ** 1 Block = 6 mB inusion of speicific type + 3 mB of secondary infusion type
     ** =====================
     ** Infusion types:
     ** Intangibility - common trait (easily produced as main type)
@@ -58,8 +58,8 @@ ServerEvents.recipes(event => {
         
         event.recipes.gtceu.quantum_compressor_extraction(id(`${name}_block_extraction`))
             .itemInputs(`${mat}_block`)
-            .outputFluids(`gtceu:${typeA}_infusion 8`, `gtceu:${typeB}_infusion 4`)
-            .duration(60 * 9)
+            .outputFluids(`gtceu:${typeA}_infusion 6`, `gtceu:${typeB}_infusion 3`)
+            .duration(40 * 9)
             .EUt(GTValues.VHA[GTValues.LuV]);
    });
 

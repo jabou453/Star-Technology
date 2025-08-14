@@ -29,13 +29,6 @@
 			x: 16.0d
 			y: -3.5d
 		}
-		{
-			id: "5D572FCE21AE3A67"
-			linked_quest: "119983C3240B8F66"
-			shape: "circle"
-			x: 5.0d
-			y: 5.5d
-		}
 	]
 	quests: [
 		{
@@ -375,7 +368,6 @@
 			dependencies: [
 				"0E88CB5E68212006"
 				"7CA424E05FB05DFF"
-				"4179261E3E8278E0"
 			]
 			dependency_requirement: "one_started"
 			description: ["Cobalt Dust can aquired through either Cobaltite Slude, the Electric Ore Factory, or simply washing Copper Ore."]
@@ -665,7 +657,7 @@
 			description: [
 				"This is your &bMV&r material, will be needed in vast quantities."
 				""
-				"A good first source of Aluminium is Sapphire(s) or Sodalite."
+				"A good first source of Aluminium are Sapphires."
 				""
 				"Once you are in &bMV&r, you can set up Clay Electrolysis for easier Aluminium."
 			]
@@ -684,17 +676,8 @@
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"5F80268C02FAD5F6"
-				"30B2688F8387048F"
-			]
-			dependency_requirement: "one_completed"
-			description: [
-				"A good source of Arsenic."
-				""
-				"&oVoid Extractor &nor&r&o Rock Filtrator can be used to obtain."
-			]
-			hide_dependency_lines: true
+			dependencies: ["7CA424E05FB05DFF"]
+			description: ["A good source of Arsenic."]
 			id: "5BF06BFED6E52523"
 			rewards: [{
 				id: "48ABA260B49D0D83"
@@ -706,8 +689,8 @@
 				item: "gtceu:realgar_dust"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 3.5d
+			x: 2.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -744,7 +727,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 4.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["77FB57773EFE8D6C"]
@@ -1301,10 +1284,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: [
-				"5F80268C02FAD5F6"
-				"7452592DFEBC7C44"
-			]
+			dependencies: ["5F80268C02FAD5F6"]
 			description: ["Can be grown in the Autoclave from dust, or gotten by putting Purified Certus Quartz Ore through a Sifter."]
 			id: "6896F9AF41EE8571"
 			rewards: [{

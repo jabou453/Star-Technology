@@ -42,10 +42,6 @@ StartupEvents.registry('item', event => {
         .displayName('Netherite Reinforced Mesh')
         .texture('kubejs:item/netherite_reinforced_mesh');
 
-    event.create('leptonic_akreyrium_catalyst')
-        .displayName('Leptonic-Akreyrium Catalyst')
-        .texture('kubejs:item/akreyrium/leptonic_akreyrium_catalyst');
-
     //Nether Stars
     [{type: 'Fire', color: 'c'}, {type: 'Ice', color: 'b'}, {type: 'Earth', color: '8'}, {type: 'Lightning', color: 'e'}].forEach(shard => {
         const { type, color } = shard;

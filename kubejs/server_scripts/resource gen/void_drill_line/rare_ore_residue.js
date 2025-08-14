@@ -7,8 +7,8 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:rare_ore_residue 1000')
         .itemOutputs('gtceu:chromite_sludge_dust', 'gtceu:rare_sludge_dust', 'gtceu:vanadium_magnetite_sludge_dust', 'gtceu:cobaltite_sludge_dust')
         .outputFluids('gtceu:raw_ore_slurry 250')
-        .duration(120)
-        .EUt(GTValues.VA[GTValues.LV]);
+        .duration(50)
+        .EUt(GTValues.VA[GTValues.MV]);
 
     event.recipes.gtceu.centrifuge(id('cobaltite_sludge'))
         .itemInputs('gtceu:cobaltite_sludge_dust')

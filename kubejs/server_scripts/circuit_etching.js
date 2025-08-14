@@ -4,7 +4,8 @@ if (global.packmode !== 'hard'){
 ServerEvents.recipes(event => {
     const id = global.id;
     
-    const CR = event.recipes.gtceu.chemical_reactor || event.recipes.gtceu.large_chemical_reactor ;
+    const CRtype = [event.recipes.gtceu.large_chemical_reactor, event.recipes.gtceu.chemical_reactor]
+    CRtype.forEach(CR=>{
 
     //plastic boards
     [
@@ -38,7 +39,7 @@ ServerEvents.recipes(event => {
     [
         {board: 'fiber_reinforced', foil: 'annealed_copper', foil_count: 12, amount: 500, duration: 1200, energy: 30},
         {board: 'multilayer_fiber_reinforced', foil: 'platinum', foil_count: 8, amount: 1000, duration: 1500, energy: 120},
-        {board: 'wetware', foil: 'niobium_titanium', foil_count: 16, amount: 2500, duration: 1800, energy: 480}
+        {board: 'wetware', foil: 'niobium_titanium', foil_count: 32, amount: 2500, duration: 1800, energy: 480}
     ].forEach(type=>{
         CR(id(`${type.board}_circuit_board_copper`))
             .itemInputs(`gtceu:${type.board}_circuit_board`, `${type.foil_count}x gtceu:${type.foil}_foil`)
@@ -48,28 +49,11 @@ ServerEvents.recipes(event => {
             .duration(type.duration)
             .EUt(type.energy);
         });
-
-    event.remove({output: 'gtceu:wetware_printed_circuit_board'});
-    CR(id(`wetware_circuit_board_iron3`))
-        .itemInputs(`gtceu:wetware_circuit_board`, `16x gtceu:niobium_titanium_foil`)
-        .inputFluids(`gtceu:iron_iii_chloride 5000`)
-        .itemOutputs(`gtceu:wetware_printed_circuit_board`)
-        .cleanroom(CleanroomType.CLEANROOM)
-        .duration(1800)
-        .EUt(480);
-    CR(id(`wetware_circuit_board_persulfate`))
-        .itemInputs(`gtceu:wetware_circuit_board`, `16x gtceu:niobium_titanium_foil`)
-        .inputFluids(`gtceu:sodium_persulfate 10000`)
-        .itemOutputs(`gtceu:wetware_printed_circuit_board`)
-        .cleanroom(CleanroomType.CLEANROOM)
-        .duration(1800)
-        .EUt(480);
+ 
  
     // cleanroom etching with new boards
     [
-        {board: 'runic_convergence', foil: 'yttrium_barium_cuprate', foil_count: 24, amount: 5000, duration: 2100, energy: 1920},
-        {board: 'draconic_wetware', foil: 'europium', foil_count: 32, amount: 10000, duration: 2400, energy: 7680},
-        {board: 'awakened_draconic_wetware', foil: 'polonium_bismide', foil_count: 48, amount: 20000, duration: 2700, energy: 30720}
+        {board: 'draconic_wetware', foil: 'trinium', foil_count: 48, amount: 5000, duration: 2100, energy: GTValues.VA[GTValues.EV]}
     ].forEach(type=> {
         [
           {id: 'copper', name: 'cupric_chloride_solution', multiplier: 1},
@@ -93,6 +77,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('2x gtceu:copper_chloride_dust')
         .duration(600)
         .EUt(GTValues.VHA[GTValues.HV]);
+    });
     event.recipes.gtceu.mixer(id('cupric_chloride_solution'))
         .itemInputs('1x gtceu:copper_chloride_dust')
         .inputFluids('gtceu:hydrochloric_acid 1000')

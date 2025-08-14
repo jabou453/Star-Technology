@@ -289,8 +289,8 @@
 				item: "gtceu:gas_large_turbine"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -3.5d
+			x: -1.5d
+			y: -2.5d
 		}
 		{
 			dependencies: [
@@ -306,8 +306,8 @@
 				item: "gtceu:plasma_large_turbine"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -4.0d
+			x: -3.0d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -426,8 +426,8 @@
 				item: "gtceu:mv_gas_turbine"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -5.5d
+			x: -1.5d
+			y: -4.5d
 		}
 		{
 			dependencies: [
@@ -441,8 +441,8 @@
 				item: "gtceu:hv_gas_turbine"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -4.5d
+			x: -1.5d
+			y: -3.5d
 		}
 		{
 			dependencies: [
@@ -1692,7 +1692,7 @@
 				title: "Rotor Holder OCs"
 				type: "checkmark"
 			}]
-			x: -3.0d
+			x: -1.5d
 			y: -7.0d
 		}
 		{
@@ -1748,7 +1748,7 @@
 				}
 				type: "item"
 			}]
-			x: -1.5d
+			x: 0.0d
 			y: -7.0d
 		}
 		{
@@ -2235,6 +2235,7 @@
 				"2FCCE10E5C3E858D"
 				"21B905AA3AE6059F"
 				"5BA69EDC3C223B2C"
+				"4F3EE28B3F38FC85"
 			]
 			id: "64162DB23206AD7A"
 			tasks: [{
@@ -2250,6 +2251,7 @@
 				"09FB26E3AADE4FAD"
 				"6FB365E6C91B482E"
 				"694E1F6458D5F72F"
+				"24E2CB89693EDEA3"
 			]
 			id: "60523CDE5E5695DB"
 			tasks: [{
@@ -2335,34 +2337,6 @@
 			}]
 			x: -8.5d
 			y: -7.0d
-		}
-		{
-			dependencies: [
-				"6622E66A2FA19BA1"
-				"21B905AA3AE6059F"
-			]
-			id: "1EE1007BA8202CC1"
-			tasks: [{
-				id: "78F0AF086C547FA4"
-				item: "gtceu:supreme_plasma_turbine"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -3.0d
-		}
-		{
-			dependencies: [
-				"1EE1007BA8202CC1"
-				"6FB365E6C91B482E"
-			]
-			id: "10E5E1FF4C613920"
-			tasks: [{
-				id: "2E30B64F65DB6424"
-				title: "Nyinsane Plasma Turbine"
-				type: "checkmark"
-			}]
-			x: -1.5d
-			y: -2.0d
 		}
 	]
 	title: "Power"

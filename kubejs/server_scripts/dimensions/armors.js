@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
                 hazmat, 
                 '64x gtceu:ancient_runicalium_foil', 
                 '48x kubejs:naquadic_netherite_fibers', 
-                '4x #gtceu:circuits/uhv',
+                '4x #gtceu:circuits/uev',
                 '2x gtceu:uhv_field_generator', 
                 '4x kubejs:runic_stabilization_plating', 
                 '64x gtceu:fine_thorium_plut_duranide_241_wire'
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
                 nether_piece, 
                 '64x gtceu:starium_alloy_foil', 
                 '64x kubejs:naquadic_netherite_fibers', 
-                '4x #gtceu:circuits/uev',
+                '4x #gtceu:circuits/uiv',
                 '2x gtceu:uev_field_generator', 
                 '16x kubejs:runic_stabilization_plating', 
                 '64x gtceu:fine_aurourium_wire'

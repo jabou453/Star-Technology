@@ -39,8 +39,64 @@ ServerEvents.recipes(event => {
     Fusion('tin_plas_plasma',144,'silver',144,'helium_3',1500,24576,7.2,280);
     Fusion('aurourium',144,'nether_star_concentrate',288,'seaborgium',288,884736,19.2,888);
     Fusion('paradox_plasma',144,'chaos_centric_void',500,'order_centric_void',500,294912,16.2,900);
-    Fusion('magmatic_plasma',144,'infernal_concentrate',500,'iron_plasma',288,66666,12.8,720);
+    Fusion('magmatic_plasma',144,'infernal_concentrate',500,'iron_plasma',288,66666,19.2,720);
     Fusion('voidic_plasma',144,'echo_r',576,'void',144,344064,27,1040);
     Fusion('preon_plasma',216,'utopian_akreyrium',1000,'dragon_breath',50,688128,19.2,1160);
+
+    // Plasma Turbine
+    event.remove({type: 'gtceu:plasma_generator'});
+
+    const PlasmaTurbine = (type,duration,ifGas) => {
+        let Quantity = (ifGas == true) ? 5 : 1 ;
+        event.recipes.gtceu.plasma_generator(id(`${type}_from_${type}_plasma`))
+            .inputFluids(`gtceu:${type}_plasma ${Quantity}`)
+            .outputFluids(`gtceu:${type} ${Quantity}`)
+            .duration(duration)
+            .EUt(-2048);
+    };
+
+    const PlasmaTurbineTemp = (type,duration,ifGas) => {
+        let Quantity = (ifGas == true) ? 5 : 1 ;
+        event.recipes.gtceu.plasma_generator(id(`${type}_from_${type}_plasma`))
+            .inputFluids(`gtceu:${type}_plas_plasma ${Quantity}`)
+            .outputFluids(`gtceu:${type} ${Quantity}`)
+            .duration(duration)
+            .EUt(-2048);
+    };
+
+    const PlasmaTurbineUnique = (type,output,duration,ifGas) => {
+        let Quantity = (ifGas == true) ? 5 : 1 ;
+        event.recipes.gtceu.plasma_generator(id(`${output}_from_${type}_plasma`))
+            .inputFluids(`gtceu:${type}_plasma ${Quantity}`)
+            .outputFluids(`gtceu:${output} ${Quantity}`)
+            .duration(duration)
+            .EUt(-2048);
+    };
+
+    PlasmaTurbine('nickel',192,false); // 144mb / 1.8s, 144recipes, 27648 turbineTicks, 15360 turbineTicks/s (in a UV Fusion Reactor)
+    PlasmaTurbine('iron',144,false); // 144mb / 1.8s, 144recipes, 16128 turbineTicks, 8960 turbineTicks/s
+    PlasmaTurbine('oxygen',72,true); // 1000mb / 1.6s, 200recipes, 9600 turbineTicks, 6000 turbineTicks/s
+    PlasmaTurbine('nitrogen',72,true); // 1000mb / 1.8s, 200recipes, 12800 turbineTicks, 7111 turbineTicks/s
+    PlasmaTurbine('argon',96,true); // 1000mb / 1.8s, 200recipes, 19200 turbineTicks, 5333 turbineTicks/s
+    PlasmaTurbine('helium',30,true); // 1000mb / .9s, 200recipes, 8000 turbineTicks, 8889 turbineTicks/s
+    PlasmaTurbineTemp('americium',540,false); // 144mb / 7.8s, 144recipes, 46080 turbineTicks, 5908 turbineTicks/s
+    PlasmaTurbineTemp('tin',128,false); // 144mb / 1.8s, 144recipes, 18432 turbineTicks, 2560 turbineTicks/s
+    PlasmaTurbineUnique('magmatic','infernal_concentrate',1440,false); // 144mb / 13.2s (iron plas time added), 144recipes, 57600 turbineTicks, 4364 turbineTicks/s
+
+    // Helium < Nitrogen ~= Oxygen < Argon ~= Tin < Iron =< Nickel < Americium < Magmatic
+
+    //MK1
+    // Helium, 5333tts, 5000tts, 4500tt, 23t, 
+    //MK2
+    // Tin, 2560tts, 8750tts, 15750tt, 110t, 
+    // Nitrogen, 7111tts, 6750tts, 12150tt, 60t, 
+    // Oxygen, 6000tts, 7250tts, 11600t, 60t, 
+    // Argon, 5333tts, 9000tts, 16200tt, 80t, 
+    //MK3
+    // Iron, 8960tts, 12000tts, 21600tt, 150t, 
+    // Nickel, 15360tts, 13000tts, 23400t, 160t, 
+    //Aux1
+    // Americium, 5908tts, 10000tts, 78000tt, 540t, 
+    // Magmatic, 4364tts, 16000tts, 211200tt, 1460t, 
 
 });

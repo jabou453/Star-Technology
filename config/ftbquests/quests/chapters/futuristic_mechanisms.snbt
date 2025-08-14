@@ -20,8 +20,8 @@
 			linked_quest: "01AF9486EA6DA792"
 			shape: "gear"
 			size: 1.25d
-			x: 16.0d
-			y: -5.0d
+			x: 14.0d
+			y: -7.0d
 		}
 	]
 	quests: [
@@ -967,8 +967,8 @@
 					type: "item"
 				}
 			]
-			x: 16.0d
-			y: -3.0d
+			x: 14.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -989,8 +989,8 @@
 				item: "gtceu:neuro_processing_unit"
 				type: "item"
 			}]
-			x: 18.0d
-			y: -1.0d
+			x: 16.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -1010,8 +1010,8 @@
 				item: "gtceu:wetware_processor"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 1.0d
+			x: 16.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["01AF9486EA6DA792"]
@@ -1028,8 +1028,8 @@
 				item: "gtceu:stem_cells"
 				type: "item"
 			}]
-			x: 18.0d
-			y: -3.0d
+			x: 16.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["3B2D79D40B9617D5"]
@@ -1051,8 +1051,8 @@
 				item: "gtceu:yttrium_barium_cuprate_ingot"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 1.0d
+			x: 14.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["1F79E45EF7810DFF"]
@@ -1071,8 +1071,8 @@
 				item: "gtceu:wetware_processor_computer"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 5.0d
+			x: 16.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["0962C36622E385B8"]
@@ -1089,8 +1089,8 @@
 				item: "gtceu:wetware_processor_assembly"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 3.0d
+			x: 16.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1171,13 +1171,10 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 5.0d
+			y: 3.0d
 		}
 		{
-			dependencies: [
-				"445BC7DFD3387DD4"
-				"4DE577541BB6DD00"
-			]
+			dependencies: ["445BC7DFD3387DD4"]
 			description: [
 				"The 6th tier of Coils"
 				""
@@ -1198,7 +1195,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 3.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
@@ -1424,10 +1421,7 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"2911EC7333E0E9C5"
-				"3B69844600AD5430"
-			]
+			dependencies: ["2911EC7333E0E9C5"]
 			description: ["Tritanium is a material you are gonna need a ton of. If you have the Fusion Reactors, consider setting some on passive if you have the time."]
 			id: "6131A76D203DE6AB"
 			rewards: [{
@@ -1460,7 +1454,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -1522,10 +1516,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"6131A76D203DE6AB"
-				"5DD60CB0D67AD39C"
-			]
+			dependencies: ["6131A76D203DE6AB"]
 			description: ["This is gonna be the final tier of Coils until you can reach Abydos. Swapping out all of your older Coils is recommended, because you will need the speed."]
 			id: "678B90BF2ACE2BBA"
 			rewards: [{
@@ -1617,7 +1608,10 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["678B90BF2ACE2BBA"]
+			dependencies: [
+				"678B90BF2ACE2BBA"
+				"3B69844600AD5430"
+			]
 			description: ["This material is used for some of the most important &4UHV&r machines."]
 			hide_dependent_lines: true
 			id: "02606EBF230281A3"
@@ -1652,7 +1646,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: -1.0d
+			y: 5.0d
 		}
 		{
 			id: "6DD3126E3C45D1E7"
@@ -1669,8 +1663,8 @@
 				title: "positioner"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: -0.5d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["6131A76D203DE6AB"]
@@ -1689,7 +1683,7 @@
 				type: "item"
 			}]
 			title: "Sterile Cleanroom"
-			x: 14.0d
+			x: 12.0d
 			y: -3.0d
 		}
 		{
@@ -1819,7 +1813,7 @@
 				item: "gtceu:dragonsteel_single_wire"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 5.0d
 		}
 		{
@@ -1896,6 +1890,46 @@
 			y: 3.0d
 		}
 		{
+			dependencies: ["261174370DC87FCB"]
+			description: ["Carbon and a Plastic. Each Plastic gives twice as much Fibers as the previous one."]
+			id: "4FF433145C67693F"
+			optional: true
+			rewards: [{
+				id: "046C4EC8F24182DD"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "641801B89910C82D"
+				item: "gtceu:carbon_fibers"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["550DB81B8DC91730"]
+			description: ["Just some Glass and Boron, quite cheap."]
+			id: "5B575348D2A871BB"
+			optional: true
+			rewards: [{
+				id: "70A331233F13EF2E"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "0E28C749EBE13073"
+				item: "gtceu:fine_borosilicate_glass_wire"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 5.0d
+		}
+		{
 			dependencies: [
 				"68F878EC21CA1749"
 				"2BA3AAAB77C094BC"
@@ -1916,8 +1950,8 @@
 				}
 				type: "item"
 			}]
-			x: 16.0d
-			y: -1.0d
+			x: 14.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["023794367F1B28D1"]
@@ -1955,49 +1989,6 @@
 			}]
 			x: -7.0d
 			y: -6.0d
-		}
-		{
-			dependencies: ["1DA6B3308C263A6F"]
-			id: "4DE577541BB6DD00"
-			shape: "circle"
-			tasks: [{
-				id: "2F50871E99D1C7D2"
-				item: "gtceu:niobium_nitride_ingot"
-				type: "item"
-			}]
-			x: 2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["36C01453717B249D"]
-			hide_dependency_lines: true
-			id: "5DD60CB0D67AD39C"
-			tasks: [{
-				id: "35867E3AB59BD05B"
-				item: "gtceu:trinaquadalloy_ingot"
-				type: "item"
-			}]
-			x: 16.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["3FC351F05F2AC743"]
-			description: ["A parallel freezer. Very much necessary to keep up with the RHF on the left."]
-			id: "17C47EC4E8337D7B"
-			optional: true
-			rewards: [{
-				id: "014A406ABD674F80"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "01A147F41AAF7876"
-				item: "gtceu:mega_vacuum_freezer"
-				type: "item"
-			}]
-			x: 12.0d
-			y: -5.0d
 		}
 	]
 	title: "Futuristic Mechanisms"
