@@ -33,6 +33,12 @@ ServerEvents.recipes(event => {
         event.recipes.create.filling(`kubejs:${potionID}`, [Fluid.of(`kubejs:${potionID}`, 250), 'minecraft:glass_bottle']).id(`start:filling/${potionID}`);
 
         event.shapeless(`4x kubejs:${potionID}`, [`kubejs:${potionID}_bucket`, 'minecraft:glass_bottle', 'minecraft:glass_bottle', 'minecraft:glass_bottle', 'minecraft:glass_bottle']).id(`start:shapeless/${potionID}`);
+
+        event.recipes.gtceu.fermenter(id(potionID))
+            .itemInputs(fermentationMixture)
+            .outputFluids(`kubejs:${potionID}`)
+            .duration(100)
+            .EUt(GTValues.VHA[GTValues.LV]);
     };
 
     potionRecipes(['3x thermal:corn', '3x minecraft:wheat', '2x minecraft:sugar'], 'sweetcord_beer'); // Haste
