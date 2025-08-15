@@ -309,34 +309,22 @@
 			y: -32.5d
 		}
 		{
-			id: "223347A561E2437A"
-			linked_quest: "6C8C6EA426060065"
-			x: -16.5d
-			y: -32.5d
-		}
-		{
-			id: "66DBD9AF4CDBC12F"
-			linked_quest: "2EE4C6540FE3D4CF"
-			x: -13.0d
-			y: -22.5d
-		}
-		{
 			id: "17589AD800EE0BFB"
 			linked_quest: "7F72F9E28713D965"
-			x: 4.5d
-			y: -14.0d
+			x: 6.0d
+			y: -28.0d
 		}
 		{
 			id: "45ED4A9446271E4F"
 			linked_quest: "47DF7968E9B98C65"
 			x: 6.0d
-			y: -14.0d
+			y: -26.5d
 		}
 		{
 			id: "278B867C320470BF"
 			linked_quest: "6356F875511B2610"
-			x: 7.5d
-			y: -14.0d
+			x: 6.0d
+			y: -29.5d
 		}
 		{
 			id: "0AC6062ECBE46015"
@@ -361,6 +349,48 @@
 			linked_quest: "665FC02BC2BC414F"
 			x: -11.5d
 			y: -21.5d
+		}
+		{
+			id: "7A43541F39514E79"
+			linked_quest: "06EC98F6E6AFC2AF"
+			x: 1.0d
+			y: -24.5d
+		}
+		{
+			id: "47FC871DEDEAE29F"
+			linked_quest: "4F994F04EF1710B9"
+			x: 2.5d
+			y: -18.5d
+		}
+		{
+			id: "2BFF8B4DB18C69A5"
+			linked_quest: "67E52B5738FC7398"
+			x: 2.5d
+			y: -17.0d
+		}
+		{
+			id: "715F3E093FC8F375"
+			linked_quest: "25583D0BF59E1BC8"
+			x: 2.5d
+			y: -15.5d
+		}
+		{
+			id: "0A215A99C18C9F04"
+			linked_quest: "3B1453C435E3950B"
+			x: 5.5d
+			y: -12.5d
+		}
+		{
+			id: "55BF86296CFC362D"
+			linked_quest: "16FDCABFC80579D5"
+			x: 5.5d
+			y: -14.0d
+		}
+		{
+			id: "1B3B2AA683ABB655"
+			linked_quest: "3AE6E85C2FC76DE9"
+			x: 5.5d
+			y: -15.5d
 		}
 	]
 	quests: [
@@ -411,8 +441,8 @@
 				item: "gtceu:large_wiremill"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -30.5d
+			x: 7.5d
+			y: -32.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -422,8 +452,8 @@
 				item: "gtceu:large_solidifier"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -30.5d
+			x: 9.0d
+			y: -32.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -433,8 +463,8 @@
 				item: "gtceu:large_extruder"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -27.5d
+			x: 7.5d
+			y: -29.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -444,8 +474,8 @@
 				item: "gtceu:large_electrolyzer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -27.5d
+			x: 9.0d
+			y: -29.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -455,8 +485,8 @@
 				item: "gtceu:large_mixer"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -24.5d
+			x: 7.5d
+			y: -26.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -466,8 +496,8 @@
 				item: "gtceu:large_maceration_tower"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -24.5d
+			x: 9.0d
+			y: -26.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -477,8 +507,8 @@
 				item: "gtceu:large_chemical_bath"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -21.5d
+			x: 7.5d
+			y: -23.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -488,8 +518,8 @@
 				item: "gtceu:large_centrifuge"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -21.5d
+			x: 9.0d
+			y: -23.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -499,8 +529,8 @@
 				item: "gtceu:large_electromagnet"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -18.5d
+			x: 7.5d
+			y: -20.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -510,8 +540,8 @@
 				item: "gtceu:large_packer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -18.5d
+			x: 9.0d
+			y: -20.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -521,8 +551,8 @@
 				item: "gtceu:large_assembler"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -15.5d
+			x: 6.0d
+			y: -23.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -533,7 +563,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -17.0d
+			y: -22.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -543,8 +573,8 @@
 				item: "gtceu:large_arc_smelter"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -20.0d
+			x: 7.5d
+			y: -22.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -554,8 +584,8 @@
 				item: "gtceu:large_engraving_laser"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -20.0d
+			x: 9.0d
+			y: -22.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -565,8 +595,8 @@
 				item: "gtceu:large_sifting_funnel"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -17.0d
+			x: 6.0d
+			y: -20.5d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -576,8 +606,8 @@
 				item: "gtceu:large_autoclave"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -26.0d
+			x: 9.0d
+			y: -28.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -587,8 +617,8 @@
 				item: "gtceu:large_material_press"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -23.0d
+			x: 7.5d
+			y: -25.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -598,8 +628,8 @@
 				item: "gtceu:large_brewer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -23.0d
+			x: 9.0d
+			y: -25.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -609,8 +639,8 @@
 				item: "gtceu:large_cutter"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -29.0d
+			x: 7.5d
+			y: -31.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -620,8 +650,8 @@
 				item: "gtceu:large_distillery"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -29.0d
+			x: 9.0d
+			y: -31.0d
 		}
 		{
 			dependencies: ["664E782C6A24D9F1"]
@@ -631,8 +661,8 @@
 				item: "gtceu:large_extractor"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -26.0d
+			x: 7.5d
+			y: -28.0d
 		}
 		{
 			dependencies: ["0E88CB5E68212006"]
@@ -1108,7 +1138,7 @@
 			]
 			title: "Enhanced Chips"
 			x: 2.5d
-			y: -24.5d
+			y: -23.0d
 		}
 		{
 			dependencies: ["17C1292018AE363E"]
@@ -1297,7 +1327,7 @@
 				type: "item"
 			}]
 			x: -13.0d
-			y: -24.0d
+			y: -24.5d
 		}
 		{
 			dependencies: ["649596731FFA9C9A"]
@@ -1324,7 +1354,7 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
+			x: 4.0d
 			y: -17.0d
 		}
 		{
@@ -1341,7 +1371,7 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
+			x: 4.0d
 			y: -15.5d
 		}
 		{
@@ -1359,7 +1389,7 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
+			x: 4.0d
 			y: -14.0d
 		}
 		{
@@ -1376,7 +1406,7 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
+			x: 4.0d
 			y: -18.5d
 		}
 		{
@@ -1394,11 +1424,11 @@
 				}
 				type: "item"
 			}]
-			x: 2.5d
+			x: 4.0d
 			y: -20.0d
 		}
 		{
-			dependencies: ["13DB231B21353ECF"]
+			dependencies: ["25583D0BF59E1BC8"]
 			id: "5584A2F87AC8631E"
 			optional: true
 			tasks: [{
@@ -1457,7 +1487,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -15.5d
+			y: -25.0d
 		}
 		{
 			dependencies: ["1A8F645AC1B30411"]
@@ -1535,18 +1565,6 @@
 			y: -32.5d
 		}
 		{
-			dependencies: ["707C2E9BA62A60C5"]
-			id: "13DB231B21353ECF"
-			subtitle: "First UEV Circuit"
-			tasks: [{
-				id: "671012D85BAD1B93"
-				item: "kubejs:wetware_based_runic_neuroloom"
-				type: "item"
-			}]
-			x: 1.0d
-			y: -15.5d
-		}
-		{
 			dependencies: ["421DF7880AD00F58"]
 			id: "2C389E4B673A803E"
 			subtitle: "First ZPM Circuit"
@@ -1571,7 +1589,10 @@
 			y: -30.5d
 		}
 		{
-			dependencies: ["6C8C6EA426060065"]
+			dependencies: [
+				"6C8C6EA426060065"
+				"482A52DE98E8E8F9"
+			]
 			id: "4EB51296C24A7AEB"
 			tasks: [{
 				id: "6808DD2FC6753A87"
@@ -1613,6 +1634,50 @@
 			}]
 			x: -16.0d
 			y: -29.5d
+		}
+		{
+			dependencies: ["2EE4C6540FE3D4CF"]
+			id: "439DEE54ABDA3782"
+			tasks: [{
+				id: "6EBAC5195D6011BB"
+				item: "gtceu:mega_blast_furnace"
+				type: "item"
+			}]
+			x: -13.0d
+			y: -23.0d
+		}
+		{
+			dependencies: ["06EC98F6E6AFC2AF"]
+			id: "5FE5E2D9034DA872"
+			tasks: [
+				{
+					id: "5489A4E5C4CDD453"
+					item: "kubejs:uipic_chip"
+					type: "item"
+				}
+				{
+					id: "7D156DA5DC575FC3"
+					item: "kubejs:draco_advanced_soc"
+					type: "item"
+				}
+			]
+			title: "Draconically Advanced Chips"
+			x: 2.5d
+			y: -24.5d
+		}
+		{
+			dependencies: [
+				"6C8C6EA426060065"
+				"5B91E94506FB37D6"
+			]
+			id: "482A52DE98E8E8F9"
+			tasks: [{
+				id: "683B58DDBB478348"
+				item: "start_core:uhv_auxiliary_boosted_fusion_reactor"
+				type: "item"
+			}]
+			x: -16.5d
+			y: -32.5d
 		}
 	]
 	title: "Line Of Progression"

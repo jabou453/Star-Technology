@@ -266,15 +266,43 @@ ServerEvents.recipes(event => {
         C: 'kubejs:helish_star'
     }).id('start:shaped/end_crystal');
 
-    // Temp Breath Gen
+    // Draconic
     event.recipes.gtceu.fermenter(id('dragon_cell_growth'))
-        .chancedInput('kubejs:draconic_stem_cells', 8000, 0)
+        .itemInputs('kubejs:draconic_stem_cells')
         .inputFluids('gtceu:sterilized_growth_medium 50000', 'gtceu:radon 75000', 'gtceu:ender_air 500000')
-        .itemOutputs('kubejs:draconic_stem_cells')
-        .outputFluids('gtceu:dragon_breath 100')
+        .outputFluids('gtceu:dragon_breath 500')
         .duration(2400)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UIV]);
+
+    event.recipes.gtceu.forge_hammer(id('scale_recycling'))
+        .itemInputs('mysticalagradditions:dragon_scale')
+        .itemOutputs('2x kubejs:draconic_scale_cells')
+        .duration(200)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.cutter(id('egg_separation'))
+        .itemInputs('minecraft:dragon_egg')
+        .inputFluids('gtceu:neutronium 10')
+        .itemOutputs('kubejs:draconic_embryo','12x kubejs:dragon_egg_shard')
+        .duration(1000)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM) // Moved to Abyssal
+        .EUt(GTValues.VHA[GTValues.UIV]);
+
+    event.recipes.gtceu.macerator(id('shard_decomp'))
+        .itemInputs('kubejs:dragon_egg_shard')
+        .itemOutputs('2x kubejs:draconic_scale_cells','gtceu:small_draconyallium_dust','gtceu:tiny_draconyallium_dust')
+        .duration(400)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM) // Moved to Abyssal
+        .EUt(GTValues.VA[GTValues.UHV]);
+
+    event.recipes.gtceu.autoclave(id('shard_decomp'))
+        .itemInputs('kubejs:draconic_embryo')
+        .inputFluids('gtceu:nether_star_concentrate 320')
+        .itemOutputs('16x kubejs:secreting_draconic_cells','4x kubejs:draconic_stem_cells')
+        .duration(600)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM) // Moved to Abyssal
+        .EUt(GTValues.VHA[GTValues.UEV]);
 
     // Lepton TlSb
     event.recipes.gtceu.mixer(id('thallium_antimonide'))

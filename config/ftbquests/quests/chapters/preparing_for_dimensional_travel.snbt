@@ -375,14 +375,13 @@
 			}]
 			tasks: [
 				{
-					id: "0F233B828108A0AF"
-					item: "gtceu:echo_r_bucket"
-					optional_task: true
-					type: "item"
-				}
-				{
 					id: "7D6A01CC1134C595"
 					type: "checkmark"
+				}
+				{
+					id: "12B0841890A15CB8"
+					item: "gtceu:echo_r_bucket"
+					type: "item"
 				}
 			]
 			title: "Echo Fluid"

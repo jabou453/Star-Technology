@@ -1537,7 +1537,10 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["7E99889B3427A842"]
+			dependencies: [
+				"7E99889B3427A842"
+				"6CC13BE9AD447218"
+			]
 			description: ["The medium used to grow life."]
 			id: "01AF9486EA6DA792"
 			rewards: [{
@@ -2161,6 +2164,7 @@
 		}
 		{
 			dependencies: ["266F486F2425C35E"]
+			hide_dependency_lines: true
 			id: "735064FE12880E7E"
 			tasks: [{
 				id: "1B81FA7A2C015F46"
@@ -2651,6 +2655,7 @@
 		}
 		{
 			dependencies: ["266F486F2425C35E"]
+			hide_dependency_lines: true
 			id: "5873CED1371E7A3E"
 			tasks: [{
 				id: "39546D32E8F56651"
@@ -3490,7 +3495,6 @@
 		}
 		{
 			dependencies: ["5CC733B0DA775351"]
-			hide_dependent_lines: true
 			id: "266F486F2425C35E"
 			shape: "gear"
 			tasks: [{
@@ -3500,6 +3504,23 @@
 			}]
 			x: 19.0d
 			y: 3.0d
+		}
+		{
+			dependencies: ["7C33054877B2DB16"]
+			description: [
+				"While not needed yet, if you balance all the Akreyrium Variants you can recombine them and process down Lepton Dense Akreyrium for the highest yields."
+				""
+				""
+				"{ \"text\": \"Next Level Akreyrium\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"17FC1E92368D840B\" } }"
+			]
+			id: "39202B7E28ABD0EC"
+			tasks: [{
+				id: "0560BAFCBFA5335C"
+				title: "Best Akeyrium"
+				type: "checkmark"
+			}]
+			x: 26.5d
+			y: 15.0d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"

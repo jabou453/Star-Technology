@@ -942,7 +942,10 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["6CC13BE9AD447218"]
+			dependencies: [
+				"6CC13BE9AD447218"
+				"01AF9486EA6DA792"
+			]
 			description: ["The first step into making computers think."]
 			id: "68F878EC21CA1749"
 			rewards: [{

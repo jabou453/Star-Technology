@@ -780,6 +780,7 @@ ServerEvents.recipes(event => {
         .duration(13.2 * 20 * 2)
         .EUt(30);
 
+    event.remove({id:'gtceu:compressor/compress_plate_dust_obsidian'});
     event.recipes.gtceu.compressor(id('obsidian_plate'))
         .itemInputs('gtceu:obsidian_dust')
         .itemOutputs('gtceu:obsidian_plate')

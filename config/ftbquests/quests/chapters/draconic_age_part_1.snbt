@@ -1017,7 +1017,7 @@
 				type: "checkmark"
 			}]
 			x: 4.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["45E628CF1DA8D380"]
@@ -1047,7 +1047,11 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["09B55AFE7C06EC82"]
+			dependencies: [
+				"09B55AFE7C06EC82"
+				"749AB3A73D3744EA"
+				"54A48D25CC69507E"
+			]
 			id: "3AE729D3F47E9A2B"
 			tasks: [{
 				id: "28FA8CA23E8E5436"
@@ -1075,7 +1079,7 @@
 				}
 			]
 			x: 1.0d
-			y: 1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["3B1453C435E3950B"]
@@ -1085,8 +1089,8 @@
 				item: "start_core:uiv_parallel_hatch"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -6.0d
+			x: 5.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["41B4DE81AFC054B9"]
@@ -1099,12 +1103,13 @@
 				type: "checkmark"
 			}]
 			x: 5.0d
-			y: -1.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			hide_until_deps_complete: true
 			id: "10D5DA8708208783"
+			optional: true
 			tasks: [{
 				id: "4F21CDEF48DEB549"
 				item: "minecraft:bedrock"
@@ -1146,7 +1151,10 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["310FC3F86513555F"]
+			dependencies: [
+				"310FC3F86513555F"
+				"1B6159E114BA50ED"
+			]
 			description: ["A parallel Alloy Blast Smelter, just in case it wasn't fast enough already."]
 			id: "5FEC7470D01CEBDD"
 			rewards: [{
@@ -1193,6 +1201,7 @@
 		{
 			dependencies: ["10D5DA8708208783"]
 			id: "66EFD1B3494C51C0"
+			optional: true
 			shape: "gear"
 			size: 2.5d
 			tasks: [{
@@ -1477,7 +1486,10 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0168A45EB73911AC"]
+			dependencies: [
+				"0168A45EB73911AC"
+				"032E72446266F7D4"
+			]
 			description: ["Now that you have Draconic Cells, you can start looping dragon's breath."]
 			icon: "minecraft:dragon_breath"
 			id: "46DD931FCA5AF574"
@@ -1490,7 +1502,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["4DF07CB3D60C901C"]
+			dependencies: ["68970C6696FA90E6"]
 			description: ["You have been granted protection in this place allowing you to forgo armor needs"]
 			id: "7C65EDBD752F898D"
 			tasks: [{
@@ -1498,8 +1510,8 @@
 				item: "kubejs:nether_talisman"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -6.0d
+			x: -7.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["64780055536CEEF3"]
@@ -1541,7 +1553,7 @@
 				item: "start_core:daydream_spire"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 7.0d
 			y: -5.0d
 		}
 		{
@@ -1554,7 +1566,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["3AE6E85C2FC76DE9"]
@@ -1566,10 +1578,13 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: -2.0d
+			y: -4.0d
 		}
 		{
-			dependencies: ["6D6C79E7CBBCC893"]
+			dependencies: [
+				"6D6C79E7CBBCC893"
+				"35D5CC08AE53A7FA"
+			]
 			id: "3AE6E85C2FC76DE9"
 			subtitle: "Third UEV Circuit"
 			tasks: [{
@@ -1578,10 +1593,14 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 0.0d
+			y: -2.0d
 		}
 		{
-			dependencies: ["09B55AFE7C06EC82"]
+			dependencies: [
+				"09B55AFE7C06EC82"
+				"25436E09A8F9E9C8"
+				"058533FBFBA38DC8"
+			]
 			id: "1799430093ABCC64"
 			tasks: [{
 				id: "27F3A14B2F6C836C"
@@ -1589,7 +1608,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1602,13 +1621,14 @@
 				item: "start_core:uiv_absolute_parallel_hatch"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -6.0d
+			x: 5.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
 			hide_until_deps_complete: true
 			id: "1DC40C42DF1AFCC4"
+			optional: true
 			tasks: [{
 				id: "70B6C065BA6E04DF"
 				title: "BPA Core"
@@ -1665,7 +1685,7 @@
 				}
 			]
 			x: 6.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1741,6 +1761,20 @@
 				type: "checkmark"
 			}]
 			x: 10.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["4DF07CB3D60C901C"]
+			description: ["Find the Blackened Castles and Loot Them."]
+			id: "68970C6696FA90E6"
+			tasks: [{
+				icon: "minecraft:chiseled_polished_blackstone"
+				id: "618C5C0D5013A3A9"
+				structure: "minecraft:bastion_remnant"
+				title: "Fiery Castles"
+				type: "structure"
+			}]
+			x: -8.0d
 			y: -6.0d
 		}
 	]

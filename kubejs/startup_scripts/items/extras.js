@@ -32,6 +32,15 @@ StartupEvents.registry('item', event => {
         .displayName('Draconic Scale Cells')
         .texture('kubejs:item/draconic/draconic_scale_cells');
 
+    event.create('draconic_embryo')
+        .displayName('Draconic Embryo')
+        .tooltip('§7The potential for creation and destruction can grow from the smallest of things...')
+        .texture('kubejs:item/draconic/draconic_embryo');
+
+    event.create('dragon_egg_shard')
+        .displayName('§dDragon Egg§r Shard')
+        .texture('kubejs:item/draconic/dragon_egg_shard');
+
     // Gravi star continuations
     event.create('helish_star')
         .displayName('Helish Star')
