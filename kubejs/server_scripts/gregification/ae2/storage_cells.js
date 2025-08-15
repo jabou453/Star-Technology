@@ -8,22 +8,6 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: 'ae2:network/cells/item_cell_housing'}, 'minecraft:iron_ingot', 'gtceu:diamond_skystone_alloy_plate');
     event.replaceInput({ id: 'ae2:network/cells/fluid_cell_housing'}, 'minecraft:copper_ingot', 'gtceu:gold_skystone_alloy_plate');
 
-    event.remove({id: 'megacells:cells/mega_item_cell_housing'});
-    event.recipes.gtceu.assembler(id('mega_item_cell_housing'))
-            .itemInputs(['6x gtceu:netherite_certus_quartz_skystone_alloy_plate','gtceu:laminated_glass','4x #gtceu:circuits/ev'])
-            .inputFluids('gtceu:fluix_steel 576')
-            .itemOutputs('megacells:mega_item_cell_housing')
-            .duration(400)
-            .EUt(2048);
-
-    event.remove({id: 'megacells:cells/mega_fluid_cell_housing'});
-    event.recipes.gtceu.assembler(id('mega_fluid_cell_housing'))
-            .itemInputs(['6x gtceu:netherite_gold_skystone_alloy_plate','gtceu:laminated_glass','4x #gtceu:circuits/ev'])
-            .inputFluids('gtceu:fluix_steel 576')
-            .itemOutputs('megacells:mega_fluid_cell_housing')
-            .duration(400)
-            .EUt(2048);
-
     //storage cells
 
     const packaging = (tier, type, mat) => {
@@ -84,6 +68,19 @@ ServerEvents.recipes(event => {
             .itemOutputs('megacells:bulk_item_cell')
             .duration(400)
             .EUt(8192);
+
+    event.recipes.gtceu.canner(id('bulk_item_cell'))
+        .itemInputs('megacells:mega_item_cell_housing', 'megacells:bulk_cell_component')
+        .itemOutputs('megacells:bulk_item_cell')
+        .duration(400)
+        .EUt(8192);
+        
+    event.recipes.gtceu.packer(id('bulk_item_cell_uncrafting'))
+        .itemInputs('megacells:bulk_item_cell')
+        .itemOutputs('megacells:mega_item_cell_housing', 'megacells:bulk_cell_component')
+        .circuit(2)
+        .duration(100)
+        .EUt(7);
 
     //crafting storage
 
@@ -174,6 +171,22 @@ ServerEvents.recipes(event => {
             .circuit(2)
             .duration(100)
             .EUt(7);
-    })
+    });
+
+    event.remove({id: 'megacells:cells/mega_item_cell_housing'});
+    event.recipes.gtceu.assembler(id('mega_item_cell_housing'))
+            .itemInputs(['6x gtceu:netherite_certus_quartz_skystone_alloy_plate','gtceu:laminated_glass','4x #gtceu:circuits/ev'])
+            .inputFluids('gtceu:fluix_steel 576')
+            .itemOutputs('megacells:mega_item_cell_housing')
+            .duration(400)
+            .EUt(2048);
+
+    event.remove({id: 'megacells:cells/mega_fluid_cell_housing'});
+    event.recipes.gtceu.assembler(id('mega_fluid_cell_housing'))
+            .itemInputs(['6x gtceu:netherite_gold_skystone_alloy_plate','gtceu:laminated_glass','4x #gtceu:circuits/ev'])
+            .inputFluids('gtceu:fluix_steel 576')
+            .itemOutputs('megacells:mega_fluid_cell_housing')
+            .duration(400)
+            .EUt(2048);
 
 });

@@ -194,6 +194,7 @@
 			y: -5.0d
 		}
 		{
+			dependencies: ["4E724D0920A2DF55"]
 			id: "00C108BA77C4FC44"
 			tasks: [{
 				id: "1804FB2E08386F85"
@@ -642,6 +643,7 @@
 			y: -3.0d
 		}
 		{
+			dependencies: ["53E98CFC7934FA67"]
 			id: "16D74E923B76E266"
 			shape: "circle"
 			tasks: [{
@@ -732,6 +734,7 @@
 			y: 1.0d
 		}
 		{
+			dependencies: ["0A03B4D352DCF148"]
 			id: "116E6C82D5482654"
 			shape: "circle"
 			tasks: [{

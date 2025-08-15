@@ -72,7 +72,7 @@ ServerEvents.recipes(event => {
         }
 
     // Quantum Cooling
-        event.recipes.gtceu.quantum_cooling(`${type}`)
+        event.recipes.gtceu.quantum_cooling(id(`${type}`))
             .inputFluids(`gtceu:${type}_plasma 144`)
             .inputFluids('gtceu:bec_og 250')
             .outputFluids(`gtceu:molten_${type} 144`)

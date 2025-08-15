@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
     const Material15000PlusAlloy = (type,dur) => {    
         
         event.remove({id: `gtceu:vacuum_freezer/${type}`});
-        event.recipes.gtceu.vacuum_freezer(`${type}_from_molten`)
+        event.recipes.gtceu.vacuum_freezer(id(`${type}_from_molten`))
             .inputFluids(`gtceu:molten_${type} 144`)
             .inputFluids('gtceu:superstate_helium_3 500')
             .notConsumable('gtceu:ingot_casting_mold')
@@ -125,7 +125,7 @@ ServerEvents.recipes(event => {
             .outputFluids('gtceu:helium_3 250')
             .duration(dur * 20 )
             .EUt(GTValues.VA[GTValues.UV]);    
-        event.recipes.gtceu.bulk_vacuum_cooling(`${type}_from_molten`)
+        event.recipes.gtceu.bulk_vacuum_cooling(id(`${type}_from_molten`))
             .inputFluids(`gtceu:molten_${type} 36864`)
             .inputFluids('gtceu:superstate_helium_3 128000')
             .notConsumable('gtceu:ingot_casting_mold')

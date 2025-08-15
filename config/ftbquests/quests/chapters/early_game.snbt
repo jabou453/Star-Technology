@@ -1324,7 +1324,7 @@
 				""
 				"You might get some good use out of this when making Bio Diesel."
 				""
-				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+				"You can optionally use busses and hatches for automation, otherwise you can interact directly with the controller."
 			]
 			icon: "gtceu:large_farm"
 			id: "14417CCE1E25C9C6"
@@ -1360,7 +1360,8 @@
 			dependencies: ["07C5B4C5EE2F948D"]
 			description: [
 				"A larger barrel means faster recipes! Maybe this will help with that slime addiction..."
-				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+				""
+				"You can optionally use busses and hatches for automation, otherwise you can interact directly with the controller."
 			]
 			icon: "gtceu:large_barrel"
 			id: "27E9698231A04022"
@@ -1396,7 +1397,8 @@
 			dependencies: ["07C5B4C5EE2F948D"]
 			description: [
 				"Automatic pebbles and lava? Sounds like a good use of your time to make a few of these."
-				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+				""
+				"You can optionally use busses and hatches for automation, otherwise you can interact directly with the controller."
 			]
 			icon: "gtceu:large_stone_barrel"
 			id: "3477B2FEEF0DF44C"
@@ -1530,7 +1532,11 @@
 				"708A5EE75EC40FAD"
 				"70BE6905EC722DCA"
 			]
-			description: ["Diesel Engines are a great way to generate large amounts of Stress Units for Create machines. Bio Diesel is one of the best fuel sources, but it requires some automating to keep a steady supply."]
+			description: [
+				"Diesel Engines are a great way to generate large amounts of Stress Units for Create machines. Bio Diesel is one of the best fuel sources, but it requires some automating to keep a steady supply."
+				""
+				"You can produce Ethanol using either the Basin Lid or the Casket. The Basin Lid is 1.5x faster, whilst the Casket is simpler to work with."
+			]
 			id: "00DD4784E0E6821D"
 			optional: true
 			rewards: [{
@@ -1542,16 +1548,19 @@
 				{
 					id: "1ECC60CD1BB6EB91"
 					item: "createdieselgenerators:plant_oil_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "175DA766C911FF5A"
 					item: "createdieselgenerators:basin_lid"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "5E91854EA7A49CCE"
 					item: "createdieselgenerators:ethanol_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2317,6 +2326,22 @@
 			}]
 			x: 2.0d
 			y: 4.25d
+		}
+		{
+			dependencies: ["46E41B05B9F6FA82"]
+			description: [
+				"The Casket is a machine that allows for easy Ethanol production."
+				""
+				"Alongside that, it can also produce various brews, that gives beneficial effects when consumed."
+			]
+			id: "034381C844C88ADD"
+			tasks: [{
+				id: "2686626F2E18E539"
+				item: "gtceu:ulv_casket"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -1.5d
 		}
 	]
 	title: "Early Game"
