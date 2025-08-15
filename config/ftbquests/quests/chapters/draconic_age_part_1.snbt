@@ -1009,6 +1009,8 @@
 		{
 			dependencies: ["09B55AFE7C06EC82"]
 			id: "41B4DE81AFC054B9"
+			invisible: true
+			optional: true
 			tasks: [{
 				id: "06B8EC7B4599E429"
 				title: "Draconic Nursery"
@@ -1045,7 +1047,7 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["41B4DE81AFC054B9"]
+			dependencies: ["09B55AFE7C06EC82"]
 			id: "3AE729D3F47E9A2B"
 			tasks: [{
 				id: "28FA8CA23E8E5436"
@@ -1090,6 +1092,7 @@
 			dependencies: ["41B4DE81AFC054B9"]
 			icon: "minecraft:dragon_egg"
 			id: "17BDBDAE35BD49ED"
+			optional: true
 			tasks: [{
 				id: "1F13D3464D748364"
 				title: "Draconic Scale Infusion"

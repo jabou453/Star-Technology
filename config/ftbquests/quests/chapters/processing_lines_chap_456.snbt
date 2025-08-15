@@ -1912,8 +1912,8 @@
 			dependencies: ["4BCC078B76C6CAE3"]
 			id: "600015DA0DCAACD4"
 			tasks: [{
-				id: "38DAFF93792077A8"
-				item: "mysticalagradditions:nether_star_shard"
+				id: "766AA12D5EFBD743"
+				item: "kubejs:nether_star_shard"
 				type: "item"
 			}]
 			x: 0.0d

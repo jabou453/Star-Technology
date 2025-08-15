@@ -234,6 +234,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('dense_tau_akreyrium').setFormula('Ak(τ)?');
     GTMaterials.get('lepton_sparse_akreyrium').setFormula('Ak(?ℓ?)?');
     GTMaterials.get('lepton_dense_akreyrium').setFormula('Ak(ℓ)?');
+    GTMaterials.get('echo_shard').setFormula('Ec');
 
 });
 

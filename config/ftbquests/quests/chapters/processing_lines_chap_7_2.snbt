@@ -13,38 +13,38 @@
 			linked_quest: "31F87896FF834E63"
 			shape: "gear"
 			size: 1.5d
-			x: 18.0d
-			y: -3.5d
+			x: 16.5d
+			y: -4.0d
 		}
 		{
 			id: "267DD9DBDDB021CC"
 			linked_quest: "3D51DB909365D9B3"
-			x: 10.5d
-			y: -4.5d
+			x: 9.0d
+			y: -5.0d
 		}
 		{
 			id: "3AE853920AB1ED9E"
 			linked_quest: "0F6102B3CDB7097D"
-			x: 10.5d
-			y: -2.5d
+			x: 9.0d
+			y: -3.0d
 		}
 		{
 			id: "68C77DA274229D4D"
 			linked_quest: "5A9A8A848F2B735B"
-			x: 10.0d
-			y: -3.5d
+			x: 8.5d
+			y: -4.0d
 		}
 		{
 			id: "2C174488CA82122B"
 			linked_quest: "03C0B34970DB1594"
-			x: 12.5d
-			y: -4.5d
+			x: 11.0d
+			y: -5.0d
 		}
 		{
 			id: "25269DDFF2DB70C8"
 			linked_quest: "266F486F2425C35E"
-			x: 15.0d
-			y: -1.5d
+			x: 13.5d
+			y: -2.0d
 		}
 	]
 	quests: [
@@ -505,8 +505,8 @@
 				item: "kubejs:leptonic_akreyrium_catalyst"
 				type: "item"
 			}]
-			x: 11.5d
-			y: -3.5d
+			x: 10.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -520,8 +520,8 @@
 				item: "gtceu:lepton_dense_akreyrium_bucket"
 				type: "item"
 			}]
-			x: 13.0d
-			y: -3.5d
+			x: 11.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -534,8 +534,8 @@
 				item: "gtceu:thallium_antimonide_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: -2.5d
+			x: 13.0d
+			y: -3.0d
 		}
 		{
 			id: "4973E84B699CFCE2"
@@ -544,8 +544,8 @@
 				item: "gtceu:antimony_dust"
 				type: "item"
 			}]
-			x: 14.0d
-			y: -1.5d
+			x: 12.5d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -558,8 +558,8 @@
 				item: "gtceu:lepton_resonant_thallium_antimonide_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: -3.5d
+			x: 13.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["05AD1039268E86A4"]
@@ -577,8 +577,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 16.0d
-			y: -3.5d
+			x: 14.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -985,8 +985,8 @@
 				title: "Abyss Harvesting"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 3.5d
+			x: -10.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["1D3052F94EE128F4"]
@@ -1004,8 +1004,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 7.5d
-			y: 2.0d
+			x: -9.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1D3052F94EE128F4"]
@@ -1023,8 +1023,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 7.5d
-			y: 3.5d
+			x: -9.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["1D3052F94EE128F4"]
@@ -1042,8 +1042,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 7.5d
-			y: 5.0d
+			x: -9.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -1064,8 +1064,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 9.0d
-			y: 2.0d
+			x: -7.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1086,8 +1086,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 9.0d
-			y: 3.5d
+			x: -7.5d
+			y: 6.5d
 		}
 		{
 			dependencies: [
@@ -1108,8 +1108,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 9.0d
-			y: 5.0d
+			x: -7.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["2A56E7B27F721214"]
@@ -1127,8 +1127,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.5d
-			y: 6.0d
+			x: -6.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["3FC2B057FAEC1613"]
@@ -1146,8 +1146,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.5d
-			y: 5.0d
+			x: -6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3747C55339B65700"]
@@ -1165,8 +1165,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.5d
-			y: 4.0d
+			x: -6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["2A56E7B27F721214"]
@@ -1184,8 +1184,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.5d
-			y: 3.0d
+			x: -6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3FC2B057FAEC1613"]
@@ -1203,8 +1203,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.5d
-			y: 2.0d
+			x: -6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["3747C55339B65700"]
@@ -1222,8 +1222,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.5d
-			y: 1.0d
+			x: -6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["63AA8FD624FC4651"]
@@ -1241,8 +1241,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 6.0d
+			x: -4.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["6647C182DFBF66A1"]
@@ -1260,8 +1260,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 5.0d
+			x: -4.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0DF40B5B33EC5143"]
@@ -1279,8 +1279,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 4.0d
+			x: -4.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["244187B5BC5EDDC8"]
@@ -1298,8 +1298,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 3.0d
+			x: -4.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3BE8E1348A8A47DD"]
@@ -1317,8 +1317,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 2.0d
+			x: -4.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["70AFEDB9EA84C58E"]
@@ -1336,8 +1336,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 1.0d
+			x: -4.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -1359,8 +1359,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.0d
-			y: 6.0d
+			x: -2.5d
+			y: 9.0d
 		}
 		{
 			dependencies: [
@@ -1382,8 +1382,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.0d
-			y: 1.0d
+			x: -2.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -1410,8 +1410,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.0d
-			y: 3.5d
+			x: -2.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["039F71CBD3C8F048"]
@@ -1429,8 +1429,8 @@
 				item: "gtceu:chalyblux_ingot"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 6.0d
+			x: 1.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["47986C646C594852"]
@@ -1448,8 +1448,8 @@
 				item: "gtceu:rhexis_ingot"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 2.0d
+			x: 1.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["35BC1333425C61AD"]
@@ -1466,8 +1466,8 @@
 				item: "gtceu:rhenium_dust"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 3.5d
+			x: -1.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["35BC1333425C61AD"]
@@ -1485,8 +1485,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.5d
-			y: 4.5d
+			x: -2.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["2F6115002741F26F"]
@@ -1496,8 +1496,8 @@
 				item: "gtceu:rhexis_dust"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 2.0d
+			x: -0.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["5080743917931298"]
@@ -1507,8 +1507,8 @@
 				item: "gtceu:chalyblux_dust"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 6.0d
+			x: -0.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["35BC1333425C61AD"]
@@ -1518,8 +1518,8 @@
 				item: "gtceu:tiny_echo_shard_dust"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 3.5d
+			x: -3.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["35BC1333425C61AD"]
@@ -1537,8 +1537,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.5d
-			y: 2.5d
+			x: -2.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["59015C06412CC8D3"]
@@ -1550,8 +1550,8 @@
 				item: "kubejs:voidic_reinforced_mesh"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.0d
+			x: -8.5d
+			y: 9.0d
 		}
 		{
 			dependencies: ["7E15AE62D31F95DD"]
@@ -1569,8 +1569,8 @@
 				item: "gtceu:xeproda_ingot"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 0.0d
+			x: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["2F6115002741F26F"]
@@ -1580,8 +1580,8 @@
 				item: "gtceu:xeproda_dust"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 0.0d
+			x: -0.5d
+			y: 3.0d
 		}
 	]
 	title: "Processing Lines (Chap 7.2)"

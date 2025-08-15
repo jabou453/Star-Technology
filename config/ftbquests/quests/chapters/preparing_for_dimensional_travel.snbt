@@ -651,7 +651,7 @@
 				"1102670352911334"
 				"6D573ACD05D0EF96"
 			]
-			description: ["Try a variety of singularities so that you don't drain yourself of one material."]
+			description: ["Infuse Plates with singularities for powerful Runes."]
 			id: "0508AE03C730BE6C"
 			rewards: [{
 				id: "2B9821F0ED86771C"
@@ -1195,7 +1195,7 @@
 		}
 		{
 			dependencies: ["52B553FDB34B1475"]
-			description: ["This multiblock performs two major functions: compressing materials into super dense infusions and colapsing gravi-stars into singularities."]
+			description: ["This multiblock performs two major functions: compressing materials into super dense infusions and collapsing gravi-stars into singularities."]
 			id: "630F50E03EC3D144"
 			rewards: [{
 				count: 2
