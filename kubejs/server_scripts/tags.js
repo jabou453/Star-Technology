@@ -35,6 +35,12 @@ ServerEvents.tags('item', event => {
     event.add('curios:head', 'kubejs:nether_talisman');
     event.add('curios:back', 'kubejs:end_talisman');
 
+    ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped', 'mangrove', 'cherry'].forEach(type => {
+	event.add('functionalstorage:drawers_size_1',`functionalstorage:${type}_1`)
+	event.add('functionalstorage:drawers_size_2',`functionalstorage:${type}_2`)
+	event.add('functionalstorage:drawers_size_4',`functionalstorage:${type}_4`)
+    });//for framed drawers
+
 });
 
 ServerEvents.tags('item', event=>{
