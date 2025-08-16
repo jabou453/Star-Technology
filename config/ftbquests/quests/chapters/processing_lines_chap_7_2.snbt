@@ -51,7 +51,7 @@
 			linked_quest: "3AE729D3F47E9A2B"
 			shape: "gear"
 			size: 1.5d
-			x: 18.0d
+			x: 16.5d
 			y: 3.0d
 		}
 		{
@@ -59,50 +59,44 @@
 			linked_quest: "1799430093ABCC64"
 			shape: "gear"
 			size: 1.5d
-			x: 18.0d
+			x: 16.5d
 			y: 8.0d
 		}
 		{
 			id: "0241D0DF0F320CDB"
 			linked_quest: "0D18B33E2C26A942"
-			x: 13.5d
+			x: 12.0d
 			y: 2.0d
 		}
 		{
 			id: "0D7818B3AC85F334"
 			linked_quest: "44B18C095DB4DF17"
-			x: 12.5d
+			x: 11.0d
 			y: 2.0d
 		}
 		{
 			id: "04110658590E1F01"
 			linked_quest: "5D3B5DEE3B2D30C0"
-			x: 11.5d
+			x: 10.0d
 			y: 2.0d
 		}
 		{
 			id: "082C386CBBA0DD86"
 			linked_quest: "1C5C32E5A47F2D2D"
-			x: 14.5d
+			x: 13.0d
 			y: 2.0d
 		}
 		{
 			id: "37CD8F0805CCF0EA"
 			linked_quest: "7E99889B3427A842"
-			x: 8.0d
+			x: 6.5d
 			y: 9.0d
 		}
 		{
 			id: "58A4AA0361BC635C"
 			linked_quest: "261B946701411D9C"
-			x: 6.5d
-			y: 3.5d
-		}
-		{
-			id: "0135704124ACDE21"
-			linked_quest: "56CA67C022703D4E"
-			x: 13.5d
-			y: 4.5d
+			x: 5.5d
+			y: 4.0d
 		}
 	]
 	quests: [
@@ -1647,7 +1641,7 @@
 				item: "kubejs:secreting_draconic_cells"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 3.5d
 			y: 8.0d
 		}
 		{
@@ -1658,7 +1652,7 @@
 				item: "gtceu:dragon_breath_bucket"
 				type: "item"
 			}]
-			x: 17.0d
+			x: 15.5d
 			y: 4.5d
 		}
 		{
@@ -1668,11 +1662,11 @@
 			]
 			id: "60C58CBCA20CC288"
 			tasks: [{
-				id: "16587B4CAD392A54"
-				title: "Pyrothyin"
-				type: "checkmark"
+				id: "1C39E7C5B1C72037"
+				item: "gtceu:pyrothyin_bucket"
+				type: "item"
 			}]
-			x: 14.5d
+			x: 13.0d
 			y: 8.0d
 		}
 		{
@@ -1682,11 +1676,11 @@
 			]
 			id: "369119C0801269FD"
 			tasks: [{
-				id: "3F49C2FEB4E16888"
-				title: "Dracotropin"
-				type: "checkmark"
+				id: "0F51D393266FEB87"
+				item: "gtceu:dracotropin_bucket"
+				type: "item"
 			}]
-			x: 13.5d
+			x: 12.0d
 			y: 8.0d
 		}
 		{
@@ -1696,11 +1690,11 @@
 			]
 			id: "7CBD3A984028C356"
 			tasks: [{
-				id: "51854CE526E5FEEE"
-				title: "Metavorexin"
-				type: "checkmark"
+				id: "338ADC23D425FEB4"
+				item: "gtceu:metavorexin_bucket"
+				type: "item"
 			}]
-			x: 12.5d
+			x: 11.0d
 			y: 8.0d
 		}
 		{
@@ -1710,11 +1704,11 @@
 			]
 			id: "4447ADD635826F25"
 			tasks: [{
-				id: "195287A5FD200998"
-				title: "Aethermetin"
-				type: "checkmark"
+				id: "37B8E770CAC11D88"
+				item: "gtceu:aethermetin_bucket"
+				type: "item"
 			}]
-			x: 11.5d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
@@ -1724,11 +1718,11 @@
 			]
 			id: "6C6379760CE78AC5"
 			tasks: [{
-				id: "064A3AFCCA493E1F"
-				title: "Hemavyrin"
-				type: "checkmark"
+				id: "2A33CBF2AF778CF8"
+				item: "gtceu:hemavyrin_bucket"
+				type: "item"
 			}]
-			x: 10.5d
+			x: 9.0d
 			y: 8.0d
 		}
 		{
@@ -1738,11 +1732,11 @@
 			]
 			id: "5BB6B21843A7107F"
 			tasks: [{
-				id: "611254FCAA4D046E"
-				title: "Ignisferin"
-				type: "checkmark"
+				id: "5704C68E1E669408"
+				item: "gtceu:ignisferin_bucket"
+				type: "item"
 			}]
-			x: 14.5d
+			x: 13.0d
 			y: 3.0d
 		}
 		{
@@ -1752,11 +1746,11 @@
 			]
 			id: "798E1B26BA950E09"
 			tasks: [{
-				id: "02DD059649902B21"
-				title: "Cryokinase"
-				type: "checkmark"
+				id: "12F93713F9F909D2"
+				item: "gtceu:cryokinase_bucket"
+				type: "item"
 			}]
-			x: 13.5d
+			x: 12.0d
 			y: 3.0d
 		}
 		{
@@ -1766,26 +1760,26 @@
 			]
 			id: "30F23A53A3BD37A1"
 			tasks: [{
-				id: "385C03D9FA904ADE"
-				title: "Stormcallin"
-				type: "checkmark"
+				id: "348E9981304C1E5E"
+				item: "gtceu:stormcallin_bucket"
+				type: "item"
 			}]
-			x: 12.5d
+			x: 11.0d
 			y: 3.0d
 		}
 		{
 			dependencies: [
 				"239A0034C8425661"
 				"30241EA7B41A3212"
-				"34C3BC38857FC018"
+				"74A0BF2EA205B23C"
 			]
 			id: "50B36A9870682FDB"
 			tasks: [{
-				id: "4E8A404C25D5061D"
-				title: "Voidrenin"
-				type: "checkmark"
+				id: "7F10DB93F1329685"
+				item: "gtceu:voidrenin_bucket"
+				type: "item"
 			}]
-			x: 10.5d
+			x: 9.0d
 			y: 3.0d
 		}
 		{
@@ -1795,29 +1789,12 @@
 			]
 			id: "42BF157CA44898DE"
 			tasks: [{
-				id: "50142F28DCC649F1"
-				title: "Terrathroxin"
-				type: "checkmark"
+				id: "689EE59DB05F6577"
+				item: "gtceu:terrathroxin_bucket"
+				type: "item"
 			}]
-			x: 11.5d
+			x: 10.0d
 			y: 3.0d
-		}
-		{
-			id: "7876E6FA46E0B52B"
-			tasks: [
-				{
-					id: "3ADFC777EA4A3D8B"
-					item: "gtceu:injection_mixer"
-					type: "item"
-				}
-				{
-					id: "53A0737ADC3D854A"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 16.0d
-			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -1829,11 +1806,11 @@
 			]
 			id: "54A48D25CC69507E"
 			tasks: [{
-				id: "2BE349DF5976C6E6"
-				title: "Breath-Hormone Complex"
-				type: "checkmark"
+				id: "4257D4409A691138"
+				item: "gtceu:breath_hormone_complex_bucket"
+				type: "item"
 			}]
-			x: 16.0d
+			x: 14.5d
 			y: 3.0d
 		}
 		{
@@ -1843,29 +1820,12 @@
 			]
 			id: "0E2F6184D7767AFD"
 			tasks: [{
-				id: "2EDDFD7FA9EB2ACC"
-				title: "Abyssal Nutrient Blend"
-				type: "checkmark"
+				id: "7D4780468466B409"
+				item: "gtceu:abyssal_nutrient_blend_bucket"
+				type: "item"
 			}]
-			x: 9.5d
+			x: 8.0d
 			y: 6.5d
-		}
-		{
-			id: "2C61FBFFD3E7AD08"
-			tasks: [
-				{
-					id: "7C5D4181F8FAB563"
-					item: "gtceu:uv_autoclave"
-					type: "item"
-				}
-				{
-					id: "00EC9B6808D82579"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 12.5d
-			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1875,11 +1835,11 @@
 			]
 			id: "68FD71F1A73B47A1"
 			tasks: [{
-				id: "6EE0EAA2F70E09C4"
-				title: "Precursor Serum"
-				type: "checkmark"
+				id: "2AF3BF188175E093"
+				item: "gtceu:precursor_serum_bucket"
+				type: "item"
 			}]
-			x: 8.0d
+			x: 6.5d
 			y: 5.0d
 		}
 		{
@@ -1889,11 +1849,11 @@
 			]
 			id: "7DB00D797172F8F8"
 			tasks: [{
-				id: "07FA18AE63CD498F"
-				title: "Drac-Endocritic Medium"
-				type: "checkmark"
+				id: "1A54006686D3FADC"
+				item: "gtceu:drac_endrocritic_medium_bucket"
+				type: "item"
 			}]
-			x: 8.0d
+			x: 6.5d
 			y: 8.0d
 		}
 		{
@@ -1904,7 +1864,7 @@
 				item: "gtceu:small_aurourium_dust"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 5.0d
 			y: 6.5d
 		}
 		{
@@ -1914,106 +1874,22 @@
 			]
 			id: "6CC2A99E0E26C42B"
 			tasks: [{
-				id: "657778DDCA992E7D"
-				title: "DracAurouric-Endocrinal Medium"
-				type: "checkmark"
-			}]
-			x: 8.0d
-			y: 6.5d
-		}
-		{
-			id: "69694F1FBC33474D"
-			tasks: [
-				{
-					id: "267BCA96AB2066FE"
-					item: "gtceu:injection_mixer"
-					type: "item"
-				}
-				{
-					id: "247A48DD889B149A"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 8.0d
-			y: 8.5d
-		}
-		{
-			id: "33EEC1D045B2C709"
-			tasks: [
-				{
-					id: "20ADDB63B1BA87E8"
-					item: "gtceu:uev_chemical_bath"
-					type: "item"
-				}
-				{
-					id: "54FA093592649ED8"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 7.5d
-			y: 6.5d
-		}
-		{
-			id: "0CA1930C6751955D"
-			tasks: [
-				{
-					id: "2349003E346A84D9"
-					item: "gtceu:large_chemical_reactor"
-					type: "item"
-				}
-				{
-					id: "522A254BD6530A7F"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 9.5d
-			y: 7.0d
-		}
-		{
-			dependencies: [
-				"0E2F6184D7767AFD"
-				"3901CA789DD03F17"
-			]
-			hide_dependency_lines: true
-			id: "5834FD960BAB90F9"
-			tasks: [{
-				id: "220CC0DA9569F22D"
-				item: "kubejs:draconic_stem_cells"
+				id: "41110FDB77034BFA"
+				item: "gtceu:drac_aurouric_endrocrinal_medium_bucket"
 				type: "item"
 			}]
-			title: "Easier Stem Cells"
-			x: 8.5d
-			y: 2.0d
-		}
-		{
-			id: "0EDD92C601895EE2"
-			tasks: [
-				{
-					id: "6AD2EA904FF54C5F"
-					item: "gtceu:uhv_extractor"
-					type: "item"
-				}
-				{
-					id: "032388F19E49134A"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 6.0d
-			y: 8.0d
+			x: 6.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["09996867BC3E5819"]
 			id: "221A840C4A071343"
 			tasks: [{
-				id: "6E91981E0263A130"
-				title: "Draconic Hormone Residue"
-				type: "checkmark"
+				id: "73BDF2BA3EE0339D"
+				item: "gtceu:draconic_hormone_residue_bucket"
+				type: "item"
 			}]
-			x: 6.5d
+			x: 5.0d
 			y: 8.0d
 		}
 		{
@@ -2024,7 +1900,7 @@
 				item: "gtceu:tiny_mythril_dust"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.5d
 			y: 3.5d
 		}
 		{
@@ -2035,28 +1911,8 @@
 				item: "gtceu:tiny_adamantine_dust"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 5.0d
 			y: 5.0d
-		}
-		{
-			id: "54C5FD1221A55AB9"
-			tasks: [{
-				id: "0B66414BDEA9A36B"
-				item: "gtceu:uiv_mixer"
-				type: "item"
-			}]
-			x: 7.5d
-			y: 5.5d
-		}
-		{
-			id: "3901CA789DD03F17"
-			tasks: [{
-				id: "78608518FE093236"
-				item: "gtceu:dragon_breath_bucket"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -2065,11 +1921,11 @@
 			]
 			id: "30241EA7B41A3212"
 			tasks: [{
-				id: "062DA2231839823C"
-				title: "Drac-Peptide Amino Chain"
-				type: "checkmark"
+				id: "0457B7D0A08A7328"
+				item: "kubejs:draco_peptide_amino_chain"
+				type: "item"
 			}]
-			x: 12.5d
+			x: 11.0d
 			y: 4.5d
 		}
 		{
@@ -2079,7 +1935,7 @@
 				item: "gtceu:tiny_hematite_dust"
 				type: "item"
 			}]
-			x: 10.5d
+			x: 9.0d
 			y: 9.0d
 		}
 		{
@@ -2090,7 +1946,7 @@
 				item: "gtceu:tiny_glowstone_dust"
 				type: "item"
 			}]
-			x: 11.5d
+			x: 10.0d
 			y: 9.0d
 		}
 		{
@@ -2103,33 +1959,33 @@
 			]
 			id: "25436E09A8F9E9C8"
 			tasks: [{
-				id: "5BABC9BF0D2A214A"
-				title: "Growth-Hormone Complex"
-				type: "checkmark"
+				id: "05103572A0A357C5"
+				item: "gtceu:growth_hormone_complex_bucket"
+				type: "item"
 			}]
-			x: 16.0d
+			x: 14.5d
 			y: 8.0d
 		}
 		{
 			dependencies: ["37F9C85CFCFFDA5F"]
 			id: "7D92FDFAE5CBA103"
 			tasks: [{
-				id: "27D11FBF28F9C9DF"
-				item: "gtceu:tiny_draconyallium_dust"
+				id: "073270F6189D1018"
+				item: "gtceu:tiny_enriched_naquadah_dust"
 				type: "item"
 			}]
-			x: 13.5d
+			x: 12.0d
 			y: 9.0d
 		}
 		{
-			dependencies: ["24288AB05FC9DB33"]
+			dependencies: ["465B8B6CC911EC13"]
 			id: "349B743B5F3792F1"
 			tasks: [{
-				id: "4BCA8F3D80FD93DF"
-				item: "gtceu:tiny_atomic_nether_sludge_dust"
+				id: "3581DA3506B99F0F"
+				item: "gtceu:tiny_activated_nether_dust"
 				type: "item"
 			}]
-			x: 14.5d
+			x: 13.0d
 			y: 9.0d
 		}
 		{
@@ -2141,57 +1997,29 @@
 				item: "gtceu:tiny_rhenium_dust"
 				type: "item"
 			}]
-			x: 12.5d
+			x: 11.0d
 			y: 9.0d
-		}
-		{
-			id: "7219217596DAD709"
-			tasks: [
-				{
-					id: "51D8BA2CBBAB0A59"
-					item: "gtceu:uv_autoclave"
-					type: "item"
-				}
-				{
-					id: "3AB740B73D6EFC1B"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 12.5d
-			y: 9.5d
-		}
-		{
-			dependencies: ["2E34F23A42004285"]
-			id: "34C3BC38857FC018"
-			tasks: [{
-				id: "211FBC5D97DFA2BC"
-				item: "gtceu:voidic_plasma_bucket"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 2.0d
 		}
 		{
 			dependencies: ["0E2F6184D7767AFD"]
 			id: "68DA57B7791A76E1"
 			tasks: [{
-				id: "02484E255CE3CEF5"
-				title: "Condensed Abyssal Nutrient Blend"
-				type: "checkmark"
+				id: "2AE72D581378F499"
+				item: "gtceu:condensed_abyssal_nutrient_blend_bucket"
+				type: "item"
 			}]
-			x: 9.5d
+			x: 8.0d
 			y: 4.5d
 		}
 		{
 			dependencies: ["68DA57B7791A76E1"]
 			id: "3F976C15932579FD"
 			tasks: [{
-				id: "0834AA7A24121341"
-				title: "Amino Primed Medium"
-				type: "checkmark"
+				id: "79A205816BD92E26"
+				item: "gtceu:amino_primed_medium_bucket"
+				type: "item"
 			}]
-			x: 11.0d
+			x: 9.5d
 			y: 4.5d
 		}
 		{
@@ -2201,97 +2029,12 @@
 			]
 			id: "3B53D64D9EA506E1"
 			tasks: [{
-				id: "492B0D4D92CFF7CF"
-				title: "Drac-Peptide Amino Residue"
-				type: "checkmark"
+				id: "487D1868EFB3E138"
+				item: "gtceu:drac_peptide_amino_residue_bucket"
+				type: "item"
 			}]
-			x: 12.5d
-			y: 6.5d
-		}
-		{
-			id: "1BE427BA52F89CFD"
-			tasks: [
-				{
-					id: "22F41F8E8C8C4EFD"
-					item: "gtceu:large_chemical_reactor"
-					type: "item"
-				}
-				{
-					id: "525C6BDC994C450D"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 13.0d
-			y: 6.5d
-		}
-		{
-			id: "1C5EBBB00A4D4044"
-			tasks: [
-				{
-					id: "06F7280A902C8CC0"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-				{
-					id: "5657E5811B8D8583"
-					item: "gtceu:zpm_distillery"
-					type: "item"
-				}
-			]
-			x: 9.5d
-			y: 4.0d
-		}
-		{
-			id: "000539BFBE05D312"
-			tasks: [
-				{
-					id: "4A78AA3215E5059F"
-					item: "gtceu:uv_autoclave"
-					type: "item"
-				}
-				{
-					id: "0DB2ABD13D0BD06C"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
 			x: 11.0d
-			y: 5.0d
-		}
-		{
-			id: "3B92857328CA5EAC"
-			tasks: [
-				{
-					id: "4C87A7226E392321"
-					item: "gtceu:injection_mixer"
-					type: "item"
-				}
-				{
-					id: "4C0249E0FD1D5692"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 16.0d
-			y: 8.5d
-		}
-		{
-			id: "197488D51C290E72"
-			tasks: [
-				{
-					id: "1877842C99357121"
-					item: "gtceu:uhv_mixer"
-					type: "item"
-				}
-				{
-					id: "01F804E079B326EE"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 12.5d
-			y: 5.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["01AF9486EA6DA792"]
@@ -2313,59 +2056,37 @@
 				}
 				type: "item"
 			}]
-			x: 17.0d
+			x: 15.5d
 			y: 6.5d
 		}
 		{
-			id: "31DC9E29C90ACB30"
+			dependencies: ["2F87FC1D5BB43220"]
+			description: ["Liquid Echoes from sources unknown."]
+			icon: {
+				Count: 1
+				id: "gtceu:echo_r_bucket"
+				tag: { }
+			}
+			id: "74A0BF2EA205B23C"
+			rewards: [{
+				id: "2516C54EF2E15FA4"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
-					id: "05FE559153BB2793"
-					item: "gtceu:large_chemical_reactor"
-					type: "item"
+					id: "5A15D678DCF7BD57"
+					type: "checkmark"
 				}
 				{
-					id: "6DD7B8246AA2D45B"
-					item: "gtceu:filter_casing"
+					id: "764B69A72A6DC1A7"
+					item: "gtceu:echo_r_bucket"
 					type: "item"
 				}
 			]
-			x: 8.5d
-			y: 1.5d
-		}
-		{
-			id: "78DCF4910D6FB9AA"
-			tasks: [
-				{
-					id: "532B0AF4FF8D0223"
-					item: "gtceu:uiv_mixer"
-					type: "item"
-				}
-				{
-					id: "5472C991F37E4D24"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 18.0d
-			y: 3.5d
-		}
-		{
-			id: "434A8F72C0388FD3"
-			tasks: [
-				{
-					id: "43B93A7953C7B189"
-					item: "gtceu:uiv_mixer"
-					type: "item"
-				}
-				{
-					id: "0DCB5A8213101AB6"
-					item: "gtceu:filter_casing"
-					type: "item"
-				}
-			]
-			x: 18.0d
-			y: 7.5d
+			title: "Echo Fluid"
+			x: 9.0d
+			y: 2.0d
 		}
 	]
 	title: "Processing Lines (Chap 7.2)"

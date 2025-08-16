@@ -1502,8 +1502,16 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["68970C6696FA90E6"]
-			description: ["You have been granted protection in this place allowing you to forgo armor needs"]
+			dependencies: [
+				"68970C6696FA90E6"
+				"5A3365B01BF98E8E"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"You have been granted protection in this place allowing you to forgo armor needs."
+				""
+				"Alternatively you can craft this after aquiring the appropriate materials."
+			]
 			id: "7C65EDBD752F898D"
 			tasks: [{
 				id: "044CF4AB2D37AD68"
@@ -1514,8 +1522,16 @@
 			y: -7.0d
 		}
 		{
-			dependencies: ["64780055536CEEF3"]
-			description: ["You have been granted protection in this place allowing you to forgo armor needs"]
+			dependencies: [
+				"64780055536CEEF3"
+				"6C03B25DB18C6546"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"You have been granted protection in this place allowing you to forgo armor needs."
+				""
+				"Alternatively you can craft this after aquiring the appropriate means."
+			]
 			id: "4397DEEDB7C52BAC"
 			tasks: [{
 				id: "605DEE85525818AA"
@@ -1756,9 +1772,9 @@
 			dependencies: ["38C2E3061C764F05"]
 			id: "2F62965D05463E44"
 			tasks: [{
-				id: "54498D9DE0F0A01A"
-				title: "Maxwellium"
-				type: "checkmark"
+				id: "7FB456829A80265B"
+				item: "gtceu:maxwellium_bucket"
+				type: "item"
 			}]
 			x: 10.0d
 			y: -6.0d

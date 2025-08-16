@@ -296,13 +296,31 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM) // Moved to Abyssal
         .EUt(GTValues.VA[GTValues.UHV]);
 
-    event.recipes.gtceu.autoclave(id('shard_decomp'))
+    event.recipes.gtceu.autoclave(id('embryo_decomp'))
         .itemInputs('kubejs:draconic_embryo')
         .inputFluids('gtceu:nether_star_concentrate 320')
         .itemOutputs('16x kubejs:secreting_draconic_cells','4x kubejs:draconic_stem_cells')
         .duration(600)
         .cleanroom(CleanroomType.STERILE_CLEANROOM) // Moved to Abyssal
         .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.chemical_reactor(id('better_draco_stem_cells'))
+        .itemInputs('gtceu:draconyallium_dust')
+        .inputFluids('gtceu:abyssal_nutrient_blend 500','gtceu:draconic_enrichment_serum 500')
+        .itemOutputs('48x kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 400')
+        .duration(300)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM) // Moved to Abyssal
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('better_draco_stem_cells'))
+        .itemInputs('gtceu:draconyallium_dust')
+        .inputFluids('gtceu:abyssal_nutrient_blend 500','gtceu:draconic_enrichment_serum 500')
+        .itemOutputs('48x kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 400')
+        .duration(300)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM) // Moved to Abyssal
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
     // Lepton TlSb
     event.recipes.gtceu.mixer(id('thallium_antimonide'))

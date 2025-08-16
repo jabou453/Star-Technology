@@ -41,6 +41,10 @@ StartupEvents.registry('item', event => {
         .displayName('§dDragon Egg§r Shard')
         .texture('kubejs:item/draconic/dragon_egg_shard');
 
+    event.create('draco_peptide_amino_chain')
+        .displayName('Drac-Peptide Amino Chain')
+        .texture('kubejs:item/draconic/draco_peptide_amino_chain');
+
     // Gravi star continuations
     event.create('helish_star')
         .displayName('Helish Star')

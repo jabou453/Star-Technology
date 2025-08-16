@@ -194,6 +194,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('aurourium').setFormula('*A*');
     GTMaterials.get('starium_alloy').setFormula('*✧*4(Ke6Nq2C)2El2');
     GTMaterials.get('nyanium').setFormula('*A*7(URhNq2)4(Mg3N2)*Nr*2');
+    GTMaterials.get('maxwellium').setFormula('∅(*A*7(URhNq2)4(Mg3N2)*Nr*2)∅')
     GTMaterials.get('low_entropy_voidic_excression').setFormula('∅-');
     GTMaterials.get('moderate_entropy_voidic_excression').setFormula('[∅]');
     GTMaterials.get('high_entropy_voidic_excression').setFormula('∅+');
@@ -453,7 +454,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).ingot().fluid().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
 
-    const quCompInfusions = (name, color) => {
+    const noCompFluid = (name, color) => {
         event.create(name).fluid().color(color);
     }
 
@@ -1311,11 +1312,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid('nether_tempered_basalz', ['1x mystery'], 0x9f2414, [no_decomp]);
 
     // Quantrum Comporessor Infusions
-    quCompInfusions('intangibility_infusion', 0x00AAAA);
+    noCompFluid('intangibility_infusion', 0x00AAAA);
 
-    quCompInfusions('paradoxicity_infusion', 0xAA00AA);
+    noCompFluid('paradoxicity_infusion', 0xAA00AA);
 
-    quCompInfusions('causality_infusion', 0xFFAA00);
+    noCompFluid('causality_infusion', 0xFFAA00);
 
     // Runic Convergence Infusion
     /*
@@ -1528,7 +1529,50 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, no_decomp, no_abs_recipe)
         .rotorStats(72000, 108, 2, 96000); //11.25x (10x * 12.5%) power output of Runicalium but only .15x the efficiency (10% * 1.5x), nets 1.6875x stronger than runicallium and does "blitz" outputs
 
+    //DES + PBD Line
+    noCompFluid('draconic_hormone_residue',0x6C4D6E);
+
+    noCompFluid('drac_endrocritic_medium',0x75577A);
+
+    noCompFluid('drac_aurouric_endrocrinal_medium',0x6678A6);
+
+    noCompFluid('precursor_serum',0x8C6FA3);
+
+    noCompFluid('abyssal_nutrient_blend',0x4A3B33);
+
+    noCompFluid('condensed_abyssal_nutrient_blend',0x5C4038);
+
+    noCompFluid('amino_primed_medium',0x705A64);
+
+    noCompFluid('drac_peptide_amino_residue',0x7A5C82);
+
+    noCompFluid('voidrenin',0x1A1A1A);
+
+    noCompFluid('terrathroxin',0x3F5A3F);
+
+    noCompFluid('stormcallin',0x4A6C82);
+
+    noCompFluid('cryokinase',0x7BA6B3);
+
+    noCompFluid('ignisferin',0xA6533A);
+
+    noCompFluid('breath_hormone_complex',0x8C7080);
+
+    noCompFluid('hemavyrin',0x6B2A2A);
+
+    noCompFluid('aethermetin',0x7A6F9E);
+
+    noCompFluid('metavorexin',0x5C3A73);
+
+    noCompFluid('dracotropin',0x4D6A59);
+
+    noCompFluid('pyrothyin',0x8C4D3A);
+
+    noCompFluid('growth_hormone_complex',0x756B7D);
+
     //UXV Materials
+    compLiquid('maxwellium','1x mystery',0x37374C,[no_decomp]);
+
     compDust('thallium_antimonide',['1x thallium','1x antimony'],0xADC5E3,[])
     
     compLiquidStill('lepton_dense_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);

@@ -528,7 +528,7 @@ ServerEvents.recipes(event => {
             let S = 'placeablemaxwell:vasilisa'
         event.recipes.gtceu.gate_assembly(id(`maxwell`))
             .itemInputs(S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M,S,M,V,S,V,M)
-            .inputFluids('gtceu:nyanium 144000', `gtceu:black_dye 2500000`, `gtceu:abyssal_alloy 72000`)
+            .inputFluids('gtceu:nyanium 144000', `gtceu:black_dye 2500000`, `gtceu:maxwellium 72000`)
             .itemOutputs(`placeablemaxwell:maxwell`)
             .duration(64000)
             .EUt(GTValues.VA[GTValues.UXV]);

@@ -87,8 +87,8 @@ ServerEvents.recipes(event => {
     'gtceu:naquadria_foil',320,GTValues.VHA[GTValues.UV]);
 
     Infusion('draco_brain_matter_cells','4x kubejs:draconic_brain_matter_cells','thermal:ender 10000','4x kubejs:draconic_stem_cells',
-    'gtceu:luv_field_generator','gtceu:fine_borosilicate_glass_wire','gtceu:wetware_circuit_board','gtceu:wetware_circuit_board',
-    'gtceu:fine_borosilicate_glass_wire','gtceu:luv_field_generator',480,GTValues.VHA[GTValues.UHV]);
+    'gtceu:luv_field_generator','16x gtceu:fine_borosilicate_glass_wire','gtceu:wetware_circuit_board','gtceu:wetware_circuit_board',
+    '16x gtceu:fine_borosilicate_glass_wire','gtceu:luv_field_generator',480,GTValues.VHA[GTValues.UHV]);
 
     Infusion('draco_scale_cells','8x kubejs:draconic_scale_cells','gtceu:neutronium 1000','8x kubejs:draconic_stem_cells','gtceu:dense_naquadah_alloy_plate',
     'gtceu:dense_tungsten_steel_plate','gtceu:dense_ancient_netherite_plate','gtceu:dense_darmstadtium_plate','gtceu:dense_obsidian_plate',
