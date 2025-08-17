@@ -126,6 +126,8 @@ ServerEvents.recipes(event => {
 		B: 'minecraft:bricks',
 		T: 'thermal:redstone_servo'
 	}).id('start:mechanical_crafting/latex_plantation');
+	
+	event.recipes.create.deploying('4x kubejs:packed_mud_ball', ['minecraft:packed_mud', 'minecraft:bowl']).keepHeldItem()
 
 	event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('start:smelting/slime_ball');
 
