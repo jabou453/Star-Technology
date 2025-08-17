@@ -32,10 +32,10 @@ if (global.packmode !== 'hard'){
     .chancedOutput('kubejs:diamond_geode', 3500, 750)
     .chancedOutput('kubejs:emerald_geode', 3500, 750)
     .chancedOutput('kubejs:ruby_geode', 4500, 750)
+    .chancedOutput('kubejs:realgar_geode', 4000, 750)
     .chancedOutput('kubejs:green_sapphire_geode', 5000, 500)
     .chancedOutput('kubejs:sapphire_geode', 5000, 500)
     .chancedOutput('kubejs:quartzite_geode', 3500, 500)
-    .chancedOutput('kubejs:certus_quartz_geode', 4500, 750)
     .duration(1200)
     .circuit(0)
     .EUt(GTValues.VHA[GTValues.LV]);
@@ -48,6 +48,7 @@ if (global.packmode !== 'hard'){
     .chancedOutput('kubejs:apatite_geode', 4500, 1000)
     .chancedOutput('kubejs:spessartine_geode', 3500, 500)
     .chancedOutput('kubejs:monazite_geode', 3750, 750)
+    .chancedOutput('kubejs:certus_quartz_geode', 4500, 750)
     .duration(960)
     .circuit(0)
     .EUt(GTValues.VHA[GTValues.MV]);
@@ -72,17 +73,17 @@ if (global.packmode !== 'hard'){
     .circuit(2)
     .EUt(GTValues.VHA[GTValues.LV]);
 
-  event.recipes.gtceu.rock_filtrator(id('lv_geodes_quartz'))
+  event.recipes.gtceu.rock_filtrator(id('lv_geodes_rough'))
     .itemInputs('32x minecraft:gravel')
     .inputFluids('gtceu:distilled_water 1000')
     .chancedOutput('kubejs:quartzite_geode', 3500, 500)
-    .chancedOutput('kubejs:certus_quartz_geode', 4500, 750)
+    .chancedOutput('kubejs:realgar_geode', 4000, 750)
     .duration(800)
     .circuit(3)
     .EUt(GTValues.VHA[GTValues.LV]);
 
   //Specialist Recipes MV
-  event.recipes.gtceu.rock_filtrator(id('mv_geodes_gem'))
+  event.recipes.gtceu.rock_filtrator(id('mv_geodes_1'))
     .itemInputs('32x minecraft:sand')
     .inputFluids('gtceu:distilled_water 1000')
     .chancedOutput('kubejs:apatite_geode', 4500, 1000)
@@ -92,21 +93,20 @@ if (global.packmode !== 'hard'){
     .circuit(1)
     .EUt(GTValues.VHA[GTValues.MV]);
 
-  event.recipes.gtceu.rock_filtrator(id('mv_geodes_topaz'))
+  event.recipes.gtceu.rock_filtrator(id('mv_geodes_2'))
     .itemInputs('32x minecraft:sand')
     .inputFluids('gtceu:distilled_water 1000')
     .chancedOutput('kubejs:blue_topaz_geode', 3500, 750)
     .chancedOutput('kubejs:topaz_geode', 3500, 750)
+    .chancedOutput('kubejs:certus_quartz_geode', 4500, 750)
     .duration(640)
     .circuit(2)
     .EUt(GTValues.VHA[GTValues.MV]);
 
   //Geode Harvesting
-  const geodeLV = ['diamond', 'emerald', 'ruby', 'green_sapphire', 
-    'sapphire', 'quartzite', 'certus_quartz'];
-  const geodeMV = ['apatite', 'topaz', 'blue_topaz', 'spessartine', 'monazite'];
+  const geode = ['diamond', 'emerald', 'ruby', 'green_sapphire', 'realgar', 'sapphire', 'quartzite', 'certus_quartz', 'apatite', 'topaz', 'blue_topaz', 'spessartine', 'monazite'];
   
-  geodeLV.forEach(type => {
+  geode.forEach(type => {
     event.recipes.gtceu.cutter(id(`${type}_geode`))
       .itemInputs(`kubejs:${type}_geode`)
       .itemOutputs(`gtceu:raw_${type}`, 'gtceu:stone_dust')
@@ -123,23 +123,6 @@ if (global.packmode !== 'hard'){
       .EUt(GTValues.VHA[GTValues.LV]);
   });
 
-  geodeMV.forEach(type => {
-    event.recipes.gtceu.cutter(id(`${type}_geode`))
-      .itemInputs(`kubejs:${type}_geode`)
-      .itemOutputs(`gtceu:raw_${type}`, 'gtceu:stone_dust')
-      .duration(200)
-      .EUt(GTValues.VA[GTValues.MV]);
-
-    event.recipes.gtceu.macerator(id(`${type}_geode`))
-      .itemInputs(`kubejs:${type}_geode`)
-      .itemOutputs(`gtceu:crushed_${type}_ore`)
-      .chancedOutput(`gtceu:crushed_${type}_ore`, 5000, 250)
-      .chancedOutput(`gtceu:crushed_${type}_ore`, 2500, 125)
-      .chancedOutput(`gtceu:impure_${type}_dust`, 2500, 50)
-      .duration(200)
-      .EUt(GTValues.VHA[GTValues.MV]);
-  });
-  
   // Scrapped
   // event.recipes.gtceu.rock_sifter(id('geode_harvesting'))
   //   .itemInputs('64x minecraft:gravel')

@@ -155,27 +155,6 @@ ServerEvents.recipes(event => {
         .duration(462)
         .EUt(GTValues.VA[GTValues.UHV]);
 
-    event.recipes.gtceu.assembler(id('zalloy_coil'))
-        .itemInputs('8x gtceu:zalloy_double_wire', '8x gtceu:neutronium_foil')
-        .inputFluids('gtceu:tritanium 144')
-        .itemOutputs('kubejs:zalloy_coil_block')
-        .duration(1000)
-        .EUt(GTValues.VHA[GTValues.UHV]);
-
-    event.recipes.gtceu.assembler(id('magmada_alloy_coil'))
-        .itemInputs('8x gtceu:magmada_alloy_double_wire', '8x gtceu:pure_netherite_foil')
-        .inputFluids('gtceu:adamantine 144')
-        .itemOutputs('kubejs:magmada_alloy_coil_block')
-        .duration(1100)
-        .EUt(GTValues.VHA[GTValues.UEV]);
-
-    event.recipes.gtceu.assembler(id('abyssal_coil'))
-        .itemInputs('8x gtceu:abyssal_alloy_double_wire', '8x gtceu:nyanium_foil')
-        .inputFluids('gtceu:void 144')
-        .itemOutputs('kubejs:abyssal_alloy_coil_block')
-        .duration(1200)
-        .EUt(GTValues.VHA[GTValues.UIV]);
-
     event.recipes.gtceu.assembler(id('extreme_temperature_smelting_casing'))
         .itemInputs('4x gtceu:calamatium_plate', '2x gtceu:astatium_bioselex_carbonite_plate', 'gtceu:enriched_estalt_frame')
         .itemOutputs('2x kubejs:extreme_temperature_smelting_casing')
@@ -295,37 +274,5 @@ ServerEvents.recipes(event => {
         .duration(2400)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UIV]);
-
-    //UHV,UEV,UIV Rotor Holder
-
-    event.shaped(Item.of('gtceu:uhv_rotor_holder'), [
-            'NZN',
-            'ZCZ',
-            'NZN'
-        ], {
-            N: 'gtceu:small_neutronium_gear',
-            Z: 'gtceu:zalloy_gear',
-            C: 'gtceu:uhv_machine_hull'
-    }).id('start:shaped/uhv_rotor_holder');
-
-    event.shaped(Item.of('gtceu:uev_rotor_holder'), [
-        'NZN',
-        'ZCZ',
-        'NZN'
-    ], {
-        N: 'gtceu:small_mythrolic_alloy_gear',
-        Z: 'gtceu:starium_alloy_gear',
-        C: 'gtceu:uev_machine_hull'
-    }).id('start:shaped/uev_rotor_holder');
-
-    event.shaped(Item.of('gtceu:uiv_rotor_holder'), [
-        'NZN',
-        'ZCZ',
-        'NZN'
-    ], {
-        N: 'gtceu:small_chaotixic_alloy_gear',
-        Z: 'gtceu:ohmderblux_alloy_gear',
-        C: 'gtceu:uiv_machine_hull'
-    }).id('start:shaped/uiv_rotor_holder');
 
 });

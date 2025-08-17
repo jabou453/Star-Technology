@@ -2,7 +2,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
     event.create('reinforced_blast_furnace')
         .category('primitive')
-        .setMaxIOSize(3, 2, 0, 0)
+        .setMaxIOSize(3, 3, 0, 0)
 		.setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.FURNACE);
 

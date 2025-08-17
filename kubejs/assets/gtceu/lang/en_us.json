@@ -205,12 +205,6 @@
     "block.gtceu.large_rock_crusher.tooltip.1": "Has §6Perfect Overclock",
     "block.gtceu.large_rock_crusher.tooltip.2": "Can only have §bone§r Energy Hatch",
     
-    "block.gtceu.high_pressure_steam_hammer.tooltip.0": "§7A larger variant of the forge hammer capable of running multiple recipes at once.",
-
-    "block.gtceu.kiln.tooltip.0": "§7A stronger, beefier version of the campfire for your manufacturing needs.",
-
-    "block.gtceu.steam_kiln.tooltip.0": "§7A kiln with busses and steam parallels.",
-
     "material.gtceu.soul_infused": "Soul Infused",
     "material.gtceu.signalum": "Signalum",
     "material.gtceu.lumium": "Lumium",
@@ -849,6 +843,9 @@
     "material.gtceu.chaotixic_alloy": "Chaotixic Alloy",
     "material.gtceu.ohmderblux_alloy": "Ohmderblux Alloy",
     "material.gtceu.lepton_resonant_thallium_antimonide": "Lepton-Resonant Thallium Antimonide",
+    "material.gtceu.draco_abyssal": "Primordial Shadowyrm",
+    "material.gtceu.draconyallium": "Draconyallium",
+    "material.gtceu.draconic_enrichment_serum": "Draconic Enrichment Serum",
 
     "material.gtceu.voidic": "Voidic",
     "material.gtceu.preon": "Preon",
@@ -894,14 +891,18 @@
     "block.gtceu.mega_abs.tooltip.7": "§8-----------------------------------",
     "block.gtceu.mega_abs.tooltip.8": "Can use §3Parallel§r hatches",
 
-
     "block.gtceu.super_compact_heat_chamber": "Super-Compact Heat Chamber",
     "block.gtceu.super_compact_heat_chamber.tooltip.0": "§7A compacted and upgraded heat chamber capable of purifying materials and catalysing reactions at an enhanced rate through its ultra-dense thermal reactor design.",
-    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches and has §6Perfect Overclock",
+    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches, has §6Perfect Overclock§r, and has §cSubtick Parallels§r",
 
     "block.gtceu.kiln": "Kiln",
     "gtceu.kiln": "Kiln",
+    "block.gtceu.kiln.tooltip.0": "§7A stronger, beefier version of the campfire for your manufacturing needs.",
+    
+    "block.gtceu.steam_kiln": "Steam Kiln",
     "gtceu.steam_kiln": "Steam Kiln",
+    "block.gtceu.steam_kiln.tooltip.0": "§7A Kiln with busses and steam parallels.",
+
     "block.gtceu.rugged_alloyer": "Rugged Alloyer",
     "gtceu.rugged_alloyer": "Rugged Alloyer",
     "material.gtceu.pig_iron": "Pig Iron",
@@ -912,29 +913,67 @@
     "material.gtceu.crude_cast_iron": "Crude Cast Iron",
     "material.gtceu.crude_wrought_iron": "Crude Wrought Iron",
     "material.gtceu.cast_iron": "Cast Iron",
+
     "block.gtceu.bessemer_forgery": "Bessemer Forgery",
     "gtceu.bessemer_forge": "Bessemer Forge",
+    "block.gtceu.bessemer_forgery.tooltip.0": "§7An Electric Powered Beast for Manufacturing Steel",
+    "block.gtceu.bessemer_forgery.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.circuit_manufacturing_facility": "Circuit Manufacturing Facility",
     "gtceu.circuit_facility": "Circuit Facility",
+    "block.gtceu.circuit_manufacturing_facility.tooltip.0": "§7A Machine Designed to Ensure Quality Circuits",
+    "block.gtceu.circuit_manufacturing_facility.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.high_pressure_steam_hammer": "High Pressure Steam Hammer",
+    "block.gtceu.high_pressure_steam_hammer.tooltip.0": "§7A larger variant of the forge hammer capable of running multiple recipes at once.",
+
     "block.gtceu.high_pressure_steam_sifter": "High Pressure Steam Sifter",
+    "block.gtceu.high_pressure_steam_sifter.tooltip.o": "§7Able to sort out the rarest of goods depending on mesh used.",
+    "block.gtceu.high_pressure_steam_sifter.tooltip.1": "§4Hardmode§7 Exclusive",
     "gtceu.primitive_sifter": "Primitive Sifting",
+
     "block.gtceu.steam_casting_array": "Steam Casting Array",
-    "block.gtceu.steam_kiln": "Steam Kiln",
-    "block.gtceu.steam_liquifier": "Steam Liquifier",
+    "block.gtceu.steam_casting_array.tooltip.0": "§7A Big Steam Fluid Solidifier",
+    "block.gtceu.steam_casting_array.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.steam_forge": "Steam Forge",
+    "block.gtceu.steam_forge.tooltip.0": "§7A Blast Furnace with Steam Parallels",
+    "block.gtceu.steam_forge.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "gtceu.stirling_generator": "Stirling Generator",
+    "block.gtceu.stirling_generator.tooltip.0": "§7Burns your coals directly into power.",
+    "block.gtceu.stirling_generator.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "gtceu.auto_scavenger": "Auto Scavenger",
+    "block.gtceu.auto_scavenger.tooltip.0": "§7Scavenges for you.",
+    "block.gtceu.auto_scavenger.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "gtceu.industrial_pump" : "Industrial Pump",
     "block.gtceu.industrial_pump" : "Industrial Pump",
+    "block.gtceu.industrial_pump.tooltip.0": "§7A Stronger Primitive Pump",
+    "block.gtceu.industrial_pump.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.component_chamber": "Component Chamber",
     "gtceu.component_chamber": "Component Chamber",
+    "block.gtceu.component_chamber.tooltip.0": "§7Ensures your manufactured components actually work.",
+    "block.gtceu.component_chamber.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.machine_facility": "Machine Facility",
+    "block.gtceu.machine_facility.tooltip.0": "§7It figured out how to assemble machines.",
+    "block.gtceu.machine_facility.tooltip.1": "§4Hardmode§7 Exclusive",
     "gtceu.simple_machine_facility": "Simple Machine Facility",
     "gtceu.advanced_machine_facility": "Advanced Machine Facility",
+
     "block.gtceu.electric_sifter": "Electric Sifter",
+    "block.gtceu.electric_sifter.tooltip.0": "§7An Electric Version of Sifting that requires the finest of sediments.",
+    "block.gtceu.electric_sifter.tooltip.1": "§4Hardmode§7 Exclusive",
     "gtceu.electric_sifter": "Electric Sifter",
+
     "gtceu.gt_blasting": "Blasting",
+
+    "block.gtceu.steeled_blast_furnace": "Steeled Blast Furnace",
+    "block.gtceu.steeled_blast_furnace.tooltip.0": "§7A Primitive Blast Furnace automatable from the controller.",
+    "block.gtceu.steeled_blast_furnace.tooltip.1": "§4Hardmode§7 Exclusive",
 
     "material.gtceu.metallic_ore_sludge": "Metallic Ore Sludge",
     "material.gtceu.raw_ore_concentrate": "Raw Ore Concentrate",

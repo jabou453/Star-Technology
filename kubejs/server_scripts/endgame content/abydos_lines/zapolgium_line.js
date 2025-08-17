@@ -52,6 +52,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:hot_zapolgium_ingot')
         .outputFluids('gtceu:carbon_monoxide 1000', 'gtceu:steam 1000')
         .blastFurnaceTemp(10299)
-        .duration(8000)
+        .duration(5500)
         .EUt(98000);
 });
