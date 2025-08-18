@@ -277,7 +277,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.injection_mixer(id('dragon_breath'))
         .itemInputs('gtceu:tiny_draconyallium_dust')
-        .inputFluids('gtceu:radon 1450','gtceu:breath_hormone_complex 50')
+        .inputFluids('gtceu:radon 74950','gtceu:breath_hormone_complex 50')
         .outputFluids('gtceu:dragon_breath 1500')
         .duration(375)
         .EUt(GTValues.V[GTValues.UIV] * .3)

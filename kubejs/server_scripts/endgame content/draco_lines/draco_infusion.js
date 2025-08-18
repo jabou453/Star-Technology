@@ -115,11 +115,11 @@ ServerEvents.recipes(event => {
     '5x kubejs:draconic_scale_cells',900,GTValues.VHA[GTValues.UIV]);
 
     Infusion('abyssal_inductor','kubejs:abyssal_inductor','gtceu:dragon_breath 250','gtceu:blacklight','2x gtceu:draco_abyssal_screw',
-    '8x gtceu:polonium_bismide_single_cable','gtceu:lepton_resonant_thallium_antimonide_spring','gtceu:lepton_resonant_thallium_antimonide_spring',
-    'gtceu:uiv_emitter','2x gtceu:draco_abyssal_screw',300,GTValues.VHA[GTValues.UIV]);
+    '8x gtceu:polonium_bismide_single_cable','gtceu:lepton_resonant_thallium_antimonide_spring','2x gtceu:draco_abyssal_screw',
+    'gtceu:uiv_emitter','gtceu:lepton_resonant_thallium_antimonide_spring',300,GTValues.VHA[GTValues.UIV]);
 
-    Infusion('abyssal_inductor_hull','kubejs:abyssal_inductor_hull','gtceu:abyssal_alloy 500','gtceu:sterilizing_filter_casing','4x gtceu:draconyallium_foil',
-    '#gtceu:circuits/uiv','kubejs:voidic_reinforced_mesh','kubejs:abyssal_inductor','#gtceu:circuits/uiv','4x gtceu:draconyallium_foil', 150,
+    Infusion('abyssal_inductor_hull','2x kubejs:abyssal_inductor_hull','gtceu:abyssal_alloy 1000','2x gtceu:sterilizing_filter_casing','kubejs:abyssal_inductor',
+    '#gtceu:circuits/uiv','kubejs:voidic_reinforced_mesh','kubejs:abyssal_inductor','kubejs:uiv_microfluidic_flow_valve','kubejs:voidic_reinforced_mesh', 150,
     GTValues.VA[GTValues.UXV]);
 
     });

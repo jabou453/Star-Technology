@@ -18,8 +18,8 @@
 		{
 			id: "52EF57467B80EB54"
 			linked_quest: "75C33909E2CD5EC0"
-			x: -3.0d
-			y: 7.0d
+			x: 1.0d
+			y: -5.0d
 		}
 		{
 			id: "6EBA3C9601A8DDCC"
@@ -713,7 +713,7 @@
 		{
 			dependencies: [
 				"69493DCA3D764771"
-				"7A07DB21A52F7219"
+				"31F87896FF834E63"
 			]
 			description: ["&9&lOpV&r recipe speeds"]
 			id: "54944370404CEA94"
@@ -776,31 +776,37 @@
 				{
 					id: "41E9F16A4E73BCD1"
 					item: "gtceu:estalt_ingot"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "1E6DB5EE1E5E0703"
 					item: "gtceu:adamantine_ingot"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "3A5497E596DB234B"
 					item: "gtceu:mythril_ingot"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "56AE36AC68B935A6"
 					item: "gtceu:enriched_estalt_ingot"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "51FB398DCA9F9C4D"
 					item: "gtceu:calamatium_ingot"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "5C52FE121278FC16"
 					item: "gtceu:isovol_ingot"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -921,7 +927,6 @@
 		{
 			dependencies: ["5944C4DE27F98FF3"]
 			description: ["The fourth tier of fusion reactors, reaching over 1 Billion Kelvin."]
-			hide_dependent_lines: true
 			id: "2E34F23A42004285"
 			rewards: [{
 				id: "2E601807C6A28763"
@@ -1709,14 +1714,15 @@
 				"2DACE6EF41A118D9"
 				"3FBD3851CCB3F14E"
 			]
+			hide_dependent_lines: true
 			id: "31F87896FF834E63"
 			tasks: [{
 				id: "7A07DB21A52F7219"
 				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 4.0d
+			x: 3.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -1750,11 +1756,39 @@
 			dependencies: ["1AEBAE3050B72906"]
 			hide_dependent_lines: true
 			id: "4777033988C9F512"
-			tasks: [{
-				id: "29B2DE66B7C609EE"
-				title: "Heavy Atomic Substances"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "6EB2E502307FD68B"
+					item: "gtceu:astatine_dust"
+					type: "item"
+				}
+				{
+					id: "2EF27226B4421028"
+					item: "gtceu:hafnium_ingot"
+					type: "item"
+				}
+				{
+					id: "40DF21759AAC967F"
+					item: "gtceu:oganesson_bucket"
+					type: "item"
+				}
+				{
+					id: "4DB45A3890461BBE"
+					item: "gtceu:seaborgium_ingot"
+					type: "item"
+				}
+				{
+					id: "2B8F32628ADE10FD"
+					item: "gtceu:flerovium_ingot"
+					type: "item"
+				}
+				{
+					id: "76C80A0C990C6672"
+					item: "gtceu:polonium_ingot"
+					type: "item"
+				}
+			]
+			title: "Super Heavy Atomic Elements"
 			x: -7.0d
 			y: -1.0d
 		}
