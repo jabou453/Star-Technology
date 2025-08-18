@@ -883,7 +883,7 @@
 				}
 			]
 			x: 2.5d
-			y: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["46FA26DD7A09CDCE"]
@@ -918,7 +918,7 @@
 				type: "item"
 			}]
 			x: 2.5d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			icon: "gtceu:styrene_bucket"

@@ -829,6 +829,7 @@
 			dependencies: [
 				"1AF4BF803FEF14FE"
 				"1772F46C9EAF6FB7"
+				"61E082759BC89A1E"
 			]
 			id: "169C2E9DA1CF8F53"
 			rewards: [{
@@ -1792,6 +1793,40 @@
 			}]
 			x: -8.0d
 			y: -6.0d
+		}
+		{
+			dependencies: ["1B6159E114BA50ED"]
+			id: "61E082759BC89A1E"
+			tasks: [
+				{
+					id: "30589C4757D78D02"
+					item: "kubejs:draconic_qmd_transistor"
+					type: "item"
+				}
+				{
+					id: "1CA51A34EB756055"
+					item: "kubejs:draconic_qmd_resistor"
+					type: "item"
+				}
+				{
+					id: "7107C54E07016EF7"
+					item: "kubejs:draconic_qmd_capacitor"
+					type: "item"
+				}
+				{
+					id: "123CD8F3E1947941"
+					item: "kubejs:draconic_qmd_diode"
+					type: "item"
+				}
+				{
+					id: "7D6CB47C31D9B5A8"
+					item: "kubejs:draconic_qmd_inductor"
+					type: "item"
+				}
+			]
+			title: "Draconic QMDs"
+			x: -1.0d
+			y: 3.0d
 		}
 	]
 	title: "Draconic Empires"

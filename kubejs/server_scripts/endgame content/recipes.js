@@ -275,6 +275,14 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UIV]);
 
+    event.recipes.gtceu.injection_mixer(id('dragon_breath'))
+        .itemInputs('gtceu:tiny_draconyallium_dust')
+        .inputFluids('gtceu:radon 1450','gtceu:breath_hormone_complex 50')
+        .outputFluids('gtceu:dragon_breath 1500')
+        .duration(375)
+        .EUt(GTValues.V[GTValues.UIV] * .3)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM); // Moved to Abyssal
+
     event.recipes.gtceu.forge_hammer(id('scale_recycling'))
         .itemInputs('mysticalagradditions:dragon_scale')
         .itemOutputs('2x kubejs:draconic_scale_cells')

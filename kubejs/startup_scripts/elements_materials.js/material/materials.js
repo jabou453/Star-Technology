@@ -236,6 +236,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('lepton_sparse_akreyrium').setFormula('Ak(?ℓ?)?');
     GTMaterials.get('lepton_dense_akreyrium').setFormula('Ak(ℓ)?');
     GTMaterials.get('echo_shard').setFormula('Ec');
+    GTMaterials.get('zavaritskite').setFormula('(BiO)F');
 
 });
 
@@ -438,8 +439,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).dust().liquid().ore(2, 1).components(elements).color(color).flags(flags);
     }
     
-    const compDustOre = (name, elements, color) => {
-        event.create(name).dust().ore(2, 1).components(elements).color(color).flags(no_decomp);
+    const compDustOre = (name, elements, color, flags) => {
+        event.create(name).dust().ore(2, 1).components(elements).color(color).flags(flags);
     }
     
     const compGemOre = (name, elements, color, icon) => {
@@ -678,7 +679,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDustLiquidOre('zapolite', ['2x zapolgium', '4x iodine', '2x aluminium', '5x oxygen'], 0xcc0099, [no_decomp]);
 
-    compDustOre('lautarite', ['1x calcium', '2x iodine', '6x oxygen'], 0x6666ff);
+    compDustOre('lautarite', ['1x calcium', '2x iodine', '6x oxygen'], 0x6666ff, [no_decomp]);
 
     compDustLiquidOre('iodargyrite', ['1x silver', '1x iodine'], 0x8080ff, [no_decomp]);
 
@@ -692,21 +693,23 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDustLiquidOre('tiemannite', ['1x mercury', '1x selenium'], 0xcc0066, [no_decomp]);
 
-    compDustOre('klockmannite', ['1x copper', '1x selenium'], 0x009999);
+    compDustOre('klockmannite', ['1x copper', '1x selenium'], 0x009999, [no_decomp]);
 
-    compDustOre('stibiopalladinite', ['5x palladium', '2x antimony'], 0x333399);
+    compDustOre('stibiopalladinite', ['5x palladium', '2x antimony'], 0x333399, [no_decomp]);
 
-    compDustOre('berzelianite', ['2x copper', '1x selenium'], 0x990000, []);
+    compDustOre('berzelianite', ['2x copper', '1x selenium'], 0x990000, [no_decomp]);
 
-    compDustOre('umangite', ['3x copper', '2x selenium'], 0x006699, []);
+    compDustOre('umangite', ['3x copper', '2x selenium'], 0x006699, [no_decomp]);
 
-    compDustOre('aguilarite', ['3x silver', '1x selenium', '1x sulfur'], 0xff5050, []);
+    compDustOre('aguilarite', ['3x silver', '1x selenium', '1x sulfur'], 0xff5050, [no_decomp]);
 
     compDustLiquidOre('strontianite', ['1x strontium', '1x carbon', '3x oxygen'], 0xe6ffff, []);
 
     compGemOre('celestine', ['1x strontium', '1x carbon', '4x oxygen'], 0xe6ffff, GEM_VERTICAL);
 
     compDust('polybasite', ['12x silver', '4x copper', '2x arsenic', '13x sulfur'], 0xcc6600, []);
+
+    compDustOre('zavaritskite',['1x bismuth', '1x oxygen', '1x fluorine'], 0xE7D795, []);
 
     compLiquidTemp('abydos_titanite_rich_magma', 3520, ['6x titanite', '2x calaverite','2x sylvanite', '2x tiemannite', '1x strontianite'], 0xe65c00, [no_decomp]);
 

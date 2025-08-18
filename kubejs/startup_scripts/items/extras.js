@@ -45,6 +45,11 @@ StartupEvents.registry('item', event => {
         .displayName('Drac-Peptide Amino Chain')
         .texture('kubejs:item/draconic/draco_peptide_amino_chain');
 
+    event.create('abyssal_inductor')
+        .displayName('Abyssal Inductor')
+        .tooltip('§7Simulating the §5End§7 in its purest form.')
+        .texture('kubejs:item/abyssal_inductor');
+
     // Gravi star continuations
     event.create('helish_star')
         .displayName('Helish Star')

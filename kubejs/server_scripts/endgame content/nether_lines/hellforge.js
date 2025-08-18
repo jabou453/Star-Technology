@@ -135,4 +135,15 @@ ServerEvents.recipes(event => {
     HellforgeHeater('flamewake_solvent','superheated_infernal_concentrate',1)
     HellforgeHeater('emberheart_nectar','sub_stellar_infernal_concentrate',2)
 
+    event.recipes.gtceu.manifold_centrifuge(id('infernal_tar_decomposition'))
+        .inputFluids('start_core:infernal_tar 100')
+        .chancedOutput('gtceu:basaltic_mineral_sand_dust',1500,120)
+        .chancedOutput('gtceu:deactivated_nether_dust',250,30)
+        .chancedOutput('gtceu:netherrack_dust',500,100)
+        .chancedOutput('gtceu:thorium_nugget',300,60)
+        .chancedOutput('gtceu:red_garnet_dust',425,75)
+        .chancedOutput('gtceu:tetrahedrite_dust',225,45)
+        .duration(80)
+        .EUt(GTValues.VHA[GTValues.UV]);
+
     });

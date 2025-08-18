@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
     //mixture
     event.recipes.gtceu.centrifuge(id('raw_ore_slurry'))
         .inputFluids('gtceu:raw_ore_slurry 1000')
-        .itemOutputs('gtceu:crushed_lepidolite_ore', 'gtceu:crushed_pyrochlore_ore', 'gtceu:crushed_pyrolusite_ore')
+        .itemOutputs('gtceu:crushed_lepidolite_ore', 'gtceu:crushed_pyrochlore_ore', 'gtceu:crushed_pyrolusite_ore', 'gtceu:crushed_magnesite_ore')
         .outputFluids('gtceu:mixed_mineral_residue 750', 'gtceu:molten_ore_mixture 250')
         .duration(240)
         .EUt(GTValues.VA[GTValues.MV]);
@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
     //dissolving
     event.recipes.gtceu.electrolyzer(id('mixed_mineral_residue'))
         .inputFluids('gtceu:mixed_mineral_residue 1000')
-        .itemOutputs('gtceu:crushed_beryllium_ore')
+        .itemOutputs('gtceu:crushed_beryllium_ore', 'gtceu:crushed_zavaritskite_ore')
         .outputFluids('gtceu:sulfuric_mineral_mixture 400', 'gtceu:oxygenous_mineral_mixture 600')
         .duration(240)
         .EUt(GTValues.VA[GTValues.HV]);

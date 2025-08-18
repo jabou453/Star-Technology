@@ -46,7 +46,8 @@ const oreProcessableTiers = {
         { material: 'apatite', secondary: 'tricalcium_phosphate', tertiary: 'tricalcium_phosphate', quaternary: 'phosphate' },
         { material: 'lepidolite', secondary: 'lithium', tertiary: 'lithium', quaternary: 'caesium' },
         { material: 'pyrochlore', secondary: 'apatite', tertiary: 'apatite', quaternary: 'calcium' },
-        { material: 'pyrolusite', secondary: 'manganese', tertiary: 'manganese', quaternary: 'tantalite' }
+        { material: 'pyrolusite', secondary: 'manganese', tertiary: 'manganese', quaternary: 'tantalite' },
+        { material: 'magnesite', secondary: 'magnesium', tertiary: 'magnesium', quaternary: 'cobaltite' }
     ],
 
     'hv': [
@@ -56,7 +57,8 @@ const oreProcessableTiers = {
         { material: 'barite', secondary: 'pyrite', tertiary: 'pyrite', quaternary: 'chalcopyrite' },  // check
         { material: 'cassiterite', secondary: 'tin', tertiary: 'tin', quaternary: 'bismuth' },
         { material: 'tantalite', secondary: 'manganese', tertiary: 'niobium', quaternary: 'niobium' },
-        { material: 'pollucite', secondary: 'caesium', tertiary: 'aluminium', quaternary: 'aluminium' }
+        { material: 'pollucite', secondary: 'caesium', tertiary: 'aluminium', quaternary: 'aluminium' },
+        { material: 'zavaritskite', secondary: 'topaz', tertiary: 'blue_topaz', quaternary: 'bismuth' }
     ],
 
     'ev': [

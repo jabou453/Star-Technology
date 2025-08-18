@@ -27,24 +27,24 @@
 			linked_quest: "439D8AE6D3DC41AF"
 			shape: "gear"
 			size: 1.5d
-			x: -5.0d
-			y: 6.5d
+			x: -2.5d
+			y: 6.0d
 		}
 		{
 			id: "31A47C784DBE6072"
 			linked_quest: "22BC7BDE5E132A30"
 			shape: "gear"
 			size: 1.5d
-			x: 4.0d
-			y: 3.5d
+			x: 6.5d
+			y: 3.0d
 		}
 		{
 			id: "3A4F00438DDCEF22"
 			linked_quest: "0AB3A8C14C3A0512"
 			shape: "gear"
 			size: 1.5d
-			x: -8.5d
-			y: 6.5d
+			x: -6.0d
+			y: 6.0d
 		}
 	]
 	quests: [
@@ -775,8 +775,8 @@
 				item: "gtceu:void_excavator"
 				type: "item"
 			}]
-			x: 10.0d
-			y: -8.5d
+			x: 9.0d
+			y: -9.5d
 		}
 		{
 			dependencies: ["14AB8F4BE7C1F8E3"]
@@ -968,8 +968,8 @@
 				item: "gtceu:crushed_pyrolusite_ore"
 				type: "item"
 			}]
-			x: 9.0d
-			y: -6.5d
+			x: 8.5d
+			y: -5.5d
 		}
 		{
 			dependencies: ["4F3AB86CDC557B11"]
@@ -979,8 +979,8 @@
 				item: "gtceu:crushed_pyrochlore_ore"
 				type: "item"
 			}]
-			x: 8.0d
-			y: -6.5d
+			x: 7.5d
+			y: -8.0d
 		}
 		{
 			dependencies: ["4F3AB86CDC557B11"]
@@ -1004,7 +1004,7 @@
 			]
 			title: "Mixed Mineral Residue"
 			x: 8.5d
-			y: -5.5d
+			y: -6.5d
 		}
 		{
 			dependencies: [
@@ -1032,7 +1032,7 @@
 			]
 			title: "Molten Ore Mixture"
 			x: 6.0d
-			y: 0.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["26E08C0B689C129F"]
@@ -1042,8 +1042,8 @@
 				item: "gtceu:crushed_beryllium_ore"
 				type: "item"
 			}]
-			x: 8.5d
-			y: -1.5d
+			x: 10.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["26E08C0B689C129F"]
@@ -1066,8 +1066,8 @@
 				}
 			]
 			title: "Oxygenous Mineral Mixture"
-			x: 8.0d
-			y: -2.5d
+			x: 10.5d
+			y: -5.0d
 		}
 		{
 			dependencies: ["26E08C0B689C129F"]
@@ -1090,8 +1090,8 @@
 				}
 			]
 			title: "Sulfuric Mineral Mixture"
-			x: 9.0d
-			y: -2.5d
+			x: 10.5d
+			y: -8.0d
 		}
 		{
 			dependencies: ["62E3D33072698B07"]
@@ -1101,8 +1101,8 @@
 				item: "gtceu:crushed_tantalite_ore"
 				type: "item"
 			}]
-			x: 7.0d
-			y: -2.5d
+			x: 11.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["62E3D33072698B07"]
@@ -1112,8 +1112,8 @@
 				item: "gtceu:crushed_pollucite_ore"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -3.5d
+			x: 11.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["62E3D33072698B07"]
@@ -1123,8 +1123,8 @@
 				item: "gtceu:crushed_cassiterite_ore"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -1.5d
+			x: 11.5d
+			y: -5.0d
 		}
 		{
 			dependencies: ["2032DAAC7C6ADC0F"]
@@ -1134,8 +1134,8 @@
 				item: "gtceu:crushed_barite_ore"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -1.5d
+			x: 11.0d
+			y: -9.0d
 		}
 		{
 			dependencies: ["2032DAAC7C6ADC0F"]
@@ -1145,8 +1145,8 @@
 				item: "gtceu:crushed_chalcopyrite_ore"
 				type: "item"
 			}]
-			x: 10.0d
-			y: -2.5d
+			x: 11.5d
+			y: -8.0d
 		}
 		{
 			dependencies: ["2032DAAC7C6ADC0F"]
@@ -1156,8 +1156,8 @@
 				item: "gtceu:crushed_bornite_ore"
 				type: "item"
 			}]
-			x: 9.5d
-			y: -3.5d
+			x: 11.5d
+			y: -7.0d
 		}
 		{
 			dependencies: ["05FB44E437E88BE7"]
@@ -1168,7 +1168,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 2.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["05FB44E437E88BE7"]
@@ -1179,7 +1179,7 @@
 				type: "item"
 			}]
 			x: 7.0d
-			y: 2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["05FB44E437E88BE7"]
@@ -1190,7 +1190,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: 0.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["05FB44E437E88BE7"]
@@ -1201,7 +1201,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["05FB44E437E88BE7"]
@@ -1212,7 +1212,7 @@
 				type: "item"
 			}]
 			x: 5.0d
-			y: 2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["05FB44E437E88BE7"]
@@ -1223,7 +1223,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: 1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["05FB44E437E88BE7"]
@@ -1234,7 +1234,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 0.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["6C0C9B95A8DAB5D1"]
@@ -1587,7 +1587,7 @@
 			}]
 			title: "Easier Molten Ore Mixture"
 			x: 5.0d
-			y: -1.0d
+			y: -4.0d
 		}
 		{
 			id: "4271ED1F225983D3"
@@ -1614,8 +1614,8 @@
 				title: "Overworld Drilling"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: 5.0d
+			x: 4.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["22BC7BDE5E132A30"]
@@ -1630,8 +1630,8 @@
 				title: "Abydos Drilling"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 7.5d
+			x: 6.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["69CCC4E36528A4FC"]
@@ -1658,8 +1658,8 @@
 				}
 			]
 			title: "Abydos Titanite-rich Magma"
-			x: 3.0d
-			y: 9.0d
+			x: 5.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["69CCC4E36528A4FC"]
@@ -1686,8 +1686,8 @@
 				}
 			]
 			title: "Abydos Zapolite-rich Magma"
-			x: 4.0d
-			y: 9.0d
+			x: 6.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["69CCC4E36528A4FC"]
@@ -1714,8 +1714,8 @@
 				}
 			]
 			title: "Gritty Akreyrium"
-			x: 5.0d
-			y: 9.0d
+			x: 7.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["748EC87C28C4CC56"]
@@ -1734,8 +1734,8 @@
 				}
 			]
 			title: "Brackish Water"
-			x: 3.0d
-			y: 6.5d
+			x: 5.5d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1749,8 +1749,8 @@
 				type: "checkmark"
 			}]
 			title: "Processing Lines (Chap 4,5,6)"
-			x: 4.0d
-			y: 10.5d
+			x: 6.5d
+			y: 10.0d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1777,8 +1777,8 @@
 				}
 			]
 			title: "Sulfuric Heavy Fuel"
-			x: -0.5d
-			y: 5.0d
+			x: 2.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1805,8 +1805,8 @@
 				}
 			]
 			title: "Sulfuric Light Fuel"
-			x: -0.5d
-			y: 6.0d
+			x: 2.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1833,8 +1833,8 @@
 				}
 			]
 			title: "Sulfuric Naphtha"
-			x: -0.5d
-			y: 7.0d
+			x: 2.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["307FA3025E294979"]
@@ -1861,8 +1861,8 @@
 				}
 			]
 			title: "Sulfuric Gas"
-			x: -0.5d
-			y: 8.0d
+			x: 2.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["5B257F1A37D54D75"]
@@ -1890,8 +1890,8 @@
 				}
 			]
 			title: "Heavy Fuel"
-			x: -1.75d
-			y: 5.0d
+			x: 0.75d
+			y: 4.5d
 		}
 		{
 			dependencies: ["4B90760BD8243CCB"]
@@ -1919,8 +1919,8 @@
 				}
 			]
 			title: "Light Fuel"
-			x: -1.75d
-			y: 6.0d
+			x: 0.75d
+			y: 5.5d
 		}
 		{
 			dependencies: ["1102B794BA4446CF"]
@@ -1948,8 +1948,8 @@
 				}
 			]
 			title: "Naphtha"
-			x: -1.75d
-			y: 7.0d
+			x: 0.75d
+			y: 6.5d
 		}
 		{
 			dependencies: ["5AB4194223AAE768"]
@@ -1977,8 +1977,8 @@
 				}
 			]
 			title: "Refinery Gas"
-			x: -1.75d
-			y: 8.0d
+			x: 0.75d
+			y: 7.5d
 		}
 		{
 			dependencies: [
@@ -1996,8 +1996,8 @@
 				title: "Steam Cracking"
 				type: "checkmark"
 			}]
-			x: -3.25d
-			y: 7.5d
+			x: -0.75d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -2015,8 +2015,8 @@
 				title: "Hydro Cracking"
 				type: "checkmark"
 			}]
-			x: -3.25d
-			y: 5.5d
+			x: -0.75d
+			y: 5.0d
 		}
 		{
 			dependencies: ["748EC87C28C4CC56"]
@@ -2075,8 +2075,8 @@
 				}
 			]
 			title: "Oil Production"
-			x: 1.0d
-			y: 6.5d
+			x: 3.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -2104,8 +2104,8 @@
 					type: "item"
 				}
 			]
-			x: -7.0d
-			y: 8.0d
+			x: -4.5d
+			y: 7.5d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -2159,8 +2159,8 @@
 					type: "item"
 				}
 			]
-			x: -7.0d
-			y: 6.0d
+			x: -4.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -2204,8 +2204,8 @@
 					type: "item"
 				}
 			]
-			x: -7.0d
-			y: 7.0d
+			x: -4.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["0AB3A8C14C3A0512"]
@@ -2249,8 +2249,8 @@
 					type: "item"
 				}
 			]
-			x: -7.0d
-			y: 5.0d
+			x: -4.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["439D8AE6D3DC41AF"]
@@ -2375,8 +2375,8 @@
 				}
 				type: "item"
 			}]
-			x: -5.0d
-			y: 9.0d
+			x: -2.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["22BC7BDE5E132A30"]
@@ -2387,8 +2387,8 @@
 				title: "Nether Drilling"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 5.0d
+			x: 8.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["4E6158880F47AACC"]
@@ -2398,8 +2398,8 @@
 				item: "gtceu:debris_rich_nether_magma_bucket"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 6.5d
+			x: 7.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["4E6158880F47AACC"]
@@ -2409,8 +2409,8 @@
 				item: "gtceu:highly_unstable_nether_magma_bucket"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 6.5d
+			x: 9.5d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -2424,9 +2424,9 @@
 				id: "7BDD424C5B7480B1"
 				type: "checkmark"
 			}]
-			title: "Processing Lines (Chap 7+)"
-			x: 6.0d
-			y: 8.0d
+			title: "Processing Lines (Chap 7.1)"
+			x: 8.5d
+			y: 7.5d
 		}
 		{
 			dependencies: ["5F9FBAC1FB36B1D3"]
@@ -2465,12 +2465,12 @@
 			dependencies: ["4E6158880F47AACC"]
 			id: "2FF64174BEF10D64"
 			tasks: [{
-				id: "207D7D3B5D1FB4FE"
-				title: "Crude Infernal Concentrate"
-				type: "checkmark"
+				id: "4E7308B4C0006151"
+				item: "gtceu:crude_infernal_concentrate_bucket"
+				type: "item"
 			}]
-			x: 6.0d
-			y: 6.5d
+			x: 8.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["14AB8F4BE7C1F8E3"]
@@ -2493,6 +2493,28 @@
 			}]
 			x: -5.5d
 			y: 3.5d
+		}
+		{
+			dependencies: ["26E08C0B689C129F"]
+			id: "53A038A621F3997C"
+			tasks: [{
+				id: "6704770B19631A12"
+				item: "gtceu:crushed_zavaritskite_ore"
+				type: "item"
+			}]
+			x: 10.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["4F3AB86CDC557B11"]
+			id: "75030986240D2731"
+			tasks: [{
+				id: "54804AAB5246C349"
+				item: "gtceu:crushed_magnesite_ore"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -5.0d
 		}
 	]
 	title: "Resource Production"

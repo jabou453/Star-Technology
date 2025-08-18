@@ -2,9 +2,34 @@ ServerEvents.recipes(event => {
     const id = global.id;
 
     // Controllers
-    // === Supreme ===
+    event.recipes.gtceu.assembly_line(id('supreme_plasma_turbine'))
+        .itemInputs('gtceu:uhv_machine_hull','6x gtceu:dense_enriched_naquadah_plate','4x gtceu:neutronium_gear','6x gtceu:small_naquadah_alloy_gear',
+            '8x gtceu:enriched_naquadah_huge_fluid_pipe','6x #gtceu:circuits/uhv','2x gtceu:uhv_electric_motor','64x gtceu:uhpic_chip')
+        .inputFluids('gtceu:polyether_ether_ketone 4320', 'gtceu:naquadria 5000', 'gtceu:lubricant 2500')
+        .itemOutputs('gtceu:supreme_plasma_turbine')
+        .duration(600)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:plasma_large_turbine'))
+                .EUt(GTValues.VHA[GTValues.UHV])
+                .CWUt(128)
+            )
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
-    // === Nyinsane ===
+    // event.recipes.gtceu.assembly_line(id('nyinsane_plasma_turbine'))
+    //     .itemInputs('gtceu:uiv_machine_hull','6x gtceu:dense_nyanium_plate','4x gtceu:chaotixic_gear','6x gtceu:small_nyanium_gear',
+    //         '8x gtceu:nyanium_huge_fluid_pipe','6x #gtceu:circuits/uiv','2x gtceu:uiv_electric_motor','64x kubejs:uepic_chip',
+    //         '64x kubejs:uepic_chip','32x kubejs:uepic_chip')
+    //     .inputFluids('gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 4320', 'gtceu:calamatium 5000', 'gtceu:tungsten_disulfide 2500')
+    //     .itemOutputs('gtceu:nyinsane_plasma_turbine')
+    //     .duration(600)
+    //     .stationResearch(
+    //         researchRecipeBuilder => researchRecipeBuilder
+    //             .researchStack(Item.of('gtceu:supreme_plasma_turbine'))
+    //             .EUt(GTValues.VHA[GTValues.UIV])
+    //             .CWUt(176)
+    //         )
+    //     .EUt(GTValues.VHA[GTValues.UIV]);
 
     // Rotor Holders
     event.remove({output: /gtceu:.*rotor_holder/});

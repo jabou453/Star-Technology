@@ -2350,20 +2350,6 @@
 			x: -1.5d
 			y: -3.0d
 		}
-		{
-			dependencies: [
-				"1EE1007BA8202CC1"
-				"6FB365E6C91B482E"
-			]
-			id: "10E5E1FF4C613920"
-			tasks: [{
-				id: "2E30B64F65DB6424"
-				title: "Nyinsane Plasma Turbine"
-				type: "checkmark"
-			}]
-			x: -1.5d
-			y: -2.0d
-		}
 	]
 	title: "Power"
 }

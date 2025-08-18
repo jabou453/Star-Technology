@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
         )
         .inputFluids(
             `${Solder} 125000`,
-            `${PEEK} 75000`,
+            `${PEDOT_PSS} 75000`,
             `${SGM} 50000`,
             `gtceu:isovol 28800`
         )

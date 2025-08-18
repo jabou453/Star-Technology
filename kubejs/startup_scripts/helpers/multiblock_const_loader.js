@@ -11,6 +11,12 @@
         //Predicates.abilities($StarTPartAbility.ABSOLUTE_PARALLEL_HATCH)
             // designates Absolute Parallel Hatches as a viable block
 
+    const $BoostedPlasmaTurbine = Java.loadClass('com.startechnology.start_core.machine.boosting.BoostedPlasmaTurbine');
+        //.machine((holder) => new $BoostedPlasmaTurbine(holder, GTValues.IV))
+            //Creates Supreme Tier Boosted Plasma Turbine
+        //.recipeModifiers([$StarTRecipeModifiers.LARGE_TURBINE,$StarTRecipeModifiers.BOOSTED_PLASMA_TURBINE])
+            //Adds boosting as a recipe modifier
+
 //GTCEU Loader
 
     //Multiblock Relative Direction Loader
