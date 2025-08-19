@@ -85,16 +85,16 @@ ServerEvents.recipes(event => {
         .duration(1000)
         .EUt(1024);
 
-    event.recipes.gtceu.chemical_bath(id('hot_signalium_cooling_distilled_water'))
+    event.recipes.gtceu.chemical_bath(id('hot_signalum_cooling_distilled_water'))
         .itemInputs('gtceu:hot_signalum_ingot')
         .inputFluids('gtceu:distilled_water')
-        .itemOutputs('gtceu:signalium_ingot')
+        .itemOutputs('gtceu:signalum_ingot')
         .duration(375)
         .EUt(120);
-    event.recipes.gtceu.chemical_bath(id('hot_signalium_cooling_water'))
+    event.recipes.gtceu.chemical_bath(id('hot_signalum_cooling_water'))
         .itemInputs('gtceu:hot_signalum_ingot')
         .inputFluids('minecraft:water')
-        .itemOutputs('gtceu:signalium_ingot')
+        .itemOutputs('gtceu:signalum_ingot')
         .duration(600)
         .EUt(120);
 
