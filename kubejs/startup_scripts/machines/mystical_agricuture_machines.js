@@ -1,4 +1,4 @@
-global.recipe_types(event => {
+GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('greenhouse_growing')
         .category('mystical')
         .setEUIO('in')
@@ -16,7 +16,7 @@ global.recipe_types(event => {
         .setSound(GTSoundEntries.CHEMICAL);
 });
 
-global.machines(event => {
+GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('mystical_greenhouse', 'simple')
         .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
         .definition((tier, builder) => {

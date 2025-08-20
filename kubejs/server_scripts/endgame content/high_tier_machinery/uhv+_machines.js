@@ -17,9 +17,9 @@ ServerEvents.recipes(event => {
 if (global.packmode !== 'hard'){(() => { // Packmode Opener
 
 const input = [
-    {tier:'uhv',tier1under:'uv',main:'neutronium',cable:'europium',wire:'zirconium_selenide_diiodide',glass:'gtceu:fusion_glass',plastic:'polyether_ether_ketone',cable1up:'cerium_tritelluride',mag:'pure_netherite',pipe:'neutronium',buzz:'neutronium',elctrlyzWire:'iron_selenide_over_strontium_titanium_oxide',chip:'gtceu:uhpic',math:'1'},
-    {tier:'uev',tier1under:'uhv',main:'mythrolic_alloy',cable:'cerium_tritelluride',wire:'astatium_bioselex_carbonite',glass:'gtceu:fusion_glass',plastic:'polyether_ether_ketone',cable1up:'polonium_bismide',mag:'zapolgium',pipe:'mythrolic_alloy',buzz:'neutronium',elctrlyzWire:'astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide',chip:'kubejs:uepic',math:'2'},
-    {tier:'uiv',tier1under:'uev',main:'chaotixic_alloy',cable:'polonium_bismide',wire:'hafnide_ito_ceramic',glass:'kubejs:draco_resilient_fusion_glass',plastic:'poly_34_ethylenedioxythiophene_polystyrene_sulfate',cable1up:'lepton_resonant_thallium_antimonide',mag:'zapolgium',pipe:'chaotixic_alloy',buzz:'neutronium',elctrlyzWire:'polonium_flux',chip:'kubejs:uepic',math:'3'}
+    {tier:'uhv',tier1up:'uev',tier1under:'uv',main:'neutronium',cable:'europium',wire:'zirconium_selenide_diiodide',glass:'gtceu:fusion_glass',plastic:'polyether_ether_ketone',cable1up:'cerium_tritelluride',mag:'pure_netherite',pipe:'neutronium',buzz:'neutronium',elctrlyzWire:'iron_selenide_over_strontium_titanium_oxide',chip:'gtceu:uhpic',math:'1'},
+    {tier:'uev',tier1up:'uiv',tier1under:'uhv',main:'mythrolic_alloy',cable:'cerium_tritelluride',wire:'astatium_bioselex_carbonite',glass:'gtceu:fusion_glass',plastic:'polyether_ether_ketone',cable1up:'polonium_bismide',mag:'zapolgium',pipe:'mythrolic_alloy',buzz:'neutronium',elctrlyzWire:'astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide',chip:'kubejs:uepic',math:'2'},
+    {tier:'uiv',tier1up:'uxv',tier1under:'uev',main:'chaotixic_alloy',cable:'polonium_bismide',wire:'hafnide_ito_ceramic',glass:'kubejs:draco_resilient_fusion_glass',plastic:'poly_34_ethylenedioxythiophene_polystyrene_sulfate',cable1up:'lepton_resonant_thallium_antimonide',mag:'zapolgium',pipe:'chaotixic_alloy',buzz:'neutronium',elctrlyzWire:'polonium_flux',chip:'kubejs:uepic',math:'3'}
 ]
 
 input.forEach(i=>{
@@ -117,7 +117,7 @@ input.forEach(i=>{
         {I: `#gtceu:circuits/${i.tier}`, H: `gtceu:${i.tier}_machine_hull`,C: `gtceu:${i.cable}_single_cable`, S: `gtceu:${i.tier}_electric_piston`, M: `gtceu:${i.tier}_electric_motor`, R: 'gtceu:tungsten_grinding_head'}).id(`start:shaped/${i.tier}_lathe`);
     event.shaped(Item.of(`gtceu:${i.tier}_scanner`), 
         ['IEI','CHC','ISI'], 
-        {I: `#gtceu:circuits/${i.tier}`, H: `gtceu:${i.tier}_machine_hull`,C: `gtceu:${i.cable}_single_cable`, E: `gtceu:${i.tier}_emitter`, S: `gtceu:${i.tier}_sensor`}).id(`start:shaped/${i.tier}_scanner`);
+        {I: `#gtceu:circuits/${i.tier1up}`, H: `gtceu:${i.tier}_machine_hull`,C: `gtceu:${i.cable}_single_cable`, E: `gtceu:${i.tier}_emitter`, S: `gtceu:${i.tier}_sensor`}).id(`start:shaped/${i.tier}_scanner`);
     event.shaped(Item.of(`gtceu:${i.tier}_mixer`), 
         ['GRG','GMG','IHI'], 
         {I: `#gtceu:circuits/${i.tier}`, H: `gtceu:${i.tier}_machine_hull`, G: `${i.glass}`, R: `gtceu:${i.main}_rotor`, M: `gtceu:${i.tier}_electric_motor`}).id(`start:shaped/${i.tier}_mixer`);
@@ -144,7 +144,7 @@ input.forEach(i=>{
         {I: `#gtceu:circuits/${i.tier}`, H: `gtceu:${i.tier}_machine_hull`,C: `gtceu:${i.cable}_single_cable`, M: `gtceu:${i.tier}_electric_motor`}).id(`start:shaped/${i.tier}_wiremill`);
     event.shaped(Item.of(`gtceu:${i.tier}_circuit_assembler`), 
         ['AIE','VHV','CIC'], 
-        {I: `#gtceu:circuits/${i.tier}`, H: `gtceu:${i.tier}_machine_hull`,C: `gtceu:${i.cable}_single_cable`, A: `gtceu:${i.tier}_robot_arm`, V: `gtceu:${i.tier}_conveyor_module`, E: `gtceu:${i.tier}_emitter`}).id(`start:shaped/${i.tier}_circuit_assembler`);
+        {I: `#gtceu:circuits/${i.tier1up}`, H: `gtceu:${i.tier}_machine_hull`,C: `gtceu:${i.cable}_single_cable`, A: `gtceu:${i.tier}_robot_arm`, V: `gtceu:${i.tier}_conveyor_module`, E: `gtceu:${i.tier}_emitter`}).id(`start:shaped/${i.tier}_circuit_assembler`);
     event.shaped(Item.of(`gtceu:${i.tier}_macerator`), 
         ['SMR','CCH','IIC'], 
         {I: `#gtceu:circuits/${i.tier}`, H: `gtceu:${i.tier}_machine_hull`,C: `gtceu:${i.cable}_single_cable`, S: `gtceu:${i.tier}_electric_piston`, M: `gtceu:${i.tier}_electric_motor`, R: 'gtceu:tungsten_grinding_head'}).id(`start:shaped/${i.tier}_macerator`);

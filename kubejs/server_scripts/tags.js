@@ -1,10 +1,16 @@
 ServerEvents.tags('item', event => {
+    event.add('gtceu:circuits/uv', 'kubejs:runic_wetware_processor_assembly');
+    event.add('gtceu:circuits/uhv', 'kubejs:runic_wetware_processor_computer');
+    event.add('gtceu:circuits/uev', 'kubejs:runic_wetware_processor_mainframe');
     event.add('gtceu:circuits/zpm', 'kubejs:draconic_wetware_microchip_processor');
     event.add('gtceu:circuits/uv', 'kubejs:draconic_wetware_processor');
     event.add('gtceu:circuits/uhv', 'kubejs:draconic_wetware_processor_assembly');
     event.add('gtceu:circuits/uev', 'kubejs:draconic_wetware_processor_computer');
     event.add('gtceu:circuits/uiv', 'kubejs:draconic_wetware_processor_mainframe');
     event.add('gtceu:circuits/uev', 'kubejs:wetware_based_runic_neuroloom');
+    event.add('gtceu:circuits/uev', 'kubejs:awakened_draconic_wetware_processor_assembly');
+    event.add('gtceu:circuits/uiv', 'kubejs:awakened_draconic_wetware_processor_computer');
+    event.add('gtceu:circuits/uxv', 'kubejs:awakened_draconic_wetware_processor_mainframe');
     event.remove('minecraft:planks', 'gtceu:treated_wood_planks');
     event.remove('minecraft:wooden_slabs', 'gtceu:treated_wood_slab');
 
@@ -34,6 +40,44 @@ ServerEvents.tags('item', event => {
     event.add('curios:charm', 'kubejs:abydos_talisman');
     event.add('curios:head', 'kubejs:nether_talisman');
     event.add('curios:back', 'kubejs:end_talisman');
+
+    //Vintage Tag Removals
+    //Sheets
+    ['aluminum','andesite','cast_iron','palladium','pig_iron','rhodium','rose_gold','vanadium'].forEach(type=>{
+    event.remove(`forge:plates`, `vintage:${type}_sheet`);
+    event.remove(`forge:plates/${type}`, `vintage:${type}_sheet`);
+    });
+    //Rods
+    ['aluminum','andesite','cast_iron','palladium','pig_iron','rhodium','rose_gold','vanadium','constantan','nickel'].forEach(type=>{
+    event.remove(`forge:rods`, `vintage:${type}_sheet`);
+    event.remove(`forge:rods/${type}`, `vintage:${type}_sheet`);
+    });
+    //Wires
+    ['aluminum','andesite','cast_iron','palladium','pig_iron','rhodium','rose_gold','vanadium','constantan',
+    'nickel','brass','bronze','invar','silver','steel','tin','zinc'].forEach(type=>{
+    event.remove(`forge:wires`, `vintage:${type}_sheet`);
+    event.remove(`forge:wires/${type}`, `vintage:${type}_sheet`);
+    });
+    //Materials
+    ['vanadium','sulfur'].forEach(type=>{
+    event.remove(`forge:storage_blocks/${type}`,`vintage:${type}_block`)
+    event.remove(`forge:storage_blocks`,`vintage:${type}_block`)
+    });
+    event.remove('balm:gems', 'vintage:sulfur');
+    event.remove('forge:gems', 'vintage:sulfur');
+    event.remove('forge:gems/sulfur', 'vintage:sulfur');
+    event.remove('balm:ingots', 'vintage:vanadium_ingot');
+    event.remove('forge:ingots', 'vintage:vanadium_ingot');
+    event.remove('forge:ingots/vanadium', 'vintage:vanadium_ingot');
+    event.remove('minecraft:beacon_payment_items', 'vintage:vanadium_ingot');
+    event.remove('minecraft:trim_materials', 'vintage:vanadium_ingot');
+    event.remove('forge:nuggets/sulfur','vintage:sulfur_chunk');
+    event.remove('forge:nuggets','vintage:sulfur_chunk');
+    event.remove('balm:nuggets','vintage:sulfur_chunk');
+    event.remove('forge:nuggets/vanadium','vintage:vanadium_nugget');
+    event.remove('forge:nuggets','vintage:vanadium_nugget');
+    event.remove('balm:nuggets','vintage:vanadium_nugget');
+
 
 });
 
@@ -138,7 +182,12 @@ ServerEvents.tags('block', event => {
     event.add('mineable/pickaxe', [
         'travelanchors:travel_anchor'
     ]);
-    
+
+    ['vanadium','sulfur'].forEach(type=>{
+    event.remove(`forge:storage_blocks/${type}`,`vintage:${type}_block`);
+    });
+    event.remove('minecraft:beacon_base_blocks', 'vintage:vanadium_block');
+
 });
 
 ServerEvents.tags('fluid', event => {
@@ -147,5 +196,6 @@ ServerEvents.tags('fluid', event => {
     ['shellite','twinite','dragonsteel'].forEach(thermalExtraSC => {
 	event.remove(`forge:molten_${thermalExtraSC}`, `thermal_extra:${thermalExtraSC}`);
     });
+    event.remove('forge:sulfuric_acid','vintage:sulfuric_acid');
 
 });

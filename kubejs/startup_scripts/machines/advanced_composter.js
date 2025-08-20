@@ -1,4 +1,4 @@
-global.recipe_types(event => {
+GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('composting')
         .category('primitive')
         .setEUIO('in')
@@ -8,7 +8,7 @@ global.recipe_types(event => {
         .setSound(GTSoundEntries.CHEMICAL);
 });
 
-global.machines(event => {
+GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('advanced_composter', 'simple')
         .tiers(GTValues.ULV)
         .definition((tier, builder) => {

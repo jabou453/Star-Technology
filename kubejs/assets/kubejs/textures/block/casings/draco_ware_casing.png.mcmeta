@@ -1,5 +1,9 @@
 {
+    "ldlib": {
+        "connection": "kubejs:block/casings/draco_ware_casing_ctm"
+    },
     "animation": {
-        "frametime": 3
+        "interpolate": true,
+        "frametime": 2
     }
 }

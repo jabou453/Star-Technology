@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
                 hazmat, 
                 '64x gtceu:ancient_runicalium_foil', 
                 '48x kubejs:naquadic_netherite_fibers', 
-                '4x #gtceu:circuits/uev',
+                '4x #gtceu:circuits/uhv',
                 '2x gtceu:uhv_field_generator', 
                 '4x kubejs:runic_stabilization_plating', 
                 '64x gtceu:fine_thorium_plut_duranide_241_wire'
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
                 nether_piece, 
                 '64x gtceu:starium_alloy_foil', 
                 '64x kubejs:naquadic_netherite_fibers', 
-                '4x #gtceu:circuits/uiv',
+                '4x #gtceu:circuits/uev',
                 '2x gtceu:uev_field_generator', 
                 '16x kubejs:runic_stabilization_plating', 
                 '64x gtceu:fine_aurourium_wire'
@@ -85,4 +85,28 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UIV]);
 
     });
+    
+    event.recipes.create.mechanical_crafting('kubejs:nether_talisman', [
+		'M     M',
+		'N M M N',
+		'N N N N',
+		'AAAAAAA',
+        'AAARAAA',
+        'DDDDDDD'
+	], {
+		M: 'gtceu:magmada_alloy_round',
+		N: 'gtceu:netherite_gold_skystone_alloy_rod',
+		A: 'gtceu:ancient_runicalium_ingot',
+		R: 'gtceu:exquisite_ruby_gem',
+        D: 'gtceu:adamantine_ingot'
+	}).id('start:mechanical_crafting/hell_crown');
+
+    event.recipes.gtceu.draco_infusion(id('elder_dragon_wings'))
+    .itemInputs('minecraft:elytra', 'gtceu:void_foil', 'gtceu:void_foil', 'gtceu:neutron_reflector', 
+        'gtceu:neutron_reflector', 'gtceu:void_rod', 'gtceu:void_rod')
+    .inputFluids('gtceu:dragon_breath 1200')
+    .itemOutputs('kubejs:end_talisman')
+    .duration(320)
+    .EUt(GTValues.VHA[GTValues.UV]);
+
 });

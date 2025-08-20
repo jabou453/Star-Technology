@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
         'createdieselgenerators:basin_fermenting/magma_cream', 'gtceu:research_station/1_x_gtceu_uv_energy_input_hatch', 'gtceu:research_station/1_x_gtceu_uv_energy_output_hatch',
         'toms_storage:adv_wireless_terminal', 'megacells:mega_crafting_unit', 'gtceu:shaped/resistor_wire', 'gtceu:shaped/resistor_wire_fine', 'gtceu:shaped/resistor_wire_fine_carbon',
         'gtceu:shaped/resistor_wire_carbon', 'gtceu:shaped/resistor_wire_charcoal', 'create:crushing/diorite_recycling', 'create:milling/charcoal', 'gtceu:macerator/macerate_sculk',
-        'thermal:gunpowder_4'
+        'thermal:gunpowder_4','gtceu:shaped/block_compress_marble','gtceu:shapeless/block_decompress_marble'
     ];
 
     const toRemoveType = ['thermal:sawmill', 'thermal:pulverizer', 'thermal:insolator', 'thermal:centrifuge', 'thermal:crucible', 'thermal:chiller', 'thermal:refinery',
