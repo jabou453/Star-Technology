@@ -59,7 +59,7 @@
 				"Updated the following mods: Curios API, Cyclopse Core, Embeddium, FTB Quests, GTCEu Modern, Jade, Kotlin for Forge, ModernFix, Mystical Agriculture, Not Enough Crashes, Supermartijn642's Core Lib, Thermal Extra."
 				"&cBeta 3 HOTFIX1:&r Fixed broken charges recipes. Fixed unreasonable rmps for the Electrico-Kinetic Ore Factory. Added a way to convert NuclearCraft plutonium239 and plutonium241 to their GregTech material. Removed coke to graphite recipe. Buffed chance for nether star essence in its recipe. Changed emerald and diamond crushed ore from string mesh to flint mesh."
 				"&cBeta 3 HOTFIX 2:&r Changed carbon brushes recipe from coke to charcoal. Added Create Diesel Generators to fix the imposibility to make a proper create steam engine. Added recipe for create belts from rubber. Reduced durations of several thermal augments. Added press recipes for some materials. Changed ender pouch recipe from leather to carbon fiber plates."
-				"&cBeta 3 HOTFIX 3:&r Added the mod Foad My F***ing Tags. Fixed several recipes using double plates. Fixed NuclearCraft fuel recipes. Fixed some mystical agriculture recipes. Fixed stirling dynamo recipe."
+				"&cBeta 3 HOTFIX 3:&r Added the mod Load My F***ing Tags. Fixed several recipes using double plates. Fixed NuclearCraft fuel recipes. Fixed some mystical agriculture recipes. Fixed stirling dynamo recipe."
 				"&l&bChangelogs after beta 3 are available on the official discord server.&r&r"
 			]
 			icon: "minecraft:writable_book"
