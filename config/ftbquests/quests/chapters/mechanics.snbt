@@ -49,7 +49,7 @@
 			description: [
 				"Worried your multiblock extruder is going to use the wrong cast? Well theres a feature to stop that!"
 				""
-				"If you enable distinct buses on every input bus on a multiblock then it will seperate the ingredients that's stored in each one. "
+				"If you enable distinct buses on every input bus on a multiblock then it will seperate the ingredients that's stored in each one."
 				"This means that if you insert a material into the bus with a certain cast, it can only ever use that cast and never any in other buses."
 			]
 			icon: "gtceu:mv_input_bus"
@@ -66,7 +66,7 @@
 		{
 			dependencies: ["6EBA06E5F9B25100"]
 			description: [
-				"If you put two Energy Hatches onto a multiblock, it will allow you to \"Overclock\" the machine to the next voltage tier. "
+				"If you put two Energy Hatches onto a multiblock, it will allow you to \"Overclock\" the machine to the next voltage tier."
 				"This is used quite a lot in the EBF to give you access to the next voltage tier of material but can be used on almost any other multiblock."
 				""
 				"Examples of multiblocks that cannot form with two energy hatches is the Circuit and Normal Assembler to not allow progress skipping."

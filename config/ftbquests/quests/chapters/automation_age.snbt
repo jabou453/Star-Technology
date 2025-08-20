@@ -701,7 +701,7 @@
 				"77303F30F0A44393"
 			]
 			description: [
-				"Allows you to turn RF into &5EV&r power. "
+				"Allows you to turn RF into &5EV&r power."
 				""
 				"Oh ya and 64A converters exist from now on."
 			]
@@ -1061,7 +1061,7 @@
 		{
 			dependencies: ["73931EAA3EC5C9A9"]
 			description: [
-				"Allows you to scan your surrounding chunks for fluids. "
+				"Allows you to scan your surrounding chunks for fluids."
 				""
 				"Spoilers, its going to be oil."
 			]
@@ -1241,7 +1241,7 @@
 				"74749B089D50329C"
 			]
 			description: [
-				"This is the &9IV&r material. "
+				"This is the &9IV&r material."
 				""
 				"You are going to need a lot of this, just like every other main voltage material."
 			]
@@ -2148,7 +2148,7 @@
 				"06FCA7209B892A81"
 			]
 			description: [
-				"The 5th tier of Coils. "
+				"The 5th tier of Coils."
 				""
 				"These will give you the heat to make HSS-E and HSS-S ingots. That's not going to get confusing at all."
 			]

@@ -1194,7 +1194,7 @@
 		{
 			dependencies: ["261174370DC87FCB"]
 			description: [
-				"Super Tanks store a large amount of liquids. "
+				"Super Tanks store a large amount of liquids."
 				"However, they do need Polyethylene to be made. Check the Processing lines chapter for more information."
 			]
 			id: "1A9E5F3F6CE13465"
