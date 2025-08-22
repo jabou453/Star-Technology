@@ -122,7 +122,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.advanced_chemistry(id('platinum_yttrium_composite'))
         .itemInputs('4x gtceu:uranium_triplatinum_dust', '26x gtceu:yttrium_barium_cuprate_dust', '12x gtceu:carbon_dust')
-        .itemOutputs('22x gtceu:platinum_yttrium_composite_dust', '3x gtceu:uranite_dust')
+        .itemOutputs('22x gtceu:platinum_yttrium_composite_dust', '3x gtceu:uraninite_dust')
         .outputFluids('gtceu:carbon_dioxide 6000')
         .duration(152 * 22)
         .EUt(GTValues.VA[GTValues.UHV]);
