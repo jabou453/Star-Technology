@@ -1,5 +1,5 @@
 // priority = 10
-debugMode = false
+// debugMode = false //comment out when not being used
 
 global.devLogger = (message) => {
     if (debugMode) {

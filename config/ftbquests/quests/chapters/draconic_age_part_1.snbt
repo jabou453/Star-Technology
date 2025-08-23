@@ -1005,12 +1005,12 @@
 				"6A82CC9F01960097"
 				"31F87896FF834E63"
 			]
-			description: ["Not added till Theta"]
+			description: [""]
 			id: "09B55AFE7C06EC82"
 			tasks: [{
-				id: "3C1633006F6ECB70"
-				title: "Abyssal Room"
-				type: "checkmark"
+				id: "054C06846B9D4D16"
+				item: "start_core:abyssal_containment_room"
+				type: "item"
 			}]
 			x: 2.0d
 			y: 2.0d
