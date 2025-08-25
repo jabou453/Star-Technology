@@ -194,6 +194,7 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('aurourium').setFormula('*A*');
     GTMaterials.get('starium_alloy').setFormula('*✧*4(Ke6Nq2C)2El2');
     GTMaterials.get('nyanium').setFormula('*A*7(URhNq2)4(Mg3N2)*Nr*2');
+    GTMaterials.get('maxwellium').setFormula('∅(*A*7(URhNq2)4(Mg3N2)*Nr*2)∅')
     GTMaterials.get('low_entropy_voidic_excression').setFormula('∅-');
     GTMaterials.get('moderate_entropy_voidic_excression').setFormula('[∅]');
     GTMaterials.get('high_entropy_voidic_excression').setFormula('∅+');
@@ -224,6 +225,18 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('platinum_group_sludge').setFormula('Pt?');
     GTMaterials.get('draconyallium').setFormula('🜍Dr68Ag20O94N76🜍');
     GTMaterials.get('draco_abyssal').setFormula('🜍∅🜍');
+    GTMaterials.get('silver_sulfate').setFormula('Ag2(SO4)');
+    GTMaterials.get('chromium_sulfate').setFormula('Cr2(SO4)3');
+    GTMaterials.get('sparse_electron_akreyrium').setFormula('Ak(?e?)?');
+    GTMaterials.get('dense_electron_akreyrium').setFormula('Ak(e)?');
+    GTMaterials.get('sparse_muon_akreyrium').setFormula('Ak(?μ?)?');
+    GTMaterials.get('dense_muon_akreyrium').setFormula('Ak(μ)?');
+    GTMaterials.get('sparse_tau_akreyrium').setFormula('Ak(?τ?)?');
+    GTMaterials.get('dense_tau_akreyrium').setFormula('Ak(τ)?');
+    GTMaterials.get('lepton_sparse_akreyrium').setFormula('Ak(?ℓ?)?');
+    GTMaterials.get('lepton_dense_akreyrium').setFormula('Ak(ℓ)?');
+    GTMaterials.get('echo_shard').setFormula('Ec');
+    GTMaterials.get('zavaritskite').setFormula('(BiO)F');
 
 });
 
@@ -429,8 +442,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).dust().liquid().ore(2, 1).components(elements).color(color).flags(flags);
     }
     
-    const compDustOre = (name, elements, color) => {
-        event.create(name).dust().ore(2, 1).components(elements).color(color).flags(no_decomp);
+    const compDustOre = (name, elements, color, flags) => {
+        event.create(name).dust().ore(2, 1).components(elements).color(color).flags(flags);
     }
     
     const compGemOre = (name, elements, color, icon) => {
@@ -445,7 +458,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).ingot().fluid().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
 
-    const quCompInfusions = (name, color) => {
+    const noCompFluid = (name, color) => {
         event.create(name).fluid().color(color);
     }
 
@@ -669,7 +682,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDustLiquidOre('zapolite', ['2x zapolgium', '4x iodine', '2x aluminium', '5x oxygen'], 0xcc0099, [no_decomp]);
 
-    compDustOre('lautarite', ['1x calcium', '2x iodine', '6x oxygen'], 0x6666ff);
+    compDustOre('lautarite', ['1x calcium', '2x iodine', '6x oxygen'], 0x6666ff, [no_decomp]);
 
     compDustLiquidOre('iodargyrite', ['1x silver', '1x iodine'], 0x8080ff, [no_decomp]);
 
@@ -683,21 +696,23 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDustLiquidOre('tiemannite', ['1x mercury', '1x selenium'], 0xcc0066, [no_decomp]);
 
-    compDustOre('klockmannite', ['1x copper', '1x selenium'], 0x009999);
+    compDustOre('klockmannite', ['1x copper', '1x selenium'], 0x009999, [no_decomp]);
 
-    compDustOre('stibiopalladinite', ['5x palladium', '2x antimony'], 0x333399);
+    compDustOre('stibiopalladinite', ['5x palladium', '2x antimony'], 0x333399, [no_decomp]);
 
-    compDustOre('berzelianite', ['2x copper', '1x selenium'], 0x990000, []);
+    compDustOre('berzelianite', ['2x copper', '1x selenium'], 0x990000, [no_decomp]);
 
-    compDustOre('umangite', ['3x copper', '2x selenium'], 0x006699, []);
+    compDustOre('umangite', ['3x copper', '2x selenium'], 0x006699, [no_decomp]);
 
-    compDustOre('aguilarite', ['3x silver', '1x selenium', '1x sulfur'], 0xff5050, []);
+    compDustOre('aguilarite', ['3x silver', '1x selenium', '1x sulfur'], 0xff5050, [no_decomp]);
 
     compDustLiquidOre('strontianite', ['1x strontium', '1x carbon', '3x oxygen'], 0xe6ffff, []);
 
     compGemOre('celestine', ['1x strontium', '1x carbon', '4x oxygen'], 0xe6ffff, GEM_VERTICAL);
 
     compDust('polybasite', ['12x silver', '4x copper', '2x arsenic', '13x sulfur'], 0xcc6600, []);
+
+    compDustOre('zavaritskite',['1x bismuth', '1x oxygen', '1x fluorine'], 0xE7D795, []);
 
     compLiquidTemp('abydos_titanite_rich_magma', 3520, ['6x titanite', '2x calaverite','2x sylvanite', '2x tiemannite', '1x strontianite'], 0xe65c00, [no_decomp]);
 
@@ -980,13 +995,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('cerium_4_sulfate', ['1x cerium', '2x sulfate'], 0x828685, [no_decomp]);
 
-    compDust('chromium_sulfate', ['2x chromium', '3x sulfate'], 0xEEE9DB, []);
+    compDust('chromium_sulfate', ['2x chromium', '3x sulfur', '12x oxygen'], 0xEEE9DB, []);
 
     compDust('cerium_dioxide', ['1x cerium', '2x oxygen'], 0xB9CFDB, []);
 
     compDust('seaborgium_trisulfate', ['1x seaborgium', '3x sulfate'], 0x8AA89B, [no_decomp]);
 
-    compDust('seaborgium_trioxide', ['1x seaborgium', '3x oxygen'], 0x4B827B, []);
+    compDust('seaborgium_trioxide', ['1x seaborgium', '3x oxygen'], 0x4B827B, [no_decomp]);
 
     compDust('sodium_seaborgate', ['2x sodium', '1x seaborgium', '4x oxygen'], 0x298B80, [no_decomp]);
 
@@ -1004,7 +1019,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('flerovium_hexadecafluoride_di_sulfur_trioxide', ['1x flerovium', '2x sulfur_trioxide', '16x fluorine'], 0x36413F, [no_decomp]);
 
-    compDust('silver_sulfate', ['2x silver', '1x sulfate'], 0xD4CF91, []);
+    compDust('silver_sulfate', ['2x silver', '1x sulfur', '4x oxygen'], 0xD4CF91, []);
 
     compDust('flerovium_hexadecafluoride', ['1x flerovium', '16x fluorine'], 0x5A6759, [no_decomp]);
 
@@ -1218,7 +1233,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compLiquidStill('sparse_electron_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
 
-    compLiquidStill('dense_electron_akreyrium', ['1x utopian_akreyrium', '1x mystery', 'alternating_phase_electron_infusion_flux'], [no_decomp]);
+    compLiquidStill('dense_electron_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
 
     // Resource Gen
     compLiquid('brackish_water', ['1x water', '1x mystery'], 0x459ea4, [no_decomp]);
@@ -1303,11 +1318,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid('nether_tempered_basalz', ['1x mystery'], 0x9f2414, [no_decomp]);
 
     // Quantrum Comporessor Infusions
-    quCompInfusions('intangibility_infusion', 0x00AAAA);
+    noCompFluid('intangibility_infusion', 0x00AAAA);
 
-    quCompInfusions('paradoxicity_infusion', 0xAA00AA);
+    noCompFluid('paradoxicity_infusion', 0xAA00AA);
 
-    quCompInfusions('causality_infusion', 0xFFAA00);
+    noCompFluid('causality_infusion', 0xFFAA00);
 
     // Runic Convergence Infusion
     /*
@@ -1520,7 +1535,54 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, no_decomp, no_abs_recipe)
         .rotorStats(72000, 108, 2, 96000); //11.25x (10x * 12.5%) power output of Runicalium but only .15x the efficiency (10% * 1.5x), nets 1.6875x stronger than runicallium and does "blitz" outputs
 
+    //DES + PBD Line
+    noCompFluid('draconic_hormone_residue',0x6C4D6E);
+
+    noCompFluid('drac_endrocritic_medium',0x75577A);
+
+    noCompFluid('drac_aurouric_endrocrinal_medium',0x6678A6);
+
+    noCompFluid('precursor_serum',0x8C6FA3);
+
+    noCompFluid('abyssal_nutrient_blend',0x4A3B33);
+
+    noCompFluid('condensed_abyssal_nutrient_blend',0x5C4038);
+
+    noCompFluid('amino_primed_medium',0x705A64);
+
+    noCompFluid('drac_peptide_amino_residue',0x7A5C82);
+
+    noCompFluid('voidrenin',0x1A1A1A);
+
+    noCompFluid('terrathroxin',0x3F5A3F);
+
+    noCompFluid('stormcallin',0x4A6C82);
+
+    noCompFluid('cryokinase',0x7BA6B3);
+
+    noCompFluid('ignisferin',0xA6533A);
+
+    noCompFluid('breath_hormone_complex',0x8C7080);
+
+    noCompFluid('hemavyrin',0x6B2A2A);
+
+    noCompFluid('aethermetin',0x7A6F9E);
+
+    noCompFluid('metavorexin',0x5C3A73);
+
+    noCompFluid('dracotropin',0x4D6A59);
+
+    noCompFluid('pyrothyin',0x8C4D3A);
+
+    noCompFluid('growth_hormone_complex',0x756B7D);
+
     //UXV Materials
+    compLiquid('maxwellium','1x mystery',0x37374C,[no_decomp]);
+
+    compDust('thallium_antimonide',['1x thallium','1x antimony'],0xADC5E3,[])
+    
+    compLiquidStill('lepton_dense_akreyrium', ['1x utopian_akreyrium', '1x mystery'], [no_decomp]);
+
     conductor('lepton_resonant_thallium_antimonide', ['1x thallium', '1x antimony', '1x mystery'], 0x74638F, DULL, [18250, 'highest', VA('uev'), 1800], [V('uxv'), 7, 48, false], [bolt_and_screw,spring,small_spring, no_abs_recipe, no_decomp, fine_wire]);
 
     //Plasmas

@@ -3,8 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('large_farm')
         .category('primitive')
         .setMaxIOSize(1, 2, 0, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.SAW_TOOL);
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT);
 
 });
 

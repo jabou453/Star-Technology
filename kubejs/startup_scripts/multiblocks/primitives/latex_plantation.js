@@ -3,8 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('latex_plantation')
         .category('primitive')
         .setMaxIOSize(3, 0, 0, 1)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.SOFT_MALLET_TOOL);
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW , FillDirection.LEFT_TO_RIGHT);
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {

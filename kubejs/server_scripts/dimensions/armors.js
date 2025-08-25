@@ -1,4 +1,3 @@
-
 ServerEvents.recipes(event => {
 
     const id = global.id;
@@ -85,4 +84,28 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UIV]);
 
     });
+    
+    event.recipes.create.mechanical_crafting('kubejs:nether_talisman', [
+		'M     M',
+		'N M M N',
+		'N N N N',
+		'AAAAAAA',
+        'AAARAAA',
+        'DDDDDDD'
+	], {
+		M: 'gtceu:magmada_alloy_round',
+		N: 'gtceu:netherite_gold_skystone_alloy_rod',
+		A: 'gtceu:ancient_runicalium_ingot',
+		R: 'gtceu:exquisite_ruby_gem',
+        D: 'gtceu:adamantine_ingot'
+	}).id('start:mechanical_crafting/hell_crown');
+
+    event.recipes.gtceu.draco_infusion(id('elder_dragon_wings'))
+    .itemInputs('minecraft:elytra', 'gtceu:void_foil', 'gtceu:void_foil', 'gtceu:neutron_reflector', 
+        'gtceu:neutron_reflector', 'gtceu:void_rod', 'gtceu:void_rod')
+    .inputFluids('gtceu:dragon_breath 1200')
+    .itemOutputs('kubejs:end_talisman')
+    .duration(320)
+    .EUt(GTValues.VHA[GTValues.UV]);
+
 });

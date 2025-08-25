@@ -122,7 +122,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.advanced_chemistry(id('platinum_yttrium_composite'))
         .itemInputs('4x gtceu:uranium_triplatinum_dust', '26x gtceu:yttrium_barium_cuprate_dust', '12x gtceu:carbon_dust')
-        .itemOutputs('22x gtceu:platinum_yttrium_composite_dust', '3x gtceu:uranite_dust')
+        .itemOutputs('22x gtceu:platinum_yttrium_composite_dust', '3x gtceu:uraninite_dust')
         .outputFluids('gtceu:carbon_dioxide 6000')
         .duration(152 * 22)
         .EUt(GTValues.VA[GTValues.UHV]);
@@ -266,13 +266,118 @@ ServerEvents.recipes(event => {
         C: 'kubejs:helish_star'
     }).id('start:shaped/end_crystal');
 
+    // Draconic
     event.recipes.gtceu.fermenter(id('dragon_cell_growth'))
-        .chancedInput('kubejs:draconic_stem_cells', 8000, 0)
+        .itemInputs('kubejs:draconic_stem_cells')
         .inputFluids('gtceu:sterilized_growth_medium 50000', 'gtceu:radon 75000', 'gtceu:ender_air 500000')
-        .itemOutputs('kubejs:draconic_stem_cells')
-        .outputFluids('gtceu:dragon_breath 100')
+        .outputFluids('gtceu:dragon_breath 500')
         .duration(2400)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .EUt(GTValues.VHA[GTValues.UIV]);
+
+    event.recipes.gtceu.injection_mixer(id('dragon_breath'))
+        .itemInputs('gtceu:tiny_draconyallium_dust')
+        .inputFluids('gtceu:radon 74950','gtceu:breath_hormone_complex 50')
+        .outputFluids('gtceu:dragon_breath 1500')
+        .duration(375)
+        .EUt(GTValues.V[GTValues.UIV] * .3)
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM);
+
+    event.recipes.gtceu.forge_hammer(id('scale_recycling'))
+        .itemInputs('mysticalagradditions:dragon_scale')
+        .itemOutputs('2x kubejs:draconic_scale_cells')
+        .duration(200)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.cutter(id('egg_separation'))
+        .itemInputs('minecraft:dragon_egg')
+        .inputFluids('gtceu:neutronium 10')
+        .itemOutputs('kubejs:draconic_embryo','12x kubejs:dragon_egg_shard')
+        .duration(1000)
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
+        .EUt(GTValues.VHA[GTValues.UIV]);
+
+    event.recipes.gtceu.macerator(id('shard_decomp'))
+        .itemInputs('kubejs:dragon_egg_shard')
+        .itemOutputs('2x kubejs:draconic_scale_cells','gtceu:small_draconyallium_dust','gtceu:tiny_draconyallium_dust')
+        .duration(400)
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
+        .EUt(GTValues.VA[GTValues.UHV]);
+
+    event.recipes.gtceu.autoclave(id('embryo_decomp'))
+        .itemInputs('kubejs:draconic_embryo')
+        .inputFluids('gtceu:nether_star_concentrate 320')
+        .itemOutputs('16x kubejs:secreting_draconic_cells','4x kubejs:draconic_stem_cells')
+        .duration(600)
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
+        .EUt(GTValues.VHA[GTValues.UIV]);
+
+    event.recipes.gtceu.chemical_reactor(id('better_draco_stem_cells'))
+        .itemInputs('gtceu:small_draconyallium_dust')
+        .inputFluids('gtceu:abyssal_nutrient_blend 500','gtceu:draconic_enrichment_serum 500')
+        .itemOutputs('48x kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 400')
+        .duration(300)
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.large_chemical_reactor(id('better_draco_stem_cells'))
+        .itemInputs('gtceu:draconyallium_dust')
+        .inputFluids('gtceu:abyssal_nutrient_blend 500','gtceu:draconic_enrichment_serum 500')
+        .itemOutputs('48x kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 400')
+        .duration(300)
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.assembly_line(id('abyssal_containment_room'))
+        .itemInputs(
+            'gtceu:draco_abyssal_frame','8x kubejs:draco_ware_casing','4x kubejs:abyssal_inductor','12x kubejs:uiv_computational_matrix',
+            '2x kubejs:uiv_micropower_router','8x kubejs:uiv_microfluidic_flow_valve','64x gtceu:fine_rhenium_super_composite_alloy_wire','4x gtceu:uiv_field_generator',
+            '64x kubejs:uepic_chip','64x kubejs:uepic_chip','64x kubejs:uepic_chip','32x kubejs:uepic_chip'
+        )
+        .inputFluids(
+            'gtceu:indium_tin_lead_cadmium_soldering_alloy 46080',
+            'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 8640',
+            'gtceu:perfluoroelastomer_rubber 5760'
+        )
+        .itemOutputs('start_core:abyssal_containment_room')
+        .duration(800)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('kubejs:abyssal_inductor_hull'))
+                .EUt(GTValues.VHA[GTValues.UIV])
+                .CWUt(224)
+            )
+        .EUt(GTValues.VA[GTValues.UIV]);
+
+    // Lepton TlSb
+    event.recipes.gtceu.mixer(id('thallium_antimonide'))
+        .itemInputs('gtceu:thallium_dust','gtceu:antimony_dust')
+        .itemOutputs('2x gtceu:thallium_antimonide_dust')
+        .duration(160)
+        .EUt(GTValues.VHA[GTValues.UV] * 3);
+
+    event.recipes.gtceu.quantum_compressor_infusion(id('lepton_akreyrium_catalyst'))
+        .itemInputs('kubejs:crystalline_akreyrium')
+        .inputFluids('gtceu:dense_electron_akreyrium 100','gtceu:dense_muon_akreyrium 200','gtceu:dense_tau_akreyrium 200')
+        .itemOutputs('kubejs:leptonic_akreyrium_catalyst')
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.injection_mixer(id('lepton_dense_akreyrium'))
+        .itemInputs('kubejs:leptonic_akreyrium_catalyst')
+        .inputFluids('gtceu:lepton_flux_akreyrium 500')
+        .outputFluids('gtceu:lepton_dense_akreyrium 1000')
+        .duration(240)
+        .EUt(GTValues.VHA[GTValues.UHV]);
+
+    event.recipes.gtceu.folding_akreyrium_stabiliser(id('lepton_resonant_thallium_antimonide'))
+        .itemInputs('gtceu:gray_glass_lens','gtceu:thallium_antimonide_dust')
+        .inputFluids('gtceu:lepton_dense_akreyrium 1000')
+        .itemOutputs('gtceu:gray_glass_lens','gtceu:lepton_resonant_thallium_antimonide_dust')
+        .outputFluids('gtceu:utopian_akreyrium 750','gtceu:lepton_coalescing_superalloy 416')
+        .duration(240)
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
 });

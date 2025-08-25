@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer(id('sky_dust'))
         .itemInputs('6x gtceu:stone_dust', '4x gtceu:ender_pearl_dust', '1x minecraft:redstone', '1x minecraft:glowstone_dust')
-        .itemOutputs('3x ae2:sky_dust') //keep at low output
+        .itemOutputs('ae2:sky_dust') //keep at low output
         .circuit(4)
         .duration(360)
         .EUt(112);

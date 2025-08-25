@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
         .itemInputs(`7x gtceu:stibiopalladinite_dust`)
         .inputFluids('gtceu:carbon_acid 1000')
         .outputFluids('gtceu:steam 1000','gtceu:carbon_dioxide')
-        .itemOutputs(`2x gtceu:antimony_dust`,'5x gtceu:lead_dust')
+        .itemOutputs(`2x gtceu:antimony_dust`,'5x gtceu:palladium_dust')
         .duration(200)
         .blastFurnaceTemp(3249)
         .EUt(GTValues.VHA[GTValues.EV]);

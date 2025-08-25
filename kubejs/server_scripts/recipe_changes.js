@@ -437,16 +437,6 @@ ServerEvents.recipes(event => {
         E: 'gtceu:energium_dust'
     }).id('start:shaped/neodymium_magnet');
 
-    //plates
-    [
-        {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
-        {mod: 'minecraft', metals: ['iron', 'gold', 'copper']}
-    ].forEach(type => {
-        type.metals.forEach(foo => {
-            event.recipes.create.pressing(`gtceu:${foo}_plate`,`${type.mod}:${foo}_ingot`).id(`start:pressing/${foo}_plate`);
-        });
-    });
-
     event.shaped(Item.of('16x minecraft:stick'), [
         'L',
         'L'
@@ -473,6 +463,10 @@ ServerEvents.recipes(event => {
     });
     
     })()}
+
+    // Andesite Alloy compression
+    event.shapeless('9x create:andesite_alloy', ['create:andesite_alloy_block']).id('start:shapeless/andesite_alloy_block_decomp');
+
     //Added Tools
 
         //Mallet + Plunger
@@ -657,7 +651,7 @@ ServerEvents.recipes(event => {
     // Zalloy, Magmada, Abyssal
 
     event.recipes.gtceu.assembler(id('zalloy_coil_block'))
-        .itemInputs('gtceu:astrenalloy_nx_frame','8x gtceu:zalloy_double_wire','8x gtceu:lepton_coalescing_superalloy_foil',
+        .itemInputs('gtceu:neutronium_frame','8x gtceu:zalloy_double_wire','8x gtceu:zirconium_foil',
             '32x gtceu:fine_ruthenium_trinium_americium_neutronate_wire','16x gtceu:neutronium_silicon_carbide_foil')
         .inputFluids('gtceu:tritanium 144')
         .itemOutputs('kubejs:zalloy_coil_block')
@@ -679,6 +673,38 @@ ServerEvents.recipes(event => {
         .itemOutputs('kubejs:abyssal_alloy_coil_block')
         .duration(1200)
         .EUt(31457280);
+
+    // Bulk Blast Chiller and RHF Adjustments
+    event.remove({output:'gtceu:mega_vacuum_freezer'});
+    event.remove({output:'gtceu:mega_blast_furnace'});
+
+    event.recipes.gtceu.assembly_line(id('mega_vacuum_freezer'))
+        .itemInputs('gtceu:aluminium_frame','2x #gtceu:circuits/uv','4x gtceu:dense_rhodium_plated_palladium_plate','2x gtceu:zpm_field_generator',
+            '4x gtceu:niobium_titanium_normal_fluid_pipe','32x gtceu:fine_europium_wire','6x gtceu:hsse_screw')
+        .inputFluids('gtceu:soldering_alloy 1152')
+        .itemOutputs('gtceu:mega_vacuum_freezer')
+        .stationResearch(
+        researchRecipeBuilder => researchRecipeBuilder
+            .researchStack(Item.of('gtceu:vacuum_freezer'))
+            .EUt(GTValues.VHA[GTValues.ZPM])
+            .CWUt(32)
+        )
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UV]);
+
+    event.recipes.gtceu.assembly_line(id('mega_blast_furnace'))
+        .itemInputs('gtceu:tungsten_carbide_frame','2x #gtceu:circuits/uhv','4x gtceu:dense_naquadah_alloy_plate','2x gtceu:uv_field_generator',
+            '4x gtceu:naquadah_spring','32x gtceu:fine_americium_wire','6x gtceu:hsss_screw')
+        .inputFluids('gtceu:soldering_alloy 1152')
+        .itemOutputs('gtceu:mega_blast_furnace')
+        .stationResearch(
+        researchRecipeBuilder => researchRecipeBuilder
+            .researchStack(Item.of('gtceu:electric_blast_furnace'))
+            .EUt(GTValues.VHA[GTValues.UV])
+            .CWUt(96)
+        )
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
     })()}
 
@@ -707,7 +733,9 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(GTValues.VA[GTValues.ZPM]);
 
-    
+    ['iron','steel','neodymium','samarium','zapolgium','pure_netherite','holmium'].forEach(Magnetic=>{
+    event.remove({id: `gtceu:alloy_smelter/alloy_smelt_magnetic_${Magnetic}_dust_to_block`});
+    });
 
     // Mycelium Leather
     event.recipes.create.pressing('kubejs:compressed_mycelium', 'kubejs:mycelium_growth').id('start:pressing/compressed_mycelium');
@@ -746,6 +774,7 @@ ServerEvents.recipes(event => {
         .duration(13.2 * 20 * 2)
         .EUt(30);
 
+    event.remove({id:'gtceu:compressor/compress_plate_dust_obsidian'});
     event.recipes.gtceu.compressor(id('obsidian_plate'))
         .itemInputs('gtceu:obsidian_dust')
         .itemOutputs('gtceu:obsidian_plate')
@@ -818,7 +847,7 @@ ServerEvents.recipes(event => {
         ['enriched_naquadah','neutronium'].forEach(type=>{
 
             event.shapeless(Item.of(`start_core:${type}_${container}`), [
-                Item.of(`start_core:${type}_${container}`).ignoreNBT()
+                Item.of(`start_core:${type}_${container}`)
             ]);
 
         });
@@ -908,8 +937,7 @@ ServerEvents.recipes(event => {
     reachUpgrade('2','minecraft:glowstone_dust','minecraft:orange_dye',`effortlessbuilding:reach_upgrade1`);
     reachUpgrade('3','minecraft:amethyst_shard','minecraft:purple_dye',`effortlessbuilding:reach_upgrade2`);
 
-
-    event.recipes.gtceu.alloy_blast_smelter(id('indium_tin_lead_cadmium_soldering_alloy_no_gas'))
+    event.recipes.gtceu.alloy_blast_smelter(id('indium_tin_lead_cadmium_soldering_alloy'))
         .itemInputs('14x gtceu:indium_dust', '3x gtceu:tin_dust', '2x gtceu:lead_dust', '1x gtceu:cadmium_dust')
         .outputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 2880')
         .duration(280)
@@ -917,14 +945,15 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VH[GTValues.EV])
         .circuit(14);
 
-    event.recipes.gtceu.alloy_blast_smelter(id('indium_tin_lead_cadmium_soldering_alloy'))
-        .itemInputs('14x gtceu:indium_dust', '3x gtceu:tin_dust', '2x gtceu:lead_dust', '1x gtceu:cadmium_dust')
-        .inputFluids('gtceu:nitrogen 2000')
-        .outputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 2880')
-        .duration(280)
-        .blastFurnaceTemp(3000)
-        .EUt(GTValues.VH[GTValues.EV])
-        .circuit(24);
+    event.shaped('bingus:floppa_orb', [
+        'ABA',
+        'BCB',
+        'ABA'
+    ], {
+        A: '#minecraft:fishes',
+        B: 'minecraft:amethyst_shard',
+        C: 'minecraft:emerald'
+    }).id('start:shaped/floppa_orb');
 
     // REMOVING LARGE BOILERS BECAUSE ALL OUR FOOD KEEPS BLOWING UP
     event.remove({ id: /gtceu:.*_large_boiler/});
@@ -951,15 +980,3 @@ BlockEvents.rightClicked('minecraft:grass_block', event => {
 });
 })()
 }
-
-ServerEvents.tags('block', event => {
-    event.remove('mineable/pickaxe', [
-        'gtceu:ulv_barrel'
-    ]);
-    event.add('mineable/axe', [
-        'gtceu:ulv_barrel'
-    ]);
-    event.add('mineable/pickaxe', [
-        'travelanchors:travel_anchor'
-    ]);
-});

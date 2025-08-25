@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
         )
         .inputFluids(
             `${Solder} 125000`,
-            `${PEEK} 75000`,
+            `${PEDOT_PSS} 75000`,
             `${SGM} 50000`,
             `gtceu:isovol 28800`
         )
@@ -62,7 +62,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:draconic_enrichment_serum 8000')
         .itemOutputs('64x kubejs:awakened_draconic_wetware_circuit_board')
         .duration(1200)
-        .cleanroom(CleanroomType.STERILE_CLEANROOM) //Change to Abyssal
+        .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
         .EUt(GTValues.VHA[GTValues.UEV]);    
 
     const DracoCircuitAssembler = (type,output,ItemIn,FluidIn,Dur,eu,researchItem,cwu) => {

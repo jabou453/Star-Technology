@@ -10,7 +10,7 @@ PlayerEvents.tick(event => {
 
         if (player.age % 40 === 0) {
             effects.forEach(effect => {
-                player.potionEffects.add(effect, 60, 1, false, false)
+                player.potionEffects.add(effect, 60, 1, false, false);
             })
         }
 
@@ -19,12 +19,8 @@ PlayerEvents.tick(event => {
             event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 2 kubejs:heat_exhaustion`);
         }
 
-        if (global.packmode !== 'abydos'){
-            (() => {        
-                if (player.age % 200 === 0) {
-                    player.tell(Text.of('§eThe sands of Abydos are eroding you...').red())
-                }
-            })()
+        if (player.age % 200 === 0) {
+            player.tell(Text.translate('effects.sand_erosion.message'));
         }
 
     }
@@ -38,22 +34,20 @@ PlayerEvents.tick(event => {
 
         if (player.age % 40 === 0) {
             effects.forEach(effect => {
-                player.potionEffects.add(effect, 60, 1, false, false)
+                player.potionEffects.add(effect, 60, 1, false, false);
             })
         }
         
         if (player.age % 40 === 0) {
             if (player.getHealth() <= 2) {
                 event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 100 kubejs:radiation`);
-                // player.tell('big damage')
                 return
             }
             event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 4 kubejs:radiation`);
-                // player.tell(`small damage hp:${player.getHealth()}`)
         }
         
         if (player.age % 200 === 0) {
-            player.tell(Text.of('§cYou feel sick from radiation...').red())
+            player.tell(Text.translate('effects.radiation.message'));
         }
     }
     
@@ -63,7 +57,7 @@ PlayerEvents.tick(event => {
 
         if (player.age % 40 === 0) {
             effects.forEach(effect => {
-                player.potionEffects.add(effect, 60, 1, false, false)
+                player.potionEffects.add(effect, 60, 1, false, false);
             })
         }
     }
@@ -79,7 +73,6 @@ PlayerEvents.tick(event => {
             
             if (Math.random() > 0.95) {
                 event.server.runCommandSilent(`execute as ${event.player.username} run damage ${event.player.username} 100 kubejs:abyssal_pull`);
-                // player.tell('void dmg applied')
             }
         }
     }
