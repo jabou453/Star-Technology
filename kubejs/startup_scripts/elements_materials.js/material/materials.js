@@ -1610,4 +1610,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .plasma()
         .color(0xEFE987)
         .flags(no_decomp);
+
+    compLiquid('raw_silkworm_oil', [], 0x8B5A2B, [no_decomp]);
+    compLiquid('refined_silkworm_oil', [], 0xF5DE93, [no_decomp]);
+    compLiquid('silkworm_gel', [], 0xCDBE86, [no_decomp]);
+
 });

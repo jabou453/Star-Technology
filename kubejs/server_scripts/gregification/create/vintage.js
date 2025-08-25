@@ -103,8 +103,6 @@ ServerEvents.recipes(event => {
     vintage.pressurizing('thermal:cured_rubber', Fluid.of('gtceu:rubber', 144)).heatRequirement('lowheated').id(id('centrifugation/cured_rubber'));
 
     // Create Ore Proc
-    event.remove({id: 'create:splashing/red_sand'});
-
     [// Main, secondary, tertiary
         {mainOre: 'copper', secOre: 'gold', terOre: 'nickel'},
         {mainOre: 'iron', secOre: 'nickel', terOre: 'tin'},

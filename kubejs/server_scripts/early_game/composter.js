@@ -20,7 +20,13 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.composting(id(fuel.split(':')[1]))
             .itemInputs(`${fuel}`)
             .chancedOutput('minecraft:bone_meal', odds, 0)
+            .duration(42);
+
+        event.recipes.gtceu.composting_factory(id(fuel.split(':')[1]))
+            .itemInputs(`${fuel}`)
+            .chancedOutput('minecraft:bone_meal', odds, 0)
             .duration(42)
+            .EUt(7);
     };
     
     // 30%

@@ -128,7 +128,6 @@
     "block.gtceu.dimensional_destabiliser.tooltip.1": "Can use §3Parallel§r hatches",
     
     "block.gtceu.greenhouse.tooltip.0": "§7An electrical machine that stimulates the growth of plants, flowers and saplings, allowing you to more easily farm them.",
-    "block.gtceu.greenhouse.tooltip.1": "Has §6Perfect Overclock",
     
     "block.gtceu.latex_plantation.tooltip.0": "§7A multiblock that is way faster then the arboreal extractor for gathering latex",
     
@@ -1102,6 +1101,29 @@
     "gtceu.jei.bedrock_fluid.abydos_zapolite_rich_magma_deposit": "Abydos Zapolite-Rich Magma Deposit",
     "gtceu.jei.bedrock_fluid.highly_unstable_nether_magma_deposit": "Highly Unstable Nether Magma Deposit",
     "gtceu.jei.bedrock_fluid.crude_infernal_concentrate": "Crude Infernal Concentrate Deposit",
-    "gtceu.jei.bendrock_fluid.lava_dense": "Lava Deposit"
+    "gtceu.jei.bendrock_fluid.lava_dense": "Lava Deposit",
+
+    "block.gtceu.tree_synthesizer": "Tree Synthesizer",
+    "block.gtceu.tree_synthesizer.tooltip.0": "§7A larger greenhouse that provides ample space for gigantic trees to be grown, and felled.",
+    "block.gtceu.tree_synthesizer.tooltip.1": "Can use §3Parallel§r hatches",
+
+    "gtceu.industrial_fishery": "Industrial Fishery",
+    "block.gtceu.industrial_fishery": "Industrial Fishery",
+    "block.gtceu.industrial_fishery.tooltip.0": "§7A large scale industrial fishing complex that can quickly gather tons of your favorite marine lifeforms.",
+    "block.gtceu.industrial_fishery.tooltip.1": "Can use §3Parallel§r hatches",
+
+    "gtceu.hydroponic_garden": "Hydroponic Garden",
+    "block.gtceu.hydroponic_garden": "Hydroponic Garden",
+    "block.gtceu.hydroponic_garden.tooltip.0": "§7A water based growing pod that can grow massive quantities of crops in seconds.",
+    "block.gtceu.hydroponic_garden.tooltip.1": "Can use §3Parallel§r hatches",
+    
+    "gtceu.composting_factory": "Composting Factory",
+    "block.gtceu.composting_factory": "Composting Factory",
+    "block.gtceu.composting_factory.tooltip.0": "§7A very quick composter that can provide you with enough bonemeal to last lifetimes.",
+    "block.gtceu.composting_factory.tooltip.1": "Can use §3Parallel§r hatches",
+
+    "material.gtceu.raw_silkworm_oil": "Raw Silkworm Oil",
+    "material.gtceu.refined_silkworm_oil": "Refined Silkworm Oil",
+    "material.gtceu.silkworm_gel": "Silkworm Gel"
 
 }

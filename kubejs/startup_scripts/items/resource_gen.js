@@ -98,4 +98,11 @@ StartupEvents.registry('item', event => {
         .displayName('Voidic Reinforced Mesh')
         .texture('kubejs:item/voidic_reinforced_mesh');
 
+    // Fishery
+    event.create('dried_silkworm_dough')
+        .texture('kubejs:item/resource_gen/dried_silkworm_dough');
+
+    event.create('silkworm_oil_pellet')
+        .texture('kubejs:item/resource_gen/silkworm_oil_pellet');
+
 });
