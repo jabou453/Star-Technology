@@ -437,16 +437,6 @@ ServerEvents.recipes(event => {
         E: 'gtceu:energium_dust'
     }).id('start:shaped/neodymium_magnet');
 
-    //plates
-    [
-        {mod: 'gtceu', metals: ['lead','silver','tin','zinc', 'brass','bronze','red_alloy','nickel','invar','soul_infused','cobalt_brass','wrought_iron','potin']},
-        {mod: 'minecraft', metals: ['iron', 'gold', 'copper']}
-    ].forEach(type => {
-        type.metals.forEach(foo => {
-            event.recipes.create.pressing(`gtceu:${foo}_plate`,`${type.mod}:${foo}_ingot`).id(`start:pressing/${foo}_plate`);
-        });
-    });
-
     event.shaped(Item.of('16x minecraft:stick'), [
         'L',
         'L'
@@ -473,6 +463,10 @@ ServerEvents.recipes(event => {
     });
     
     })()}
+
+    // Andesite Alloy compression
+    event.shapeless('9x create:andesite_alloy', ['create:andesite_alloy_block']).id('start:shapeless/andesite_alloy_block_decomp');
+
     //Added Tools
 
         //Mallet + Plunger
@@ -853,7 +847,7 @@ ServerEvents.recipes(event => {
         ['enriched_naquadah','neutronium'].forEach(type=>{
 
             event.shapeless(Item.of(`start_core:${type}_${container}`), [
-                Item.of(`start_core:${type}_${container}`).ignoreNBT()
+                Item.of(`start_core:${type}_${container}`)
             ]);
 
         });
@@ -951,6 +945,16 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VH[GTValues.EV])
         .circuit(14);
 
+    event.shaped('bingus:floppa_orb', [
+        'ABA',
+        'BCB',
+        'ABA'
+    ], {
+        A: '#minecraft:fishes',
+        B: 'minecraft:amethyst_shard',
+        C: 'minecraft:emerald'
+    }).id('start:shaped/floppa_orb');
+
     // REMOVING LARGE BOILERS BECAUSE ALL OUR FOOD KEEPS BLOWING UP
     event.remove({ id: /gtceu:.*_large_boiler/});
 });
@@ -976,15 +980,3 @@ BlockEvents.rightClicked('minecraft:grass_block', event => {
 });
 })()
 }
-
-ServerEvents.tags('block', event => {
-    event.remove('mineable/pickaxe', [
-        'gtceu:ulv_barrel'
-    ]);
-    event.add('mineable/axe', [
-        'gtceu:ulv_barrel'
-    ]);
-    event.add('mineable/pickaxe', [
-        'travelanchors:travel_anchor'
-    ]);
-});
