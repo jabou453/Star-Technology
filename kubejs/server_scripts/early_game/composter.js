@@ -16,6 +16,18 @@ ServerEvents.recipes(event => {
     })()
     }   
 
+    event.shaped('gtceu:composting_factory',[
+        'AAB',
+        'BCD',
+        'EFE'],{
+        A: '#gtceu:circuits/iv',
+        B: 'gtceu:iv_electric_piston',
+        C: 'gtceu:ulv_advanced_composter',
+        D: 'gtceu:iv_conveyor_module',
+        E: 'gtceu:tungsten_single_cable',
+        F: 'gtceu:iv_electric_motor'
+    }).id('start:shaped/composting_factory');
+
     const composting = (odds, fuel) => {
         event.recipes.gtceu.composting(id(fuel.split(':')[1]))
             .itemInputs(`${fuel}`)

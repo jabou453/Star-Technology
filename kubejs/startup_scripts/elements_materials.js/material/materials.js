@@ -237,6 +237,8 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('lepton_dense_akreyrium').setFormula('Ak(ℓ)?');
     GTMaterials.get('echo_shard').setFormula('Ec');
     GTMaterials.get('zavaritskite').setFormula('(BiO)F');
+    GTMaterials.get('liquefied_nutrient_paste').setFormula('(PO4)4((Ca5(PO4)3Cl)15K5(SO3)N)5(NH3)');
+    GTMaterials.get('biostimulating_mixture').setFormula('(H4(SiO4))2C4((PO4)4((Ca5(PO4)3Cl)15K5(SO3)N)5(NH3))5?(C3H8O3)3');
 
 });
 
@@ -669,7 +671,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('copper_chloride', ['1x copper', '1x chlorine'], 0xffffff, []);
 
-    compLiquid('npk_solution', [], 0xb8c3f5, []);
+    compLiquid('npk_solution', ['15x apatite', '5x potassium', '1x sulfur_trioxide', '1x nitrogen', '2x water'], 0xb8c3f5, []);
 
     compLiquid('cupric_chloride_solution', ['1x copper_chloride', '1x hydrochloric_acid'], 0x336600, []);
 
@@ -1614,5 +1616,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquid('raw_silkworm_oil', [], 0x8B5A2B, [no_decomp]);
     compLiquid('refined_silkworm_oil', [], 0xF5DE93, [no_decomp]);
     compLiquid('silkworm_gel', [], 0xCDBE86, [no_decomp]);
+    
+    compLiquid('nutrient_rich_fertilizer_solution', ['4x phosphate', '5x npk_solution', '1x ammonia'], 0xB5B9C1, [no_decomp]);
+
+    compLiquid('seaweed_oil', ['1x carbon'], 0x3FBF3F, [no_decomp]);
+    compLiquid('liquefied_nutrient_paste', [], 0x8A8E96, [no_decomp]);
+    compLiquid('biostimulating_mixture', ['2x silicic_acid', '4x seaweed_oil', '5x liquefied_nutrient_paste', '1x mutagen', '3x glycerol'], 0x72A677, [no_decomp]);
 
 });

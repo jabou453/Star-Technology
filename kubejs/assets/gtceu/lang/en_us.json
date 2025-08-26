@@ -1124,6 +1124,11 @@
 
     "material.gtceu.raw_silkworm_oil": "Raw Silkworm Oil",
     "material.gtceu.refined_silkworm_oil": "Refined Silkworm Oil",
-    "material.gtceu.silkworm_gel": "Silkworm Gel"
+    "material.gtceu.silkworm_gel": "Silkworm Gel",
+
+    "material.gtceu.nutrient_rich_fertilizer_solution": "Nutrient-Rich Fertilizer Solution",
+    "material.gtceu.seaweed_oil": "Seaweed Oil",
+    "material.gtceu.liquefied_nutrient_paste": "Liquefied Nutrient Paste",
+    "material.gtceu.biostimulating_mixture": "Biostimulating Mixture"
 
 }

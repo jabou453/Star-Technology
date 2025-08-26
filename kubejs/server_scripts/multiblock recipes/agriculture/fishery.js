@@ -18,10 +18,10 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.industrial_fishery(id('fishing_silkworm'))
         .itemInputs('exnihilosequentia:silkworm')
         .inputFluids('exnihilosequentia:sea_water 1000')
-        .itemOutputsRanged('minecraft:cod', 1, 8)
-        .itemOutputsRanged('minecraft:salmon', 1, 8)
-        .itemOutputsRanged('minecraft:pufferfish', 1, 8)
-        .itemOutputsRanged('minecraft:tropical_fish', 1, 8)
+        .itemOutputsRanged('minecraft:cod', 0, 8)
+        .itemOutputsRanged('minecraft:salmon', 0, 8)
+        .itemOutputsRanged('minecraft:pufferfish', 0, 8)
+        .itemOutputsRanged('minecraft:tropical_fish', 0, 8)
         .duration(1200)
         .circuit(0)
         .EUt(global.vha['lv']);
@@ -91,7 +91,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:raw_silkworm_oil 100')
         .outputFluids('gtceu:refined_silkworm_oil 36')
         .outputFluids('gtceu:lubricant 14')
-        .itemOutputs('gtceu:mince_meat')
+        .itemOutputs('gtceu:meat_dust')
         .duration(300)
         .EUt(global.vha['hv']);
 
