@@ -1679,6 +1679,47 @@
 			x: -18.0d
 			y: -19.0d
 		}
+		{
+			dependencies: [
+				"3E82F7977DB1C10A"
+				"4D9DAED52FF74B8B"
+			]
+			hide_dependency_lines: true
+			id: "3C1FD86C2544E7B0"
+			tasks: [{
+				id: "75CD91C65B76BB52"
+				item: "gtceu:tree_synthesizer"
+				type: "item"
+			}]
+			x: -12.0d
+			y: -29.5d
+		}
+		{
+			dependencies: [
+				"3E82F7977DB1C10A"
+				"4D9DAED52FF74B8B"
+			]
+			hide_dependency_lines: true
+			id: "02928466377F5264"
+			tasks: [{
+				id: "3975FDB87551107C"
+				item: "gtceu:hydroponic_garden"
+				type: "item"
+			}]
+			x: -12.0d
+			y: -28.0d
+		}
+		{
+			dependencies: ["4D9DAED52FF74B8B"]
+			id: "3C1F68CC8C016160"
+			tasks: [{
+				id: "61C6BD57647E5AFE"
+				item: "gtceu:industrial_fishery"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -32.5d
+		}
 	]
 	title: "Line Of Progression"
 }
