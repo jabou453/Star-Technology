@@ -852,8 +852,8 @@
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
-			x: -12.0d
-			y: -31.0d
+			x: -10.5d
+			y: -17.5d
 		}
 		{
 			dependencies: ["4B51B15B49620F57"]
@@ -1680,45 +1680,50 @@
 			y: -19.0d
 		}
 		{
-			dependencies: [
-				"3E82F7977DB1C10A"
-				"4D9DAED52FF74B8B"
-			]
-			hide_dependency_lines: true
-			id: "3C1FD86C2544E7B0"
+			dependencies: ["3E82F7977DB1C10A"]
+			id: "3E493E1BCB40BC6A"
 			tasks: [{
-				id: "75CD91C65B76BB52"
+				id: "6C36D5A3EAA46D65"
+				item: "gtceu:hydroponic_garden"
+				type: "item"
+			}]
+			x: -10.5d
+			y: -16.0d
+		}
+		{
+			dependencies: ["3E82F7977DB1C10A"]
+			id: "2A0FAB87B2ECC48A"
+			tasks: [{
+				id: "37398E0969A53282"
 				item: "gtceu:tree_synthesizer"
 				type: "item"
 			}]
 			x: -12.0d
-			y: -29.5d
+			y: -17.5d
 		}
 		{
-			dependencies: [
-				"3E82F7977DB1C10A"
-				"4D9DAED52FF74B8B"
-			]
+			dependencies: ["62BA581B2918BB7B"]
 			hide_dependency_lines: true
-			id: "02928466377F5264"
+			id: "791DE0AFE1CFD7C7"
 			tasks: [{
-				id: "3975FDB87551107C"
-				item: "gtceu:hydroponic_garden"
-				type: "item"
-			}]
-			x: -12.0d
-			y: -28.0d
-		}
-		{
-			dependencies: ["4D9DAED52FF74B8B"]
-			id: "3C1F68CC8C016160"
-			tasks: [{
-				id: "61C6BD57647E5AFE"
+				id: "496508FF786E945A"
 				item: "gtceu:industrial_fishery"
 				type: "item"
 			}]
-			x: -9.0d
-			y: -32.5d
+			x: -12.0d
+			y: -16.0d
+		}
+		{
+			dependencies: ["62BA581B2918BB7B"]
+			hide_dependency_lines: true
+			id: "5152146C9E061A10"
+			tasks: [{
+				id: "70B3C5064C4DFEFE"
+				item: "gtceu:composting_factory"
+				type: "item"
+			}]
+			x: -13.5d
+			y: -17.5d
 		}
 	]
 	title: "Line Of Progression"

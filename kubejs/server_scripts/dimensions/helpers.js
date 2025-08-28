@@ -1,5 +1,5 @@
 // priority = 10
-// debugMode = false //comment out when not being used
+const debugMode = false // don't comment this out, it throws errors in the log, just keep it on false
 
 global.devLogger = (message) => {
     if (debugMode) {

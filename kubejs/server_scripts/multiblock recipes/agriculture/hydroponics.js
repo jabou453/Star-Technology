@@ -67,8 +67,8 @@ ServerEvents.recipes(event => {
         .EUt(global.vha['hv']);
 
     event.recipes.gtceu.large_chemical_reactor(id('silicic_acid'))
-        .itemInputs('gtceu:silicon_dioxide')
-        .inputFluids('gtceu:water 1000')
+        .itemInputs('gtceu:silicon_dioxide_dust')
+        .inputFluids('minecraft:water 1000')
         .outputFluids('gtceu:silicic_acid 1000')
         .duration(200)
         .EUt(global.vha['mv']);
