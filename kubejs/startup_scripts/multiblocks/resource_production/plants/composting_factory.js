@@ -15,13 +15,13 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('composting_factory')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
-        .appearanceBlock(() => Block.getBlock('gtceu:secure_maceration_casing'))
+        .appearanceBlock(() => Block.getBlock('gtceu:robust_machine_casing'))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(' ABA ', ' CDC ', ' CDC ', ' CDC ', ' CBC ') 
             .aisle('AABAA', 'CE EC', 'CE EC', 'CE EC', 'CCBCC') 
             .aisle('BBCBB', 'D F D', 'D F D', 'D F D', 'BBGBB') 
             .aisle('AABAA', 'CE EC', 'CE EC', 'CE EC', 'CCBCC') 
-            .aisle(' A@A ', ' CDC ', ' CDC ', ' CDC ', ' CBC ') 
+            .aisle(' ABA ', ' CDC ', ' C@C ', ' CDC ', ' CBC ') 
             .where(' ', Predicates.any())
             .where('A', Predicates.blocks('gtceu:tungstensteel_firebox_casing'))
             .where('B', Predicates.blocks('gtceu:secure_maceration_casing'))
@@ -37,7 +37,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('G', Predicates.blocks('gtceu:extreme_engine_intake_casing'))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer('gtceu:block/casings/gcym/secure_maceration_casing',
+        .workableCasingRenderer('gtceu:block/casings/solid/machine_casing_robust_tungstensteel',
         'gtceu:block/machines/advanced_composter', false);
         
 });
