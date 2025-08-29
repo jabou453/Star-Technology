@@ -1048,9 +1048,9 @@
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
-				id: "6DFBCDC0322DDA77"
-				title: "Aux2"
-				type: "checkmark"
+				id: "5BCB1B1022CB00AB"
+				item: "start_core:uiv_auxiliary_boosted_fusion_reactor"
+				type: "item"
 			}]
 			x: 8.0d
 			y: -6.0d
