@@ -1679,6 +1679,17 @@
 			x: -18.0d
 			y: -19.0d
 		}
+		{
+			dependencies: ["4EB51296C24A7AEB"]
+			id: "486FFD25F047E52C"
+			tasks: [{
+				id: "1A494CE1BE2CC207"
+				item: "start_core:uiv_auxiliary_boosted_fusion_reactor"
+				type: "item"
+			}]
+			x: -16.5d
+			y: -17.5d
+		}
 	]
 	title: "Line Of Progression"
 }
