@@ -1105,22 +1105,22 @@
 
     "block.gtceu.tree_synthesizer": "Tree Synthesizer",
     "block.gtceu.tree_synthesizer.tooltip.0": "§7A larger greenhouse that provides ample space for gigantic trees to be grown, and felled.",
-    "block.gtceu.tree_synthesizer.tooltip.1": "Can use §3Parallel§r hatches",
+    "block.gtceu.tree_synthesizer.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
 
     "gtceu.industrial_fishery": "Industrial Fishery",
     "block.gtceu.industrial_fishery": "Industrial Fishery",
     "block.gtceu.industrial_fishery.tooltip.0": "§7A large scale industrial fishing complex that can quickly gather tons of your favorite marine lifeforms.",
-    "block.gtceu.industrial_fishery.tooltip.1": "Can use §3Parallel§r hatches",
+    "block.gtceu.industrial_fishery.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
 
     "gtceu.hydroponic_garden": "Hydroponic Garden",
     "block.gtceu.hydroponic_garden": "Hydroponic Garden",
     "block.gtceu.hydroponic_garden.tooltip.0": "§7A water based growing pod that can grow massive quantities of crops in seconds.",
-    "block.gtceu.hydroponic_garden.tooltip.1": "Can use §3Parallel§r hatches",
+    "block.gtceu.hydroponic_garden.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
     
     "gtceu.composting_factory": "Composting Factory",
     "block.gtceu.composting_factory": "Composting Factory",
     "block.gtceu.composting_factory.tooltip.0": "§7A very quick composter that can provide you with enough bonemeal to last lifetimes.",
-    "block.gtceu.composting_factory.tooltip.1": "Can use §3Parallel§r hatches",
+    "block.gtceu.composting_factory.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
 
     "material.gtceu.raw_silkworm_oil": "Raw Silkworm Oil",
     "material.gtceu.refined_silkworm_oil": "Refined Silkworm Oil",

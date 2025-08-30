@@ -89,7 +89,7 @@
 		{
 			id: "37CD8F0805CCF0EA"
 			linked_quest: "7E99889B3427A842"
-			x: 6.5d
+			x: 6.0d
 			y: 9.0d
 		}
 		{
@@ -1846,6 +1846,7 @@
 			dependencies: [
 				"7E99889B3427A842"
 				"221A840C4A071343"
+				"0F4E7B496BC5C896"
 			]
 			id: "7DB00D797172F8F8"
 			tasks: [{
@@ -2087,6 +2088,17 @@
 			title: "Echo Fluid"
 			x: 9.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["0F29276290B9D9D1"]
+			id: "0F4E7B496BC5C896"
+			tasks: [{
+				id: "172FD0495927663C"
+				item: "gtceu:biostimulating_mixture_bucket"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 9.0d
 		}
 	]
 	title: "Processing Lines (Chap 7.2)"

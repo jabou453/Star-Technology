@@ -14,7 +14,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('composting_factory', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('composting_factory')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK])
         .appearanceBlock(() => Block.getBlock('gtceu:robust_machine_casing'))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(' ABA ', ' CDC ', ' CDC ', ' CDC ', ' CBC ') 
