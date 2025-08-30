@@ -59,7 +59,7 @@ ServerEvents.recipes(event => {
         .duration(600)
         .EUt(global.vha['lv']);
     
-    // Silkwormsu
+    // Silkworms
     event.recipes.gtceu.mixer(id('rooted_dirt'))
         .itemInputs('minecraft:dirt')
         .inputFluids('gtceu:fermented_biomass 1')
@@ -104,8 +104,8 @@ ServerEvents.recipes(event => {
 
     // Silkworm Gel
     event.recipes.gtceu.mixer(id('silkworm_gel'))
-        .itemInputs('gtceu:small_agar_dust')
-        .inputFluids('gtceu:refined_silkworm_oil 150','gtceu:gelatin_mixture 50','minecraft:water 300')
+        .itemInputs('gtceu:small_agar_dust','gtceu:small_gelatin_dust')
+        .inputFluids('gtceu:refined_silkworm_oil 150','minecraft:water 300')
         .outputFluids('gtceu:silkworm_gel 500')
         .duration(200)
         .EUt(global.vha['ev']);
