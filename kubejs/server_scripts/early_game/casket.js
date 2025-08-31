@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.fermenter(id(potionID))
             .itemInputs(fermentationMixture)
-            .outputFluids(`kubejs:${potionID}`)
+            .outputFluids(`kubejs:${potionID} 125`)
             .duration(100)
             .EUt(GTValues.VHA[GTValues.LV]);
     };

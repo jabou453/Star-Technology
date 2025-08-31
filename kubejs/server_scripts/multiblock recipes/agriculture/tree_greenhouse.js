@@ -54,4 +54,18 @@ ServerEvents.recipes(event => {
     }).id('start:shaped/greenhouse');
     })()};
 
+    event.shaped(Item.of('gtceu:tree_synthesizer'), [
+        'ABC',
+        'ADE',
+        'FGE'
+    ], {
+        A: '#gtceu:circuits/iv',
+        B: 'gtceu:iv_electric_motor',
+        C: 'gtceu:tungsten_single_cable',
+        D: 'gtceu:greenhouse',
+        E: 'gtceu:iv_conveyor_module',
+        F: 'gtceu:iv_electric_pump',
+        G: 'gtceu:iv_field_generator'
+    }).id('start:shaped/tree_synthesizer');
+
 });

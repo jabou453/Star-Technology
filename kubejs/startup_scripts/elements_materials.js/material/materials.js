@@ -669,7 +669,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('copper_chloride', ['1x copper', '1x chlorine'], 0xffffff, []);
 
-    compLiquid('npk_solution', [], 0xb8c3f5, []);
+    compLiquid('npk_solution', ['15x apatite', '5x potassium', '1x sulfur_trioxide', '1x nitrogen', '2x water'], 0xb8c3f5, []);
 
     compLiquid('cupric_chloride_solution', ['1x copper_chloride', '1x hydrochloric_acid'], 0x336600, []);
 
@@ -1610,4 +1610,15 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .plasma()
         .color(0xEFE987)
         .flags(no_decomp);
+
+    compLiquid('raw_silkworm_oil', [], 0x8B5A2B, [no_decomp]);
+    compLiquid('refined_silkworm_oil', [], 0xF5DE93, [no_decomp]);
+    compLiquid('silkworm_gel', [], 0xCDBE86, [no_decomp]);
+    
+    compLiquid('nutrient_rich_fertilizer_solution', ['1x phosphate', '1x bone', '9x water', '1x npk_solution'], 0xB5B9C1, [no_decomp]);
+
+    compLiquid('seaweed_oil', ['1x carbon'], 0x3FBF3F, [no_decomp]);
+    compLiquid('liquefied_nutrient_paste', [], 0x8A8E96, [no_decomp]);
+    compLiquid('biostimulating_mixture', ['2x silicic_acid', '4x seaweed_oil', '5x liquefied_nutrient_paste', '1x mutagen', '3x glycerol'], 0x72A677, [no_decomp]);
+
 });
