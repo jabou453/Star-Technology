@@ -73,7 +73,10 @@ ServerEvents.recipes(event => {
         { name: 'minecraft:rose_bush' },
         { name: 'minecraft:peony' },
         { name: 'minecraft:sugar_cane' },
-        { name: 'minecraft:cactus' }
+        { name: 'minecraft:cactus' },
+        { name: 'minecraft:seagrass' },
+        { name: 'minecraft:sea_pickle' },
+        { name: 'minecraft:lily_pad' }
     ]
     
     global.farmCropList.forEach(crop => {
