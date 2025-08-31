@@ -88,32 +88,32 @@ ServerEvents.recipes(event => {
     // Processing Line
 
     const EntropyVoid = (type,quantityBuckets,outputs) => {
-        event.recipes.gtceu.cyclonic_sifter(id(`${type}_entropy_voidic_excression`))
-            .inputFluids(`gtceu:${type}_entropy_voidic_excression ${quantityBuckets * 1000}`)
+        event.recipes.gtceu.cyclonic_sifter(id(`${type}_saturation_voidic_excression`))
+            .inputFluids(`gtceu:${type}_saturation_voidic_excression ${quantityBuckets * 1000}`)
             .chancedInput('1x kubejs:voidic_reinforced_mesh', 250, -50)
             .outputFluids(outputs)
             .duration(quantityBuckets * 6)
             .EUt(GTValues.VHA[GTValues.UIV]);
     };
-    EntropyVoid('high',100,['gtceu:excited_void_entangled_quantum_slurry 12000']);
-    EntropyVoid('moderate',100,['gtceu:active_void_entangled_quantum_slurry 12000']);
-    EntropyVoid('low',100,['gtceu:dormant_void_entangled_quantum_slurry 12000']);
+    EntropyVoid('high',50,['gtceu:vibrant_voidic_slurry 12000']);
+    EntropyVoid('moderate',50,['gtceu:tempered_voidic_slurry 12000']);
+    EntropyVoid('low',50,['gtceu:lethargic_voidic_slurry 12000']);
 
     const QuantumDecomp = (slurryType, state1, state2) => {
-        event.recipes.gtceu.manifold_centrifuge(id(`${slurryType}_void_entangled_quantum_slurry`))
-            .inputFluids(`gtceu:${slurryType}_void_entangled_quantum_slurry 1000`)
+        event.recipes.gtceu.manifold_centrifuge(id(`${slurryType}_voidic_slurry`))
+            .inputFluids(`gtceu:${slurryType}_voidic_slurry 1000`)
             .outputFluids(`gtceu:${state1}_state_void_sludge 500`,`gtceu:${state2}_state_void_sludge 500`)
             .duration(125)
             .EUt(GTValues.V[GTValues.UEV]);
     };
-    QuantumDecomp('excited','gamma','zeta');
-    QuantumDecomp('active','beta','epsilon');
-    QuantumDecomp('dormant','alpha','delta');
+    QuantumDecomp('vibrant','gamma','zeta');
+    QuantumDecomp('tempered','beta','epsilon');
+    QuantumDecomp('lethargic','alpha','delta');
 
     const VoidState = (state, time) => {
         event.recipes.gtceu.centrifuge(id(`${state}_sludge_to_residue`))
             .inputFluids(`gtceu:${state}_state_void_sludge 1000`)
-            .outputFluids(`gtceu:${state}_state_void_residue 800`, 'gtceu:voidic_waste_residue 200')
+            .outputFluids(`gtceu:${state}_state_void_residue 750`, 'gtceu:voidic_waste_residue 250')
             .duration(time)
             .EUt(GTValues.VA[GTValues.UHV]);
     };

@@ -195,12 +195,12 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('starium_alloy').setFormula('*✧*4(Ke6Nq2C)2El2');
     GTMaterials.get('nyanium').setFormula('*A*7(URhNq2)4(Mg3N2)*Nr*2');
     GTMaterials.get('maxwellium').setFormula('∅(*A*7(URhNq2)4(Mg3N2)*Nr*2)∅')
-    GTMaterials.get('low_entropy_voidic_excression').setFormula('∅-');
-    GTMaterials.get('moderate_entropy_voidic_excression').setFormula('[∅]');
-    GTMaterials.get('high_entropy_voidic_excression').setFormula('∅+');
-    GTMaterials.get('dormant_void_entangled_quantum_slurry').setFormula('?[∅-]');
-    GTMaterials.get('active_void_entangled_quantum_slurry').setFormula('?[∅]');
-    GTMaterials.get('excited_void_entangled_quantum_slurry').setFormula('?[*∅*]');
+    GTMaterials.get('low_saturation_voidic_excression').setFormula('[∅-]');
+    GTMaterials.get('moderate_saturation_voidic_excression').setFormula('[∅]');
+    GTMaterials.get('high_saturation_voidic_excression').setFormula('[∅+]');
+    GTMaterials.get('lethargic_voidic_slurry').setFormula('?[∅-]*');
+    GTMaterials.get('tempered_voidic_slurry').setFormula('?[∅]*');
+    GTMaterials.get('vibrant_voidic_slurry').setFormula('?[∅+]*');
     GTMaterials.get('alpha_state_void_sludge').setFormula('?α∅');
     GTMaterials.get('beta_state_void_sludge').setFormula('?β∅');
     GTMaterials.get('gamma_state_void_sludge').setFormula('?γ∅');
@@ -1344,17 +1344,17 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compIngot('neutronium_silicon_carbide', ['2x neutronium','7x silicon_carbide','3x niobium_nitride','3x graphene'],0xCFCAB8,DULL,[5000, 'highest', VA('uhv'), 1800], [foil, no_decomp, no_abs_recipe])
 
     //Abyss Harvesting
-    compLiquidTemp('low_entropy_voidic_excression', 50, '1x mystery', 0x0A0A0A, [no_decomp]);
+    compLiquidTemp('low_saturation_voidic_excression', 19999, '1x mystery', 0x0A0A0A, [no_decomp]);
 
-    compLiquidTemp('moderate_entropy_voidic_excression', 5000, '1x mystery', 0x111111, [no_decomp]);
+    compLiquidTemp('moderate_saturation_voidic_excression', 19999, '1x mystery', 0x111111, [no_decomp]);
 
-    compLiquidTemp('high_entropy_voidic_excression', 500000, '1x mystery', 0x1A0E12, [no_decomp]);
+    compLiquidTemp('high_saturation_voidic_excression', 19999, '1x mystery', 0x1A0E12, [no_decomp]);
 
-    compLiquidTemp('dormant_void_entangled_quantum_slurry', 1000, '1x mystery', 0x7A7A7A, [no_decomp]);
+    compLiquidTemp('lethargic_voidic_slurry', 14999, '1x mystery', 0x7A7A7A, [no_decomp]);
 
-    compLiquidTemp('active_void_entangled_quantum_slurry', 10000, '1x mystery', 0x666666, [no_decomp]);
+    compLiquidTemp('tempered_voidic_slurry', 14999, '1x mystery', 0x666666, [no_decomp]);
 
-    compLiquidTemp('excited_void_entangled_quantum_slurry', 100000, '1x mystery', 0x4C4C4C, [no_decomp]);
+    compLiquidTemp('vibrant_voidic_slurry', 14999, '1x mystery', 0x4C4C4C, [no_decomp]);
    
     compLiquidTemp('alpha_state_void_sludge', 12500, '1x mystery', 0x4A294A, [no_decomp]);
 

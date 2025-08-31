@@ -98,6 +98,18 @@ StartupEvents.registry('item', event => {
         .displayName('Voidic Reinforced Mesh')
         .texture('kubejs:item/voidic_reinforced_mesh');
 
+    event.create('saturation_core_1')
+        .displayName('Abyssal Saturation Core [§5Low Saturation§f]')
+        .texture('kubejs:item/saturation_core_1');
+
+    event.create('saturation_core_2')
+        .displayName('Abyssal Saturation Core [§5Moderate Saturation§f]')
+        .texture('kubejs:item/saturation_core_2');
+
+    event.create('saturation_core_3')
+        .displayName('Abyssal Saturation Core [§5High Saturation§f]')
+        .texture('kubejs:item/saturation_core_3');
+
     // Fishery
     event.create('dried_silkworm_dough')
         .texture('kubejs:item/resource_gen/dried_silkworm_dough');

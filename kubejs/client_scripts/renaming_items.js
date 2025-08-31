@@ -19,6 +19,7 @@ ClientEvents.lang('en_us', event => {
     event.renameBlock('xycraft_world:aluminum_tiles_cloud_green', 'Green Alumino-Calcite Tiles');
     event.renameBlock('xycraft_world:aluminum_tiles_cloud_light', 'Light Alumino-Calcite Tiles');
     event.renameBlock('xycraft_world:aluminum_tiles_cloud_dark', 'Dark Alumino-Calcite Tiles');
+    event.renameBlock('minecraft:sponge', 'Synthetic Sponge');
 
 });
 

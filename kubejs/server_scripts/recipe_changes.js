@@ -955,6 +955,16 @@ ServerEvents.recipes(event => {
         C: 'minecraft:emerald'
     }).id('start:shaped/floppa_orb');
 
+    event.shaped('2x minecraft:sponge', [
+        'CMC',
+        'CTC',
+        'CMC'
+    ], {
+        C: 'minecraft:yellow_carpet',
+        T: 'kubejs:meshblock',
+        M: 'minecraft:string'
+    });
+
     // REMOVING LARGE BOILERS BECAUSE ALL OUR FOOD KEEPS BLOWING UP
     event.remove({ id: /gtceu:.*_large_boiler/});
 });

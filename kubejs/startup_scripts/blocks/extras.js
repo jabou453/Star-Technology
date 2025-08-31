@@ -144,4 +144,11 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:needs_stone_tool')
         .textureAll('kubejs:block/brimstone');
 
+    event.create('void_saturation_sponge')
+        .displayName('Voidic Saturation Sponge')
+        .hardness(1)
+        .resistance(1)
+        .material('sponge')
+        .textureAll('kubejs:block/void_saturation_sponge');
+
 });
