@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
     event.recipes.thermal.compression_fuel('gtceu:bio_diesel', 512000);
     event.recipes.thermal.compression_fuel('gtceu:diesel', 960000);
     event.recipes.thermal.compression_fuel('gtceu:cetane_boosted_diesel', 1280000);
-    event.recipes.thermal.compression_fuel('gtceu:gasoline', 320000);
+    event.recipes.thermal.compression_fuel('gtceu:gasoline', 3200000);
     event.recipes.thermal.compression_fuel('gtceu:high_octane_gasoline', 6400000);
     event.recipes.thermal.compression_fuel('gtceu:naphtha', 480000);
 
