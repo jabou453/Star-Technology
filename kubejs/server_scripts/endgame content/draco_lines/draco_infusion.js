@@ -86,7 +86,7 @@ ServerEvents.recipes(event => {
     'gtceu:nether_star_foil','2x minecraft:popped_chorus_fruit','2x minecraft:popped_chorus_fruit','gtceu:nether_star_foil',
     'gtceu:naquadria_foil',320,GTValues.VHA[GTValues.UV]);
 
-    Infusion('draco_brain_matter_cells','8x kubejs:draconic_brain_matter_cells','thermal:ender 10000','8x kubejs:draconic_stem_cells',
+    Infusion('draco_brain_matter_cells','16x kubejs:draconic_brain_matter_cells','thermal:ender 10000','16x kubejs:draconic_stem_cells',
     'gtceu:luv_field_generator','16x gtceu:fine_borosilicate_glass_wire','gtceu:wetware_circuit_board','gtceu:wetware_circuit_board',
     '16x gtceu:fine_borosilicate_glass_wire','gtceu:luv_field_generator',480,GTValues.VHA[GTValues.UHV]);
 
@@ -110,13 +110,13 @@ ServerEvents.recipes(event => {
     '8x gtceu:void_foil', '8x gtceu:void_foil', '1x gtceu:uev_robot_arm', '1x gtceu:uev_robot_arm', '8x gtceu:void_foil', '8x gtceu:void_foil',
     600, GTValues.VHA[GTValues.UEV]);
 
-    Infusion('dragon_egg','minecraft:dragon_egg','gtceu:draconyallium 1000','3x kubejs:draconic_stem_cells','5x kubejs:draconic_scale_cells',
-    '5x kubejs:draconic_scale_cells','5x kubejs:draconic_scale_cells','5x kubejs:draconic_scale_cells','5x kubejs:draconic_scale_cells',
-    '5x kubejs:draconic_scale_cells',900,GTValues.VHA[GTValues.UIV]);
+    Infusion('dragon_egg','minecraft:dragon_egg','gtceu:draconyallium 1000','32x kubejs:draconic_stem_cells','gtceu:pure_netherite_foil',
+    'gtceu:pure_netherite_foil','gtceu:void_plate','gtceu:void_plate','gtceu:dense_naquadria_plate','gtceu:dense_naquadria_plate',
+    900,GTValues.VHA[GTValues.UIV]);
 
-    Infusion('abyssal_inductor','kubejs:abyssal_inductor','gtceu:dragon_breath 250','gtceu:blacklight','2x gtceu:draco_abyssal_screw',
-    '8x gtceu:polonium_bismide_single_cable','gtceu:lepton_resonant_thallium_antimonide_spring','2x gtceu:draco_abyssal_screw',
-    'gtceu:uiv_emitter','gtceu:lepton_resonant_thallium_antimonide_spring',300,GTValues.VHA[GTValues.UIV]);
+    Infusion('abyssal_inductor','3x kubejs:abyssal_inductor','gtceu:dragon_breath 250','3x gtceu:blacklight','4x gtceu:draco_abyssal_screw',
+    '8x gtceu:polonium_bismide_single_cable','2x gtceu:lepton_resonant_thallium_antimonide_spring','4x gtceu:draco_abyssal_screw',
+    'gtceu:uiv_emitter','2x gtceu:lepton_resonant_thallium_antimonide_spring',900,GTValues.VHA[GTValues.UIV]);
 
     Infusion('abyssal_inductor_hull','2x kubejs:abyssal_inductor_hull','gtceu:abyssal_alloy 1000','2x gtceu:sterilizing_filter_casing','kubejs:abyssal_inductor',
     '#gtceu:circuits/uiv','kubejs:voidic_reinforced_mesh','kubejs:abyssal_inductor','kubejs:uiv_microfluidic_flow_valve','kubejs:voidic_reinforced_mesh', 150,
@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
     Infusion('saturation_core_moderate','32x kubejs:saturation_core_2','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:hsss_plate','gtceu:tungsten_carbide_plate','gtceu:void_rod',
     'gtceu:void_rod','gtceu:tungsten_carbide_plate','gtceu:hsss_plate',400,GTValues.VA[GTValues.UHV]);
 
-    Infusion('saturation_core_high','32x kubejs:saturation_core_2','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:tungsten_carbide_plate','gtceu:void_rod','gtceu:hsss_plate',
+    Infusion('saturation_core_high','32x kubejs:saturation_core_3','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:tungsten_carbide_plate','gtceu:void_rod','gtceu:hsss_plate',
     'gtceu:hsss_plate','gtceu:void_rod','gtceu:tungsten_carbide_plate',400,GTValues.VA[GTValues.UHV]);
 
     });
