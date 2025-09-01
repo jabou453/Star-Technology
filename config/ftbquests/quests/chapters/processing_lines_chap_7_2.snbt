@@ -1040,17 +1040,16 @@
 		}
 		{
 			dependencies: ["1D3052F94EE128F4"]
-			icon: "gtceu:high_entropy_voidic_excression_bucket"
+			icon: "gtceu:high_saturation_voidic_excression_bucket"
 			id: "768BD48ECF6EAC97"
 			tasks: [
 				{
-					id: "1F9C4546E4B3A164"
-					item: "gtceu:high_entropy_voidic_excression_bucket"
-					optional_task: true
+					id: "3A3BE8EE01FECC6A"
+					item: "gtceu:high_saturation_voidic_excression_bucket"
 					type: "item"
 				}
 				{
-					id: "292AE50783089203"
+					id: "0438AD3586B3BFCC"
 					type: "checkmark"
 				}
 			]
@@ -1059,17 +1058,16 @@
 		}
 		{
 			dependencies: ["1D3052F94EE128F4"]
-			icon: "gtceu:moderate_entropy_voidic_excression_bucket"
+			icon: "gtceu:moderate_saturation_voidic_excression_bucket"
 			id: "6EB25AE9FB659E25"
 			tasks: [
 				{
-					id: "5FF253822262A5DD"
-					item: "gtceu:moderate_entropy_voidic_excression_bucket"
-					optional_task: true
+					id: "5B6E9AA16E0E28C3"
+					item: "gtceu:moderate_saturation_voidic_excression_bucket"
 					type: "item"
 				}
 				{
-					id: "21008F9548E08455"
+					id: "74DDC661727ED1D8"
 					type: "checkmark"
 				}
 			]
@@ -1078,17 +1076,16 @@
 		}
 		{
 			dependencies: ["1D3052F94EE128F4"]
-			icon: "gtceu:low_entropy_voidic_excression_bucket"
+			icon: "gtceu:low_saturation_voidic_excression_bucket"
 			id: "756FE02C55B34F6E"
 			tasks: [
 				{
-					id: "36B9C00695357E8E"
-					item: "gtceu:low_entropy_voidic_excression_bucket"
-					optional_task: true
+					id: "0346D4437EAB3CBC"
+					item: "gtceu:low_saturation_voidic_excression_bucket"
 					type: "item"
 				}
 				{
-					id: "484CF86DDDFF3883"
+					id: "43591CBC1722988D"
 					type: "checkmark"
 				}
 			]
@@ -1100,17 +1097,16 @@
 				"768BD48ECF6EAC97"
 				"0D3E6EDB52510D76"
 			]
-			icon: "gtceu:excited_void_entangled_quantum_slurry_bucket"
+			icon: "gtceu:vibrant_voidic_slurry_bucket"
 			id: "3747C55339B65700"
 			tasks: [
 				{
-					id: "5B7AC05E0439AFC0"
-					item: "gtceu:excited_void_entangled_quantum_slurry_bucket"
-					optional_task: true
+					id: "3833D284EC6AEB24"
+					item: "gtceu:vibrant_voidic_slurry_bucket"
 					type: "item"
 				}
 				{
-					id: "25AAC2BCE825E4E5"
+					id: "6203152180D608FA"
 					type: "checkmark"
 				}
 			]
@@ -1122,17 +1118,16 @@
 				"6EB25AE9FB659E25"
 				"0D3E6EDB52510D76"
 			]
-			icon: "gtceu:active_void_entangled_quantum_slurry_bucket"
+			icon: "gtceu:tempered_voidic_slurry_bucket"
 			id: "3FC2B057FAEC1613"
 			tasks: [
 				{
-					id: "080D5EE824DD2A94"
-					item: "gtceu:active_void_entangled_quantum_slurry_bucket"
-					optional_task: true
+					id: "0E660AC60A80AC74"
+					item: "gtceu:tempered_voidic_slurry_bucket"
 					type: "item"
 				}
 				{
-					id: "06247C3EFA68113A"
+					id: "1AEAF2EE7DAD3B93"
 					type: "checkmark"
 				}
 			]
@@ -1144,17 +1139,16 @@
 				"756FE02C55B34F6E"
 				"0D3E6EDB52510D76"
 			]
-			icon: "gtceu:dormant_void_entangled_quantum_slurry_bucket"
+			icon: "gtceu:lethargic_voidic_slurry_bucket"
 			id: "2A56E7B27F721214"
 			tasks: [
 				{
-					id: "48DC1B4251A5700E"
-					item: "gtceu:dormant_void_entangled_quantum_slurry_bucket"
-					optional_task: true
+					id: "6E8ADB84100D1556"
+					item: "gtceu:lethargic_voidic_slurry_bucket"
 					type: "item"
 				}
 				{
-					id: "39F6A016A821FDFF"
+					id: "42D6D55E02AEBE53"
 					type: "checkmark"
 				}
 			]

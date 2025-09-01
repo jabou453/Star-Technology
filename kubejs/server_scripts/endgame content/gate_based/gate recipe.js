@@ -520,12 +520,12 @@ ServerEvents.recipes(event => {
         // Maxwell Line
         event.remove({ mod: 'placeablemaxwell' });
         const Gato = (type, rod1, rod2, dye1, dye2) => {
-            let B = '8x kubejs:runic_energized_transportation_plating';
-            let C = '8x kubejs:runic_energized_pathway_plating';
+            let B = '16x kubejs:runic_energized_transportation_plating';
+            let C = '16x kubejs:runic_energized_pathway_plating';
             let R = `1x kubejs:${rod1}_stargate_rod`;
             let D = `1x kubejs:${rod2}_stargate_rod`;
-            let F = '2x gtceu:uiv_field_generator';
-            let A = '2x gtceu:uiv_robot_arm';
+            let F = '8x gtceu:uiv_field_generator';
+            let A = '8x gtceu:uiv_robot_arm';
             let H = '64x #forge:cooked_fishes'
         event.recipes.gtceu.gate_assembly(id(`${type}`))
             .itemInputs(B,R,A,H,F,D,C,D,F,H,A,R,B,R,A,H,F,D,C,D,F,H,A,R)
