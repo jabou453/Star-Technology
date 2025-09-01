@@ -564,12 +564,20 @@
 				"22D59F0D821697A0"
 				"03C0B34970DB1594"
 			]
+			icon: "gtceu:lepton_dense_akreyrium_bucket"
 			id: "17FC1E92368D840B"
-			tasks: [{
-				id: "46636E3E654CC7AF"
-				item: "gtceu:lepton_dense_akreyrium_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "46636E3E654CC7AF"
+					item: "gtceu:lepton_dense_akreyrium_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "3CFD81468CF5B374"
+					type: "checkmark"
+				}
+			]
 			x: 11.5d
 			y: -4.0d
 		}
@@ -1397,6 +1405,11 @@
 			]
 			icon: "gtceu:order_centric_void_bucket"
 			id: "5080743917931298"
+			rewards: [{
+				id: "458331DC01ACD4B3"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "3F466B29D47119E7"
@@ -1420,6 +1433,11 @@
 			]
 			icon: "gtceu:chaos_centric_void_bucket"
 			id: "2F6115002741F26F"
+			rewards: [{
+				id: "2635577D9D520267"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "4482E9505ED7785D"
@@ -1646,12 +1664,19 @@
 		}
 		{
 			dependencies: ["262BD3D9D1DF7F13"]
+			icon: "gtceu:dragon_breath_bucket"
 			id: "749AB3A73D3744EA"
-			tasks: [{
-				id: "718EEC48EE3D1B14"
-				item: "gtceu:dragon_breath_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "718EEC48EE3D1B14"
+					item: "gtceu:dragon_breath_bucket"
+					type: "item"
+				}
+				{
+					id: "0826389E70A63586"
+					type: "checkmark"
+				}
+			]
 			x: 15.5d
 			y: 4.5d
 		}
@@ -1660,12 +1685,19 @@
 				"349B743B5F3792F1"
 				"3B53D64D9EA506E1"
 			]
+			icon: "gtceu:pyrothyin_bucket"
 			id: "60C58CBCA20CC288"
-			tasks: [{
-				id: "1C39E7C5B1C72037"
-				item: "gtceu:pyrothyin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "1C39E7C5B1C72037"
+					item: "gtceu:pyrothyin_bucket"
+					type: "item"
+				}
+				{
+					id: "5E4C0C2B64437925"
+					type: "checkmark"
+				}
+			]
 			x: 13.0d
 			y: 8.0d
 		}
@@ -1674,12 +1706,19 @@
 				"7D92FDFAE5CBA103"
 				"3B53D64D9EA506E1"
 			]
+			icon: "gtceu:dracotropin_bucket"
 			id: "369119C0801269FD"
-			tasks: [{
-				id: "0F51D393266FEB87"
-				item: "gtceu:dracotropin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0F51D393266FEB87"
+					item: "gtceu:dracotropin_bucket"
+					type: "item"
+				}
+				{
+					id: "16ABEFC63E08B982"
+					type: "checkmark"
+				}
+			]
 			x: 12.0d
 			y: 8.0d
 		}
@@ -1688,12 +1727,19 @@
 				"1B5E265DA009B4B6"
 				"3B53D64D9EA506E1"
 			]
+			icon: "gtceu:metavorexin_bucket"
 			id: "7CBD3A984028C356"
-			tasks: [{
-				id: "338ADC23D425FEB4"
-				item: "gtceu:metavorexin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "338ADC23D425FEB4"
+					item: "gtceu:metavorexin_bucket"
+					type: "item"
+				}
+				{
+					id: "140FAEB97BAFF15E"
+					type: "checkmark"
+				}
+			]
 			x: 11.0d
 			y: 8.0d
 		}
@@ -1702,12 +1748,19 @@
 				"122ECDEA3014F0F6"
 				"3B53D64D9EA506E1"
 			]
+			icon: "gtceu:aethermetin_bucket"
 			id: "4447ADD635826F25"
-			tasks: [{
-				id: "37B8E770CAC11D88"
-				item: "gtceu:aethermetin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "37B8E770CAC11D88"
+					item: "gtceu:aethermetin_bucket"
+					type: "item"
+				}
+				{
+					id: "46D321C5184FA364"
+					type: "checkmark"
+				}
+			]
 			x: 10.0d
 			y: 8.0d
 		}
@@ -1716,12 +1769,19 @@
 				"60AA88F6743636C0"
 				"3B53D64D9EA506E1"
 			]
+			icon: "gtceu:hemavyrin_bucket"
 			id: "6C6379760CE78AC5"
-			tasks: [{
-				id: "2A33CBF2AF778CF8"
-				item: "gtceu:hemavyrin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2A33CBF2AF778CF8"
+					item: "gtceu:hemavyrin_bucket"
+					type: "item"
+				}
+				{
+					id: "6BF3EFEABE537323"
+					type: "checkmark"
+				}
+			]
 			x: 9.0d
 			y: 8.0d
 		}
@@ -1730,12 +1790,19 @@
 				"1C5C32E5A47F2D2D"
 				"30241EA7B41A3212"
 			]
+			icon: "gtceu:ignisferin_bucket"
 			id: "5BB6B21843A7107F"
-			tasks: [{
-				id: "5704C68E1E669408"
-				item: "gtceu:ignisferin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "5704C68E1E669408"
+					item: "gtceu:ignisferin_bucket"
+					type: "item"
+				}
+				{
+					id: "16BB33C1C42AE0F9"
+					type: "checkmark"
+				}
+			]
 			x: 13.0d
 			y: 3.0d
 		}
@@ -1744,12 +1811,19 @@
 				"0D18B33E2C26A942"
 				"30241EA7B41A3212"
 			]
+			icon: "gtceu:cryokinase_bucket"
 			id: "798E1B26BA950E09"
-			tasks: [{
-				id: "12F93713F9F909D2"
-				item: "gtceu:cryokinase_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "12F93713F9F909D2"
+					item: "gtceu:cryokinase_bucket"
+					type: "item"
+				}
+				{
+					id: "791BDFF662ABB7FA"
+					type: "checkmark"
+				}
+			]
 			x: 12.0d
 			y: 3.0d
 		}
@@ -1758,12 +1832,19 @@
 				"44B18C095DB4DF17"
 				"30241EA7B41A3212"
 			]
+			icon: "gtceu:stormcallin_bucket"
 			id: "30F23A53A3BD37A1"
-			tasks: [{
-				id: "348E9981304C1E5E"
-				item: "gtceu:stormcallin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "348E9981304C1E5E"
+					item: "gtceu:stormcallin_bucket"
+					type: "item"
+				}
+				{
+					id: "6E7F14A0CEBF93C1"
+					type: "checkmark"
+				}
+			]
 			x: 11.0d
 			y: 3.0d
 		}
@@ -1773,12 +1854,19 @@
 				"30241EA7B41A3212"
 				"74A0BF2EA205B23C"
 			]
+			icon: "gtceu:voidrenin_bucket"
 			id: "50B36A9870682FDB"
-			tasks: [{
-				id: "7F10DB93F1329685"
-				item: "gtceu:voidrenin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "7F10DB93F1329685"
+					item: "gtceu:voidrenin_bucket"
+					type: "item"
+				}
+				{
+					id: "5F5ACEC96D4B4C59"
+					type: "checkmark"
+				}
+			]
 			x: 9.0d
 			y: 3.0d
 		}
@@ -1787,12 +1875,19 @@
 				"5D3B5DEE3B2D30C0"
 				"30241EA7B41A3212"
 			]
+			icon: "gtceu:terrathroxin_bucket"
 			id: "42BF157CA44898DE"
-			tasks: [{
-				id: "689EE59DB05F6577"
-				item: "gtceu:terrathroxin_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "689EE59DB05F6577"
+					item: "gtceu:terrathroxin_bucket"
+					type: "item"
+				}
+				{
+					id: "7D0D4EA68D6DE71C"
+					type: "checkmark"
+				}
+			]
 			x: 10.0d
 			y: 3.0d
 		}
@@ -1804,12 +1899,19 @@
 				"50B36A9870682FDB"
 				"30F23A53A3BD37A1"
 			]
+			icon: "gtceu:breath_hormone_complex_bucket"
 			id: "54A48D25CC69507E"
-			tasks: [{
-				id: "4257D4409A691138"
-				item: "gtceu:breath_hormone_complex_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4257D4409A691138"
+					item: "gtceu:breath_hormone_complex_bucket"
+					type: "item"
+				}
+				{
+					id: "4DB0FEBF10987E99"
+					type: "checkmark"
+				}
+			]
 			x: 14.5d
 			y: 3.0d
 		}
@@ -1818,12 +1920,19 @@
 				"6CC2A99E0E26C42B"
 				"68FD71F1A73B47A1"
 			]
+			icon: "gtceu:abyssal_nutrient_blend_bucket"
 			id: "0E2F6184D7767AFD"
-			tasks: [{
-				id: "7D4780468466B409"
-				item: "gtceu:abyssal_nutrient_blend_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "7D4780468466B409"
+					item: "gtceu:abyssal_nutrient_blend_bucket"
+					type: "item"
+				}
+				{
+					id: "42DBBC8CD2774B23"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 6.5d
 		}
@@ -1833,12 +1942,19 @@
 				"6BEABB51EBEA81D5"
 				"261B946701411D9C"
 			]
+			icon: "gtceu:precursor_serum_bucket"
 			id: "68FD71F1A73B47A1"
-			tasks: [{
-				id: "2AF3BF188175E093"
-				item: "gtceu:precursor_serum_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2AF3BF188175E093"
+					item: "gtceu:precursor_serum_bucket"
+					type: "item"
+				}
+				{
+					id: "26491A00E2CA1A6E"
+					type: "checkmark"
+				}
+			]
 			x: 6.5d
 			y: 5.0d
 		}
@@ -1848,12 +1964,19 @@
 				"221A840C4A071343"
 				"0F4E7B496BC5C896"
 			]
+			icon: "gtceu:drac_endrocritic_medium_bucket"
 			id: "7DB00D797172F8F8"
-			tasks: [{
-				id: "1A54006686D3FADC"
-				item: "gtceu:drac_endrocritic_medium_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "1A54006686D3FADC"
+					item: "gtceu:drac_endrocritic_medium_bucket"
+					type: "item"
+				}
+				{
+					id: "240B81C9ED4CFA6F"
+					type: "checkmark"
+				}
+			]
 			x: 6.5d
 			y: 8.0d
 		}
@@ -1873,23 +1996,37 @@
 				"7DB00D797172F8F8"
 				"1599CBA5069B1B4C"
 			]
+			icon: "gtceu:drac_aurouric_endrocrinal_medium_bucket"
 			id: "6CC2A99E0E26C42B"
-			tasks: [{
-				id: "41110FDB77034BFA"
-				item: "gtceu:drac_aurouric_endrocrinal_medium_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "41110FDB77034BFA"
+					item: "gtceu:drac_aurouric_endrocrinal_medium_bucket"
+					type: "item"
+				}
+				{
+					id: "41579DC0B646EFD1"
+					type: "checkmark"
+				}
+			]
 			x: 6.5d
 			y: 6.5d
 		}
 		{
 			dependencies: ["09996867BC3E5819"]
+			icon: "gtceu:draconic_hormone_residue_bucket"
 			id: "221A840C4A071343"
-			tasks: [{
-				id: "73BDF2BA3EE0339D"
-				item: "gtceu:draconic_hormone_residue_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "73BDF2BA3EE0339D"
+					item: "gtceu:draconic_hormone_residue_bucket"
+					type: "item"
+				}
+				{
+					id: "2B97CE3EC14FA430"
+					type: "checkmark"
+				}
+			]
 			x: 5.0d
 			y: 8.0d
 		}
@@ -1958,12 +2095,19 @@
 				"60C58CBCA20CC288"
 				"369119C0801269FD"
 			]
+			icon: "gtceu:growth_hormone_complex_bucket"
 			id: "25436E09A8F9E9C8"
-			tasks: [{
-				id: "05103572A0A357C5"
-				item: "gtceu:growth_hormone_complex_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "05103572A0A357C5"
+					item: "gtceu:growth_hormone_complex_bucket"
+					type: "item"
+				}
+				{
+					id: "2037CD66FA12EEFC"
+					type: "checkmark"
+				}
+			]
 			x: 14.5d
 			y: 8.0d
 		}
@@ -2003,23 +2147,37 @@
 		}
 		{
 			dependencies: ["0E2F6184D7767AFD"]
+			icon: "gtceu:condensed_abyssal_nutrient_blend_bucket"
 			id: "68DA57B7791A76E1"
-			tasks: [{
-				id: "2AE72D581378F499"
-				item: "gtceu:condensed_abyssal_nutrient_blend_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2AE72D581378F499"
+					item: "gtceu:condensed_abyssal_nutrient_blend_bucket"
+					type: "item"
+				}
+				{
+					id: "136ED98C62850A6F"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 4.5d
 		}
 		{
 			dependencies: ["68DA57B7791A76E1"]
+			icon: "gtceu:amino_primed_medium_bucket"
 			id: "3F976C15932579FD"
-			tasks: [{
-				id: "79A205816BD92E26"
-				item: "gtceu:amino_primed_medium_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "79A205816BD92E26"
+					item: "gtceu:amino_primed_medium_bucket"
+					type: "item"
+				}
+				{
+					id: "2F587AB62CB675E0"
+					type: "checkmark"
+				}
+			]
 			x: 9.5d
 			y: 4.5d
 		}
@@ -2028,18 +2186,30 @@
 				"30241EA7B41A3212"
 				"0E2F6184D7767AFD"
 			]
+			icon: "gtceu:drac_peptide_amino_residue_bucket"
 			id: "3B53D64D9EA506E1"
-			tasks: [{
-				id: "487D1868EFB3E138"
-				item: "gtceu:drac_peptide_amino_residue_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "487D1868EFB3E138"
+					item: "gtceu:drac_peptide_amino_residue_bucket"
+					type: "item"
+				}
+				{
+					id: "50482D280EBDEB7D"
+					type: "checkmark"
+				}
+			]
 			x: 11.0d
 			y: 6.5d
 		}
 		{
 			dependencies: ["01AF9486EA6DA792"]
 			description: ["The medium used to grow life."]
+			icon: {
+				Count: 1
+				id: "gtceu:sterilized_growth_medium_bucket"
+				tag: { }
+			}
 			id: "058533FBFBA38DC8"
 			rewards: [{
 				count: 3
@@ -2048,15 +2218,21 @@
 				type: "item"
 			}]
 			size: 1.0d
-			tasks: [{
-				id: "1FE8BF0C899DE5C0"
-				item: {
-					Count: 1
-					id: "gtceu:sterilized_growth_medium_bucket"
-					tag: { }
+			tasks: [
+				{
+					id: "1FE8BF0C899DE5C0"
+					item: {
+						Count: 1
+						id: "gtceu:sterilized_growth_medium_bucket"
+						tag: { }
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "3C0F8CAA6B18D974"
+					type: "checkmark"
+				}
+			]
 			x: 15.5d
 			y: 6.5d
 		}
@@ -2076,13 +2252,13 @@
 			}]
 			tasks: [
 				{
-					id: "5A15D678DCF7BD57"
-					type: "checkmark"
-				}
-				{
 					id: "764B69A72A6DC1A7"
 					item: "gtceu:echo_r_bucket"
 					type: "item"
+				}
+				{
+					id: "208097B0CE089A13"
+					type: "checkmark"
 				}
 			]
 			title: "Echo Fluid"
@@ -2091,12 +2267,19 @@
 		}
 		{
 			dependencies: ["0F29276290B9D9D1"]
+			icon: "gtceu:biostimulating_mixture_bucket"
 			id: "0F4E7B496BC5C896"
-			tasks: [{
-				id: "172FD0495927663C"
-				item: "gtceu:biostimulating_mixture_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "172FD0495927663C"
+					item: "gtceu:biostimulating_mixture_bucket"
+					type: "item"
+				}
+				{
+					id: "495FF798558F9A21"
+					type: "checkmark"
+				}
+			]
 			x: 7.0d
 			y: 9.0d
 		}

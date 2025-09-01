@@ -3422,6 +3422,11 @@
 			hide_dependent_lines: true
 			icon: "start_core:flamewake_solvent_bucket"
 			id: "53A2FF89C0F89921"
+			rewards: [{
+				id: "0C7249FF779B0597"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "644135598C74A2B2"
@@ -3445,6 +3450,11 @@
 			hide_dependent_lines: true
 			icon: "start_core:emberheart_nectar_bucket"
 			id: "75C33909E2CD5EC0"
+			rewards: [{
+				id: "4D362DDBBB27E2B7"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "2997E6C1E7BE5A16"

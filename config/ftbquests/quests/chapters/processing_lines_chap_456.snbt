@@ -2847,6 +2847,12 @@
 		{
 			dependencies: ["19E8066A06379A19"]
 			id: "19834448E1EA758C"
+			rewards: [{
+				count: 3
+				id: "4F739FD936D6392B"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -3182,6 +3188,12 @@
 		{
 			dependencies: ["6BD12CC3A72DFAF4"]
 			id: "31EADD276ECB7B25"
+			rewards: [{
+				count: 3
+				id: "205623532C48F611"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{

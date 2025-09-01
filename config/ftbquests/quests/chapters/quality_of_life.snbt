@@ -163,6 +163,7 @@
 			description: ["Transmit energy, items, and fluids across vast distances"]
 			id: "3232A7A69C2905D9"
 			shape: "rsquare"
+			subtitle: "Easy Power Transfer"
 			tasks: [{
 				id: "792BCDE083DD56CF"
 				item: "laserio:laser_node"

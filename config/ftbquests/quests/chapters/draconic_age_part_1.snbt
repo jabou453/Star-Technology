@@ -265,6 +265,11 @@
 			]
 			description: ["&aUEV&r power for all your machines."]
 			id: "799F6F79B9FF86DF"
+			rewards: [{
+				id: "074DD9323BA686E2"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "2202E2A517EE8E9D"
 				item: "gtceu:uev_energy_input_hatch"
@@ -932,10 +937,13 @@
 			description: ["The fourth tier of fusion reactors, reaching over 1 Billion Kelvin."]
 			id: "2E34F23A42004285"
 			rewards: [{
+				count: 2
 				id: "2E601807C6A28763"
 				item: "kubejs:coin"
 				type: "item"
 			}]
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
 				id: "68A19390992AB6E6"
 				item: "start_core:uev_fusion_reactor"
@@ -947,6 +955,11 @@
 		{
 			dependencies: ["3AE729D3F47E9A2B"]
 			id: "06EC98F6E6AFC2AF"
+			rewards: [{
+				id: "25348F8CF999B3FB"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "3E9EBE180652C5E4"
 				item: "kubejs:draco_boule"
@@ -958,6 +971,12 @@
 		{
 			dependencies: ["06EC98F6E6AFC2AF"]
 			id: "0DF30CDA8DE68E0C"
+			rewards: [{
+				count: 2
+				id: "389DB35D298BFC27"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -971,6 +990,11 @@
 		{
 			dependencies: ["0DF30CDA8DE68E0C"]
 			id: "074635DC3322DC99"
+			rewards: [{
+				id: "741879FCA3600628"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "096716469F4806A5"
 				item: "kubejs:draco_advanced_soc_wafer"
@@ -1005,8 +1029,14 @@
 				"6A82CC9F01960097"
 				"31F87896FF834E63"
 			]
-			description: [""]
 			id: "09B55AFE7C06EC82"
+			rewards: [{
+				id: "5C220EE9FD21B829"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
 				id: "054C06846B9D4D16"
 				item: "start_core:abyssal_containment_room"
@@ -1031,6 +1061,11 @@
 		{
 			dependencies: ["45E628CF1DA8D380"]
 			id: "37F9C85CFCFFDA5F"
+			rewards: [{
+				id: "60D4025181F9B52A"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5B990AC9E758FE37"
 				item: "gtceu:draconyallium_ingot"
@@ -1045,6 +1080,12 @@
 				"694E1F6458D5F72F"
 			]
 			id: "38C2E3061C764F05"
+			rewards: [{
+				count: 2
+				id: "40C1A432BCA32E06"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -1062,6 +1103,12 @@
 				"54A48D25CC69507E"
 			]
 			id: "3AE729D3F47E9A2B"
+			rewards: [{
+				count: 3
+				id: "418B437BE865C801"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "28FA8CA23E8E5436"
 				item: "gtceu:pure_dragon_breath_bucket"
@@ -1075,6 +1122,11 @@
 			dependencies: ["3AE729D3F47E9A2B"]
 			hide_dependent_lines: true
 			id: "694E1F6458D5F72F"
+			rewards: [{
+				id: "09238F2539219DCC"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "14D8819BD3B9A996"
@@ -1093,6 +1145,11 @@
 		{
 			dependencies: ["3B1453C435E3950B"]
 			id: "7FABD2E818B70D35"
+			rewards: [{
+				id: "5913DB9A14802483"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "1A9F5B4EAFB66C03"
 				item: "start_core:uiv_parallel_hatch"
@@ -1485,6 +1542,11 @@
 			dependencies: ["28DE3D2A96C4D0C8"]
 			description: ["Find an end city, and loot it."]
 			id: "64780055536CEEF3"
+			rewards: [{
+				id: "25078307CEF39E7F"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				icon: "minecraft:purpur_pillar"
 				id: "238739D7E00CDAE2"
@@ -1523,6 +1585,11 @@
 				"Alternatively you can craft this after aquiring the appropriate materials."
 			]
 			id: "7C65EDBD752F898D"
+			rewards: [{
+				id: "7D864BD9CC68CDDB"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "044CF4AB2D37AD68"
 				item: "kubejs:nether_talisman"
@@ -1543,6 +1610,11 @@
 				"Alternatively you can craft this after aquiring the appropriate means."
 			]
 			id: "4397DEEDB7C52BAC"
+			rewards: [{
+				id: "44B118BD6E9873F6"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "605DEE85525818AA"
 				item: "kubejs:end_talisman"
@@ -1574,6 +1646,11 @@
 				"694E1F6458D5F72F"
 			]
 			id: "46127DF821C7C175"
+			rewards: [{
+				id: "16763B12FE534552"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "765DD1CACEFD3F85"
 				item: "start_core:daydream_spire"
@@ -1585,6 +1662,11 @@
 		{
 			dependencies: ["16FDCABFC80579D5"]
 			id: "3B1453C435E3950B"
+			rewards: [{
+				id: "6CB5C3D8188E33D0"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			subtitle: "First UXV Circuit"
 			tasks: [{
 				id: "6046733B28E6F322"
@@ -1597,6 +1679,11 @@
 		{
 			dependencies: ["3AE6E85C2FC76DE9"]
 			id: "16FDCABFC80579D5"
+			rewards: [{
+				id: "748B871094F29C87"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			subtitle: "Second UIV Circuit"
 			tasks: [{
 				id: "0E34320F90BA0A53"
@@ -1612,6 +1699,11 @@
 				"35D5CC08AE53A7FA"
 			]
 			id: "3AE6E85C2FC76DE9"
+			rewards: [{
+				id: "1307F45A07A8F297"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			subtitle: "Third UEV Circuit"
 			tasks: [{
 				id: "29F972DC18F645E4"
@@ -1628,6 +1720,12 @@
 				"058533FBFBA38DC8"
 			]
 			id: "1799430093ABCC64"
+			rewards: [{
+				count: 3
+				id: "2C713C0E55A96415"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "27F3A14B2F6C836C"
 				item: "gtceu:draconic_enrichment_serum_bucket"
@@ -1642,6 +1740,11 @@
 				"694E1F6458D5F72F"
 			]
 			id: "4D556DE76399E083"
+			rewards: [{
+				id: "058BF3F098253930"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "2388751B6210D3C4"
 				item: "start_core:uiv_absolute_parallel_hatch"
@@ -1698,6 +1801,11 @@
 		{
 			dependencies: ["1799430093ABCC64"]
 			id: "6D6C79E7CBBCC893"
+			rewards: [{
+				id: "0D4F24ECDD2D65B4"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "156168FA92AD01CA"
@@ -1720,6 +1828,12 @@
 			]
 			hide_dependent_lines: true
 			id: "31F87896FF834E63"
+			rewards: [{
+				count: 3
+				id: "028D0D1B11438E2C"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7A07DB21A52F7219"
 				item: "gtceu:lepton_resonant_thallium_antimonide_ingot"
@@ -1734,6 +1848,11 @@
 				"3D239E0F7B45AE92"
 			]
 			id: "6A82CC9F01960097"
+			rewards: [{
+				id: "3210FE0BBF45E34D"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "1CCB67E6F9C54E7E"
 				item: "gtceu:draco_abyssal_ingot"
@@ -1748,6 +1867,11 @@
 				"4777033988C9F512"
 			]
 			id: "5224152A7D22A0B5"
+			rewards: [{
+				id: "0A16190629DBA7B9"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "0CFF3A0497A28ED0"
 				item: "gtceu:seaborgium_palladium_enriched_estalt_flerovium_alloy_ingot"
@@ -1760,6 +1884,11 @@
 			dependencies: ["1AEBAE3050B72906"]
 			hide_dependent_lines: true
 			id: "4777033988C9F512"
+			rewards: [{
+				id: "6A7658ABB5B22219"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "6EB2E502307FD68B"
@@ -1799,6 +1928,11 @@
 		{
 			dependencies: ["45E628CF1DA8D380"]
 			id: "33FBF8561A3D901D"
+			rewards: [{
+				id: "703863528004F25F"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "119F275BA875EA8D"
 				item: "gtceu:rhenium_super_composite_alloy_ingot"
@@ -1810,6 +1944,11 @@
 		{
 			dependencies: ["38C2E3061C764F05"]
 			id: "2F62965D05463E44"
+			rewards: [{
+				id: "6A891782D4FA2656"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7FB456829A80265B"
 				item: "gtceu:maxwellium_bucket"
@@ -1822,6 +1961,11 @@
 			dependencies: ["4DF07CB3D60C901C"]
 			description: ["Find the Blackened Castles and Loot Them."]
 			id: "68970C6696FA90E6"
+			rewards: [{
+				id: "49A048AE15AAE4F1"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				icon: "minecraft:chiseled_polished_blackstone"
 				id: "618C5C0D5013A3A9"
@@ -1834,7 +1978,13 @@
 		}
 		{
 			dependencies: ["1B6159E114BA50ED"]
+			description: ["A new set of SMD's infused with the ancient essence of the ender dragons."]
 			id: "61E082759BC89A1E"
+			rewards: [{
+				id: "1460A867F3CE58DC"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "30589C4757D78D02"
@@ -1870,6 +2020,11 @@
 			dependencies: ["310FC3F86513555F"]
 			hide_dependent_lines: true
 			id: "00333140377A33F5"
+			rewards: [{
+				id: "4ADD6A8943EA9210"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5132FFE029480B05"
 				item: "gtceu:polonium_bismide_ingot"

@@ -82,7 +82,18 @@
 			y: 0.5d
 		}
 		{
-			description: ["&bhttps://discord.com/invite/startechnology&r"]
+			description: [
+				"We have an official discord server:"
+				"&o&bhttps://discord.com/invite/startechnology&r"
+				""
+				"In here you can ask for help, report issues and make suggestions."
+				""
+				"We are lucky to have a large active community, who are always willing to help, and create some insanely helpful guides."
+				""
+				"This questbook keeps most information at a surface level, and serves more so as an introduction to all that StarT has to offer than a comprehensive and detailed guide of all systems."
+				""
+				"For those things, we heavily recommend you check out the #guides channel in the discord."
+			]
 			icon: "kubejs:coin"
 			id: "0B677BF5FCD2884F"
 			size: 2.0d

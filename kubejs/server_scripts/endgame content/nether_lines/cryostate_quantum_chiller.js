@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.bulk_vacuum_cooling(id(`${InFluid1.value[0].tag.slice(6)}`))
         .notConsumable('gtceu:ingot_casting_mold')
         .inputFluids(Fluid.of(`gtceu:${InFluid1.value[0].tag.slice(6)}`, InFluid1.amount * 256))
-        .inputFluids(Fluid.of(`gtceu:${InFluid2.value[0].tag.slice(6)}`, InFluid1.amount * 256))
+        .inputFluids(Fluid.of(`gtceu:${InFluid2.value[0].tag.slice(6)}`, InFluid2.amount * 256))
         .itemOutputs(`256x ${OutItem.ingredient.item}`)
         .outputFluids(Fluid.of(OutFluid.value[0].fluid, OutFluid.amount * 256))
         .duration(Duration * 192)

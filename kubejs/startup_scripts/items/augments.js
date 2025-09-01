@@ -10,12 +10,20 @@ StartupEvents.registry('item', event => {
     rfs = redstone flux storage
     rft = redstone flux transfer
     */
+    const colorcodes = {
+        'ulv': '§8',
+        'lv': '§7',
+        'mv': '§b',
+        'hv': '§6',
+        'ev': '§5',
+        'iv': '§9'
+    }
 
     //all items => upgrade kits
     const upgrade_kit = (tier) => {
 
         event.create(`${tier}_upgraade_kit`)
-            .displayName(`${tier.toUpperCase()} Upgrade Kit`)
+            .displayName(`${colorcodes[tier]}${tier.toUpperCase()}§r Upgrade Kit`)
             .tooltip("§7Augment for Dynamos, RF Cells, Fluid Cells and other Thermal Series machines")
             .texture(`kubejs:item/kits/upgrade_kits/${tier}_kit`);
 
@@ -25,7 +33,7 @@ StartupEvents.registry('item', event => {
     const arc_kit = (tier) => {
 
         event.create(`${tier}_arc_kit`)
-        .displayName(`${tier.toUpperCase()} Auxiliary Reaction Chamber Kit`)
+        .displayName(`${colorcodes[tier]}${tier.toUpperCase()}§r Auxiliary Reaction Chamber Kit`)
         .tooltip("§7Augment for Dynamos")
         .texture(`kubejs:item/kits/arc_kits/${tier}_arc_kit`);
     };
@@ -33,7 +41,7 @@ StartupEvents.registry('item', event => {
     //dynamo's => multi-cycle injectors kits
     const mci_kit = (tier) => {
     event.create(`${tier}_mci_kit`)
-        .displayName(`${tier.toUpperCase()} Multi-cycle Injectors Kit`)
+        .displayName(`${colorcodes[tier]}${tier.toUpperCase()}§r Multi-cycle Injectors Kit`)
         .tooltip('§7Augment for Dynamos')
         .texture(`kubejs:item/kits/mci_kits/${tier}_mci_kit`);
     };
@@ -50,7 +58,7 @@ StartupEvents.registry('item', event => {
     const fls_kit = (tier) => {
 
         event.create(`${tier}_fls_kit`)
-            .displayName(`${tier.toUpperCase()} Expanded Tank Kit`)
+            .displayName(`${colorcodes[tier]}${tier.toUpperCase()}§r Expanded Tank Kit`)
             .tooltip('§7Augment for Fluid Cell')
             .texture(`kubejs:item/kits/fls_kits/${tier}_fls_kit`);
 
@@ -60,7 +68,7 @@ StartupEvents.registry('item', event => {
     const rfc_kit = (tier) => {
 
         event.create(`${tier}_rfc_kit`)
-            .displayName(`${tier.toUpperCase()} Expanded RF Coil Kit`)
+            .displayName(`${colorcodes[tier]}${tier.toUpperCase()}§r Expanded RF Coil Kit`)
             .tooltip('§7Augment for Redstone Flux Cell')
             .texture(`kubejs:item/kits/rfc_kits/${tier}_rfc_kit`);
 
@@ -70,7 +78,7 @@ StartupEvents.registry('item', event => {
     const rfs_kit = (tier) => {
 
         event.create(`${tier}_rfs_kit`)
-            .displayName(`${tier.toUpperCase()} Stabilized RF Coil Kit`)
+            .displayName(`${colorcodes[tier]}${tier.toUpperCase()}§r Stabilized RF Coil Kit`)
             .tooltip('§7Augment for Redstone Flux Cell')
             .texture(`kubejs:item/kits/rfs_kits/${tier}_rfs_kit`);
 
@@ -80,7 +88,7 @@ StartupEvents.registry('item', event => {
     const rft_kit = (tier) => {
 
         event.create(`${tier}_rft_kit`)
-            .displayName(`${tier.toUpperCase()} High-Flux RF Coil Kit`)
+            .displayName(`${colorcodes[tier]}${tier.toUpperCase()}§r High-Flux RF Coil Kit`)
             .tooltip('§7Augment for Redstone Flux Cell')
             .texture(`kubejs:item/kits/rft_kits/${tier}_rft_kit`);
 

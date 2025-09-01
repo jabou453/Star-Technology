@@ -965,6 +965,8 @@ ServerEvents.recipes(event => {
         M: 'minecraft:string'
     });
 
+    event.shapeless('4x minecraft:clay_ball', ['minecraft:clay']).id('start:shapeless/clay_decomp');
+
     // REMOVING LARGE BOILERS BECAUSE ALL OUR FOOD KEEPS BLOWING UP
     event.remove({ id: /gtceu:.*_large_boiler/});
 });

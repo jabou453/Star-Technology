@@ -2306,6 +2306,11 @@
 				"&4Warning&r: Upgrade can be lost on death or relog in some instances so having some in a chest isn't a horrible idea."
 			]
 			id: "4E4CDE5CDFA24839"
+			rewards: [{
+				id: "6F422AC96183061A"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6E6BE35F63091CD7"
 				item: {
@@ -2344,6 +2349,11 @@
 				"Alongside that, it can also produce various brews, that gives beneficial effects when consumed."
 			]
 			id: "034381C844C88ADD"
+			rewards: [{
+				id: "1F2A3BFD35CFA9DB"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "2686626F2E18E539"
 				item: "gtceu:ulv_casket"
@@ -2362,6 +2372,11 @@
 			hide_dependency_lines: true
 			icon: "gtceu:raw_rubber_dust"
 			id: "3D78314A07F5782A"
+			rewards: [{
+				id: "132A91D9CCE0324C"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.25d
 			subtitle: "This seems familiar"
@@ -2386,6 +2401,11 @@
 			description: ["Machines from vintage open up many interesting opportunities for more efficient material processing, alongside primitive ore processing."]
 			hide_dependent_lines: true
 			id: "6C7DB1CB4517B843"
+			rewards: [{
+				id: "1FCCF30A0083DBB8"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "34B96CC7C1DDB90A"
 				item: {

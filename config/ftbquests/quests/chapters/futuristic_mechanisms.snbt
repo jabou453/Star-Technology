@@ -420,8 +420,17 @@
 			dependencies: [
 				"020048FAC9576691"
 				"53A9F3758C218CDC"
+				"0055CE82469F239C"
 			]
-			description: ["A multiblock acting as a gigantic battery. Later on you &lwill&r need this."]
+			description: [
+				"The Power Substation is the end game power storage. You might not need it in LuV, but later on you &lwill&r need this. "
+				""
+				"The structure itself does not store power, but the capacitator blocks you can place into the station can give it storage capability."
+				""
+				"Because of this you can keep upgrading the substation whilst you progress through the pack, up until UHV."
+				""
+				"When you reach UHV, you can craft the Ultimate Capacitator, which can store a *small* amount of power."
+			]
 			id: "5B72F7526494EAEC"
 			rewards: [{
 				count: 2
