@@ -195,12 +195,12 @@ GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('starium_alloy').setFormula('*✧*4(Ke6Nq2C)2El2');
     GTMaterials.get('nyanium').setFormula('*A*7(URhNq2)4(Mg3N2)*Nr*2');
     GTMaterials.get('maxwellium').setFormula('∅(*A*7(URhNq2)4(Mg3N2)*Nr*2)∅')
-    GTMaterials.get('low_entropy_voidic_excression').setFormula('∅-');
-    GTMaterials.get('moderate_entropy_voidic_excression').setFormula('[∅]');
-    GTMaterials.get('high_entropy_voidic_excression').setFormula('∅+');
-    GTMaterials.get('dormant_void_entangled_quantum_slurry').setFormula('?[∅-]');
-    GTMaterials.get('active_void_entangled_quantum_slurry').setFormula('?[∅]');
-    GTMaterials.get('excited_void_entangled_quantum_slurry').setFormula('?[*∅*]');
+    GTMaterials.get('low_saturation_voidic_excression').setFormula('[∅-]');
+    GTMaterials.get('moderate_saturation_voidic_excression').setFormula('[∅]');
+    GTMaterials.get('high_saturation_voidic_excression').setFormula('[∅+]');
+    GTMaterials.get('lethargic_voidic_slurry').setFormula('?[∅-]*');
+    GTMaterials.get('tempered_voidic_slurry').setFormula('?[∅]*');
+    GTMaterials.get('vibrant_voidic_slurry').setFormula('?[∅+]*');
     GTMaterials.get('alpha_state_void_sludge').setFormula('?α∅');
     GTMaterials.get('beta_state_void_sludge').setFormula('?β∅');
     GTMaterials.get('gamma_state_void_sludge').setFormula('?γ∅');
@@ -672,7 +672,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('copper_chloride', ['1x copper', '1x chlorine'], 0xffffff, []);
 
-    compLiquid('npk_solution', [], 0xb8c3f5, []);
+    compLiquid('npk_solution', ['15x apatite', '5x potassium', '1x sulfur_trioxide', '1x nitrogen', '2x water'], 0xb8c3f5, []);
 
     compLiquid('cupric_chloride_solution', ['1x copper_chloride', '1x hydrochloric_acid'], 0x336600, []);
 
@@ -1347,17 +1347,17 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compIngot('neutronium_silicon_carbide', ['2x neutronium','7x silicon_carbide','3x niobium_nitride','3x graphene'],0xCFCAB8,DULL,[5000, 'highest', VA('uhv'), 1800], [foil, no_decomp, no_abs_recipe])
 
     //Abyss Harvesting
-    compLiquidTemp('low_entropy_voidic_excression', 50, '1x mystery', 0x0A0A0A, [no_decomp]);
+    compLiquidTemp('low_saturation_voidic_excression', 19999, '1x mystery', 0x0A0A0A, [no_decomp]);
 
-    compLiquidTemp('moderate_entropy_voidic_excression', 5000, '1x mystery', 0x111111, [no_decomp]);
+    compLiquidTemp('moderate_saturation_voidic_excression', 19999, '1x mystery', 0x111111, [no_decomp]);
 
-    compLiquidTemp('high_entropy_voidic_excression', 500000, '1x mystery', 0x1A0E12, [no_decomp]);
+    compLiquidTemp('high_saturation_voidic_excression', 19999, '1x mystery', 0x1A0E12, [no_decomp]);
 
-    compLiquidTemp('dormant_void_entangled_quantum_slurry', 1000, '1x mystery', 0x7A7A7A, [no_decomp]);
+    compLiquidTemp('lethargic_voidic_slurry', 14999, '1x mystery', 0x7A7A7A, [no_decomp]);
 
-    compLiquidTemp('active_void_entangled_quantum_slurry', 10000, '1x mystery', 0x666666, [no_decomp]);
+    compLiquidTemp('tempered_voidic_slurry', 14999, '1x mystery', 0x666666, [no_decomp]);
 
-    compLiquidTemp('excited_void_entangled_quantum_slurry', 100000, '1x mystery', 0x4C4C4C, [no_decomp]);
+    compLiquidTemp('vibrant_voidic_slurry', 14999, '1x mystery', 0x4C4C4C, [no_decomp]);
    
     compLiquidTemp('alpha_state_void_sludge', 12500, '1x mystery', 0x4A294A, [no_decomp]);
 
@@ -1613,4 +1613,15 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .plasma()
         .color(0xEFE987)
         .flags(no_decomp);
+
+    compLiquid('raw_silkworm_oil', [], 0x8B5A2B, [no_decomp]);
+    compLiquid('refined_silkworm_oil', [], 0xF5DE93, [no_decomp]);
+    compLiquid('silkworm_gel', [], 0xCDBE86, [no_decomp]);
+    
+    compLiquid('nutrient_rich_fertilizer_solution', ['1x phosphate', '1x bone', '9x water', '1x npk_solution'], 0xB5B9C1, [no_decomp]);
+
+    compLiquid('seaweed_oil', ['1x carbon'], 0x3FBF3F, [no_decomp]);
+    compLiquid('liquefied_nutrient_paste', [], 0x8A8E96, [no_decomp]);
+    compLiquid('biostimulating_mixture', ['2x silicic_acid', '4x seaweed_oil', '5x liquefied_nutrient_paste', '1x mutagen', '3x glycerol'], 0x72A677, [no_decomp]);
+
 });

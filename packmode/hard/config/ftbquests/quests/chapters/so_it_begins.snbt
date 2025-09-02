@@ -948,7 +948,6 @@
 				"299F2383569EEFA4"
 				"41D300F6E11B1EA1"
 			]
-			description: [""]
 			id: "3DCE9199510A9223"
 			rewards: [{
 				id: "6049B8EBEA1575C9"
@@ -1046,7 +1045,6 @@
 				"3D9B291441B63F78"
 				"1A34B55754A8965F"
 			]
-			description: [""]
 			id: "2CE500506AE84E1A"
 			tasks: [{
 				id: "2EECC19B0000F0AF"
@@ -1113,7 +1111,6 @@
 				"7D83A21F7DB27B47"
 				"492C6E73D0CAC383"
 			]
-			description: [""]
 			hide_dependent_lines: true
 			icon: "kubejs:reinforced_stone_bricks"
 			id: "3D9B291441B63F78"
@@ -1521,7 +1518,6 @@
 				"6C4B325AEF8A5B7D"
 				"1B660E1DA8714AC5"
 			]
-			description: [""]
 			id: "73E5BE92A7CF6543"
 			tasks: [
 				{
@@ -1775,7 +1771,6 @@
 				"684FAA520167CC51"
 				"4917BE27976C3A9A"
 			]
-			description: [""]
 			hide_dependent_lines: true
 			id: "5D7047EF3399D10B"
 			tasks: [{
@@ -2457,7 +2452,6 @@
 				"3A3BD0ECA7FC8D38"
 				"291A793E984F63CC"
 			]
-			description: [""]
 			id: "6DE87A8D59525AF8"
 			tasks: [{
 				id: "6363D1A6B51733E1"
@@ -3454,7 +3448,6 @@
 		}
 		{
 			dependencies: ["1645E2B5BEFA80A3"]
-			description: [""]
 			id: "60FC1A065E7E0D7D"
 			tasks: [
 				{

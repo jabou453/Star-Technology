@@ -1381,7 +1381,6 @@
 		}
 		{
 			dependencies: ["1C9396E2587051F7"]
-			description: [""]
 			id: "4DF812EEFB4FD1C3"
 			optional: true
 			subtitle: "Fourth and Last ZPM Circuit"

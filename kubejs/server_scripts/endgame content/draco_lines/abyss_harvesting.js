@@ -52,68 +52,104 @@ ServerEvents.recipes(event => {
 
     // Abyss Harvesting
 
-    // High Entropy Voidic Excression
-    event.recipes.gtceu.abyssal_harvester(id('high_entropy_voidic_excression'))
-        .outputFluids('gtceu:high_entropy_voidic_excression 20')
-        .addData('min_entropy', 350000)
-        .addData('max_entropy', 499999)
-        .duration(100)
+    event.recipes.gtceu.abyssal_harvester(id('undersaturated'))
+        .chancedInput('kubejs:saturation_core_1', 200, -10)
+        .inputFluids('gtceu:dragon_breath 10')
+        .outputFluids(
+            'gtceu:low_saturation_voidic_excression 70',
+            'gtceu:moderate_saturation_voidic_excression 20',
+            'gtceu:high_saturation_voidic_excression 10'
+        )
+        .addData('min_saturation', 10)
+        .addData('max_saturation', 750)
+        .duration(920)
         .dimension('minecraft:the_end')
-        // .cleanroom(CleanroomType.STERILE_CLEANROOM) // cant have dim + cleanroom fixed in 7.0.0
-        .EUt(GTValues.VHA[GTValues.UEV])
-        .circuit(3);
+        .EUt(GTValues.VA[GTValues.UIV]);
 
-    // Moderate Entropy Voidic Excression
-    event.recipes.gtceu.abyssal_harvester(id('moderate_entropy_voidic_excression'))
-        .outputFluids('gtceu:moderate_entropy_voidic_excression 40')
-        .addData('min_entropy', 150000)
-        .addData('max_entropy', 349999)
-        .duration(100)
+    event.recipes.gtceu.abyssal_harvester(id('low_saturation_voidic_excression'))
+        .chancedInput('kubejs:saturation_core_1', 15, -1)
+        .inputFluids('gtceu:low_saturation_voidic_excression 10')
+        .outputFluids(
+            'gtceu:low_saturation_voidic_excression 7000',
+            'gtceu:moderate_saturation_voidic_excression 2000',
+            'gtceu:high_saturation_voidic_excression 1000'
+        )        
+        .addData('min_saturation', 500)
+        .addData('max_saturation', 4000)
+        .duration(920)
         .dimension('minecraft:the_end')
-        // .cleanroom(CleanroomType.STERILE_CLEANROOM) // cant have dim + cleanroom fixed in 7.0.0
-        .EUt(GTValues.VHA[GTValues.UEV])
-        .circuit(2);
+        .EUt(GTValues.VA[GTValues.UIV]);
 
-    // Low Entropy Voidic Excression
-    event.recipes.gtceu.abyssal_harvester(id('low_entropy_voidic_excression'))
-        .outputFluids('gtceu:low_entropy_voidic_excression 80')
-        .addData('min_entropy', 10)
-        .addData('max_entropy', 149999)
-        .duration(100)
+    event.recipes.gtceu.abyssal_harvester(id('moderate_saturation_voidic_excression'))
+        .chancedInput('kubejs:saturation_core_2', 15, -1)
+        .inputFluids('gtceu:moderate_saturation_voidic_excression 10')
+        .outputFluids(
+            'gtceu:low_saturation_voidic_excression 2000',
+            'gtceu:moderate_saturation_voidic_excression 6000',
+            'gtceu:high_saturation_voidic_excression 2000'
+        )        
+        .addData('min_saturation', 3500)
+        .addData('max_saturation', 7000)
+        .duration(920)
         .dimension('minecraft:the_end')
-        // .cleanroom(CleanroomType.STERILE_CLEANROOM) // cant have dim + cleanroom fixed in 7.0.0
-        .EUt(GTValues.VHA[GTValues.UEV])
-        .circuit(1);
+        .EUt(GTValues.VA[GTValues.UIV]);
+
+    event.recipes.gtceu.abyssal_harvester(id('high_saturation_voidic_excression'))
+        .chancedInput('kubejs:saturation_core_3', 15, -1)
+        .inputFluids('gtceu:high_saturation_voidic_excression 10')
+        .outputFluids(
+            'gtceu:low_saturation_voidic_excression 1000',
+            'gtceu:moderate_saturation_voidic_excression 2000',
+            'gtceu:high_saturation_voidic_excression 7000'
+        )        
+        .addData('min_saturation', 6500)
+        .addData('max_saturation', 10000)
+        .duration(920)
+        .dimension('minecraft:the_end')
+        .EUt(GTValues.VA[GTValues.UIV]);
+
+    event.recipes.gtceu.abyssal_harvester(id('desaturation'))
+        .itemInputs('kubejs:void_saturation_sponge')
+        .outputFluids(
+            'gtceu:echo_r 25000',
+            'gtceu:voidic_waste_residue 100'
+        )        
+        .addData('min_saturation', 1000)
+        .addData('max_saturation', 12000)
+        .duration(200)
+        .dimension('minecraft:the_end')
+        .EUt(GTValues.VA[GTValues.UIV]);
 
     // Processing Line
 
     const EntropyVoid = (type,quantityBuckets,outputs) => {
-        event.recipes.gtceu.cyclonic_sifter(id(`${type}_entropy_voidic_excression`))
-            .inputFluids(`gtceu:${type}_entropy_voidic_excression ${quantityBuckets * 1000}`)
+        event.recipes.gtceu.cyclonic_sifter(id(`${type}_saturation_voidic_excression`))
+            .inputFluids(`gtceu:${type}_saturation_voidic_excression ${quantityBuckets * 1000}`)
             .chancedInput('1x kubejs:voidic_reinforced_mesh', 250, -50)
+            .itemOutputs('gtceu:tiny_echo_shard_dust')
             .outputFluids(outputs)
             .duration(quantityBuckets * 6)
             .EUt(GTValues.VHA[GTValues.UIV]);
     };
-    EntropyVoid('high',100,['gtceu:excited_void_entangled_quantum_slurry 12000']);
-    EntropyVoid('moderate',100,['gtceu:active_void_entangled_quantum_slurry 12000']);
-    EntropyVoid('low',100,['gtceu:dormant_void_entangled_quantum_slurry 12000']);
+    EntropyVoid('high',50,['gtceu:vibrant_voidic_slurry 18500']);
+    EntropyVoid('moderate',50,['gtceu:tempered_voidic_slurry 18500']);
+    EntropyVoid('low',50,['gtceu:lethargic_voidic_slurry 18500']);
 
     const QuantumDecomp = (slurryType, state1, state2) => {
-        event.recipes.gtceu.manifold_centrifuge(id(`${slurryType}_void_entangled_quantum_slurry`))
-            .inputFluids(`gtceu:${slurryType}_void_entangled_quantum_slurry 1000`)
+        event.recipes.gtceu.manifold_centrifuge(id(`${slurryType}_voidic_slurry`))
+            .inputFluids(`gtceu:${slurryType}_voidic_slurry 1000`)
             .outputFluids(`gtceu:${state1}_state_void_sludge 500`,`gtceu:${state2}_state_void_sludge 500`)
             .duration(125)
             .EUt(GTValues.V[GTValues.UEV]);
     };
-    QuantumDecomp('excited','gamma','zeta');
-    QuantumDecomp('active','beta','epsilon');
-    QuantumDecomp('dormant','alpha','delta');
+    QuantumDecomp('vibrant','gamma','zeta');
+    QuantumDecomp('tempered','beta','epsilon');
+    QuantumDecomp('lethargic','alpha','delta');
 
     const VoidState = (state, time) => {
         event.recipes.gtceu.centrifuge(id(`${state}_sludge_to_residue`))
             .inputFluids(`gtceu:${state}_state_void_sludge 1000`)
-            .outputFluids(`gtceu:${state}_state_void_residue 800`, 'gtceu:voidic_waste_residue 200')
+            .outputFluids(`gtceu:${state}_state_void_residue 750`, 'gtceu:voidic_waste_residue 250')
             .duration(time)
             .EUt(GTValues.VA[GTValues.UHV]);
     };

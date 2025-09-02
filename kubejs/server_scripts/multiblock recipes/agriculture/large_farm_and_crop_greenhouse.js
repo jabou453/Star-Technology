@@ -1,3 +1,4 @@
+// priority: 10
 ServerEvents.recipes(event => {
     const id = global.id;
 
@@ -15,7 +16,7 @@ ServerEvents.recipes(event => {
     })()
     }   
 
-    [
+    global.farmCropList = [
         { name: 'minecraft:wheat', seed: 'minecraft:wheat_seeds' },
         { name: 'minecraft:pumpkin', seed: 'minecraft:pumpkin_seeds' },
         { name: 'minecraft:melon', seed: 'minecraft:melon_seeds' },
@@ -72,8 +73,13 @@ ServerEvents.recipes(event => {
         { name: 'minecraft:rose_bush' },
         { name: 'minecraft:peony' },
         { name: 'minecraft:sugar_cane' },
-        { name: 'minecraft:cactus' }
-    ].forEach(crop => {
+        { name: 'minecraft:cactus' },
+        { name: 'minecraft:seagrass' },
+        { name: 'minecraft:sea_pickle' },
+        { name: 'minecraft:lily_pad' }
+    ]
+    
+    global.farmCropList.forEach(crop => {
         event.recipes.gtceu.large_farm(id(`${crop.name.split(':')[1]}${(!crop.name.startsWith('minecraft')) ? '_' + crop.name.split(':')[0] : ''}_harvest`))
             .notConsumable(`8x ${(crop.seed) ? crop.seed : crop.name}`)
             .itemOutputs(`16x ${crop.name}`)

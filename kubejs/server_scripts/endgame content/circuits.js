@@ -18,11 +18,17 @@ ServerEvents.recipes(event => {
     const asmd_resistor = 'gtceu:advanced_smd_resistor';
     const asmd_capacitor = 'gtceu:advanced_smd_capacitor';
 
-    const AssemblyLineCircuitNoRS = (type,mod,inputs,fluids,eut,dura) => {
+    const AssemblyLineCircuitNoRS = (type,mod,inputs,fluids,eut,dura,toScan) => {
         event.recipes.gtceu.assembly_line(id(type))
             .itemInputs(inputs)
             .inputFluids(fluids)
             .itemOutputs(`${mod}:${type}`)
+            ["scannerResearch(java.util.function.UnaryOperator)"](
+                researchRecipeBuilder => researchRecipeBuilder
+                    .researchStack(Item.of(toScan))
+                    .duration(dura * 2)
+                    .EUt(eut/4)
+                )
             .duration(dura)
             .EUt(eut);
     };

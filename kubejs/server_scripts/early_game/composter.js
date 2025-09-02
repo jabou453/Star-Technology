@@ -16,11 +16,29 @@ ServerEvents.recipes(event => {
     })()
     }   
 
+    event.shaped('gtceu:composting_factory',[
+        'AAB',
+        'BCD',
+        'EFE'],{
+        A: '#gtceu:circuits/iv',
+        B: 'gtceu:iv_electric_piston',
+        C: 'gtceu:ulv_advanced_composter',
+        D: 'gtceu:iv_conveyor_module',
+        E: 'gtceu:tungsten_single_cable',
+        F: 'gtceu:iv_electric_motor'
+    }).id('start:shaped/composting_factory');
+
     const composting = (odds, fuel) => {
         event.recipes.gtceu.composting(id(fuel.split(':')[1]))
             .itemInputs(`${fuel}`)
             .chancedOutput('minecraft:bone_meal', odds, 0)
+            .duration(42);
+
+        event.recipes.gtceu.composting_factory(id(fuel.split(':')[1]))
+            .itemInputs(`${fuel}`)
+            .chancedOutput('minecraft:bone_meal', odds, 0)
             .duration(42)
+            .EUt(7);
     };
     
     // 30%

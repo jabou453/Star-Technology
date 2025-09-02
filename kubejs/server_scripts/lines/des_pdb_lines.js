@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
         .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM);
 
     event.recipes.gtceu.large_chemical_reactor(id('drac_endrocritic_medium'))
-        .inputFluids('gtceu:draconic_hormone_residue 100','gtceu:raw_growth_medium 900')
+        .inputFluids('gtceu:biostimulating_mixture 400','gtceu:draconic_hormone_residue 100','gtceu:raw_growth_medium 500')
         .outputFluids('gtceu:drac_endrocritic_medium 1000')
         .duration(500)
         .EUt(GTValues.VHA[GTValues.UHV])

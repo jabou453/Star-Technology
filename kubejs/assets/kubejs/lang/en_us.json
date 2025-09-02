@@ -27,5 +27,8 @@
     "item.kubejs.sake": "Sake",
     "item.kubejs.sake.tooltip": "§7A rich drink that gives you §6Reach",
 
-    "effect.kubejs.reach": "Reach"
+    "effect.kubejs.reach": "Reach",
+
+    "item.kubejs.dried_silkworm_dough": "Dried Silkworm Dough",
+    "item.kubejs.silkworm_oil_pellet": "Silkworm Oil Pellet"
 }

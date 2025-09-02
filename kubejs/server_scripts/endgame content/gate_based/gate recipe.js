@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.assembly_line(id('super_heat_chamber'))
-            .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uv', 'gtceu:double_dragonsteel_plate', 
+            .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uhv', 'gtceu:double_dragonsteel_plate', 
                     'gtceu:double_titanium_carbide_plate', 'gtceu:uv_field_generator', '64x gtceu:uhpic_chip', 
                     '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '64x gtceu:uhpic_chip', '32x gtceu:uhpic_chip', '48x gtceu:prismalium_single_wire')
             .inputFluids('gtceu:hsse 6912', 'gtceu:niobium_titanium 1728')
@@ -46,10 +46,10 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.assembly_line(id('super_compact_heat_chamber'))
-        .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uhv', 'gtceu:double_stellarium_plate', 
-                'gtceu:double_ancient_netherite_plate', 'gtceu:uhv_field_generator', '64x kubejs:uepic_chip', 
-                '32x kubejs:uepic_chip', '48x gtceu:ancient_runicalium_single_wire')
-        .inputFluids('gtceu:hsse 6912', 'gtceu:tritanium 1728')
+        .itemInputs('gtceu:heat_chamber', '4x #gtceu:circuits/uev', 'gtceu:double_prismalium_plate', 'gtceu:double_ancient_netherite_plate',
+            'gtceu:uhv_field_generator', '64x kubejs:uepic_chip', '64x kubejs:uepic_chip','32x kubejs:uepic_chip', 
+            '48x gtceu:stellarium_single_wire')
+        .inputFluids('gtceu:trinaquadalloy 6912', 'gtceu:tritanium 1728')
         .itemOutputs('gtceu:super_compact_heat_chamber')
         .stationResearch(
         researchRecipeBuilder => researchRecipeBuilder
@@ -57,8 +57,23 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UHV])
             .CWUt(160)
         )
-        .duration(4800)
+        .duration(4000)
         .EUt(GTValues.VHA[GTValues.UHV]);
+
+    // event.recipes.gtceu.assembly_line(id('omega_pressure_heat_chamber')) //good once added
+    //     .itemInputs('gtceu:super_pressure_heat_chamber', '4x #gtceu:circuits/uiv', 'gtceu:double_stellarium_plate', 
+    //             'gtceu:double_nyanium_plate', 'gtceu:uev_field_generator', '64x kubejs:uepic_chip', '64x kubejs:uepic_chip', 
+    //             '64x kubejs:uepic_chip', '64x kubejs:uepic_chip', '32x kubejs:uepic_chip', '48x gtceu:ancient_runicalium_single_wire')
+    //     .inputFluids('gtceu:ancient_netherite 6912', 'gtceu:calamatium 1728')
+    //     .itemOutputs('gtceu:omega_pressure_heat_chamber')
+    //     .stationResearch(
+    //     researchRecipeBuilder => researchRecipeBuilder
+    //         .researchStack(Item.of('gtceu:super_compact_heat_chamber'))
+    //         .EUt(GTValues.VHA[GTValues.UEV])
+    //         .CWUt(192)
+    //     )
+    //     .duration(4800)
+    //     .EUt(GTValues.VHA[GTValues.UEV]);
 
     event.recipes.gtceu.assembly_line(id('large_rotor_machine'))
         .itemInputs('gtceu:shellite_frame', '4x #gtceu:circuits/luv', 'gtceu:double_vanadium_gallium_plate', 
@@ -505,12 +520,12 @@ ServerEvents.recipes(event => {
         // Maxwell Line
         event.remove({ mod: 'placeablemaxwell' });
         const Gato = (type, rod1, rod2, dye1, dye2) => {
-            let B = '8x kubejs:runic_energized_transportation_plating';
-            let C = '8x kubejs:runic_energized_pathway_plating';
+            let B = '16x kubejs:runic_energized_transportation_plating';
+            let C = '16x kubejs:runic_energized_pathway_plating';
             let R = `1x kubejs:${rod1}_stargate_rod`;
             let D = `1x kubejs:${rod2}_stargate_rod`;
-            let F = '2x gtceu:uiv_field_generator';
-            let A = '2x gtceu:uiv_robot_arm';
+            let F = '8x gtceu:uiv_field_generator';
+            let A = '8x gtceu:uiv_robot_arm';
             let H = '64x #forge:cooked_fishes'
         event.recipes.gtceu.gate_assembly(id(`${type}`))
             .itemInputs(B,R,A,H,F,D,C,D,F,H,A,R,B,R,A,H,F,D,C,D,F,H,A,R)

@@ -73,4 +73,15 @@ ServerEvents.recipes(event => {
         .EUt(global.vha['lv'])
         .circuit(3);
 
+    event.recipes.gtceu.wild_garden(id('sea_crops'))
+        .itemInputs('minecraft:bone_meal')
+        .chancedOutput('farmersdelight:wild_beetroots', 800, 200)
+        .chancedOutput('minecraft:seagrass', 800, 200)
+        .chancedOutput('minecraft:kelp', 800, 200)
+        .chancedOutput('minecraft:sea_pickle', 800, 200)
+        .chancedOutput('minecraft:lily_pad', 800, 200)
+        .duration(100)
+        .EUt(global.vha['lv'])
+        .circuit(4);
+
 });

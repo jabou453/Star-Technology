@@ -188,7 +188,6 @@
 				"267B7EA717164DBF"
 				"4E925FEB0FC3B57F"
 			]
-			description: [""]
 			hide_dependent_lines: true
 			id: "650AFC71A934DCFE"
 			tasks: [{
@@ -219,7 +218,6 @@
 				"478160BFF25D3827"
 				"267B7EA717164DBF"
 			]
-			description: [""]
 			id: "304825F186EF4C61"
 			tasks: [{
 				id: "58987656A240990F"
@@ -231,7 +229,6 @@
 		}
 		{
 			dependencies: ["1E653F1BD748CD6C"]
-			description: [""]
 			id: "478160BFF25D3827"
 			tasks: [
 				{
@@ -1491,7 +1488,6 @@
 		}
 		{
 			dependencies: ["6C11D912E3009973"]
-			description: [""]
 			id: "3E1B9D415C6B5D74"
 			subtitle: "Next Page"
 			tasks: [{
