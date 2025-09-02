@@ -185,7 +185,10 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["707C2E9BA62A60C5"]
+			dependencies: [
+				"7FFCAD92772A175F"
+				"707C2E9BA62A60C5"
+			]
 			description: ["A Parallel Hatch that will elevate your processing power to a whole new level."]
 			id: "27E656FA93E2A1F4"
 			rewards: [{
@@ -357,7 +360,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: -5.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["2F87FC1D5BB43220"]
@@ -375,14 +378,13 @@
 			}]
 			tasks: [
 				{
-					id: "0F233B828108A0AF"
-					item: "gtceu:echo_r_bucket"
-					optional_task: true
-					type: "item"
-				}
-				{
 					id: "7D6A01CC1134C595"
 					type: "checkmark"
+				}
+				{
+					id: "12B0841890A15CB8"
+					item: "gtceu:echo_r_bucket"
+					type: "item"
 				}
 			]
 			title: "Echo Fluid"
@@ -651,7 +653,7 @@
 				"1102670352911334"
 				"6D573ACD05D0EF96"
 			]
-			description: ["Try a variety of singularities so that you don't drain yourself of one material."]
+			description: ["Infuse Plates with singularities for powerful Runes."]
 			id: "0508AE03C730BE6C"
 			rewards: [{
 				id: "2B9821F0ED86771C"
@@ -859,7 +861,7 @@
 			y: 6.5d
 		}
 		{
-			dependencies: ["3ECCE739DE8F5F2C"]
+			dependencies: ["707C2E9BA62A60C5"]
 			description: ["A parallel EBF. Nothing needs to be said, just get it right now."]
 			id: "2EE4C6540FE3D4CF"
 			optional: true
@@ -874,27 +876,8 @@
 				item: "gtceu:mega_blast_furnace"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["3ECCE739DE8F5F2C"]
-			description: ["A parallel freezer. Very much necessary to keep up with the RHF on the left."]
-			id: "17C47EC4E8337D7B"
-			optional: true
-			rewards: [{
-				id: "014A406ABD674F80"
-				item: "kubejs:coin"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [{
-				id: "01A147F41AAF7876"
-				item: "gtceu:mega_vacuum_freezer"
-				type: "item"
-			}]
 			x: -2.0d
-			y: -1.5d
+			y: 6.5d
 		}
 		{
 			dependencies: [
@@ -1111,7 +1094,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: -3.5d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1214,7 +1197,7 @@
 		}
 		{
 			dependencies: ["52B553FDB34B1475"]
-			description: ["This multiblock performs two major functions: compressing materials into super dense infusions and colapsing gravi-stars into singularities."]
+			description: ["This multiblock performs two major functions: compressing materials into super dense infusions and collapsing gravi-stars into singularities."]
 			id: "630F50E03EC3D144"
 			rewards: [{
 				count: 2
@@ -1322,8 +1305,8 @@
 				}
 			]
 			title: "Nether Star Concentrate"
-			x: -4.0d
-			y: -3.5d
+			x: -2.0d
+			y: -5.5d
 		}
 	]
 	title: "Making the Classic Stargate"

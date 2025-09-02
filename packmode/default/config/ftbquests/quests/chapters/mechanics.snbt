@@ -141,7 +141,7 @@
 				"Each voltage tier has a cable material that is counted as a super conductor, which means there is no energy loss on a line of cables as well as being able to hold a higher amount of amperage."
 				""
 				"These consist of:"
-				"&7LV&r Soul Infused"
+				"&7LV:&r Soul Infused"
 				"&bMV:&r Signalum"
 				"&6HV:&r Lumium"
 				"&5EV:&r Enderium"
