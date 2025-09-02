@@ -1101,16 +1101,28 @@
 				"7214D86C55033EAD"
 				"2746D19331452ACC"
 			]
+			icon: {
+				Count: 1
+				id: "gtceu:hot_zapolgium_ingot"
+				tag: { }
+			}
 			id: "7658E16BA79A7632"
-			tasks: [{
-				id: "3F5DB2F30F666815"
-				item: {
-					Count: 1
-					id: "gtceu:hot_zapolgium_ingot"
-					tag: { }
+			tasks: [
+				{
+					id: "3F5DB2F30F666815"
+					item: {
+						Count: 1
+						id: "gtceu:hot_zapolgium_ingot"
+						tag: { }
+					}
+					optional_task: true
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "2263BCF13BF45E77"
+					type: "checkmark"
+				}
+			]
 			x: 23.5d
 			y: 5.5d
 		}
