@@ -70,7 +70,7 @@ ServerEvents.recipes(event => {
             .EUt(30 * (4 ** 7));
 
        event.recipes.gtceu.assembler(id(`solar_generator_8`))
-            .itemInputs(`4x solarflux:sp_7`, `1x gtceu:neutronium_foil`, `2x gtceu:europium_single_cable`)
+            .itemInputs(`4x solarflux:sp_7`, `1x gtceu:dense_neutronium_plate`, `2x gtceu:europium_single_cable`)
             .inputFluids(`gtceu:indium_tin_lead_cadmium_soldering_alloy ${144 * 8}`)
             .itemOutputs(`solarflux:sp_8`)
             .duration(300)

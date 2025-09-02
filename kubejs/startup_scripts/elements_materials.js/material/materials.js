@@ -717,6 +717,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compLiquidTemp('abydos_titanite_rich_magma', 3520, ['6x titanite', '2x calaverite','2x sylvanite', '2x tiemannite', '1x strontianite'], 0xe65c00, [no_decomp]);
 
     compLiquidTemp('abydos_zapolite_rich_magma', 4980, ['7x zapolite', '3x crookesite', '2x clausthalite', '1x iodargyrite'], 0xff471a, [no_decomp]);
+    
+    compLiquidTemp('abydos_titanite_poor_magma', 3870, ['6x titanite', '2x calaverite','2x sylvanite', '2x tiemannite', '1x strontianite', '1x mystery'], 0x914410, [no_decomp]);
+
+    compLiquidTemp('abydos_zapolite_poor_magma', 5460, ['7x zapolite', '3x crookesite', '2x clausthalite', '1x iodargyrite', '1x mystery'], 0xB02A09, [no_decomp]);
 
     // Nether
        
@@ -874,7 +878,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compIngotLiquid('sky_steel', ['1x skystone', '2x steel'], 0xCCFFCC, METALLIC, [1600, 'low', VA('mv'), 400], [no_decomp, plates, rod, frame]);
     
     const skystone_alloys = (material, color, icon) => {
-        event.create(`${material}_skystone_alloy`).ingot().components('skystone', `2x ${material}`).color(color).secondaryColor(0x414445).iconSet(icon).blastTemp(1600, 'low', VA('mv'), 200).flags(no_decomp, plates);
+        event.create(`${material}_skystone_alloy`).ingot().fluid().components('1x skystone', `2x ${material}`).color(color).secondaryColor(0x414445).iconSet(icon).blastTemp(1600, 'low', VA('mv'), 200).flags(no_decomp, plates);
     }
     
     skystone_alloys('gold', 0xCFBE38, 'METALLIC');

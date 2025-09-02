@@ -80,9 +80,9 @@ ServerEvents.recipes(event => {
     
     // ARC's and MCI's
     [
-        {tier: 'mv', last_tier: 'lv', gear: 'gold', glass: 'signalum', DynEA: 0.75, DynP: 1, DynEM: 1.30, energy: 'mv'},
-        {tier: 'hv', last_tier: 'mv', gear: 'electrum', glass: 'lumium', DynEA: 0.5, DynP: 2, DynEM: 1.45, energy: 'hv'},
-        {tier: 'ev', last_tier: 'hv', gear: 'blue_alloy', glass: 'enderium', DynEA: 0.25, DynP: 3, DynEM: 1.6, energy: 'ev'}
+        {tier: 'mv', last_tier: 'lv', gear: 'gold', glass: 'signalum', DynEA: 0.8, DynP: 1, DynEM: 1.30, energy: 'mv'},
+        {tier: 'hv', last_tier: 'mv', gear: 'electrum', glass: 'lumium', DynEA: 0.7, DynP: 2, DynEM: 1.45, energy: 'hv'},
+        {tier: 'ev', last_tier: 'hv', gear: 'blue_alloy', glass: 'enderium', DynEA: 0.6, DynP: 3, DynEM: 1.6, energy: 'ev'}
     ].forEach(tier=> {
         event.recipes.gtceu.assembler(id(`arc_augment_${tier.tier}`))
             .itemInputs(`kubejs:${tier.last_tier}_arc_kit`, `2x gtceu:${tier.gear}_gear`, `thermal:${tier.glass}_glass`)

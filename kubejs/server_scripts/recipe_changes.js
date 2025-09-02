@@ -8,6 +8,23 @@ ServerEvents.recipes(event => {
     
     event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust').id('start:pressing/compressed_fireclay');
 
+    event.recipes.create.pressing('gtceu:compressed_clay', 'minecraft:clay').id('start:pressing/compressed_clay');
+
+    event.shapeless('4x minecraft:clay_ball', ['minecraft:clay']).id('start:shapeless/clay_decomp');
+
+    event.shaped('8x gtceu:compressed_clay', [
+		'CCC',
+		'CMC',
+		'CCC'
+	], {
+		C: 'minecraft:clay_ball',
+		M: 'gtceu:brick_wooden_form'
+	}).keepIngredient('gtceu:brick_wooden_form').id('start:shaped/compressed_clay');
+
+    event.remove({id: 'minecraft:brick'});
+
+    event.smelting('minecraft:brick', 'gtceu:compressed_clay').id(`start:smelting/brick`);
+
     event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 400);
 
     event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 300);
@@ -64,6 +81,12 @@ ServerEvents.recipes(event => {
     ], {
         S: '#minecraft:wooden_slabs'
     }).id('start:shaped/wood_plate');
+
+    event.shaped(Item.of('gtceu:treated_wood_plate'), [
+        'SSS'
+    ], {
+        S: 'gtceu:treated_wood_slab'
+    }).id('start:shaped/treated_wood_plate');
 
     // glass tube shenanigans
     event.shaped(Item.of('2x gtceu:glass_tube'), [
@@ -964,8 +987,6 @@ ServerEvents.recipes(event => {
         T: 'kubejs:meshblock',
         M: 'minecraft:string'
     });
-
-    event.shapeless('4x minecraft:clay_ball', ['minecraft:clay']).id('start:shapeless/clay_decomp');
 
     // REMOVING LARGE BOILERS BECAUSE ALL OUR FOOD KEEPS BLOWING UP
     event.remove({ id: /gtceu:.*_large_boiler/});

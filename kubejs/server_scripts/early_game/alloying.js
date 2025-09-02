@@ -19,6 +19,16 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('1x gtceu:soul_infused_ingot', ['2x thermal_extra:soul_sand_dust', '#forge:ingots/invar']).heatRequirement('lowheated').id('start:create_mixing/soul_infused');
     event.shapeless('1x gtceu:soul_infused_dust', ['thermal_extra:soul_sand_dust', 'thermal_extra:soul_sand_dust', 'gtceu:invar_dust']).id('start:shapeless/soul_infused_dust');
 
+    event.recipes.create.mixing('3x gtceu:bronze_ingot', ['3x gtceu:copper_dust', 'gtceu:tin_dust']).heatRequirement('lowheated').id('start:create_mixing/bronze_dust');
+
+    event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['gtceu:copper_dust', '4x minecraft:redstone']).heatRequirement('lowheated').id('start:create_mixing/red_alloy_dust');
+
+    event.recipes.create.mixing('3x gtceu:brass_ingot', ['3x gtceu:copper_dust', 'gtceu:zinc_dust']).heatRequirement('lowheated').id('start:create_mixing/brass_dust');
+
+    event.recipes.create.mixing('2x gtceu:invar_ingot', ['2x gtceu:iron_dust', 'gtceu:nickel_dust']).heatRequirement('lowheated').id('start:create_mixing/invar_dust');
+
+    event.recipes.create.mixing('1x gtceu:soul_infused_ingot', ['2x thermal_extra:soul_sand_dust', 'gtceu:invar_dust']).heatRequirement('lowheated').id('start:create_mixing/soul_infused_dust');
+
 });
 })()
 }

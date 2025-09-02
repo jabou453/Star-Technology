@@ -1104,7 +1104,8 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["083D06BEA8E39628"]
+			dependencies: ["3B8CDE368E941652"]
+			hide_dependency_lines: true
 			id: "714785F87C1B07D0"
 			tasks: [{
 				id: "5BBB90E875972BCC"
@@ -1115,14 +1116,15 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["083D06BEA8E39628"]
+			dependencies: ["617E17824856450D"]
+			hide_dependency_lines: true
 			id: "49447FEBBB76FFF7"
 			tasks: [{
 				id: "043A497EE25F9274"
 				item: "megacells:mega_pattern_provider"
 				type: "item"
 			}]
-			x: -11.0d
+			x: -9.0d
 			y: -1.0d
 		}
 		{
@@ -1353,17 +1355,6 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["73931EAA3EC5C9A9"]
-			id: "083D06BEA8E39628"
-			tasks: [{
-				id: "473655F43587CB20"
-				title: "Mega Machines"
-				type: "checkmark"
-			}]
-			x: -9.0d
-			y: -1.0d
-		}
-		{
 			id: "5D67E904C7D02AB8"
 			invisible: true
 			tasks: [{
@@ -1409,6 +1400,7 @@
 				{
 					id: "2F265B1AD4C7DBD7"
 					item: "expatternprovider:assembler_matrix_glass"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -1657,6 +1649,18 @@
 			}]
 			x: -11.0d
 			y: 1.0d
+		}
+		{
+			dependencies: ["29D7E2B8D3BF1D9E"]
+			hide_dependency_lines: true
+			id: "66668FEA4D4F8573"
+			tasks: [{
+				id: "6D8F4E2245FFC8DE"
+				item: "expatternprovider:pattern_modifier"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -9.0d
 		}
 	]
 	title: "Applied Energistics"

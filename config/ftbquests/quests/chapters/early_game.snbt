@@ -2290,6 +2290,7 @@
 			description: ["While consuming more steam than their earlier counter-parts (if at all), they are able to run multiple of the same recipe at once with no extra cost or time making it a great feature for bulk processing early on."]
 			icon: "minecraft:book"
 			id: "27F5DD0860E43CFF"
+			optional: true
 			tasks: [{
 				id: "687924A523C9E5A8"
 				title: "Steam Parallels"

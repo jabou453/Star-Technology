@@ -108,6 +108,26 @@ ServerEvents.recipes(event => {
             .duration(400)
             .EUt(global.va['mv']);
 
+        event.remove({id:`gtceu:alloy_blast_smelter/${type.material}_skystone_alloy_gas`});
+        event.remove({id:`gtceu:alloy_blast_smelter/${type.material}_skystone_alloy`});
+        event.recipes.gtceu.alloy_blast_smelter(id(`${type.material}_skystone_alloy`))
+            .itemInputs(`2x gtceu:${type.material}_dust`)
+            .inputFluids('gtceu:skystone 144')
+            .outputFluids(`gtceu:${type.material}_skystone_alloy 432`)
+            .circuit(2)
+            .blastFurnaceTemp(1600)
+            .duration(450)
+            .EUt(120);
+
+        event.recipes.gtceu.alloy_blast_smelter(id(`${type.material}_skystone_alloy_gas`))
+            .itemInputs(`2x gtceu:${type.material}_dust`)
+            .inputFluids('gtceu:skystone 144','gtceu:nitrogen 3000')
+            .outputFluids(`gtceu:${type.material}_skystone_alloy 432`)
+            .circuit(12)
+            .blastFurnaceTemp(1600)
+            .duration(302)
+            .EUt(120);
+
         event.recipes.gtceu.forming_press(id(`${type.circuit}_press`))
             .itemInputs('gtceu:double_sky_steel_plate', `gtceu:${type.material}_dust`)
             .itemOutputs(`ae2:${type.circuit}_processor_press`)

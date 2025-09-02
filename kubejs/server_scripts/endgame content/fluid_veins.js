@@ -1,69 +1,69 @@
 // In server events
 GTCEuServerEvents.fluidVeins(event => {
-  event.add('start:abydos_titanite_rich_magma_deposit', vein => {
+  event.add('start:abydos_titanite_poor_magma_deposit', vein => {
     vein.dimensions('sgjourney:abydos')
-    vein.fluid(() => Fluid.of('gtceu:abydos_titanite_rich_magma').fluid)
+    vein.fluid(() => Fluid.of('gtceu:abydos_titanite_poor_magma').fluid)
     vein.weight(42)
-    vein.minimumYield(120)
-    vein.maximumYield(720)
+    vein.minimumYield(600)
+    vein.maximumYield(1080)
     vein.depletionAmount(2)
     vein.depletionChance(1)
-    vein.depletedYield(50)
+    vein.depletedYield(420)
   });
 
-  event.add('start:abydos_zapolite_rich_magma_deposit', vein => {
+  event.add('start:abydos_zapolite_poor_magma_deposit', vein => {
     vein.dimensions('sgjourney:abydos')
-    vein.fluid(() => Fluid.of('gtceu:abydos_zapolite_rich_magma').fluid)
+    vein.fluid(() => Fluid.of('gtceu:abydos_zapolite_poor_magma').fluid)
     vein.weight(36)
-    vein.minimumYield(120)
-    vein.maximumYield(720)
+    vein.minimumYield(600)
+    vein.maximumYield(1080)
     vein.depletionAmount(2)
     vein.depletionChance(1)
-    vein.depletedYield(50)
+    vein.depletedYield(420)
   });
 
   event.add('start:highly_unstable_nether_magma_deposit', vein => {
     vein.dimensions('minecraft:the_nether')
     vein.fluid(() => Fluid.of('gtceu:highly_unstable_nether_magma').fluid)
     vein.weight(15)
-    vein.minimumYield(180)
-    vein.maximumYield(640)
+    vein.minimumYield(960)
+    vein.maximumYield(1280)
     vein.depletionAmount(2)
     vein.depletionChance(1)
-    vein.depletedYield(50)
+    vein.depletedYield(720)
   });
 
   event.add('start:debris_rich_nether_magma_deposit', vein => {
     vein.dimensions('minecraft:the_nether')
     vein.fluid(() => Fluid.of('gtceu:debris_rich_nether_magma').fluid)
     vein.weight(25)
-    vein.minimumYield(120)
+    vein.minimumYield(240)
     vein.maximumYield(720)
     vein.depletionAmount(2)
     vein.depletionChance(1)
-    vein.depletedYield(50)
+    vein.depletedYield(180)
   });
 
   event.add('start:lava_dense', vein => {
     vein.dimensions('minecraft:the_nether')
     vein.fluid(() => Fluid.of('minecraft:lava').fluid)
     vein.weight(50)
-    vein.minimumYield(1000)
-    vein.maximumYield(2000)
+    vein.minimumYield(16000)
+    vein.maximumYield(24000)
     vein.depletionAmount(2)
     vein.depletionChance(1)
-    vein.depletedYield(50)
+    vein.depletedYield(12000)
   });
 
   event.add('start:crude_infernal_concentrate', vein => {
     vein.dimensions('minecraft:the_nether')
     vein.fluid(() => Fluid.of('gtceu:crude_infernal_concentrate').fluid)
     vein.weight(10)
-    vein.minimumYield(100)
-    vein.maximumYield(300)
+    vein.minimumYield(320)
+    vein.maximumYield(640)
     vein.depletionAmount(2)
     vein.depletionChance(1)
-    vein.depletedYield(50)
+    vein.depletedYield(120)
   });
 
   event.add('start:gritty_akreyrium', vein => {
@@ -74,7 +74,7 @@ GTCEuServerEvents.fluidVeins(event => {
     vein.maximumYield(960)
     vein.depletionAmount(2)
     vein.depletionChance(1)
-    vein.depletedYield(50)
+    vein.depletedYield(100)
   });
 
   event.remove('gtceu:nether_natural_gas_deposit');

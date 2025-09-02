@@ -380,4 +380,37 @@ ServerEvents.recipes(event => {
         .duration(240)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
+    // UHV Containers
+    event.shaped('gtceu:uhv_quantum_chest', [
+        'CPC',
+        'PHP',
+        'CFC'
+    ], {
+        C: '#gtceu:circuits/uhv',
+        P: 'gtceu:dense_neutronium_plate',
+        H: 'gtceu:uhv_machine_hull',
+        F: 'gtceu:zpm_field_generator'
+    }).id(id('uhv_quantum_chest'));
+
+    event.shaped('gtceu:uhv_quantum_tank', [
+        'CFC',
+        'PHP',
+        'CMC'
+    ], {
+        C: '#gtceu:circuits/uhv',
+        P: 'gtceu:dense_neutronium_plate',
+        H: 'gtceu:uhv_hermetic_casing',
+        F: 'gtceu:zpm_field_generator',
+        M: 'gtceu:uhv_electric_pump'
+    }).id(id('uhv_quantum_tank'));
+
+    event.shaped('gtceu:uhv_hermetic_casing', [
+        'PPP',
+        'PHP',
+        'PPP'
+    ], {
+        P: 'gtceu:neutronium_plate',
+        H: 'gtceu:polyether_ether_ketone_large_fluid_pipe'
+    }).id(id('uhv_hermetic_casing'));
+
 });

@@ -446,8 +446,10 @@
 			dependencies: [
 				"491C4CECC6C24DDF"
 				"0DEEBB486450E74E"
+				"17C1292018AE363E"
 			]
 			description: ["This Chip is used to make &6HV&r Energy Hatches and Transformers."]
+			hide_dependency_lines: true
 			icon: "gtceu:lpic_chip"
 			id: "2681E878121B1CF6"
 			rewards: [{
@@ -1513,6 +1515,7 @@
 				"{ \"text\": \"MA Air Production\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"38351B708EBA5528\" } }"
 			]
 			id: "2B695762FC4A7686"
+			optional: true
 			rewards: [{
 				id: "059875F4497E4EA9"
 				item: "kubejs:coin"
@@ -1536,6 +1539,7 @@
 				"{ \"text\": \"MA Air Production\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"38351B708EBA5528\" } }"
 			]
 			id: "23A6938803281145"
+			optional: true
 			rewards: [{
 				id: "11386D4E5873ED47"
 				item: "kubejs:coin"
@@ -1554,6 +1558,7 @@
 			dependencies: ["5E1E1A4F5036A6EA"]
 			description: ["The essence of the End, right in the palm of your hand."]
 			id: "0B9C9B50CBD06F13"
+			optional: true
 			rewards: [{
 				id: "43C38518BA14FB01"
 				item: "kubejs:coin"
@@ -1608,6 +1613,7 @@
 			dependencies: ["4E9FAED9D889160A"]
 			description: ["Crushed Endstone, not exactly groundbreaking."]
 			id: "5E1E1A4F5036A6EA"
+			optional: true
 			rewards: [{
 				id: "7ECD96DDE51CD967"
 				item: "kubejs:coin"
@@ -1626,6 +1632,7 @@
 			dependencies: ["1820787D031EAB15"]
 			description: ["Make some Endstone and get to processing it."]
 			id: "4E9FAED9D889160A"
+			optional: true
 			rewards: [{
 				id: "2EA67AA0DED02E19"
 				item: "kubejs:coin"

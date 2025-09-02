@@ -759,7 +759,7 @@
 				}
 				type: "item"
 			}]
-			x: 25.5d
+			x: 27.0d
 			y: -0.5d
 		}
 		{
@@ -786,7 +786,7 @@
 				}
 				type: "item"
 			}]
-			x: 25.5d
+			x: 27.0d
 			y: 5.5d
 		}
 		{
@@ -829,7 +829,7 @@
 				}
 				type: "item"
 			}]
-			x: 23.5d
+			x: 25.0d
 			y: -0.5d
 		}
 		{
@@ -857,7 +857,7 @@
 				}
 			]
 			title: "Titanium Tetrachloride Mixture"
-			x: 22.0d
+			x: 23.5d
 			y: -0.5d
 		}
 		{
@@ -885,7 +885,7 @@
 				}
 			]
 			title: "Titanite Residue"
-			x: 20.5d
+			x: 22.0d
 			y: -0.5d
 		}
 		{
@@ -916,7 +916,7 @@
 				}
 			]
 			title: "Hydroxo(dioxo) Titanite Mixture"
-			x: 19.0d
+			x: 20.5d
 			y: -0.5d
 		}
 		{
@@ -947,7 +947,7 @@
 				}
 			]
 			title: "Titanite Slurry"
-			x: 16.0d
+			x: 17.5d
 			y: -0.5d
 		}
 		{
@@ -975,7 +975,7 @@
 				}
 			]
 			title: "Titanite Slurry Residue"
-			x: 17.5d
+			x: 19.0d
 			y: -0.5d
 		}
 		{
@@ -993,7 +993,7 @@
 				}
 				type: "item"
 			}]
-			x: 14.5d
+			x: 16.0d
 			y: -0.5d
 		}
 		{
@@ -1021,7 +1021,7 @@
 				}
 			]
 			title: "Perchloric Acid"
-			x: 15.0d
+			x: 16.5d
 			y: -1.5d
 		}
 		{
@@ -1036,7 +1036,7 @@
 				}
 				type: "item"
 			}]
-			x: 16.5d
+			x: 18.0d
 			y: -1.5d
 		}
 		{
@@ -1064,7 +1064,7 @@
 				}
 			]
 			title: "Silica Gel"
-			x: 16.5d
+			x: 18.0d
 			y: 0.5d
 		}
 		{
@@ -1078,7 +1078,7 @@
 				}
 				type: "item"
 			}]
-			x: 18.5d
+			x: 20.0d
 			y: -1.5d
 		}
 		{
@@ -1093,7 +1093,7 @@
 				}
 				type: "item"
 			}]
-			x: 19.5d
+			x: 21.0d
 			y: 0.5d
 		}
 		{
@@ -1123,7 +1123,7 @@
 					type: "checkmark"
 				}
 			]
-			x: 23.5d
+			x: 25.0d
 			y: 5.5d
 		}
 		{
@@ -1141,7 +1141,7 @@
 				}
 				type: "item"
 			}]
-			x: 22.0d
+			x: 23.5d
 			y: 5.5d
 		}
 		{
@@ -1156,7 +1156,7 @@
 				}
 				type: "item"
 			}]
-			x: 20.5d
+			x: 22.0d
 			y: 5.5d
 		}
 		{
@@ -1170,7 +1170,7 @@
 				}
 				type: "item"
 			}]
-			x: 21.5d
+			x: 23.0d
 			y: 4.5d
 		}
 		{
@@ -1188,7 +1188,7 @@
 				}
 				type: "item"
 			}]
-			x: 19.0d
+			x: 20.5d
 			y: 5.5d
 		}
 		{
@@ -1203,7 +1203,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.5d
+			x: 19.0d
 			y: 4.5d
 		}
 		{
@@ -1218,7 +1218,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.5d
+			x: 19.0d
 			y: 6.5d
 		}
 		{
@@ -1233,7 +1233,7 @@
 				}
 				type: "item"
 			}]
-			x: 16.0d
+			x: 17.5d
 			y: 4.5d
 		}
 		{
@@ -1248,7 +1248,7 @@
 				}
 				type: "item"
 			}]
-			x: 16.0d
+			x: 17.5d
 			y: 6.5d
 		}
 		{
@@ -1266,7 +1266,7 @@
 				}
 				type: "item"
 			}]
-			x: 14.5d
+			x: 16.0d
 			y: 5.5d
 		}
 		{
@@ -1291,7 +1291,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.0d
+			x: 18.5d
 			y: 5.5d
 		}
 		{
@@ -1503,7 +1503,7 @@
 				}
 			]
 			title: "Yes, STEAM!!"
-			x: 24.0d
+			x: 25.5d
 			y: 6.5d
 		}
 		{
@@ -1531,7 +1531,7 @@
 				}
 			]
 			title: "Carbon Monoxide"
-			x: 24.0d
+			x: 25.5d
 			y: 4.5d
 		}
 		{
@@ -1545,7 +1545,7 @@
 				}
 				type: "item"
 			}]
-			x: 23.0d
+			x: 24.5d
 			y: 4.5d
 		}
 		{
@@ -1744,7 +1744,8 @@
 			y: 17.5d
 		}
 		{
-			dependencies: ["493DD013C818BB7B"]
+			dependencies: ["08D2618950CE2FE2"]
+			icon: "gtceu:abydos_titanite_rich_magma_bucket"
 			id: "151A1B51DFE41040"
 			optional: true
 			tasks: [
@@ -1755,6 +1756,7 @@
 						id: "gtceu:abydos_titanite_rich_magma_bucket"
 						tag: { }
 					}
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1764,11 +1766,16 @@
 						id: "gtceu:abydos_zapolite_rich_magma_bucket"
 						tag: { }
 					}
+					optional_task: true
 					type: "item"
 				}
+				{
+					id: "10E6804951648B77"
+					type: "checkmark"
+				}
 			]
-			title: "Abydos Magmas"
-			x: 13.0d
+			title: "Rich Abydos Magmas"
+			x: 14.5d
 			y: 2.5d
 		}
 		{
@@ -2004,7 +2011,7 @@
 				}
 			]
 			title: "Magma Byproducts"
-			x: 14.5d
+			x: 16.0d
 			y: 2.5d
 		}
 		{
@@ -2034,7 +2041,7 @@
 				}
 			]
 			title: "Tellurides"
-			x: 16.0d
+			x: 17.5d
 			y: 1.5d
 		}
 		{
@@ -2046,7 +2053,7 @@
 				item: "gtceu:tellurium_dust"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 19.5d
 			y: 1.25d
 		}
 		{
@@ -2072,7 +2079,7 @@
 				}
 			]
 			title: "Selenides"
-			x: 16.0d
+			x: 17.5d
 			y: 3.5d
 		}
 		{
@@ -2088,7 +2095,7 @@
 				item: "gtceu:selenium_dust"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 19.5d
 			y: 3.75d
 		}
 		{
@@ -2111,7 +2118,7 @@
 					type: "checkmark"
 				}
 			]
-			x: 17.0d
+			x: 18.5d
 			y: 2.0d
 		}
 		{
@@ -2123,7 +2130,7 @@
 				item: "gtceu:strontium_dust"
 				type: "item"
 			}]
-			x: 19.0d
+			x: 20.5d
 			y: 2.0d
 		}
 		{
@@ -3514,7 +3521,7 @@
 				}
 			]
 			title: "Crookesite"
-			x: 17.0d
+			x: 18.5d
 			y: 3.0d
 		}
 		{
@@ -3526,7 +3533,7 @@
 				item: "gtceu:thallium_dust"
 				type: "item"
 			}]
-			x: 19.0d
+			x: 20.5d
 			y: 3.0d
 		}
 		{
@@ -3545,6 +3552,32 @@
 			}]
 			x: 26.5d
 			y: 15.0d
+		}
+		{
+			dependencies: ["493DD013C818BB7B"]
+			icon: "gtceu:abydos_zapolite_poor_magma_bucket"
+			id: "08D2618950CE2FE2"
+			tasks: [
+				{
+					id: "1F29F7EAE02DC841"
+					item: "gtceu:abydos_zapolite_poor_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0125EC1CBD8F4A9A"
+					item: "gtceu:abydos_titanite_poor_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1F34644BBD0A2119"
+					type: "checkmark"
+				}
+			]
+			title: "Abydos Magmas"
+			x: 13.0d
+			y: 2.5d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"
