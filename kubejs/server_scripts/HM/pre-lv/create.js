@@ -1151,7 +1151,7 @@ ServerEvents.recipes(event => {
 		event.remove({ output: `create:${item}` });
 	});
 	const CreateIDRemoval = [
-		'crafting/logistics/stock_link', 'crafting/logistics/stock_ticker', 'crafting/logistics/redstone_requester', 'crafting/logistics/factory_gauge'
+		'crafting/logistics/stock_link', 'crafting/logistics/stock_ticker', 'crafting/logistics/redstone_requester', 'crafting/logistics/factory_gauge', 'milling/gravel'
 	];
 	CreateIDRemoval.forEach(item => {
 		event.remove({ id: `create:${item}` });

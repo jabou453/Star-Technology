@@ -239,6 +239,8 @@ ServerEvents.recipes(event => {
         .EUt(7);
     });
 
+    event.recipes.create.mixing(Fluid.of('gtceu:glass', 144), ['1x gtceu:glass_dust','1x gtceu:small_glass_dust']).heatRequirement('superheated').id('start:create_mixer/glass');
+
     //ulv removals
     ['charger_4x','battery_buffer_4x','battery_buffer_8x','battery_buffer_16x','transformer_1a','transformer_2a',
       'transformer_4a','transformer_16a','machine_casing','machine_hull'].forEach(UlvRemove=>{

@@ -135,6 +135,8 @@
 				"5F808C6A353FF66D"
 				"0C3E73B7FB53E836"
 				"6C9CBCF4C1B1495E"
+				"5646A9F01BD60975"
+				"59A805C314717BA0"
 			]
 			hide_dependent_lines: true
 			id: "410385DA7FBBD2FA"
@@ -175,6 +177,7 @@
 		{
 			dependencies: ["50F2743FA699173A"]
 			description: ["1 may be missing hmmm...."]
+			hide_dependent_lines: true
 			id: "5646A9F01BD60975"
 			tasks: [
 				{
