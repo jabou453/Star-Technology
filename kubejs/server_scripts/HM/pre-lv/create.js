@@ -277,9 +277,9 @@ ServerEvents.recipes(event => {
 		Item.of('thermal:drill_head').withChance(1),
 	], drill, [
 		event.recipes.createDeploying(drill, [drill, 'create:andesite_alloy']),
-		event.recipes.createDeploying(drill, [drill, 'create:andesite_alloy']),
+		event.recipes.createDeploying(drill, [drill, 'gtceu:cast_iron_plate']),
 		event.recipes.createPressing(drill, drill),
-		event.recipes.createDeploying(drill, [drill, 'gtceu:iron_plate']),
+		event.recipes.createDeploying(drill, [drill, 'gtceu:wrought_iron_plate']),
 		event.recipes.createCutting(drill, drill),
 	]).transitionalItem(drill).loops(2).id('start:sequenced_assembly/drill_head')
 

@@ -201,9 +201,6 @@ ServerEvents.recipes(event => {
     Transformers(2,'double');
     Transformers(4,'quadruple');
     Transformers(16,'hex');
-    if (tier !== 'lv' || 'mv'){
-    AllTierMachine('rotor_holder',[Hull,`4x gtceu:${componentMaterial}_gear`,'2x '+Motor,'4x '+SmGear],[Solder+' 216',Lubricant+' 5000'])
-    };
 
     //Assembler
     ['input','output'].forEach(hatchType => {

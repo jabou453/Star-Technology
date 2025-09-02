@@ -396,11 +396,18 @@
 			]
 			hide_dependency_lines: true
 			id: "33A70C6D26E3EB04"
-			tasks: [{
-				id: "70609C9571EB5B5C"
-				item: "gtceu:rich_mixture_drilling_formula_bucket"
-				type: "item"
-			}]
+			invisible: true
+			tasks: [
+				{
+					id: "70609C9571EB5B5C"
+					item: "gtceu:rich_mixture_drilling_formula_bucket"
+					type: "item"
+				}
+				{
+					id: "73088676FA9E2164"
+					type: "checkmark"
+				}
+			]
 			x: 7.5d
 			y: -8.5d
 		}
@@ -647,10 +654,7 @@
 			y: 3.5d
 		}
 		{
-			dependencies: [
-				"2858DF4C95199D79"
-				"139AB773D4CE9359"
-			]
+			dependencies: ["2858DF4C95199D79"]
 			id: "49EFEDFF666C1253"
 			tasks: [{
 				id: "348DB4FEB7A1DD03"
@@ -661,10 +665,7 @@
 			y: -3.5d
 		}
 		{
-			dependencies: [
-				"6D81496D3E35BFDE"
-				"139AB773D4CE9359"
-			]
+			dependencies: ["6D81496D3E35BFDE"]
 			id: "7EE8488D2277B7FA"
 			tasks: [{
 				id: "24F0327E1FF298BD"
@@ -675,10 +676,7 @@
 			y: -3.5d
 		}
 		{
-			dependencies: [
-				"6CD07FFA90334A46"
-				"139AB773D4CE9359"
-			]
+			dependencies: ["6CD07FFA90334A46"]
 			id: "76C96FF5FA0BD05B"
 			tasks: [{
 				id: "2D5D27698F21C558"
@@ -689,10 +687,7 @@
 			y: -6.5d
 		}
 		{
-			dependencies: [
-				"0CE44A71F93A5012"
-				"139AB773D4CE9359"
-			]
+			dependencies: ["0CE44A71F93A5012"]
 			id: "2E9568CBAEB0D9FB"
 			tasks: [{
 				id: "0C9C4E8549401623"
@@ -1239,7 +1234,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 3.5d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1652,13 +1647,21 @@
 		}
 		{
 			dependencies: ["716115AAAEC87FE5"]
+			hide_until_deps_visible: false
 			id: "74C8D00FA9E1E20C"
+			invisible: true
 			subtitle: "Remainder of Platline Locked for Eta"
-			tasks: [{
-				id: "1DFCD2C2B41ADCEA"
-				item: "gtceu:rarest_metal_slurry_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "1DFCD2C2B41ADCEA"
+					item: "gtceu:rarest_metal_slurry_bucket"
+					type: "item"
+				}
+				{
+					id: "70E478869911118C"
+					type: "checkmark"
+				}
+			]
 			x: 19.5d
 			y: -2.5d
 		}
@@ -1983,7 +1986,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 1.5d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -1997,7 +2000,7 @@
 				type: "item"
 			}]
 			x: 5.5d
-			y: 0.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["3E1B9D415C6B5D74"]

@@ -76,11 +76,16 @@ ServerEvents.recipes(event => {
         .itemOutputs('2x gtceu:stone_dust')
         .duration(duration_modifier * duration_multiplier * 300)
         .EUt(voltage)
-    
     }    
     fluid_type('minecraft','water',2,.65);
     fluid_type('gtceu','distilled_water',1.5,.75);
     fluid_type('gtceu','lubricant',1,.7);
+
+    event.recipes.gtceu.macerator(id(`hm_${geode}_geode_decomp`))
+        .itemInputs(`kubejs:${geode}_geode`)
+        .itemOutputs(`gtceu:impure_${geode}_dust`)
+        .duration(duration_modifier * 400)
+        .EUt(voltage) 
     }
 
     geode_type('quartzite', GTValues.VHA[GTValues.LV], .8)

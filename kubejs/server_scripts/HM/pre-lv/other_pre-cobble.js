@@ -384,13 +384,13 @@ ServerEvents.recipes(event => {
 
 	['coals','poor_coals'].forEach(fuelType => {
 		let boost = (fuelType == 'coals') ? .6 : 1;
-	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_${fuelType}`))
-		.notConsumable('minecraft:coarse_dirt')
-		.chancedInput(`#minecraft:${fuelType}`, 2500, 0)
-		.chancedOutput('1x minecraft:flint', 9500, 0)
-		.chancedOutput('1x minecraft:flint', 8000, 0)
-		.chancedOutput('1x minecraft:flint', 6500, 0)
-		.duration(480);
+	// event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_${fuelType}`))
+	// 	.notConsumable('minecraft:coarse_dirt')
+	// 	.chancedInput(`#minecraft:${fuelType}`, 2500, 0)
+	// 	.chancedOutput('1x minecraft:flint', 9500, 0)
+	// 	.chancedOutput('1x minecraft:flint', 8000, 0)
+	// 	.chancedOutput('1x minecraft:flint', 6500, 0)
+	// 	.duration(480);
 	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_1_${fuelType}`))
 		.notConsumable('minecraft:coarse_dirt')
 		.chancedInput('kubejs:basic_scavenging_rod', 40, 0)

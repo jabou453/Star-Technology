@@ -33,5 +33,13 @@ LootJS.modifiers((event) => {
 				LootEntry.of(`farmersdelight:straw`).when(c => c.randomChance(0.10)),
 				LootEntry.of(`kubejs:plant_fibers`).when(c => c.randomChance(0.05))
 			);
+		event
+			.addBlockLootModifier(`minecraft:${tree}_leaves`)
+			.matchMainHand(Item.of('exnihilosequentia:iron_crook'))
+			.addLoot(
+				LootEntry.of(`minecraft:${tree}_sapling`).when(c => c.randomChance(0.20)),
+				(tree == 'jungle') && LootEntry.of('minecraft:cocoa_beans').when(c => c.randomChance(0.02))
+			);
 	});
+	
 });

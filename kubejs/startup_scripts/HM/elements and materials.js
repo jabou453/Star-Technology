@@ -55,11 +55,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 	event.create('cast_iron')
         .ingot(1)
-		.liquid(new GTFluidBuilder().temperature(1450))
+		.liquid()
         .components('18x crude_cast_iron', '1x bismuth', '2x copper')
         .color(0x696E6C)
 		.secondaryColor(0x4C5052)
         .iconSet(METALLIC)
+		.blastTemp(1450, 'low', VA('mv'), 1200)
         .flags(not_alloy, foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, bolt_and_screw, no_decomp, no_smelt);
 
 	const matmod = (mat, flag) => {
@@ -134,7 +135,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 	if (global.packmode == 'hard'){(() => { 
 	//HM Superconductors
-	conductorSuper('soul_infused', ['1x invar', '2x mystery'], 0xcc9966, [1700, 'low', VA('mv'), 1200], [V('lv'), 2, 0, true], [135, 105, 3, 37600]);
+	conductorSuper('soul_infused', ['1x invar', '2x mystery'], 0xcc9966, [1700, 'low', VHA('mv'), 1200], [V('lv'), 2, 0, true], [135, 105, 3, 37600]);
     conductorSuper('signalum', ['1x silver', '3x copper', '4x redstone'], 0xff3300, [2500, 'low', VA('mv'), 1500], [V('mv'), 4, 0, true], [170, 120, 3, 24000]);
     conductorSuper('lumium', ['1x silver', '3x tin', '2x glowstone'], 0xffffb3, [3200, 'low', VA('hv'), 1800], [V('hv'), 6, 0, true], [200, 135, 3, 24000]);
     conductorSuper('enderium', ['3x lead', '1x diamond', '2x ender_pearl'], 0x006666, [4200, 'low', VA('ev'), 2100], [V('ev'), 8, 0, true], [270, 150, 3, 45600]);
