@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
 	}).id('start:shaped/coarse_dirt');
 
 	event.recipes.create.mixing('2x minecraft:rooted_dirt', ['2x minecraft:dirt', '1x minecraft:mangrove_roots']).id('start:create_mixer/rooted_dirt');
-	event.recipes.gtceu.mixer(id('rooted_dirt'))
+	event.recipes.gtceu.mixer(id('rooted_dirt_hm'))
 		.itemInputs('minecraft:dirt', 'minecraft:mangrove_roots')
 		.itemOutputs('2x minecraft:rooted_dirt')
 		.duration(100)

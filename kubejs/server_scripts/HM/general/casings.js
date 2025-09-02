@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /^gtceu:.*engine_intake_casing/ });
     event.remove({ output: /start_core:enriched_naquadah.*/ });
 
-    const SpecialCasing = (material, tier,f,p,g,e) => {
+    const SpecialCasing = (material,tier,f,p,g,e) => {
     let type = (material == 'tungsten_steel') ? 'tungstensteel' : material ;
     if (f == true) {
         let mod = (type == 'enriched_naquadah') ? 'start_core' : 'gtceu' ;
@@ -22,10 +22,11 @@ ServerEvents.recipes(event => {
     }
     if (p == true) {
         let mod = (type == 'enriched_naquadah') ? 'kubejs' : 'gtceu' ;
+        let outputType = (type == 'polytetrafluoroethylene') ? 'ptfe' : type;
     event.recipes.gtceu.assembler(id(`${type}_pipe_casing_hm`))
         .itemInputs(`6x gtceu:${material}_plate`, `6x gtceu:${material}_small_fluid_pipe`, `gtceu:${material}_frame`)
         .circuit(3)
-        .itemOutputs(`2x ${mod}:${type}_pipe_casing`)
+        .itemOutputs(`2x ${mod}:${outputType}_pipe_casing`)
         .duration(100)
         .EUt(2 * (4 ** tier));
     }
@@ -52,6 +53,7 @@ ServerEvents.recipes(event => {
     SpecialCasing('bronze',0,true,true,true,false);
     SpecialCasing('steel',1,true,true,true,false);
     SpecialCasing('stainless_steel',3,true,true,true,false);
+    SpecialCasing('polytetrafluoroethylene',3,false,true,false,false);
     SpecialCasing('titanium',4,true,true,true,true);
     SpecialCasing('tungsten_steel',5,true,true,true,false); // made sperate engine load since keeps breaking
     SpecialCasing('enriched_naquadah',7,true,true,true,true);

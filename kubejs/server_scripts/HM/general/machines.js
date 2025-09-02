@@ -201,9 +201,6 @@ ServerEvents.recipes(event => {
     Transformers(2,'double');
     Transformers(4,'quadruple');
     Transformers(16,'hex');
-    if (tier !== 'lv' || 'mv'){
-    AllTierMachine('rotor_holder',[Hull,`4x gtceu:${componentMaterial}_gear`,'2x '+Motor,'4x '+SmGear],[Solder+' 216',Lubricant+' 5000'])
-    };
 
     //Assembler
     ['input','output'].forEach(hatchType => {
@@ -457,4 +454,29 @@ ServerEvents.recipes(event => {
     Kubes('wiremill', ['gtceu:titanium_frame', '6x gtceu:ev_electric_motor', '3x #gtceu:circuits/ev', '6x gtceu:aluminium_single_cable', '6x gtceu:sterling_silver_plate', 'kubejs:multiblock_upgrade_kit'], ['gtceu:soldering_alloy 720', 'gtceu:lubricant 1000', 'gtceu:polytetrafluoroethylene 432']);
     MachineAssemblyScanner('large_rock_crusher', ['gtceu:titanium_frame', '1x gtceu:ev_electric_piston', '1x gtceu:ev_electric_motor', '1x gtceu:diamond_grinding_head', '5x gtceu:tempered_glass', '6x gtceu:aluminium_single_cable', '6x gtceu:red_steel_plate', 'kubejs:multiblock_upgrade_kit'], ['gtceu:soldering_alloy 1440', 'gtceu:polytetrafluoroethylene 432'],GTValues.VA[GTValues.EV],600,`gtceu:ev_rock_crusher`,1800,480);
 
+    // Coil Changes
+
+    event.remove({output: /gtceu:.*coil_block/})
+
+    event.recipes.gtceu.assembler(id('cupronickel_coil_block'))
+        .itemInputs('gtceu:cast_iron_frame','8x gtceu:cupronickel_double_wire','8x gtceu:bronze_foil','32x minecraft:paper')
+        .inputFluids('gtceu:tin_alloy 144')
+        .itemOutputs('gtceu:cupronickel_coil_block')
+        .duration(200)
+        .EUt(30);
+
+    event.recipes.gtceu.assembler(id('kanthal_coil_block'))
+        .itemInputs('gtceu:steel_frame','8x gtceu:kanthal_double_wire','8x gtceu:aluminium_foil','16x gtceu:borosilicate_glas_foil')
+        .inputFluids('gtceu:copper 144')
+        .itemOutputs('gtceu:kanthal_coil_block')
+        .duration(300)
+        .EUt(120);
+
+    event.recipes.gtceu.assembler(id('nichrome_coil_block'))
+        .itemInputs('gtceu:red_steel_frame','8x gtceu:nichrome_double_wire','8x gtceu:stainless_steel_foil','32x gtceu:borosilicate_glas_foil')
+        .inputFluids('gtceu:aluminium 144')
+        .itemOutputs('gtceu:nichrome_coil_block')
+        .duration(400)
+        .EUt(480);
+    
 });
