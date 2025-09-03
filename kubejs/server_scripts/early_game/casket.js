@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         S: 'gtceu:treated_wood_rod'
     }).id(id('shaped/ulv_casket'));
 
-    const fermenting = (input, outputItem, outputFluid, duration, recipeID) => {
+    const fermenting = (input, outputItem, outputFluid, duration, recipeID, circuit) => {
         const recipe = event.recipes.gtceu.fermenting(id(recipeID));
         recipe.itemInputs(input);
         if (outputItem) {
@@ -23,9 +23,12 @@ ServerEvents.recipes(event => {
         }
         recipe.outputFluids(outputFluid);
         recipe.duration(duration);
+        if (circuit) {
+            recipe.circuit(circuit);
+        }
     };
     
-    fermenting('8x #forge:crops', 'gtceu:bio_chaff', 'gtceu:ethanol 200', 600, 'ethanol');
+    fermenting('8x #forge:crops', 'gtceu:bio_chaff', 'gtceu:ethanol 200', 600, 'ethanol', 1);
     
     const potionRecipes = (fermentationMixture, potionID) => {
         fermenting(fermentationMixture, false, `kubejs:${potionID} 100`, 100, potionID);
