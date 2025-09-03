@@ -136,12 +136,4 @@ ServerEvents.recipes(event => {
         event.recipes.createPressing(inter, inter)
     ]).transitionalItem(inter).loops(1).id('start:sequenced_assembly/ulv_fluid_input');
 
-    event.shaped(Item.of(`gtceu:ulv_fluid_output`), [
-        'H',
-        'S'
-    ], {
-        H: `gtceu:ulv_fluid_input`,
-        S: `#forge:tools/screwdrivers`
-    });
-
 });

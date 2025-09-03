@@ -266,7 +266,7 @@ ServerEvents.recipes(event => {
 	event.recipes.create.crushing(['2x kubejs:charcoal_pellet', Item.of('kubejs:charcoal_pellet').withChance(0.5)], 'minecraft:charcoal');
 	event.recipes.create.milling(['gtceu:charcoal_dust'], 'minecraft:charcoal');
 	event.recipes.create.milling(['gtceu:sand'], 'minecraft:gravel');
-	event.recipes.create.milling(['gtceu:exnihilosequentia:dust'], 'minecraft:sand');
+	event.recipes.create.milling(['exnihilosequentia:dust'], 'minecraft:sand');
 
 	event.remove({ id: 'thermal:rubber_3' });
 	event.recipes.create.compacting(Fluid.of('thermal:latex', 20), `10x minecraft:jungle_log`).heatRequirement('lowheated').id('start:compacting/latex');
