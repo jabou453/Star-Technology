@@ -20,6 +20,12 @@
 			x: 7.5d
 			y: 11.5d
 		}
+		{
+			id: "1179D9001396FE89"
+			linked_quest: "0F1D766E2E2EEEB5"
+			x: 22.5d
+			y: 19.5d
+		}
 	]
 	quests: [
 		{
@@ -1378,18 +1384,6 @@
 		}
 		{
 			dependencies: ["0F1D766E2E2EEEB5"]
-			id: "1C5BF4BBF693A39E"
-			size: 1.0d
-			tasks: [{
-				id: "55F839BB36781B0B"
-				item: "mysticalagriculture:nether_agglomeratio"
-				type: "item"
-			}]
-			x: 22.5d
-			y: 19.5d
-		}
-		{
-			dependencies: ["1C5BF4BBF693A39E"]
 			id: "58037316F922EBF0"
 			size: 1.0d
 			tasks: [{

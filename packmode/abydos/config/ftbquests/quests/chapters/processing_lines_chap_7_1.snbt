@@ -525,12 +525,19 @@
 		}
 		{
 			dependencies: ["3734DD891BA0C488"]
+			icon: "gtceu:hot_mythril_ingot"
 			id: "3E60DA2BD370E162"
-			tasks: [{
-				id: "4D555D03AF2F7542"
-				item: "gtceu:hot_mythril_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4D555D03AF2F7542"
+					item: "gtceu:hot_mythril_ingot"
+					type: "item"
+				}
+				{
+					id: "21DC7BC16C05CFBF"
+					type: "checkmark"
+				}
+			]
 			x: 5.0d
 			y: -6.0d
 		}
@@ -895,12 +902,19 @@
 		}
 		{
 			dependencies: ["51B88F446B630C2A"]
+			icon: "gtceu:hot_adamantine_ingot"
 			id: "1C705D1B2ABEAC71"
-			tasks: [{
-				id: "0711BAE622F4A06B"
-				item: "gtceu:hot_adamantine_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0711BAE622F4A06B"
+					item: "gtceu:hot_adamantine_ingot"
+					type: "item"
+				}
+				{
+					id: "7A5DC8C4BE4C1706"
+					type: "checkmark"
+				}
+			]
 			x: 9.5d
 			y: -3.0d
 		}
@@ -1292,12 +1306,19 @@
 		}
 		{
 			dependencies: ["03323B1482966A1C"]
+			icon: "gtceu:hot_enriched_estalt_ingot"
 			id: "1009C2A64244C8CA"
-			tasks: [{
-				id: "6DF4A6043689D13B"
-				item: "gtceu:hot_enriched_estalt_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "6DF4A6043689D13B"
+					item: "gtceu:hot_enriched_estalt_ingot"
+					type: "item"
+				}
+				{
+					id: "7FE898A7CA558028"
+					type: "checkmark"
+				}
+			]
 			x: 6.5d
 			y: 0.0d
 		}
@@ -1614,12 +1635,19 @@
 		}
 		{
 			dependencies: ["47F21F5416FAF62B"]
+			icon: "gtceu:hot_estalt_ingot"
 			id: "0CB1ED3221C82E8F"
-			tasks: [{
-				id: "785C8FB1BDA657D4"
-				item: "gtceu:hot_estalt_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "785C8FB1BDA657D4"
+					item: "gtceu:hot_estalt_ingot"
+					type: "item"
+				}
+				{
+					id: "4D13DFC746049561"
+					type: "checkmark"
+				}
+			]
 			x: 3.5d
 			y: 4.5d
 		}
@@ -1895,23 +1923,37 @@
 		}
 		{
 			dependencies: ["07F32171286545A5"]
+			icon: "gtceu:hot_isovol_ingot"
 			id: "45A7CB586A63E2D8"
-			tasks: [{
-				id: "2604250FE035522F"
-				item: "gtceu:hot_isovol_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2604250FE035522F"
+					item: "gtceu:hot_isovol_ingot"
+					type: "item"
+				}
+				{
+					id: "028FC0D9700691EC"
+					type: "checkmark"
+				}
+			]
 			x: 10.5d
 			y: 6.0d
 		}
 		{
 			dependencies: ["62ABA5F6CAA8339B"]
+			icon: "gtceu:hot_calamatium_ingot"
 			id: "74A13511E58B0CA3"
-			tasks: [{
-				id: "7C631999E570007E"
-				item: "gtceu:hot_calamatium_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "7C631999E570007E"
+					item: "gtceu:hot_calamatium_ingot"
+					type: "item"
+				}
+				{
+					id: "37BCE89E0FEB5A72"
+					type: "checkmark"
+				}
+			]
 			x: 10.5d
 			y: 8.0d
 		}

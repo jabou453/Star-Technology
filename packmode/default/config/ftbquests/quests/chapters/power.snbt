@@ -516,13 +516,13 @@
 			id: "08F1DEFEB060C74C"
 			shape: "square"
 			tasks: [{
-				id: "2EDDF4BFBC3DA665"
+				id: "0602F0EE60E22E9B"
 				item: {
 					Count: 1
 					id: "kubejs:lv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.1f
+							DynamoEnergy: 1.15f
 							Type: "Dynamo"
 						}
 					}
@@ -540,13 +540,13 @@
 			id: "238AD90B9828A7B0"
 			shape: "square"
 			tasks: [{
-				id: "730671D296A9FDA4"
+				id: "499495AAA0E28973"
 				item: {
 					Count: 1
 					id: "kubejs:mv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.32f
+							DynamoEnergy: 1.3f
 							Type: "Dynamo"
 						}
 					}
@@ -564,13 +564,13 @@
 			id: "612BB2D1A5C10C7B"
 			shape: "square"
 			tasks: [{
-				id: "2BC9405104D50BCC"
+				id: "018606F48A551484"
 				item: {
 					Count: 1
 					id: "kubejs:hv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.58f
+							DynamoEnergy: 1.45f
 							Type: "Dynamo"
 						}
 					}
@@ -588,13 +588,13 @@
 			id: "7F229469E1A4C2EF"
 			shape: "square"
 			tasks: [{
-				id: "3384B6C45D3ECCBF"
+				id: "201140B0310B36B7"
 				item: {
 					Count: 1
 					id: "kubejs:ev_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.9f
+							DynamoEnergy: 1.6f
 							Type: "Dynamo"
 						}
 					}
@@ -613,13 +613,13 @@
 			id: "7B16D5BEC4CDB611"
 			shape: "square"
 			tasks: [{
-				id: "26DC377D99850D15"
+				id: "400F6BC9D266BC8B"
 				item: {
 					Count: 1
 					id: "kubejs:lv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.67f
+							DynamoEnergy: 0.9f
 							DynamoPower: 0.5f
 							Type: "Dynamo"
 						}
@@ -638,13 +638,13 @@
 			id: "1B43A54DA21C5F87"
 			shape: "square"
 			tasks: [{
-				id: "42E9EE4954EA6DE4"
+				id: "5D0FDBE9AA0B3F0F"
 				item: {
 					Count: 1
 					id: "kubejs:mv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.5f
+							DynamoEnergy: 0.8f
 							DynamoPower: 1.0f
 							Type: "Dynamo"
 						}
@@ -663,13 +663,13 @@
 			id: "206E8AD2E23335B9"
 			shape: "square"
 			tasks: [{
-				id: "77B89D61B3CCF7CD"
+				id: "2AC1308EA4B09FF1"
 				item: {
 					Count: 1
 					id: "kubejs:hv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.33f
+							DynamoEnergy: 0.7f
 							DynamoPower: 2.0f
 							Type: "Dynamo"
 						}
@@ -688,13 +688,13 @@
 			id: "0C6AB44DAB2C8C91"
 			shape: "square"
 			tasks: [{
-				id: "5D08C2E00A2D8FCC"
+				id: "1ADD7E77F1B9AF32"
 				item: {
 					Count: 1
 					id: "kubejs:ev_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.25f
+							DynamoEnergy: 0.6f
 							DynamoPower: 3.0f
 							Type: "Dynamo"
 						}
