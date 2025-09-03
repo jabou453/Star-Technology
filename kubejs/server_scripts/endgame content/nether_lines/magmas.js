@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:highly_unstable_nether_magma 100000')
         .chancedInput('1x kubejs:ancient_netherite_reinforced_mesh', 1000, -150)
         .outputFluids('gtceu:mystical_nether_magma 7000')
-        .itemOutputs('1x gtceu:deactivated_nether_dust')
+        .itemOutputs('1x gtceu:deactivated_nether_dust','1x gtceu:small_deactivated_nether_dust')
         .duration(1050)
         .EUt(GTValues.VA[GTValues.UEV]*3/11);
 
@@ -50,10 +50,10 @@ ServerEvents.recipes(event => {
 
     ['mythrillic','adamantamite'].forEach(type=>{
         event.recipes.gtceu.heat_chamber(id(`activated_nether_by_enriched_${type}_to_atomic_nether_sludge`))
-            .inputFluids(`gtceu:enriched_${type}_mixture 1000`)
-            .itemInputs('1x gtceu:activated_nether_dust')
-            .outputFluids(`gtceu:molten_${type}_mixture 1000`)
-            .itemOutputs('1x gtceu:atomic_nether_sludge_dust')
+            .inputFluids(`gtceu:enriched_${type}_mixture 100`)
+            .itemInputs('1x gtceu:small_activated_nether_dust')
+            .outputFluids(`gtceu:molten_${type}_mixture 100`)
+            .itemOutputs('1x gtceu:small_atomic_nether_sludge_dust')
             .duration(400)
             .EUt(GTValues.VHA[GTValues.UHV]); 
     });
