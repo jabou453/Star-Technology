@@ -1168,5 +1168,6 @@ ServerEvents.recipes(event => {
 	CDiesel.forEach(removal => {
 		event.remove({ output: `createdieselgenerators:${removal}` })
 	});
-	event.remove({ id: /^railways:mechanical_crafting\/.*_locometal_boiler/ })
+	event.remove({ id: /^railways:mechanical_crafting\/.*_locometal_boiler/ });
+	event.remove({ mod: 'vintage' });
 });
