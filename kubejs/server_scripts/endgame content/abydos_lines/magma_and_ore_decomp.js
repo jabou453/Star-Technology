@@ -10,6 +10,19 @@ ServerEvents.recipes(event => {
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UV]*.8);
 
+    event.recipes.gtceu.molten_destabilizing(id('abydos_titanite_poor_magma'))
+        .inputFluids('gtceu:abydos_titanite_poor_magma 60000')
+        .outputFluids('gtceu:titanite 1500',
+            'gtceu:molten_ore_mixture 800',
+            'gtceu:calaverite 500',
+            'gtceu:sylvanite 500',
+            'gtceu:tiemannite 450',
+            'gtceu:strontianite 250',
+            'minecraft:lava 54000')
+        .itemOutputs('16x gtceu:deepslate_dust')
+        .duration(3600)
+        .EUt(GTValues.VHA[GTValues.UV]);
+
     event.recipes.gtceu.molten_destabilizing(id('decomp_abydos_titanite_rich_magma'))
         .inputFluids('gtceu:abydos_titanite_rich_magma 80000')
         .outputFluids('gtceu:titanite 30000',
@@ -29,6 +42,18 @@ ServerEvents.recipes(event => {
         .itemOutputs('1x gtceu:tiny_lautarite_dust','1x gtceu:tiny_stibiopalladinite_dust','1x gtceu:tiny_klockmannite_dust')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UV]*.8);
+
+    event.recipes.gtceu.molten_destabilizing(id('abydos_zapolite_poor_magma'))
+        .inputFluids('gtceu:abydos_zapolite_poor_magma 6000')
+        .outputFluids('gtceu:zapolite 1500',
+            'gtceu:molten_ore_mixture 800',
+            'gtceu:crookesite 875',
+            'gtceu:clausthalite 425',
+            'gtceu:iodargyrite 350',
+            'minecraft:lava 54000')
+        .itemOutputs('16x gtceu:deepslate_dust')
+        .duration(3600)
+        .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.molten_destabilizing(id('decomp_abydos_zapolite_rich_magma'))
         .inputFluids('gtceu:abydos_zapolite_rich_magma 80000')

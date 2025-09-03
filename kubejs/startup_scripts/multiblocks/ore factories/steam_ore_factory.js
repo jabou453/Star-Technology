@@ -10,11 +10,11 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {     
     event.create('steam_ore_factory', 'multiblock')
-        .machine((holder) => new $SteamMulti(holder, 8))
+        .machine((holder) => new $StartSteamMulti(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('steam_ore_processing')
         .appearanceBlock(() => Block.getBlock('kubejs:high_steam_machine_casing'))
-        .recipeModifier((machine, recipe) => $SteamMulti.recipeModifier(machine, recipe), true)
+        .recipeModifier($StarTRecipeModifiers.START_STEAM_PARALLEL)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('#FFF#', '#FFF#', '#FFF#', '##F##', '#####', '#####', '#####')
             .aisle('FFFFF', 'FG#GF', 'F###F', '#F#F#', '#FFF#', '##F##', '##B##')

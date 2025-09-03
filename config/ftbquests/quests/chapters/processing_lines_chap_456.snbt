@@ -1776,7 +1776,7 @@
 			]
 			title: "Rich Abydos Magmas"
 			x: 14.5d
-			y: 2.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["37C381390F132628"]
@@ -1942,7 +1942,11 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["151A1B51DFE41040"]
+			dependencies: [
+				"151A1B51DFE41040"
+				"08D2618950CE2FE2"
+			]
+			dependency_requirement: "one_completed"
 			id: "33995F23F01ADF83"
 			tasks: [
 				{
@@ -3576,8 +3580,8 @@
 				}
 			]
 			title: "Abydos Magmas"
-			x: 13.0d
-			y: 2.5d
+			x: 14.5d
+			y: 3.5d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"

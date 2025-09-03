@@ -17,6 +17,12 @@
         //.recipeModifiers([$StarTRecipeModifiers.LARGE_TURBINE,$StarTRecipeModifiers.BOOSTED_PLASMA_TURBINE])
             //Adds boosting as a recipe modifier
 
+    const $StartSteamMulti = Java.loadClass('com.startechnology.start_core.machine.steam.StarTSteamParallelMultiblockMachine');
+        //.machine((holder) => new $StartSteamMulti(holder))
+            // sets multiblock to use steam
+        //.recipeModifier($StarTRecipeModifiers.START_STEAM_PARALLEL)
+            //Adds StartSteamMulti as a recipe modifier
+
 //GTCEU Loader
 
     //Multiblock Relative Direction Loader
