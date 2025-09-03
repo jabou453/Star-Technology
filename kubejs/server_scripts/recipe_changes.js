@@ -148,6 +148,14 @@ ServerEvents.recipes(event => {
         .EUt(30)
         .circuit(2);
 
+    event.remove({id: 'gtceu:large_chemical_reactor/vinyl_chloride_from_ethane'})
+    event.recipes.gtceu.large_chemical_reactor(id('vinyl_chloride_from_ethane'))
+        .inputFluids('gtceu:chlorine 4000', 'gtceu:ethane 1000')
+        .outputFluids('gtceu:vinyl_chloride 1000','gtceu:hydrochloric_acid 3000')
+        .duration(160)
+        .EUt(30)
+        .circuit(2);
+
     if (global.packmode !== 'hard'){
         (() => {   
     event.recipes.gtceu.large_chemical_reactor(id('latex_rubber'))
