@@ -144,11 +144,11 @@ ServerEvents.recipes(event => {
 
     const DracoWaferEngraving = (ModID, Output, WaferTier, Lens, LensIsTag) => {
         const WaferDuration = {
-            Silicon: 10,
-            Phosphorous: 25,
-            Naquadah: 100,
-            Neutronium: 250,
-            Draconic: 1000
+            Silicon: 20,
+            Phosphorous: 50,
+            Naquadah: 200,
+            Neutronium: 500,
+            Draconic: 900
         }
         const WaferQuantity = {
             Silicon: 64,
@@ -162,20 +162,20 @@ ServerEvents.recipes(event => {
         const Quantity = WaferQuantity[WaferTier];
 
         if(LensIsTag == true)
-        event.recipes.gtceu.laser_engraver(id(`engrave_${Output}_draconic`))
+        event.recipes.gtceu.laser_engraver(id(`engrave_${Output}_draco`))
             .itemInputs('kubejs:draco_wafer')
             .notConsumable(`#forge:lenses/${Lens}`)
             .itemOutputs(`${Quantity}x ${ModID}:${Output}_wafer`)
             .duration(Duration)
-            .EUt(GTValues.VA[GTValues.UV])
+            .EUt(GTValues.VA[GTValues.LuV])
             .cleanroom(CleanroomType.CLEANROOM);
         else
-        event.recipes.gtceu.laser_engraver(id(`engrave_${Output}_draconic`))
+        event.recipes.gtceu.laser_engraver(id(`engrave_${Output}_draco`))
             .itemInputs('kubejs:draco_wafer')
             .notConsumable(`gtceu:${Lens}_lens`)
             .itemOutputs(`${Quantity}x ${ModID}:${Output}_wafer`)
             .duration(Duration)
-            .EUt(GTValues.VA[GTValues.UV])
+            .EUt(GTValues.VA[GTValues.LuV])
             .cleanroom(CleanroomType.CLEANROOM);
     
     }
@@ -193,5 +193,68 @@ ServerEvents.recipes(event => {
     DracoWaferEngraving('gtceu', 'lpic', 'Silicon', 'orange_glass', false);
     DracoWaferEngraving('gtceu', 'mpic', 'Phosphorous', 'brown_glass', false);
     DracoWaferEngraving('kubejs', 'draco_advanced_soc', 'Draconic', 'echo_shard', false);
+
+    const MassWaferEngraving = (ModID, Output, WaferTier, Lens, LensIsTag) => {
+
+        const Swafer = [120,'silicon',900,1];
+        const Pwafer = [480,'phosphorus',500,4,900,1];
+        const Qwafer = [1920,'naquadah',200,8,500,4,900,1];
+        const Nwafer = [7680,'neutronium',50,16,200,8,500,2,900,1];
+        const Dwafer = [30720,'draco',10,64,25,32,100,8,250,4,1000,1];
+
+        const lensType = (LensIsTag == true) ? `#forge:lenses/${Lens}` : `gtceu:${Lens}_lens` ;
+
+        const laser_engrave = (wafer,EUt,quantity,duration) => {
+            let WaferType = (wafer == 'draco') ? `64x kubejs:${wafer}_wafer` : `64x gtceu:${wafer}_wafer` ;
+            event.recipes.gtceu.mass_laser_engraving(id(`engrave_${Output}_${wafer}`))
+                .itemInputs(WaferType)
+                .notConsumable(lensType)
+                .itemOutputs(`${quantity * 64}x ${ModID}:${Output}_wafer`)
+                .duration(duration * 48)
+                .EUt(EUt)
+                .cleanroom(CleanroomType.CLEANROOM);
+        }
+
+        if(WaferTier == 1){
+            laser_engrave(Swafer[1],Swafer[0],Swafer[3],Swafer[2]);
+            laser_engrave(Pwafer[1],Pwafer[0],Pwafer[3],Pwafer[2]);
+            laser_engrave(Qwafer[1],Qwafer[0],Qwafer[3],Qwafer[2]);
+            laser_engrave(Nwafer[1],Nwafer[0],Nwafer[3],Nwafer[2]);
+            laser_engrave(Dwafer[1],Dwafer[0],Dwafer[3],Dwafer[2]);
+        }
+        if(WaferTier == 2){
+            laser_engrave(Pwafer[1],Pwafer[0],Pwafer[5],Pwafer[4]);
+            laser_engrave(Qwafer[1],Qwafer[0],Qwafer[5],Qwafer[4]);
+            laser_engrave(Nwafer[1],Nwafer[0],Nwafer[5],Nwafer[4]);
+            laser_engrave(Dwafer[1],Dwafer[0],Dwafer[5],Dwafer[4]);
+        }
+        if(WaferTier == 3){
+            laser_engrave(Qwafer[1],Qwafer[0],Qwafer[7],Qwafer[6]);
+            laser_engrave(Nwafer[1],Nwafer[0],Nwafer[7],Nwafer[6]);
+            laser_engrave(Dwafer[1],Dwafer[0],Dwafer[7],Dwafer[6]);
+        }
+        if(WaferTier == 4){
+            laser_engrave(Nwafer[1],Nwafer[0],Nwafer[9],Nwafer[8]);
+            laser_engrave(Dwafer[1],Dwafer[0],Dwafer[9],Dwafer[8]);
+        }
+        if(WaferTier == 5){
+            laser_engrave(Dwafer[1],Dwafer[0],Dwafer[11],Dwafer[10]);
+        }
+
+    }
+
+    MassWaferEngraving('gtceu', 'cpu', 1, 'light_blue', true);
+    MassWaferEngraving('gtceu', 'ram', 1, 'green', true);
+    MassWaferEngraving('gtceu', 'ilc', 1, 'red', true);
+    MassWaferEngraving('gtceu', 'simple_soc', 1, 'cyan_glass', false);
+    MassWaferEngraving('gtceu', 'soc', 2, 'yellow_glass', false);
+    MassWaferEngraving('gtceu', 'advanced_soc', 3, 'purple', true);
+    MassWaferEngraving('gtceu', 'highly_advanced_soc', 4, 'black_glass', false);
+    MassWaferEngraving('gtceu', 'nand_memory', 2, 'gray_glass', false);
+    MassWaferEngraving('gtceu', 'nor_memory', 2, 'pink_glass', false);
+    MassWaferEngraving('gtceu', 'ulpic', 1, 'blue', true);
+    MassWaferEngraving('gtceu', 'lpic', 1, 'orange_glass', false);
+    MassWaferEngraving('gtceu', 'mpic', 2, 'brown_glass', false);
+    MassWaferEngraving('kubejs', 'draco_advanced_soc', 5, 'echo_shard', false);
 
 });

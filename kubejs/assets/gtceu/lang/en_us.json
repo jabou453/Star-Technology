@@ -38,8 +38,7 @@
     "block.gtceu.stargate_component_assembly.tooltip.1": "Has §6Perfect Overclock",
 
     "block.gtceu.chemical_plant.tooltip.0": "§7This machine can compress chemical lines into one recipe and is able to perform more advanced chemical reactions.",
-    "block.gtceu.chemical_plant.tooltip.1": "Has §6Perfect Overclock",
-    "block.gtceu.chemical_plant.tooltip.2": "Can use §3Parallel§r hatches",
+    "block.gtceu.chemical_plant.tooltip.1": "Has §6Perfect Overclock§r and can use §3Parallel§r hatches§7.",
 
     "block.gtceu.component_part_assembly.tooltip.0": "§7An assembler that can micro craft some incredibly complex components that are too detailed for a normal assembler.",
     "block.gtceu.component_part_assembly.tooltip.1": "Has §cSubtick Parallels§r and §9Assembly Line Logic",
@@ -134,8 +133,8 @@
     "block.gtceu.molten_destabilizer.tooltip.0": "§7A powerful machine that can splice complex molten chemicals into smaller chunks for processing",
     "block.gtceu.molten_destabilizer.tooltip.1": "Can use §3Parallel§r hatches",
     
-    "block.gtceu.vibration_laser_engraver.tooltip.0": "§7A multiblock that uses precise lasers and vibrations to effortlessly cut and engrave gems, changing them in whatever way you need.",
-    "block.gtceu.vibration_laser_engraver.tooltip.1": "Has §6Perfect Overclock",
+    "block.gtceu.vibration_laser_engraver.tooltip.0": "§7A multiblock that uses precise lasers and vibrations to effortlessly reform and engrave gems, changing them in whatever way you need. This monstrosity of a machine can also do wafer engraving in mass.",
+    "block.gtceu.vibration_laser_engraver.tooltip.1": "Has §6Perfect Overclock§r and can use §3Parallel§r hatches§7.",
     
     "block.gtceu.cyclonic_sifter.tooltip.0": "§7An advanced tier of sifter that is more precise and stronger than the basic tier, allowing it to run better recipes.",
     "block.gtceu.cyclonic_sifter.tooltip.1": "Can use §3Parallel§r hatches",
@@ -553,6 +552,7 @@
     "block.gtceu.dimensional_destabiliser": "Dimensional Destabiliser",
 
     "gtceu.vibration_laser_engraver": "Vibration Laser Engraver",
+    "gtceu.mass_laser_engraving": "Bulk Laser Engraver",
     "block.gtceu.vibration_laser_engraver": "Vibration Laser Engraver",
 
     
