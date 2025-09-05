@@ -151,7 +151,7 @@ ServerEvents.recipes(event => {
 
         craftingStorage(tier);
 
-        expandedAccelerator(tier);
+        // expandedAccelerator(tier);
     });
 
     const canner = (output, catalyst, Mega) => {
