@@ -162,4 +162,12 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.UEV])
         .cleanroom(CleanroomType.STERILE_CLEANROOM);
 
+    event.recipes.gtceu.chemical_skip(id('sic_skip'))
+        .itemInputs('3x gtceu:silicon_dioxide_dust','2x gtceu:carbon_dust')
+        .inputFluids('gtceu:nitrogen 2000')
+        .itemOutputs('gtceu:silicon_carbide_dust')
+        .outputFluids('gtceu:carbon_dioxide 1000')
+        .duration(100)
+        .EUt(GTValues.VHA[GTValues.LuV]);
+
 });
