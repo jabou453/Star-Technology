@@ -2402,6 +2402,7 @@
 			description: ["Machines from vintage open up many interesting opportunities for more efficient material processing, alongside primitive ore processing."]
 			hide_dependent_lines: true
 			id: "6C7DB1CB4517B843"
+			optional: true
 			rewards: [{
 				id: "1FCCF30A0083DBB8"
 				item: "kubejs:coin"
