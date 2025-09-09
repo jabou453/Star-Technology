@@ -147,7 +147,7 @@ ServerEvents.recipes(event => {
             .itemInputs(`gtceu:${type.material}_skystone_alloy_plate`)
             .notConsumable(`ae2:${type.circuit}_processor_press`)
             .itemOutputs(`ae2:printed_${type.circuit}_processor`)
-            .duration(400)
+            .duration(200)
             .EUt(global.va['mv']);
     });
 
@@ -161,7 +161,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:silicon_plate')
         .notConsumable('ae2:silicon_press')
         .itemOutputs('ae2:printed_silicon')
-        .duration(400)
+        .duration(200)
         .EUt(global.va['mv']);
 
 
@@ -172,7 +172,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.me_assembler(id(`${tier.type}_core`))
             .itemInputs('ae2:logic_processor', `${tier.catalyst}`, '6x gtceu:fluix_steel_foil')
             .itemOutputs(`4x ae2:${tier.type}_core`)
-            .duration(400)
+            .duration(300)
             .EUt(128);
     });
 
