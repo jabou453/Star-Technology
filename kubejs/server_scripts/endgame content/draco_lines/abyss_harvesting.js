@@ -111,7 +111,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.abyssal_harvester(id('desaturation'))
         .itemInputs('kubejs:void_saturation_sponge')
         .outputFluids(
-            'gtceu:echo_r 25000',
+            'gtceu:echo_r 18000',
             'gtceu:voidic_waste_residue 100'
         )        
         .addData('min_saturation', 1000)
