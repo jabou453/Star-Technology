@@ -540,16 +540,25 @@
 			dependencies: [
 				"3D0F6CA8028C074B"
 				"7EE1BE4043827F35"
+				"483B101A7F71E674"
+				"3F74E863172E757F"
 			]
 			description: [
 				"Extracting Latex from &lJungle Trees&r will be one of your first sources of rubber, after a bit of processing."
 				""
 				"There are 2 ways to do this, either by placing &nArboreal Extractors&r around a Jungle Tree or by building the &nLatex Plantation&r multiblock."
 				""
+				"By combining Rubber and Sulfur you can get cured rubber."
+				""
+				"- This can be done by using a heated Create mixer."
+				"- This can be done by using a Steam Alloy Smelter."
+				"- This can be done by using a Cooking Pot with a campfire under it."
+				""
 				"&nNote&r: For the Latex Plantation you can use a wooden tap in the controller block, to use the better tap methods with a fuel and circuit you'll need a &8ULV&r Input Bus at a minimum. An Output Hatch can be placed on the back to automate further but isn't needed."
 			]
 			icon: "gtceu:latex_plantation"
 			id: "0A41C4FB379984C0"
+			optional: true
 			rewards: [{
 				count: 2
 				id: "00D6F6E2A931271F"
@@ -579,6 +588,11 @@
 				{
 					id: "6F7F8EC646E7C0B6"
 					item: "thermal:rubber"
+					type: "item"
+				}
+				{
+					id: "5F276BC01F00DD15"
+					item: "thermal:cured_rubber"
 					type: "item"
 				}
 			]
@@ -792,39 +806,23 @@
 		}
 		{
 			dependencies: [
-				"3F74E863172E757F"
 				"0A41C4FB379984C0"
-				"483B101A7F71E674"
 				"3D78314A07F5782A"
 			]
 			dependency_requirement: "one_completed"
-			description: [
-				"By combining Rubber and Sulfur you can get cured rubber."
-				""
-				"- This can be done by using a heated Create mixer."
-				"- This can be done by using a Steam Alloy Smelter."
-				"- This can be done by using a Cooking Pot with a campfire under it."
-			]
+			description: ["Rubber is an important material, used for coating wires."]
 			id: "46E41B05B9F6FA82"
 			rewards: [{
 				id: "2FFF7F85F52E435C"
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			tasks: [
-				{
-					count: 4L
-					id: "03148525E61128DA"
-					item: { Count: 4, id: "thermal:cured_rubber" }
-					type: "item"
-				}
-				{
-					count: 4L
-					id: "487F5EEEFEFBB7A8"
-					item: { Count: 4, id: "gtceu:rubber_plate" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				count: 4L
+				id: "487F5EEEFEFBB7A8"
+				item: { Count: 4, id: "gtceu:rubber_plate" }
+				type: "item"
+			}]
 			title: "Cable Insulation"
 			x: 8.0d
 			y: -1.0d
@@ -2373,6 +2371,7 @@
 			hide_dependency_lines: true
 			icon: "gtceu:raw_rubber_dust"
 			id: "3D78314A07F5782A"
+			optional: true
 			rewards: [{
 				id: "132A91D9CCE0324C"
 				item: "kubejs:coin"
