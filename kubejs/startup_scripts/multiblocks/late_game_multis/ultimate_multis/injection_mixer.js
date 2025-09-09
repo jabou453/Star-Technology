@@ -3,6 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('injection_mixer')
         .category('ultimate')
         .setEUIO('in')
+        .setMaxTooltips(4)
         .setMaxIOSize(6, 1, 6, 1)
         .setSound(GTSoundEntries.MIXER)
         .setProgressBar(GuiTextures.PROGRESS_BAR_MIXER, FillDirection.LEFT_TO_RIGHT);

@@ -148,7 +148,7 @@ const primitive_processing = (event, materialObj) => {
         .chancedOutput(dust(materialObj.secondary,  1), 2500, 0)
         .chancedOutput(dust(materialObj.tertiary,  1), 1250, 0)
         .duration(320)
-        .EUt(GTValues.VA[GTValues.ULV]);
+        .EUt(GTValues.VA[GTValues.LV]);
 };
 
 /*

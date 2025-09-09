@@ -3,9 +3,18 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('vibration_laser_engraver')
         .category('resource_production')
         .setEUIO('in')
+        .setMaxTooltips(4)
         .setMaxIOSize(3, 3, 3, 3)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW_MULTIPLE , FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ASSEMBLER);
+
+    event.create('mass_laser_engraving')
+        .category('extemely_advanced')
+        .setEUIO('in')
+        .setMaxTooltips(4)
+        .setMaxIOSize(2, 1, 0, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.ELECTROLYZER);
 
 });
 
@@ -13,9 +22,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     event.create('vibration_laser_engraver', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)    
-        .recipeType('vibration_laser_engraver')
+        .recipeTypes(['vibration_laser_engraver','mass_laser_engraving'])
         .appearanceBlock(GCYMBlocks.CASING_VIBRATION_SAFE)
-        .recipeModifier(GTRecipeModifiers.OC_PERFECT)
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('      BCCCB      ', '     DBCCCBD     ', '    DDBCCCBDD    ', '   DDBBCCCBBDD   ', '  DDBBBCCCBBBDD  ', ' DDBBEBBBBBEBBDD ', 'BBBBBBBDDDBBBBBBB', 'CCCCCBDDADDBCCCCC', 'CCCCCBDAAADBCCCCC', 'CCCCCBDDADDBCCCCC', 'BBBBBBBDDDBBBBBBB', ' DDBBEBBBBBEBBDD ', '  DDBBBCCCBBBDD  ', '   DDBBCCCBBDD   ', '    DDBCCCBDD    ', '     DBCCCBD     ', '      BCCCB      ') 
             .aisle('     DBCCCBD     ', '   BB   F   BB   ', '  BB    F    BB  ', ' BB     F     BB ', ' B             B ', 'D      GGG      D', 'B     GDDDG     B', 'C    GDDDDDG    C', 'CFFF GDDDDDG FFFC', 'C    GDDDDDG    C', 'B     GDDDG     B', 'D      GGG      D', ' B             B ', ' BB     F     BB ', '  BB    F    BB  ', '   BB   F   BB   ', '     DBCCCBD     ') 
@@ -37,12 +46,13 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .where('A', Predicates.blocks('gtceu:heat_vent'))
             .where('B', Predicates.blocks('gtceu:vibration_safe_casing')
-                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(3).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(15).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(3).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(3).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(3).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(1)))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2).setPreviewCount(1))
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1)))
             .where('C', Predicates.blocks('gtceu:fusion_glass'))
             .where('D', Predicates.blocks('gtceu:atomic_casing'))
             .where('E', Predicates.blocks('gtceu:extreme_engine_intake_casing'))

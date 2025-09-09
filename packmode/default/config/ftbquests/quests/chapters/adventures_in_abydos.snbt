@@ -804,7 +804,7 @@
 				type: "item"
 			}]
 			x: -6.5d
-			y: 5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["3540AE6C940F985B"]
@@ -1509,7 +1509,7 @@
 				type: "item"
 			}]
 			x: -8.5d
-			y: 7.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1534,7 +1534,7 @@
 				type: "item"
 			}]
 			x: -6.5d
-			y: 7.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["2659B3AA9108BC43"]
@@ -1552,7 +1552,7 @@
 				type: "checkmark"
 			}]
 			x: -8.5d
-			y: 5.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [

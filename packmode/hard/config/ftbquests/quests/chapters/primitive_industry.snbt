@@ -329,7 +329,6 @@
 				"410385DA7FBBD2FA"
 				"40B1212619EC3444"
 				"59A805C314717BA0"
-				"3E9B53693FF7E4FE"
 			]
 			id: "4FB04EF25E12F5FA"
 			optional: true
@@ -342,7 +341,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["60FC1A065E7E0D7D"]
+			dependencies: ["1645E2B5BEFA80A3"]
 			description: ["Finally Balanced Alloy Ratios"]
 			id: "5F808C6A353FF66D"
 			tasks: [{
@@ -379,8 +378,8 @@
 				item: "gtceu:steam_grinder"
 				type: "item"
 			}]
-			x: -10.5d
-			y: -3.0d
+			x: -4.5d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -406,8 +405,8 @@
 				item: "gtceu:industrial_steam_casing"
 				type: "item"
 			}]
-			x: -4.5d
-			y: -2.0d
+			x: -2.5d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -1046,28 +1045,6 @@
 			}]
 			x: -2.5d
 			y: 13.0d
-		}
-		{
-			dependencies: ["1645E2B5BEFA80A3"]
-			description: [""]
-			id: "60FC1A065E7E0D7D"
-			tasks: [
-				{
-					id: "3E9B53693FF7E4FE"
-					item: "gtceu:ulv_fluid_input"
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "6586E3F03FDD7DFA"
-					item: "gtceu:ulv_fluid_output"
-					optional_task: true
-					type: "item"
-				}
-			]
-			title: "Primitive Fluid I/O"
-			x: -2.5d
-			y: -1.0d
 		}
 		{
 			dependencies: [

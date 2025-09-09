@@ -1191,8 +1191,8 @@
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
-			hide_until_deps_complete: true
 			id: "10D5DA8708208783"
+			invisible: true
 			optional: true
 			tasks: [{
 				id: "4F21CDEF48DEB549"
@@ -1773,8 +1773,8 @@
 		}
 		{
 			dependencies: ["2DACE6EF41A118D9"]
-			hide_until_deps_complete: true
 			id: "1DC40C42DF1AFCC4"
+			invisible: true
 			optional: true
 			tasks: [{
 				id: "70B6C065BA6E04DF"

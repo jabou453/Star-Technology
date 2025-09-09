@@ -2494,6 +2494,8 @@
 				"With the main focus of the SPT being reducing the spam of plasma turbines, in exchange for the insane amounts of power it eats through an equally insane amount of plasma. "
 				""
 				"The SPT is most definitly worth it, especially if you apply coolant boosting."
+				""
+				"&4Note:&7If the Machine has issues forming, break and re-place the controller"
 			]
 			id: "1EE1007BA8202CC1"
 			tasks: [{

@@ -24,6 +24,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:methylamine 1000', 'minecraft:water 1000')
         .duration(892)
         .EUt(GTValues.VA[GTValues.HV])
+        .circuit(1);
     });
 
     event.recipes.gtceu.large_chemical_reactor(id('y_butyrolactone'))

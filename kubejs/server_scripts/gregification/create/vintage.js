@@ -62,7 +62,7 @@ ServerEvents.recipes(event => {
             vintage.coiling(`gtceu:${metal}_spring`, `gtceu:long_${metal}_rod`).id(id(`coiling/${metal}_spring`));
         }
         if (small_spring) {
-            vintage.coiling(`gtceu:small_${metal}_spring`, `gtceu:${metal}_single_wire`).id(id(`coiling/small_${metal}_spring`));
+            vintage.coiling(`gtceu:small_${metal}_spring`, `gtceu:${metal}_rod`).id(id(`coiling/small_${metal}_spring`));
         }
         if (double_plate) {// For some reason Item.of(`gtceu:${metal}_plate`, 2) does not work
             vintage.hammering(`gtceu:double_${metal}_plate`, [`gtceu:${metal}_plate`, `gtceu:${metal}_plate`]).hammerBlows(3).id(id(`hammering/double_${metal}_plate`));

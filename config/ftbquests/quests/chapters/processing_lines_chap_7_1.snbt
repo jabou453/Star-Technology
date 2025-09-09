@@ -2203,12 +2203,20 @@
 				"0E96BB78A3033BB7"
 				"585828F1FD6ACADF"
 			]
+			icon: "gtceu:hot_flerovium_ingot"
 			id: "7CC060CF914B6D2D"
-			tasks: [{
-				id: "126A4D6F33F6FA81"
-				item: "gtceu:hot_flerovium_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "126A4D6F33F6FA81"
+					item: "gtceu:hot_flerovium_ingot"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1B4A15B38461B7AE"
+					type: "checkmark"
+				}
+			]
 			x: 0.5d
 			y: 9.0d
 		}
@@ -2742,12 +2750,20 @@
 				"52D4B5EDABCA9420"
 				"2E7AAF45F5ECC113"
 			]
+			icon: "gtceu:hot_seaborgium_ingot"
 			id: "3C7E223BC46DD434"
-			tasks: [{
-				id: "3D721A2BB3C5A039"
-				item: "gtceu:hot_seaborgium_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3D721A2BB3C5A039"
+					item: "gtceu:hot_seaborgium_ingot"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "189F2D09426A329A"
+					type: "checkmark"
+				}
+			]
 			x: 5.0d
 			y: 12.0d
 		}
@@ -2951,12 +2967,21 @@
 				"79E95A7DA69FC60A"
 				"31961DC2B9349B48"
 			]
+			icon: "gtceu:hot_polonium_ingot"
 			id: "6290F2A582039B7F"
-			tasks: [{
-				id: "5483880D6AEE4E32"
-				item: "gtceu:hot_polonium_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5483880D6AEE4E32"
+					item: "gtceu:hot_polonium_ingot"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "54E1C6C3B8259F9C"
+					type: "checkmark"
+				}
+			]
 			x: 3.0d
 			y: 15.0d
 		}
@@ -3162,12 +3187,20 @@
 				"4477248267F27374"
 				"598FF956B1C76F21"
 			]
+			icon: "gtceu:hot_hafnium_ingot"
 			id: "68ECE77B31058268"
-			tasks: [{
-				id: "0020F47BA89C2F6C"
-				item: "gtceu:hot_hafnium_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0020F47BA89C2F6C"
+					item: "gtceu:hot_hafnium_ingot"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "53304E97A4E01A4B"
+					type: "checkmark"
+				}
+			]
 			x: 4.5d
 			y: 21.0d
 		}

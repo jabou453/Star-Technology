@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
     PlasmaTurbineUnique('magmatic','infernal_concentrate',1138,false);
 
     // Draco-Abyssal Rotor
-    ['draco_abyssal','draconyallium','abyssal_alloy'].forEach(type=>{
+    ['draco_abyssal'].forEach(type=>{
         event.remove({output: `gtceu:${type}_turbine_blade`});
         event.remove({id: `gtceu:assembler/assemble_${type}_turbine_blade`});
     });
@@ -186,17 +186,13 @@ ServerEvents.recipes(event => {
         .duration(50)
         .EUt(GTValues.VHA[GTValues.UEV]);
     };
-    TurbineBlade('abyssal_alloy','gtceu:echo_r 720');
-    TurbineBlade('draconyallium','gtceu:dragon_breath 720');
     TurbineBlade('draco_abyssal','gtceu:void 720');
 
     event.recipes.gtceu.assembly_line(id('draco_abyssal_turbine_rotor'))
         .itemInputs(
-            'gtceu:void_frame','gtceu:uiv_electric_motor','gtceu:draco_abyssal_turbine_blade','gtceu:draco_abyssal_turbine_blade',
-            'gtceu:abyssal_alloy_turbine_blade','gtceu:draconyallium_turbine_blade','gtceu:abyssal_alloy_turbine_blade','gtceu:draconyallium_turbine_blade',
-            'gtceu:abyssal_alloy_turbine_blade','gtceu:draconyallium_turbine_blade','gtceu:abyssal_alloy_turbine_blade','gtceu:draconyallium_turbine_blade'
+            'gtceu:void_frame','kubejs:uiv_transmission_assembly','8x gtceu:draco_abyssal_turbine_blade','16x gtceu:fine_rhenium_super_composite_alloy_wire'
         )
-        .inputFluids('gtceu:tungsten_disulfide 15000','gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 720')
+        .inputFluids('gtceu:tungsten_disulfide 15000','gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 1080')
         .itemOutputs(Item.of('gtceu:turbine_rotor', '{GT.PartStats:{Material:"gtceu:draco_abyssal"}}'))
         .duration(600)
         .stationResearch(

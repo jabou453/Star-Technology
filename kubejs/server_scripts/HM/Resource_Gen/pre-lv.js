@@ -239,11 +239,11 @@ ServerEvents.recipes(event => {
 			.chancedOutput(`gtceu:${material.secondary}_dust`, 2500, 0)
 			.chancedOutput(`gtceu:${material.tertiary}_dust`, 1250, 0)
 			.duration(320)
-			.EUt(GTValues.VA[GTValues.ULV]);
+			.EUt(GTValues.VA[GTValues.LV]);
 
 		// Chunk Processing
 		event.recipes.gtceu.primitive_ore_processing(id(`${material.primary}_crushed_ore_chunk`))
-			.itemInputs(`4x kubejs:${material.primary}_crushed_ore_chunk`, '2x #minecraft:coals')
+			.itemInputs(`3x kubejs:${material.primary}_crushed_ore_chunk`, '2x #minecraft:coals')
 			.inputFluids('minecraft:water 500')
 			.chancedOutput(`gtceu:${material.primary}_dust`, 9000, 0)
 			.chancedOutput(`gtceu:${material.secondary}_dust`, 1500, 0)

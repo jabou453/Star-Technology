@@ -145,7 +145,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.mixer(id('hafnide_ito_ceramic'))
         .itemInputs('14x gtceu:hafnide_ceramic_base_dust', '7x gtceu:indium_tin_oxide_dust')
         .itemOutputs('21x gtceu:hafnide_ito_ceramic_dust')
-        .duration(1056)
+        .duration(856)
         .EUt(GTValues.VHA[GTValues.UEV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('indium_tin_oxide'))

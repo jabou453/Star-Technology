@@ -615,7 +615,14 @@ ServerEvents.recipes(event => {
     
     // Coil Changes
 
-    event.remove({output: /gtceu:.*coil_block/})
+    event.remove({output: /gtceu:.*coil_block/});
+
+    event.recipes.gtceu.assembler(id('molybdenum_disilicide_coil_block'))
+        .itemInputs('32x gtceu:molybdenum_disilicide_ring','16x gtceu:graphene_foil')
+        .inputFluids('gtceu:hsla_steel 144')
+        .itemOutputs('gtceu:molybdenum_disilicide_coil_block')
+        .duration(500)
+        .EUt(1920);
 
     // Cupronickel / Kanthal no Changes
 

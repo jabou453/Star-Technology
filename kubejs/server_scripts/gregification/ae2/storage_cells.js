@@ -112,7 +112,7 @@ ServerEvents.recipes(event => {
 
     };
 
-    const expandedAccelerator = (tier) => {
+    /*const expandedAccelerator = (tier) => {
         const suffixList = ['', 'k', 'm'];
         [0, 1].forEach(suffixPos => {
             const previous = `${tier == 1 ? 256 : tier / 4}${suffixList[suffixPos]}`;
@@ -143,7 +143,7 @@ ServerEvents.recipes(event => {
                 .duration(200)
                 .EUt(transformerDict[current][0]);
         });
-    };
+    };*/
     
     [1, 4, 16, 64, 256].forEach(tier => {
         packaging(tier, 'item', 'certus_quartz');
@@ -151,7 +151,7 @@ ServerEvents.recipes(event => {
 
         craftingStorage(tier);
 
-        expandedAccelerator(tier);
+        // expandedAccelerator(tier);
     });
 
     const canner = (output, catalyst, Mega) => {

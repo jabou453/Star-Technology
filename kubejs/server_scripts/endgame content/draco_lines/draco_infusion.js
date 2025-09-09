@@ -78,9 +78,9 @@ ServerEvents.recipes(event => {
             .EUt(eut);
     };
 
-    Infusion('dragonic_eye','kubejs:dragonic_eye','gtceu:dragon_breath 12500','gtceu:quantum_eye','2x kubejs:draconic_scale_cells',
+    Infusion('dragonic_eye','kubejs:dragonic_eye','gtceu:dragon_breath 12500','gtceu:quantum_eye','gtceu:zpm_sensor',
     '2x kubejs:draconic_scale_cells','2x kubejs:draconic_scale_cells','2x kubejs:draconic_stem_cells', '2x kubejs:draconic_stem_cells', 
-    'kubejs:helish_star',400,GTValues.VHA[GTValues.UIV]);
+    '2x kubejs:helish_star',400,GTValues.VHA[GTValues.UIV]);
 
     Infusion('draco_stem_cells','4x kubejs:draconic_stem_cells','gtceu:dragon_breath 125','4x gtceu:stem_cells', 'gtceu:naquadria_foil', 
     'gtceu:nether_star_foil','2x minecraft:popped_chorus_fruit','2x minecraft:popped_chorus_fruit','gtceu:nether_star_foil',
@@ -125,13 +125,13 @@ ServerEvents.recipes(event => {
     Infusion('void_sponge','16x kubejs:void_saturation_sponge','gtceu:enderium 576','16x minecraft:sponge','kubejs:voidic_reinforced_mesh','kubejs:voidic_reinforced_mesh',
     'kubejs:voidic_reinforced_mesh','kubejs:voidic_reinforced_mesh','kubejs:voidic_reinforced_mesh','kubejs:voidic_reinforced_mesh',800,GTValues.VA[GTValues.ZPM]);
 
-    Infusion('saturation_core_low','32x kubejs:saturation_core_1','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:void_rod','gtceu:hsss_plate','gtceu:tungsten_carbide_plate',
-    'gtceu:tungsten_carbide_plate','gtceu:hsss_plate','gtceu:void_rod',400,GTValues.VA[GTValues.UHV]);
-
-    Infusion('saturation_core_moderate','32x kubejs:saturation_core_2','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:hsss_plate','gtceu:tungsten_carbide_plate','gtceu:void_rod',
-    'gtceu:void_rod','gtceu:tungsten_carbide_plate','gtceu:hsss_plate',400,GTValues.VA[GTValues.UHV]);
-
-    Infusion('saturation_core_high','32x kubejs:saturation_core_3','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:tungsten_carbide_plate','gtceu:void_rod','gtceu:hsss_plate',
+    Infusion('saturation_core_low','32x kubejs:saturation_core_1','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:tungsten_carbide_plate','gtceu:void_rod','gtceu:hsss_plate',
     'gtceu:hsss_plate','gtceu:void_rod','gtceu:tungsten_carbide_plate',400,GTValues.VA[GTValues.UHV]);
+
+    Infusion('saturation_core_moderate','32x kubejs:saturation_core_2','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:tungsten_carbide_plate','gtceu:void_rod','gtceu:hssg_plate',
+    'gtceu:hssg_plate','gtceu:void_rod','gtceu:tungsten_carbide_plate',400,GTValues.VA[GTValues.UHV]);
+
+    Infusion('saturation_core_high','32x kubejs:saturation_core_3','gtceu:dragon_breath 100','gtceu:energy_cluster','gtceu:tungsten_carbide_plate','gtceu:void_rod','gtceu:hsse_plate',
+    'gtceu:hsse_plate','gtceu:void_rod','gtceu:tungsten_carbide_plate',400,GTValues.VA[GTValues.UHV]);
 
     });
