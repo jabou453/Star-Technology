@@ -77,8 +77,8 @@ ServerEvents.recipes(event => {
             .inputFluids('gtceu:bec_og 250')
             .outputFluids(`gtceu:molten_${type} 144`)
             .outputFluids('gtceu:oganesson 200')
-            .duration(SecDurPerIng * 20 * .28325)
-            .EUt(eut / 2);
+            .duration(SecDurPerIng * 10 * .28325)
+            .EUt(eut / 4);
 
     // EBF Gas Swap
         if(HeatMK < 1800){
