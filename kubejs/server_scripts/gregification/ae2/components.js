@@ -64,6 +64,9 @@ ServerEvents.recipes(event => {
         .duration(48)
         .EUt(84);
 
+    // event.recipes.gtceu.dimensional_destabilizer(id('sky_stone_block'))
+    //     .itemOutputs()
+
     event.recipes.gtceu.mixer(id('sky_dust'))
         .itemInputs('6x gtceu:stone_dust', '4x gtceu:ender_pearl_dust', '1x minecraft:redstone', '1x minecraft:glowstone_dust')
         .itemOutputs('ae2:sky_dust') //keep at low output

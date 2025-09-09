@@ -1478,7 +1478,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     compDust('indium_tin_oxide', ['2x indium', '2x tin', '3x oxygen'], 0xA1C1E0, [no_decomp]);
 
-    conductor('hafnide_ito_ceramic', ['4x hafnium', '5x tantalum', '5x carbon', '2x indium', '2x tin', '3x oxygen'], 0x798CA5, DULL, [14520, 'highest', VA('uhv'), 3200], [V('uiv'), 2, 36, false], [spring, no_decomp]);
+    conductor('hafnide_ito_ceramic', ['4x hafnium', '5x tantalum', '5x carbon', '2x indium', '2x tin', '3x oxygen'], 0x798CA5, DULL, [14520, 'highest', VA('uhv'), 3200], [V('uiv'), 2, 36, false], [spring, no_decomp, no_abs_recipe]);
 
     compLiquid('polonium_iridide_acid', ['1x iridium', '2x polonium', '1x phosphoric_acid'], 0x8F8B73, [no_decomp]);
 
@@ -1497,8 +1497,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(SHINY) 
         .blastTemp(18685, 'highest', VA('uiv'), 600) 
         .cableProperties(V('uev'), 2, 4, false) 
-        .flags(plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, rotor, no_abs_recipe)
-        .rotorStats(100, 100, 1, 100); //used just for rotor blades
+        .flags(plates, frame, rod, bolt_and_screw, round, long_rod, gear, small_gear, ring, no_decomp, rotor, no_abs_recipe);
 
     event.create('chaotixic_alloy')
         .components('6x rhexis', '2x stellite_100', '1x hafnium', '12x electrum', '3x vanadium_steel')
@@ -1524,8 +1523,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .secondaryColor(0x7817EC)
         .blastTemp(18880, 'highest', VA('uxv'), 600)
         .iconSet(SHINY)
-        .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, no_decomp, no_abs_recipe)
-        .rotorStats(100, 100, 1, 100); //used just for rotor blades
+        .flags(plates, frame, rod, dense_plate, long_rod, gear, foil, small_gear, rotor, no_decomp, no_abs_recipe);
     
     event.create('draco_abyssal')
         .components('1x draconyallium','3x abyssal_alloy','2x void','3x mystery')

@@ -14,8 +14,8 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.fluid_heater(id('hot_brine'))
             .inputFluids('gtceu:raw_brine 1000')
-            .outputFluids('gtceu:hot_brine 800')
-            .duration(900)
+            .outputFluids('gtceu:hot_brine 1000')
+            .duration(1500)
             .EUt(GTValues.VA[GTValues.HV]);
 
         CR(id('bromine_pentafluoride'))

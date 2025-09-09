@@ -164,7 +164,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.chemical_skip(id('sic_skip'))
         .itemInputs('3x gtceu:silicon_dioxide_dust','2x gtceu:carbon_dust')
-        .inputFluids('gtceu:nitrogen 2000')
+        .inputFluids('gtceu:nitrogen 1000')
         .itemOutputs('gtceu:silicon_carbide_dust')
         .outputFluids('gtceu:carbon_dioxide 1000')
         .duration(100)

@@ -88,25 +88,25 @@ ServerEvents.recipes(event => {
             );
         }
     }
-    HellForgeMat('mythrolic_alloy', 11, ['gtceu:mythril 720', 'gtceu:hsss 576', 'gtceu:darmstadtium 288'], 'argon', 786, GTValues.VHA[GTValues.UEV], 43.6);
-    HellForgeMat('magmada_alloy', 8, ['gtceu:adamantine 576', 'gtceu:neutronium 144', 'gtceu:rtm_alloy 432'], 'magmatic', 812, GTValues.VHA[GTValues.UEV], 52.4);
-    HellForgeMat('starium_alloy', 8, ['gtceu:nether_star_concentrate 576', 'gtceu:trinaquadalloy 288', 'gtceu:estalt 288'], 'oxygen', 843, GTValues.VHA[GTValues.UEV], 39.8);
-    HellForgeMat('seaborgium_palladium_enriched_estalt_flerovium_alloy', 17, ['gtceu:seaborgium 288', 'gtceu:palladium 1152', 'gtceu:enriched_estalt 432', 'gtceu:flerovium 576'], 'nickel', 878, GTValues.VHA[GTValues.UIV], 47.4);
+    HellForgeMat('mythrolic_alloy', 11, ['gtceu:mythril 720', 'gtceu:hsss 576', 'gtceu:darmstadtium 288'], 'argon', 586, GTValues.VHA[GTValues.UEV], 43.6);
+    HellForgeMat('magmada_alloy', 8, ['gtceu:adamantine 576', 'gtceu:neutronium 144', 'gtceu:rtm_alloy 432'], 'magmatic', 712, GTValues.VHA[GTValues.UEV], 52.4);
+    HellForgeMat('starium_alloy', 8, ['gtceu:nether_star_concentrate 576', 'gtceu:trinaquadalloy 288', 'gtceu:estalt 288'], 'oxygen', 643, GTValues.VHA[GTValues.UEV], 39.8);
+    HellForgeMat('seaborgium_palladium_enriched_estalt_flerovium_alloy', 17, ['gtceu:seaborgium 288', 'gtceu:palladium 1152', 'gtceu:enriched_estalt 432', 'gtceu:flerovium 576'], 'nickel', 878, GTValues.VHA[GTValues.UIV], 37.4);
     HellForgeMat('nyanium', 14, ['gtceu:aurourium 1008', 'gtceu:uranium_rhodium_dinaquadide 576', 'gtceu:magnesium_nitride 144', 'gtceu:pure_netherite 288'], 'nitrogen', 444, GTValues.VA[GTValues.UHV], 76.8);
-    HellForgeMat('rhenium_super_composite_alloy', 16, ['gtceu:rhenium 576', 'gtceu:weapon_grade_naquadah 288', 'gtceu:mercury_barium_calcium_cuprate 1008', 'gtceu:titanium_carbide 288', 'gtceu:samarium 144'], 'preon', 1456, GTValues.VHA[GTValues.UXV], 51.1);
-    HellForgeMat('abyssal_alloy', 14, ['gtceu:xeproda 720', 'gtceu:blue_alloy 432', 'gtceu:void 576', 'gtceu:flerovium 144', 'gtceu:zapolgium 144'], 'voidic', 1576, GTValues.VHA[GTValues.UIV], 38.5);
+    HellForgeMat('rhenium_super_composite_alloy', 16, ['gtceu:rhenium 576', 'gtceu:weapon_grade_naquadah 288', 'gtceu:mercury_barium_calcium_cuprate 1008', 'gtceu:titanium_carbide 288', 'gtceu:samarium 144'], 'preon', 1456, GTValues.VHA[GTValues.UXV], 46.1);
+    HellForgeMat('abyssal_alloy', 14, ['gtceu:xeproda 720', 'gtceu:blue_alloy 432', 'gtceu:void 576', 'gtceu:flerovium 144', 'gtceu:zapolgium 144'], 'voidic', 1349, GTValues.VHA[GTValues.UIV], 38.5);
     HellForgeMat('chaotixic_alloy', 24, ['gtceu:rhexis 864', 'gtceu:stellite_100 288', 'gtceu:hafnium 144', 'gtceu:electrum 1728', 'gtceu:vanadium_steel 432'], 'paradox', 1234, GTValues.VHA[GTValues.UIV], 43.7);
     HellForgeMat('ohmderblux_alloy', 23, ['gtceu:chalyblux 720', 'gtceu:maraging_steel_300 288', 'gtceu:zirconium 576', 'gtceu:glowstone 1296', 'gtceu:ultimet 432'], 'paradox', 1151, GTValues.VHA[GTValues.UIV], 46.9);
-    HellForgeMat('draconyallium', 258, ['gtceu:duranium 9792', 'gtceu:silver 2880', 'gtceu:oxygen_plasma 94000', 'gtceu:nitrogen_plasma 76000', 'gtceu:dragon_breath 25800'], 'voidic', 1258, GTValues.VHA[GTValues.UXV], 15.8);
-    HellForgeMat('draco_abyssal', 9, ['gtceu:draconyallium 144', 'gtceu:abyssal_alloy 432', 'gtceu:void 288', 'gtceu:ancient_runicalium 432'], 'voidic', 1104, GTValues.VA[GTValues.UXV], 39.4);
+    HellForgeMat('draconyallium', 258, ['gtceu:duranium 9792', 'gtceu:silver 2880', 'gtceu:oxygen_plasma 94000', 'gtceu:nitrogen_plasma 76000', 'gtceu:dragon_breath 25800'], 'voidic', 1258, GTValues.VHA[GTValues.UXV], 13.3);
+    HellForgeMat('draco_abyssal', 9, ['gtceu:draconyallium 144', 'gtceu:abyssal_alloy 432', 'gtceu:void 288', 'gtceu:ancient_runicalium 432'], 'preon', 1104, GTValues.VA[GTValues.UXV], 39.4);
 
     // Heating Fluids
     event.recipes.gtceu.cyclonic_sifter(id('infernal_concentrate_refinement'))
         .inputFluids('gtceu:crude_infernal_concentrate 50000')
         .chancedInput('kubejs:ancient_netherite_reinforced_mesh', 750, -125)
-        .outputFluids('gtceu:infernal_concentrate 10000')
+        .outputFluids('gtceu:infernal_concentrate 15000')
         .duration(1150)
-        .EUt(GTValues.VA[GTValues.UEV]);
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.heat_chamber(id('superheated_infernal_concentrate'))
         .inputFluids('gtceu:infernal_concentrate 950', 'gtceu:utopian_akreyrium 50')
