@@ -1002,7 +1002,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: -1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -1023,7 +1023,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: 1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["01AF9486EA6DA792"]
@@ -1041,7 +1041,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["3B2D79D40B9617D5"]
@@ -1084,7 +1084,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: 5.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["0962C36622E385B8"]
@@ -1102,7 +1102,7 @@
 				type: "item"
 			}]
 			x: 18.0d
-			y: 3.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
