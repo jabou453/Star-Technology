@@ -139,7 +139,7 @@ ServerEvents.recipes(event => {
         .itemInputs('kubejs:qram_wafer')
         .itemOutputs('12x kubejs:qram_chip')
         .duration(900)
-        .EUt(GTValues.VA[GTValues.UHV])
+        .EUt(GTValues.VHA[GTValues.UHV])
         .cleanroom(CleanroomType.STERILE_CLEANROOM);
 
     const DracoWaferEngraving = (ModID, Output, WaferTier, Lens, LensIsTag) => {
