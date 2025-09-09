@@ -480,13 +480,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 2700], [fine_wire]);
 
-    elemIngotFluid('rhexis', 0x330000, DULL, [15499, 'highest', VA('uiv'), 2700], []);
+    elemIngotFluid('rhexis', 0x330000, DULL, [15499, 'highest', VHA('uiv'), 2700], []);
 
     elemIngotFluid('chalyblux', 0xffcccc, DULL, [15499, 'highest', VA('uev'), 2575], []);
 
     elemIngotFluid('mythril', 0x006666, METALLIC, [11299, 'highest', VA('uhv'), 2400], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
 
-    elemIngotFluid('adamantine', 0xe99700, METALLIC, [13299, 'highest', VA('uev'), 2300], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, fine_wire]);
+    elemIngotFluid('adamantine', 0xe99700, METALLIC, [13299, 'highest', VHA('uev'), 2300], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, fine_wire]);
 
     elemIngotFluid('estalt', 0xff5050, DULL, [12299, 'highest', VA('uhv'), 2200], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
 
