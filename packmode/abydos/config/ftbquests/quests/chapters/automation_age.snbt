@@ -16,12 +16,6 @@
 			y: -5.0d
 		}
 		{
-			id: "41C7252EA0A52349"
-			linked_quest: "4FF433145C67693F"
-			x: -1.5d
-			y: -5.0d
-		}
-		{
 			id: "723EBAAA2CB2DA89"
 			linked_quest: "3306CAE5E57839A2"
 			x: -12.5d
@@ -188,9 +182,7 @@
 		}
 		{
 			dependencies: ["73931EAA3EC5C9A9"]
-			description: [
-				"A multiblock that has two uses, either smelting normal items or creating alloys at an extreme rate."
-			]
+			description: ["A multiblock that has two uses, either smelting normal items or creating alloys at an extreme rate."]
 			id: "649596731FFA9C9A"
 			rewards: [{
 				id: "1CC5497D89B6D364"
@@ -454,8 +446,10 @@
 			dependencies: [
 				"491C4CECC6C24DDF"
 				"0DEEBB486450E74E"
+				"17C1292018AE363E"
 			]
-			description: ["This chip is used to make &6HV&r energy hatches and transformers."]
+			description: ["This Chip is used to make &6HV&r Energy Hatches and Transformers."]
+			hide_dependency_lines: true
 			icon: "gtceu:lpic_chip"
 			id: "2681E878121B1CF6"
 			rewards: [{
@@ -675,7 +669,7 @@
 		}
 		{
 			dependencies: ["47CD61D6ECD3DC7D"]
-			description: ["The end of the circuit upgrade chain will bring you into &9IV&r, bet you didnt expect that."]
+			description: ["The end of the circuit upgrade chain will bring you into &9IV&r, bet you didn't expect that."]
 			id: "62BA581B2918BB7B"
 			rewards: [{
 				count: 2
@@ -701,7 +695,7 @@
 				"77303F30F0A44393"
 			]
 			description: [
-				"Allows you to turn RF into &5EV&r power. "
+				"Allows you to turn RF into &5EV&r power."
 				""
 				"Oh ya and 64A converters exist from now on."
 			]
@@ -816,7 +810,10 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["32B878D63A6AB6D3"]
+			dependencies: [
+				"32B878D63A6AB6D3"
+				"5B575348D2A871BB"
+			]
 			description: [
 				"3rd tier of coils for your EBF to allow you to increase the heat even more. Will start making hot ingots more often."
 				""
@@ -1061,7 +1058,7 @@
 		{
 			dependencies: ["73931EAA3EC5C9A9"]
 			description: [
-				"Allows you to scan your surrounding chunks for fluids. "
+				"Allows you to scan your surrounding chunks for fluids."
 				""
 				"Spoilers, its going to be oil."
 			]
@@ -1167,7 +1164,7 @@
 		{
 			dependencies: ["439D8AE6D3DC41AF"]
 			description: [
-				"Another material that can be used to coat cables, is the most efficent resource wise."
+				"Another material that can be used to coat cables, it's the most efficent resource wise."
 				""
 				"Should now be easily craftable with oil distillation fully set up."
 			]
@@ -1241,7 +1238,7 @@
 				"74749B089D50329C"
 			]
 			description: [
-				"This is the &9IV&r material. "
+				"This is the &9IV&r material."
 				""
 				"You are going to need a lot of this, just like every other main voltage material."
 			]
@@ -1322,7 +1319,7 @@
 		}
 		{
 			dependencies: ["2CABFCC73E33E133"]
-			description: ["This chip is used for making &5EV&r tier Energy Hatches and Transformers."]
+			description: ["This Chip is used for making &5EV&r tier Energy Hatches and Transformers."]
 			icon: "gtceu:mpic_chip"
 			id: "2D4F9DFF6B559C65"
 			rewards: [{
@@ -1518,6 +1515,7 @@
 				"{ \"text\": \"MA Air Production\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"38351B708EBA5528\" } }"
 			]
 			id: "2B695762FC4A7686"
+			optional: true
 			rewards: [{
 				id: "059875F4497E4EA9"
 				item: "kubejs:coin"
@@ -1541,6 +1539,7 @@
 				"{ \"text\": \"MA Air Production\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"38351B708EBA5528\" } }"
 			]
 			id: "23A6938803281145"
+			optional: true
 			rewards: [{
 				id: "11386D4E5873ED47"
 				item: "kubejs:coin"
@@ -1559,6 +1558,7 @@
 			dependencies: ["5E1E1A4F5036A6EA"]
 			description: ["The essence of the End, right in the palm of your hand."]
 			id: "0B9C9B50CBD06F13"
+			optional: true
 			rewards: [{
 				id: "43C38518BA14FB01"
 				item: "kubejs:coin"
@@ -1613,6 +1613,7 @@
 			dependencies: ["4E9FAED9D889160A"]
 			description: ["Crushed Endstone, not exactly groundbreaking."]
 			id: "5E1E1A4F5036A6EA"
+			optional: true
 			rewards: [{
 				id: "7ECD96DDE51CD967"
 				item: "kubejs:coin"
@@ -1631,6 +1632,7 @@
 			dependencies: ["1820787D031EAB15"]
 			description: ["Make some Endstone and get to processing it."]
 			id: "4E9FAED9D889160A"
+			optional: true
 			rewards: [{
 				id: "2EA67AA0DED02E19"
 				item: "kubejs:coin"
@@ -1647,7 +1649,7 @@
 		}
 		{
 			dependencies: ["1820787D031EAB15"]
-			description: ["Make some Netherack and get to processing it."]
+			description: ["Make some Netherrack and get to processing it."]
 			id: "0725DE9E90815AB4"
 			rewards: [{
 				id: "5F7A11F57B0F3C94"
@@ -1693,7 +1695,7 @@
 				"62BA581B2918BB7B"
 				"2DB216B224F2E8EF"
 			]
-			description: ["Better Circuits, Fasters Circuits, Cheaper Circuits, this is a big one."]
+			description: ["Better Circuits, Faster Circuits, Cheaper Circuits, this is a big one."]
 			id: "574ECD841D0D2AD7"
 			rewards: [{
 				id: "454446B7F35018F3"
@@ -1775,7 +1777,7 @@
 		}
 		{
 			dependencies: ["076532C492102F8E"]
-			description: ["The spoils from the massive expoy processing line."]
+			description: ["The spoils from the massive epoxy processing line."]
 			id: "059FD3E475A05070"
 			rewards: [{
 				id: "1F3EC27C4996E6A2"
@@ -2148,9 +2150,9 @@
 				"06FCA7209B892A81"
 			]
 			description: [
-				"The 5th tier of Coils. "
+				"The 5th tier of Coils."
 				""
-				"These will give you the heat to make HSS-E and HSS-S ingots. Thats not going to get confusing at all."
+				"These will give you the heat to make HSS-E and HSS-S ingots. That's not going to get confusing at all."
 			]
 			id: "689150D2A185216C"
 			rewards: [{
@@ -2246,9 +2248,9 @@
 			description: [
 				"This multiblock allows you to create even more complex alloys, but will give outputs in a molten form."
 				""
-				"The ABS does both the mixing and smelting, and gives multiple units of ingots (144mb) as output because of this while only taking 75% the time of their EBF counter-part."
+				"The ABS performs both mixing and smelting, producing multiple ingot units (144 mB each) while requiring only 75% of the time compared to its EBF counterpart."
 				""
-				"You will need to cool the Molten Liquids in a Vacuum Freezer.."
+				"You will need to cool the Molten Liquids in a Vacuum Freezer."
 			]
 			id: "664E782C6A24D9F1"
 			rewards: [{
@@ -2394,12 +2396,12 @@
 		{
 			dependencies: ["5B70B63D4157594F"]
 			dependency_requirement: "one_completed"
-			description: ["{ \"text\": \"Read About Distinct Busses\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2757CDEC1D8F5CCE\" } }"]
+			description: ["{ \"text\": \"Read About Distinct Buses\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"2757CDEC1D8F5CCE\" } }"]
 			icon: "ftbquests:book"
 			id: "7E74A114F4054345"
 			tasks: [{
 				id: "52333CEF18B39599"
-				title: "Go Read About Distinct Busses"
+				title: "Go Read About Distinct Buses"
 				type: "checkmark"
 			}]
 			x: -3.5d
@@ -2482,6 +2484,44 @@
 			}]
 			x: -8.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["261174370DC87FCB"]
+			description: ["Carbon and a Plastic. Each Plastic gives twice as much Fibers as the previous one."]
+			id: "4FF433145C67693F"
+			optional: true
+			rewards: [{
+				id: "046C4EC8F24182DD"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			size: 1.0d
+			tasks: [{
+				id: "641801B89910C82D"
+				item: "gtceu:carbon_fibers"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["550DB81B8DC91730"]
+			description: ["Just some Glass and Boron, quite cheap."]
+			id: "5B575348D2A871BB"
+			optional: true
+			rewards: [{
+				id: "70A331233F13EF2E"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			size: 1.0d
+			tasks: [{
+				id: "6A926D7036D5AF12"
+				item: "gtceu:borosilicate_glass_ingot"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -3.0d
 		}
 	]
 	title: "Automation Age"

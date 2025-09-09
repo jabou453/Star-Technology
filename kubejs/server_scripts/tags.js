@@ -1,10 +1,16 @@
 ServerEvents.tags('item', event => {
+    event.add('gtceu:circuits/uv', 'kubejs:runic_wetware_processor_assembly');
+    event.add('gtceu:circuits/uhv', 'kubejs:runic_wetware_processor_computer');
+    event.add('gtceu:circuits/uev', 'kubejs:runic_wetware_processor_mainframe');
     event.add('gtceu:circuits/zpm', 'kubejs:draconic_wetware_microchip_processor');
     event.add('gtceu:circuits/uv', 'kubejs:draconic_wetware_processor');
     event.add('gtceu:circuits/uhv', 'kubejs:draconic_wetware_processor_assembly');
     event.add('gtceu:circuits/uev', 'kubejs:draconic_wetware_processor_computer');
     event.add('gtceu:circuits/uiv', 'kubejs:draconic_wetware_processor_mainframe');
     event.add('gtceu:circuits/uev', 'kubejs:wetware_based_runic_neuroloom');
+    event.add('gtceu:circuits/uev', 'kubejs:awakened_draconic_wetware_processor_assembly');
+    event.add('gtceu:circuits/uiv', 'kubejs:awakened_draconic_wetware_processor_computer');
+    event.add('gtceu:circuits/uxv', 'kubejs:awakened_draconic_wetware_processor_mainframe');
     event.remove('minecraft:planks', 'gtceu:treated_wood_planks');
     event.remove('minecraft:wooden_slabs', 'gtceu:treated_wood_slab');
 
@@ -35,6 +41,30 @@ ServerEvents.tags('item', event => {
     event.add('curios:head', 'kubejs:nether_talisman');
     event.add('curios:back', 'kubejs:end_talisman');
 
+    ['oak', 'spruce', 'birch', 'jungle', 'acacia', 'dark_oak', 'crimson', 'warped', 'mangrove', 'cherry'].forEach(type => {
+	event.add('functionalstorage:drawers_size_1',`functionalstorage:${type}_1`)
+	event.add('functionalstorage:drawers_size_2',`functionalstorage:${type}_2`)
+	event.add('functionalstorage:drawers_size_4',`functionalstorage:${type}_4`)
+    });//for framed drawers
+  
+    //Vintage Tag Removals
+    //Materials
+    ['vanadium','sulfur'].forEach(type=>{
+        const nuggetSuffix = type == 'sulfur' ? 'chunk' : 'nugget'
+        event.remove(`forge:storage_blocks/${type}`, `vintage:${type}_block`)
+        event.remove('forge:storage_blocks', `vintage:${type}_block`)
+        event.remove(`forge:nuggets/${type}`, `vintage:${type}_${nuggetSuffix}`);
+        event.remove('forge:nuggets', `vintage:${type}_${nuggetSuffix}`);
+        event.remove('balm:nuggets', `vintage:${type}_${nuggetSuffix}`);
+    });
+    event.remove('balm:gems', 'vintage:sulfur');
+    event.remove('forge:gems', 'vintage:sulfur');
+    event.remove('forge:gems/sulfur', 'vintage:sulfur');
+    event.remove('balm:ingots', 'vintage:vanadium_ingot');
+    event.remove('forge:ingots', 'vintage:vanadium_ingot');
+    event.remove('forge:ingots/vanadium', 'vintage:vanadium_ingot');
+    event.remove('minecraft:beacon_payment_items', 'vintage:vanadium_ingot');
+    event.remove('minecraft:trim_materials', 'vintage:vanadium_ingot');
 });
 
 ServerEvents.tags('item', event=>{
@@ -94,6 +124,11 @@ ServerEvents.tags('item', event=>{
     const Megacells = [
         /megacells:sky_steel.*/
     ]
+    const Vintage = [
+        /vintage:.*_sheet/,
+        /vintage:.*_rod/,
+        /vintage:.*_wire/
+    ]
 
     thermal.forEach((item)=> {
         event.removeAllTagsFrom(`${item}`)
@@ -108,6 +143,9 @@ ServerEvents.tags('item', event=>{
         event.removeAllTagsFrom(`${item}`)
     });
     Megacells.forEach((item)=> {
+        event.removeAllTagsFrom(`${item}`)
+    });
+    Vintage.forEach((item)=> {
         event.removeAllTagsFrom(`${item}`)
     });
 });
@@ -132,13 +170,19 @@ ServerEvents.tags('block', event => {
     event.remove('mineable/pickaxe', [
         'gtceu:ulv_barrel'
     ]);
+
     event.add('mineable/axe', [
         'gtceu:ulv_barrel'
     ]);
+
     event.add('mineable/pickaxe', [
         'travelanchors:travel_anchor'
     ]);
-    
+
+    ['vanadium','sulfur'].forEach(type=>{
+    event.remove(`forge:storage_blocks/${type}`,`vintage:${type}_block`);
+    });
+    event.remove('minecraft:beacon_base_blocks', 'vintage:vanadium_block');
 });
 
 ServerEvents.tags('fluid', event => {
@@ -147,5 +191,6 @@ ServerEvents.tags('fluid', event => {
     ['shellite','twinite','dragonsteel'].forEach(thermalExtraSC => {
 	event.remove(`forge:molten_${thermalExtraSC}`, `thermal_extra:${thermalExtraSC}`);
     });
+    event.remove('forge:sulfuric_acid','vintage:sulfuric_acid');
 
 });

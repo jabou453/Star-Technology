@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
         'createdieselgenerators:gasoline', 'createdieselgenerators:pumpjack_hole', 'exmachinis:item_buffer', 'exnihilosequentia:mechanical_sieve', 'exnihilosequentia:mechanical_hammer',
         'systeams:frost_boiler', 'exnihilosequentia:golden_mesh', 'minecraft:mycelium', 'thermal:gunpowder_4', 'thermal:dirt_crafting', '#thermal:rockwool', 'create:brass_block', 'create:zinc_block',
         'createdieselgenerators:wire_cutters', 'createdieselgenerators:hammer', 'createdieselgenerators:pumpjack_hole', 'createdieselgenerators:bulk_fermenter',
-        'createdieselgenerators:chemical_turret',
+        'createdieselgenerators:chemical_turret', 'create:andesite_alloy',
         // Following 2 to be removed for Zeta/Eta due to exploits and bugs
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer',
         // Boilers removed for Eta since they keep exploding on load
@@ -32,11 +32,11 @@ ServerEvents.recipes(event => {
         'create:milling/compat/ae2/ender_pearl', 'create:milling/compat/ae2/certus_quartz', 'create:crushing/raw_platinum_ore', 'create:crushing/raw_platinum_block',
         'create:crushing/raw_uranium_ore', 'create:crushing/raw_uranium_block', 'create:crafting/appliances/slime_ball', 'minecraft:fire_charge', 'gtceu:shapeless/dust_bronze',
         'gtceu:shapeless/dust_brass', 'create:mixing/brass_ingot', 'minecraft:ender_eye', 'create_new_age:shaped/carbon_brushes', 'create_new_age:shaped/basic_motor_extension',
-        'create_new_age:advanced_motor_extension', 'create_new_age:shaped/redstone_magnet', 
-        'createdieselgenerators:basin_fermenting/magma_cream', 'gtceu:research_station/1_x_gtceu_uv_energy_input_hatch', 'gtceu:research_station/1_x_gtceu_uv_energy_output_hatch',
-        'toms_storage:adv_wireless_terminal', 'megacells:mega_crafting_unit', 'gtceu:shaped/resistor_wire', 'gtceu:shaped/resistor_wire_fine', 'gtceu:shaped/resistor_wire_fine_carbon',
-        'gtceu:shaped/resistor_wire_carbon', 'gtceu:shaped/resistor_wire_charcoal', 'create:crushing/diorite_recycling', 'create:milling/charcoal', 'gtceu:macerator/macerate_sculk',
-        'thermal:gunpowder_4'
+        'create_new_age:advanced_motor_extension', 'create_new_age:shaped/redstone_magnet', 'createdieselgenerators:basin_fermenting/magma_cream',
+        'gtceu:research_station/1_x_gtceu_uv_energy_input_hatch', 'gtceu:research_station/1_x_gtceu_uv_energy_output_hatch', 'toms_storage:adv_wireless_terminal',
+        'megacells:mega_crafting_unit', 'gtceu:shaped/resistor_wire', 'gtceu:shaped/resistor_wire_fine', 'gtceu:shaped/resistor_wire_fine_carbon', 'gtceu:shaped/resistor_wire_carbon',
+        'gtceu:shaped/resistor_wire_charcoal', 'create:crushing/diorite_recycling', 'create:milling/charcoal', 'gtceu:macerator/macerate_sculk', 'thermal:gunpowder_4',
+        'gtceu:shaped/block_compress_marble', 'gtceu:shapeless/block_decompress_marble', 'createdieselgenerators:basin_fermenting/golden_apple'
     ];
 
     const toRemoveType = ['thermal:sawmill', 'thermal:pulverizer', 'thermal:insolator', 'thermal:centrifuge', 'thermal:crucible', 'thermal:chiller', 'thermal:refinery',
@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
     event.remove({ input: /thermal:.*_nugget/});
     event.remove({ output: /exnihilosequentia:.*_nugget/});
     event.remove({ input: /exnihilosequentia:.*_nugget/});
-    event.remove({ input: Item.of('createdieselgenerators:mold').ignoreNBT()});
+    event.remove({ input: Item.of('createdieselgenerators:mold')});
     event.remove({ output: 'createdieselgenerators:mold'});
 
     //Pattern Buffer Research Removals

@@ -525,23 +525,32 @@
 				type: "item"
 			}]
 			title: "Bulk Smash"
-			x: -1.0d
-			y: -5.5d
+			x: -2.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
 				"3D0F6CA8028C074B"
 				"7EE1BE4043827F35"
+				"483B101A7F71E674"
+				"3F74E863172E757F"
 			]
 			description: [
 				"Extracting Latex from &lJungle Trees&r will be one of your first sources of rubber, after a bit of processing."
 				""
 				"There are 2 ways to do this, either by placing &nArboreal Extractors&r around a Jungle Tree or by building the &nLatex Plantation&r multiblock."
 				""
-				"&nNote&r: For the Latex Plantation you can use a wooden tap in the controller block, to use the better tap methods with a fuel and circuit you'll need a &8ULV&r Input Bus at a minimum. A Output Hatch can be placed on the back to automate further but isn't needed."
+				"By combining Rubber and Sulfur you can get cured rubber."
+				""
+				"- This can be done by using a heated Create mixer."
+				"- This can be done by using a Steam Alloy Smelter."
+				"- This can be done by using a Cooking Pot with a campfire under it."
+				""
+				"&nNote&r: For the Latex Plantation you can use a wooden tap in the controller block, to use the better tap methods with a fuel and circuit you'll need a &8ULV&r Input Bus at a minimum. An Output Hatch can be placed on the back to automate further but isn't needed."
 			]
 			icon: "gtceu:latex_plantation"
 			id: "0A41C4FB379984C0"
+			optional: true
 			rewards: [{
 				count: 2
 				id: "00D6F6E2A931271F"
@@ -779,43 +788,28 @@
 				}
 			]
 			title: "Alloy Mixing"
-			x: -1.0d
-			y: -7.0d
+			x: -2.5d
+			y: -6.0d
 		}
 		{
 			dependencies: [
-				"3F74E863172E757F"
 				"0A41C4FB379984C0"
-				"483B101A7F71E674"
+				"3D78314A07F5782A"
 			]
 			dependency_requirement: "one_completed"
-			description: [
-				"By combining Rubber and Sulfur you can get cured rubber."
-				""
-				"- This can be done by using a heated Create mixer."
-				"- This can be done by using a Steam Alloy Smelter."
-				"- This can be done by using a Cooking Pot with a campfire under it."
-			]
+			description: ["Rubber is an important material, used for coating wires."]
 			id: "46E41B05B9F6FA82"
 			rewards: [{
 				id: "2FFF7F85F52E435C"
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			tasks: [
-				{
-					count: 4L
-					id: "03148525E61128DA"
-					item: { Count: 4, id: "thermal:cured_rubber" }
-					type: "item"
-				}
-				{
-					count: 4L
-					id: "487F5EEEFEFBB7A8"
-					item: { Count: 4, id: "gtceu:rubber_plate" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				count: 4L
+				id: "487F5EEEFEFBB7A8"
+				item: { Count: 4, id: "gtceu:rubber_plate" }
+				type: "item"
+			}]
 			title: "Cable Insulation"
 			x: 8.0d
 			y: -1.0d
@@ -825,7 +819,7 @@
 			description: [
 				"Barrel transformations from Ex Nihilo have been disabled, and replaced with this beautiful machine! "
 				""
-				"It can soak, compost, and transform. "
+				"It can soak, compost, and transform."
 				""
 				"Be sure to choose the correct \"&n&o&7Active Machine Mode&r\", in the tab on the left of the UI."
 			]
@@ -1118,7 +1112,11 @@
 			y: 3.5d
 		}
 		{
-			dependencies: ["397C622B06B1165A"]
+			dependencies: [
+				"397C622B06B1165A"
+				"6C7DB1CB4517B843"
+			]
+			dependency_requirement: "one_completed"
 			description: ["Gold has a few uses for making Create components and machines, and is used for some alloys in &7LV&r"]
 			hide_dependent_lines: true
 			id: "708A5EE75EC40FAD"
@@ -1316,7 +1314,7 @@
 				""
 				"You might get some good use out of this when making Bio Diesel."
 				""
-				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+				"You can optionally use buses and hatches for automation, otherwise you can interact directly with the controller."
 			]
 			icon: "gtceu:large_farm"
 			id: "14417CCE1E25C9C6"
@@ -1352,7 +1350,8 @@
 			dependencies: ["07C5B4C5EE2F948D"]
 			description: [
 				"A larger barrel means faster recipes! Maybe this will help with that slime addiction..."
-				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+				""
+				"You can optionally use buses and hatches for automation, otherwise you can interact directly with the controller."
 			]
 			icon: "gtceu:large_barrel"
 			id: "27E9698231A04022"
@@ -1387,8 +1386,9 @@
 		{
 			dependencies: ["07C5B4C5EE2F948D"]
 			description: [
-				"Automatic pebbles and lava? Sounds like a good use of your time to make a few of these."
-				"You can optionally use busses and hatches for automation, otherwise you can interacti directly with the controller. "
+				"Automatic pebbles and lava? Making a few of these sounds like a good use of your time."
+				""
+				"You can optionally use buses and hatches for automation, otherwise you can interact directly with the controller."
 			]
 			icon: "gtceu:large_stone_barrel"
 			id: "3477B2FEEF0DF44C"
@@ -1475,13 +1475,13 @@
 				type: "item"
 			}]
 			title: "Stressed Out"
-			x: 0.5d
-			y: -5.5d
+			x: -1.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["70BE6905EC722DCA"]
 			description: [
-				"Since Blazes are out of the question, a Basic Burner is needed to heat Basins. "
+				"Since Blazes are out of the question, a Basic Burner is needed to heat Basins."
 				"Note that you can &6superheat&r Basic Burners with an Encased Fan at max &3RPM&r, though it will burn through fuel faster (32x)."
 			]
 			id: "3B50E73E5A176301"
@@ -1514,15 +1514,19 @@
 				}
 			]
 			title: "Steam Powered"
-			x: 2.0d
-			y: -7.0d
+			x: 0.5d
+			y: -6.0d
 		}
 		{
 			dependencies: [
 				"708A5EE75EC40FAD"
 				"70BE6905EC722DCA"
 			]
-			description: ["Diesel Engines are a great way to generate large amounts of Stress Units for Create machines. Bio Diesel is one of the best fuel sources, but it requires some automating to keep a steady supply."]
+			description: [
+				"Diesel Engines are a great way to generate large amounts of Stress Units for Create machines. Bio Diesel is one of the best fuel sources, but it requires some automating to keep a steady supply."
+				""
+				"You can produce Ethanol using either the Basin Lid or the Casket. The Basin Lid is 1.5x faster, whilst the Casket is simpler to work with."
+			]
 			id: "00DD4784E0E6821D"
 			optional: true
 			rewards: [{
@@ -1534,16 +1538,19 @@
 				{
 					id: "1ECC60CD1BB6EB91"
 					item: "createdieselgenerators:plant_oil_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "175DA766C911FF5A"
 					item: "createdieselgenerators:basin_lid"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "5E91854EA7A49CCE"
 					item: "createdieselgenerators:ethanol_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1577,8 +1584,8 @@
 				}
 			]
 			title: "Diesel Engines"
-			x: 2.0d
-			y: -5.5d
+			x: 0.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -1690,7 +1697,11 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["397C622B06B1165A"]
+			dependencies: [
+				"397C622B06B1165A"
+				"6C7DB1CB4517B843"
+			]
+			dependency_requirement: "one_completed"
 			description: ["Nickel is a base material used in quite a few alloys. Getting a good amount early on will definitly be beneficial."]
 			id: "0E47ACCDF46E6B1F"
 			rewards: [{
@@ -1725,7 +1736,7 @@
 				type: "item"
 			}]
 			title: "Basic Cobbleworks"
-			x: 0.5d
+			x: -2.0d
 			y: -7.0d
 		}
 		{
@@ -1808,7 +1819,7 @@
 		{
 			dependencies: ["7EE1BE4043827F35"]
 			description: [
-				"While Tempered Glass is typically made in an Arc Furnace, it can be made in a Stone Barrel with Lava and Glass. "
+				"While Tempered Glass is typically made in an Arc Furnace, it can be made in a Stone Barrel with Lava and Glass."
 				""
 				"It will be needed to make the Rock Filtrator which is what gates the Arc Furnace."
 			]
@@ -2232,7 +2243,7 @@
 				type: "item"
 			}]
 			x: -0.5d
-			y: 2.75d
+			y: 2.5d
 		}
 		{
 			dependencies: [
@@ -2257,13 +2268,14 @@
 				type: "item"
 			}]
 			x: -0.5d
-			y: 1.25d
+			y: 1.0d
 		}
 		{
 			dependencies: ["6B059D530FCE7428"]
 			description: ["While consuming more steam than their earlier counter-parts (if at all), they are able to run multiple of the same recipe at once with no extra cost or time making it a great feature for bulk processing early on."]
 			icon: "minecraft:book"
 			id: "27F5DD0860E43CFF"
+			optional: true
 			tasks: [{
 				id: "687924A523C9E5A8"
 				title: "Steam Parallels"
@@ -2280,6 +2292,11 @@
 				"&4Warning&r: Upgrade can be lost on death or relog in some instances so having some in a chest isn't a horrible idea."
 			]
 			id: "4E4CDE5CDFA24839"
+			rewards: [{
+				id: "6F422AC96183061A"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "6E6BE35F63091CD7"
 				item: {
@@ -2309,6 +2326,117 @@
 			}]
 			x: 2.0d
 			y: 4.25d
+		}
+		{
+			dependencies: ["46E41B05B9F6FA82"]
+			description: [
+				"The Casket is a machine that allows for easy Ethanol production."
+				""
+				"Alongside that, it can also produce various brews, that gives beneficial effects when consumed."
+			]
+			id: "034381C844C88ADD"
+			rewards: [{
+				id: "1F2A3BFD35CFA9DB"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2686626F2E18E539"
+				item: "gtceu:ulv_casket"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"3F74E863172E757F"
+				"6D5287A0FB892DFF"
+				"6C7DB1CB4517B843"
+			]
+			description: ["A slightly more complicated way of making rubber, that does not depend on latex."]
+			hide_dependency_lines: true
+			icon: "gtceu:raw_rubber_dust"
+			id: "3D78314A07F5782A"
+			rewards: [{
+				id: "132A91D9CCE0324C"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.25d
+			subtitle: "This seems familiar"
+			tasks: [
+				{
+					id: "417253D624B78148"
+					item: "vintage:centrifuge"
+					type: "item"
+				}
+				{
+					id: "27CB8A723B645E4A"
+					item: "vintage:vacuum_chamber"
+					type: "item"
+				}
+			]
+			title: "Rubber Processing"
+			x: 9.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["70BE6905EC722DCA"]
+			description: ["Machines from vintage open up many interesting opportunities for more efficient material processing, alongside primitive ore processing."]
+			hide_dependent_lines: true
+			id: "6C7DB1CB4517B843"
+			optional: true
+			rewards: [{
+				id: "1FCCF30A0083DBB8"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "34B96CC7C1DDB90A"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "vintage:belt_grinder"
+							}
+							{
+								Count: 1b
+								id: "vintage:spring_coiling_machine"
+							}
+							{
+								Count: 1b
+								id: "vintage:vacuum_chamber"
+							}
+							{
+								Count: 1b
+								id: "vintage:vibrating_table"
+							}
+							{
+								Count: 1b
+								id: "vintage:centrifuge"
+							}
+							{
+								Count: 1b
+								id: "vintage:helve_hammer"
+							}
+							{
+								Count: 1b
+								id: "vintage:lathe"
+							}
+						]
+					}
+				}
+				title: "Vintage machines"
+				type: "item"
+			}]
+			title: "Create: Vintage"
+			x: 0.0d
+			y: -7.0d
 		}
 		{
 			can_repeat: true

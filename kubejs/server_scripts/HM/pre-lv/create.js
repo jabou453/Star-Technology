@@ -277,9 +277,9 @@ ServerEvents.recipes(event => {
 		Item.of('thermal:drill_head').withChance(1),
 	], drill, [
 		event.recipes.createDeploying(drill, [drill, 'create:andesite_alloy']),
-		event.recipes.createDeploying(drill, [drill, 'create:andesite_alloy']),
+		event.recipes.createDeploying(drill, [drill, 'gtceu:cast_iron_plate']),
 		event.recipes.createPressing(drill, drill),
-		event.recipes.createDeploying(drill, [drill, 'gtceu:iron_plate']),
+		event.recipes.createDeploying(drill, [drill, 'gtceu:wrought_iron_plate']),
 		event.recipes.createCutting(drill, drill),
 	]).transitionalItem(drill).loops(2).id('start:sequenced_assembly/drill_head')
 
@@ -1151,7 +1151,7 @@ ServerEvents.recipes(event => {
 		event.remove({ output: `create:${item}` });
 	});
 	const CreateIDRemoval = [
-		'crafting/logistics/stock_link', 'crafting/logistics/stock_ticker', 'crafting/logistics/redstone_requester', 'crafting/logistics/factory_gauge'
+		'crafting/logistics/stock_link', 'crafting/logistics/stock_ticker', 'crafting/logistics/redstone_requester', 'crafting/logistics/factory_gauge', 'milling/gravel'
 	];
 	CreateIDRemoval.forEach(item => {
 		event.remove({ id: `create:${item}` });
@@ -1168,5 +1168,6 @@ ServerEvents.recipes(event => {
 	CDiesel.forEach(removal => {
 		event.remove({ output: `createdieselgenerators:${removal}` })
 	});
-	event.remove({ id: /^railways:mechanical_crafting\/.*_locometal_boiler/ })
+	event.remove({ id: /^railways:mechanical_crafting\/.*_locometal_boiler/ });
+	event.remove({ mod: 'vintage' });
 });

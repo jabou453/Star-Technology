@@ -26,10 +26,24 @@ ServerEvents.recipes(event => {
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('start_core:uhv_auxiliary_boosted_fusion_reactor'))
-                .EUt(GTValues.VHA[GTValues.UHV])
+                .EUt(GTValues.VHA[GTValues.UEV])
                 .CWUt(160)
             )
         .EUt(GTValues.VHA[GTValues.UEV]);
+
+    event.recipes.gtceu.assembly_line(id('uiv_auxiliary_boosted_fusion_reactor'))
+        .itemInputs('start_core:auxiliary_fusion_coil_mk2', '4x #gtceu:circuits/uxv', 'kubejs:dragonic_eye', 'gtceu:double_abyssal_alloy_plate',
+                '2x gtceu:uev_field_generator', '64x kubejs:uipic_chip', '32x kubejs:uipic_chip', '32x gtceu:rhenium_super_composite_alloy_single_wire')
+        .inputFluids('gtceu:indium_tin_lead_cadmium_soldering_alloy 1152', 'gtceu:polonium_bismide 1152')
+        .itemOutputs('start_core:uiv_auxiliary_boosted_fusion_reactor')
+        .duration(1600)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('start_core:uev_fusion_reactor'))
+                .EUt(GTValues.VHA[GTValues.UIV])
+                .CWUt(192)
+            )
+        .EUt(GTValues.VHA[GTValues.UIV]);
 
     //Casings/Coil
     
@@ -37,7 +51,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.assembler(id(`superconducting_coil_${tier}`))
             .itemInputs(`8x gtceu:${SuperCond}_double_wire`, '8x gtceu:niobium_titanium_foil')
             .inputFluids('gtceu:trinium 1152')
-            .itemOutputs(`${2 * quant}x gtceu:superconducting_coil`)
+            .itemOutputs(`${2 ** quant}x gtceu:superconducting_coil`)
             .duration(100)
             .EUt(GTValues.VA[GTValues.UV] * (4 ** quant));
     };
@@ -63,7 +77,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('auxiliary_fusion_coil_mk1'))
         .itemInputs('3x gtceu:superconducting_coil', '4x gtceu:zpm_field_generator', '2x gtceu:zpm_electric_pump', '4x gtceu:neutron_reflector', '8x #gtceu:circuits/uv', '8x gtceu:zapolgium_small_fluid_pipe', '8x gtceu:zircalloy_4_plate')
-        .inputFluids('gtceu:zirconium_selenide_diiodide 1152')
+        .inputFluids('gtceu:europium 1152')
         .itemOutputs('3x start_core:auxiliary_fusion_coil_mk1')
         .duration(200)
         .EUt(GTValues.VHA[GTValues.UHV])
@@ -71,9 +85,25 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler(id('advanced_fusion_coil'))
         .itemInputs('gtceu:fusion_coil', '2x gtceu:uv_field_generator', '1x gtceu:uv_electric_pump', '6x gtceu:neutron_reflector', '4x #gtceu:circuits/uhv', '4x gtceu:mythrolic_alloy_small_fluid_pipe', '4x gtceu:magmada_alloy_plate')
-        .inputFluids('gtceu:astatium_bioselex_carbonite 576')
+        .inputFluids('gtceu:cerium_tritelluride 576')
         .itemOutputs('start_core:advanced_fusion_coil')
         .duration(200)
         .EUt(GTValues.VHA[GTValues.UEV])
+        .cleanroom(CleanroomType.STERILE_CLEANROOM);
+
+    event.recipes.gtceu.assembler(id('auxiliary_boosted_fusion_casing_mk2'))
+        .itemInputs('gtceu:uiv_machine_casing', 'start_core:auxiliary_fusion_coil_mk2', '2x kubejs:uiv_voltage_coil', 'gtceu:uev_field_generator', '6x gtceu:abyssal_alloy_plate')
+        .inputFluids('gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 576')
+        .itemOutputs('2x start_core:auxiliary_boosted_fusion_casing_mk2')
+        .duration(100)
+        .EUt(GTValues.VHA[GTValues.UIV])
+        .cleanroom(CleanroomType.STERILE_CLEANROOM);
+
+    event.recipes.gtceu.assembler(id('auxiliary_fusion_coil_mk2'))
+        .itemInputs('3x start_core:auxiliary_fusion_coil_mk1', '4x gtceu:uhv_field_generator', '2x gtceu:uhv_electric_pump', '8x gtceu:neutron_reflector', '8x #gtceu:circuits/uev', '8x gtceu:nyanium_small_fluid_pipe', '8x gtceu:abyssal_alloy_plate')
+        .inputFluids('gtceu:polonium_bismide 1152')
+        .itemOutputs('3x start_core:auxiliary_fusion_coil_mk2')
+        .duration(200)
+        .EUt(GTValues.VHA[GTValues.UIV])
         .cleanroom(CleanroomType.STERILE_CLEANROOM);
 });

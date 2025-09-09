@@ -1,6 +1,73 @@
 ServerEvents.recipes(event => {
     const id = global.id;
     
+    // === Fixing LuV - UV Scaling ===
+
+        [
+        'assembly_line/electric_motor_uv','research_station/1_x_gtceu_zpm_electric_motor',
+        'assembly_line/electric_motor_zpm','scanner/1_x_gtceu_luv_electric_motor',
+        'assembly_line/electric_motor_luv','scanner/1_x_gtceu_iv_electric_motor',
+        'assembly_line/electric_pump_uv','research_station/1_x_gtceu_zpm_electric_motor',
+        'assembly_line/electric_pump_zpm','scanner/1_x_gtceu_luv_electric_pump',
+        'assembly_line/electric_pump_luv','scanner/1_x_gtceu_iv_electric_pump'
+        ].forEach(removalID => {
+            event.remove({id: `gtceu:${removalID}`});
+        });
+    
+        const uvComponent = (type,inputs,fluids) => {
+        event.recipes.gtceu.assembly_line(id(`${type}_uv`))
+            .itemInputs(inputs)
+            .inputFluids(fluids)
+            .itemOutputs(`gtceu:uv_${type}`)
+            .stationResearch(
+                researchRecipeBuilder => researchRecipeBuilder
+                    .researchStack(Item.of(`gtceu:zpm_${type}`))
+                    .EUt(122880)
+                    .CWUt(32)
+                )
+            .duration(600)
+            .EUt(100000);
+        }
+
+        uvComponent('electric_motor',['gtceu:long_magnetic_samarium_rod','4x gtceu:long_tritanium_rod','4x gtceu:tritanium_ring','8x gtceu:tritanium_round','64x gtceu:fine_americium_wire','2x gtceu:yttrium_barium_cuprate_single_cable'],['gtceu:soldering_alloy 576','gtceu:lubricant 1000','gtceu:naquadria 576']);
+        uvComponent('electric_pump',['gtceu:uv_electric_motor','gtceu:naquadah_normal_fluid_pipe','2x gtceu:tritanium_plate','8x gtceu:tritanium_screw','8x gtceu:silicone_rubber_ring','gtceu:naquadah_alloy_rotor','2x gtceu:yttrium_barium_cuprate_single_cable'],['gtceu:soldering_alloy 576','gtceu:lubricant 1000','gtceu:naquadria 576']);
+
+        const zpmComponent = (type,inputs,fluids) => {
+        event.recipes.gtceu.assembly_line(id(`${type}_zpm`))
+            .itemInputs(inputs)
+            .inputFluids(fluids)
+            .itemOutputs(`gtceu:zpm_${type}`)
+            ["scannerResearch(java.util.function.UnaryOperator)"](
+                researchRecipeBuilder => researchRecipeBuilder
+                    .researchStack(Item.of(`gtceu:luv_${type}`))
+                    .duration(1200)
+                    .EUt(7680)
+                )
+            .duration(600)
+            .EUt(24000);
+        }
+
+        zpmComponent('electric_motor',['gtceu:long_magnetic_samarium_rod','4x gtceu:long_osmiridium_rod','4x gtceu:osmiridium_ring','8x gtceu:osmiridium_round','64x gtceu:fine_europium_wire','2x gtceu:vanadium_gallium_single_cable'],['gtceu:soldering_alloy 288','gtceu:lubricant 500']);
+        zpmComponent('electric_pump',['gtceu:zpm_electric_motor','gtceu:polybenzimidazole_normal_fluid_pipe','2x gtceu:osmiridium_plate','8x gtceu:osmiridium_screw','6x gtceu:silicone_rubber_ring','gtceu:osmiridium_rotor','2x gtceu:vanadium_gallium_single_cable'],['gtceu:soldering_alloy 288','gtceu:lubricant 500']);
+
+        const luvComponent = (type,inputs,fluids) => {
+        event.recipes.gtceu.assembly_line(id(`${type}_luv`))
+            .itemInputs(inputs)
+            .inputFluids(fluids)
+            .itemOutputs(`gtceu:luv_${type}`)
+            ["scannerResearch(java.util.function.UnaryOperator)"](
+                researchRecipeBuilder => researchRecipeBuilder
+                    .researchStack(Item.of(`gtceu:iv_${type}`))
+                    .duration(900)
+                    .EUt(1920)
+                )
+            .duration(600)
+            .EUt(6000);
+        }
+
+        luvComponent('electric_motor',['gtceu:long_magnetic_samarium_rod','4x gtceu:long_hsss_rod','4x gtceu:hsss_ring','8x gtceu:hsss_round','64x gtceu:fine_ruridit_wire','2x gtceu:niobium_titanium_single_cable'],['gtceu:soldering_alloy 144','gtceu:lubricant 250']);
+        luvComponent('electric_pump',['gtceu:luv_electric_motor','gtceu:niobium_titanium_normal_fluid_pipe','2x gtceu:hsss_plate','8x gtceu:hsss_screw','4x gtceu:silicone_rubber_ring','gtceu:hsss_rotor','2x gtceu:niobium_titanium_single_cable'],['gtceu:soldering_alloy 144','gtceu:lubricant 250']);
+
     // === Controller Blocks === 
         event.recipes.gtceu.assembly_line(id('component_part_assembly'))
         .itemInputs('gtceu:uv_assembler','8x gtceu:uv_robot_arm','8x gtceu:uv_conveyor_module',
@@ -86,25 +153,25 @@ ServerEvents.recipes(event => {
         componentParts('computational_matrix', [`gtceu:${Primary}_frame`, `1x #gtceu:circuits/${Tier}`, `2x #gtceu:circuits/${Tier1}`, `3x #gtceu:circuits/${Tier2}`, `4x gtceu:fine_${WireTypeComputational}_wire`, `${2*(2**Scaler)}x kubejs:qram_chip`],
             [`gtceu:sterilized_growth_medium ${250+Scaler*250}`, `gtceu:indium_tin_lead_cadmium_soldering_alloy ${72+Scaler*72}`], 400, `kubejs:${PriorTier}_computational_matrix`);
         
-        componentParts('transmission_assembly', [`gtceu:${Primary}_frame`, `gtceu:${Tier1}_electric_motor`, `2x gtceu:${Primary}_rod`, `2x gtceu:${Primary}_ring`, `8x gtceu:${Primary}_round`, `64x gtceu:fine_${WireTypeMechanical}_wire`],
+        componentParts('transmission_assembly', [`gtceu:${Material}_frame`, `gtceu:${Tier1}_electric_motor`, `2x gtceu:${Primary}_rod`, `2x gtceu:${Primary}_ring`, `4x gtceu:${Primary}_round`, `16x gtceu:fine_${WireTypeMechanical}_wire`],
             [`gtceu:${Lubricant} ${250+Scaler*250}`], 320, `kubejs:${PriorTier}_transmission_assembly`);
         
         componentParts('precision_drive_mechanism', [`gtceu:${Primary}_frame`, `gtceu:${Tier1}_electric_motor`, `#gtceu:circuits/${Tier1}`, `gtceu:${Support}_gear`, `gtceu:small_${Primary}_gear`, `8x gtceu:${Primary}_round`],
             [`gtceu:${Lubricant} ${250+Scaler*250}`, `gtceu:${RubberF} 1728`], 480, `kubejs:${PriorTier}_precision_drive_mechanism`);
         
-        componentParts('microfluidic_flow_valve', [`gtceu:${Tier1}_fluid_regulator`, `gtceu:${Material}_small_fluid_pipe`, `2x gtceu:${Primary}_plate`, `6x gtceu:${Primary}_round`, `4x gtceu:${RubberR}_ring`, `6x gtceu:${Primary}_ring`],
+        componentParts('microfluidic_flow_valve', [`gtceu:${Tier1}_fluid_regulator`, `gtceu:${Material}_small_fluid_pipe`, `2x gtceu:${Primary}_plate`, `4x gtceu:${Primary}_round`, `4x gtceu:${RubberR}_ring`, `2x gtceu:${Primary}_ring`],
             [`gtceu:${Plastic} ${396+Scaler*36}`], 320, `kubejs:${PriorTier}_microfluidic_flow_valve`);
         
         componentParts('super_magnetic_core', [`gtceu:long_magnetic_${PrimaryMagnet}_rod`, `2x gtceu:magnetic_${SecondaryMagnet}_rod`, `3x gtceu:${Primary}_rod`, `24x gtceu:fine_${WireTypeMechanical}_wire`, `2x gtceu:${Material}_tiny_fluid_pipe`],
             [`gtceu:${Coolant} 2500`], 300, `kubejs:${PriorTier}_super_magnetic_core`);
         
-        componentParts('catalyst_core', [`4x gtceu:long_${Primary}_rod`, `${GlassType}`, `${CatalystType}`, `32x gtceu:fine_${SuperConductor}_wire`, `gtceu:${Tier1}_emitter`, `4x gtceu:${Support}_ring`],
+        componentParts('catalyst_core', [`4x gtceu:${Primary}_rod`, `${GlassType}`, `${CatalystType}`, `32x gtceu:fine_${SuperConductor}_wire`, `gtceu:${Tier1}_emitter`, `4x gtceu:${Support}_ring`],
             [`gtceu:${Fluid} 576`], 480, `kubejs:${PriorTier}_catalyst_core`);
         
         componentParts('high_strength_panel', [`2x gtceu:double_${Primary}_plate`, `#gtceu:circuits/${Tier1}`, `8x gtceu:${Support}_screw`],
             [`gtceu:${Material} 576`, `gtceu:${Plastic} ${396+Scaler*36}`], 200, `kubejs:${PriorTier}_high_strength_panel`);
     
-        componentParts('micropower_router', [`gtceu:${CableType}_double_cable`, `4x gtceu:${CableType}_single_cable`, `4x gtceu:${Primary}_plate`, `32x gtceu:fine_${WireTypeComputational}_wire`],
+        componentParts('micropower_router', [`gtceu:${CableType}_double_cable`, `4x gtceu:${CableType}_single_cable`, `2x gtceu:${Primary}_plate`, `32x gtceu:fine_${WireTypeComputational}_wire`],
             [`gtceu:${RubberF} 720`], 240, `kubejs:${PriorTier}_micropower_router`);
         };
     // === Components ===
@@ -121,24 +188,24 @@ ServerEvents.recipes(event => {
                 )
             .duration(duration)
             .EUt(eut);
-    }
+        }
 
         components('electric_motor', [`kubejs:${Tier}_super_magnetic_core`, `2x gtceu:long_${Primary}_rod`, `kubejs:${Tier}_transmission_assembly`, `kubejs:${Tier}_micropower_router`, `64x gtceu:fine_${WireTypeMechanical}_wire`],
             [`gtceu:indium_tin_lead_cadmium_soldering_alloy ${288*(2**Scaler)}`, `gtceu:${Lubricant} ${500+Scaler*500}`, `gtceu:${Fluid} 576`], 600);
         
-        components('electric_pump', [`gtceu:${Tier}_electric_motor`, `gtceu:${Material}_large_fluid_pipe`, `kubejs:${Tier}_microfluidic_flow_valve`, `kubejs:${Tier}_micropower_router`, `16x gtceu:${RubberR}_ring`, `gtceu:${Support}_rotor`],
+        components('electric_pump', [`gtceu:${Tier}_electric_motor`, `gtceu:${Material}_normal_fluid_pipe`, `kubejs:${Tier}_microfluidic_flow_valve`, `kubejs:${Tier}_micropower_router`, `8x gtceu:${RubberR}_ring`, `gtceu:${Support}_rotor`],
             [`gtceu:indium_tin_lead_cadmium_soldering_alloy ${288*(2**Scaler)}`, `gtceu:${Lubricant} ${500+Scaler*500}`, `gtceu:${Fluid} 576`], 600);
         
-        components('conveyor_module', [`2x gtceu:${Tier}_electric_motor`, `kubejs:${Tier}_high_strength_panel`, `kubejs:${Tier}_precision_drive_mechanism`, `kubejs:${Tier}_transmission_assembly`, `kubejs:${Tier}_micropower_router`],
+        components('conveyor_module', [`2x gtceu:${Tier}_electric_motor`, `kubejs:${Tier}_high_strength_panel`, `kubejs:${Tier}_precision_drive_mechanism`, `4x gtceu:${Primary}_ring`, `kubejs:${Tier}_micropower_router`],
             [`gtceu:indium_tin_lead_cadmium_soldering_alloy ${288*(2**Scaler)}`, `gtceu:${Lubricant} ${500+Scaler*500}`, `gtceu:${RubberF} 3456`, `gtceu:${Fluid} 576`], 600);
         
-        components('electric_piston', [`gtceu:${Tier}_electric_motor`, `2x kubejs:${Tier}_high_strength_panel`, `2x kubejs:${Tier}_transmission_assembly`, `kubejs:${Tier}_micropower_router`, `gtceu:${Support}_gear`, `gtceu:small_${Primary}_gear`],
+        components('electric_piston', [`gtceu:${Tier}_electric_motor`, `2x kubejs:${Tier}_high_strength_panel`, `1x kubejs:${Tier}_transmission_assembly`, `kubejs:${Tier}_micropower_router`, `gtceu:${Support}_gear`, `gtceu:small_${Primary}_gear`],
             [`gtceu:indium_tin_lead_cadmium_soldering_alloy ${288*(2**Scaler)}`, `gtceu:${Lubricant} ${500+Scaler*500}`, `gtceu:${Fluid} 576`], 600);
         
-        components('robot_arm', [`4x gtceu:long_${Primary}_rod`, `kubejs:${Tier}_precision_drive_mechanism`, `2x kubejs:${Tier}_transmission_assembly`, `2x gtceu:${Tier}_electric_motor`, `gtceu:${Tier}_electric_piston`, `3x kubejs:${Tier}_computational_matrix`, `2x kubejs:${Tier}_micropower_router`],
+        components('robot_arm', [`4x gtceu:long_${Primary}_rod`, `kubejs:${Tier}_precision_drive_mechanism`, `kubejs:${Tier}_transmission_assembly`, `gtceu:${Tier}_electric_motor`, `gtceu:${Tier}_electric_piston`, `2x kubejs:${Tier}_computational_matrix`, `2x kubejs:${Tier}_micropower_router`],
             [`gtceu:indium_tin_lead_cadmium_soldering_alloy ${864*(2**Scaler)}`, `gtceu:${Lubricant} ${500+Scaler*500}`, `gtceu:${Fluid} 576`], 600);
        
-        components('field_generator', [`gtceu:${Primary}_frame`, `2x kubejs:${Tier}_high_strength_panel`, `kubejs:${Tier}_catalyst_core`, `2x gtceu:${Tier}_emitter`, `2x kubejs:${Tier}_computational_matrix`, `64x gtceu:fine_${SuperConductor}_wire`, `2x kubejs:${Tier}_micropower_router`],
+        components('field_generator', [`gtceu:${Primary}_frame`, `2x kubejs:${Tier}_high_strength_panel`, `kubejs:${Tier}_catalyst_core`, `2x gtceu:${Tier}_emitter`, `1x kubejs:${Tier}_computational_matrix`, `64x gtceu:fine_${SuperConductor}_wire`, `2x kubejs:${Tier}_micropower_router`],
             [`gtceu:indium_tin_lead_cadmium_soldering_alloy ${864*(2**Scaler)}`, `gtceu:${Fluid} 576`], 600);
         
         components('emitter', [`gtceu:${Primary}_frame`, `gtceu:${Tier}_electric_motor`, `4x gtceu:long_${Primary}_rod`, `1x kubejs:${Tier}_catalyst_core`, `1x kubejs:${Tier}_computational_matrix`, `64x gtceu:${Material}_foil`, `1x kubejs:${Tier}_micropower_router`],
@@ -156,8 +223,8 @@ ServerEvents.recipes(event => {
 
     }
 
-    materialList('uhv', 'uv', 'zpm', 'zalloy', 'zircalloy_4', 'neutronium', 'styrene_butadiene_rubber', 'perfluoroelastomer_rubber', 'polyether_ether_ketone', 'lubricant', 'iron_selenide_over_strontium_titanium_oxide', 'zirconium', 'zirconium_selenide_diiodide', 'gtceu:fusion_glass', 'gtceu:gravi_star', 'pure_netherite', 'samarium', 'naquadria', 'thorium_plut_duranide_241', GTValues.VHA[GTValues.UHV], 1, 'liquid_helium', 'ruthenium_trinium_americium_neutronate', 128);
-    materialList('uev', 'uhv', 'uv', 'starium_alloy', 'magmada_alloy', 'mythrolic_alloy', 'styrene_butadiene_rubber', 'perfluoroelastomer_rubber', 'polyether_ether_ketone', 'lubricant', 'astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide', 'adamantine', 'astatium_bioselex_carbonite', 'gtceu:fusion_glass', 'kubejs:helish_star', 'zapolgium', 'pure_netherite', 'isovol', 'aurourium', GTValues.VHA[GTValues.UEV], 2, 'liquid_helium', 'seaborgium_palladium_enriched_estalt_flerovium_alloy', 160);
+    materialList('uhv', 'uv', 'zpm', 'zalloy', 'zircalloy_4', 'neutronium', 'styrene_butadiene_rubber', 'perfluoroelastomer_rubber', 'polyether_ether_ketone', 'lubricant', 'iron_selenide_over_strontium_titanium_oxide', 'zirconium', 'zirconium_selenide_diiodide', 'gtceu:fusion_glass', '2x gtceu:gravi_star', 'pure_netherite', 'samarium', 'naquadria', 'thorium_plut_duranide_241', GTValues.VHA[GTValues.UHV], 1, 'liquid_helium', 'ruthenium_trinium_americium_neutronate', 128);
+    materialList('uev', 'uhv', 'uv', 'starium_alloy', 'magmada_alloy', 'mythrolic_alloy', 'styrene_butadiene_rubber', 'perfluoroelastomer_rubber', 'polyether_ether_ketone', 'lubricant', 'astatine_bis_tritelluride_cobo_selenium_over_iron_titanium_oxide', 'adamantine', 'astatium_bioselex_carbonite', 'gtceu:fusion_glass', '2x kubejs:helish_star', 'zapolgium', 'pure_netherite', 'isovol', 'aurourium', GTValues.VHA[GTValues.UEV], 2, 'liquid_helium', 'seaborgium_palladium_enriched_estalt_flerovium_alloy', 160);
     materialList('uiv', 'uev', 'uhv', 'ohmderblux_alloy', 'abyssal_alloy', 'chaotixic_alloy', 'perfluoroelastomer_rubber', 'perfluoroelastomer_rubber', 'poly_34_ethylenedioxythiophene_polystyrene_sulfate', 'tungsten_disulfide', 'polonium_flux', 'xeproda', 'hafnide_ito_ceramic', 'kubejs:draco_resilient_fusion_glass', 'kubejs:dragonic_eye', 'zapolgium', 'pure_netherite', 'calamatium', 'magmada_alloy', GTValues.VHA[GTValues.UIV], 3, 'superstate_helium_3', 'rhenium_super_composite_alloy', 192);
 
 });

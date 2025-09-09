@@ -64,9 +64,18 @@ ServerEvents.recipes(event => {
         .duration(48)
         .EUt(84);
 
+    event.recipes.gtceu.dimensional_destabiliser(id('sky_stone_mining'))
+        .itemInputs('kubejs:earth_infused_shard')
+        .inputFluids('gtceu:pcb_coolant 8000')
+        .itemOutputs('256x ae2:sky_stone_block','256x ae2:sky_stone_block')
+        .chancedOutput('gtceu:tiny_nether_star_dust', 8000, 0)
+        .outputFluids('gtceu:skystone 19200', 'gtceu:hot_pcb_coolant 9600')
+        .duration(1800)
+        .EUt(4096);
+
     event.recipes.gtceu.mixer(id('sky_dust'))
         .itemInputs('6x gtceu:stone_dust', '4x gtceu:ender_pearl_dust', '1x minecraft:redstone', '1x minecraft:glowstone_dust')
-        .itemOutputs('3x ae2:sky_dust') //keep at low output
+        .itemOutputs('ae2:sky_dust') //keep at low output
         .circuit(4)
         .duration(360)
         .EUt(112);
@@ -108,6 +117,26 @@ ServerEvents.recipes(event => {
             .duration(400)
             .EUt(global.va['mv']);
 
+        event.remove({id:`gtceu:alloy_blast_smelter/${type.material}_skystone_alloy_gas`});
+        event.remove({id:`gtceu:alloy_blast_smelter/${type.material}_skystone_alloy`});
+        event.recipes.gtceu.alloy_blast_smelter(id(`${type.material}_skystone_alloy`))
+            .itemInputs(`2x gtceu:${type.material}_dust`)
+            .inputFluids('gtceu:skystone 144')
+            .outputFluids(`gtceu:${type.material}_skystone_alloy 432`)
+            .circuit(2)
+            .blastFurnaceTemp(1600)
+            .duration(450)
+            .EUt(120);
+
+        event.recipes.gtceu.alloy_blast_smelter(id(`${type.material}_skystone_alloy_gas`))
+            .itemInputs(`2x gtceu:${type.material}_dust`)
+            .inputFluids('gtceu:skystone 144','gtceu:nitrogen 3000')
+            .outputFluids(`gtceu:${type.material}_skystone_alloy 432`)
+            .circuit(12)
+            .blastFurnaceTemp(1600)
+            .duration(302)
+            .EUt(120);
+
         event.recipes.gtceu.forming_press(id(`${type.circuit}_press`))
             .itemInputs('gtceu:double_sky_steel_plate', `gtceu:${type.material}_dust`)
             .itemOutputs(`ae2:${type.circuit}_processor_press`)
@@ -118,7 +147,7 @@ ServerEvents.recipes(event => {
             .itemInputs(`gtceu:${type.material}_skystone_alloy_plate`)
             .notConsumable(`ae2:${type.circuit}_processor_press`)
             .itemOutputs(`ae2:printed_${type.circuit}_processor`)
-            .duration(400)
+            .duration(200)
             .EUt(global.va['mv']);
     });
 
@@ -132,7 +161,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:silicon_plate')
         .notConsumable('ae2:silicon_press')
         .itemOutputs('ae2:printed_silicon')
-        .duration(400)
+        .duration(200)
         .EUt(global.va['mv']);
 
 
@@ -143,7 +172,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.me_assembler(id(`${tier.type}_core`))
             .itemInputs('ae2:logic_processor', `${tier.catalyst}`, '6x gtceu:fluix_steel_foil')
             .itemOutputs(`4x ae2:${tier.type}_core`)
-            .duration(400)
+            .duration(300)
             .EUt(128);
     });
 

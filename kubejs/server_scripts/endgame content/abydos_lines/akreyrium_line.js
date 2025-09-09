@@ -26,6 +26,15 @@ ServerEvents.recipes(event => {
         .duration(1200)
         .EUt(GTValues.VA[GTValues.UHV]*.8);
 
+    event.remove({ id: 'gtceu:manifold_centrifuge/akreyrium_quantising' });
+    event.recipes.gtceu.manifold_centrifuge(id('akreyrium_quantising'))
+        .inputFluids('gtceu:lepton_sparse_akreyrium 1000')
+        .chancedFluidOutput('gtceu:sparse_electron_akreyrium 1000', 2000, 0)
+        .chancedFluidOutput('gtceu:sparse_muon_akreyrium 1000', 4000, 0)
+        .chancedFluidOutput('gtceu:sparse_tau_akreyrium 1000', 4000, 0)
+        .duration(1200)
+        .EUt(GTValues.VA[GTValues.UHV]);
+
     // Coalescing Superalloy mixing
     event.recipes.gtceu.mixer(id('lepton_coalescing_superalloy_dust'))
         .itemInputs(

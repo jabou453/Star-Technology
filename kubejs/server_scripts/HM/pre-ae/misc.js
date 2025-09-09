@@ -85,16 +85,16 @@ ServerEvents.recipes(event => {
         .duration(1000)
         .EUt(1024);
 
-    event.recipes.gtceu.chemical_bath(id('hot_signalium_cooling_distilled_water'))
+    event.recipes.gtceu.chemical_bath(id('hot_signalum_cooling_distilled_water'))
         .itemInputs('gtceu:hot_signalum_ingot')
         .inputFluids('gtceu:distilled_water')
-        .itemOutputs('gtceu:signalium_ingot')
+        .itemOutputs('gtceu:signalum_ingot')
         .duration(375)
         .EUt(120);
-    event.recipes.gtceu.chemical_bath(id('hot_signalium_cooling_water'))
+    event.recipes.gtceu.chemical_bath(id('hot_signalum_cooling_water'))
         .itemInputs('gtceu:hot_signalum_ingot')
         .inputFluids('minecraft:water')
-        .itemOutputs('gtceu:signalium_ingot')
+        .itemOutputs('gtceu:signalum_ingot')
         .duration(600)
         .EUt(120);
 
@@ -107,12 +107,66 @@ ServerEvents.recipes(event => {
         .EUt(120)
         .cleanroom(CleanroomType.CLEANROOM);
 
-
     event.remove({id:'gtceu:centrifuge/endstone_separation'});
 
     event.remove({ id: 'gtceu:mixer/magnalium' });
     event.remove({ id: 'gtceu:alloy_smelter/magnesium_dust_and_aluminium_dust_into_magnalium' });
 
     event.remove({output: 'gtceu:epoxy'}); // Temp for Eta
+
+    event.shaped(Item.of('gtceu:cobalt_brass_buzz_saw_blade'), [
+		'HPM',
+		'PPP',
+		'WPF'
+	], {
+		M: '#forge:tools/mallets',
+		W: '#forge:tools/wrenches',
+		F: '#forge:tools/files',
+		H: '#forge:tools/hammers',
+		P: 'gtceu:cobalt_brass_plate',
+	}).id('start:shaped/cobalt_brass_buzz_saw_blade');
+
+    event.remove({id: /gtceu:shaped\/shape.*/});
+    event.remove({id: /gtceu:forming_press\/copy_shape.*/});
+    event.remove({id: /gtceu:forming_press\/copy_mold.*/});
+
+    const mold = (type,ex,circuit) => {
+        let variant = (ex == true) ? 'extruder' : 'casting';
+    event.recipes.gtceu.forming_press(id(`${type}_${variant}_hm`))
+        .itemInputs('gtceu:empty_mold')
+        .circuit(circuit)
+        .itemOutputs(`gtceu:${type}_${variant}_mold`)
+        .duration(40)
+        .EUt(24);
+    }
+    mold('block',true,1);
+    mold('block',false,2);
+    mold('ingot',true,3);
+    mold('ingot',false,4);
+    mold('plate',true,5);
+    mold('plate',false,6);
+    mold('gear',true,7);
+    mold('gear',false,8);
+    mold('small_gear',true,9);
+    mold('small_gear',false,10);
+    mold('rotor',true,11);
+    mold('rotor',false,12);
+    mold('bottle',true,13);
+    mold('bottle',false,14);
+    mold('tiny_pipe',true,15);
+    mold('small_pipe',true,16);
+    mold('normal_pipe',true,17);
+    mold('large_pipe',true,18);
+    mold('huge_pipe',true,19);
+    mold('bolt',true,20);
+    mold('ring',true,21);
+    mold('cell',true,22);
+    mold('cylinder',false,23);
+    mold('ball',false,24);
+    mold('pill',false,25);
+    mold('nugget',false,26);
+    mold('anvil',false,27);
+    mold('credit',false,28);
+    mold('name',false,29);
 
 });

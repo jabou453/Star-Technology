@@ -126,6 +126,8 @@ ServerEvents.recipes(event => {
 		B: 'minecraft:bricks',
 		T: 'thermal:redstone_servo'
 	}).id('start:mechanical_crafting/latex_plantation');
+	
+	event.recipes.create.deploying('4x kubejs:packed_mud_ball', ['minecraft:packed_mud', 'minecraft:bowl']).keepHeldItem()
 
 	event.smelting('minecraft:slime_ball', 'thermal:slime_mushroom_spores').id('start:smelting/slime_ball');
 
@@ -364,43 +366,6 @@ ServerEvents.recipes(event => {
 		C: 'kubejs:high_steam_machine_casing'
     }).id('start:mechanical_crafter/steam_ore_factory');
 
-	event.remove({ id: 'gtceu:shaped/shape_empty' });
-	event.shaped(Item.of('gtceu:gear_casting_mold'), [
-		'   ',
-		' PH',
-		'   '
-	], {
-		P: 'gtceu:empty_mold',
-		H: '#forge:tools/hammers'
-	}).id('start:shaped/gear_casting_mold');
-
-	event.shaped(Item.of('gtceu:small_gear_casting_mold'), [
-		'   ',
-		'   ',
-		'H P'
-	], {
-		P: 'gtceu:empty_mold',
-		H: '#forge:tools/hammers'
-	}).id('start:shaped/small_gear_casting_mold');
-
-	event.shaped(Item.of('gtceu:gear_extruder_mold'), [
-		'W  ',
-		' R ',
-		'   '
-	], {
-		R: 'gtceu:ring_extruder_mold',
-		W: '#forge:tools/wire_cutters'
-	}).id('start:shaped/gear_extruder_mold');
-
-	event.shaped(Item.of('gtceu:small_gear_extruder_mold'), [
-		' W ',
-		' R ',
-		'   '
-	], {
-		R: 'gtceu:ring_extruder_mold',
-		W: '#forge:tools/wire_cutters'
-	}).id('start:shaped/small_gear_extruder_mold');
-
 	let cell = 'gtceu:wrought_iron_ring'
 	event.recipes.create.sequenced_assembly([
 		Item.of(`gtceu:fluid_cell`),
@@ -434,6 +399,14 @@ ServerEvents.recipes(event => {
 		C: 'minecraft:chest',
 		S: '#forge:string'
 	}).id('start:shaped/satchel_fabric');
+
+	event.remove({id: 'gtceu:assembler/flower_pot'});
+	event.recipes.gtceu.assembler(id('flower_pot'))
+		.itemInputs('3x minecraft:brick')
+		.itemOutputs('minecraft:flower_pot')
+		.circuit(0)
+		.duration(10)
+		.EUt(2);
 
 	//Mass Removals
 

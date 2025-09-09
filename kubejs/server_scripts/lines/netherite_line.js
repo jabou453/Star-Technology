@@ -44,18 +44,19 @@ ServerEvents.recipes(event => {
         .duration(800)
         .EUt(22);
 
-    event.recipes.gtceu.chemical_reactor(id('dichloroethylene'))
+    event.recipes.gtceu.chemical_reactor(id('dichloroethane'))
         .inputFluids('gtceu:ethane 1000', 'gtceu:chlorine 4000')
         .outputFluids('gtceu:dichloroethane 1000', 'gtceu:hydrochloric_acid 2000')
         .duration(200)
         .EUt(120)
         .circuit(1);
 
-    event.recipes.gtceu.large_chemical_reactor(id('dichloroethylene'))
+    event.recipes.gtceu.large_chemical_reactor(id('dichloroethane'))
         .inputFluids('gtceu:ethane 1000', 'gtceu:chlorine 4000')
         .outputFluids('gtceu:dichloroethane 1000', 'gtceu:hydrochloric_acid 2000')
         .duration(200)
-        .EUt(120);
+        .EUt(120)
+        .circuit(1);
 
     event.recipes.gtceu.chemical_reactor(id('tetrachloroetylene'))
         .inputFluids('gtceu:dichloroethane', 'gtceu:chlorine 6000')

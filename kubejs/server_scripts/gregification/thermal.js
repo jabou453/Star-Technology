@@ -60,8 +60,8 @@ ServerEvents.recipes(event => {
     event.remove({type: 'thermal:compression_fuel', input: 'thermal:refined_fuel'});
     event.recipes.thermal.compression_fuel('gtceu:bio_diesel', 512000);
     event.recipes.thermal.compression_fuel('gtceu:diesel', 960000);
-    event.recipes.thermal.compression_fuel('gtceu:cetane_boosted_diesel', 128000);
-    event.recipes.thermal.compression_fuel('gtceu:gasoline', 320000);
+    event.recipes.thermal.compression_fuel('gtceu:cetane_boosted_diesel', 1280000);
+    event.recipes.thermal.compression_fuel('gtceu:gasoline', 3200000);
     event.recipes.thermal.compression_fuel('gtceu:high_octane_gasoline', 6400000);
     event.recipes.thermal.compression_fuel('gtceu:naphtha', 480000);
 
@@ -140,16 +140,16 @@ ServerEvents.recipes(event => {
         'type': 'systeams:boiling',
         'ingredient': {
             'fluid_tag': `forge:steam`,
-            'amount': 96
+            'amount': 50
         },
         'result': {
             'fluid': `systeams:steamier`,
-            'amount': 120
+            'amount': 100
         }
         });
 
         let steamToIer = new JSONObject()
-        steamToIer.add('amount', 800)
+        steamToIer.add('amount', 500)
         steamToIer.add('value', {tag:'forge:steam'})
 
     event.recipes.gtceu.fluid_heater(id(`steam_tag`))
@@ -179,15 +179,15 @@ ServerEvents.recipes(event => {
         'type': 'systeams:boiling',
         'ingredient': {
             'fluid': `systeams:${prior}`,
-            'amount': 96
+            'amount': 50
         },
         'result': {
             'fluid': `systeams:${type}`,
-            'amount': 120
+            'amount': 100
         }
         });
     event.recipes.gtceu.fluid_heater(id(`${type}`))
-        .inputFluids(`systeams:${prior} 800`)
+        .inputFluids(`systeams:${prior} 500`)
         .outputFluids(`systeams:${type} 1000`)
         .duration(20)
         .EUt(30);

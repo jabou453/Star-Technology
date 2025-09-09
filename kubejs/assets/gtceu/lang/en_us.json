@@ -38,8 +38,7 @@
     "block.gtceu.stargate_component_assembly.tooltip.1": "Has §6Perfect Overclock",
 
     "block.gtceu.chemical_plant.tooltip.0": "§7This machine can compress chemical lines into one recipe and is able to perform more advanced chemical reactions.",
-    "block.gtceu.chemical_plant.tooltip.1": "Has §6Perfect Overclock",
-    "block.gtceu.chemical_plant.tooltip.2": "Can use §3Parallel§r hatches",
+    "block.gtceu.chemical_plant.tooltip.1": "Has §6Perfect Overclock§r and can use §3Parallel§r hatches§7.",
 
     "block.gtceu.component_part_assembly.tooltip.0": "§7An assembler that can micro craft some incredibly complex components that are too detailed for a normal assembler.",
     "block.gtceu.component_part_assembly.tooltip.1": "Has §cSubtick Parallels§r and §9Assembly Line Logic",
@@ -128,15 +127,14 @@
     "block.gtceu.dimensional_destabiliser.tooltip.1": "Can use §3Parallel§r hatches",
     
     "block.gtceu.greenhouse.tooltip.0": "§7An electrical machine that stimulates the growth of plants, flowers and saplings, allowing you to more easily farm them.",
-    "block.gtceu.greenhouse.tooltip.1": "Has §6Perfect Overclock",
     
     "block.gtceu.latex_plantation.tooltip.0": "§7A multiblock that is way faster then the arboreal extractor for gathering latex",
     
     "block.gtceu.molten_destabilizer.tooltip.0": "§7A powerful machine that can splice complex molten chemicals into smaller chunks for processing",
     "block.gtceu.molten_destabilizer.tooltip.1": "Can use §3Parallel§r hatches",
     
-    "block.gtceu.vibration_laser_engraver.tooltip.0": "§7A multiblock that uses precise lasers and vibrations to effortlessly cut and engrave gems, changing them in whatever way you need.",
-    "block.gtceu.vibration_laser_engraver.tooltip.1": "Has §6Perfect Overclock",
+    "block.gtceu.vibration_laser_engraver.tooltip.0": "§7A multiblock that uses precise lasers and vibrations to effortlessly reform and engrave gems, changing them in whatever way you need. This monstrosity of a machine can also do wafer engraving in mass.",
+    "block.gtceu.vibration_laser_engraver.tooltip.1": "Has §6Perfect Overclock§r and can use §3Parallel§r hatches§7.",
     
     "block.gtceu.cyclonic_sifter.tooltip.0": "§7An advanced tier of sifter that is more precise and stronger than the basic tier, allowing it to run better recipes.",
     "block.gtceu.cyclonic_sifter.tooltip.1": "Can use §3Parallel§r hatches",
@@ -205,12 +203,6 @@
     "block.gtceu.large_rock_crusher.tooltip.1": "Has §6Perfect Overclock",
     "block.gtceu.large_rock_crusher.tooltip.2": "Can only have §bone§r Energy Hatch",
     
-    "block.gtceu.high_pressure_steam_hammer.tooltip.0": "§7A larger variant of the forge hammer capable of running multiple recipes at once.",
-
-    "block.gtceu.kiln.tooltip.0": "§7A stronger, beefier version of the campfire for your manufacturing needs.",
-
-    "block.gtceu.steam_kiln.tooltip.0": "§7A kiln with busses and steam parallels.",
-
     "material.gtceu.soul_infused": "Soul Infused",
     "material.gtceu.signalum": "Signalum",
     "material.gtceu.lumium": "Lumium",
@@ -285,7 +277,7 @@
     "block.gtceu.heat_chamber": "Heat Chamber",
     "block.gtceu.stargate_component_assembly": "Stargate Component Assembly",
     "block.gtceu.large_rotor_machine": "Large Rotor Machine",
-    "gtceu.super_pressure_heat_chamber": "Super Pressure Heat Chamber",
+    "gtceu.pressure_heat_chamber": "Pressure Heat Chamber",
     "gtceu.heat_chamber": "Heat Chamber",
     "gtceu.stargate_component_assembly": "Stargate Component Assembly",
     "gtceu.large_rotor_machine": "Large Rotor Machine",
@@ -301,6 +293,8 @@
     "gtceu.large_stone_barrel": "Large Stone Barrel",
     "material.gtceu.abydos_titanite_rich_magma": "Abydos Titanite-rich Magma",
     "material.gtceu.abydos_zapolite_rich_magma": "Abydos Zapolite-rich Magma",
+    "material.gtceu.abydos_titanite_poor_magma": "Abydos Titanite-poor Magma",
+    "material.gtceu.abydos_zapolite_poor_magma": "Abydos Zapolite-poor Magma",
     "material.gtceu.zapolgium_diiodide_oxide": "Zapolgium Diiodide Oxide",
     "material.gtceu.austenitic_stainless_steel_304": "Austenitic Stainless Steel 304",
     "material.gtceu.inconel_625": "Inconel 625",
@@ -317,6 +311,7 @@
     "material.gtceu.titanite_residue": "Titanite Residue",
     "material.gtceu.titanium_tetrachloride_mixture": "Titanium Tetrachloride Mixture",
     "material.gtceu.titanite": "Titanite",
+    "material.gtceu.zavaritskite": "Zavaritskite",
     "material.gtceu.calcium_perchlorate": "Calcium Perchlorate",
     "material.gtceu.calcium_sulfate": "Calcium Sulfate",
     "material.gtceu.sodium_oxide": "Sodium Oxide",
@@ -387,7 +382,7 @@
     "material.gtceu.cupric_chloride_solution": "Cupric Chloride Solution",
     "material.gtceu.disodium_salt_of_hydroquinone": "Disodium Salt of Hydroquinone",
     "material.gtceu.hydroquinone": "Hydroquinone",
-    "material.gtceu.carbon_acid": "Carbon Acid",
+    "material.gtceu.carbon_acid": "Carbonic Acid",
     "material.gtceu.fluorobenzene": "Fluorobenzene",
     "material.gtceu.4_fluorobenzoyl_chloride": "4-Fluorobenzoyl Chloride",
     "material.gtceu.benzoyl_chloride": "Benzoyl Chloride",
@@ -557,6 +552,7 @@
     "block.gtceu.dimensional_destabiliser": "Dimensional Destabiliser",
 
     "gtceu.vibration_laser_engraver": "Vibration Laser Engraver",
+    "gtceu.mass_laser_engraving": "Bulk Laser Engraver",
     "block.gtceu.vibration_laser_engraver": "Vibration Laser Engraver",
 
     
@@ -681,7 +677,12 @@
     "material.gtceu.superstate_helium_3": "Superstate Helium 3",
     "material.gtceu.astatine_bis_tritelluride_cobo_selenium": "Astatine Bis-Tritelluride Cobo-Selenium",
     "material.gtceu.iron_titanium_oxide": "Iron Titanium Oxide",
+
+    "block.gtceu.ulv_advanced_composter": "Advanced Composter",
     "gtceu.composting": "Composting",
+    "block.gtceu.ulv_casket": "Fermenting Casket",
+    "gtceu.fermenting": "Fermenting",
+    
     "material.gtceu.warped": "Warped",
 
     "block.gtceu.classic_stargate_display": "Classic Stargate Shape Helper",
@@ -808,12 +809,12 @@
     "material.gtceu.super_stellar_infernal_concentrate": "Super-Stellar Infernal Concentrate",
     "material.gtceu.hyper_stellar_infernal_concentrate": "Hyper-Stellar Infernal Concentrate",
 
-    "material.gtceu.low_entropy_voidic_excression": "Low Entropy Voidic Excression",
-    "material.gtceu.moderate_entropy_voidic_excression": "Moderate Entropy Voidic Excression",
-    "material.gtceu.high_entropy_voidic_excression": "High Entropy Voidic Excression",
-    "material.gtceu.dormant_void_entangled_quantum_slurry": "Dormant Void-Entangled Quantum Slurry",
-    "material.gtceu.active_void_entangled_quantum_slurry": "Active Void-Entangled Quantum Slurry",
-    "material.gtceu.excited_void_entangled_quantum_slurry": "Excited Void-Entangled Quantum Slurry",
+    "material.gtceu.low_saturation_voidic_excression": "Low Saturation Voidic Excression",
+    "material.gtceu.moderate_saturation_voidic_excression": "Moderate Saturation Voidic Excression",
+    "material.gtceu.high_saturation_voidic_excression": "High Saturation Voidic Excression",
+    "material.gtceu.lethargic_voidic_slurry": "Lethargic Voidic Slurry",
+    "material.gtceu.tempered_voidic_slurry": "Tempered Voidic Slurry",
+    "material.gtceu.vibrant_voidic_slurry": "Vibrant Voidic Slurry",
     "material.gtceu.alpha_state_void_sludge": "α-State Void Sludge",
     "material.gtceu.beta_state_void_sludge": "β-State Void Sludge",
     "material.gtceu.gamma_state_void_sludge": "γ-State Void Sludge",
@@ -849,10 +850,39 @@
     "material.gtceu.chaotixic_alloy": "Chaotixic Alloy",
     "material.gtceu.ohmderblux_alloy": "Ohmderblux Alloy",
     "material.gtceu.lepton_resonant_thallium_antimonide": "Lepton-Resonant Thallium Antimonide",
+    "material.gtceu.draco_abyssal": "Primordial Shadowyrm",
+    "material.gtceu.draconyallium": "Draconyallium",
+    "material.gtceu.draconic_enrichment_serum": "Draconic Enrichment Serum",
+    "material.gtceu.lepton_dense_akreyrium": "Lepton Dense Akreyrium",
+    "material.gtceu.thallium_antimonide": "Thallium Antimonide",
+    "material.gtceu.neutronium_silicon_carbide": "Neutronium-Silicon Carbide",
+    "material.gtceu.borosilicate_glas": "Borosilicate Glass",
 
     "material.gtceu.voidic": "Voidic",
     "material.gtceu.preon": "Preon",
     "material.gtceu.paradox": "Paradox",
+    "material.gtceu.maxwellium": "Maxwellium",
+
+    "material.gtceu.draconic_hormone_residue": "Draconic Hormone Residue",
+    "material.gtceu.drac_endrocritic_medium": "Drac-Endrocritic Medium",
+    "material.gtceu.drac_aurouric_endrocrinal_medium": "Drac-Aurouric Endrocrinal Medium",
+    "material.gtceu.precursor_serum": "Precursor Serum",
+    "material.gtceu.abyssal_nutrient_blend": "Abyssal Nutrient Blend",
+    "material.gtceu.condensed_abyssal_nutrient_blend": "Condensed Abyssal Nutrient Blend",
+    "material.gtceu.amino_primed_medium": "Amino Primed Medium",
+    "material.gtceu.drac_peptide_amino_residue": "Drac-Peptide Amino Residue",
+    "material.gtceu.voidrenin": "Voidrenin",
+    "material.gtceu.terrathroxin": "Terrathroxin",
+    "material.gtceu.stormcallin": "Stormcallin",
+    "material.gtceu.cryokinase": "Cryokinase",
+    "material.gtceu.ignisferin": "Ignisferin",
+    "material.gtceu.breath_hormone_complex": "Breath-Hormone Complex",
+    "material.gtceu.hemavyrin": "Hemavyrin",
+    "material.gtceu.aethermetin": "Aethermetin",
+    "material.gtceu.metavorexin": "Metavorexin",
+    "material.gtceu.dracotropin": "Dracotropin",
+    "material.gtceu.pyrothyin": "Pyrothyin",
+    "material.gtceu.growth_hormone_complex": "Growth-Hormone Complex",
 
     "material.gtceu.tin_plas": "Tin",
     "material.gtceu.americium_plas": "Americium",
@@ -894,14 +924,50 @@
     "block.gtceu.mega_abs.tooltip.7": "§8-----------------------------------",
     "block.gtceu.mega_abs.tooltip.8": "Can use §3Parallel§r hatches",
 
+    "block.gtceu.supreme_plasma_turbine": "Supreme Plasma Turbine",
+    "block.gtceu.supreme_plasma_turbine.tooltip.0": "§3§lBoosted Large Plasma Turbine",
+    "block.gtceu.supreme_plasma_turbine.tooltip.1": "§7A massive turbine capable of being boosted consuming extreme quantities of fuel for extreme quantities of power.",
+    "block.gtceu.supreme_plasma_turbine.tooltip.2": "§8-----------------------------------",
+    "block.gtceu.supreme_plasma_turbine.tooltip.3": "§eBase Production: §f16384 EU/t",
+    "block.gtceu.supreme_plasma_turbine.tooltip.4": "§7Each Rotor Holder above §9IV§7 multiplies efficiency by 10% and multiplies EU/t by 2.",
+    "block.gtceu.supreme_plasma_turbine.tooltip.5": "§8-----------------------------------",
+    "block.gtceu.supreme_plasma_turbine.tooltip.6": "§c§uTurbine Parallels: §7Turbine can run up to §a6x§7 as many recipes as a standard Large Plasma Turbine.",
+    "block.gtceu.supreme_plasma_turbine.tooltip.7": "§8-----------------------------------",
+    "block.gtceu.supreme_plasma_turbine.tooltip.8": "§6Lubricant Boosting: §7Consumes 5000B of §fTungsten Disulfide§7 an Hour for an additional §a+50% §fEU/t §7output, failure to do so leads to a loss of §4-25% §fEU/t §7output.",
+    "block.gtceu.supreme_plasma_turbine.tooltip.9": "§8-----------------------------------",
+    "block.gtceu.supreme_plasma_turbine.tooltip.10": "§3Coolant Boosting: §7Consumes 1000B of §fSuperstate Helium 3§7 an Hour for an additional §a+100% §fEU/t §7output.",
+    "block.gtceu.supreme_plasma_turbine.tooltip.11": "§7Note: §oCoolant Boosting§r§7 only occurs if §oLubricant Boosting§r§7 is Active.",
+    "block.gtceu.supreme_plasma_turbine.tooltip.12": "§8-----------------------------------",
+    "block.gtceu.supreme_plasma_turbine.tooltip.13": "Can use §dLaser Hatches",
+
+    "block.gtceu.nyinsane_plasma_turbine": "Nyinsane Plasma Turbine",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.0": "§3§lBoosted Large Plasma Turbine",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.1": "§7A massive turbine capable of being boosted consuming extreme quantities of fuel for extreme quantities of power.",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.2": "§8-----------------------------------",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.3": "§eBase Production: §f16384 EU/t",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.4": "§7Each Rotor Holder above §9IV§7 multiplies efficiency by 10% and multiplies EU/t by 2.",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.5": "§8-----------------------------------",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.6": "§c§uTurbine Parallels: §7Turbine can run up to §a12x§7 as many recipes as a standard Large Plasma Turbine.",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.7": "§8-----------------------------------",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.8": "§6Lubricant Boosting: §7Consumes 9600B of §fTungsten Disulfide§7 an Hour for an additional §a+100% §fEU/t §7output, failure to do so leads to a loss of §4-50% §fEU/t §7output.",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.9": "§8-----------------------------------",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.10": "§3Coolant Boosting: §7Consumes 1800B of §fOganesson Stabilized Bose-Einstein Condensate§7 an Hour for an additional §a+200% §fEU/t §7output.",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.11": "§7Note: §oCoolant Boosting§r§7 only occurs if §oLubricant Boosting§r§7 is Active.",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.12": "§8-----------------------------------",
+    "block.gtceu.nyinsane_plasma_turbine.tooltip.13": "Can use §dLaser Hatches",
 
     "block.gtceu.super_compact_heat_chamber": "Super-Compact Heat Chamber",
     "block.gtceu.super_compact_heat_chamber.tooltip.0": "§7A compacted and upgraded heat chamber capable of purifying materials and catalysing reactions at an enhanced rate through its ultra-dense thermal reactor design.",
-    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches and has §6Perfect Overclock",
+    "block.gtceu.super_compact_heat_chamber.tooltip.1": "Can use §dAbsolute Parallel§r hatches, has §6Perfect Overclock§r, and has §cSubtick Parallels§r",
 
     "block.gtceu.kiln": "Kiln",
     "gtceu.kiln": "Kiln",
+    "block.gtceu.kiln.tooltip.0": "§7A stronger, beefier version of the campfire for your manufacturing needs.",
+    
+    "block.gtceu.steam_kiln": "Steam Kiln",
     "gtceu.steam_kiln": "Steam Kiln",
+    "block.gtceu.steam_kiln.tooltip.0": "§7A Kiln with busses and steam parallels.",
+
     "block.gtceu.rugged_alloyer": "Rugged Alloyer",
     "gtceu.rugged_alloyer": "Rugged Alloyer",
     "material.gtceu.pig_iron": "Pig Iron",
@@ -912,29 +978,67 @@
     "material.gtceu.crude_cast_iron": "Crude Cast Iron",
     "material.gtceu.crude_wrought_iron": "Crude Wrought Iron",
     "material.gtceu.cast_iron": "Cast Iron",
+
     "block.gtceu.bessemer_forgery": "Bessemer Forgery",
     "gtceu.bessemer_forge": "Bessemer Forge",
+    "block.gtceu.bessemer_forgery.tooltip.0": "§7An Electric Powered Beast for Manufacturing Steel",
+    "block.gtceu.bessemer_forgery.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.circuit_manufacturing_facility": "Circuit Manufacturing Facility",
     "gtceu.circuit_facility": "Circuit Facility",
+    "block.gtceu.circuit_manufacturing_facility.tooltip.0": "§7A Machine Designed to Ensure Quality Circuits",
+    "block.gtceu.circuit_manufacturing_facility.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.high_pressure_steam_hammer": "High Pressure Steam Hammer",
+    "block.gtceu.high_pressure_steam_hammer.tooltip.0": "§7A larger variant of the forge hammer capable of running multiple recipes at once.",
+
     "block.gtceu.high_pressure_steam_sifter": "High Pressure Steam Sifter",
+    "block.gtceu.high_pressure_steam_sifter.tooltip.o": "§7Able to sort out the rarest of goods depending on mesh used.",
+    "block.gtceu.high_pressure_steam_sifter.tooltip.1": "§4Hardmode§7 Exclusive",
     "gtceu.primitive_sifter": "Primitive Sifting",
+
     "block.gtceu.steam_casting_array": "Steam Casting Array",
-    "block.gtceu.steam_kiln": "Steam Kiln",
-    "block.gtceu.steam_liquifier": "Steam Liquifier",
+    "block.gtceu.steam_casting_array.tooltip.0": "§7A Big Steam Fluid Solidifier",
+    "block.gtceu.steam_casting_array.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.steam_forge": "Steam Forge",
+    "block.gtceu.steam_forge.tooltip.0": "§7A Blast Furnace with Steam Parallels",
+    "block.gtceu.steam_forge.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "gtceu.stirling_generator": "Stirling Generator",
+    "block.gtceu.stirling_generator.tooltip.0": "§7Burns your coals directly into power.",
+    "block.gtceu.stirling_generator.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "gtceu.auto_scavenger": "Auto Scavenger",
+    "block.gtceu.auto_scavenger.tooltip.0": "§7Scavenges for you.",
+    "block.gtceu.auto_scavenger.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "gtceu.industrial_pump" : "Industrial Pump",
     "block.gtceu.industrial_pump" : "Industrial Pump",
+    "block.gtceu.industrial_pump.tooltip.0": "§7A Stronger Primitive Pump",
+    "block.gtceu.industrial_pump.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.component_chamber": "Component Chamber",
     "gtceu.component_chamber": "Component Chamber",
+    "block.gtceu.component_chamber.tooltip.0": "§7Ensures your manufactured components actually work.",
+    "block.gtceu.component_chamber.tooltip.1": "§4Hardmode§7 Exclusive",
+
     "block.gtceu.machine_facility": "Machine Facility",
+    "block.gtceu.machine_facility.tooltip.0": "§7It figured out how to assemble machines.",
+    "block.gtceu.machine_facility.tooltip.1": "§4Hardmode§7 Exclusive",
     "gtceu.simple_machine_facility": "Simple Machine Facility",
     "gtceu.advanced_machine_facility": "Advanced Machine Facility",
+
     "block.gtceu.electric_sifter": "Electric Sifter",
+    "block.gtceu.electric_sifter.tooltip.0": "§7An Electric Version of Sifting that requires the finest of sediments.",
+    "block.gtceu.electric_sifter.tooltip.1": "§4Hardmode§7 Exclusive",
     "gtceu.electric_sifter": "Electric Sifter",
+
     "gtceu.gt_blasting": "Blasting",
+
+    "block.gtceu.steeled_blast_furnace": "Steeled Blast Furnace",
+    "block.gtceu.steeled_blast_furnace.tooltip.0": "§7A Primitive Blast Furnace automatable from the controller.",
+    "block.gtceu.steeled_blast_furnace.tooltip.1": "§4Hardmode§7 Exclusive",
 
     "material.gtceu.metallic_ore_sludge": "Metallic Ore Sludge",
     "material.gtceu.raw_ore_concentrate": "Raw Ore Concentrate",
@@ -1006,7 +1110,7 @@
 
     "gtceu.me_assembler": "ME Assembler",
     "block.gtceu.lv_me_assembler": "Basic ME Assembler",
-    "block.gtceu.mv_me_assembler": "§bAdvanced ME Assembler I",
+    "block.gtceu.mv_me_assembler": "§bAdvanced ME Assembler",
     "block.gtceu.hv_me_assembler": "§6Advanced ME Assembler II",
     "block.gtceu.ev_me_assembler": "§5Advanced ME Assembler III",
     "block.gtceu.iv_me_assembler": "§9Elite ME Assembler",
@@ -1031,11 +1135,39 @@
 
     "gtceu.jei.bedrock_fluid.brackish_water": "Brackish Water Vein",
     "gtceu.jei.bedrock_fluid.debris_rich_nether_magma_deposit": "Debris-Rich Nether Magma Deposit",
-    "gtceu.jei.bedrock_fluid.abydos_titanite_rich_magma_deposit": "Abydos Titanite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_titanite_poor_magma_deposit": "Abydos Titanite-Poor Magma Deposit",
     "gtceu.jei.bedrock_fluid.gritty_akreyrium": "Gritty Akreyrium Deposit",
-    "gtceu.jei.bedrock_fluid.abydos_zapolite_rich_magma_deposit": "Abydos Zapolite-Rich Magma Deposit",
+    "gtceu.jei.bedrock_fluid.abydos_zapolite_poor_magma_deposit": "Abydos Zapolite-Poor Magma Deposit",
     "gtceu.jei.bedrock_fluid.highly_unstable_nether_magma_deposit": "Highly Unstable Nether Magma Deposit",
     "gtceu.jei.bedrock_fluid.crude_infernal_concentrate": "Crude Infernal Concentrate Deposit",
-    "gtceu.jei.bendrock_fluid.lava_dense": "Lava Deposit"
+    "gtceu.jei.bendrock_fluid.lava_dense": "Lava Deposit",
+
+    "block.gtceu.tree_synthesizer": "Tree Synthesizer",
+    "block.gtceu.tree_synthesizer.tooltip.0": "§7A larger greenhouse that provides ample space for gigantic trees to be grown, and felled.",
+    "block.gtceu.tree_synthesizer.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
+
+    "gtceu.industrial_fishery": "Industrial Fishery",
+    "block.gtceu.industrial_fishery": "Industrial Fishery",
+    "block.gtceu.industrial_fishery.tooltip.0": "§7A large scale industrial fishing complex that can quickly gather tons of your favorite marine lifeforms.",
+    "block.gtceu.industrial_fishery.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
+
+    "gtceu.hydroponic_garden": "Hydroponic Garden",
+    "block.gtceu.hydroponic_garden": "Hydroponic Garden",
+    "block.gtceu.hydroponic_garden.tooltip.0": "§7A water based growing pod that can grow massive quantities of crops in seconds.",
+    "block.gtceu.hydroponic_garden.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
+    
+    "gtceu.composting_factory": "Composting Factory",
+    "block.gtceu.composting_factory": "Composting Factory",
+    "block.gtceu.composting_factory.tooltip.0": "§7A very quick composter that can provide you with enough bonemeal to last lifetimes.",
+    "block.gtceu.composting_factory.tooltip.1": "Can use §3Parallel§r hatches and has §cSubtick Parallels",
+
+    "material.gtceu.raw_silkworm_oil": "Raw Silkworm Oil",
+    "material.gtceu.refined_silkworm_oil": "Refined Silkworm Oil",
+    "material.gtceu.silkworm_gel": "Silkworm Gel",
+
+    "material.gtceu.nutrient_rich_fertilizer_solution": "Nutrient-Rich Fertilizer Solution",
+    "material.gtceu.seaweed_oil": "Seaweed Oil",
+    "material.gtceu.liquefied_nutrient_paste": "Liquefied Nutrient Paste",
+    "material.gtceu.biostimulating_mixture": "Biostimulating Mixture"
 
 }

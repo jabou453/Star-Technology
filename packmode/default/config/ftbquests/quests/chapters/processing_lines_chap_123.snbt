@@ -7,12 +7,26 @@
 	icon: "gtceu:lv_chemical_reactor"
 	id: "2742F3918C76DA81"
 	order_index: 2
-	quest_links: [{
-		id: "5B9F9EFC7AF759A6"
-		linked_quest: "0BBCC13EE6C7C061"
-		x: 20.5d
-		y: 9.0d
-	}]
+	quest_links: [
+		{
+			id: "5B9F9EFC7AF759A6"
+			linked_quest: "0BBCC13EE6C7C061"
+			x: 20.5d
+			y: 9.0d
+		}
+		{
+			id: "6597F20CEA188552"
+			linked_quest: "77584F14C573BBC1"
+			x: 7.5d
+			y: 11.5d
+		}
+		{
+			id: "1179D9001396FE89"
+			linked_quest: "0F1D766E2E2EEEB5"
+			x: 22.5d
+			y: 19.5d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["1AAB9C20E833029A"]
@@ -32,8 +46,8 @@
 				}
 			]
 			title: "Sulfur Dioxide"
-			x: 0.5d
-			y: 10.5d
+			x: 1.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["01D6ADBBE3E5907F"]
@@ -53,8 +67,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 10.5d
+			x: 2.5d
+			y: 10.0d
 		}
 		{
 			dependencies: ["7F22CD2F778802BE"]
@@ -67,8 +81,8 @@
 				item: "gtceu:sulfuric_acid_bucket"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 10.5d
+			x: 4.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["104CAE7C2406E9BF"]
@@ -79,8 +93,8 @@
 				item: "gtceu:sodium_bisulfate_dust"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 11.5d
+			x: 5.5d
+			y: 10.0d
 		}
 		{
 			dependencies: ["104CAE7C2406E9BF"]
@@ -100,8 +114,8 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 9.5d
+			x: 5.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["348A5FD9441DCD71"]
@@ -119,8 +133,8 @@
 				item: "gtceu:iron_iii_chloride_bucket"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 9.5d
+			x: 7.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["46EE735CCA50C1C4"]
@@ -138,8 +152,8 @@
 				item: "gtceu:sodium_persulfate_bucket"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 11.5d
+			x: 7.5d
+			y: 10.0d
 		}
 		{
 			dependencies: ["12C9427A04A2F550"]
@@ -799,6 +813,7 @@
 			dependencies: [
 				"7A7CF6B84469AC1D"
 				"74E43E78D07AE3B6"
+				"1BC9B0DBEB0F9AE5"
 			]
 			dependency_requirement: "one_completed"
 			id: "0A0A9F0FCD1480C0"
@@ -815,13 +830,14 @@
 				item: "gtceu:silicon_dust"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 6.0d
 			y: 13.5d
 		}
 		{
 			dependencies: [
 				"74E43E78D07AE3B6"
 				"10FB3D35E075D49A"
+				"1BC9B0DBEB0F9AE5"
 			]
 			dependency_requirement: "one_completed"
 			description: ["Sodalite and Clay electroysis are both great ways to automate this once you have &bMV&r electrolyzers"]
@@ -857,11 +873,15 @@
 				item: "gtceu:lithium_dust"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 4.5d
 			y: 14.5d
 		}
 		{
-			dependencies: ["74E43E78D07AE3B6"]
+			dependencies: [
+				"74E43E78D07AE3B6"
+				"1BC9B0DBEB0F9AE5"
+			]
+			dependency_requirement: "one_completed"
 			id: "6B36075239F9F339"
 			rewards: [{
 				id: "43C4BC59EEA6600A"
@@ -875,8 +895,8 @@
 				item: "gtceu:sodium_dust"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 14.5d
+			x: 5.0d
+			y: 12.5d
 		}
 		{
 			dependencies: [
@@ -1364,18 +1384,6 @@
 		}
 		{
 			dependencies: ["0F1D766E2E2EEEB5"]
-			id: "1C5BF4BBF693A39E"
-			size: 1.0d
-			tasks: [{
-				id: "55F839BB36781B0B"
-				item: "mysticalagriculture:nether_agglomeratio"
-				type: "item"
-			}]
-			x: 22.5d
-			y: 19.5d
-		}
-		{
-			dependencies: ["1C5BF4BBF693A39E"]
 			id: "58037316F922EBF0"
 			size: 1.0d
 			tasks: [{
@@ -2131,8 +2139,8 @@
 				item: "thermal:slime_mushroom_spores"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 8.0d
+			x: 0.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["0D874BC533C5F885"]
@@ -2143,8 +2151,8 @@
 				item: "gtceu:sticky_resin"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 8.0d
+			x: 2.0d
+			y: 8.5d
 		}
 		{
 			dependencies: ["324FB533DE3A06AE"]
@@ -2155,7 +2163,7 @@
 				item: "gtceu:raw_rubber_dust"
 				type: "item"
 			}]
-			x: 3.5d
+			x: 3.0d
 			y: 7.0d
 		}
 		{
@@ -2174,7 +2182,7 @@
 				item: "gtceu:rubber_bucket"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 4.5d
 			y: 7.0d
 		}
 		{
@@ -2188,7 +2196,7 @@
 				type: "item"
 			}]
 			x: 3.5d
-			y: 9.0d
+			y: 8.5d
 		}
 		{
 			dependencies: [
@@ -2891,6 +2899,29 @@
 			}]
 			x: 33.5d
 			y: 11.5d
+		}
+		{
+			dependencies: ["77584F14C573BBC1"]
+			id: "1BC9B0DBEB0F9AE5"
+			tasks: [{
+				id: "710090B481BC3A05"
+				item: "gtceu:sodalite_dust"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 11.5d
+		}
+		{
+			dependencies: ["1BC9B0DBEB0F9AE5"]
+			id: "37EB5DF498AA7B30"
+			shape: "gear"
+			tasks: [{
+				id: "2C692313A30070E8"
+				item: "gtceu:chlorine_bucket"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 12.5d
 		}
 	]
 	title: "Processing Lines (Chap 1,2,3)"

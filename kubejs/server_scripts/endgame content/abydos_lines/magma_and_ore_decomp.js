@@ -2,7 +2,27 @@ ServerEvents.recipes(event => {
     const id = global.id;
     
     //Magma Breakdown
-    
+    event.recipes.gtceu.cyclonic_sifter(id('abydos_titanite_poor_magma_sieving'))
+        .chancedInput('1x kubejs:netherite_reinforced_mesh', 300, -20)
+        .inputFluids('gtceu:abydos_titanite_poor_magma 25000')
+        .outputFluids('gtceu:abydos_titanite_rich_magma 8000')
+        .itemOutputs('1x gtceu:tiny_aguilarite_dust','1x gtceu:tiny_berzelianite_dust','1x gtceu:tiny_umangite_dust')
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UV]*.8);
+
+    event.recipes.gtceu.molten_destabilizing(id('abydos_titanite_poor_magma'))
+        .inputFluids('gtceu:abydos_titanite_poor_magma 60000')
+        .outputFluids('gtceu:titanite 1500',
+            'gtceu:molten_ore_mixture 800',
+            'gtceu:calaverite 500',
+            'gtceu:sylvanite 500',
+            'gtceu:tiemannite 450',
+            'gtceu:strontianite 250',
+            'minecraft:lava 54000')
+        .itemOutputs('16x gtceu:deepslate_dust')
+        .duration(3600)
+        .EUt(GTValues.VHA[GTValues.UV]);
+
     event.recipes.gtceu.molten_destabilizing(id('decomp_abydos_titanite_rich_magma'))
         .inputFluids('gtceu:abydos_titanite_rich_magma 80000')
         .outputFluids('gtceu:titanite 30000',
@@ -14,6 +34,26 @@ ServerEvents.recipes(event => {
         .itemOutputs('64x gtceu:deepslate_dust')
         .duration(2400)
         .EUt(GTValues.VHA[GTValues.ZPM]);
+    
+    event.recipes.gtceu.cyclonic_sifter(id('abydos_zapolite_poor_magma_sieving'))
+        .chancedInput('1x kubejs:netherite_reinforced_mesh', 300, -20)
+        .inputFluids('gtceu:abydos_zapolite_poor_magma 25000')
+        .outputFluids('gtceu:abydos_zapolite_rich_magma 8000')
+        .itemOutputs('1x gtceu:tiny_lautarite_dust','1x gtceu:tiny_stibiopalladinite_dust','1x gtceu:tiny_klockmannite_dust')
+        .duration(400)
+        .EUt(GTValues.VHA[GTValues.UV]*.8);
+
+    event.recipes.gtceu.molten_destabilizing(id('abydos_zapolite_poor_magma'))
+        .inputFluids('gtceu:abydos_zapolite_poor_magma 6000')
+        .outputFluids('gtceu:zapolite 1500',
+            'gtceu:molten_ore_mixture 800',
+            'gtceu:crookesite 875',
+            'gtceu:clausthalite 425',
+            'gtceu:iodargyrite 350',
+            'minecraft:lava 54000')
+        .itemOutputs('16x gtceu:deepslate_dust')
+        .duration(3600)
+        .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.molten_destabilizing(id('decomp_abydos_zapolite_rich_magma'))
         .inputFluids('gtceu:abydos_zapolite_rich_magma 80000')
@@ -26,16 +66,16 @@ ServerEvents.recipes(event => {
         .duration(2400)
         .EUt(GTValues.VHA[GTValues.ZPM]);
 
-        ['zapolite','crookesite','clausthalite','iodargyrite','titanite','calaverite','sylvanite',
-        'tiemannite','strontianite'].forEach(type=>{
-            event.remove({id: `gtceu:extractor/extract_${type}_dust`});
-            event.recipes.gtceu.autoclave(id(`raw_${type}`))
-                .itemInputs('gtceu:deepslate_dust')
-                .inputFluids(`gtceu:${type} 1000`)
-                .itemOutputs(`gtceu:raw_${type}`)
-                .duration(160)
-                .EUt(GTValues.VA[GTValues.IV]);
-        });
+    ['zapolite','crookesite','clausthalite','iodargyrite','titanite','calaverite','sylvanite',
+    'tiemannite','strontianite'].forEach(type=>{
+        event.remove({id: `gtceu:extractor/extract_${type}_dust`});
+        event.recipes.gtceu.autoclave(id(`raw_${type}`))
+            .itemInputs('gtceu:deepslate_dust')
+            .inputFluids(`gtceu:${type} 1000`)
+            .itemOutputs(`gtceu:raw_${type}`)
+            .duration(150)
+            .EUt(GTValues.VA[GTValues.IV]);
+    });
 
     //Dust to Products
     //Titanite and Zapolite done in their own lines
@@ -97,7 +137,7 @@ ServerEvents.recipes(event => {
         .itemInputs(`7x gtceu:stibiopalladinite_dust`)
         .inputFluids('gtceu:carbon_acid 1000')
         .outputFluids('gtceu:steam 1000','gtceu:carbon_dioxide')
-        .itemOutputs(`2x gtceu:antimony_dust`,'5x gtceu:lead_dust')
+        .itemOutputs(`2x gtceu:antimony_dust`,'5x gtceu:palladium_dust')
         .duration(200)
         .blastFurnaceTemp(3249)
         .EUt(GTValues.VHA[GTValues.EV]);

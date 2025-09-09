@@ -118,7 +118,7 @@ ServerEvents.recipes(event => {
     SteamMachine('steam_oven',['gtceu:steam_machine_casing','gtceu:small_potin_gear','gtceu:steam_machine_casing','gtceu:bronze_firebox_casing','gtceu:lp_steam_furnace','gtceu:bronze_firebox_casing','gtceu:steam_machine_casing','gtceu:bronze_large_fluid_pipe','gtceu:steam_machine_casing']);
     SteamMachine('steam_forge',['kubejs:high_steam_machine_casing','gtceu:small_wrought_iron_gear','kubejs:high_steam_machine_casing','gtceu:steel_firebox_casing','gtceu:hp_steam_blaster','gtceu:steel_firebox_casing','kubejs:high_steam_machine_casing','gtceu:tin_alloy_large_fluid_pipe','kubejs:high_steam_machine_casing']);
     SteamMachine('steam_casting_array',['gtceu:industrial_steam_casing','minecraft:glass','gtceu:industrial_steam_casing','gtceu:bronze_huge_fluid_pipe','create:basin','gtceu:bronze_huge_fluid_pipe','gtceu:industrial_steam_casing','thermal:redstone_servo','gtceu:industrial_steam_casing']);
-    SteamMachine('steam_liquifier',['gtceu:industrial_steam_casing','gtceu:tempered_glass','gtceu:industrial_steam_casing','gtceu:bronze_huge_fluid_pipe','gtceu:lp_steam_extractor','gtceu:bronze_huge_fluid_pipe','gtceu:industrial_steam_casing','thermal:redstone_servo','gtceu:industrial_steam_casing']);
+    // SteamMachine('steam_liquifier',['gtceu:industrial_steam_casing','gtceu:tempered_glass','gtceu:industrial_steam_casing','gtceu:bronze_huge_fluid_pipe','gtceu:lp_steam_extractor','gtceu:bronze_huge_fluid_pipe','gtceu:industrial_steam_casing','thermal:redstone_servo','gtceu:industrial_steam_casing']);
     // SteamMachine('steam_ore_factory',['kubejs:high_steam_machine_casing','gtceu:potin_gear','kubejs:high_steam_machine_casing','gtceu:tin_alloy_normal_fluid_pipe','gtceu:primitive_ore_factory','gtceu:tin_alloy_normal_fluid_pipe','kubejs:high_steam_machine_casing','createlowheated:basic_burner','kubejs:high_steam_machine_casing']);  //Disabled Until Core Fix
     SteamMachine('high_pressure_steam_hammer',['kubejs:high_steam_machine_casing','minecraft:anvil','kubejs:high_steam_machine_casing','gtceu:tin_alloy_normal_fluid_pipe','gtceu:hp_steam_forge_hammer','gtceu:tin_alloy_normal_fluid_pipe','kubejs:high_steam_machine_casing','gtceu:potin_gear','kubejs:high_steam_machine_casing']);
     SteamMachine('high_pressure_steam_sifter',['kubejs:high_steam_machine_casing','exnihilosequentia:flint_mesh','kubejs:high_steam_machine_casing','gtceu:tin_alloy_normal_fluid_pipe','create:basin','gtceu:tin_alloy_normal_fluid_pipe','kubejs:high_steam_machine_casing','thermal:redstone_servo','kubejs:high_steam_machine_casing']);
@@ -135,13 +135,5 @@ ServerEvents.recipes(event => {
         event.recipes.createDeploying(inter, [inter, `gtceu:rubber_ring`]),
         event.recipes.createPressing(inter, inter)
     ]).transitionalItem(inter).loops(1).id('start:sequenced_assembly/ulv_fluid_input');
-
-    event.shaped(Item.of(`gtceu:ulv_fluid_output`), [
-        'H',
-        'S'
-    ], {
-        H: `gtceu:ulv_fluid_input`,
-        S: `#forge:tools/screwdrivers`
-    });
 
 });

@@ -6,9 +6,9 @@
 #This may appear confusing to many of you, but it is a new sensible way to handle configuration, because the server configuration is synced when playing multiplayer.
 importantInfo = true
 #List of multiblock inventory blocks
-multiblockInv = [""]
+multiblockInv = ["create:item_vault"]
 #List of mod ids whose blocks is ignored by the inventory connector
 blockedMods = [""]
 #List of block ids ignored by the inventory connector
-blockedBlocks = [""]
+blockedBlocks = ["functionalstorage:storage_controller", "create:packager", "create:package_frogport", "create:stock_ticker"]
 

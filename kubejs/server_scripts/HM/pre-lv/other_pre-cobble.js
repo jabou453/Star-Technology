@@ -265,6 +265,8 @@ ServerEvents.recipes(event => {
 	event.smelting(`kubejs:charcoal_pellet`, `#minecraft:logs_that_burn`).id('kjs:smelting/charcoal_pellet_manual_only').id('start:smelting/charcoal_pellet');
 	event.recipes.create.crushing(['2x kubejs:charcoal_pellet', Item.of('kubejs:charcoal_pellet').withChance(0.5)], 'minecraft:charcoal');
 	event.recipes.create.milling(['gtceu:charcoal_dust'], 'minecraft:charcoal');
+	event.recipes.create.milling(['gtceu:sand'], 'minecraft:gravel');
+	event.recipes.create.milling(['exnihilosequentia:dust'], 'minecraft:sand');
 
 	event.remove({ id: 'thermal:rubber_3' });
 	event.recipes.create.compacting(Fluid.of('thermal:latex', 20), `10x minecraft:jungle_log`).heatRequirement('lowheated').id('start:compacting/latex');
@@ -384,13 +386,13 @@ ServerEvents.recipes(event => {
 
 	['coals','poor_coals'].forEach(fuelType => {
 		let boost = (fuelType == 'coals') ? .6 : 1;
-	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_${fuelType}`))
-		.notConsumable('minecraft:coarse_dirt')
-		.chancedInput(`#minecraft:${fuelType}`, 2500, 0)
-		.chancedOutput('1x minecraft:flint', 9500, 0)
-		.chancedOutput('1x minecraft:flint', 8000, 0)
-		.chancedOutput('1x minecraft:flint', 6500, 0)
-		.duration(480);
+	// event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_${fuelType}`))
+	// 	.notConsumable('minecraft:coarse_dirt')
+	// 	.chancedInput(`#minecraft:${fuelType}`, 2500, 0)
+	// 	.chancedOutput('1x minecraft:flint', 9500, 0)
+	// 	.chancedOutput('1x minecraft:flint', 8000, 0)
+	// 	.chancedOutput('1x minecraft:flint', 6500, 0)
+	// 	.duration(480);
 	event.recipes.gtceu.auto_scavenger(id(`coarse_dirt_1_${fuelType}`))
 		.notConsumable('minecraft:coarse_dirt')
 		.chancedInput('kubejs:basic_scavenging_rod', 40, 0)

@@ -48,11 +48,11 @@ ServerEvents.recipes(event => {
         P: 'gtceu:wrought_iron_plate',
         H: '#forge:tools/hammers',
         W: '#forge:tools/wrenches',
-        B: 'minecraft:bricks'
+        B: 'gtceu:firebricks'
     }).id('start:shaped/high_steam_machine_casing');
 
     event.recipes.gtceu.assembler(id('high_steam_machine_casing'))
-        .itemInputs('6x gtceu:wrought_iron_plate', 'minecraft:bricks')
+        .itemInputs('6x gtceu:wrought_iron_plate', 'gtceu:firebricks')
         .circuit(6)
         .itemOutputs('2x kubejs:high_steam_machine_casing')
         .duration(50)

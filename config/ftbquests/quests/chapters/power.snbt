@@ -6,17 +6,40 @@
 	icon: "kubejs:mv_upgraade_kit"
 	id: "10A89CD14C4DAF63"
 	order_index: 0
-	quest_links: [{
-		id: "564046CF37ECA3FE"
-		linked_quest: "7B0133D388101F68"
-		x: 4.0d
-		y: 1.0d
-	}]
+	quest_links: [
+		{
+			id: "564046CF37ECA3FE"
+			linked_quest: "7B0133D388101F68"
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			id: "13C9063DC43B058F"
+			linked_quest: "3232A7A69C2905D9"
+			shape: "octagon"
+			size: 1.25d
+			x: -6.5d
+			y: -2.0d
+		}
+		{
+			id: "669BFEB98301CC0D"
+			linked_quest: "5B72F7526494EAEC"
+			shape: "octagon"
+			size: 1.25d
+			x: 4.0d
+			y: 3.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: [
 				"614071EB90CB89F5"
 				"1B32FFCDA1C87B90"
+			]
+			description: [
+				"The Stirling dynamo is a furnace that generates power. "
+				""
+				"It consumes furnace fuels, and gives power in exchange. Although it is not a strong source of energy, it is an easy and relatively cheap generator, making it a popular choice for people who want to quickly get some power for LV."
 			]
 			id: "102F057123D31D85"
 			shape: "square"
@@ -33,6 +56,11 @@
 				"614071EB90CB89F5"
 				"1B32FFCDA1C87B90"
 			]
+			description: [
+				"Lapidary Dynamo's are a popular source of power. Most people power them with diamonds, and supply those with mechanical sieves."
+				""
+				"They can take you quite far if you keep upgrading them, especially if you turn them into Boilers later on."
+			]
 			id: "092ACDF732CE78F0"
 			shape: "square"
 			tasks: [{
@@ -48,6 +76,7 @@
 				"614071EB90CB89F5"
 				"1B32FFCDA1C87B90"
 			]
+			description: ["The Compression Dynamo is Thermals equivalent of the Combustion Generator from GT."]
 			id: "7910F6A8087A9E85"
 			shape: "square"
 			tasks: [{
@@ -159,6 +188,13 @@
 				"614071EB90CB89F5"
 				"7AAF2D8BC72919DB"
 			]
+			description: [
+				"By right-clicking a thermal dynamo with a Steam Pipe you can convert it into a Boiler."
+				""
+				"Boilers produce steam instead of energy, and you can use this steam to power steam generators."
+				""
+				"Thermal offers you the Steam Dynamo, and GT offers Steam Turbines to convert steam into energy."
+			]
 			icon: "systeams:steam_dynamo"
 			id: "67452BE135FAD1C3"
 			shape: "square"
@@ -175,7 +211,7 @@
 					type: "item"
 				}
 			]
-			title: "Steam Dynamo"
+			title: "Boilers \\& the Steam Dynamo"
 			x: -6.0d
 			y: 2.0d
 		}
@@ -194,6 +230,8 @@
 				}
 			}
 			id: "614071EB90CB89F5"
+			shape: "octagon"
+			size: 1.25d
 			tasks: [{
 				id: "0020A1ED81A0ACE0"
 				title: "Why use Thermal Dynamos?"
@@ -216,6 +254,8 @@
 				}
 			}
 			id: "7DDFBCDFC3F09A6B"
+			shape: "octagon"
+			size: 1.25d
 			tasks: [{
 				id: "2739B3C9FA296C7F"
 				title: "Why use GregTech energy generators?"
@@ -289,8 +329,8 @@
 				item: "gtceu:gas_large_turbine"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -2.5d
+			x: -0.5d
+			y: -3.5d
 		}
 		{
 			dependencies: [
@@ -299,6 +339,11 @@
 				"7DDFBCDFC3F09A6B"
 				"51F889E1432E4DAD"
 			]
+			description: [
+				"Plasma Turbines can use the heat of plasma's to generate large amounts of energy."
+				""
+				"By using fusion reactors, you can generate a variety of plasma's, each with different energy efficiencies."
+			]
 			id: "6622E66A2FA19BA1"
 			shape: "square"
 			tasks: [{
@@ -306,13 +351,18 @@
 				item: "gtceu:plasma_large_turbine"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -7.0d
+			x: -1.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
 				"7DDFBCDFC3F09A6B"
 				"1B32FFCDA1C87B90"
+			]
+			description: [
+				"A simple Turbine that turns steam into energy."
+				""
+				"Get steam by using boilers from either GT or Thermal."
 			]
 			id: "214ADEEEA6FFF4BC"
 			shape: "square"
@@ -359,6 +409,14 @@
 				"7DDFBCDFC3F09A6B"
 				"1B32FFCDA1C87B90"
 			]
+			description: [
+				"Combustion Generators burn a variety of fuels to produce energy."
+				""
+				"Most of these fuels are easily mass producible if you have oil processing up and running."
+				""
+				"If you do not have oil processing, consider looking into Biodiesel instead"
+				"&7Keep in mind that combustion generators only accept GT Biodiesel, because the Crude Biodiesel produced by create is not refined enough to be used in these machines."
+			]
 			id: "52D3EE2184A501B8"
 			shape: "square"
 			tasks: [{
@@ -404,6 +462,11 @@
 				"7DDFBCDFC3F09A6B"
 				"1B32FFCDA1C87B90"
 			]
+			description: [
+				"Gas Turbines are slightly more advanced turbines that generate energy using various gasses."
+				""
+				"The most popular choice of these is Nitrobenzene. If you are interested in using Gas Turbines to power your base, check it out."
+			]
 			id: "2D7AD0E25BF9F651"
 			shape: "square"
 			tasks: [{
@@ -426,8 +489,8 @@
 				item: "gtceu:mv_gas_turbine"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -4.5d
+			x: -0.5d
+			y: -5.5d
 		}
 		{
 			dependencies: [
@@ -441,31 +504,32 @@
 				item: "gtceu:hv_gas_turbine"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -3.5d
+			x: -0.5d
+			y: -4.5d
 		}
 		{
 			dependencies: [
 				"614071EB90CB89F5"
 				"1B32FFCDA1C87B90"
 			]
+			description: ["Multi-Cycle Injectors (MCI's for short) boost the fuel efficiency of your Dynamo's, making them consume less fuel."]
 			id: "08F1DEFEB060C74C"
 			shape: "square"
 			tasks: [{
-				id: "2EDDF4BFBC3DA665"
+				id: "0602F0EE60E22E9B"
 				item: {
 					Count: 1
 					id: "kubejs:lv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.1f
+							DynamoEnergy: 1.15f
 							Type: "Dynamo"
 						}
 					}
 				}
 				type: "item"
 			}]
-			x: -3.5d
+			x: -4.0d
 			y: 2.0d
 		}
 		{
@@ -476,20 +540,20 @@
 			id: "238AD90B9828A7B0"
 			shape: "square"
 			tasks: [{
-				id: "730671D296A9FDA4"
+				id: "499495AAA0E28973"
 				item: {
 					Count: 1
 					id: "kubejs:mv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.32f
+							DynamoEnergy: 1.3f
 							Type: "Dynamo"
 						}
 					}
 				}
 				type: "item"
 			}]
-			x: -2.5d
+			x: -3.0d
 			y: 2.0d
 		}
 		{
@@ -500,20 +564,20 @@
 			id: "612BB2D1A5C10C7B"
 			shape: "square"
 			tasks: [{
-				id: "2BC9405104D50BCC"
+				id: "018606F48A551484"
 				item: {
 					Count: 1
 					id: "kubejs:hv_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.58f
+							DynamoEnergy: 1.45f
 							Type: "Dynamo"
 						}
 					}
 				}
 				type: "item"
 			}]
-			x: -1.5d
+			x: -2.0d
 			y: 2.0d
 		}
 		{
@@ -524,20 +588,20 @@
 			id: "7F229469E1A4C2EF"
 			shape: "square"
 			tasks: [{
-				id: "3384B6C45D3ECCBF"
+				id: "201140B0310B36B7"
 				item: {
 					Count: 1
 					id: "kubejs:ev_mci_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 1.9f
+							DynamoEnergy: 1.6f
 							Type: "Dynamo"
 						}
 					}
 				}
 				type: "item"
 			}]
-			x: -0.5d
+			x: -1.0d
 			y: 2.0d
 		}
 		{
@@ -545,16 +609,17 @@
 				"614071EB90CB89F5"
 				"1B32FFCDA1C87B90"
 			]
+			description: ["Auxiliary Reaction Chambers (ARC's for short) boost the maximum energy generation of a Dynamo at the cost of fuel efficiency."]
 			id: "7B16D5BEC4CDB611"
 			shape: "square"
 			tasks: [{
-				id: "26DC377D99850D15"
+				id: "400F6BC9D266BC8B"
 				item: {
 					Count: 1
 					id: "kubejs:lv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.67f
+							DynamoEnergy: 0.9f
 							DynamoPower: 0.5f
 							Type: "Dynamo"
 						}
@@ -573,13 +638,13 @@
 			id: "1B43A54DA21C5F87"
 			shape: "square"
 			tasks: [{
-				id: "42E9EE4954EA6DE4"
+				id: "5D0FDBE9AA0B3F0F"
 				item: {
 					Count: 1
 					id: "kubejs:mv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.5f
+							DynamoEnergy: 0.8f
 							DynamoPower: 1.0f
 							Type: "Dynamo"
 						}
@@ -598,13 +663,13 @@
 			id: "206E8AD2E23335B9"
 			shape: "square"
 			tasks: [{
-				id: "77B89D61B3CCF7CD"
+				id: "2AC1308EA4B09FF1"
 				item: {
 					Count: 1
 					id: "kubejs:hv_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.33f
+							DynamoEnergy: 0.7f
 							DynamoPower: 2.0f
 							Type: "Dynamo"
 						}
@@ -623,13 +688,13 @@
 			id: "0C6AB44DAB2C8C91"
 			shape: "square"
 			tasks: [{
-				id: "5D08C2E00A2D8FCC"
+				id: "1ADD7E77F1B9AF32"
 				item: {
 					Count: 1
 					id: "kubejs:ev_arc_kit"
 					tag: {
 						AugmentData: {
-							DynamoEnergy: 0.25f
+							DynamoEnergy: 0.6f
 							DynamoPower: 3.0f
 							Type: "Dynamo"
 						}
@@ -645,12 +710,19 @@
 				"568B71C405BD66DF"
 				"2490AD30E2772475"
 			]
+			description: [
+				"The Redstone Flux Cell is a simple way to store some of your excess RF in the early game."
+				""
+				"It can be upgraded using upgrade kits, and RF coil kits."
+			]
 			id: "38B3A7FC309E12E2"
 			rewards: [{
 				id: "3A1BB8F69976E897"
 				item: "kubejs:coin"
 				type: "item"
 			}]
+			shape: "octagon"
+			size: 1.25d
 			tasks: [{
 				id: "0233177A0F6796D8"
 				item: {
@@ -675,6 +747,7 @@
 				"38B3A7FC309E12E2"
 				"1B32FFCDA1C87B90"
 			]
+			description: ["Expanded RF Coils (RFC's for short) provide a large boost to the internal energy capacity of a flux cell at the cost of a lower boost to energy transfer limits."]
 			id: "61E90638F79C5867"
 			shape: "square"
 			tasks: [{
@@ -700,6 +773,7 @@
 				"38B3A7FC309E12E2"
 				"1B32FFCDA1C87B90"
 			]
+			description: ["Stabilized RF Coils (RFS' for short) provide a medium-sized boost to both energy transfer limits and the internal energy capacity of a flux cell."]
 			id: "78D71074F1F5968D"
 			shape: "square"
 			tasks: [{
@@ -725,6 +799,7 @@
 				"38B3A7FC309E12E2"
 				"1B32FFCDA1C87B90"
 			]
+			description: ["High-flux RF Coils (RFT's for short) provide a large boost to energy transfer limits of a flux cell at the cost of a lower boost to the internal energy capacity."]
 			id: "30280927DB01667B"
 			shape: "square"
 			tasks: [{
@@ -744,22 +819,6 @@
 			}]
 			x: 6.0d
 			y: -6.0d
-		}
-		{
-			dependencies: [
-				"5B72F7526494EAEC"
-				"51F889E1432E4DAD"
-			]
-			disable_toast: true
-			id: "7539CDA12A346BFA"
-			shape: "square"
-			tasks: [{
-				id: "08C27BACFDCAC812"
-				item: "gtceu:power_substation"
-				type: "item"
-			}]
-			x: 4.0d
-			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -846,8 +905,17 @@
 				"53A9F3758C218CDC"
 				"5D107FD21879F54B"
 			]
+			description: [
+				"Active Transformers can send and receive lasers."
+				""
+				"They accept both laser and substation hatches, and act as a transformer between \"normal\" EU and lasers."
+				""
+				"These lasers can carry extremely large amounts of energy, at the cost of needing Active Transformers to both turn corners and convert lasers into usable energy."
+			]
 			icon: "gtceu:active_transformer"
 			id: "2FCCE10E5C3E858D"
+			shape: "octagon"
+			size: 1.25d
 			tasks: [
 				{
 					id: "5426A745F5BAA6DA"
@@ -865,6 +933,7 @@
 		}
 		{
 			dependencies: ["51639FA6915BC51A"]
+			description: ["The first of many energy cores. The later tiers of these take a while to make, so it is adviced you plan your production of them if you are gonna rely on solar for power."]
 			id: "3DB836585182F614"
 			tasks: [{
 				id: "5AFD383C58F00AFC"
@@ -930,7 +999,10 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["3DB836585182F614"]
+			dependencies: [
+				"3DB836585182F614"
+				"6F408C9FD7D65DF4"
+			]
 			id: "2C72517EAF0E4F9E"
 			tasks: [{
 				id: "284C2ED5169DA23C"
@@ -941,7 +1013,10 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["120C7AB980EAE90D"]
+			dependencies: [
+				"120C7AB980EAE90D"
+				"2C72517EAF0E4F9E"
+			]
 			id: "590C298B843E22D5"
 			tasks: [{
 				id: "7816AA5137301A94"
@@ -952,7 +1027,10 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["6E149057874AC992"]
+			dependencies: [
+				"6E149057874AC992"
+				"590C298B843E22D5"
+			]
 			id: "0035C9FAB741E166"
 			tasks: [{
 				id: "08575E0E0090D598"
@@ -963,7 +1041,10 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["5B70B50435FD572D"]
+			dependencies: [
+				"5B70B50435FD572D"
+				"0035C9FAB741E166"
+			]
 			id: "620F96D00BB9BFD0"
 			tasks: [{
 				id: "34A45E0E16ED6B9D"
@@ -974,7 +1055,10 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["6F4474291CE8042C"]
+			dependencies: [
+				"6F4474291CE8042C"
+				"620F96D00BB9BFD0"
+			]
 			id: "18F6E5836D82D628"
 			tasks: [{
 				id: "0453AB2CCB7F5AF0"
@@ -985,7 +1069,10 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["21C399BC8BE2785F"]
+			dependencies: [
+				"21C399BC8BE2785F"
+				"18F6E5836D82D628"
+			]
 			id: "72DDEB53C9BDDBFC"
 			tasks: [{
 				id: "192DCD37C60A6BF1"
@@ -1459,7 +1546,10 @@
 				"1820787D031EAB15"
 				"4F2692F874F68EF8"
 			]
+			description: ["The base ingredient for all flux networks components, giving you access to wireless power."]
 			id: "6BE70F5B5287034B"
+			shape: "octagon"
+			size: 1.25d
 			tasks: [{
 				id: "26102F77CB1B39D6"
 				item: "fluxnetworks:flux_dust"
@@ -1470,6 +1560,11 @@
 		}
 		{
 			dependencies: ["6BE70F5B5287034B"]
+			description: [
+				"The controller, although not necessary for your flux network to operate, allows you to use wireless charging. "
+				""
+				"No longer will you fall out of the sky because of empty jetboots, or lose access to ae2 because your terminal ran out of power."
+			]
 			id: "69F43BE9D0935398"
 			tasks: [{
 				id: "77A1F9E62DE67358"
@@ -1481,6 +1576,7 @@
 		}
 		{
 			dependencies: ["69F43BE9D0935398"]
+			description: ["A small amount of wireless power storage."]
 			id: "63BC24882A9477FC"
 			tasks: [{
 				id: "660384F905E060F0"
@@ -1492,6 +1588,7 @@
 		}
 		{
 			dependencies: ["69F43BE9D0935398"]
+			description: ["Flux plugs are the input nodes of your flux network. They take energy from converters and generators and store it in the... energy cloud?"]
 			id: "0B5F19D1FB43ACF5"
 			tasks: [{
 				id: "4CEF6EE62E77E81C"
@@ -1503,6 +1600,7 @@
 		}
 		{
 			dependencies: ["69F43BE9D0935398"]
+			description: ["Flux points are the output nodes of your flux network, that provide your machines and converters with power."]
 			id: "5F0540C28B46F4B4"
 			tasks: [{
 				id: "11D42B54E7FC569D"
@@ -1514,6 +1612,7 @@
 		}
 		{
 			dependencies: ["63BC24882A9477FC"]
+			description: ["A slightly bigger storage for your wireless power."]
 			id: "0E5CA4D9E70B6765"
 			tasks: [{
 				id: "793F4AC360E0901D"
@@ -1525,6 +1624,7 @@
 		}
 		{
 			dependencies: ["0E5CA4D9E70B6765"]
+			description: ["A medium sized amount of storage, perfect for storing energy untill you get access to the substation."]
 			id: "25E66BD9F536A3F2"
 			tasks: [{
 				id: "5ADC12CE566588F7"
@@ -1567,7 +1667,6 @@
 				"72DDEB53C9BDDBFC"
 				"007D5B58CBF1BBE2"
 			]
-			description: ["The last 2 Solar Panels are merely compressed variants of the previous ones, to allow for more compact solar setups"]
 			id: "2D9EFD27A3C32062"
 			tasks: [{
 				id: "4C72E978BB38D646"
@@ -1581,6 +1680,7 @@
 			dependencies: [
 				"50DED4576C89E893"
 				"38C4FC58A4482F83"
+				"7AAF2D8BC72919DB"
 			]
 			id: "3A485956C34C8840"
 			tasks: [{
@@ -1605,6 +1705,16 @@
 				"614071EB90CB89F5"
 				"574CA65B67D79A6E"
 				"1B32FFCDA1C87B90"
+			]
+			description: [
+				"Upgrade Kits boost all stats of thermal machines."
+				""
+				"Some machines that might benefit from these upgrades are:"
+				"- Aqueous Accumulators"
+				"- Dynamo's and Boilers"
+				"- Redstone Flux Cells"
+				"- Igneous Extruders"
+				"- Fluid Cells"
 			]
 			id: "50DED4576C89E893"
 			tasks: [{
@@ -1692,7 +1802,7 @@
 				title: "Rotor Holder OCs"
 				type: "checkmark"
 			}]
-			x: -1.5d
+			x: -3.0d
 			y: -7.0d
 		}
 		{
@@ -1748,12 +1858,19 @@
 				}
 				type: "item"
 			}]
-			x: 0.0d
+			x: -1.5d
 			y: -7.0d
 		}
 		{
 			dependencies: ["1B32FFCDA1C87B90"]
+			description: [
+				"Generator Coils generate electricity by using a magnetic field. The faster they spin, the more FE/t they will generate, but with higher SU costs."
+				""
+				"The Carbon Brushes must touch one of the coils in order to store the energy."
+			]
 			id: "16E96E304325E38C"
+			shape: "octagon"
+			size: 1.25d
 			tasks: [
 				{
 					id: "142DBCCE83CB4E3B"
@@ -1771,6 +1888,17 @@
 		}
 		{
 			dependencies: ["16E96E304325E38C"]
+			description: [
+				"Magnets are what actually makes your coils generate power. Higher Magnetic force means higher FE generation, at the cost of an increase in SU usage."
+				""
+				"To calculate the amount of FE you produce, and how much SU that will take, you can use the following formulas:"
+				""
+				"FE/t = RPM*MF/20"
+				"SU = RPM*(MF+24)"
+				""
+				"RPM: the rotational speed of the coil"
+				"MF: the sum of the magnetic force of all magnets that influence the coil"
+			]
 			id: "729283139D778F0B"
 			tasks: [
 				{
@@ -1932,9 +2060,15 @@
 		{
 			dependencies: [
 				"5BDA17962F4630EB"
-				"7539CDA12A346BFA"
+				"5B72F7526494EAEC"
+			]
+			description: [
+				"This is the final capacitator container."
+				""
+				"It can be used for the UV and UHV capacitators, which includes the Ultimate Capacitator."
 			]
 			id: "178F411F38970DAB"
+			subtitle: "The third and final tier of capacitator containers"
 			tasks: [{
 				id: "53D65FFA68E3620D"
 				item: "gtceu:empty_tier_iii_battery"
@@ -1946,9 +2080,11 @@
 		{
 			dependencies: [
 				"138E77CDBA50A619"
-				"7539CDA12A346BFA"
+				"5B72F7526494EAEC"
 			]
+			description: ["This one can be used for crafting the LuV and ZPM capacitators."]
 			id: "2CBF80C9C2CEE2AD"
+			subtitle: "The second tier of capacitator containers"
 			tasks: [{
 				id: "14D896841610C86E"
 				item: "gtceu:empty_tier_ii_battery"
@@ -1958,8 +2094,14 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["7539CDA12A346BFA"]
+			dependencies: ["5B72F7526494EAEC"]
+			description: [
+				"This is the first of the three capacitator containers or hulls. "
+				""
+				"This one is used for EV and IV capacitators."
+			]
 			id: "2018D0A87008C089"
+			subtitle: "The first tier of capacitator containers"
 			tasks: [{
 				id: "0CEF754E3143F0D5"
 				item: "gtceu:empty_tier_i_battery"
@@ -1973,16 +2115,17 @@
 				"64F15C7160BF5CBB"
 				"2490AD30E2772475"
 			]
+			description: [""]
 			hide_dependent_lines: true
 			icon: "kubejs:lv_universal_circuit"
 			id: "1B32FFCDA1C87B90"
 			tasks: [{
 				id: "1A1E0BA9021B4EBF"
-				title: "LV Power"
+				title: "&7LV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: -6.0d
+			y: -5.5d
 		}
 		{
 			dependencies: ["1B32FFCDA1C87B90"]
@@ -1991,11 +2134,11 @@
 			id: "7AAF2D8BC72919DB"
 			tasks: [{
 				id: "06A3B205812C9136"
-				title: "MV Power"
+				title: "&bMV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: -5.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["7AAF2D8BC72919DB"]
@@ -2004,11 +2147,11 @@
 			id: "4F2692F874F68EF8"
 			tasks: [{
 				id: "3CE8700342934626"
-				title: "HV Power"
+				title: "&6HV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: -4.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["4F2692F874F68EF8"]
@@ -2017,11 +2160,11 @@
 			id: "121EFB24BE239D59"
 			tasks: [{
 				id: "7C32E6DD5B0172DE"
-				title: "EV Power"
+				title: "&5EV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: -3.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["121EFB24BE239D59"]
@@ -2030,11 +2173,11 @@
 			id: "51F889E1432E4DAD"
 			tasks: [{
 				id: "6D68F14C4CE64B1B"
-				title: "IV Power"
+				title: "&9IV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: -2.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["51F889E1432E4DAD"]
@@ -2043,11 +2186,11 @@
 			id: "0055CE82469F239C"
 			tasks: [{
 				id: "2F6EF045C5556BE5"
-				title: "LuV Power"
+				title: "&dLuV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: -1.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["0055CE82469F239C"]
@@ -2056,11 +2199,11 @@
 			id: "5D107FD21879F54B"
 			tasks: [{
 				id: "52FC6219EA1AA5C6"
-				title: "ZPM Power"
+				title: "&cZPM&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 0.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["5D107FD21879F54B"]
@@ -2069,11 +2212,11 @@
 			id: "007D5B58CBF1BBE2"
 			tasks: [{
 				id: "48767E7FA86DF600"
-				title: "UV Power"
+				title: "&3UV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 1.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["007D5B58CBF1BBE2"]
@@ -2083,11 +2226,11 @@
 			id: "21B905AA3AE6059F"
 			tasks: [{
 				id: "3739C0B4B9C3525F"
-				title: "UHV Power"
+				title: "&4UHV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["21B905AA3AE6059F"]
@@ -2096,11 +2239,11 @@
 			id: "3F34F4AC99C45E6F"
 			tasks: [{
 				id: "5C887C50FEA79C1D"
-				title: "UEV Power"
+				title: "&aUEV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 3.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["3F34F4AC99C45E6F"]
@@ -2109,11 +2252,11 @@
 			id: "6FB365E6C91B482E"
 			tasks: [{
 				id: "34900E6146D45F27"
-				title: "UIV Power"
+				title: "&2UIV&r Power"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 4.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["6FB365E6C91B482E"]
@@ -2140,7 +2283,7 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["149866CE30535DFC"]
@@ -2196,6 +2339,8 @@
 				}
 			}
 			id: "2490AD30E2772475"
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
 				id: "77E920F0529FA4BD"
 				title: "Power throughout the tiers"
@@ -2235,7 +2380,6 @@
 				"2FCCE10E5C3E858D"
 				"21B905AA3AE6059F"
 				"5BA69EDC3C223B2C"
-				"4F3EE28B3F38FC85"
 			]
 			id: "64162DB23206AD7A"
 			tasks: [{
@@ -2251,7 +2395,6 @@
 				"09FB26E3AADE4FAD"
 				"6FB365E6C91B482E"
 				"694E1F6458D5F72F"
-				"24E2CB89693EDEA3"
 			]
 			id: "60523CDE5E5695DB"
 			tasks: [{
@@ -2330,6 +2473,8 @@
 				}
 			}
 			id: "51639FA6915BC51A"
+			shape: "octagon"
+			size: 1.25d
 			tasks: [{
 				id: "2880D8142FDC174B"
 				title: "What is Solar?"
@@ -2337,6 +2482,44 @@
 			}]
 			x: -8.5d
 			y: -7.0d
+		}
+		{
+			dependencies: [
+				"6622E66A2FA19BA1"
+				"21B905AA3AE6059F"
+			]
+			description: [
+				"The Supreme Plasma Turbine is a beast of a machine, capable of generating insane amounts of power."
+				""
+				"With the main focus of the SPT being reducing the spam of plasma turbines, in exchange for the insane amounts of power it eats through an equally insane amount of plasma. "
+				""
+				"The SPT is most definitly worth it, especially if you apply coolant boosting."
+				""
+				"&4Note:&7If the Machine has issues forming, break and re-place the controller"
+			]
+			id: "1EE1007BA8202CC1"
+			tasks: [{
+				id: "78F0AF086C547FA4"
+				item: "gtceu:supreme_plasma_turbine"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"2D9EFD27A3C32062"
+				"21B905AA3AE6059F"
+			]
+			description: ["A compressed form of the T7 solar panel, to reduce the lag produced by large amounts of solar panels."]
+			id: "13675CDA1DE4A69A"
+			tasks: [{
+				id: "217C172DEC161D6F"
+				item: "solarflux:sp_8"
+				type: "item"
+			}]
+			x: -10.5d
+			y: 0.0d
 		}
 	]
 	title: "Power"

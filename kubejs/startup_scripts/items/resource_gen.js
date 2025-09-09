@@ -42,6 +42,10 @@ StartupEvents.registry('item', event => {
         .displayName('Netherite Reinforced Mesh')
         .texture('kubejs:item/netherite_reinforced_mesh');
 
+    event.create('leptonic_akreyrium_catalyst')
+        .displayName('Leptonic-Akreyrium Catalyst')
+        .texture('kubejs:item/akreyrium/leptonic_akreyrium_catalyst');
+
     //Nether Stars
     [{type: 'Fire', color: 'c'}, {type: 'Ice', color: 'b'}, {type: 'Earth', color: '8'}, {type: 'Lightning', color: 'e'}].forEach(shard => {
         const { type, color } = shard;
@@ -93,5 +97,24 @@ StartupEvents.registry('item', event => {
     event.create('voidic_reinforced_mesh')
         .displayName('Voidic Reinforced Mesh')
         .texture('kubejs:item/voidic_reinforced_mesh');
+
+    event.create('saturation_core_1')
+        .displayName('Abyssal Saturation Core [§5Low Saturation§f]')
+        .texture('kubejs:item/saturation_core_1');
+
+    event.create('saturation_core_2')
+        .displayName('Abyssal Saturation Core [§5Moderate Saturation§f]')
+        .texture('kubejs:item/saturation_core_2');
+
+    event.create('saturation_core_3')
+        .displayName('Abyssal Saturation Core [§5High Saturation§f]')
+        .texture('kubejs:item/saturation_core_3');
+
+    // Fishery
+    event.create('dried_silkworm_dough')
+        .texture('kubejs:item/resource_gen/dried_silkworm_dough');
+
+    event.create('silkworm_oil_pellet')
+        .texture('kubejs:item/resource_gen/silkworm_oil_pellet');
 
 });

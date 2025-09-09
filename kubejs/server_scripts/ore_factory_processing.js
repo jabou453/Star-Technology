@@ -46,7 +46,8 @@ const oreProcessableTiers = {
         { material: 'apatite', secondary: 'tricalcium_phosphate', tertiary: 'tricalcium_phosphate', quaternary: 'phosphate' },
         { material: 'lepidolite', secondary: 'lithium', tertiary: 'lithium', quaternary: 'caesium' },
         { material: 'pyrochlore', secondary: 'apatite', tertiary: 'apatite', quaternary: 'calcium' },
-        { material: 'pyrolusite', secondary: 'manganese', tertiary: 'manganese', quaternary: 'tantalite' }
+        { material: 'pyrolusite', secondary: 'manganese', tertiary: 'manganese', quaternary: 'tantalite' },
+        { material: 'magnesite', secondary: 'magnesium', tertiary: 'magnesium', quaternary: 'cobaltite' }
     ],
 
     'hv': [
@@ -56,7 +57,8 @@ const oreProcessableTiers = {
         { material: 'barite', secondary: 'pyrite', tertiary: 'pyrite', quaternary: 'chalcopyrite' },  // check
         { material: 'cassiterite', secondary: 'tin', tertiary: 'tin', quaternary: 'bismuth' },
         { material: 'tantalite', secondary: 'manganese', tertiary: 'niobium', quaternary: 'niobium' },
-        { material: 'pollucite', secondary: 'caesium', tertiary: 'aluminium', quaternary: 'aluminium' }
+        { material: 'pollucite', secondary: 'caesium', tertiary: 'aluminium', quaternary: 'aluminium' },
+        { material: 'zavaritskite', secondary: 'topaz', tertiary: 'blue_topaz', quaternary: 'bismuth' }
     ],
 
     'ev': [
@@ -116,29 +118,37 @@ const fluids = {
 */
 
 const primitive_processing = (event, materialObj) => {
-    [   { item: '2x #minecraft:coals', duration: 320, multiplier: 1, id: 'coals' },
-        { item: '2x #gtceu:coal_dusts', duration: 320, multiplier: 1, id: 'coal_dusts' },
-        { item: '2x #gtceu:coal_blocks', duration: 2880, multiplier: 10, id: 'coal_blocks' },
+    [   { item: '2x #minecraft:coals', id: 'coals' },
+        { item: '2x #gtceu:coal_dusts', id: 'coal_dusts' }
     ].forEach(fuel => {
         event.recipes.gtceu.primitive_ore_processing(id(`${materialObj.material}/${fuel.id}`))
-            .itemInputs(crushed_ore(materialObj.material, fuel.multiplier), fuel.item)
-            .inputFluids(fluids.water)
-            .itemOutputs(dust(materialObj.material, fuel.multiplier))
-            .chancedOutput(dust(materialObj.material, fuel.multiplier), 5000, 0)
-            .chancedOutput(dust(materialObj.secondary, fuel.multiplier), 2500, 0)
-            .chancedOutput(dust(materialObj.tertiary, fuel.multiplier), 1250, 0)
-            .duration(fuel.duration);
-    });
-    
-    event.recipes.gtceu.steam_ore_processing(id(`${materialObj.material}`))
-            .itemInputs(crushed_ore(materialObj.material,  1))
+            .itemInputs(crushed_ore(materialObj.material, 1), fuel.item)
             .inputFluids(fluids.water)
             .itemOutputs(dust(materialObj.material, 1))
-            .chancedOutput(dust(materialObj.material,  1), 5000, 0)
-            .chancedOutput(dust(materialObj.secondary,  1), 2500, 0)
-            .chancedOutput(dust(materialObj.tertiary,  1), 1250, 0)
-            .duration(240)
-            .EUt(GTValues.VA[GTValues.ULV]);
+            .chancedOutput(dust(materialObj.material, 1), 5000, 0)
+            .chancedOutput(dust(materialObj.secondary, 1), 2500, 0)
+            .chancedOutput(dust(materialObj.tertiary, 1), 1250, 0)
+            .duration(320);
+    });
+
+    event.recipes.gtceu.primitive_ore_processing(id(`${materialObj.material}/coal_blocks`))
+        .itemInputs(crushed_ore(materialObj.material, 10), '2x #gtceu:coal_blocks')
+        .inputFluids(fluids.water)
+        .itemOutputs(dust(materialObj.material, 10))
+        .itemOutputs(dust(materialObj.material, 5))
+        .itemOutputs(dust(materialObj.secondary, 3))
+        .itemOutputs(dust(materialObj.tertiary, 1))
+        .duration(2880);
+    
+    event.recipes.gtceu.steam_ore_processing(id(`${materialObj.material}`))
+        .itemInputs(crushed_ore(materialObj.material,  1))
+        .inputFluids(fluids.water)
+        .itemOutputs(dust(materialObj.material, 1))
+        .chancedOutput(dust(materialObj.material,  1), 5000, 0)
+        .chancedOutput(dust(materialObj.secondary,  1), 2500, 0)
+        .chancedOutput(dust(materialObj.tertiary,  1), 1250, 0)
+        .duration(320)
+        .EUt(GTValues.VA[GTValues.LV]);
 };
 
 /*

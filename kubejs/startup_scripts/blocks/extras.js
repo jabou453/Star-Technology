@@ -60,6 +60,17 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:needs_iron_tool')
         .textureAll('kubejs:block/casings/draco_ware_casing');
 
+    event.create('abyssal_inductor_hull')
+        .displayName('Abyssal Inductor Hull')
+        .hardness(5)
+        .resistance(10)
+        .lightLevel(3)
+        .soundType('metal')
+        .requiresTool(true)
+        .tagBlock('mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .textureAll('kubejs:block/casings/abyssal_inductor');
+
     event.create('draco_assembly_grating')
         .displayName('§5Draconic§r-Assembly Grating')
         .hardness(5)
@@ -132,5 +143,12 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/pickaxe')
         .tagBlock('minecraft:needs_stone_tool')
         .textureAll('kubejs:block/brimstone');
+
+    event.create('void_saturation_sponge')
+        .displayName('Voidic Saturation Sponge')
+        .hardness(1)
+        .resistance(1)
+        .material('sponge')
+        .textureAll('kubejs:block/void_saturation_sponge');
 
 });

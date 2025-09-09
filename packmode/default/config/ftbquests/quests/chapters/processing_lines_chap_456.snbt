@@ -759,7 +759,7 @@
 				}
 				type: "item"
 			}]
-			x: 25.5d
+			x: 27.0d
 			y: -0.5d
 		}
 		{
@@ -786,7 +786,7 @@
 				}
 				type: "item"
 			}]
-			x: 25.5d
+			x: 27.0d
 			y: 5.5d
 		}
 		{
@@ -829,7 +829,7 @@
 				}
 				type: "item"
 			}]
-			x: 23.5d
+			x: 25.0d
 			y: -0.5d
 		}
 		{
@@ -857,7 +857,7 @@
 				}
 			]
 			title: "Titanium Tetrachloride Mixture"
-			x: 22.0d
+			x: 23.5d
 			y: -0.5d
 		}
 		{
@@ -885,7 +885,7 @@
 				}
 			]
 			title: "Titanite Residue"
-			x: 20.5d
+			x: 22.0d
 			y: -0.5d
 		}
 		{
@@ -916,7 +916,7 @@
 				}
 			]
 			title: "Hydroxo(dioxo) Titanite Mixture"
-			x: 19.0d
+			x: 20.5d
 			y: -0.5d
 		}
 		{
@@ -947,7 +947,7 @@
 				}
 			]
 			title: "Titanite Slurry"
-			x: 16.0d
+			x: 17.5d
 			y: -0.5d
 		}
 		{
@@ -975,7 +975,7 @@
 				}
 			]
 			title: "Titanite Slurry Residue"
-			x: 17.5d
+			x: 19.0d
 			y: -0.5d
 		}
 		{
@@ -993,7 +993,7 @@
 				}
 				type: "item"
 			}]
-			x: 14.5d
+			x: 16.0d
 			y: -0.5d
 		}
 		{
@@ -1021,7 +1021,7 @@
 				}
 			]
 			title: "Perchloric Acid"
-			x: 15.0d
+			x: 16.5d
 			y: -1.5d
 		}
 		{
@@ -1036,7 +1036,7 @@
 				}
 				type: "item"
 			}]
-			x: 16.5d
+			x: 18.0d
 			y: -1.5d
 		}
 		{
@@ -1064,7 +1064,7 @@
 				}
 			]
 			title: "Silica Gel"
-			x: 16.5d
+			x: 18.0d
 			y: 0.5d
 		}
 		{
@@ -1078,7 +1078,7 @@
 				}
 				type: "item"
 			}]
-			x: 18.5d
+			x: 20.0d
 			y: -1.5d
 		}
 		{
@@ -1093,7 +1093,7 @@
 				}
 				type: "item"
 			}]
-			x: 19.5d
+			x: 21.0d
 			y: 0.5d
 		}
 		{
@@ -1101,17 +1101,29 @@
 				"7214D86C55033EAD"
 				"2746D19331452ACC"
 			]
+			icon: {
+				Count: 1
+				id: "gtceu:hot_zapolgium_ingot"
+				tag: { }
+			}
 			id: "7658E16BA79A7632"
-			tasks: [{
-				id: "3F5DB2F30F666815"
-				item: {
-					Count: 1
-					id: "gtceu:hot_zapolgium_ingot"
-					tag: { }
+			tasks: [
+				{
+					id: "3F5DB2F30F666815"
+					item: {
+						Count: 1
+						id: "gtceu:hot_zapolgium_ingot"
+						tag: { }
+					}
+					optional_task: true
+					type: "item"
 				}
-				type: "item"
-			}]
-			x: 23.5d
+				{
+					id: "2263BCF13BF45E77"
+					type: "checkmark"
+				}
+			]
+			x: 25.0d
 			y: 5.5d
 		}
 		{
@@ -1129,7 +1141,7 @@
 				}
 				type: "item"
 			}]
-			x: 22.0d
+			x: 23.5d
 			y: 5.5d
 		}
 		{
@@ -1144,7 +1156,7 @@
 				}
 				type: "item"
 			}]
-			x: 20.5d
+			x: 22.0d
 			y: 5.5d
 		}
 		{
@@ -1158,7 +1170,7 @@
 				}
 				type: "item"
 			}]
-			x: 21.5d
+			x: 23.0d
 			y: 4.5d
 		}
 		{
@@ -1176,7 +1188,7 @@
 				}
 				type: "item"
 			}]
-			x: 19.0d
+			x: 20.5d
 			y: 5.5d
 		}
 		{
@@ -1191,7 +1203,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.5d
+			x: 19.0d
 			y: 4.5d
 		}
 		{
@@ -1206,7 +1218,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.5d
+			x: 19.0d
 			y: 6.5d
 		}
 		{
@@ -1221,7 +1233,7 @@
 				}
 				type: "item"
 			}]
-			x: 16.0d
+			x: 17.5d
 			y: 4.5d
 		}
 		{
@@ -1236,7 +1248,7 @@
 				}
 				type: "item"
 			}]
-			x: 16.0d
+			x: 17.5d
 			y: 6.5d
 		}
 		{
@@ -1254,7 +1266,7 @@
 				}
 				type: "item"
 			}]
-			x: 14.5d
+			x: 16.0d
 			y: 5.5d
 		}
 		{
@@ -1279,7 +1291,7 @@
 				}
 				type: "item"
 			}]
-			x: 17.5d
+			x: 18.5d
 			y: 5.5d
 		}
 		{
@@ -1491,7 +1503,7 @@
 				}
 			]
 			title: "Yes, STEAM!!"
-			x: 24.0d
+			x: 25.5d
 			y: 6.5d
 		}
 		{
@@ -1519,7 +1531,7 @@
 				}
 			]
 			title: "Carbon Monoxide"
-			x: 24.0d
+			x: 25.5d
 			y: 4.5d
 		}
 		{
@@ -1533,11 +1545,14 @@
 				}
 				type: "item"
 			}]
-			x: 23.0d
+			x: 24.5d
 			y: 4.5d
 		}
 		{
-			dependencies: ["7E99889B3427A842"]
+			dependencies: [
+				"7E99889B3427A842"
+				"6CC13BE9AD447218"
+			]
 			description: ["The medium used to grow life."]
 			id: "01AF9486EA6DA792"
 			rewards: [{
@@ -1729,7 +1744,8 @@
 			y: 17.5d
 		}
 		{
-			dependencies: ["493DD013C818BB7B"]
+			dependencies: ["08D2618950CE2FE2"]
+			icon: "gtceu:abydos_titanite_rich_magma_bucket"
 			id: "151A1B51DFE41040"
 			optional: true
 			tasks: [
@@ -1740,6 +1756,7 @@
 						id: "gtceu:abydos_titanite_rich_magma_bucket"
 						tag: { }
 					}
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1749,12 +1766,17 @@
 						id: "gtceu:abydos_zapolite_rich_magma_bucket"
 						tag: { }
 					}
+					optional_task: true
 					type: "item"
 				}
+				{
+					id: "10E6804951648B77"
+					type: "checkmark"
+				}
 			]
-			title: "Abydos Magmas"
-			x: 13.0d
-			y: 2.5d
+			title: "Rich Abydos Magmas"
+			x: 14.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["37C381390F132628"]
@@ -1912,15 +1934,19 @@
 			dependencies: ["4BCC078B76C6CAE3"]
 			id: "600015DA0DCAACD4"
 			tasks: [{
-				id: "38DAFF93792077A8"
-				item: "mysticalagradditions:nether_star_shard"
+				id: "766AA12D5EFBD743"
+				item: "kubejs:nether_star_shard"
 				type: "item"
 			}]
 			x: 0.0d
 			y: 4.5d
 		}
 		{
-			dependencies: ["151A1B51DFE41040"]
+			dependencies: [
+				"151A1B51DFE41040"
+				"08D2618950CE2FE2"
+			]
+			dependency_requirement: "one_completed"
 			id: "33995F23F01ADF83"
 			tasks: [
 				{
@@ -1989,7 +2015,7 @@
 				}
 			]
 			title: "Magma Byproducts"
-			x: 14.5d
+			x: 16.0d
 			y: 2.5d
 		}
 		{
@@ -2019,8 +2045,8 @@
 				}
 			]
 			title: "Tellurides"
-			x: 16.0d
-			y: 1.75d
+			x: 17.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["26A84315291888C8"]
@@ -2031,8 +2057,8 @@
 				item: "gtceu:tellurium_dust"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 1.75d
+			x: 19.5d
+			y: 1.25d
 		}
 		{
 			dependencies: [
@@ -2043,11 +2069,6 @@
 			icon: "gtceu:tiemannite_dust"
 			id: "465533FFE22523F8"
 			tasks: [
-				{
-					id: "7BDF77CC8A675E38"
-					item: "gtceu:crookesite_dust"
-					type: "item"
-				}
 				{
 					id: "63C471FFE5ECDBC2"
 					item: "gtceu:clausthalite_dust"
@@ -2062,11 +2083,15 @@
 				}
 			]
 			title: "Selenides"
-			x: 16.0d
-			y: 3.25d
+			x: 17.5d
+			y: 3.5d
 		}
 		{
-			dependencies: ["465533FFE22523F8"]
+			dependencies: [
+				"465533FFE22523F8"
+				"10FF0043448ED24F"
+			]
+			dependency_requirement: "one_completed"
 			id: "4C34343E64A8511C"
 			shape: "gear"
 			tasks: [{
@@ -2074,8 +2099,8 @@
 				item: "gtceu:selenium_dust"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 3.25d
+			x: 19.5d
+			y: 3.75d
 		}
 		{
 			dependencies: [
@@ -2097,8 +2122,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 17.0d
-			y: 2.5d
+			x: 18.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["4BA35C4DAC5BC054"]
@@ -2109,8 +2134,8 @@
 				item: "gtceu:strontium_dust"
 				type: "item"
 			}]
-			x: 19.0d
-			y: 2.5d
+			x: 20.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["54DA03D41AF36EF2"]
@@ -2161,7 +2186,8 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["7BDF77CC8A675E38"]
+			dependencies: ["266F486F2425C35E"]
+			hide_dependency_lines: true
 			id: "735064FE12880E7E"
 			tasks: [{
 				id: "1B81FA7A2C015F46"
@@ -2651,7 +2677,8 @@
 			y: 16.0d
 		}
 		{
-			dependencies: ["7BDF77CC8A675E38"]
+			dependencies: ["266F486F2425C35E"]
+			hide_dependency_lines: true
 			id: "5873CED1371E7A3E"
 			tasks: [{
 				id: "39546D32E8F56651"
@@ -2843,6 +2870,12 @@
 		{
 			dependencies: ["19E8066A06379A19"]
 			id: "19834448E1EA758C"
+			rewards: [{
+				count: 3
+				id: "4F739FD936D6392B"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -3178,6 +3211,12 @@
 		{
 			dependencies: ["6BD12CC3A72DFAF4"]
 			id: "31EADD276ECB7B25"
+			rewards: [{
+				count: 3
+				id: "205623532C48F611"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			tasks: [{
@@ -3468,6 +3507,81 @@
 			]
 			x: 5.0d
 			y: 8.0d
+		}
+		{
+			dependencies: ["33995F23F01ADF83"]
+			icon: "gtceu:crookesite_dust"
+			id: "5CC733B0DA775351"
+			tasks: [
+				{
+					id: "10FF0043448ED24F"
+					item: "gtceu:crookesite_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "14C67B0C1CFB0D0B"
+					type: "checkmark"
+				}
+			]
+			title: "Crookesite"
+			x: 18.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5CC733B0DA775351"]
+			id: "266F486F2425C35E"
+			shape: "gear"
+			tasks: [{
+				id: "672ABF2CBA04AEEE"
+				item: "gtceu:thallium_dust"
+				type: "item"
+			}]
+			x: 20.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7C33054877B2DB16"]
+			description: [
+				"While not needed yet, if you balance all the Akreyrium Variants you can recombine them and process down Lepton Dense Akreyrium for the highest yields."
+				""
+				""
+				"{ \"text\": \"Next Level Akreyrium\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"17FC1E92368D840B\" } }"
+			]
+			id: "39202B7E28ABD0EC"
+			tasks: [{
+				id: "0560BAFCBFA5335C"
+				title: "Best Akeyrium"
+				type: "checkmark"
+			}]
+			x: 26.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["493DD013C818BB7B"]
+			icon: "gtceu:abydos_zapolite_poor_magma_bucket"
+			id: "08D2618950CE2FE2"
+			tasks: [
+				{
+					id: "1F29F7EAE02DC841"
+					item: "gtceu:abydos_zapolite_poor_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0125EC1CBD8F4A9A"
+					item: "gtceu:abydos_titanite_poor_magma_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1F34644BBD0A2119"
+					type: "checkmark"
+				}
+			]
+			title: "Abydos Magmas"
+			x: 14.5d
+			y: 3.5d
 		}
 	]
 	title: "Processing Lines (Chap 4,5,6)"

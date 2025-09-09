@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.bulk_vacuum_cooling(id(`${InFluid1.value[0].tag.slice(6)}`))
         .notConsumable('gtceu:ingot_casting_mold')
         .inputFluids(Fluid.of(`gtceu:${InFluid1.value[0].tag.slice(6)}`, InFluid1.amount * 256))
-        .inputFluids(Fluid.of(`gtceu:${InFluid2.value[0].tag.slice(6)}`, InFluid1.amount * 256))
+        .inputFluids(Fluid.of(`gtceu:${InFluid2.value[0].tag.slice(6)}`, InFluid2.amount * 256))
         .itemOutputs(`256x ${OutItem.ingredient.item}`)
         .outputFluids(Fluid.of(OutFluid.value[0].fluid, OutFluid.amount * 256))
         .duration(Duration * 192)
@@ -117,7 +117,7 @@ ServerEvents.recipes(event => {
     const Material15000PlusAlloy = (type,dur) => {    
         
         event.remove({id: `gtceu:vacuum_freezer/${type}`});
-        event.recipes.gtceu.vacuum_freezer(`${type}_from_molten`)
+        event.recipes.gtceu.vacuum_freezer(id(`${type}_from_molten`))
             .inputFluids(`gtceu:molten_${type} 144`)
             .inputFluids('gtceu:superstate_helium_3 500')
             .notConsumable('gtceu:ingot_casting_mold')
@@ -125,7 +125,7 @@ ServerEvents.recipes(event => {
             .outputFluids('gtceu:helium_3 250')
             .duration(dur * 20 )
             .EUt(GTValues.VA[GTValues.UV]);    
-        event.recipes.gtceu.bulk_vacuum_cooling(`${type}_from_molten`)
+        event.recipes.gtceu.bulk_vacuum_cooling(id(`${type}_from_molten`))
             .inputFluids(`gtceu:molten_${type} 36864`)
             .inputFluids('gtceu:superstate_helium_3 128000')
             .notConsumable('gtceu:ingot_casting_mold')
@@ -144,5 +144,7 @@ ServerEvents.recipes(event => {
     Material15000PlusAlloy('abyssal_alloy', 53.4);
     Material15000PlusAlloy('chaotixic_alloy', 30.75);
     Material15000PlusAlloy('ohmderblux_alloy', 25.35);
+    Material15000PlusAlloy('draconyallium', 14.55);
+    Material15000PlusAlloy('draco_abyssal', 35.85);
 
 });

@@ -37,8 +37,8 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.large_chemical_reactor(id('sodium_over_sculk_to_echo'))
         .itemInputs('2x gtceu:sodium_over_sculk_dust','3x gtceu:silicon_dioxide_dust')
         .itemOutputs('2x gtceu:sodium_dust','5x gtceu:echo_shard_dust')
-        .duration(80)
-        .EUt(GTValues.VHA[GTValues.UIV]);
+        .duration(320)
+        .EUt(GTValues.VHA[GTValues.UEV]);
     
     //Ancient Netherite
     event.recipes.gtceu.assembler(id('ancient_netherite_reinforced_mesh'))
@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:argon 2000')
         .itemOutputs('1x gtceu:hot_ancient_netherite_ingot')
         .blastFurnaceTemp(13300)
-        .duration(3000)
+        .duration(2500)
         .EUt(GTValues.VHA[GTValues.UHV]*2/3);
 
     event.recipes.gtceu.macerator(id('ancient_debris_dust'))
