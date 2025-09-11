@@ -543,6 +543,7 @@
 				"483B101A7F71E674"
 				"3F74E863172E757F"
 			]
+			dependency_requirement: "one_completed"
 			description: [
 				"Extracting Latex from &lJungle Trees&r will be one of your first sources of rubber, after a bit of processing."
 				""
@@ -2367,6 +2368,7 @@
 				"6D5287A0FB892DFF"
 				"6C7DB1CB4517B843"
 			]
+			dependency_requirement: "one_completed"
 			description: ["A slightly more complicated way of making rubber, that does not depend on latex."]
 			hide_dependency_lines: true
 			icon: "gtceu:raw_rubber_dust"

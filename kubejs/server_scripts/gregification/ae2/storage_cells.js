@@ -186,7 +186,7 @@ ServerEvents.recipes(event => {
         }
     };
 
-    canner('accelerator', 'engineering_processor', false);
+    canner('accelerator', 'engineering_processor', true);
     canner('monitor', 'storage_monitor', true);
 
     ['2', '16', '128'].forEach(tier => {
