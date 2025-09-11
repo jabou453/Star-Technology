@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
     //plastic boards
     [
         {plastic: 'polyether_ether_ketone', abreviation: 'peek', quantity: 16},
-        {plastic: 'poly_34_ethylenedioxythiophene_polystyrene_sulfate', abreviation: 'pedot_pss', quantity: 16},
+        {plastic: 'poly_34_ethylenedioxythiophene_polystyrene_sulfate', abreviation: 'pedot_pss', quantity: 32},
     ].forEach(type=>{
     CR(id(`plastic_boards_${type.abreviation}`))
         .itemInputs(`gtceu:${type.plastic}_plate`, '4x gtceu:copper_foil')
