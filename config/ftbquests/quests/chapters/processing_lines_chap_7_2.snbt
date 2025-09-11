@@ -1664,6 +1664,7 @@
 				{
 					id: "718EEC48EE3D1B14"
 					item: "gtceu:dragon_breath_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1685,6 +1686,7 @@
 				{
 					id: "1C39E7C5B1C72037"
 					item: "gtceu:pyrothyin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1706,6 +1708,7 @@
 				{
 					id: "0F51D393266FEB87"
 					item: "gtceu:dracotropin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1727,6 +1730,7 @@
 				{
 					id: "338ADC23D425FEB4"
 					item: "gtceu:metavorexin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1748,6 +1752,7 @@
 				{
 					id: "37B8E770CAC11D88"
 					item: "gtceu:aethermetin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1769,6 +1774,7 @@
 				{
 					id: "2A33CBF2AF778CF8"
 					item: "gtceu:hemavyrin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1790,6 +1796,7 @@
 				{
 					id: "5704C68E1E669408"
 					item: "gtceu:ignisferin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1811,6 +1818,7 @@
 				{
 					id: "12F93713F9F909D2"
 					item: "gtceu:cryokinase_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1832,6 +1840,7 @@
 				{
 					id: "348E9981304C1E5E"
 					item: "gtceu:stormcallin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1854,6 +1863,7 @@
 				{
 					id: "7F10DB93F1329685"
 					item: "gtceu:voidrenin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1875,6 +1885,7 @@
 				{
 					id: "689EE59DB05F6577"
 					item: "gtceu:terrathroxin_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1899,6 +1910,7 @@
 				{
 					id: "4257D4409A691138"
 					item: "gtceu:breath_hormone_complex_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1920,6 +1932,7 @@
 				{
 					id: "7D4780468466B409"
 					item: "gtceu:abyssal_nutrient_blend_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1942,6 +1955,7 @@
 				{
 					id: "2AF3BF188175E093"
 					item: "gtceu:precursor_serum_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1964,6 +1978,7 @@
 				{
 					id: "1A54006686D3FADC"
 					item: "gtceu:drac_endrocritic_medium_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -1996,6 +2011,7 @@
 				{
 					id: "41110FDB77034BFA"
 					item: "gtceu:drac_aurouric_endrocrinal_medium_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2014,6 +2030,7 @@
 				{
 					id: "73BDF2BA3EE0339D"
 					item: "gtceu:draconic_hormone_residue_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2095,6 +2112,7 @@
 				{
 					id: "05103572A0A357C5"
 					item: "gtceu:growth_hormone_complex_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2147,6 +2165,7 @@
 				{
 					id: "2AE72D581378F499"
 					item: "gtceu:condensed_abyssal_nutrient_blend_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2165,6 +2184,7 @@
 				{
 					id: "79A205816BD92E26"
 					item: "gtceu:amino_primed_medium_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2186,6 +2206,7 @@
 				{
 					id: "487D1868EFB3E138"
 					item: "gtceu:drac_peptide_amino_residue_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2220,6 +2241,7 @@
 						id: "gtceu:sterilized_growth_medium_bucket"
 						tag: { }
 					}
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2248,6 +2270,7 @@
 				{
 					id: "764B69A72A6DC1A7"
 					item: "gtceu:echo_r_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
@@ -2267,6 +2290,7 @@
 				{
 					id: "172FD0495927663C"
 					item: "gtceu:biostimulating_mixture_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
