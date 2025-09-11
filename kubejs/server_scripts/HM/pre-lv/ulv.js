@@ -241,6 +241,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.create.mixing(Fluid.of('gtceu:glass', 216), ['1x minecraft:glass','1x gtceu:glass_dust']).heatRequirement('superheated').id('start:create_mixer/glass');
     event.recipes.create.mixing(Fluid.of('gtceu:tin_alloy', 216), ['1x gtceu:tin_alloy_ingot','1x gtceu:tin_alloy_dust']).heatRequirement('superheated').id('start:create_mixer/tin_alloy');
+    event.recipes.create.mixing(Fluid.of('gtceu:tin', 216), ['1x gtceu:tin_ingot','1x gtceu:tin_dust']).heatRequirement('superheated').id('start:create_mixer/tin');
     event.recipes.create.mixing(Fluid.of('gtceu:soldering_alloy', 216), ['1x gtceu:soldering_alloy_ingot','1x gtceu:soldering_alloy_dust']).heatRequirement('superheated').id('start:create_mixer/soldering_alloy');
 
     //ulv removals
