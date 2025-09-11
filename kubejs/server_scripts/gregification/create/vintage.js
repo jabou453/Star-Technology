@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
     });
 
     vintage.centrifugation('3x gtceu:raw_rubber_dust', 'gtceu:sticky_resin').minimalRPM(64).id(id('centrifugation/sticky_resin'));
-    event.recipes.create.mixing(Fluid.of('gtceu:rubber', 720), ['9x gtceu:raw_rubber_dust', 'gtceu:sulfur_dust']).heatRequirement('lowheated').id('start:create_mixing/rubber');;
+    create.mixing(Fluid.of('gtceu:rubber', 720), ['9x gtceu:raw_rubber_dust', 'gtceu:sulfur_dust']).heatRequirement('lowheated').id('start:create_mixing/rubber');;
     vintage.pressurizing('thermal:cured_rubber', Fluid.of('gtceu:rubber', 144)).heatRequirement('lowheated').id(id('centrifugation/cured_rubber'));
 
     // Create Ore Proc
@@ -113,6 +113,7 @@ ServerEvents.recipes(event => {
         {mainOre: 'stibnite', secOre: 'antimony', terOre: 'sulfur'}
     ].forEach(matSet => {
         const {mainOre, secOre, terOre} = matSet;
+        // All vintage.vibarating() recipes need to be looked at, duel output is causing some issues
         vintage.vibrating([`gtceu:impure_${mainOre}_dust`, Item.of(`gtceu:${secOre}_dust`).withChance(0.15)], `gtceu:crushed_${mainOre}_ore`).id(id(`vibrating/crushed_${mainOre}`));
         vintage.centrifugation([`gtceu:${mainOre}_dust`, Item.of(`gtceu:${secOre}_dust`).withChance(0.07)], `gtceu:impure_${mainOre}_dust`).minimalRPM(128).id(id(`centrifugation/impure_${mainOre}`));
         create.splashing([`gtceu:${mainOre}_dust`, Item.of(`gtceu:${terOre}_dust`).withChance(0.07)], `gtceu:impure_${mainOre}_dust`).id(id(`splashing/impure_${mainOre}`));

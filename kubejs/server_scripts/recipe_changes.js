@@ -717,7 +717,7 @@ ServerEvents.recipes(event => {
     event.remove({output:'gtceu:mega_blast_furnace'});
 
     event.recipes.gtceu.assembly_line(id('mega_vacuum_freezer'))
-        .itemInputs('gtceu:aluminium_frame','2x #gtceu:circuits/uv','4x gtceu:dense_rhodium_plated_palladium_plate','2x gtceu:zpm_field_generator',
+        .itemInputs('gtceu:aluminium_frame','2x #gtceu:circuits/uv','4x gtceu:dense_rhodium_plated_palladium_plate','2x gtceu:luv_field_generator',
             '4x gtceu:niobium_titanium_normal_fluid_pipe','32x gtceu:fine_europium_wire','6x gtceu:hsse_screw')
         .inputFluids('gtceu:soldering_alloy 1152')
         .itemOutputs('gtceu:mega_vacuum_freezer')
@@ -725,13 +725,13 @@ ServerEvents.recipes(event => {
         researchRecipeBuilder => researchRecipeBuilder
             .researchStack(Item.of('gtceu:vacuum_freezer'))
             .EUt(GTValues.VHA[GTValues.ZPM])
-            .CWUt(32)
+            .CWUt(24)
         )
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UV]);
 
     event.recipes.gtceu.assembly_line(id('mega_blast_furnace'))
-        .itemInputs('gtceu:tungsten_carbide_frame','2x #gtceu:circuits/uhv','4x gtceu:dense_naquadah_alloy_plate','2x gtceu:uv_field_generator',
+        .itemInputs('gtceu:tungsten_carbide_frame','2x #gtceu:circuits/uhv','4x gtceu:dense_naquadah_alloy_plate','2x gtceu:zpm_field_generator',
             '4x gtceu:naquadah_spring','32x gtceu:fine_americium_wire','6x gtceu:hsss_screw')
         .inputFluids('gtceu:soldering_alloy 1152')
         .itemOutputs('gtceu:mega_blast_furnace')
@@ -739,7 +739,7 @@ ServerEvents.recipes(event => {
         researchRecipeBuilder => researchRecipeBuilder
             .researchStack(Item.of('gtceu:electric_blast_furnace'))
             .EUt(GTValues.VHA[GTValues.UV])
-            .CWUt(96)
+            .CWUt(64)
         )
         .duration(400)
         .EUt(GTValues.VHA[GTValues.UHV]);
