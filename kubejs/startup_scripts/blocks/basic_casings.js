@@ -27,7 +27,7 @@ StartupEvents.registry('block', event => {
         .displayName('Treated Wood Reinforced Casing')
         .hardness(5)
         .resistance(1)
-        .material('wood')
+        .soundType('wood')
         .requiresTool(true)
         .tagBlock('mineable/axe')
         .tagBlock('minecraft:needs_stone_tool')

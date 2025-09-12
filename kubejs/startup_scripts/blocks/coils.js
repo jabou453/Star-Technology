@@ -9,8 +9,7 @@ StartupEvents.registry('block', event => {
         .coilMaterial(() => GTMaterials.get('zalloy'))
         .hardness(5)
         .soundType('metal')
-        .requiresTool(true)
-        .material('metal');
+        .requiresTool(true);
 
     event.create('magmada_alloy_coil_block', 'gtceu:coil')
         .temperature(16199)
@@ -20,8 +19,7 @@ StartupEvents.registry('block', event => {
         .coilMaterial(() => GTMaterials.get('magmada_alloy'))
         .hardness(5)
         .soundType('metal')
-        .requiresTool(true)
-        .material('metal');
+        .requiresTool(true);
 
     event.create('abyssal_alloy_coil_block', 'gtceu:coil')
         .temperature(18888)
@@ -31,8 +29,7 @@ StartupEvents.registry('block', event => {
         .coilMaterial(() => GTMaterials.get('abyssal_alloy'))
         .hardness(5)
         .soundType('metal')
-        .requiresTool(true)
-        .material('metal');
+        .requiresTool(true);
 
 
 });

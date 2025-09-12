@@ -292,7 +292,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.cutter(id('egg_separation'))
         .itemInputs('minecraft:dragon_egg')
         .inputFluids('gtceu:neutronium 10')
-        .itemOutputs('kubejs:draconic_embryo','10x kubejs:dragon_egg_shard')
+        .itemOutputs('kubejs:draconic_embryo','8x kubejs:dragon_egg_shard')
         .duration(1000)
         .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
         .EUt(GTValues.VHA[GTValues.UIV]);
@@ -313,19 +313,19 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UIV]);
 
     event.recipes.gtceu.chemical_reactor(id('better_draco_stem_cells'))
-        .itemInputs('gtceu:small_draconyallium_dust')
+        .itemInputs('gtceu:draconyallium_dust')
         .inputFluids('gtceu:abyssal_nutrient_blend 500','gtceu:draconic_enrichment_serum 500')
-        .itemOutputs('48x kubejs:draconic_stem_cells')
-        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 400')
+        .itemOutputs('16x kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 100')
         .duration(300)
         .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
         .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.recipes.gtceu.large_chemical_reactor(id('better_draco_stem_cells'))
-        .itemInputs('gtceu:small_draconyallium_dust')
+        .itemInputs('gtceu:draconyallium_dust')
         .inputFluids('gtceu:abyssal_nutrient_blend 500','gtceu:draconic_enrichment_serum 500')
-        .itemOutputs('48x kubejs:draconic_stem_cells')
-        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 400')
+        .itemOutputs('16x kubejs:draconic_stem_cells')
+        .outputFluids('gtceu:condensed_abyssal_nutrient_blend 100')
         .duration(300)
         .cleanroom($StarTAbyssalContainmentMachine.ABYSSAL_CONTAINMENT_ROOM)
         .EUt(GTValues.VHA[GTValues.UHV]);

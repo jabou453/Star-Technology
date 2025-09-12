@@ -294,12 +294,23 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of(`3x pipez:fluid_pipe`),
     ], fluidPipez, [
-        event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:copper_tiny_fluid_pipe`]),
-		event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:bronze_tiny_fluid_pipe`]),
-		event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:lead_tiny_fluid_pipe`]),
-		event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:iron_foil`]),
+        event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:copper_small_fluid_pipe`]),
+		event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:bronze_small_fluid_pipe`]),
+		event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:lead_small_fluid_pipe`]),
+		event.recipes.createDeploying(fluidPipez, [fluidPipez, `gtceu:wrought_iron_ring`]),
         event.recipes.createPressing(fluidPipez, fluidPipez)
     ]).transitionalItem(fluidPipez).loops(1);
+
+	let itemPipez = 'gtceu:nickel_foil'
+    event.recipes.create.sequenced_assembly([
+        Item.of(`3x pipez:item_pipe`),
+    ], itemPipez, [
+        event.recipes.createDeploying(itemPipez, [itemPipez, `gtceu:tin_small_item_pipe`]),
+		event.recipes.createDeploying(itemPipez, [itemPipez, `gtceu:brass_small_item_pipe`]),
+		event.recipes.createDeploying(itemPipez, [itemPipez, `gtceu:nickel_small_item_pipe`]),
+		event.recipes.createDeploying(itemPipez, [itemPipez, `gtceu:wrought_iron_ring`]),
+        event.recipes.createPressing(itemPipez, itemPipez)
+    ]).transitionalItem(itemPipez).loops(1);
 
 	event.remove({ output: 'architects_palette:flint_block' });
 	event.shaped(Item.of('4x architects_palette:flint_block'), [

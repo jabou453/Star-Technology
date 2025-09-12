@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VHA[GTValues.UV]*.8);
 
     event.recipes.gtceu.molten_destabilizing(id('abydos_zapolite_poor_magma'))
-        .inputFluids('gtceu:abydos_zapolite_poor_magma 6000')
+        .inputFluids('gtceu:abydos_zapolite_poor_magma 60000')
         .outputFluids('gtceu:zapolite 1500',
             'gtceu:molten_ore_mixture 800',
             'gtceu:crookesite 875',

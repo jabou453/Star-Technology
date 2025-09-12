@@ -1994,7 +1994,7 @@
 		}
 		{
 			dependencies: ["3FC351F05F2AC743"]
-			description: ["A parallel freezer. Very much necessary to keep up with the RHF on the left."]
+			description: ["A parallel freezer. Great for when you have a lot of EBF's. Also matches up great with the RHF you will get later."]
 			id: "17C47EC4E8337D7B"
 			optional: true
 			rewards: [{
