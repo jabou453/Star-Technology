@@ -2454,6 +2454,19 @@
 			x: 0.0d
 			y: -7.0d
 		}
+		{
+			dependencies: ["16A9D8E864A18B9E"]
+			description: ["This pack is designed to be played in &nPeaceful&r, hope you enjoy."]
+			icon: "minecraft:grass"
+			id: "0C3DB6C79D0A4BFF"
+			tasks: [{
+				id: "0440A02F0353E30C"
+				title: "No Mobs"
+				type: "checkmark"
+			}]
+			x: -7.0d
+			y: -6.0d
+		}
 	]
 	title: "Early Game"
 }

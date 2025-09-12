@@ -51,52 +51,52 @@
 			linked_quest: "3AE729D3F47E9A2B"
 			shape: "gear"
 			size: 1.5d
-			x: 16.5d
-			y: 3.0d
+			x: 17.5d
+			y: 2.0d
 		}
 		{
 			id: "22B947CD0EFC2E2F"
 			linked_quest: "1799430093ABCC64"
 			shape: "gear"
 			size: 1.5d
-			x: 16.5d
-			y: 8.0d
+			x: 17.5d
+			y: 7.0d
 		}
 		{
 			id: "0241D0DF0F320CDB"
 			linked_quest: "0D18B33E2C26A942"
-			x: 12.0d
-			y: 2.0d
+			x: 13.0d
+			y: 1.0d
 		}
 		{
 			id: "0D7818B3AC85F334"
 			linked_quest: "44B18C095DB4DF17"
-			x: 11.0d
-			y: 2.0d
+			x: 12.0d
+			y: 1.0d
 		}
 		{
 			id: "04110658590E1F01"
 			linked_quest: "5D3B5DEE3B2D30C0"
-			x: 10.0d
-			y: 2.0d
+			x: 11.0d
+			y: 1.0d
 		}
 		{
 			id: "082C386CBBA0DD86"
 			linked_quest: "1C5C32E5A47F2D2D"
-			x: 13.0d
-			y: 2.0d
+			x: 14.0d
+			y: 1.0d
 		}
 		{
 			id: "37CD8F0805CCF0EA"
 			linked_quest: "7E99889B3427A842"
-			x: 6.0d
-			y: 9.0d
+			x: 7.0d
+			y: 8.0d
 		}
 		{
 			id: "58A4AA0361BC635C"
 			linked_quest: "261B946701411D9C"
-			x: 5.5d
-			y: 4.0d
+			x: 6.5d
+			y: 3.0d
 		}
 	]
 	quests: [
@@ -770,8 +770,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 6.5d
-			y: 1.0d
+			x: 7.5d
+			y: 0.5d
 		}
 		{
 			icon: "gtceu:seed_oil_bucket"
@@ -1646,15 +1646,19 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["09B55AFE7C06EC82"]
+			dependencies: [
+				"09B55AFE7C06EC82"
+				"394D5FF2EEE3E610"
+				"253FE2C976FBCA5D"
+			]
 			id: "09996867BC3E5819"
 			tasks: [{
 				id: "7FA4661139DC8B30"
 				item: "kubejs:secreting_draconic_cells"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 8.0d
+			x: 4.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["262BD3D9D1DF7F13"]
@@ -1672,13 +1676,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 15.5d
-			y: 4.5d
+			x: 16.5d
+			y: 3.5d
 		}
 		{
 			dependencies: [
 				"349B743B5F3792F1"
 				"3B53D64D9EA506E1"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:pyrothyin_bucket"
 			id: "60C58CBCA20CC288"
@@ -1694,13 +1699,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 13.0d
-			y: 8.0d
+			x: 14.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
 				"7D92FDFAE5CBA103"
 				"3B53D64D9EA506E1"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:dracotropin_bucket"
 			id: "369119C0801269FD"
@@ -1716,13 +1722,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 8.0d
+			x: 13.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
 				"1B5E265DA009B4B6"
 				"3B53D64D9EA506E1"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:metavorexin_bucket"
 			id: "7CBD3A984028C356"
@@ -1738,13 +1745,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 11.0d
-			y: 8.0d
+			x: 12.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
 				"122ECDEA3014F0F6"
 				"3B53D64D9EA506E1"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:aethermetin_bucket"
 			id: "4447ADD635826F25"
@@ -1760,13 +1768,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.0d
-			y: 8.0d
+			x: 11.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
 				"60AA88F6743636C0"
 				"3B53D64D9EA506E1"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:hemavyrin_bucket"
 			id: "6C6379760CE78AC5"
@@ -1782,13 +1791,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 9.0d
-			y: 8.0d
+			x: 10.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
 				"1C5C32E5A47F2D2D"
 				"30241EA7B41A3212"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:ignisferin_bucket"
 			id: "5BB6B21843A7107F"
@@ -1804,13 +1814,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 13.0d
-			y: 3.0d
+			x: 14.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"0D18B33E2C26A942"
 				"30241EA7B41A3212"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:cryokinase_bucket"
 			id: "798E1B26BA950E09"
@@ -1826,13 +1837,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 3.0d
+			x: 13.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"44B18C095DB4DF17"
 				"30241EA7B41A3212"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:stormcallin_bucket"
 			id: "30F23A53A3BD37A1"
@@ -1848,14 +1860,15 @@
 					type: "checkmark"
 				}
 			]
-			x: 11.0d
-			y: 3.0d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"239A0034C8425661"
 				"30241EA7B41A3212"
 				"74A0BF2EA205B23C"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:voidrenin_bucket"
 			id: "50B36A9870682FDB"
@@ -1871,13 +1884,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 9.0d
-			y: 3.0d
+			x: 10.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"5D3B5DEE3B2D30C0"
 				"30241EA7B41A3212"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:terrathroxin_bucket"
 			id: "42BF157CA44898DE"
@@ -1893,8 +1907,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.0d
-			y: 3.0d
+			x: 11.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -1903,6 +1917,7 @@
 				"42BF157CA44898DE"
 				"50B36A9870682FDB"
 				"30F23A53A3BD37A1"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:breath_hormone_complex_bucket"
 			id: "54A48D25CC69507E"
@@ -1918,13 +1933,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.5d
-			y: 3.0d
+			x: 15.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"6CC2A99E0E26C42B"
 				"68FD71F1A73B47A1"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:abyssal_nutrient_blend_bucket"
 			id: "0E2F6184D7767AFD"
@@ -1940,8 +1956,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 8.0d
-			y: 6.5d
+			x: 9.0d
+			y: 5.5d
 		}
 		{
 			dependencies: [
@@ -1963,14 +1979,15 @@
 					type: "checkmark"
 				}
 			]
-			x: 6.5d
-			y: 5.0d
+			x: 7.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
 				"7E99889B3427A842"
 				"221A840C4A071343"
 				"0F4E7B496BC5C896"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:drac_endrocritic_medium_bucket"
 			id: "7DB00D797172F8F8"
@@ -1986,8 +2003,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 6.5d
-			y: 8.0d
+			x: 7.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["218CABD676F3B732"]
@@ -1997,13 +2014,14 @@
 				item: "gtceu:small_aurourium_dust"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 6.5d
+			x: 6.0d
+			y: 5.5d
 		}
 		{
 			dependencies: [
 				"7DB00D797172F8F8"
 				"1599CBA5069B1B4C"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:drac_aurouric_endrocrinal_medium_bucket"
 			id: "6CC2A99E0E26C42B"
@@ -2019,11 +2037,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 6.5d
-			y: 6.5d
+			x: 7.5d
+			y: 5.5d
 		}
 		{
-			dependencies: ["09996867BC3E5819"]
+			dependencies: [
+				"09996867BC3E5819"
+				"394D5FF2EEE3E610"
+			]
 			icon: "gtceu:draconic_hormone_residue_bucket"
 			id: "221A840C4A071343"
 			tasks: [
@@ -2038,8 +2059,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 5.0d
-			y: 8.0d
+			x: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["51E820417679F770"]
@@ -2049,8 +2070,8 @@
 				item: "gtceu:tiny_mythril_dust"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 3.5d
+			x: 7.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["22EAAB51EF78C74E"]
@@ -2060,13 +2081,14 @@
 				item: "gtceu:tiny_adamantine_dust"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 5.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
 				"3F976C15932579FD"
 				"56CA67C022703D4E"
+				"394D5FF2EEE3E610"
 			]
 			id: "30241EA7B41A3212"
 			tasks: [{
@@ -2074,8 +2096,8 @@
 				item: "kubejs:draco_peptide_amino_chain"
 				type: "item"
 			}]
-			x: 11.0d
-			y: 4.5d
+			x: 12.0d
+			y: 3.5d
 		}
 		{
 			id: "60AA88F6743636C0"
@@ -2084,8 +2106,8 @@
 				item: "gtceu:tiny_hematite_dust"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 9.0d
+			x: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["338D41BA7FE41844"]
@@ -2095,8 +2117,8 @@
 				item: "gtceu:tiny_glowstone_dust"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 9.0d
+			x: 11.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -2105,6 +2127,7 @@
 				"7CBD3A984028C356"
 				"60C58CBCA20CC288"
 				"369119C0801269FD"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:growth_hormone_complex_bucket"
 			id: "25436E09A8F9E9C8"
@@ -2120,8 +2143,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.5d
-			y: 8.0d
+			x: 15.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["37F9C85CFCFFDA5F"]
@@ -2131,8 +2154,8 @@
 				item: "gtceu:tiny_enriched_naquadah_dust"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 9.0d
+			x: 13.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["465B8B6CC911EC13"]
@@ -2142,8 +2165,8 @@
 				item: "gtceu:tiny_activated_nether_dust"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 9.0d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0E75A2FC17ED0C28"]
@@ -2154,11 +2177,14 @@
 				item: "gtceu:tiny_rhenium_dust"
 				type: "item"
 			}]
-			x: 11.0d
-			y: 9.0d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["0E2F6184D7767AFD"]
+			dependencies: [
+				"0E2F6184D7767AFD"
+				"394D5FF2EEE3E610"
+			]
 			icon: "gtceu:condensed_abyssal_nutrient_blend_bucket"
 			id: "68DA57B7791A76E1"
 			tasks: [
@@ -2173,11 +2199,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 8.0d
-			y: 4.5d
+			x: 9.0d
+			y: 3.5d
 		}
 		{
-			dependencies: ["68DA57B7791A76E1"]
+			dependencies: [
+				"68DA57B7791A76E1"
+				"394D5FF2EEE3E610"
+			]
 			icon: "gtceu:amino_primed_medium_bucket"
 			id: "3F976C15932579FD"
 			tasks: [
@@ -2192,13 +2221,14 @@
 					type: "checkmark"
 				}
 			]
-			x: 9.5d
-			y: 4.5d
+			x: 10.5d
+			y: 3.5d
 		}
 		{
 			dependencies: [
 				"30241EA7B41A3212"
 				"0E2F6184D7767AFD"
+				"394D5FF2EEE3E610"
 			]
 			icon: "gtceu:drac_peptide_amino_residue_bucket"
 			id: "3B53D64D9EA506E1"
@@ -2214,8 +2244,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 11.0d
-			y: 6.5d
+			x: 12.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["01AF9486EA6DA792"]
@@ -2249,8 +2279,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 15.5d
-			y: 6.5d
+			x: 16.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["2F87FC1D5BB43220"]
@@ -2279,8 +2309,8 @@
 				}
 			]
 			title: "Echo Fluid"
-			x: 9.0d
-			y: 2.0d
+			x: 10.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["0F29276290B9D9D1"]
@@ -2298,8 +2328,102 @@
 					type: "checkmark"
 				}
 			]
-			x: 7.0d
-			y: 9.0d
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["09B55AFE7C06EC82"]
+			description: [
+				"On servers there is an issue where attached processing lines show &l'&rRequires Cleanroom&l'&r but should show &l'&rRequires &5True Abyss&r&l'&r. Keep in mind those recipes will &o&cnot&r work in cleanroom and require "
+				"{ \"text\": \"this machine.\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"09B55AFE7C06EC82\" } }"
+			]
+			hide_dependent_lines: true
+			icon: "architects_palette:chiseled_abyssaline_bricks"
+			id: "394D5FF2EEE3E610"
+			shape: "none"
+			size: 1.5d
+			tasks: [{
+				id: "5817B648D618FC03"
+				title: "&4&lWarning"
+				type: "checkmark"
+			}]
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["37F9C85CFCFFDA5F"]
+			id: "253FE2C976FBCA5D"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				id: "708F6D013BD2DAFC"
+				item: "minecraft:dragon_egg"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.75d
+		}
+		{
+			dependencies: [
+				"253FE2C976FBCA5D"
+				"394D5FF2EEE3E610"
+			]
+			id: "0CD4A2A7CDC7A06E"
+			tasks: [{
+				id: "136C2FBCEF223E99"
+				item: "kubejs:dragon_egg_shard"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"0CD4A2A7CDC7A06E"
+				"394D5FF2EEE3E610"
+			]
+			id: "588C0950E5334025"
+			shape: "gear"
+			tasks: [{
+				id: "304F34E16667CCD4"
+				item: "kubejs:draconic_scale_cells"
+				type: "item"
+			}]
+			title: "Cheaper Draconic Scale Cells"
+			x: 5.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"54A48D25CC69507E"
+				"394D5FF2EEE3E610"
+			]
+			id: "6F5453EB015DE189"
+			shape: "gear"
+			tasks: [{
+				id: "2DDBF048CC9F48CC"
+				item: "gtceu:dragon_breath_bucket"
+				type: "item"
+			}]
+			title: "Cheaper Dragon Breath"
+			x: 16.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"1799430093ABCC64"
+				"394D5FF2EEE3E610"
+			]
+			id: "2C80DB1A0465B07E"
+			shape: "gear"
+			tasks: [{
+				id: "5A9177A5B1275632"
+				item: "kubejs:draconic_stem_cells"
+				type: "item"
+			}]
+			title: "Cheaper Draconic Stem Cells"
+			x: 18.5d
+			y: 5.5d
 		}
 	]
 	title: "Processing Lines (Chap 7.2)"

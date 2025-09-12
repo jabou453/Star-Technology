@@ -206,7 +206,7 @@ ServerEvents.recipes(event => {
 
         const laser_engrave = (wafer,EUt,quantity,duration) => {
             let WaferType = (wafer == 'draco') ? `64x kubejs:${wafer}_wafer` : `64x gtceu:${wafer}_wafer` ;
-            event.recipes.gtceu.mass_laser_engraving(id(`engrave_${Output}_${wafer}`))
+            event.recipes.gtceu.mass_laser_engraving(id(`mass_engrave_${Output}_${wafer}`))
                 .itemInputs(WaferType)
                 .notConsumable(lensType)
                 .itemOutputs(`${quantity * 64}x ${ModID}:${Output}_wafer`)
@@ -256,5 +256,23 @@ ServerEvents.recipes(event => {
     MassWaferEngraving('gtceu', 'lpic', 1, 'orange_glass', false);
     MassWaferEngraving('gtceu', 'mpic', 2, 'brown_glass', false);
     MassWaferEngraving('kubejs', 'draco_advanced_soc', 5, 'echo_shard', false);
+
+    const MassNonWaferEngraving = (input,output,quantity,EUt,duration,Lens,LensIsTag) => {
+
+        const lensType = (LensIsTag == true) ? `#forge:lenses/${Lens}` : `gtceu:${Lens}_lens` ;
+    
+        event.recipes.gtceu.mass_laser_engraving(id(`mass_engrave_${output}`))
+            .itemInputs(`gtceu:${input}`)
+            .notConsumable(lensType)
+            .itemOutputs(`${quantity * 64}x gtceu:${output}`)
+            .duration(duration * 48)
+            .EUt(EUt)
+            .cleanroom(CleanroomType.CLEANROOM);
+
+    }
+
+    MassNonWaferEngraving('lapotron_crystal','engraved_lapotron_crystal_chip',3,480,256,'blue',true);
+    MassNonWaferEngraving('engraved_crystal_chip','crystal_cpu',1,10000,100,'lime_glass',false);
+    MassNonWaferEngraving('crystal_cpu','crystal_soc',1,40000,100,'blue',true);
 
 });

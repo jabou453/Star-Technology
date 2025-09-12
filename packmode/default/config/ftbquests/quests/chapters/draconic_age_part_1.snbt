@@ -1119,6 +1119,7 @@
 				"09B55AFE7C06EC82"
 				"749AB3A73D3744EA"
 				"54A48D25CC69507E"
+				"394D5FF2EEE3E610"
 			]
 			id: "3AE729D3F47E9A2B"
 			rewards: [{
@@ -1736,6 +1737,7 @@
 				"09B55AFE7C06EC82"
 				"25436E09A8F9E9C8"
 				"058533FBFBA38DC8"
+				"394D5FF2EEE3E610"
 			]
 			id: "1799430093ABCC64"
 			rewards: [{
@@ -1817,7 +1819,10 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["1799430093ABCC64"]
+			dependencies: [
+				"1799430093ABCC64"
+				"394D5FF2EEE3E610"
+			]
 			id: "6D6C79E7CBBCC893"
 			rewards: [{
 				id: "0D4F24ECDD2D65B4"

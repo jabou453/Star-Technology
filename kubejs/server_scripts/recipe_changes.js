@@ -718,7 +718,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembly_line(id('mega_vacuum_freezer'))
         .itemInputs('gtceu:aluminium_frame','2x #gtceu:circuits/uv','4x gtceu:dense_rhodium_plated_palladium_plate','2x gtceu:luv_field_generator',
-            '4x gtceu:niobium_titanium_normal_fluid_pipe','32x gtceu:fine_europium_wire','6x gtceu:hsse_screw')
+            '4x gtceu:niobium_titanium_normal_fluid_pipe','32x gtceu:fine_indium_tin_barium_titanium_cuprate_wire','6x gtceu:hsse_screw')
         .inputFluids('gtceu:soldering_alloy 1152')
         .itemOutputs('gtceu:mega_vacuum_freezer')
         .stationResearch(
@@ -732,7 +732,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembly_line(id('mega_blast_furnace'))
         .itemInputs('gtceu:tungsten_carbide_frame','2x #gtceu:circuits/uhv','4x gtceu:dense_naquadah_alloy_plate','2x gtceu:zpm_field_generator',
-            '4x gtceu:naquadah_spring','32x gtceu:fine_americium_wire','6x gtceu:hsss_screw')
+            '4x gtceu:naquadah_spring','32x gtceu:fine_uranium_rhodium_dinaquadide_wire','6x gtceu:hsss_screw')
         .inputFluids('gtceu:soldering_alloy 1152')
         .itemOutputs('gtceu:mega_blast_furnace')
         .stationResearch(
