@@ -612,7 +612,7 @@
 				"23C8E1371ABA986C"
 			]
 			description: [
-				"The Electric Blast Furnace (EBF for short) is a better furnace, which you will need for most of your ingots going forward. If you are curious about how to use the EBF for &bMV&r recipes "
+				"The Electric Blast Furnace (EBF for short) is a better furnace, which you will need for most of your ingots going forward. If you are curious about how to use the EBF for &bMV&r recipes"
 				"{ \"text\": \"Click Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"34EDF98BDC245F77\" } }"
 			]
 			icon: "gtceu:electric_blast_furnace"

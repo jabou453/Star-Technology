@@ -470,7 +470,7 @@
 				"063AF9790DA7ABE0"
 			]
 			description: [
-				"Your first superconductor! "
+				"Your first superconductor!"
 				""
 				"Superconductors are lossless, meaning they won't lose power the farther they go. Always use them, when possible."
 			]
@@ -831,7 +831,7 @@
 		{
 			dependencies: ["03ACC7D2577A2C66"]
 			description: [
-				"Barrel transformations from Ex Nihilo have been disabled, and replaced with this beautiful machine! "
+				"Barrel transformations from Ex Nihilo have been disabled, and replaced with this beautiful machine!"
 				""
 				"It can soak, compost, and transform."
 				""
@@ -860,7 +860,7 @@
 				"143BB2B07A083CC0"
 			]
 			description: [
-				"It's your very first multiblock! "
+				"It's your very first multiblock!"
 				""
 				"This bad boy will make you steel, albeit slowly. It isn't possible to automate sadly, but there is a better version on the horizon."
 			]

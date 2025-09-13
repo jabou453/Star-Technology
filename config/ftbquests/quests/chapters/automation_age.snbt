@@ -373,7 +373,7 @@
 				""
 				"&3Configurable Maintenance Hatch&r: Make your machines faster at the sake of risking more maintenance issues, or make them slower to reduce the chance."
 				""
-				"&4&lSpecial Notes&r: "
+				"&4&lSpecial Notes&r:"
 				"Maintenance hatches will always check if they incur maintenance which can take a toll on your game's performance at scale. Auto Maintenance Fixes this concern."
 				""
 				"Alternatively the Configurable Maintenance can range from .9x time to 1.1x time. Meaning you can either add/subtract 10% from a recipe time. Reducing long recipe times is very nice. Increasing Generator uptime is also very nice."

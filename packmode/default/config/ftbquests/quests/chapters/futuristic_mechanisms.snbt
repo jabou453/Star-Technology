@@ -423,7 +423,7 @@
 				"0055CE82469F239C"
 			]
 			description: [
-				"The Power Substation is the end game power storage. You might not need it in LuV, but later on you &lwill&r need this. "
+				"The Power Substation is the end game power storage. You might not need it in LuV, but later on you &lwill&r need this."
 				""
 				"The structure itself does not store power, but the capacitor blocks you can place into the station can give it storage capability."
 				""

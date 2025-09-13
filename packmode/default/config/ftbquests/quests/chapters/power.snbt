@@ -37,7 +37,7 @@
 				"1B32FFCDA1C87B90"
 			]
 			description: [
-				"The Stirling dynamo is a furnace that generates power. "
+				"The Stirling dynamo is a furnace that generates power."
 				""
 				"It consumes furnace fuels, and gives power in exchange. Although it is not a strong source of energy, it is an easy and relatively cheap generator, making it a popular choice for people who want to quickly get some power for LV."
 			]
@@ -1561,7 +1561,7 @@
 		{
 			dependencies: ["6BE70F5B5287034B"]
 			description: [
-				"The controller, although not necessary for your flux network to operate, allows you to use wireless charging. "
+				"The controller, although not necessary for your flux network to operate, allows you to use wireless charging."
 				""
 				"No longer will you fall out of the sky because of empty jetboots, or lose access to ae2 because your terminal ran out of power."
 			]
@@ -2096,7 +2096,7 @@
 		{
 			dependencies: ["5B72F7526494EAEC"]
 			description: [
-				"This is the first of the three capacitor containers or hulls. "
+				"This is the first of the three capacitor containers or hulls."
 				""
 				"This one is used for EV and IV capacitors."
 			]
@@ -2491,7 +2491,7 @@
 			description: [
 				"The Supreme Plasma Turbine is a beast of a machine, capable of generating insane amounts of power."
 				""
-				"With the main focus of the SPT being reducing the spam of plasma turbines, in exchange for the insane amounts of power it eats through an equally insane amount of plasma. "
+				"With the main focus of the SPT being reducing the spam of plasma turbines, in exchange for the insane amounts of power it eats through an equally insane amount of plasma."
 				""
 				"The SPT is most definitely worth it, especially if you apply coolant boosting."
 				""
