@@ -1,9 +1,9 @@
 if (global.packmode !== 'hard'){
-    (() => {   
+    (() => {
 
 ServerEvents.recipes(event => {
     const id = global.id;
-    
+
     const CR = event.recipes.gtceu.chemical_reactor || event.recipes.gtceu.large_chemical_reactor ;
 
     //plastic boards
@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
         .itemOutputs(`${type.quantity}x gtceu:plastic_circuit_board`)
         .duration(500)
         .EUt(10);
-    });   
+    });
 
     // non-cleanroom etching with CuCl
     [
@@ -32,8 +32,8 @@ ServerEvents.recipes(event => {
             .duration(type.duration)
             .EUt(type.energy);
         });
- 
- 
+
+
     // cleanroom etching with CuCl
     [
         {board: 'fiber_reinforced', foil: 'annealed_copper', foil_count: 12, amount: 500, duration: 1200, energy: 30},
@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.CLEANROOM)
         .duration(1800)
         .EUt(480);
- 
+
     // cleanroom etching with new boards
     [
         {board: 'runic_convergence', foil: 'yttrium_barium_cuprate', foil_count: 24, amount: 5000, duration: 2100, energy: 1920},
@@ -82,7 +82,7 @@ ServerEvents.recipes(event => {
                 .itemOutputs(`kubejs:${type.board}_printed_circuit_board`)
                 .cleanroom(CleanroomType.CLEANROOM)
                 .duration(type.duration)
-                .EUt(type.energy); 
+                .EUt(type.energy);
         });
     });
 
@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:cupric_chloride_solution 1000')
         .duration(400)
         .EUt(GTValues.VHA[GTValues.EV]);
- 
+
 });
 })()
 }

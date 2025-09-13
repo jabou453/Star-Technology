@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
     SpecialCasing('stainless_steel',3,true,true,true,false);
     SpecialCasing('polytetrafluoroethylene',3,false,true,false,false);
     SpecialCasing('titanium',4,true,true,true,true);
-    SpecialCasing('tungsten_steel',5,true,true,true,false); // made sperate engine load since keeps breaking
+    SpecialCasing('tungsten_steel',5,true,true,true,false); // made separate engine load since keeps breaking
     SpecialCasing('enriched_naquadah',7,true,true,true,true);
     
     //Tungsten Steel Engine Load

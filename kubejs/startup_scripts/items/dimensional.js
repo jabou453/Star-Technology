@@ -1,7 +1,7 @@
 ItemEvents.armorTierRegistry(event => {
     event.add('nether', tier => {
         tier.durabilityMultiplier = 80 // Each slot will be multiplied with [13, 15, 16, 11]
-        tier.slotProtections = [6, 10, 14, 6] // Slot indicies are [FEET, LEGS, BODY, HEAD]
+        tier.slotProtections = [6, 10, 14, 6] // Slot indices are [FEET, LEGS, BODY, HEAD]
         tier.enchantmentValue = 12
         tier.equipSound = 'minecraft:item.armor.equip_netherite'
         tier.repairIngredient = '#forge:ingots/neutronium'

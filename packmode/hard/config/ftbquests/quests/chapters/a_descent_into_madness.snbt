@@ -1208,7 +1208,7 @@
 		}
 		{
 			dependencies: ["3DCE9199510A9223"]
-			description: ["With this you can scavange for Flint easier"]
+			description: ["With this you can scavenge for Flint easier"]
 			id: "0B617DF410FA70C2"
 			optional: true
 			tasks: [{

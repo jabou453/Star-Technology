@@ -21,7 +21,7 @@
 	maxEntityStackLimit = 10
 	#More complex Tile Entities slow down the player more
 	heavyTiles = true
-	#Allow all blocks to be picked up, not just Tile Entites. White/Blacklist will still be respected.
+	#Allow all blocks to be picked up, not just Tile Entities. White/Blacklist will still be respected.
 	pickupAllBlocks = false
 	#Whether Blocks and Entities slow the creative player down when carried
 	slownessInCreative = true

@@ -1,7 +1,7 @@
 if (global.packmode !== 'hard'){
     (() => {   
 
-// Readds Multipart bus/hatch recipes removed in 1.20.1 GT 
+// Re-adds Multipart bus/hatch recipes removed in 1.20.1 GT 
 // for ULV and LV tiers with parity to the GTceuM assembler recipes.
 ServerEvents.recipes(event => {
     const id = global.id;
@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
             {type: 'input', shape: [' C ',' M ','   ']},
             {type: 'output', shape: ['   ',' M ',' C ']}
         ].forEach(type=> {
-            // Busses
+            // Buses
             event.shaped(Item.of(`gtceu:${tier.tier}_${type.type}_bus`),
             type.shape, 
             {

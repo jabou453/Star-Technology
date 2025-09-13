@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
         ['2x gtceu:good_integrated_circuit', '2x gtceu:ilc_chip', '6x gtceu:fine_gold_wire', '4x gtceu:ram_chip', '6x gtceu:transistor', 
             '2x gtceu:resistor', '2x gtceu:diode', '10x gtceu:gold_bolt'], ['gtceu:soldering_alloy 288', 'gtceu:polyethylene 72'], 400, 480);
         
-    // Micro Cirucits Line
+    // Micro Circuits Line
     CircuitFacilityRecipeCleanroom('8x gtceu:nand_chip', 'ulv_micro_circuit',
         ['gtceu:plastic_printed_circuit_board', 'gtceu:simple_soc', '2x #gtceu:capacitors', '#gtceu:transistors',
             '4x gtceu:fine_tin_wire', '2x gtceu:red_alloy_bolt'

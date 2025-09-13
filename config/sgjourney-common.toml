@@ -215,10 +215,10 @@
 			#The amount of energy an Advanced Energy Crystal can hold
 			#Range: 1 ~ 9223372036854775807
 			advanced_energy_crystal_capacity = 100000
-			#The amount of energy that can be transfered into and out of an Energy Crystal per tick
+			#The amount of energy that can be transferred into and out of an Energy Crystal per tick
 			#Range: 1 ~ 9223372036854775807
 			energy_crystal_max_transfer = 1500
-			#The amount of energy that can be transfered into and out of an Advanced Energy Crystal per tick
+			#The amount of energy that can be transferred into and out of an Advanced Energy Crystal per tick
 			#Range: 1 ~ 9223372036854775807
 			advanced_energy_crystal_max_transfer = 3000
 			#The amount of energy a Transfer Crystal can transfer per tick

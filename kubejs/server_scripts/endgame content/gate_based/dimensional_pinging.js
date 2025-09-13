@@ -79,7 +79,7 @@ ServerEvents.recipes(event => {
 
     /*event.recipes.gtceu.dimensional_finder(id('lantea_coordinate_crystal'))
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:prismarine', 'gtceu:uev_sensor')
-        .inputFluids('gtceu:rhexis 9072') //its just a fluid you cant make
+        .inputFluids('gtceu:rhexis 9072') //its just a fluid you can't make
         .chancedOutput('kubejs:lantea_coordinate_crystal', 250, 50)
         .duration(12000)
         .EUt(GTValues.VHA[GTValues.UEV])
@@ -87,7 +87,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.dimensional_finder(id('cavum_coordinate_crystal'))
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:obsidian', 'gtceu:uiv_sensor')
-        .inputFluids('gtceu:rhexis 9072') //its just a fluid you cant make
+        .inputFluids('gtceu:rhexis 9072') //its just a fluid you can't make
         .chancedOutput('kubejs:cavum_coordinate_crystal', 250, 50)
         .duration(12000)
         .EUt(GTValues.VHA[GTValues.UIV])
@@ -95,7 +95,7 @@ ServerEvents.recipes(event => {
         
     event.recipes.gtceu.dimensional_finder(id('sea_coordinate_crystal'))
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:water_bucket', 'gtceu:uxv_sensor')
-        .inputFluids('gtceu:rhexis 9072') //its just a fluid you cant make
+        .inputFluids('gtceu:rhexis 9072') //its just a fluid you can't make
         .chancedOutput('kubejs:sea_coordinate_crystal', 250, 50)
         .duration(12000)
         .EUt(GTValues.VHA[GTValues.UXV])
@@ -103,7 +103,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.dimensional_finder(id('void_coordinate_crystal'))
         .itemInputs('kubejs:coordinate_crystal', 'minecraft:stone', 'gtceu:opv_sensor')
-        .inputFluids('gtceu:rhexis 9072') //its just a fluid you cant make
+        .inputFluids('gtceu:rhexis 9072') //its just a fluid you can't make
         .chancedOutput('kubejs:void_coordinate_crystal', 250, 50)
         .duration(12000)
         .EUt(4*GTValues.VHA[GTValues.UXV])

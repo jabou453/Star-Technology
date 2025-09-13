@@ -626,7 +626,7 @@ compat:
   showDimensionTier: false
 
 dev:
-  # Debug general events? (will print recipe conficts etc. to server's debug.log)
+  # Debug general events? (will print recipe conflicts etc. to server's debug.log)
   # Default: false
   debug: false
 

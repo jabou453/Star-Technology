@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
     // VoltageCoil('uv','holmium','tritanium',0,false);
 
     // For Components
-    // ULV is Seq Ass / Assember
+    // ULV is Seq Ass / Assembler
     // LV is Assembler
     // MV,HV,EV is Component Chamber
     // IV,LuV,ZPM,UV is Component Assembly Line (IV/LuV Scanner, ZPM/UV ResearchStation) // Will do with Theta

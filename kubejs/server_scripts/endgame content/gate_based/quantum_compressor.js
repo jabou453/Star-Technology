@@ -34,11 +34,11 @@ ServerEvents.recipes(event => {
     ** Ingot mode:
     ** 1 Ingot = 1 mB infusion of specific type
     ** Block mode:
-    ** 1 Block = 6 mB inusion of speicific type + 3 mB of secondary infusion type //changed to 8,4 to reduce bloat of cost, time adjusted consequently
+    ** 1 Block = 6 mB inusion of specific type + 3 mB of secondary infusion type //changed to 8,4 to reduce bloat of cost, time adjusted consequently
     ** =====================
     ** Infusion types:
     ** Intangibility - common trait (easily produced as main type)
-    ** Paradoxicity - balanced trait (can be produced equaly from main and secondary types)
+    ** Paradoxicity - balanced trait (can be produced equally from main and secondary types)
     ** Causality - expensive trait (not viable to be gotten as main trait)
     */
    [

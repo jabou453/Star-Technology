@@ -1,5 +1,5 @@
 // packmode: hard
-// Keep so doesnt bork non-HM
+// Keep so doesn't bork non-HM
 WorldgenEvents.remove(event => {
 	event.removeSpawns(entity => {
 		entity.mobs = [

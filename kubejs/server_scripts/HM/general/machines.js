@@ -52,12 +52,12 @@ ServerEvents.recipes(event => {
             }};
     });
         if (tier !== 'lv' || 'mv' || 'hv'){
-            event.remove({ output: `gtceu:${tier}_substation_input_hatch_64a` }); // wont get recipes in Eta
-            event.remove({ output: `gtceu:${tier}_substation_output_hatch_64a` }); // wont get recipes in Eta
+            event.remove({ output: `gtceu:${tier}_substation_input_hatch_64a` }); // won't get recipes in Eta
+            event.remove({ output: `gtceu:${tier}_substation_output_hatch_64a` }); // won't get recipes in Eta
         if (tier !== 'ev'){
             [256,1024,4096].forEach( amps => {
             ['target','source'].forEach( type => {
-            event.remove({ output: `gtceu:${tier}_${amps}a_laser_${type}_hatch` }); // wont get recipes in Eta
+            event.remove({ output: `gtceu:${tier}_${amps}a_laser_${type}_hatch` }); // won't get recipes in Eta
             });
             });
         }}
@@ -73,16 +73,16 @@ ServerEvents.recipes(event => {
         } if (tier !== 'lv' || 'mv' || 'hv' || 'ev'){
             event.remove({ output: `gtceu:${tier}_quantum_chest` });
             event.remove({ output: `gtceu:${tier}_quantum_tank` });
-            event.remove({ output: `gtceu:${tier}_parallel_hatch` }); // wont get recipes in Eta
+            event.remove({ output: `gtceu:${tier}_parallel_hatch` }); // won't get recipes in Eta
         }
     });
         event.remove({ id: `gtceu:scanner/1_x_gtceu_iv_energy_input_hatch` });
 
-    event.remove({ output: `gtceu:hv_item_passthrough_hatch` }); // wont get recipe
-    event.remove({ output: `gtceu:hv_fluid_passthrough_hatch` }); // wont get recipe
+    event.remove({ output: `gtceu:hv_item_passthrough_hatch` }); // won't get recipe
+    event.remove({ output: `gtceu:hv_fluid_passthrough_hatch` }); // won't get recipe
     event.remove({ id: `gtceu:assembler/me_stocking_import_hatch` });
     event.remove({ id: `gtceu:assembler/me_stocking_import_bus` });
-    // ME Pattern Buffer blanket diabled and ME I/O is in AE-Machinery as a Packmode determinate
+    // ME Pattern Buffer blanket disabled and ME I/O is in AE-Machinery as a Packmode determinate
 
     event.recipes.gtceu.assembler(id(`machine_facility`))
         .itemInputs('gtceu:ulv_assembler','6x kubejs:ulv_robot_arm','4x #gtceu:circuits/lv',

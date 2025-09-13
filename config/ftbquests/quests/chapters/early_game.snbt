@@ -1716,7 +1716,7 @@
 				"6C7DB1CB4517B843"
 			]
 			dependency_requirement: "one_completed"
-			description: ["Nickel is a base material used in quite a few alloys. Getting a good amount early on will definitly be beneficial."]
+			description: ["Nickel is a base material used in quite a few alloys. Getting a good amount early on will definitely be beneficial."]
 			id: "0E47ACCDF46E6B1F"
 			rewards: [{
 				id: "0128ACB6E0B8F0AE"
@@ -2243,7 +2243,7 @@
 				"143BB2B07A083CC0"
 				"3AC92138809F3783"
 			]
-			description: ["A campfire on steriods for you early &nGlass&r and &nWrought Iron&r needs."]
+			description: ["A campfire on steroids for you early &nGlass&r and &nWrought Iron&r needs."]
 			id: "33A6D849B77F93CC"
 			optional: true
 			rewards: [{

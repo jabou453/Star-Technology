@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
 		// [^(?!^rubber$)] <- rubber sheet recipe is kjs and other rubbers is solidifier and bender only, wood is compressor for treated and crafting for regular
 		/^gtceu:shaped.ring.*[^(?!^rubber$)]/,
 		/^gtceu:shaped.stick.*[^(?!^.*_rubber_.*$)]/,
-		// poly rubbers and other rubbers are being wierd but you have solidifier by the time you get to pvc/ptfe so :3
+		// poly rubbers and other rubbers are being weird but you have solidifier by the time you get to pvc/ptfe so :3
 		/^gtceu:shaped\/.*_wire_single/,
 		/^gtceu:shapeless.fine.*/,
 		/^gtceu:shaped.screw_.*/,
@@ -22,7 +22,7 @@ ServerEvents.recipes(event => {
 		/^gtceu:shapeless.*cable.*/,
 		/^gtceu:shaped.buzzsaw.*/,
 		/^gtceu:shaped.round.*/,
-		// plates -> single and double, stick -> long and short rod, gear -> both small and normal, pipe -> exclusion of quad and non dont work, all pipes + constricting, cable-> just a sweep on all cable crafting table recipie
+		// plates -> single and double, stick -> long and short rod, gear -> both small and normal, pipe -> exclusion of quad and non dont work, all pipes + constricting, cable-> just a sweep on all cable crafting table recipe
 		/^farmersdelight:.*knife/,
 		/^create:crafting.*cogwheel.*/,
 		'create:crafting/kinetics/shaft',
