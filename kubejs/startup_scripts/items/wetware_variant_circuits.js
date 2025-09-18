@@ -91,14 +91,6 @@ StartupEvents.registry('item', event => {
         .tooltip('§5Dr. Conic unleased UXV Circuit')
         .texture('kubejs:item/circuits/awakened_draconic_wetware_processor_mainframe');
 
-    // UEV Wetware //Recipe being removed, this is being depricated over Eta-2
-    event.create('wetware_based_runic_neuroloom')
-        .displayName('Wetware-based Runic Neuroloom')
-        .tooltip('§7Wetware Pushed to the §6§oEXTREME')
-        .tooltip('§4UEV-Tier Circuit')
-        .tooltip('§7Being Depricated over Eta-2')
-        .texture('kubejs:item/circuits/wetware_based_runic_neuroloom');
-
     // Draco-QMDs
     event.create('draconic_qmd_transistor')
         .displayName('Draconic QMD Transistor')

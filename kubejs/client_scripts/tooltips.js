@@ -29,8 +29,15 @@ ItemEvents.tooltip(event => {
     });
 
     event.addAdvanced('gtceu:ulv_fluid_input', (item, advanced, text) => {
-        text.add(1, Text.of('Fluid Input for Primitive Multiblocks'))
+        text.add(1, Text.of('Fluid Input for Primitive Multiblocks'));
         text.add(2, Text.of('§9Fluid Capacity:§r 2,000 mB'));
+    });    
+    
+    event.addAdvanced('gtceu:uhv_stabilization_module', (item, advanced, text) => {
+        text.add(1, Text.of('Multiblock Sharing §4Disabled'));
+        text.add(2, Text.of('Makes your Multiblocks extremely stable for mass assembly!'));
+        text.add(3, Text.of('Level of Stabilization:'));
+        text.add(4, Text.of('   §bAbsolute Stabilization'));
     });
 
 });

@@ -1168,6 +1168,14 @@
     "material.gtceu.nutrient_rich_fertilizer_solution": "Nutrient-Rich Fertilizer Solution",
     "material.gtceu.seaweed_oil": "Seaweed Oil",
     "material.gtceu.liquefied_nutrient_paste": "Liquefied Nutrient Paste",
-    "material.gtceu.biostimulating_mixture": "Biostimulating Mixture"
+    "material.gtceu.biostimulating_mixture": "Biostimulating Mixture",
+
+    "material.gtceu.expetidalloy_d_17": "Expetidalloy D-17",
+
+    "block.gtceu.multithreaded_component_synthesis_forge": "§3Multi-threaded §dComponent Synthesis §6Forge",
+    "block.gtceu.multithreaded_component_synthesis_forge.tooltip.0": "Funny Tooltips tbd",
+    "gtceu.multithreaded_component_synthesis_forge": "§3Multi-threaded §dComponent Synthesis",
+
+    "gtceu.absolute_stabilization": "§bAbsolute Stabilization"
 
 }

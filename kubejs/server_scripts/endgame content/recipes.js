@@ -169,6 +169,13 @@ ServerEvents.recipes(event => {
         .duration(50)
         .EUt(16);
 
+    event.recipes.gtceu.assembler(id('advanced_assembly_casing'))
+        .itemInputs('6x gtceu:expetidalloy_d_17_plate', 'gtceu:isovol_frame')
+        .itemOutputs('2x kubejs:advanced_assembly_casing')
+        .circuit(6)
+        .duration(50)
+        .EUt(16);
+
     event.recipes.gtceu.compressor(id('reinforced_brimstone_casing'))
         .itemInputs('16x kubejs:brimstone')
         .itemOutputs('kubejs:reinforced_brimstone_casing')
@@ -248,6 +255,27 @@ ServerEvents.recipes(event => {
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('gtceu:cleaning_maintenance_hatch'))
+                .EUt(GTValues.VHA[GTValues.UEV])
+                .CWUt(176)
+            )
+        .EUt(GTValues.VHA[GTValues.UIV]);
+    
+    event.recipes.gtceu.assembly_line(id('absolute_stabilization_module'))
+        .itemInputs(
+            '1x gtceu:uev_machine_hull', '4x gtceu:uev_robot_arm', '1x gtceu:uev_field_generator', '3x #gtceu:circuits/uiv', 
+            '64x gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_foil', '4x gtceu:astatium_bioselex_carbonite_spring', 
+            '6x gtceu:expetidalloy_d_17_screw', '4x gtceu:polonium_bismide_single_cable'
+        )
+        .inputFluids(
+            'gtceu:indium_tin_lead_cadmium_soldering_alloy 4608',
+            'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 3456',
+            'gtceu:perfluoroelastomer_rubber 2304'
+        )
+        .itemOutputs('gtceu:uhv_stabilization_module')
+        .duration(200)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:auto_maintenance_hatch'))
                 .EUt(GTValues.VHA[GTValues.UEV])
                 .CWUt(192)
             )
