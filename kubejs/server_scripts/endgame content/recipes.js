@@ -262,13 +262,12 @@ ServerEvents.recipes(event => {
     
     event.recipes.gtceu.assembly_line(id('absolute_stabilization_module'))
         .itemInputs(
-            '1x gtceu:uev_machine_hull', '4x gtceu:uev_robot_arm', '1x gtceu:uev_field_generator', '3x #gtceu:circuits/uiv', 
-            '64x gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_foil', '4x gtceu:astatium_bioselex_carbonite_spring', 
-            '6x gtceu:expetidalloy_d_17_screw', '4x gtceu:polonium_bismide_single_cable'
+            '1x gtceu:uhv_machine_hull', '4x gtceu:uhv_robot_arm', '3x #gtceu:circuits/uhv', 'kubejs:uhv_catalyst_core',
+            '6x gtceu:zircalloy_4_screw', '4x gtceu:europium_single_cable'
         )
         .inputFluids(
             'gtceu:indium_tin_lead_cadmium_soldering_alloy 4608',
-            'gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate 3456',
+            'gtceu:polyether_ether_ketone 3456',
             'gtceu:perfluoroelastomer_rubber 2304'
         )
         .itemOutputs('gtceu:uhv_stabilization_module')
@@ -276,10 +275,10 @@ ServerEvents.recipes(event => {
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of('gtceu:auto_maintenance_hatch'))
-                .EUt(GTValues.VHA[GTValues.UEV])
-                .CWUt(192)
+                .EUt(GTValues.VHA[GTValues.UV])
+                .CWUt(144)
             )
-        .EUt(GTValues.VHA[GTValues.UIV]);
+        .EUt(GTValues.VHA[GTValues.UHV]);
 
     event.remove({output: 'minecraft:end_crystal'});
     event.remove({input: 'minecraft:end_crystal'});

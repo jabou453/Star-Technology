@@ -85,7 +85,7 @@ ServerEvents.recipes(event => {
             .EUt(GTValues.VHA[GTValues.UV]);
 
         event.recipes.gtceu.assembly_line(id('multithreaded_component_synthesis_forge'))
-            .itemInputs('32x gtceu:component_part_assembly','8x kubejs:multithread_data_module','6x #gtceu:circuits/uiv','6x gtceu:dense_expetidalloy_d_17_plate',
+            .itemInputs('32x gtceu:component_nexus','16x #gtceu:circuits/uiv','8x kubejs:multithread_data_module','6x gtceu:dense_expetidalloy_d_17_plate',
                 '16x gtceu:uev_robot_arm','8x gtceu:uev_conveyor_module','8x gtceu:uev_fluid_regulator','12x kubejs:uev_catalyst_core',
                 '3x kubejs:runic_wave_generator','24x gtceu:cupronickel_coil_block'/*To be the blank threading block, same amount as multi (8or24)*/,'8x kubejs:uev_micropower_router','24x gtceu:nyanium_screw',
                 '64x kubejs:uepic_chip','64x kubejs:uepic_chip','64x kubejs:uepic_chip','64x kubejs:uepic_chip')
@@ -94,7 +94,7 @@ ServerEvents.recipes(event => {
             .duration(9000)
             .stationResearch(
                 researchRecipeBuilder => researchRecipeBuilder
-                    .researchStack(Item.of('gtceu:component_part_assembly'))
+                    .researchStack(Item.of('gtceu:component_nexus'))
                     .EUt(GTValues.VHA[GTValues.UIV])
                     .CWUt(192)
                 )
@@ -244,7 +244,7 @@ ServerEvents.recipes(event => {
             .itemInputs(inputs)
             .inputFluids(fluids)
             .itemOutputs(`${MCSF_Scaler}x gtceu:${Tier}_${type}`)
-            .duration(MCSF_Scaler * duration / 2)
+            .duration(MCSF_Scaler * duration / 4)
             .circuit(circuit)
             .cleanroom(CleanroomType.getByName('stabilized'))
             //Will also need to rearch self using Multithread Data Module
@@ -281,7 +281,7 @@ ServerEvents.recipes(event => {
             .itemInputs(inputs)
             .inputFluids(fluids)
             .itemOutputs(`${MCSF_Scaler}x kubejs:${Tier}_${type}`)
-            .duration(MCSF_Scaler * duration / 2)
+            .duration(MCSF_Scaler * duration / 4)
             .circuit(circuit)
             .cleanroom(CleanroomType.getByName('stabilized'))
             //Will also need to rearch self using Multithread Data Module
@@ -321,28 +321,28 @@ ServerEvents.recipes(event => {
     const preUHVmaterialList = (scale,Tier,Tier1,Tier2,Primary,Secondary,MechanicalWire,Cable,Pipe,SuperConductor,Catalyst,SenMat,SenFoil,Frame,eut) => {
 
         const MCSF_Components_PreUHV = (type,inputs,fluids,circuit) => {
-        if (Tier == 'uv'){
-        event.recipes.gtceu.multithreaded_component_synthesis_forge(id(`${Tier}_${type}`))
-            .itemInputs(inputs)
-            .inputFluids(fluids)
-            .inputFluids(`gtceu:naquadria ${MCSF_Scaler*.75*576}`)
-            .itemOutputs(`${MCSF_Scaler}x gtceu:${Tier}_${type}`)
-            .duration(MCSF_Scaler * 600 / 2)
-            .circuit(circuit)
-            .cleanroom(CleanroomType.getByName('stabilized'))
-            //Will also need to rearch self using Multithread Data Module
-            .EUt(3 * eut);
-        } else {
-        event.recipes.gtceu.multithreaded_component_synthesis_forge(id(`${Tier}_${type}`))
-            .itemInputs(inputs)
-            .inputFluids(fluids)
-            .itemOutputs(`${MCSF_Scaler}x gtceu:${Tier}_${type}`)
-            .duration(MCSF_Scaler * 600 / 2)
-            .circuit(circuit)
-            .cleanroom(CleanroomType.getByName('stabilized'))
-            //Will also need to rearch self using Multithread Data Module
-            .EUt(3 * eut);    
-        }
+            if (Tier == 'uv'){
+            event.recipes.gtceu.multithreaded_component_synthesis_forge(id(`${Tier}_${type}`))
+                .itemInputs(inputs)
+                .inputFluids(fluids)
+                .inputFluids(`gtceu:naquadria ${MCSF_Scaler*.75*576}`)
+                .itemOutputs(`${MCSF_Scaler}x gtceu:${Tier}_${type}`)
+                .duration(MCSF_Scaler * 600 / 4)
+                .circuit(circuit)
+                .cleanroom(CleanroomType.getByName('stabilized'))
+                //Will also need to rearch self using Multithread Data Module
+                .EUt(3 * eut);
+            } else {
+            event.recipes.gtceu.multithreaded_component_synthesis_forge(id(`${Tier}_${type}`))
+                .itemInputs(inputs)
+                .inputFluids(fluids)
+                .itemOutputs(`${MCSF_Scaler}x gtceu:${Tier}_${type}`)
+                .duration(MCSF_Scaler * 600 / 4)
+                .circuit(circuit)
+                .cleanroom(CleanroomType.getByName('stabilized'))
+                //Will also need to rearch self using Multithread Data Module
+                .EUt(3 * eut);    
+            }
         }
 
         MCSF_Components_PreUHV('electric_motor',[`${MCSF_Scaler * .75}x gtceu:long_magnetic_samarium_rod`,`${4 * MCSF_Scaler * .75}x gtceu:long_${Primary}_rod`,`${4 * MCSF_Scaler * .75}x gtceu:${Primary}_ring`,`${8 * MCSF_Scaler * .75}x gtceu:${Primary}_round`,`${16 * MCSF_Scaler * .75}x gtceu:fine_${MechanicalWire}_wire`,`${16 * MCSF_Scaler * .75}x gtceu:fine_${MechanicalWire}_wire`,`${16 * MCSF_Scaler * .75}x gtceu:fine_${MechanicalWire}_wire`,`${16 * MCSF_Scaler * .75}x gtceu:fine_${MechanicalWire}_wire`,`${2 * MCSF_Scaler * .75}x gtceu:${Cable}_single_cable`],

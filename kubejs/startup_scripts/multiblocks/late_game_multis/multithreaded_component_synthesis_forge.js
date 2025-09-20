@@ -75,5 +75,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
         .workableCasingRenderer('kubejs:block/casings/nyanium/casing',
-            'gtceu:block/multiblock/assembly_line', false);
+            'gtceu:block/machines/assembler', false);
 });
