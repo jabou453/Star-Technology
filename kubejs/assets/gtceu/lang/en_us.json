@@ -1173,7 +1173,7 @@
     "material.gtceu.expetidalloy_d_17": "Expetidalloy D-17",
 
     "block.gtceu.multithreaded_component_synthesis_forge": "Multi-threaded Component Synthesis Forge",
-    "block.gtceu.multithreaded_component_synthesis_forge.tooltip.0": "§§l3Multi-threaded Mass Component Assembler",
+    "block.gtceu.multithreaded_component_synthesis_forge.tooltip.0": "§l§3Multi-threaded Mass Component Assembler",
     "block.gtceu.multithreaded_component_synthesis_forge.tooltip.1": "§7The paragon of known component manufacturing capabilities able to absorb the techincal capabilites of attached systems and maximize them to the greatest yield.",
     "block.gtceu.multithreaded_component_synthesis_forge.tooltip.2": "§8-----------------------------------",
     "block.gtceu.multithreaded_component_synthesis_forge.tooltip.3": "§dComponent Sythesis",
