@@ -308,7 +308,7 @@
 		{
 			dependencies: ["53A9F3758C218CDC"]
 			description: [
-				"QuarkTech armor is really nice. You can run and fly faster, toggle Nightvision and eat automatically."
+				"QuarkTech armor is really nice. You can run and fly faster, toggle night vision and eat automatically."
 				""
 				"You can also now hold Hot Ingots without dying."
 			]
@@ -1046,7 +1046,7 @@
 		{
 			dependencies: ["3B2D79D40B9617D5"]
 			description: [
-				"All these alloys and their names make you go crazy. Seriously, how do you pronounce some of those names."
+				"All these alloys and their names make you go crazy. Seriously, how do you pronounce some of those names?"
 				""
 				"WDYM they get \"&obetter&r\"........"
 			]
