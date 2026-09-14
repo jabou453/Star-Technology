@@ -1511,7 +1511,8 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["314B6ABE72E4A438"]
+			dependencies: ["3FC351F05F2AC743"]
+			hide_dependency_lines: true
 			id: "2AD42DCC4043A567"
 			tasks: [{
 				id: "7865CC22C14E929D"
@@ -1635,6 +1636,18 @@
 								Count: 1b
 								id: "gtceu:dimensional_destabiliser"
 							}
+							{
+								Count: 1b
+								id: "gtceu:industrial_extraction_chamber"
+							}
+							{
+								Count: 1b
+								id: "gtceu:industrial_brewing_station"
+							}
+							{
+								Count: 1b
+								id: "gtceu:distillery_column"
+							}
 						]
 					}
 				}
@@ -1725,6 +1738,10 @@
 							{
 								Count: 1b
 								id: "start_core:fornaxs_infernal_rotary_engine"
+							}
+							{
+								Count: 1b
+								id: "gtceu:ultra_barrel"
 							}
 						]
 					}
