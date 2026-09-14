@@ -18,7 +18,7 @@
 
     "block.gtceu.large_rotor_machine.tooltip.0": "§7A machine that can fold together rods using large amounts of rotational force, condensing layers on top of layers to create some incredibly resilient materials.",
 
-    "block.gtceu.large_quantum_compressor.tooltip.0": "§7This multi can compress large amounts of matter into infusions and collapse gravi-stars into a singularities via said infusions.",
+    "block.gtceu.large_quantum_compressor.tooltip.0": "§7This multi can compress large amounts of matter into infusions and collapse gravi-stars into singularities via said infusions.",
 
     "block.gtceu.runic_circuitry_assembling_station.tooltip.0": "§7An apparatus crossing the boundaries between technology and magic, that can inscribe dense plates with pure singularities to write runes containing mystical powers.",
 
@@ -43,7 +43,7 @@
 
     "block.gtceu.super_pressure_heat_chamber.tooltip.0": "§7A machine that can provide incredible heat and pressure, making it capable of fusing together incomplete products into some of the most resilient materials known across the galaxy.",
 
-    "block.gtceu.nuclear_reactor.tooltip.0": "§7A medium sized reactor that can use relatively simple nuclear reactions to make some extremely useful materials.",
+    "block.gtceu.nuclear_reactor.tooltip.0": "§7A medium-sized reactor that can use relatively simple nuclear reactions to make some extremely useful materials.",
     "block.gtceu.nuclear_reactor.tooltip.1": "Can use §3Parallel§r hatches",
 
     "block.gtceu.primitive_ore_factory.tooltip.0": "§7Your first all-in-one ore processing machine.",
@@ -843,7 +843,7 @@
 
     "block.gtceu.ultimate_abs": "Limitless Overactive Alloy Fuser [LOAF]",
     "block.gtceu.ultimate_abs.tooltip.0": "§c§lBoosted Hellfire Alloy Materializer",
-    "block.gtceu.ultimate_abs.tooltip.1": "§7A ascended forge powered by extreme heating fluids and concentrations layering complex integrations of thermodynamic in syncrosis beyond thermostable bounds.",
+    "block.gtceu.ultimate_abs.tooltip.1": "§7An ascended forge powered by extreme heating fluids and concentrations layering complex integrations of thermodynamic in syncrosis beyond thermostable bounds.",
     "block.gtceu.ultimate_abs.tooltip.2": "§8-----------------------------------",
 
     "block.gtceu.supreme_plasma_turbine": "Supreme Plasma Turbine [SPT]",
@@ -1068,7 +1068,7 @@
 
     "gtceu.hydroponic_garden": "Hydroponic Garden",
     "block.gtceu.hydroponic_garden": "Hydroponic Garden [HG]",
-    "block.gtceu.hydroponic_garden.tooltip.0": "§7A water based growing pod that can grow massive quantities of crops in seconds.",
+    "block.gtceu.hydroponic_garden.tooltip.0": "§7A water-based growing pod that can grow massive quantities of crops in seconds.",
 
     "gtceu.composting_factory": "Composting Factory",
     "block.gtceu.composting_factory": "Composting Factory [CF]",
@@ -1147,7 +1147,7 @@
 
     "block.gtceu.atomic_materialization_plant": "Atomic Materialization Plant [AMP]",
     "block.gtceu.atomic_materialization_plant.tooltip.0": "§6§lParagon of Chemistry",
-    "block.gtceu.atomic_materialization_plant.tooltip.1": "§7Not only is this machine capable of performing the task of a §6Chemical Plant§7 but it also pushes beyond what the known synthesis of chemistry beholds.",
+    "block.gtceu.atomic_materialization_plant.tooltip.1": "§7Not only is this machine capable of performing the task of a §6Chemical Plant§7, but it also pushes beyond what the known synthesis of chemistry beholds.",
     "block.gtceu.atomic_materialization_plant.tooltip.2": "§8-----------------------------------",
 
     "block.gtceu.omega_pressure_heat_chamber": "Omega Pressure Heat Chamber [OPHC]",
@@ -1213,7 +1213,7 @@
     "material.gtceu.galvanized_steel": "Galvanized Steel",
     "gtceu.pulverizer": "Pulverizer",
     "block.gtceu.t_large_pulverizer": "Large Pulverizer [LPv]",
-    "block.gtceu.t_large_pulverizer.tooltip.0": "§7A larger variant of the pulverizier that can process materials with more energy efficiency.",
+    "block.gtceu.t_large_pulverizer.tooltip.0": "§7A larger variant of the pulverizer that can process materials with more energy efficiency.",
 
     "block.gtceu.t_large_arc_furnace": "Large Arc Furnace [LAFn]",
     "block.gtceu.t_large_arc_furnace.tooltip.0": "§7A larger variant of the arc furnace that can process materials with more energy efficiency.",
@@ -1255,7 +1255,7 @@
     "block.gtceu.dual_chambered_vacuum_complex": "Dual-Chambered Vacuum Complex [DcVC]",
     "block.gtceu.dual_chambered_vacuum_complex.tooltip.0": "§c§lAdvanced Pressurized Chemical Reactor",
     "block.gtceu.dual_chambered_vacuum_complex.tooltip.1": "§7A chemical reactor that can operate under pressurized environments, increasing reaction rates and enabling certain pressure-dependent reactions.",
-    "block.gtceu.dual_chambered_vacuum_complex.p1.1": "§7For machines that contain multipule pump blocks, they must all be the same tier or the machine will not form.§7",
+    "block.gtceu.dual_chambered_vacuum_complex.p1.1": "§7For machines that contain multiple pump blocks, they must all be the same tier or the machine will not form.§7",
 
     "block.gtceu.auroric_vacuum_isolation_reactor": "Auroric Vacuum Isolation Reactor [AVIR]",
     "block.gtceu.auroric_vacuum_isolation_reactor.tooltip.0": "§c§lHyper-Advanced Pressurized Chemical Reactor",
@@ -1287,7 +1287,7 @@
     "material.gtceu.pologium_rich_sludge": "Pologium-Rich Sludge",
 
     "block.gtceu.advanced_synthesis_plant": "Advanced Synthesis Plant [ASP]",
-    "gtceu.ordered_chemistry": "Ordered Chemistry Sythesis",
+    "gtceu.ordered_chemistry": "Ordered Chemistry Synthesis",
 
     "block.gtceu.super_cracker": "Fractional Disruption Furnace [SDF]",
     "block.gtceu.super_pyrolyse": "Thermal Decomposition Array [TDA]",
@@ -1296,9 +1296,9 @@
     "block.gtceu.super_gas_collector": "Compression Gas Siphon [CGS]",
     "block.gtceu.super_gas_collector.tooltip.0": "§7Collects gas just a bit faster.",
 
-    "block.gtceu.industrial_extraction_chamber.tooltip.0": "§7A large extractor with higher efficiency to replace your singleblocks.",
-    "block.gtceu.distillery_column.tooltip.0": "§7A large distillery with higher efficiency to replace your singleblocks.",
-    "block.gtceu.industrial_brewing_station.tooltip.0": "§7A large brewery with throughput boosting to replace your singleblocks.",
+    "block.gtceu.industrial_extraction_chamber.tooltip.0": "§7A large extractor with higher efficiency to replace your single blocks.",
+    "block.gtceu.distillery_column.tooltip.0": "§7A large distillery with higher efficiency to replace your single blocks.",
+    "block.gtceu.industrial_brewing_station.tooltip.0": "§7A large brewery with throughput boosting to replace your single blocks.",
     "block.gtceu.ultra_barrel.tooltip.0": "§7The ultimate barrel, for any elite barreling needs.",
 
     "material.gtceu.akreyriadic_runixium": "Akreyriadic-Runixium",
@@ -1358,7 +1358,7 @@
     "material.gtceu.aquariadic_rimuli_dragonix": "Aquariadic Rimuli-Dragonix",
 
     "block.gtceu.kaleidoscopic_fractalizer": "Kaleidoscopic Fractalizer [KF]",
-    "block.gtceu.kaleidoscopic_fractalizer.tooltip.0": "§7Through the intense ramming of Riftions together properly infuses materials so they are in a unique and useable state.",
+    "block.gtceu.kaleidoscopic_fractalizer.tooltip.0": "§7Through the intense ramming of Riftions together properly infuses materials so they are in a unique and usable state.",
     "gtceu.kaleidoscopic_fractalizer": "Kaleidoscopic Fractalization",
 
     "block.gtceu.riftion_accelerator": "Riftion Accelerator [RA]",
@@ -1384,7 +1384,7 @@
     "gtceu.voidic_refinement": "Voidic Refinement",
 
     "block.gtceu.rimula_extraction_module": "Rimula Extraction Unit [RmEU]",
-    "block.gtceu.rimula_extraction_module.tooltip.0": "§7Extract Rifitc Materials from their Origin.",
+    "block.gtceu.rimula_extraction_module.tooltip.0": "§7Extract Riftic Materials from their Origin.",
     "block.gtceu.rimula_extraction_module.tooltip.1": "K.O.M.A.R.U Module Tier: §bBasic",
     "gtceu.rimula_extraction": "Rimula Extraction",
 
@@ -1406,7 +1406,7 @@
 
     "block.gtceu.true_synthesis_array": "True Synthesis Array [TSA]",
     "block.gtceu.true_synthesis_array.tooltip.0": "§6§lBoosted Advanced Synthesis Plant",
-    "gtceu.supreme_chemistry": "Supreme Chemistry Sythesis",
+    "gtceu.supreme_chemistry": "Supreme Chemistry Synthesis",
 
     "block.gtceu.titan_forge": "Titan Forge [TF]",
     "block.gtceu.titan_forge.tooltip.0": "§7A forge capable of molding materials into ultra condensed variations of themselves.",

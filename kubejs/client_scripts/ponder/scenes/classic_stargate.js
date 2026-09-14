@@ -86,7 +86,7 @@
         scene
             .overlay()
             .showOutlineWithText(util.select().position([4, 1, 4]), 60)
-            .text('You can then form the Stargate right clicking the base.')
+            .text('You can then form the Stargate by right-clicking the base.')
             .placeNearTarget();
 
         scene.idle(20);
@@ -124,7 +124,7 @@
             .overlay()
             .showText(80)
             .text(
-                'To dial and enter the Stargate you need a §dAbydos §dInscribed §dCoordinate §dCrystal§r. Sneak and right-click it while looking at the air to absorbe its knowledge.'
+                'To dial and enter the Stargate you need a §dAbydos §dInscribed §dCoordinate §dCrystal§r. Sneak and right-click it while looking at the air to absorb its knowledge.'
             );
 
         scene.idle(100);
@@ -239,7 +239,7 @@
         scene
             .overlay()
             .showOutlineWithText(util.select().position(csgInterface.pos), 80)
-            .text('Right click the §eStargate Interface§r to open the UI and configure the target energy amount.')
+            .text('Right-click the §eStargate Interface§r to open the UI and configure the target energy amount.')
             .placeNearTarget();
 
         scene.idle(20);

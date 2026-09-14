@@ -570,7 +570,7 @@
     "item.kubejs.draconic_processor.tooltip.0": "§7Dr.Conic Certified",
     "item.kubejs.draconic_processor.tooltip.1": "§5UV-Tier Circuit",
     "item.kubejs.draconic_processor_assembly": "Draconic Processor Assembly",
-    "item.kubejs.draconic_processor_assembly.tooltip.0": "§7Dr.Conic Guarentee",
+    "item.kubejs.draconic_processor_assembly.tooltip.0": "§7Dr.Conic Guarantee",
     "item.kubejs.draconic_processor_assembly.tooltip.1": "§5UHV-Tier Circuit",
     "item.kubejs.draconic_processor_computer": "Draconic Processor Supercomputer",
     "item.kubejs.draconic_processor_computer.tooltip.0": "§7Dr.Conic's 10th PhD Proposal",
@@ -797,7 +797,7 @@
     "block.kubejs.complex_reflector_casing": "Complex Neutron Reflector Casing",
     "block.kubejs.reinforced_reflector_casing": "Reinforced Neutron Reflector Casing",
     "block.kubejs.borealic_reflector_casing": "Borealic Neutron Reflector Casing",
-    "block.kubejs.draconic_reflector_casing": "draconic Neutron Reflector Casing",
+    "block.kubejs.draconic_reflector_casing": "Draconic Neutron Reflector Casing",
     "block.kubejs.prismalic_reflector_casing": "Prismalic Neutron Reflector Casing",
 
     "item.kubejs.consume.tooltip": "§8Nom Nom?",
