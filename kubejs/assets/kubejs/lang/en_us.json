@@ -31,8 +31,8 @@
     "effects.dimensions.subtitle.nether": "Consume a Nether Coordinate Crystal to enter this plane.",
     "effects.dimensions.title.end": "You lack comprehension of the Draconic Void.",
     "effects.dimensions.subtitle.end": "Consume an End Coordinate Crystal to enter this plane.",
-    "effects.dimensions.title.inaccesible": "Content not available.",
-    "effects.dimensions.subtitle.inaccesible": "How did you even try this?",
+    "effects.dimensions.title.inaccessible": "Content not available.",
+    "effects.dimensions.subtitle.inaccessible": "How did you even try this?",
 
     "effect.kubejs.reach": "Reach",
 

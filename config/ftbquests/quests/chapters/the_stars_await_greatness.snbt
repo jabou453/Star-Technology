@@ -472,7 +472,7 @@
 		}
 		{
 			dependencies: ["7D2E83192ABF08CA"]
-			description: ["{ftbquests.dsg.priomordially_stellarized_weapon_grade_naquadah.description}"]
+			description: ["{ftbquests.dsg.primordially_stellarized_weapon_grade_naquadah.description}"]
 			hide_dependent_lines: true
 			id: "6BA06E19F3C09184"
 			rewards: [{

@@ -1685,7 +1685,7 @@
 					type: "checkmark"
 				}
 			]
-			title: "{ftbquests.resource_production.sulfuric_naptha.title}"
+			title: "{ftbquests.resource_production.sulfuric_naphtha.title}"
 			x: 8.0d
 			y: 3.5d
 		}

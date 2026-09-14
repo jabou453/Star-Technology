@@ -69,37 +69,37 @@
             dimensionNamespace: 'sgjourney',
             dimensionId: 'cavum_tenebrae',
             color: 'dark_gray',
-            lang: 'inaccesible',
+            lang: 'inaccessible',
         },
         {
             dimensionNamespace: 'sgjourney',
             dimensionId: 'lantea',
             color: 'dark_gray',
-            lang: 'inaccesible',
+            lang: 'inaccessible',
         },
         {
             dimensionNamespace: 'sgjourney',
             dimensionId: 'chulak',
             color: 'dark_gray',
-            lang: 'inaccesible',
+            lang: 'inaccessible',
         },
         {
             dimensionNamespace: 'sgjourney',
             dimensionId: 'rima',
             color: 'dark_gray',
-            lang: 'inaccesible',
+            lang: 'inaccessible',
         },
         {
             dimensionNamespace: 'sgjourney',
             dimensionId: 'athos',
             color: 'dark_gray',
-            lang: 'inaccesible',
+            lang: 'inaccessible',
         },
         {
             dimensionNamespace: 'sgjourney',
             dimensionId: 'unitas',
             color: 'dark_gray',
-            lang: 'inaccesible',
+            lang: 'inaccessible',
         },
     ];
 })();
