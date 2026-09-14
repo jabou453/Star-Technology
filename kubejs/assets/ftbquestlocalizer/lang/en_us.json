@@ -229,7 +229,7 @@
     "ftbquests.automation_age.cpu_chip.description": "Every Circuit needs a CPU.",
     "ftbquests.automation_age.cpu_chip.item_title": "Any Light Blue Lenses",
     "ftbquests.automation_age.cpu_chip.title": "CPU Chips",
-    "ftbquests.automation_age.cracker.description": "Choose an oil byproduct and get it cracked to allow even further processing.\n\nTaking some time to figure out which cracking method for what product is the best for you is recommended.\n\nNote: Chemical Reactors can be used for cracking but are less efficient.",
+    "ftbquests.automation_age.cracker.description": "Choose an oil byproduct and get it cracked to allow even further processing.\n\nTaking some time to figure out which cracking method for what product is the best for you is recommended.",
     "ftbquests.automation_age.cracker.subtitle": "Cracked at cracking",
     "ftbquests.automation_age.cracker.title": "Oil Cracking",
     "ftbquests.automation_age.cupric_chloride_solution.description": "The best liquid for etching Circuit Boards.\n\nWe recommend switching out your §oAE2§r patterns to use this.",

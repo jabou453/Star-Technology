@@ -226,7 +226,7 @@
     "ftbquests.automation_age.cpu_chip.description":"每个电路都需要一个CPU。",
     "ftbquests.automation_age.cpu_chip.item_title":"任意浅蓝色透镜",
     "ftbquests.automation_age.cpu_chip.title":"CPU芯片",
-    "ftbquests.automation_age.cracker.description":"在编程电路面板里选择裂解程度，这样才能继续进一步处理。\n\n你得费些时间来看看哪种材料的哪种裂解程度最适合你的生产需求（反正油也是几乎无限的）\n\n注：化学反应釜也可进行裂解反应，但效率较低。",
+    "ftbquests.automation_age.cracker.description":"在编程电路面板里选择裂解程度，这样才能继续进一步处理。\n\n你得费些时间来看看哪种材料的哪种裂解程度最适合你的生产需求（反正油也是几乎无限的）",
     "ftbquests.automation_age.cracker.subtitle":"裂解再裂解",
     "ftbquests.automation_age.cracker.title":"油类裂解",
     "ftbquests.automation_age.cupric_chloride_solution.description":"刻蚀电路板的最佳选择\n\n建议将你的§oAE2§r样板原料替换成它。",

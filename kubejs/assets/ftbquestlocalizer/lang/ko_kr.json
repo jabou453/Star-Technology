@@ -229,7 +229,7 @@
     "ftbquests.automation_age.cpu_chip.description": "모든 회로는 CPU가 필요합니다",
     "ftbquests.automation_age.cpu_chip.item_title": "아무 하늘색 렌즈",
     "ftbquests.automation_age.cpu_chip.title": "CPU 칩",
-    "ftbquests.automation_age.cracker.description": "원유 정제시 나오는 부산물을 얻기 위해선 분해기가 필요합니다.\n\n당신이 원하는 부산물을 최대한 얻기 위한 방법을 고려하는 것을 추천합니다.\n\n노트: 화학 반응기를 이용하면 분해기 없이도 분해가 가능하지만, 분해기가 더 효율적입니다. 코일 효과도 받을 수 있고요!",
+    "ftbquests.automation_age.cracker.description": "원유 정제시 나오는 부산물을 얻기 위해선 분해기가 필요합니다.\n\n당신이 원하는 부산물을 최대한 얻기 위한 방법을 고려하는 것을 추천합니다.",
     "ftbquests.automation_age.cracker.subtitle": "분해기에서 분해하기",
     "ftbquests.automation_age.cracker.title": "원유 분해",
     "ftbquests.automation_age.cupric_chloride_solution.description": "회로 기판을 에칭하는데 가장 좋은 액체입니다.\n\n모든 회로 기판 AE2 패턴을 이걸로 교체하는 것을 추천합니다.",

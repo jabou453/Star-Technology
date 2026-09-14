@@ -229,7 +229,7 @@
     "ftbquests.automation_age.cpu_chip.description": "Каждой схеме нужен процессор.",
     "ftbquests.automation_age.cpu_chip.item_title": "Любые голубые линзы",
     "ftbquests.automation_age.cpu_chip.title": "Чипы процессора",
-    "ftbquests.automation_age.cracker.description": "Выберите побочный нефтяной продукт и крекингите его, чтобы обеспечить дальнейшую переработку.\n\nРекомендуется потратить некоторое время на то, чтобы выяснить, какой метод взлома какого продукта лучше всего подходит для вас.\n\nПримечание. Для крекинга можно использовать химические реакторы, но они менее эффективны.",
+    "ftbquests.automation_age.cracker.description": "Выберите побочный нефтяной продукт и крекингите его, чтобы обеспечить дальнейшую переработку.\n\nРекомендуется потратить некоторое время на то, чтобы выяснить, какой метод взлома какого продукта лучше всего подходит для вас.",
     "ftbquests.automation_age.cracker.subtitle": "Треснул при растрескивании",
     "ftbquests.automation_age.cracker.title": "Крекинг нефти",
     "ftbquests.automation_age.cupric_chloride_solution.description": "Лучшая жидкость для травления печатных плат.\n\nЧтобы использовать это, мы рекомендуем отключить шаблоны §oAE2§r.",
