@@ -31,8 +31,8 @@
     "effects.dimensions.subtitle.nether": "지옥의 주소가 새겨진 수정을 사용해 이 구역에 진입하세요.",
     "effects.dimensions.title.end": "드라코닉 공허 대한 이해력이 부족합니다.",
     "effects.dimensions.subtitle.end": "엔드의 주소가 새겨진 수정을 사용해 이 구역에 진입하세요.",
-    "effects.dimensions.title.inaccesible": "아직 미구현된 콘텐츠입니다.",
-    "effects.dimensions.subtitle.inaccesible": "애초에 이걸 어떻게 하고 있죠?",
+    "effects.dimensions.title.inaccessible": "아직 미구현된 콘텐츠입니다.",
+    "effects.dimensions.subtitle.inaccessible": "애초에 이걸 어떻게 하고 있죠?",
 
     "effect.kubejs.reach": "범위 증가",
 
